@@ -111,6 +111,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
             youtube_privacy=privacy,
             schedule_days_ahead=0,
             also_make_shorts=False,
+            stagger_days=0,
         )
     except Exception:
         logger.exception("daily_generate: '%s' 배치 처리 중 예외 발생", name)

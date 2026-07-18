@@ -64,6 +64,7 @@ class BatchRunner:
         youtube_privacy: str = "private",
         schedule_days_ahead: int = 0,
         also_make_shorts: bool = False,
+        stagger_days: int = 1,
     ) -> List[PipelineResult]:
         self._stop_requested = False
         pending = self.get_pending_files()
@@ -89,7 +90,7 @@ class BatchRunner:
                 story_path=story_path,
                 upload_to_youtube=upload_to_youtube,
                 youtube_privacy=youtube_privacy,
-                schedule_days_ahead=schedule_days_ahead + i,
+                schedule_days_ahead=schedule_days_ahead + i * stagger_days,
                 youtube_credentials_file=self._yt_creds or None,
                 also_make_shorts=also_make_shorts,
             )
