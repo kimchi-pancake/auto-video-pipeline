@@ -154,6 +154,27 @@ THUMBNAIL_SHORTS:
 - 규칙 설명이나 해설은 절대 출력하지 말고, 위 형식의 대본 내용만 출력해줘.
 """
 
+def _topic_override_rules(custom_topic: str) -> str:
+    """디스코드 봇 등에서 사용자가 직접 준 주제로 [주제] 섹션을 갈아끼울 때 씁니다."""
+    return f"""\
+[주제]
+이번엔 반드시 다음 주제로 이야기를 써줘: "{custom_topic}"
+이 주제에서 벗어나지 말고, 주어진 소재를 중심으로 이야기를 전개해줘.
+
+중요:
+- 특정 인물을 무조건 악역으로 만들지 않는다. 양쪽 모두 이해할 수 있게 만들되,
+  주인공은 억울한 감정을 느껴야 한다.
+- 댓글에서 의견이 갈릴 수 있는 구조로 만든다."""
+
+
+def combo_script_prompt(custom_topic: str | None = None) -> str:
+    """COMBO_SCRIPT_PROMPT를 그대로 쓰거나, custom_topic이 있으면 [주제] 섹션만
+    사용자가 지정한 주제로 바꿔치기해서 반환합니다."""
+    if not custom_topic:
+        return COMBO_SCRIPT_PROMPT
+    return COMBO_SCRIPT_PROMPT.replace(_TOPIC_RULES, _topic_override_rules(custom_topic))
+
+
 # 롱폼/쇼츠 응답을 이 줄로 정확히 구분합니다 — 응답에 이 줄이 있으면 두 개의
 # story.txt로 쪼개서 저장합니다 (수동 가져오기·API 자동 생성 양쪽 동일).
 SPLIT_DELIMITER = "=====SHORTS====="

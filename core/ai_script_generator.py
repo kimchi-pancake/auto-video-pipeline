@@ -21,7 +21,7 @@ from typing import Callable, Optional
 
 from dotenv import load_dotenv
 
-from core.script_prompts import COMBO_SCRIPT_PROMPT, SHORTS_SCRIPT_PROMPT, SPLIT_DELIMITER
+from core.script_prompts import SHORTS_SCRIPT_PROMPT, SPLIT_DELIMITER, combo_script_prompt
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -91,10 +91,11 @@ def _call_claude(prompt: str) -> str:
     return text
 
 
-def generate_combo_script() -> str:
-    """Claude API를 호출해서 롱폼+쇼츠 통합 대본 원문을 반환합니다."""
-    logger.info("Claude API 콤보(롱폼+쇼츠) 대본 생성 요청 시작")
-    return _call_claude(COMBO_SCRIPT_PROMPT)
+def generate_combo_script(custom_topic: str | None = None) -> str:
+    """Claude API를 호출해서 롱폼+쇼츠 통합 대본 원문을 반환합니다.
+    custom_topic을 주면 주제 풀 대신 그 주제로 강제합니다 (디스코드 봇 등)."""
+    logger.info("Claude API 콤보(롱폼+쇼츠) 대본 생성 요청 시작 (topic=%s)", custom_topic or "자동")
+    return _call_claude(combo_script_prompt(custom_topic))
 
 
 def generate_shorts_only() -> str:
@@ -137,9 +138,9 @@ def save_story(input_dir: Path, base_filename: str, content: str) -> Path:
     return dest
 
 
-def generate_and_save(input_dir: Path) -> list[Path]:
+def generate_and_save(input_dir: Path, custom_topic: str | None = None) -> list[Path]:
     """콤보 1회분 생성부터 저장까지. GUI 워커 스레드에서 이 함수 하나만 부르면 됨."""
-    text = generate_combo_script()
+    text = generate_combo_script(custom_topic)
     return save_combo_script(text, input_dir)
 
 
