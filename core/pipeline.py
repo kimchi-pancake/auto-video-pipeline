@@ -250,7 +250,9 @@ class Pipeline:
             def stage_thumbnails():
                 self._emit(5, 0, 2, "썸네일 생성 중...")
                 t0 = time.time()
-                ctx["thumb_long"], ctx["thumb_shorts"] = self._run_thumbnails(story, run_out)
+                ctx["thumb_long"], ctx["thumb_shorts"] = self._run_thumbnails(
+                    story, run_out, ctx.get("image_results")
+                )
                 stage_times["thumbnails"] = time.time() - t0
                 # 자막 파일 복사
                 shutil.copy2(ctx["srt_path"], run_out / "subtitles.srt")
@@ -479,19 +481,30 @@ class Pipeline:
             bgm_base_dir=self._bgm_dir,
         )
 
-    def _run_thumbnails(self, story: StoryData, out_dir: Path):
+    def _run_thumbnails(
+        self, story: StoryData, out_dir: Path, image_results: Optional[List[ImageResult]] = None
+    ):
         gen = ThumbnailGenerator(
             config=self._cfg.section("thumbnail"),
             assets_dir=self._assets_dir,
         )
+        # 첫 번째로 실제 다운로드된 장면 이미지를 썸네일 배경으로 재활용합니다
+        # (영상 도입부와 톤이 맞아서 검정 배경보다 시선을 더 끕니다).
+        bg_image_path = None
+        if image_results:
+            for r in sorted(image_results, key=lambda r: r.scene_index):
+                if r.image_path:
+                    bg_image_path = r.image_path
+                    break
+
         long_path = None
         shorts_path = None
         if story.thumbnail_long:
             self._emit(5, 0, 2, "썸네일(Long 1280×720) 생성 중...")
-            long_path = gen.generate_long(story.thumbnail_long, out_dir)
+            long_path = gen.generate_long(story.thumbnail_long, out_dir, bg_image_path)
         if story.thumbnail_shorts:
             self._emit(5, 1, 2, "썸네일(Shorts 1080×1920) 생성 중...")
-            shorts_path = gen.generate_shorts(story.thumbnail_shorts, out_dir)
+            shorts_path = gen.generate_shorts(story.thumbnail_shorts, out_dir, bg_image_path)
         return long_path, shorts_path
 
     def _run_youtube(
