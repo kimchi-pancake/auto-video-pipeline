@@ -97,7 +97,7 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             continue
 
         input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
-        topic = pop_topic(name)
+        topic = pop_topic(name, today)
         if topic:
             logger.info("daily_generate: '%s' 디스코드로 예약된 주제 사용 — %s", name, topic)
             notify_discord(f"🎯 [{name}] 오늘은 예약된 주제로 생성함 — \"{topic}\"")

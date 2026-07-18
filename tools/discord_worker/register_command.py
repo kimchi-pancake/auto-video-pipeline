@@ -23,32 +23,63 @@ def main() -> int:
 
     app_id, bot_token = sys.argv[1], sys.argv[2]
 
+    _channel_option = {
+        "name": "channel",
+        "description": "채널 이름",
+        "type": 3,  # STRING
+        "required": True,
+        "choices": [
+            {"name": "웃짬", "value": "웃짬"},
+            {"name": "도개", "value": "도개"},
+        ],
+    }
+
     command = {
         "name": "영상",
-        "description": "다음 정기 생성(매일 20:10) 때 지정한 채널의 영상 주제를 예약합니다",
+        "description": "영상 주제 예약 관리",
         "options": [
             {
-                "name": "channel",
-                "description": "채널 이름",
-                "type": 3,  # STRING
-                "required": True,
-                "choices": [
-                    {"name": "웃짬", "value": "웃짬"},
-                    {"name": "도개", "value": "도개"},
+                "name": "예약",
+                "description": "다음(또는 특정 날짜) 생성 때 쓸 주제를 예약합니다",
+                "type": 1,  # SUB_COMMAND
+                "options": [
+                    _channel_option,
+                    {"name": "topic", "description": "영상 주제", "type": 3, "required": True},
+                    {
+                        "name": "date",
+                        "description": "특정 날짜 (YYYY-MM-DD, 생략하면 다음 실행)",
+                        "type": 3,
+                        "required": False,
+                    },
                 ],
             },
             {
-                "name": "topic",
-                "description": "영상 주제 (자유 텍스트)",
-                "type": 3,  # STRING
-                "required": True,
+                "name": "목록",
+                "description": "예약된 주제 목록을 봅니다",
+                "type": 1,
+                "options": [{**_channel_option, "required": False}],
+            },
+            {
+                "name": "취소",
+                "description": "예약된 주제를 취소합니다",
+                "type": 1,
+                "options": [
+                    _channel_option,
+                    {
+                        "name": "date",
+                        "description": "취소할 예약의 날짜 (생략하면 '다음 실행용' 예약 취소)",
+                        "type": 3,
+                        "required": False,
+                    },
+                ],
             },
         ],
     }
 
+    # PUT(전체 덮어쓰기)으로 등록해서 이름이 겹치는 예전 정의가 남지 않게 함.
     req = urllib.request.Request(
         f"https://discord.com/api/v10/applications/{app_id}/commands",
-        data=json.dumps(command).encode("utf-8"),
+        data=json.dumps([command]).encode("utf-8"),
         headers={
             "Authorization": f"Bot {bot_token}",
             "Content-Type": "application/json",
@@ -59,7 +90,7 @@ def main() -> int:
                 "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
             ),
         },
-        method="POST",
+        method="PUT",
     )
     try:
         with urllib.request.urlopen(req) as resp:
