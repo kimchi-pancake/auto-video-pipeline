@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import json
 import sys
+import urllib.error
 import urllib.request
 
 
@@ -51,11 +52,21 @@ def main() -> int:
         headers={
             "Authorization": f"Bot {bot_token}",
             "Content-Type": "application/json",
+            # 파이썬 기본 User-Agent는 클라우드플레어가 봇으로 판단해 403(에러 1010)으로
+            # 막습니다 (utils/notify.py의 디스코드 웹훅과 동일한 원인) — 브라우저 UA로 우회.
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+            ),
         },
         method="POST",
     )
-    with urllib.request.urlopen(req) as resp:
-        print(resp.status, resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req) as resp:
+            print(resp.status, resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        print(e.code, e.read().decode("utf-8"))
+        return 1
     return 0
 
 
