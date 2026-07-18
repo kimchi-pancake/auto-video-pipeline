@@ -2,9 +2,8 @@ name: Daily Video Pipeline
 
 on:
   workflow_dispatch:
-  # 매일 20:10 KST(UTC+9) = 11:10 UTC. 검증 끝나면 주석 해제.
-  # schedule:
-  #   - cron: "10 11 * * *"
+  schedule:
+    - cron: "10 11 * * *" # 매일 20:10 KST(UTC+9) = 11:10 UTC
 
 permissions:
   contents: write
