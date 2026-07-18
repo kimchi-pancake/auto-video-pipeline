@@ -24,7 +24,7 @@ def main() -> int:
 
     command = {
         "name": "영상",
-        "description": "지정한 채널에 주제를 넣어 사연 영상을 즉시 생성/업로드합니다",
+        "description": "다음 정기 생성(매일 20:10) 때 지정한 채널의 영상 주제를 예약합니다",
         "options": [
             {
                 "name": "channel",

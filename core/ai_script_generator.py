@@ -149,11 +149,14 @@ def generate_daily_batch(
     long_count: int = 1,
     extra_shorts_count: int = 1,
     progress_cb: Optional[ProgressCallback] = None,
+    custom_topic: str | None = None,
 ) -> list[Path]:
     """
     채널 하루치 물량을 생성합니다. 기본값(long_count=1, extra_shorts_count=1)이면
     콤보 호출 1번(롱폼 1개 + 쇼츠 1개) + 쇼츠 단독 호출 1번 = 롱폼 1개 + 쇼츠 2개
     (하루 3개).
+    custom_topic이 있으면 콤보 호출(롱폼+쇼츠 1세트)에만 그 주제를 강제로 씁니다 —
+    디스코드로 예약된 주제가 있을 때 그날의 메인 영상에 반영하는 용도입니다.
     실패한 개별 호출은 건너뛰고 계속 진행하며, 하나도 성공 못 하면 예외를 던집니다.
     """
     total = long_count + extra_shorts_count
@@ -163,7 +166,7 @@ def generate_daily_batch(
 
     for i in range(long_count):
         try:
-            saved.extend(generate_and_save(input_dir))
+            saved.extend(generate_and_save(input_dir, custom_topic=custom_topic))
         except ScriptGenerationError as e:
             logger.warning("일괄 생성 중 콤보 %d/%d 실패: %s", i + 1, long_count, e)
             errors.append(str(e))

@@ -30,6 +30,7 @@ from utils.config_manager import get_config
 from utils.notify import notify, notify_discord
 from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
+from core.topic_queue import pop_topic
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
@@ -96,8 +97,12 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             continue
 
         input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
+        topic = pop_topic(name)
+        if topic:
+            logger.info("daily_generate: '%s' 디스코드로 예약된 주제 사용 — %s", name, topic)
+            notify_discord(f"🎯 [{name}] 오늘은 예약된 주제로 생성함 — \"{topic}\"")
         try:
-            saved = generate_daily_batch(input_dir)
+            saved = generate_daily_batch(input_dir, custom_topic=topic)
             logger.info("daily_generate: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             ok_channels += 1
             saved_total += len(saved)
