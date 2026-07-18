@@ -21,6 +21,14 @@ const BRANCH = "master";
 
 export default {
   async fetch(request, env) {
+    const url = new URL(request.url);
+
+    // 일회성 슬래시 커맨드 등록용 임시 경로. 등록 끝나면 이 블록과
+    // DISCORD_BOT_TOKEN/DISCORD_APP_ID 변수는 지워도 됩니다.
+    if (url.pathname === "/register-command-x7k2m9") {
+      return registerCommand(env);
+    }
+
     if (request.method !== "POST") {
       return new Response("OK", { status: 200 });
     }
@@ -77,6 +85,40 @@ export default {
     return new Response("unknown interaction type", { status: 400 });
   },
 };
+
+async function registerCommand(env) {
+  const command = {
+    name: "영상",
+    description: "다음 정기 생성(매일 20:10) 때 지정한 채널의 영상 주제를 예약합니다",
+    options: [
+      {
+        name: "channel",
+        description: "채널 이름",
+        type: 3,
+        required: true,
+        choices: [
+          { name: "웃짬", value: "웃짬" },
+          { name: "도개", value: "도개" },
+        ],
+      },
+      { name: "topic", description: "영상 주제 (자유 텍스트)", type: 3, required: true },
+    ],
+  };
+
+  const resp = await fetch(
+    `https://discord.com/api/v10/applications/${env.DISCORD_APP_ID}/commands`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(command),
+    }
+  );
+  const text = await resp.text();
+  return new Response(`${resp.status} ${text}`, { status: 200 });
+}
 
 async function queueTopic(env, channel, topic) {
   const apiUrl = `https://api.github.com/repos/${env.GITHUB_REPO}/contents/${QUEUE_PATH}`;
