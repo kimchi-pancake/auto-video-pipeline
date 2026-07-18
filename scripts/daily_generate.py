@@ -15,7 +15,9 @@ Windows 작업 스케줄러가 매일 이 스크립트를 실행합니다 — �
 from __future__ import annotations
 
 import json
+import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
 from pathlib import Path
@@ -46,6 +48,26 @@ def _load_state() -> dict:
 def _save_state(state: dict) -> None:
     _STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
     _STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _extract_title(video_path: str | None) -> str:
+    """output/20260718_205639_아들이 버린 엄마, 진짜 사연/... 형태의 경로에서
+    타임스탬프를 뗀 제목만 뽑아냅니다."""
+    if not video_path:
+        return "(제목 미상)"
+    folder = Path(video_path).parent.name
+    m = re.match(r"^\d{8}_\d{6}_(.+)$", folder)
+    return m.group(1) if m else folder
+
+
+def _format_elapsed(seconds: float) -> str:
+    m, s = divmod(int(seconds), 60)
+    h, m = divmod(m, 60)
+    if h:
+        return f"{h}시간 {m}분"
+    if m:
+        return f"{m}분 {s}초"
+    return f"{s}초"
 
 
 def _resolve_input_dir(input_dir: str, cfg) -> Path:
@@ -104,6 +126,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         return 0, 0
 
     logger.info("daily_generate: '%s' 영상 생성+업로드 시작 (%d개)", name, len(pending))
+    notify_discord(f"▶️ [{name}] 영상 생성+업로드 시작 — {len(pending)}개 대기 중")
     try:
         results = runner.run(
             count=len(pending),
@@ -113,25 +136,43 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
             also_make_shorts=False,
             stagger_days=0,
         )
-    except Exception:
+    except Exception as e:
         logger.exception("daily_generate: '%s' 배치 처리 중 예외 발생", name)
+        notify_discord(f"🔴 [{name}] 배치 처리 중 예외 발생: {e}")
         return 0, 0
 
     # r.success는 "영상 파일 자체가 만들어졌는지"만 뜻함 (core/pipeline.py 설계상
     # 업로드 실패해도 영상 생성은 성공으로 침). 실제 유튜브 업로드 여부는
     # youtube_video_id가 채워졌는지로 따로 확인해야 함 — 안 그러면 업로드가
     # 조용히 실패해도 "성공"으로 보고돼서 놓치게 됨 (실제로 한 번 겪은 버그).
-    uploaded = sum(1 for r in results if r.success and r.youtube_video_id)
-    made_but_not_uploaded = sum(1 for r in results if r.success and not r.youtube_video_id)
-    fail = len(results) - uploaded - made_but_not_uploaded
-    if made_but_not_uploaded:
-        logger.error(
-            "daily_generate: '%s' 영상 %d개는 생성됐지만 유튜브 업로드 실패함 (인증 문제 가능성)",
-            name, made_but_not_uploaded,
-        )
-        for r in results:
-            if r.success and not r.youtube_video_id:
-                notify_discord(f"⚠️ '{name}' 채널 영상 생성됐지만 업로드 실패: {r.youtube_error or '알 수 없는 오류'}")
+    uploaded = 0
+    made_but_not_uploaded = 0
+    fail = 0
+    for r in results:
+        title = _extract_title(r.video_path)
+        is_shorts = bool(r.thumbnail_shorts_path) and not r.thumbnail_long_path
+        kind = "쇼츠" if is_shorts else "롱폼"
+
+        if r.success and r.youtube_video_id:
+            uploaded += 1
+            notify_discord(
+                f"✅ [{name}] {kind} 업로드 완료 — {title}\n"
+                f"https://youtu.be/{r.youtube_video_id}"
+            )
+        elif r.success and not r.youtube_video_id:
+            made_but_not_uploaded += 1
+            logger.error(
+                "daily_generate: '%s' 영상 생성됨 — 업로드 실패: %s (%s)",
+                name, title, r.youtube_error,
+            )
+            notify_discord(
+                f"⚠️ [{name}] {kind} 영상은 만들어졌지만 업로드 실패 — {title}\n"
+                f"사유: {r.youtube_error or '알 수 없는 오류'}"
+            )
+        else:
+            fail += 1
+            notify_discord(f"🔴 [{name}] {kind} 영상 생성 자체가 실패 — {title}\n사유: {r.error or '알 수 없는 오류'}")
+
     logger.info("daily_generate: '%s' 처리 완료 — 업로드 성공 %d개, 실패 %d개", name, uploaded, fail + made_but_not_uploaded)
     return uploaded, fail + made_but_not_uploaded
 
@@ -173,19 +214,27 @@ def main() -> int:
         logger.warning("daily_generate: 등록된 채널이 없습니다 (설정 > 채널 관리에서 추가하세요).")
         return 1
 
+    start = time.time()
+    channel_names = ", ".join(c.get("name", "?") for c in channels)
     notify("자동화 시작", f"{len(channels)}개 채널 — 대본 생성 후 영상 제작·업로드까지 진행합니다.")
-    notify_discord(f"🎬 자동화 시작 — {len(channels)}개 채널 대본 생성 후 영상 제작·업로드 진행")
+    notify_discord(f"🎬 자동화 시작 — {len(channels)}개 채널({channel_names}) 대본 생성 후 영상 제작·업로드 진행")
 
     gen_ok, gen_saved = _generate_scripts(cfg, channels, logger)
+
+    if gen_saved:
+        notify_discord(f"📝 대본 생성 완료 — {gen_ok}/{len(channels)}개 채널, 총 {gen_saved}개 저장")
+
     up_ok, up_fail = _process_queue(cfg, channels, logger)
+    elapsed_str = _format_elapsed(time.time() - start)
 
     logger.info(
-        "daily_generate: 전체 종료 (대본 %d/%d 채널, 영상 성공 %d개/실패 %d개)",
-        gen_ok, len(channels), up_ok, up_fail,
+        "daily_generate: 전체 종료 (대본 %d/%d 채널, 영상 성공 %d개/실패 %d개, %s 소요)",
+        gen_ok, len(channels), up_ok, up_fail, elapsed_str,
     )
     summary = (
         f"대본 {gen_saved}개 생성 · 영상 {up_ok}개 업로드 성공"
         + (f" · {up_fail}개 실패" if up_fail else "")
+        + f" · {elapsed_str} 소요"
     )
     notify("자동화 완료", summary)
     notify_discord(("✅" if up_fail == 0 else "⚠️") + f" 자동화 완료 — {summary}")
