@@ -40,6 +40,10 @@ jobs:
           printf '%s' "$YT_CHANNEL_UJJJAM_CREDENTIALS" > "config/channels/웃짬_credentials.json"
           printf '%s' "$YT_CHANNEL_DOGAE_CREDENTIALS" > "config/channels/도개_credentials.json"
           printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
+          # Windows PowerShell로 등록한 시크릿에 UTF-8 BOM이 섞여 들어올 수 있어 제거
+          for f in config/config.json config/client_secrets.json "config/channels/웃짬_credentials.json" "config/channels/도개_credentials.json"; do
+            sed -i '1s/^\xEF\xBB\xBF//' "$f"
+          done
 
       - name: Run daily pipeline (script gen + video + upload)
         env:

@@ -129,7 +129,7 @@ class ConfigManager:
             logger.warning("Config file not found: %s", path)
             return {}
         try:
-            with open(path, "r", encoding="utf-8") as f:
+            with open(path, "r", encoding="utf-8-sig") as f:
                 return json.load(f)
         except json.JSONDecodeError as e:
             logger.error("JSON parse error in %s: %s", path, e)
