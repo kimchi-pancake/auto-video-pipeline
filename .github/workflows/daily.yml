@@ -1,0 +1,55 @@
+name: Daily Video Pipeline
+
+on:
+  workflow_dispatch:
+  # 매일 20:10 KST(UTC+9) = 11:10 UTC. 검증 끝나면 주석 해제.
+  # schedule:
+  #   - cron: "10 11 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python dependencies
+        run: pip install -r requirements-headless.txt
+
+      - name: Write secrets to config files
+        env:
+          CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
+          CLIENT_SECRETS_JSON: ${{ secrets.CLIENT_SECRETS_JSON }}
+          YT_CHANNEL_UJJJAM_CREDENTIALS: ${{ secrets.YT_CHANNEL_UJJJAM_CREDENTIALS }}
+          YT_CHANNEL_DOGAE_CREDENTIALS: ${{ secrets.YT_CHANNEL_DOGAE_CREDENTIALS }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          printf '%s' "$CONFIG_JSON" > config/config.json
+          printf '%s' "$CLIENT_SECRETS_JSON" > config/client_secrets.json
+          printf '%s' "$YT_CHANNEL_UJJJAM_CREDENTIALS" > "config/channels/웃짬_credentials.json"
+          printf '%s' "$YT_CHANNEL_DOGAE_CREDENTIALS" > "config/channels/도개_credentials.json"
+          printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
+
+      - name: Run daily pipeline (script gen + video + upload)
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/daily_generate.py
+
+      - name: Commit updated state
+        if: always()
+        run: |
+          git config user.name "auto-video-pipeline-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add config/daily_generate_state.json
+          git diff --staged --quiet || git commit -m "update daily generation state [skip ci]"
+          git push
