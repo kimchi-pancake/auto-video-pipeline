@@ -12,7 +12,7 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Optional
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 
 from parser.story_parser import ThumbnailInfo
 from utils.logger import get_logger
