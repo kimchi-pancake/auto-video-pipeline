@@ -116,10 +116,23 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         logger.exception("daily_generate: '%s' 배치 처리 중 예외 발생", name)
         return 0, 0
 
-    ok = sum(1 for r in results if r.success)
-    fail = len(results) - ok
-    logger.info("daily_generate: '%s' 처리 완료 — 성공 %d개, 실패 %d개", name, ok, fail)
-    return ok, fail
+    # r.success는 "영상 파일 자체가 만들어졌는지"만 뜻함 (core/pipeline.py 설계상
+    # 업로드 실패해도 영상 생성은 성공으로 침). 실제 유튜브 업로드 여부는
+    # youtube_video_id가 채워졌는지로 따로 확인해야 함 — 안 그러면 업로드가
+    # 조용히 실패해도 "성공"으로 보고돼서 놓치게 됨 (실제로 한 번 겪은 버그).
+    uploaded = sum(1 for r in results if r.success and r.youtube_video_id)
+    made_but_not_uploaded = sum(1 for r in results if r.success and not r.youtube_video_id)
+    fail = len(results) - uploaded - made_but_not_uploaded
+    if made_but_not_uploaded:
+        logger.error(
+            "daily_generate: '%s' 영상 %d개는 생성됐지만 유튜브 업로드 실패함 (인증 문제 가능성)",
+            name, made_but_not_uploaded,
+        )
+        for r in results:
+            if r.success and not r.youtube_video_id:
+                notify_discord(f"⚠️ '{name}' 채널 영상 생성됐지만 업로드 실패: {r.youtube_error or '알 수 없는 오류'}")
+    logger.info("daily_generate: '%s' 처리 완료 — 업로드 성공 %d개, 실패 %d개", name, uploaded, fail + made_but_not_uploaded)
+    return uploaded, fail + made_but_not_uploaded
 
 
 def _process_queue(cfg, channels, logger) -> tuple[int, int]:
