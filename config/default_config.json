@@ -1,0 +1,183 @@
+{
+  "project": {
+    "name": "Auto Video Pipeline",
+    "version": "1.0.0",
+    "language": "ko"
+  },
+
+  "paths": {
+    "input_dir": "input",
+    "watch_input": true,
+    "output_dir": "output",
+    "temp_dir": "temp",
+    "archive_dir": "archive",
+    "logs_dir": "logs",
+    "assets_dir": "assets",
+    "bgm_dir": "assets/bgm",
+    "photo_dir": "assets/photos",
+    "fonts_dir": "assets/fonts"
+  },
+
+  "bgm": {
+    "auto_select": true,
+    "default": "simple.mp3",
+    "moods": {
+      "happy.mp3": ["행복", "기쁘", "기뻐", "즐겁", "신나", "웃음", "웃었", "유쾌", "재밌", "재미있", "활기"],
+      "lovely.mp3": ["사랑", "설레", "설렘", "달콤", "로맨틱", "고백", "첫사랑", "좋아해", "두근", "썸"],
+      "sad.mp3": ["슬프", "눈물", "이별", "헤어지", "아프", "그리워", "우울", "상처", "후회", "미안", "울었"],
+      "ambient_piano.mp3": ["잔잔", "차분", "고요", "평화", "사색", "명상", "조용", "담담", "위로"],
+      "simple.mp3": []
+    }
+  },
+
+  "tts": {
+    "default_voice": "ko-KR-SunHiNeural",
+    "default_rate": "+0%",
+    "default_pitch": "+0Hz",
+    "default_volume": "+0%",
+    "max_workers": 4,
+    "retry_count": 3,
+    "retry_delay": 2,
+    "output_format": "mp3",
+    "voices": {
+      "나레이터": {
+        "voice": "ko-KR-SunHiNeural",
+        "rate": "-5%",
+        "pitch": "+0Hz",
+        "volume": "+0%"
+      },
+      "남자1": {
+        "voice": "ko-KR-InJoonNeural",
+        "rate": "+0%",
+        "pitch": "-5Hz",
+        "volume": "+0%"
+      },
+      "여자1": {
+        "voice": "ko-KR-SunHiNeural",
+        "rate": "+0%",
+        "pitch": "+5Hz",
+        "volume": "+0%"
+      },
+      "남자2": {
+        "voice": "ko-KR-InJoonNeural",
+        "rate": "+5%",
+        "pitch": "+0Hz",
+        "volume": "+0%"
+      },
+      "여자2": {
+        "voice": "ko-KR-SunHiNeural",
+        "rate": "-5%",
+        "pitch": "-3Hz",
+        "volume": "+0%"
+      }
+    }
+  },
+
+  "image": {
+    "pixabay_api_key": "",
+    "default_width": 1920,
+    "default_height": 1080
+  },
+
+  "subtitle": {
+    "font_name": "Malgun Gothic",
+    "font_size": 76,
+    "font_color": "&H00FFFFFF",
+    "outline_color": "&H00000000",
+    "shadow_color": "&H80000000",
+    "outline_width": 4,
+    "shadow_depth": 2,
+    "margin_v": 60,
+    "margin_h": 40,
+    "alignment": 2,
+    "bold": -1,
+    "italic": 0,
+    "encoding": "UTF-8",
+    "split_char": "&",
+    "max_line_length": 30,
+    "line_break_threshold": 20
+  },
+
+  "video": {
+    "resolution": "1920x1080",
+    "width": 1920,
+    "height": 1080,
+    "shorts_width": 1080,
+    "shorts_height": 1920,
+    "shorts_max_duration": 60,
+    "fps": 30,
+    "video_codec": "libx264",
+    "audio_codec": "aac",
+    "video_bitrate": "8000k",
+    "audio_bitrate": "192k",
+    "pixel_format": "yuv420p",
+    "preset": "fast",
+    "crf": 18,
+    "gpu_encoding": false,
+    "gpu_codec": "h264_nvenc",
+    "gpu_preset": "p4",
+    "bgm_volume": 0.15,
+    "tts_volume": 1.0,
+    "fade_duration": 0.5,
+    "crossfade_duration": 0.8,
+    "pan_zoom_enabled": true,
+    "pan_zoom_scale": 1.05,
+    "min_scene_duration": 3.0,
+    "ffmpeg_path": "ffmpeg",
+    "ffprobe_path": "ffprobe",
+    "threads": 4
+  },
+
+  "thumbnail": {
+    "long_width": 1280,
+    "long_height": 720,
+    "shorts_width": 1080,
+    "shorts_height": 1920,
+    "font_name": "NanumGothicBold",
+    "font_size_long": 140,
+    "font_size_shorts": 125,
+    "bg_color": [0, 0, 0],
+    "text_colors": [[255, 32, 32]],
+    "quality": 95
+  },
+
+  "youtube": {
+    "client_secrets_file": "config/client_secrets.json",
+    "credentials_file": "config/youtube_credentials.json",
+    "channels": [],
+    "scopes": [
+      "https://www.googleapis.com/auth/youtube.upload",
+      "https://www.googleapis.com/auth/youtube"
+    ],
+    "default_category": "22",
+    "default_privacy": "private",
+    "default_language": "ko",
+    "chunk_size": 10485760,
+    "retry_count": 3,
+    "retry_delay": 10,
+    "schedule_hour": 18,
+    "schedule_minute": 0,
+    "schedule_timezone": "Asia/Seoul",
+    "default_tags": ["자동생성", "AI영상", "스토리"],
+    "shorts_tags": ["Shorts", "쇼츠"],
+    "max_title_length": 100,
+    "max_description_length": 5000
+  },
+
+  "automation": {
+    "auto_archive": true,
+    "auto_cleanup_temp": true,
+    "auto_retry_failed": true,
+    "max_retry_count": 3,
+    "cleanup_days": 7,
+    "max_workers": 2
+  },
+
+  "logging": {
+    "level": "DEBUG",
+    "max_file_size": 10485760,
+    "backup_count": 5,
+    "format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    "date_format": "%Y-%m-%d %H:%M:%S"
+  }
+}

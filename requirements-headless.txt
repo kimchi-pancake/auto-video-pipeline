@@ -1,0 +1,38 @@
+# ============================================================
+# Auto Video Pipeline - Headless server requirements
+# (PySide6/GUI 제외 — daily_generate.py 같은 헤드리스 경로 전용)
+# ============================================================
+
+# TTS
+edge-tts>=6.1.9
+
+# Image / Thumbnail
+Pillow>=10.3.0
+requests>=2.31.0
+aiohttp>=3.9.0
+aiofiles>=23.2.1
+
+# Subtitle
+pysrt>=1.1.2
+chardet>=5.2.0
+
+# YouTube Upload
+google-api-python-client>=2.130.0
+google-auth>=2.29.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+
+# AI Script Generation
+anthropic>=0.69.0
+
+# Utilities
+python-dotenv>=1.0.1
+colorlog>=6.8.2
+tqdm>=4.66.4
+tenacity>=8.3.0
+schedule>=1.2.2
+psutil>=5.9.8
+pytz>=2024.1
+
+# Async support
+nest-asyncio>=1.6.0

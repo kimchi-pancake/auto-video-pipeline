@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+
+# 가상환경
+.venv/
+venv/
+env/
+ENV/
+
+# 런타임 생성 파일
+/temp/
+/output/
+/logs/
+/archive/
+
+# 사용자 설정 (기본값만 커밋)
+config/config.json
+config/client_secrets.json
+config/client_secret_*.json
+config/youtube_credentials.json
+config/channels/*_credentials.json
+config/recent.json
+config/ui_prefs.json
+config/oci_a1_state.json
+
+# API 키 등 비밀값
+.env
+
+# Gemini 임베디드 브라우저 프로필 (구글 로그인 세션 포함 - 민감정보)
+config/webengine_profile/
+
+# 에셋 — 폰트/BGM은 필수 자산이라 커밋함 (fonts/bgm 자체 제외 규칙 없음).
+# 스톡 사진 캐시는 Pixabay에서 재다운로드 가능하니 제외.
+assets/photos/*
+!assets/photos/.gitkeep
+
+# 입력 파일 (개인 스토리)
+input/*.txt
+!input/story_example.txt
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# 프로젝트와 무관한 스크래치 파일
+/import time.py
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.tmp
+*.swp
+
+# 빌드 산출물
+*.spec
+/dist_win/
