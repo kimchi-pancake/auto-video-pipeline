@@ -52,6 +52,13 @@ MAX_REGEN_ATTEMPTS = 2
 MIN_HOOK_SCORE = 70
 MIN_ENDING_SCORE = 60
 
+# 자동 검수(hook/emotion/ending)는 "이야기가 좋은지"만 보고 "분량이 충분한지"는
+# 안 봅니다 — 점수는 높은데 씬이 20개/대사가 500자밖에 없는 식으로 8분 목표에
+# 한참 못 미치는 롱폼이 그냥 통과해버린 적이 있어서, 분량 자체도 별도로 검사합니다.
+# (LONG_SCRIPT_PROMPT 요구치: 22개 이상 씬, 4500자 이상 — 약간의 여유를 두고 검사)
+MIN_LONG_SCENES = 18
+MIN_LONG_CHARS = 3000
+
 # ProgressCallback(done, total) — generate_daily_batch()가 API 호출 하나 끝날
 # 때마다 부릅니다. GUI에서 진행 상태 표시에 씁니다.
 ProgressCallback = Callable[[int, int], None]
@@ -195,6 +202,20 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
 # 4. 자동 검수
 # ─────────────────────────────────────────────
 
+def _long_form_length_ok(text: str) -> tuple[bool, str]:
+    """콤보 응답의 롱폼 부분이 최소 분량(씬 개수/글자 수)을 채웠는지 확인합니다.
+    부족하면 (False, 이유)를 반환 — score_script의 이야기 품질 점수와는 별개로
+    "너무 짧게 써서 8분 목표를 못 채우는" 케이스를 잡아내기 위한 검사입니다."""
+    long_part = text.split(SPLIT_DELIMITER, 1)[0] if SPLIT_DELIMITER in text else text
+    scene_count = long_part.count("[SCENE:")
+    char_count = len(long_part)
+    if scene_count < MIN_LONG_SCENES:
+        return False, f"씬 {scene_count}개 (최소 {MIN_LONG_SCENES}개 필요)"
+    if char_count < MIN_LONG_CHARS:
+        return False, f"롱폼 {char_count}자 (최소 {MIN_LONG_CHARS}자 필요)"
+    return True, ""
+
+
 def score_script(script_text: str) -> dict:
     """{"hook": int, "emotion": int, "ending": int, "dropout_risk": str, "cta_excess": bool}."""
     logger.info("Claude API 대본 자동 검수 요청")
@@ -275,19 +296,21 @@ def generate_optimized_script(
 
     text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
     scores = score_script(text)
+    length_ok, length_reason = _long_form_length_ok(text)
 
     attempts = 1
     while (
         attempts <= MAX_REGEN_ATTEMPTS
-        and scores
-        and (scores.get("hook", 100) < MIN_HOOK_SCORE or scores.get("ending", 100) < MIN_ENDING_SCORE)
-    ):
-        logger.warning(
-            "검수 기준 미달(hook=%s, ending=%s) — 재생성 시도 %d/%d",
-            scores.get("hook"), scores.get("ending"), attempts, MAX_REGEN_ATTEMPTS,
+        and (
+            not length_ok
+            or (scores and (scores.get("hook", 100) < MIN_HOOK_SCORE or scores.get("ending", 100) < MIN_ENDING_SCORE))
         )
+    ):
+        reason = length_reason if not length_ok else f"hook={scores.get('hook')}, ending={scores.get('ending')}"
+        logger.warning("검수 기준 미달(%s) — 재생성 시도 %d/%d", reason, attempts, MAX_REGEN_ATTEMPTS)
         text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
         scores = score_script(text)
+        length_ok, length_reason = _long_form_length_ok(text)
         attempts += 1
 
     meta = {
