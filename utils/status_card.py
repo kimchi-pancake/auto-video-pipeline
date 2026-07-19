@@ -50,6 +50,20 @@ def _truncate(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont
     return text + "…"
 
 
+def _fit_title_font(
+    draw: ImageDraw.ImageDraw, text: str, max_w: int, max_size: int = 30, min_size: int = 15,
+) -> ImageFont.FreeTypeFont:
+    """제목을 자르지 않고, 칸(max_w) 안에 들어갈 때까지 글자 크기를 줄여서
+    반환합니다. 최소 크기에서도 안 들어가면 그 이하로는 더 줄이지 않고
+    최소 크기 폰트를 반환합니다(그림에서 draw.text가 잘리는 건 허용)."""
+    size = max_size
+    font = _font(size, bold=True)
+    while size > min_size and draw.textlength(text, font=font) > max_w:
+        size -= 1
+        font = _font(size, bold=True)
+    return font
+
+
 def render_status_card(
     title: str,
     channel: str,
@@ -76,9 +90,8 @@ def render_status_card(
     )
     draw.text((W - 44 - status_w - 14, 40), status_label, font=_font(18, bold=True), fill=(20, 20, 22))
 
-    title_font = _font(30, bold=True)
-    title_display = _truncate(draw, title, title_font, W - 88)
-    draw.text((44, 78), title_display, font=title_font, fill=_TEXT)
+    title_font = _fit_title_font(draw, title, W - 88)
+    draw.text((44, 78), title, font=title_font, fill=_TEXT)
 
     bar_x0, bar_y0, bar_x1, bar_y1 = 44, 150, W - 44, 182
     draw.rounded_rectangle([bar_x0, bar_y0, bar_x1, bar_y1], radius=16, fill=_TRACK)
