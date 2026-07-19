@@ -85,27 +85,11 @@ def main() -> int:
 
     default_privacy = cfg.get("youtube.default_privacy", "private")
     upload_privacy = "private" if default_privacy == "public" else default_privacy
-    runner = BatchRunner(
-        cfg, input_dir,
-        youtube_credentials_file=chan.get("credentials_file", ""),
-        archive_subdir=args.channel,
-        discord_status=True,
-    )
-    try:
-        results = runner.run(
-            count=len(saved),
-            upload_to_youtube=True,
-            youtube_privacy=upload_privacy,
-            schedule_days_ahead=0,
-            also_make_shorts=False,
-            stagger_days=0,
-        )
-    except Exception as e:
-        logger.exception("generate_topic: 배치 처리 중 예외 발생")
-        notify_discord(f"🔴 [{args.channel}] 영상 제작 중 오류 — {e}")
-        return 1
 
-    for r in results:
+    def _on_file_done(story_path: str, r) -> None:
+        # 파일 하나(보통 롱폼+쇼츠 중 하나) 끝날 때마다 바로 알림 — 배치
+        # 전체가 끝날 때까지 기다렸다가 한꺼번에 보내지 않도록 함
+        # (daily_generate.py에서 겪은 것과 같은 알림 지연 버그 방지).
         if r.success and r.youtube_video_id:
             title = Path(r.video_path).parent.name
             is_shorts = bool(r.thumbnail_shorts_path) and not r.thumbnail_long_path
@@ -130,6 +114,27 @@ def main() -> int:
             notify_discord(f"⚠️ [{args.channel}] 영상은 만들어졌지만 업로드 실패 — {r.youtube_error or '알 수 없는 오류'}")
         else:
             notify_discord(f"🔴 [{args.channel}] 영상 생성 실패 — {r.error or '알 수 없는 오류'}")
+
+    runner = BatchRunner(
+        cfg, input_dir,
+        youtube_credentials_file=chan.get("credentials_file", ""),
+        archive_subdir=args.channel,
+        discord_status=True,
+        on_file_done=_on_file_done,
+    )
+    try:
+        runner.run(
+            count=len(saved),
+            upload_to_youtube=True,
+            youtube_privacy=upload_privacy,
+            schedule_days_ahead=0,
+            also_make_shorts=False,
+            stagger_days=0,
+        )
+    except Exception as e:
+        logger.exception("generate_topic: 배치 처리 중 예외 발생")
+        notify_discord(f"🔴 [{args.channel}] 영상 제작 중 오류 — {e}")
+        return 1
 
     return 0
 

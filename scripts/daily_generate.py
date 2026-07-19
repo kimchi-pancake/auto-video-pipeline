@@ -143,6 +143,44 @@ def _hold_then_publish(name: str, chan: dict, video_id: str, title: str, kind: s
         notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
 
 
+def _handle_result(name: str, chan: dict, default_privacy: str, result, counters: dict, logger) -> None:
+    """파일 하나 처리가 끝날 때마다(배치 전체가 아니라) 바로 불려서, 그
+    영상에 대한 디스코드 알림을 즉시 보냅니다 — 채널 대기열 전체(롱폼+쇼츠2)가
+    다 끝날 때까지 기다렸다가 한꺼번에 보내면, 롱폼 하나 렌더링에만 1시간
+    가까이 걸리는 상황에서 사용자가 한참 동안 아무 알림도 못 받게 됩니다."""
+    title = _extract_title(result.video_path)
+    is_shorts = bool(result.thumbnail_shorts_path) and not result.thumbnail_long_path
+    kind = "쇼츠" if is_shorts else "롱폼"
+
+    # r.success는 "영상 파일 자체가 만들어졌는지"만 뜻함 (core/pipeline.py 설계상
+    # 업로드 실패해도 영상 생성은 성공으로 침). 실제 유튜브 업로드 여부는
+    # youtube_video_id가 채워졌는지로 따로 확인해야 함 — 안 그러면 업로드가
+    # 조용히 실패해도 "성공"으로 보고돼서 놓치게 됨 (실제로 한 번 겪은 버그).
+    if result.success and result.youtube_video_id:
+        counters["uploaded"] += 1
+        record_upload(result.youtube_video_id, name, result.category, result.title or title, is_shorts)
+        if default_privacy == "public":
+            _hold_then_publish(name, chan, result.youtube_video_id, result.title or title, kind)
+        else:
+            notify_discord(
+                f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
+                f"https://youtu.be/{result.youtube_video_id}"
+            )
+    elif result.success and not result.youtube_video_id:
+        counters["made_but_not_uploaded"] += 1
+        logger.error(
+            "daily_generate: '%s' 영상 생성됨 — 업로드 실패: %s (%s)",
+            name, title, result.youtube_error,
+        )
+        notify_discord(
+            f"⚠️ [{name}] {kind} 영상은 만들어졌지만 업로드 실패 — {title}\n"
+            f"사유: {result.youtube_error or '알 수 없는 오류'}"
+        )
+    else:
+        counters["fail"] += 1
+        notify_discord(f"🔴 [{name}] {kind} 영상 생성 자체가 실패 — {title}\n사유: {result.error or '알 수 없는 오류'}")
+
+
 def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     """채널 하나의 대기열을 처리합니다. (성공 개수, 실패 개수)를 반환."""
     name = chan.get("name") or "(이름없음)"
@@ -151,12 +189,19 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     # 원래 설정이 private인 채널이면 그대로 private로 둡니다(승인 절차 불필요).
     upload_privacy = "private" if default_privacy == "public" else default_privacy
     input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
+
+    counters = {"uploaded": 0, "made_but_not_uploaded": 0, "fail": 0}
+
+    def _on_file_done(story_path: str, result) -> None:
+        _handle_result(name, chan, default_privacy, result, counters, logger)
+
     runner = BatchRunner(
         cfg,
         input_dir,
         youtube_credentials_file=chan.get("credentials_file", ""),
         archive_subdir=name,
         discord_status=True,
+        on_file_done=_on_file_done,
     )
     pending = runner.get_pending_files()
     if not pending:
@@ -166,7 +211,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     logger.info("daily_generate: '%s' 영상 생성+업로드 시작 (%d개)", name, len(pending))
     notify_discord(f"▶️ [{name}] 영상 생성+업로드 시작 — {len(pending)}개 대기 중")
     try:
-        results = runner.run(
+        runner.run(
             count=len(pending),
             upload_to_youtube=True,
             youtube_privacy=upload_privacy,
@@ -177,46 +222,11 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     except Exception as e:
         logger.exception("daily_generate: '%s' 배치 처리 중 예외 발생", name)
         notify_discord(f"🔴 [{name}] 배치 처리 중 예외 발생: {e}")
-        return 0, 0
+        return counters["uploaded"], counters["made_but_not_uploaded"] + counters["fail"]
 
-    # r.success는 "영상 파일 자체가 만들어졌는지"만 뜻함 (core/pipeline.py 설계상
-    # 업로드 실패해도 영상 생성은 성공으로 침). 실제 유튜브 업로드 여부는
-    # youtube_video_id가 채워졌는지로 따로 확인해야 함 — 안 그러면 업로드가
-    # 조용히 실패해도 "성공"으로 보고돼서 놓치게 됨 (실제로 한 번 겪은 버그).
-    uploaded = 0
-    made_but_not_uploaded = 0
-    fail = 0
-    for r in results:
-        title = _extract_title(r.video_path)
-        is_shorts = bool(r.thumbnail_shorts_path) and not r.thumbnail_long_path
-        kind = "쇼츠" if is_shorts else "롱폼"
-
-        if r.success and r.youtube_video_id:
-            uploaded += 1
-            record_upload(r.youtube_video_id, name, r.category, r.title or title, is_shorts)
-            if default_privacy == "public":
-                _hold_then_publish(name, chan, r.youtube_video_id, r.title or title, kind)
-            else:
-                notify_discord(
-                    f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
-                    f"https://youtu.be/{r.youtube_video_id}"
-                )
-        elif r.success and not r.youtube_video_id:
-            made_but_not_uploaded += 1
-            logger.error(
-                "daily_generate: '%s' 영상 생성됨 — 업로드 실패: %s (%s)",
-                name, title, r.youtube_error,
-            )
-            notify_discord(
-                f"⚠️ [{name}] {kind} 영상은 만들어졌지만 업로드 실패 — {title}\n"
-                f"사유: {r.youtube_error or '알 수 없는 오류'}"
-            )
-        else:
-            fail += 1
-            notify_discord(f"🔴 [{name}] {kind} 영상 생성 자체가 실패 — {title}\n사유: {r.error or '알 수 없는 오류'}")
-
-    logger.info("daily_generate: '%s' 처리 완료 — 업로드 성공 %d개, 실패 %d개", name, uploaded, fail + made_but_not_uploaded)
-    return uploaded, fail + made_but_not_uploaded
+    total_fail = counters["made_but_not_uploaded"] + counters["fail"]
+    logger.info("daily_generate: '%s' 처리 완료 — 업로드 성공 %d개, 실패 %d개", name, counters["uploaded"], total_fail)
+    return counters["uploaded"], total_fail
 
 
 def _process_queue(cfg, channels, logger) -> tuple[int, int]:
