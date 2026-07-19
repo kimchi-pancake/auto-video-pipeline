@@ -55,9 +55,12 @@ MIN_ENDING_SCORE = 60
 # 자동 검수(hook/emotion/ending)는 "이야기가 좋은지"만 보고 "분량이 충분한지"는
 # 안 봅니다 — 점수는 높은데 씬이 20개/대사가 500자밖에 없는 식으로 8분 목표에
 # 한참 못 미치는 롱폼이 그냥 통과해버린 적이 있어서, 분량 자체도 별도로 검사합니다.
-# (LONG_SCRIPT_PROMPT 요구치: 22개 이상 씬, 4500자 이상 — 약간의 여유를 두고 검사)
+# (LONG_SCRIPT_PROMPT 요구치: 22개 이상 씬, "대사" 4500자 이상 — 씬 개수는 약간의
+# 여유를 두고, 대사 글자수는 [SCENE:...] 영어 묘사를 뺀 실제 낭독 텍스트만 셉니다.
+# 전체 텍스트(장면 묘사 포함) 기준으로 쟀다가 씬 25개·전체 4200자인데 실제 대사는
+# 2100자뿐이라 TTS 낭독시간이 99초밖에 안 나온 사례가 있어서 이렇게 바꿈.)
 MIN_LONG_SCENES = 18
-MIN_LONG_CHARS = 3000
+MIN_LONG_DIALOGUE_CHARS = 3800
 
 # ProgressCallback(done, total) — generate_daily_batch()가 API 호출 하나 끝날
 # 때마다 부릅니다. GUI에서 진행 상태 표시에 씁니다.
@@ -202,17 +205,38 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
 # 4. 자동 검수
 # ─────────────────────────────────────────────
 
+_RE_DIALOGUE_LINE = re.compile(r"^[^\s:：]+[:：]\s*(.+)$")
+
+
+def _dialogue_char_count(long_part: str) -> int:
+    """실제 낭독되는 대사 글자수만 셉니다 — [SCENE:...] 영어 장면 묘사나
+    RESOLUTION:/CATEGORY:/CAST: 같은 섹션 헤더까지 같이 세면 실제 낭독 시간과
+    무관하게 부풀려져서, 씬 개수/전체 글자수만으로는 "8분 목표"를 제대로
+    검증할 수 없습니다(실제로 씬 25개·전체 4200자인데 대사는 2100자뿐이라
+    TTS 낭독시간이 99초밖에 안 나온 사례로 확인됨)."""
+    total = 0
+    for line in long_part.splitlines():
+        line = line.strip()
+        if not line or line.startswith("[SCENE") or line.endswith(":") or line.endswith("："):
+            continue
+        m = _RE_DIALOGUE_LINE.match(line)
+        if m:
+            total += len(m.group(1))
+    return total
+
+
 def _long_form_length_ok(text: str) -> tuple[bool, str]:
-    """콤보 응답의 롱폼 부분이 최소 분량(씬 개수/글자 수)을 채웠는지 확인합니다.
-    부족하면 (False, 이유)를 반환 — score_script의 이야기 품질 점수와는 별개로
-    "너무 짧게 써서 8분 목표를 못 채우는" 케이스를 잡아내기 위한 검사입니다."""
+    """콤보 응답의 롱폼 부분이 최소 분량(씬 개수/실제 대사 글자수)을 채웠는지
+    확인합니다. 부족하면 (False, 이유)를 반환 — score_script의 이야기 품질
+    점수와는 별개로 "너무 짧게 써서 8분 목표를 못 채우는" 케이스를 잡아내기
+    위한 검사입니다."""
     long_part = text.split(SPLIT_DELIMITER, 1)[0] if SPLIT_DELIMITER in text else text
     scene_count = long_part.count("[SCENE:")
-    char_count = len(long_part)
+    dialogue_chars = _dialogue_char_count(long_part)
     if scene_count < MIN_LONG_SCENES:
         return False, f"씬 {scene_count}개 (최소 {MIN_LONG_SCENES}개 필요)"
-    if char_count < MIN_LONG_CHARS:
-        return False, f"롱폼 {char_count}자 (최소 {MIN_LONG_CHARS}자 필요)"
+    if dialogue_chars < MIN_LONG_DIALOGUE_CHARS:
+        return False, f"대사 {dialogue_chars}자 (최소 {MIN_LONG_DIALOGUE_CHARS}자 필요)"
     return True, ""
 
 
