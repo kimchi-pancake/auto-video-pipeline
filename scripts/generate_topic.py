@@ -59,15 +59,6 @@ def main() -> int:
     channels = {_nfc(c.get("name", "")): c for c in (cfg.get("youtube.channels", []) or [])}
     chan = channels.get(_nfc(args.channel))
     if not chan:
-        logger.error("DEBUG args.channel=%r codepoints=%s", args.channel, [hex(ord(c)) for c in args.channel])
-        for k in channels:
-            logger.error("DEBUG channel_key=%r codepoints=%s", k, [hex(ord(c)) for c in k])
-        try:
-            raw_bytes = (ROOT / "config" / "config.json").read_bytes()
-            idx = raw_bytes.find(b'"channels"')
-            logger.error("DEBUG raw config.json bytes around channels: %r", raw_bytes[idx:idx + 150])
-        except Exception as e:
-            logger.error("DEBUG raw read failed: %s", e)
         msg = f"'{args.channel}' 채널을 찾을 수 없음 (등록된 채널: {', '.join(channels) or '없음'})"
         logger.error("generate_topic: %s", msg)
         notify_discord(f"🔴 온디맨드 생성 실패 — {msg}")
