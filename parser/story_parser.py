@@ -329,6 +329,13 @@ class StoryParser:
                 )
                 current_scene.dialogues.append(dialogue)
                 dialogue_index += 1
+            elif current_scene.dialogues:
+                # "화자:" 표시 없이 이어지는 줄 — 대본이 한 대사를 여러 물리적
+                # 줄로 줄바꿈해서 쓴 경우(& 로 끊긴 문장이 다음 줄로 이어짐).
+                # 직전 대사에 이어붙이지 않으면 이 줄의 내용이 통째로 유실됨.
+                last = current_scene.dialogues[-1]
+                last.text = f"{last.text} {stripped}"
+                last.segments = self._split_segments(last.text)
 
         if current_scene is not None:
             scenes.append(current_scene)

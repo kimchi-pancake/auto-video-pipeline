@@ -213,15 +213,32 @@ def _dialogue_char_count(long_part: str) -> int:
     RESOLUTION:/CATEGORY:/CAST: 같은 섹션 헤더까지 같이 세면 실제 낭독 시간과
     무관하게 부풀려져서, 씬 개수/전체 글자수만으로는 "8분 목표"를 제대로
     검증할 수 없습니다(실제로 씬 25개·전체 4200자인데 대사는 2100자뿐이라
-    TTS 낭독시간이 99초밖에 안 나온 사례로 확인됨)."""
+    TTS 낭독시간이 99초밖에 안 나온 사례로 확인됨).
+
+    parser/story_parser.py와 동일한 규칙을 씁니다: 첫 [SCENE 이전 섹션(CAST:
+    등)은 세지 않고("나레이터: 나레이터" 같은 CAST 매핑 줄이 대사로 오카운트
+    되는 걸 방지), "화자:" 표시 없이 이어지는 줄은 직전 대사의 줄바꿈
+    연속으로 보고 같이 셉니다(안 그러면 여러 줄로 줄바꿈된 대사의 뒷부분이
+    카운트에서 통째로 빠짐)."""
     total = 0
+    in_scene = False
+    have_dialogue = False
     for line in long_part.splitlines():
         line = line.strip()
-        if not line or line.startswith("[SCENE") or line.endswith(":") or line.endswith("："):
+        if not line:
+            continue
+        if line.startswith("[SCENE"):
+            in_scene = True
+            have_dialogue = False
+            continue
+        if not in_scene:
             continue
         m = _RE_DIALOGUE_LINE.match(line)
         if m:
             total += len(m.group(1))
+            have_dialogue = True
+        elif have_dialogue:
+            total += len(line)
     return total
 
 
