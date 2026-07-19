@@ -7,16 +7,26 @@ video_registry.json 통계를 소재 카테고리별로 집계합니다. "!분�
 
 from __future__ import annotations
 
+import unicodedata
+
 from core.video_registry import all_entries
+
+
+def _nfc(s: str) -> str:
+    """채널명 비교용 정규화 — 서로 다른 곳(디스코드 Worker, GitHub Actions
+    입력, config.json)에서 온 같은 한글 문자열이라도 유니코드 정규화 형태가
+    다르면 == 비교가 조용히 실패할 수 있습니다."""
+    return unicodedata.normalize("NFC", s)
 
 
 def category_stats(channel: str | None = None) -> list[dict]:
     """카테고리별 {category, count, avg_views, avg_likes, avg_comments}를
     평균 조회수 내림차순으로 반환합니다. 통계가 아직 없는 영상은 제외합니다."""
     entries = all_entries()
+    channel = _nfc(channel) if channel else channel
     by_cat: dict[str, list[dict]] = {}
     for e in entries:
-        if channel and e.get("channel") != channel:
+        if channel and _nfc(e.get("channel", "")) != channel:
             continue
         stats = e.get("stats")
         if not stats:
@@ -61,5 +71,6 @@ def summarize_for_prompt(channel: str | None = None, top_n: int = 3) -> str:
 def recent_titles(channel: str | None = None, limit: int = 30) -> list[str]:
     entries = all_entries()
     if channel:
-        entries = [e for e in entries if e.get("channel") == channel]
+        channel = _nfc(channel)
+        entries = [e for e in entries if _nfc(e.get("channel", "")) == channel]
     return [e["title"] for e in entries[-limit:] if e.get("title")]

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
@@ -50,8 +51,13 @@ def main() -> int:
     )
     logger = get_logger(__name__)
 
-    channels = {c.get("name"): c for c in (cfg.get("youtube.channels", []) or [])}
-    chan = channels.get(args.channel)
+    # 셸/워크플로우 입력 전달 과정에서 한글이 정규화(NFC/NFD)가 다르게 들어오면
+    # 눈에는 똑같아 보여도 문자열 비교가 실패합니다 — 양쪽 다 NFC로 맞춰서 비교.
+    def _nfc(s: str) -> str:
+        return unicodedata.normalize("NFC", s)
+
+    channels = {_nfc(c.get("name", "")): c for c in (cfg.get("youtube.channels", []) or [])}
+    chan = channels.get(_nfc(args.channel))
     if not chan:
         msg = f"'{args.channel}' 채널을 찾을 수 없음 (등록된 채널: {', '.join(channels) or '없음'})"
         logger.error("generate_topic: %s", msg)

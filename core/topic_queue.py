@@ -11,9 +11,17 @@ from __future__ import annotations
 
 import json
 import secrets
+import unicodedata
 from pathlib import Path
 
 _QUEUE_PATH = Path(__file__).parent.parent / "config" / "topic_queue.json"
+
+
+def _nfc(s: str) -> str:
+    """채널명 비교용 정규화. 디스코드 Worker(JS)가 쓴 키와 config.json에서
+    읽은 채널명이 같은 한글이라도 유니코드 정규화 형태(NFC/NFD)가 다르면
+    눈에는 똑같아도 == 비교가 실패해서 예약이 조용히 안 먹힐 수 있습니다."""
+    return unicodedata.normalize("NFC", s)
 
 
 def _load() -> dict:
@@ -23,9 +31,10 @@ def _load() -> dict:
         data = json.loads(_QUEUE_PATH.read_text(encoding="utf-8"))
     except Exception:
         return {}
-    # 예전 스키마({channel: "주제 문자열 하나"})와의 호환
+    # 예전 스키마({channel: "주제 문자열 하나"})와의 호환 + 채널명 정규화
     migrated: dict = {}
     for ch, val in data.items():
+        ch = _nfc(ch)
         if isinstance(val, str):
             migrated[ch] = [{"id": secrets.token_hex(4), "date": None, "topic": val}]
         elif isinstance(val, list):
@@ -40,6 +49,7 @@ def _save(data: dict) -> None:
 
 def push_topic(channel: str, topic: str, date: str | None = None) -> str:
     """채널에 주제를 예약합니다. 예약 항목의 id를 반환합니다."""
+    channel = _nfc(channel)
     data = _load()
     entries = data.setdefault(channel, [])
     entry_id = secrets.token_hex(4)
@@ -52,6 +62,7 @@ def pop_topic(channel: str, today: str) -> str | None:
     """오늘(today, "YYYY-MM-DD") 쓸 예약이 있으면 큐에서 꺼내(제거) 반환합니다.
     날짜 지정 예약 중 today 이하(놓친 것 포함)를 우선, 없으면 날짜 미지정
     예약(등록 순) 중 첫 번째를 씁니다. 없으면 None."""
+    channel = _nfc(channel)
     data = _load()
     entries = data.get(channel, [])
     if not entries:
@@ -83,6 +94,7 @@ def cancel_topic(channel: str, entry_id: str | None = None, date: str | None = N
     """entry_id가 있으면 그 항목만, 없고 date가 있으면 그 날짜 항목, 둘 다
     없으면 날짜 미지정("다음 실행용") 예약 중 가장 먼저 등록된 걸 취소합니다.
     취소했으면 True, 대상이 없으면 False."""
+    channel = _nfc(channel)
     data = _load()
     entries = data.get(channel, [])
     if not entries:
