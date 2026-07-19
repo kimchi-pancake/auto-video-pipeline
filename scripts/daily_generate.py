@@ -151,13 +151,17 @@ _pending_publish_threads: list = []
 _pending_publish_lock = threading.Lock()
 
 
-def _handle_result(name: str, chan: dict, default_privacy: str, result, counters: dict, logger) -> None:
+def _handle_result(name: str, chan: dict, default_privacy: str, story_path: str, result, counters: dict, logger) -> None:
     """파일 하나 처리가 끝날 때마다(배치 전체가 아니라) 바로 불려서, 그
     영상에 대한 디스코드 알림을 즉시 보냅니다 — 채널 대기열 전체(롱폼+쇼츠2)가
     다 끝날 때까지 기다렸다가 한꺼번에 보내면, 롱폼 하나 렌더링에만 1시간
     가까이 걸리는 상황에서 사용자가 한참 동안 아무 알림도 못 받게 됩니다."""
     title = _extract_title(result.video_path)
-    is_shorts = bool(result.thumbnail_shorts_path) and not result.thumbnail_long_path
+    # 썸네일은 롱폼/쇼츠 여부와 무관하게 core/pipeline.py가 항상 둘 다
+    # 만들어서 (thumbnail_long_path, thumbnail_shorts_path) 둘 다 채워짐 —
+    # 그걸로 종류를 구분하려던 예전 코드는 늘 "롱폼"으로만 나오는 버그였음.
+    # 대신 입력 파일명 접미사(claude_..._shorts.txt / _long.txt)로 구분.
+    is_shorts = "_shorts" in Path(story_path).stem
     kind = "쇼츠" if is_shorts else "롱폼"
 
     # r.success는 "영상 파일 자체가 만들어졌는지"만 뜻함 (core/pipeline.py 설계상
@@ -213,8 +217,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     counters = {"uploaded": 0, "made_but_not_uploaded": 0, "fail": 0}
 
     def _on_file_done(story_path: str, result) -> None:
-        _handle_result(name, chan, default_privacy, result, counters, logger)
-
+        _handle_result(name, chan, default_privacy, story_path, result, counters, logger)
 
     runner = BatchRunner(
         cfg,

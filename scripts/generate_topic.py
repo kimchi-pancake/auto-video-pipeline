@@ -110,7 +110,9 @@ def main() -> int:
         # (daily_generate.py에서 겪은 것과 같은 알림 지연 버그 방지).
         if r.success and r.youtube_video_id:
             title = Path(r.video_path).parent.name
-            is_shorts = bool(r.thumbnail_shorts_path) and not r.thumbnail_long_path
+            # 썸네일은 롱폼/쇼츠 상관없이 항상 둘 다 생성되므로 그걸로 종류를
+            # 구분할 수 없음 — 입력 파일명 접미사로 구분.
+            is_shorts = "_shorts" in Path(story_path).stem
             record_upload(r.youtube_video_id, args.channel, r.category, r.title or title, is_shorts)
             kind = "쇼츠" if is_shorts else "롱폼"
             if default_privacy == "public":
