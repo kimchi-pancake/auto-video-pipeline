@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import threading
 import unicodedata
 from pathlib import Path
 
@@ -27,6 +28,22 @@ from core.ai_script_generator import ScriptGenerationError, generate_and_save
 from core.batch_runner import BatchRunner
 from core.video_registry import record_upload
 from utils.soft_approval import is_rejected, publish_video, sleep_for_review
+
+
+def _hold_then_publish_topic(name: str, chan: dict, video_id: str, title: str, kind: str) -> None:
+    notify_discord(
+        f"👀 [{name}] {kind} 미리보기 — {title}\n"
+        f"https://youtu.be/{video_id}\n"
+        f"5분 안에 `/영상 거절 {video_id}` 안 하면 자동으로 공개됨."
+    )
+    sleep_for_review()
+    if is_rejected(video_id):
+        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}")
+        return
+    if publish_video(video_id, chan.get("credentials_file", "")):
+        notify_discord(f"✅ [{name}] {kind} 공개 전환 완료 — {title}\nhttps://youtu.be/{video_id}")
+    else:
+        notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
 
 
 def _resolve_input_dir(input_dir: str, cfg) -> Path:
@@ -85,6 +102,7 @@ def main() -> int:
 
     default_privacy = cfg.get("youtube.default_privacy", "private")
     upload_privacy = "private" if default_privacy == "public" else default_privacy
+    pending_publish_threads: list = []
 
     def _on_file_done(story_path: str, r) -> None:
         # 파일 하나(보통 롱폼+쇼츠 중 하나) 끝날 때마다 바로 알림 — 배치
@@ -96,18 +114,15 @@ def main() -> int:
             record_upload(r.youtube_video_id, args.channel, r.category, r.title or title, is_shorts)
             kind = "쇼츠" if is_shorts else "롱폼"
             if default_privacy == "public":
-                notify_discord(
-                    f"👀 [{args.channel}] {kind} 미리보기 — {r.title or title}\n"
-                    f"https://youtu.be/{r.youtube_video_id}\n"
-                    f"5분 안에 `/영상 거절 {r.youtube_video_id}` 안 하면 자동으로 공개됨."
+                # 5분 승인 대기를 여기서 그냥 기다리면 배치 루프가 막혀서 다음
+                # 파일 처리가 5분씩 밀림 — 별도 스레드로 돌림.
+                t = threading.Thread(
+                    target=_hold_then_publish_topic,
+                    args=(args.channel, chan, r.youtube_video_id, r.title or title, kind),
+                    daemon=True,
                 )
-                sleep_for_review()
-                if is_rejected(r.youtube_video_id):
-                    notify_discord(f"🚫 [{args.channel}] 거절됨 — 비공개로 유지: {title}")
-                elif publish_video(r.youtube_video_id, chan.get("credentials_file", "")):
-                    notify_discord(f"✅ [{args.channel}] {kind} 공개 전환 완료 — {title}\nhttps://youtu.be/{r.youtube_video_id}")
-                else:
-                    notify_discord(f"⚠️ [{args.channel}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 바꿔야 함: {title}")
+                t.start()
+                pending_publish_threads.append(t)
             else:
                 notify_discord(f"✅ [{args.channel}] 업로드 완료(비공개) — {title}\nhttps://youtu.be/{r.youtube_video_id}")
         elif r.success:
@@ -135,6 +150,11 @@ def main() -> int:
         logger.exception("generate_topic: 배치 처리 중 예외 발생")
         notify_discord(f"🔴 [{args.channel}] 영상 제작 중 오류 — {e}")
         return 1
+
+    # 소프트 승인 스레드가 아직 돌고 있을 수 있음 — 안 기다리고 끝나면 daemon
+    # 스레드가 죽어서 영상이 영원히 비공개로 남습니다.
+    for t in pending_publish_threads:
+        t.join()
 
     return 0
 
