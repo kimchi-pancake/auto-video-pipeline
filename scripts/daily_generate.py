@@ -32,6 +32,7 @@ from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
 from core.video_registry import record_upload
+from utils.soft_approval import is_rejected, publish_video, sleep_for_review
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
@@ -103,8 +104,16 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             logger.info("daily_generate: '%s' 디스코드로 예약된 주제 사용 — %s", name, topic)
             notify_discord(f"🎯 [{name}] 오늘은 예약된 주제로 생성함 — \"{topic}\"")
         try:
-            saved = generate_daily_batch(input_dir, custom_topic=topic)
+            meta_list: list[dict] = []
+            saved = generate_daily_batch(input_dir, custom_topic=topic, channel=name, meta_out=meta_list)
             logger.info("daily_generate: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
+            for meta in meta_list:
+                scores = meta.get("scores") or {}
+                score_str = (
+                    f"후킹 {scores.get('hook', '?')} · 감정 {scores.get('emotion', '?')} · 결말 {scores.get('ending', '?')}"
+                    if scores else "검수 점수 없음"
+                )
+                notify_discord(f"📝 [{name}] 대본 준비됨 — \"{meta.get('title')}\"\n{score_str}")
             ok_channels += 1
             saved_total += len(saved)
             state[name] = today
@@ -115,10 +124,32 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
     return ok_channels, saved_total
 
 
+def _hold_then_publish(name: str, chan: dict, video_id: str, title: str, kind: str) -> None:
+    """소프트 승인: 미리보기+점수를 올리고 REVIEW_WINDOW 동안 기다렸다가,
+    /영상 거절이 없었으면 공개로 전환합니다. 실패 시에도 파이프라인 전체는
+    멈추지 않습니다(다음 영상 처리는 계속 진행)."""
+    notify_discord(
+        f"👀 [{name}] {kind} 미리보기 — {title}\n"
+        f"https://youtu.be/{video_id}\n"
+        f"5분 안에 `/영상 거절 {video_id}` 안 하면 자동으로 공개됨."
+    )
+    sleep_for_review()
+    if is_rejected(video_id):
+        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}")
+        return
+    if publish_video(video_id, chan.get("credentials_file", "")):
+        notify_discord(f"✅ [{name}] {kind} 공개 전환 완료 — {title}\nhttps://youtu.be/{video_id}")
+    else:
+        notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
+
+
 def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     """채널 하나의 대기열을 처리합니다. (성공 개수, 실패 개수)를 반환."""
     name = chan.get("name") or "(이름없음)"
-    privacy = cfg.get("youtube.default_privacy", "private")
+    default_privacy = cfg.get("youtube.default_privacy", "private")
+    # 공개가 목표인 채널이면 일단 비공개로 올려서 소프트 승인 창을 거치고,
+    # 원래 설정이 private인 채널이면 그대로 private로 둡니다(승인 절차 불필요).
+    upload_privacy = "private" if default_privacy == "public" else default_privacy
     input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
     runner = BatchRunner(
         cfg,
@@ -137,7 +168,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         results = runner.run(
             count=len(pending),
             upload_to_youtube=True,
-            youtube_privacy=privacy,
+            youtube_privacy=upload_privacy,
             schedule_days_ahead=0,
             also_make_shorts=False,
             stagger_days=0,
@@ -162,10 +193,13 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         if r.success and r.youtube_video_id:
             uploaded += 1
             record_upload(r.youtube_video_id, name, r.category, r.title or title, is_shorts)
-            notify_discord(
-                f"✅ [{name}] {kind} 업로드 완료 — {title}\n"
-                f"https://youtu.be/{r.youtube_video_id}"
-            )
+            if default_privacy == "public":
+                _hold_then_publish(name, chan, r.youtube_video_id, r.title or title, kind)
+            else:
+                notify_discord(
+                    f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
+                    f"https://youtu.be/{r.youtube_video_id}"
+                )
         elif r.success and not r.youtube_video_id:
             made_but_not_uploaded += 1
             logger.error(

@@ -1,105 +1,17 @@
 """
 tools/discord_worker/register_command.py
 ==========================================
-디스코드 슬래시 커맨드(/영상)를 글로벌로 한 번 등록합니다. Interactions Endpoint
-URL을 설정한 뒤 딱 한 번만 실행하면 됩니다 (이후엔 등록할 필요 없음).
+디스코드 슬래시 커맨드(/영상) 등록은 이 스크립트가 아니라 Worker 자체의
+/register-command-x7k2m9 경로에서 이뤄집니다 — 로컬/GitHub Actions 양쪽 다
+디스코드 커맨드 등록 API 호출이 클라우드플레어에 막혀서(403, "internal
+network error" / 에러 1010), Worker(Cloudflare 네트워크)를 통해서만 등록이
+성공했기 때문입니다. 커맨드 정의(예약/목록/취소/분석/주제생성/상태/로그/
+재생성/cta설정/거절)는 tools/discord_worker/index.js의 registerCommand()
+함수 안에 있습니다 — 정의를 바꾸려면 그 파일을 수정하세요.
 
-실행:
-    python tools/discord_worker/register_command.py <APPLICATION_ID> <BOT_TOKEN>
+등록 절차 (커맨드 정의를 바꿨을 때만 필요):
+  1. Cloudflare Worker 환경변수에 DISCORD_BOT_TOKEN, DISCORD_APP_ID 잠깐 추가
+  2. index.js 최신 내용 배포
+  3. https://<worker-url>/register-command-x7k2m9 접속 (200 응답 확인)
+  4. 두 환경변수 다시 제거해도 됨
 """
-
-from __future__ import annotations
-
-import json
-import sys
-import urllib.error
-import urllib.request
-
-
-def main() -> int:
-    if len(sys.argv) != 3:
-        print("사용법: python register_command.py <APPLICATION_ID> <BOT_TOKEN>")
-        return 1
-
-    app_id, bot_token = sys.argv[1], sys.argv[2]
-
-    _channel_option = {
-        "name": "channel",
-        "description": "채널 이름",
-        "type": 3,  # STRING
-        "required": True,
-        "choices": [
-            {"name": "웃짬", "value": "웃짬"},
-            {"name": "도개", "value": "도개"},
-        ],
-    }
-
-    command = {
-        "name": "영상",
-        "description": "영상 주제 예약 관리",
-        "options": [
-            {
-                "name": "예약",
-                "description": "다음(또는 특정 날짜) 생성 때 쓸 주제를 예약합니다",
-                "type": 1,  # SUB_COMMAND
-                "options": [
-                    _channel_option,
-                    {"name": "topic", "description": "영상 주제", "type": 3, "required": True},
-                    {
-                        "name": "date",
-                        "description": "특정 날짜 (YYYY-MM-DD, 생략하면 다음 실행)",
-                        "type": 3,
-                        "required": False,
-                    },
-                ],
-            },
-            {
-                "name": "목록",
-                "description": "예약된 주제 목록을 봅니다",
-                "type": 1,
-                "options": [{**_channel_option, "required": False}],
-            },
-            {
-                "name": "취소",
-                "description": "예약된 주제를 취소합니다",
-                "type": 1,
-                "options": [
-                    _channel_option,
-                    {
-                        "name": "date",
-                        "description": "취소할 예약의 날짜 (생략하면 '다음 실행용' 예약 취소)",
-                        "type": 3,
-                        "required": False,
-                    },
-                ],
-            },
-        ],
-    }
-
-    # PUT(전체 덮어쓰기)으로 등록해서 이름이 겹치는 예전 정의가 남지 않게 함.
-    req = urllib.request.Request(
-        f"https://discord.com/api/v10/applications/{app_id}/commands",
-        data=json.dumps([command]).encode("utf-8"),
-        headers={
-            "Authorization": f"Bot {bot_token}",
-            "Content-Type": "application/json",
-            # 파이썬 기본 User-Agent는 클라우드플레어가 봇으로 판단해 403(에러 1010)으로
-            # 막습니다 (utils/notify.py의 디스코드 웹훅과 동일한 원인) — 브라우저 UA로 우회.
-            "User-Agent": (
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-            ),
-        },
-        method="PUT",
-    )
-    try:
-        with urllib.request.urlopen(req) as resp:
-            print(resp.status, resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        print(e.code, e.read().decode("utf-8"))
-        return 1
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())

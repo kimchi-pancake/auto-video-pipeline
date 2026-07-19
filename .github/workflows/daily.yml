@@ -47,6 +47,7 @@ jobs:
       - name: Run daily pipeline (script gen + video + upload)
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/daily_generate.py
 
       - name: Commit updated state

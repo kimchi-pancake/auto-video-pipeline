@@ -32,7 +32,11 @@ _STYLE_RULES = """\
 [문체]
 - 실제 사람이 경험담을 들려주는 느낌으로 쓴다. 지나치게 교훈적이거나 설교하지 않는다.
 - 설명보다 대화와 상황 묘사를 많이 사용한다. 감정을 과장하지 말고 현실적으로 표현한다.
-- 시니어 시청자가 쉽게 이해할 수 있는 문장만 사용한다."""
+- 시니어 시청자가 쉽게 이해할 수 있는 문장만 사용한다.
+- 나레이션은 반드시 존댓말(-습니다/-였습니다체)로 쓴다.
+- 신조어, 인터넷 밈, 지나치게 젊은 말투("~함", "ㄹㅇ", "찐" 등)는 절대 쓰지 않는다.
+- 문장은 자연스러운 한국어로, 지나치게 빠르게 전개하지 않는다 — 상황을 충분히 설명하고
+  다음 문장으로 넘어간다."""
 
 # 소재 분류 고정 목록 — 나중에 채널별 성과(조회수/시청지속시간)를 카테고리별로
 # 비교 분석하려면 매번 자유 텍스트가 아니라 같은 라벨을 써야 집계가 됩니다.
@@ -190,12 +194,207 @@ def _topic_override_rules(custom_topic: str) -> str:
 - 댓글에서 의견이 갈릴 수 있는 구조로 만든다."""
 
 
-def combo_script_prompt(custom_topic: str | None = None) -> str:
-    """COMBO_SCRIPT_PROMPT를 그대로 쓰거나, custom_topic이 있으면 [주제] 섹션만
-    사용자가 지정한 주제로 바꿔치기해서 반환합니다."""
-    if not custom_topic:
-        return COMBO_SCRIPT_PROMPT
-    return COMBO_SCRIPT_PROMPT.replace(_TOPIC_RULES, _topic_override_rules(custom_topic))
+# ─────────────────────────────────────────────
+# 구독/좋아요 유도(CTA) 자동 배치
+# ─────────────────────────────────────────────
+
+_CTA_LABELS = {
+    "early": "영상 시작 직후(0~15초)",
+    "middle": "중간(전체의 30~40% 지점)",
+    "before_end": "결말 직전",
+    "ending": "마지막 장면",
+}
+_CTA_EXAMPLES = {
+    "early": "이 이야기, 끝까지 보시면 반전이 있습니다.",
+    "middle": "이 이야기가 어떻게 끝나는지 궁금하시다면, 잠시만 더 함께해 주세요.",
+    "before_end": "이 이야기가 마음에 남으셨다면, 좋아요와 구독으로 응원해 주세요.",
+    "ending": "이 이야기가 마음에 남으셨다면, 좋아요와 구독으로 다음 이야기에도 함께해 주세요.",
+}
+
+
+def cta_instruction(settings: dict | None) -> str:
+    """settings: {"early": bool, "middle": bool, "before_end": bool, "ending": bool}.
+    켜진 위치에서만 자연스러운 CTA(구독/좋아요 유도) 한 문장을 나레이터 대사에
+    녹여 넣으라는 지시문을 만듭니다. 초반(early)은 후킹을 방해하니 기본값 off."""
+    on = [pos for pos, enabled in (settings or {}).items() if enabled]
+    if not on:
+        return "[구독 유도]\n이번 영상에는 구독/좋아요 유도 문구를 절대 넣지 마라."
+    lines = [
+        "[구독 유도]",
+        "아래 위치에서만 자연스럽게 구독/좋아요를 유도하는 짧은 한 문장을 그 근처 "
+        "나레이터 대사 끝에 자연스럽게 녹여 넣어라 (그 외 위치에는 절대 넣지 마라):",
+    ]
+    for pos in on:
+        if pos in _CTA_LABELS:
+            lines.append(f'- {_CTA_LABELS[pos]}: 예) "{_CTA_EXAMPLES[pos]}"')
+    lines.append(
+        "말투는 위 예시처럼 정중하고 담백하게 — 과장되거나 애원하듯 반복하지 마라. "
+        "예시 문장을 그대로 베끼지 말고, 이번 이야기의 분위기와 그 장면 내용에 맞게 "
+        "매번 다른 표현으로 자연스럽게 바꿔 써라."
+    )
+    return "\n".join(lines)
+
+
+def _apply_cta(prompt: str, cta_settings: dict | None, anchor: str, count: int = 1) -> str:
+    if not cta_settings:
+        return prompt
+    block = cta_instruction(cta_settings)
+    return prompt.replace(anchor, f"{block}\n\n{anchor}", count)
+
+
+_TITLE_PLACEHOLDER = "(영상 제목, 15자 이내)"
+
+
+def _forced_title_rules(title: str) -> str:
+    return f'정확히 이 제목 그대로 써라(글자 수 제한 무시): "{title}"'
+
+
+_COMBO_LONG_ANCHOR = (
+    "[1] 롱폼 대본 — [SCENE] 블록 최소 22개, 전체 낭독 시간 8분 이상, 각 SCENE 대사는\n"
+    "2~4문장으로 풍부하게, 시청 유지 장치 최소 4개 포함. 아래 형식 그대로:"
+)
+_SHORTS_STANDALONE_ANCHOR = "형식은 반드시 아래와 똑같이 지켜줘 (콜론, 대괄호, & 기호 포함):"
+
+
+def combo_script_prompt(
+    custom_topic: str | None = None,
+    forced_title: str | None = None,
+    cta_settings: dict | None = None,
+) -> str:
+    """COMBO_SCRIPT_PROMPT를 그대로 쓰거나,
+    - custom_topic이 있으면 [주제] 섹션을 사용자가 지정한 주제로 바꿔치기하고
+    - forced_title이 있으면 THUMBNAIL_LONG/THUMBNAIL_SHORTS 자리에 이미 골라둔
+      제목을 그대로 쓰게 강제하고
+    - cta_settings가 있으면 구독 유도 문구 배치 지시를 롱폼 섹션 앞에 추가합니다."""
+    prompt = COMBO_SCRIPT_PROMPT
+    if custom_topic:
+        prompt = prompt.replace(_TOPIC_RULES, _topic_override_rules(custom_topic))
+    if forced_title:
+        prompt = prompt.replace(_TITLE_PLACEHOLDER, _forced_title_rules(forced_title))
+    prompt = _apply_cta(prompt, cta_settings, _COMBO_LONG_ANCHOR)
+    return prompt
+
+
+def shorts_script_prompt(cta_settings: dict | None = None) -> str:
+    """SHORTS_SCRIPT_PROMPT에 cta_settings가 있으면 구독 유도 지시를 추가합니다."""
+    return _apply_cta(SHORTS_SCRIPT_PROMPT, cta_settings, _SHORTS_STANDALONE_ANCHOR)
+
+
+def topic_idea_prompt(performance_summary: str = "", recent_titles: list[str] | None = None) -> str:
+    """대본을 바로 쓰지 않고, 주제 하나(짧은 한 줄)만 먼저 골라달라는 프롬프트.
+    제목 후보 생성 단계에 넘길 "주제 문자열"이 필요할 때 씁니다."""
+    recent_block = ""
+    if recent_titles:
+        recent_block = (
+            "\n[최근에 이미 쓴 제목들 — 아래와 겹치거나 너무 비슷한 소재는 피해라]\n"
+            + "\n".join(f"- {t}" for t in recent_titles[-20:])
+        )
+    perf_block = f"\n{performance_summary}\n" if performance_summary else ""
+
+    return f"""\
+{_PERSONA}
+
+아직 대본을 쓰지 말고, 다음 사연 영상 주제를 딱 하나만 한 줄로 정해줘.
+{perf_block}{recent_block}
+
+{_TOPIC_RULES}
+
+{_CATEGORY_RULE}
+
+[출력 형식]
+아래 형식 그대로 두 줄만 출력해라. 다른 설명은 절대 쓰지 마라.
+CATEGORY: (카테고리 하나)
+TOPIC: (한 줄 주제 설명, 한 문장)
+"""
+
+
+def title_candidates_prompt(topic: str, n: int = 10) -> str:
+    """주어진 주제로 제목 후보 n개 + 스스로 매긴 후킹 점수를 JSON으로 받는 프롬프트."""
+    return f"""\
+{_PERSONA}
+
+다음 사연 주제로 유튜브 영상 제목 후보를 정확히 {n}개 만들어줘.
+
+주제: "{topic}"
+
+[제목 작성 공식]
+[강한 상황] + [궁금증] + [결말 미공개]
+
+좋은 예: "아들은 20년 동안 어머니에게 전화하지 않았습니다. 그런데 매일 새벽,
+어머니의 휴대폰에는 같은 번호가 찍혔습니다."
+나쁜 예: "오늘은 한 어머니의 감동적인 이야기를 소개해드리겠습니다." (약한 시작, 절대 금지)
+
+[규칙]
+- 결말을 제목에서 다 공개하지 마라. 궁금증을 남겨야 한다.
+- 각 제목은 30자 이내로 짧고 강하게.
+- {n}개 전부 서로 다른 각도(인물 중심 / 상황 중심 / 대사 인용 / 숫자·시간 강조 등)로
+  다양하게 만들어라. 비슷비슷한 제목을 반복하지 마라.
+
+[출력 형식]
+아래 JSON 배열 형식으로만 출력해라. 코드블록(```)도 쓰지 말고, 설명도 절대 쓰지 마라.
+hook_score는 "클릭하고 싶게 만드는 정도"를 스스로 냉정하게 0~100으로 매긴 점수다.
+
+[{{"title": "...", "hook_score": 0}}, {{"title": "...", "hook_score": 0}}]
+"""
+
+
+def topic_batch_prompt(
+    count: int,
+    category: str | None = None,
+    performance_summary: str = "",
+    recent_titles: list[str] | None = None,
+) -> str:
+    """/주제생성용 — 아직 대본을 쓰지 않고 주제 N개를 한 번에 골라달라는 프롬프트."""
+    recent_block = ""
+    if recent_titles:
+        recent_block = (
+            "\n[최근에 이미 쓴 제목들 — 아래와 겹치거나 너무 비슷한 소재는 피해라]\n"
+            + "\n".join(f"- {t}" for t in recent_titles[-30:])
+        )
+    perf_block = f"\n{performance_summary}\n" if performance_summary else ""
+    category_line = (
+        f'모든 주제는 반드시 "{category}" 카테고리에 해당해야 한다.'
+        if category else
+        f"각 주제마다 아래 목록 중 어울리는 카테고리를 하나씩 골라라: {', '.join(CATEGORIES)}"
+    )
+
+    return f"""\
+{_PERSONA}
+
+아직 대본을 쓰지 말고, 다음 사연 영상 주제를 정확히 {count}개 만들어줘.
+{perf_block}{recent_block}
+
+{category_line}
+서로 겹치지 않는, 완전히 다른 {count}개의 이야기여야 한다.
+
+{_TOPIC_RULES}
+
+[출력 형식]
+아래 JSON 배열 형식으로만 출력해라. 코드블록(```)도 쓰지 말고, 설명도 절대 쓰지 마라.
+[{{"category": "...", "topic": "..."}}, ...] — 정확히 {count}개.
+"""
+
+
+def script_score_prompt(script_text: str) -> str:
+    """완성된 대본을 채점해달라는 프롬프트 (자동 검수용)."""
+    return f"""\
+아래는 완성된 유튜브 사연 대본이다. 편집자 입장에서 냉정하게 채점해줘.
+
+---
+{script_text}
+---
+
+[채점 기준]
+- hook: 첫 15초(쇼츠 대본이면 3초) 안에 시청자를 붙잡는 힘 (0~100)
+- emotion: 감정 몰입도 — 억지스럽지 않고 현실적인가 (0~100)
+- ending: 결말의 여운과 댓글 유도력 (0~100)
+- dropout_risk: 초반 이탈 위험도. "low" / "medium" / "high" 중 하나
+- cta_excess: 구독·좋아요 유도 문구가 과하거나 어색하게 반복되는지. true/false
+
+[출력 형식]
+아래 JSON만 출력해라. 코드블록(```)도 쓰지 말고, 설명도 절대 쓰지 마라.
+{{"hook": 0, "emotion": 0, "ending": 0, "dropout_risk": "low", "cta_excess": false}}
+"""
 
 
 # 롱폼/쇼츠 응답을 이 줄로 정확히 구분합니다 — 응답에 이 줄이 있으면 두 개의

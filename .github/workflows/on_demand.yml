@@ -53,6 +53,7 @@ jobs:
       - name: Generate + upload on-demand video
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/generate_topic.py --channel "${{ inputs.channel }}" --topic "${{ inputs.topic }}"
 
       - name: Commit updated registry

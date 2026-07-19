@@ -25,6 +25,7 @@ from utils.notify import notify_discord
 from core.ai_script_generator import ScriptGenerationError, generate_and_save
 from core.batch_runner import BatchRunner
 from core.video_registry import record_upload
+from utils.soft_approval import is_rejected, publish_video, sleep_for_review
 
 
 def _resolve_input_dir(input_dir: str, cfg) -> Path:
@@ -61,15 +62,23 @@ def main() -> int:
 
     input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
     try:
-        saved = generate_and_save(input_dir, custom_topic=args.topic)
+        meta: dict = {}
+        saved = generate_and_save(input_dir, custom_topic=args.topic, channel=args.channel, meta_out=meta)
     except ScriptGenerationError as e:
         logger.error("generate_topic: 대본 생성 실패 — %s", e)
         notify_discord(f"🔴 [{args.channel}] 대본 생성 실패 — {e}")
         return 1
 
+    scores = meta.get("scores") or {}
+    if scores:
+        notify_discord(
+            f"📝 [{args.channel}] 대본 준비됨 — \"{meta.get('title')}\"\n"
+            f"후킹 {scores.get('hook', '?')} · 감정 {scores.get('emotion', '?')} · 결말 {scores.get('ending', '?')}"
+        )
     logger.info("generate_topic: '%s' 대본 %d개 저장 — 영상 제작+업로드 시작", args.channel, len(saved))
 
-    privacy = cfg.get("youtube.default_privacy", "private")
+    default_privacy = cfg.get("youtube.default_privacy", "private")
+    upload_privacy = "private" if default_privacy == "public" else default_privacy
     runner = BatchRunner(
         cfg, input_dir,
         youtube_credentials_file=chan.get("credentials_file", ""),
@@ -79,7 +88,7 @@ def main() -> int:
         results = runner.run(
             count=len(saved),
             upload_to_youtube=True,
-            youtube_privacy=privacy,
+            youtube_privacy=upload_privacy,
             schedule_days_ahead=0,
             also_make_shorts=False,
             stagger_days=0,
@@ -94,7 +103,22 @@ def main() -> int:
             title = Path(r.video_path).parent.name
             is_shorts = bool(r.thumbnail_shorts_path) and not r.thumbnail_long_path
             record_upload(r.youtube_video_id, args.channel, r.category, r.title or title, is_shorts)
-            notify_discord(f"✅ [{args.channel}] 업로드 완료 — {title}\nhttps://youtu.be/{r.youtube_video_id}")
+            kind = "쇼츠" if is_shorts else "롱폼"
+            if default_privacy == "public":
+                notify_discord(
+                    f"👀 [{args.channel}] {kind} 미리보기 — {r.title or title}\n"
+                    f"https://youtu.be/{r.youtube_video_id}\n"
+                    f"5분 안에 `/영상 거절 {r.youtube_video_id}` 안 하면 자동으로 공개됨."
+                )
+                sleep_for_review()
+                if is_rejected(r.youtube_video_id):
+                    notify_discord(f"🚫 [{args.channel}] 거절됨 — 비공개로 유지: {title}")
+                elif publish_video(r.youtube_video_id, chan.get("credentials_file", "")):
+                    notify_discord(f"✅ [{args.channel}] {kind} 공개 전환 완료 — {title}\nhttps://youtu.be/{r.youtube_video_id}")
+                else:
+                    notify_discord(f"⚠️ [{args.channel}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 바꿔야 함: {title}")
+            else:
+                notify_discord(f"✅ [{args.channel}] 업로드 완료(비공개) — {title}\nhttps://youtu.be/{r.youtube_video_id}")
         elif r.success:
             notify_discord(f"⚠️ [{args.channel}] 영상은 만들어졌지만 업로드 실패 — {r.youtube_error or '알 수 없는 오류'}")
         else:
