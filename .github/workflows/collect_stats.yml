@@ -1,16 +1,9 @@
-name: On-Demand Topic Video
+name: Collect Video Stats
 
 on:
   workflow_dispatch:
-    inputs:
-      channel:
-        description: "채널명 (config.json의 youtube.channels[].name과 동일)"
-        required: true
-        type: string
-      topic:
-        description: "영상 주제"
-        required: true
-        type: string
+  schedule:
+    - cron: "0 15 * * *" # 매일 00:00 KST(UTC+9) = 전날 15:00 UTC
 
 permissions:
   contents: write
@@ -18,7 +11,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -26,34 +19,27 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
-
       - name: Install Python dependencies
         run: pip install -r requirements-headless.txt
 
       - name: Write secrets to config files
         env:
           CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
-          CLIENT_SECRETS_JSON: ${{ secrets.CLIENT_SECRETS_JSON }}
           YT_CHANNEL_UJJJAM_CREDENTIALS: ${{ secrets.YT_CHANNEL_UJJJAM_CREDENTIALS }}
           YT_CHANNEL_DOGAE_CREDENTIALS: ${{ secrets.YT_CHANNEL_DOGAE_CREDENTIALS }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           mkdir -p config/channels
           printf '%s' "$CONFIG_JSON" > config/config.json
-          printf '%s' "$CLIENT_SECRETS_JSON" > config/client_secrets.json
           printf '%s' "$YT_CHANNEL_UJJJAM_CREDENTIALS" > "config/channels/웃짬_credentials.json"
           printf '%s' "$YT_CHANNEL_DOGAE_CREDENTIALS" > "config/channels/도개_credentials.json"
-          printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
-          for f in config/config.json config/client_secrets.json "config/channels/웃짬_credentials.json" "config/channels/도개_credentials.json"; do
+          for f in config/config.json "config/channels/웃짬_credentials.json" "config/channels/도개_credentials.json"; do
             sed -i '1s/^\xEF\xBB\xBF//' "$f"
           done
 
-      - name: Generate + upload on-demand video
+      - name: Collect stats
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python scripts/generate_topic.py --channel "${{ inputs.channel }}" --topic "${{ inputs.topic }}"
+        run: python scripts/collect_stats.py
 
       - name: Commit updated registry
         if: always()
@@ -61,6 +47,6 @@ jobs:
           git config user.name "auto-video-pipeline-bot"
           git config user.email "actions@users.noreply.github.com"
           git add config/video_registry.json
-          git diff --staged --quiet || git commit -m "update video registry [skip ci]"
+          git diff --staged --quiet || git commit -m "update video stats [skip ci]"
           git pull --rebase --autostash
           git push

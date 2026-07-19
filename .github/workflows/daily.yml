@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name "auto-video-pipeline-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add config/daily_generate_state.json config/topic_queue.json
+          git add config/daily_generate_state.json config/topic_queue.json config/video_registry.json
           git diff --staged --quiet || git commit -m "update daily generation state [skip ci]"
           git pull --rebase --autostash
           git push

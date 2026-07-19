@@ -24,6 +24,7 @@ from utils.config_manager import get_config
 from utils.notify import notify_discord
 from core.ai_script_generator import ScriptGenerationError, generate_and_save
 from core.batch_runner import BatchRunner
+from core.video_registry import record_upload
 
 
 def _resolve_input_dir(input_dir: str, cfg) -> Path:
@@ -91,6 +92,8 @@ def main() -> int:
     for r in results:
         if r.success and r.youtube_video_id:
             title = Path(r.video_path).parent.name
+            is_shorts = bool(r.thumbnail_shorts_path) and not r.thumbnail_long_path
+            record_upload(r.youtube_video_id, args.channel, r.category, r.title or title, is_shorts)
             notify_discord(f"✅ [{args.channel}] 업로드 완료 — {title}\nhttps://youtu.be/{r.youtube_video_id}")
         elif r.success:
             notify_discord(f"⚠️ [{args.channel}] 영상은 만들어졌지만 업로드 실패 — {r.youtube_error or '알 수 없는 오류'}")

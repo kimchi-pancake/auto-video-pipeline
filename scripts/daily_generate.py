@@ -31,6 +31,7 @@ from utils.notify import notify, notify_discord
 from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
+from core.video_registry import record_upload
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
@@ -160,6 +161,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
 
         if r.success and r.youtube_video_id:
             uploaded += 1
+            record_upload(r.youtube_video_id, name, r.category, r.title or title, is_shorts)
             notify_discord(
                 f"✅ [{name}] {kind} 업로드 완료 — {title}\n"
                 f"https://youtu.be/{r.youtube_video_id}"

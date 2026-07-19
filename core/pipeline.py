@@ -76,6 +76,8 @@ class PipelineResult:
     elapsed: float = 0.0
     error: Optional[str] = None
     stage_times: dict = field(default_factory=dict)
+    category: Optional[str] = None
+    title: Optional[str] = None
 
 
 # ─────────────────────────────────────────────
@@ -348,6 +350,8 @@ class Pipeline:
                 youtube_shorts_error=youtube_shorts_error,
                 elapsed=elapsed,
                 stage_times=stage_times,
+                category=story.category,
+                title=story.raw_title,
             )
 
         except _StopRequested:

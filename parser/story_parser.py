@@ -88,6 +88,7 @@ class StoryData:
     raw_title: str                    # 첫 번째 썸네일에서 추출한 제목
     raw_path: str                     # 원본 story.txt 경로
     resolution: Optional[Tuple[int, int]] = None  # RESOLUTION: 섹션 (예: 1080x1920). 없으면 GUI 설정값 사용
+    category: Optional[str] = None    # CATEGORY: 섹션 (소재 분류, 성과 분석용). 없으면 None
 
 
 # ─────────────────────────────────────────────
@@ -128,6 +129,7 @@ class StoryParser:
         self._lines = self._read_lines()
 
         resolution = self._parse_resolution_directive()
+        category = self._parse_single_line_section("CATEGORY")
         cast = self._parse_section("CAST")
         bgm_files = self._parse_list_section("BGM")
         photo_files = self._parse_list_section("PHOTO")
@@ -152,6 +154,7 @@ class StoryParser:
             raw_title=raw_title,
             raw_path=str(self._path),
             resolution=resolution,
+            category=category,
         )
 
         self._validate(data)
@@ -224,6 +227,22 @@ class StoryParser:
                 if m:
                     return int(m.group(1)), int(m.group(2))
                 break
+        return None
+
+    def _parse_single_line_section(self, section_name: str) -> Optional[str]:
+        """섹션 이름 다음 줄 하나만 값으로 읽는 간단한 섹션(CATEGORY: 등)을 파싱합니다."""
+        in_section = False
+        for line in self._lines:
+            stripped = line.strip()
+            if stripped.upper() == f"{section_name.upper()}:":
+                in_section = True
+                continue
+            if in_section:
+                if self._is_section_header(stripped) or stripped.startswith("[SCENE"):
+                    break
+                if not stripped:
+                    continue
+                return stripped
         return None
 
     def _parse_thumbnail_section(self, section_name: str) -> Optional[ThumbnailInfo]:
@@ -362,7 +381,7 @@ class StoryParser:
     @staticmethod
     def _is_section_header(line: str) -> bool:
         """섹션 헤더(CAST:, BGM:, etc.) 인지 확인합니다."""
-        headers = {"RESOLUTION:", "CAST:", "BGM:", "PHOTO:", "THUMBNAIL_LONG:", "THUMBNAIL_SHORTS:"}
+        headers = {"RESOLUTION:", "CATEGORY:", "CAST:", "BGM:", "PHOTO:", "THUMBNAIL_LONG:", "THUMBNAIL_SHORTS:"}
         return line.upper() in {h.upper() for h in headers}
 
     def _read_lines(self) -> List[str]:
