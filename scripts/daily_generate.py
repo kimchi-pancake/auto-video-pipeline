@@ -156,6 +156,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         input_dir,
         youtube_credentials_file=chan.get("credentials_file", ""),
         archive_subdir=name,
+        discord_status=True,
     )
     pending = runner.get_pending_files()
     if not pending:

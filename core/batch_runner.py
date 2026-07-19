@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Callable, List, Optional
 
 from core.pipeline import Pipeline, PipelineProgress, PipelineResult
+from parser.story_parser import StoryParser
 from utils.config_manager import ConfigManager
 from utils.file_utils import safe_move
 from utils.logger import get_logger
@@ -27,6 +28,7 @@ class BatchRunner:
         on_file_done: Optional[Callable[[str, PipelineResult], None]] = None,
         youtube_credentials_file: Optional[str] = None,
         archive_subdir: str = "",
+        discord_status: bool = False,
     ):
         self._cfg = config
         self._input_dir = Path(input_dir)
@@ -34,6 +36,8 @@ class BatchRunner:
         self._on_file_done = on_file_done
         self._stop_requested = False
         self._yt_creds = youtube_credentials_file
+        self._discord_status = discord_status
+        self._channel_label = archive_subdir or "채널"
 
         root = Path(__file__).parent.parent
         self._archive_dir = root / self._cfg.get("paths.archive_dir", "archive")
@@ -83,8 +87,25 @@ class BatchRunner:
 
             logger.info("▶ 배치 %d/%d 시작: %s", i + 1, len(targets), story_path.name)
             pipeline = Pipeline(self._cfg)
-            if self._progress_cb:
-                pipeline.set_progress_callback(self._progress_cb)
+
+            reporter = None
+            if self._discord_status:
+                try:
+                    from utils.status_reporter import DiscordStatusReporter
+                    title = StoryParser(story_path).parse().raw_title or story_path.stem
+                    reporter = DiscordStatusReporter(title, self._channel_label)
+                except Exception:
+                    logger.exception("DiscordStatusReporter 초기화 실패")
+
+            callbacks = [cb for cb in (self._progress_cb, reporter) if cb is not None]
+            if callbacks:
+                def _combined(progress, _cbs=callbacks):
+                    for cb in _cbs:
+                        try:
+                            cb(progress)
+                        except Exception:
+                            logger.exception("progress callback 오류")
+                pipeline.set_progress_callback(_combined)
 
             result = pipeline.run(
                 story_path=story_path,
@@ -96,6 +117,13 @@ class BatchRunner:
             )
             results.append(result)
             self._archive_input(story_path, result.success)
+
+            if reporter:
+                reporter.finish(
+                    success=result.success and bool(result.youtube_video_id),
+                    youtube_video_id=result.youtube_video_id,
+                    error=result.youtube_error or result.error,
+                )
 
             if self._on_file_done:
                 try:

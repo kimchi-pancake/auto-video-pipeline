@@ -49,6 +49,44 @@ def notify_discord(message: str, webhook_url: str = DISCORD_WEBHOOK_URL) -> None
         pass
 
 
+def notify_discord_status_create(embed: dict, image_bytes: bytes, filename: str = "status.png") -> str | None:
+    """이미지(진행률 카드)가 첨부된 임베드 메시지를 새로 올리고, 나중에
+    수정(edit)할 수 있도록 메시지 id를 반환합니다. 실패하면 None."""
+    import requests
+    try:
+        payload = {"embeds": [{**embed, "image": {"url": f"attachment://{filename}"}}]}
+        resp = requests.post(
+            f"{DISCORD_WEBHOOK_URL}?wait=true",
+            data={"payload_json": json.dumps(payload)},
+            files={"file": (filename, image_bytes, "image/png")},
+            headers={"User-Agent": _BROWSER_UA},
+            timeout=15,
+        )
+        if resp.status_code in (200, 201):
+            return resp.json().get("id")
+    except Exception:
+        pass
+    return None
+
+
+def notify_discord_status_update(message_id: str, embed: dict, image_bytes: bytes, filename: str = "status.png") -> bool:
+    """notify_discord_status_create()로 만든 메시지를 새 진행률 카드로 갈아
+    끼웁니다(같은 메시지를 계속 수정 — 채널에 메시지가 쌓이지 않음)."""
+    import requests
+    try:
+        payload = {"embeds": [{**embed, "image": {"url": f"attachment://{filename}"}}]}
+        resp = requests.patch(
+            f"{DISCORD_WEBHOOK_URL}/messages/{message_id}",
+            data={"payload_json": json.dumps(payload)},
+            files={"file": (filename, image_bytes, "image/png")},
+            headers={"User-Agent": _BROWSER_UA},
+            timeout=15,
+        )
+        return resp.status_code in (200, 201)
+    except Exception:
+        return False
+
+
 def notify_phone(title: str, message: str, priority: int = 4) -> None:
     """ntfy.sh로 폰 푸시 알림을 보냅니다. 헤더 대신 JSON 본문을 써서 한글
     제목/내용도 그대로 보냅니다. 실패해도 조용히 넘어갑니다.

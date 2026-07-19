@@ -89,6 +89,7 @@ def main() -> int:
         cfg, input_dir,
         youtube_credentials_file=chan.get("credentials_file", ""),
         archive_subdir=args.channel,
+        discord_status=True,
     )
     try:
         results = runner.run(
