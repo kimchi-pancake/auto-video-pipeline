@@ -59,6 +59,9 @@ def main() -> int:
     channels = {_nfc(c.get("name", "")): c for c in (cfg.get("youtube.channels", []) or [])}
     chan = channels.get(_nfc(args.channel))
     if not chan:
+        logger.error("DEBUG args.channel=%r codepoints=%s", args.channel, [hex(ord(c)) for c in args.channel])
+        for k in channels:
+            logger.error("DEBUG channel_key=%r codepoints=%s", k, [hex(ord(c)) for c in k])
         msg = f"'{args.channel}' 채널을 찾을 수 없음 (등록된 채널: {', '.join(channels) or '없음'})"
         logger.error("generate_topic: %s", msg)
         notify_discord(f"🔴 온디맨드 생성 실패 — {msg}")
