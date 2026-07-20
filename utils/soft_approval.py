@@ -16,6 +16,7 @@ import os
 import time
 import urllib.error
 import urllib.request
+from datetime import datetime
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -31,6 +32,14 @@ REVIEW_WINDOW_SECONDS = 300  # 5분
 def sleep_for_review(seconds: int = REVIEW_WINDOW_SECONDS) -> None:
     logger.info("소프트 승인 대기 중 (%d초)...", seconds)
     time.sleep(seconds)
+
+
+def sleep_until(target: datetime) -> None:
+    """target 시각(timezone-aware)까지 잡니다. 이미 지난 시각이면 바로 반환."""
+    remaining = (target - datetime.now(target.tzinfo)).total_seconds()
+    if remaining > 0:
+        logger.info("%s까지 대기 중 (%.0f초)...", target.isoformat(), remaining)
+        time.sleep(remaining)
 
 
 def is_rejected(video_id: str) -> bool:
@@ -73,4 +82,26 @@ def publish_video(video_id: str, credentials_file: str) -> bool:
         return True
     except Exception as e:
         logger.error("영상 공개 전환 실패 (video_id=%s): %s", video_id, e)
+        return False
+
+
+def schedule_publish(video_id: str, credentials_file: str, publish_at: datetime) -> bool:
+    """videos.update로 예약공개(publishAt)를 겁니다 — 이 시점부터는 유튜브가
+    스스로 publish_at 정각에 공개로 바꾸므로, 우리 쪽에서 그 시각까지 또
+    깨어있을 필요가 없습니다."""
+    try:
+        creds = Credentials.from_authorized_user_file(credentials_file)
+        if creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        yt = build("youtube", "v3", credentials=creds)
+        yt.videos().update(
+            part="status",
+            body={
+                "id": video_id,
+                "status": {"privacyStatus": "private", "publishAt": publish_at.isoformat()},
+            },
+        ).execute()
+        return True
+    except Exception as e:
+        logger.error("예약공개 설정 실패 (video_id=%s): %s", video_id, e)
         return False

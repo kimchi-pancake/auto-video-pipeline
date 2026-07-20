@@ -17,10 +17,13 @@ from __future__ import annotations
 import json
 import re
 import sys
+import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
+
+import pytz
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -32,10 +35,22 @@ from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
 from core.video_registry import record_upload
+from utils.soft_approval import is_rejected, schedule_publish, sleep_until
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
 _STATE_PATH = ROOT / "config" / "daily_generate_state.json"
+
+_KST = pytz.timezone("Asia/Seoul")
+
+
+def _today_kst(hour: int, minute: int) -> datetime:
+    """오늘(KST) 기준 hour:minute 시각을 반환. 이미 지났으면 내일로 넘어감."""
+    now = datetime.now(_KST)
+    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if target <= now:
+        target += timedelta(days=1)
+    return target
 
 
 def _load_state() -> dict:
@@ -123,7 +138,31 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
     return ok_channels, saved_total
 
 
-def _handle_result(name: str, chan: dict, default_privacy: str, story_path: str, result, counters: dict, logger) -> None:
+def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: str, lock_at: datetime, publish_at: datetime) -> None:
+    """lock_at까지 기다렸다가(그동안 /영상 거절 가능), 거절 안 됐으면 그때서야
+    유튜브에 publish_at 예약공개를 겁니다. 생성이 끝나자마자 바로 예약해버리면
+    거절 창이 사실상 없는 셈이라, "예약을 거는 행위" 자체를 lock_at까지 미룹니다."""
+    sleep_until(lock_at)
+    if is_rejected(video_id):
+        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}")
+        return
+    if schedule_publish(video_id, chan.get("credentials_file", ""), publish_at):
+        notify_discord(
+            f"📅 [{name}] {kind} 예약 확정 — {publish_at.strftime('%H:%M')}에 자동 공개 예정: {title}\n"
+            f"https://youtu.be/{video_id}"
+        )
+    else:
+        notify_discord(f"⚠️ [{name}] 예약 확정 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
+
+
+# lock-in 대기 스레드들. main()이 끝나기 전에 전부 join해서, lock_at까지
+# 기다리는 도중 프로세스가 먼저 끝나 daemon 스레드가 죽는(=예약이 영영 안
+# 걸리는) 일을 막습니다.
+_pending_lock_threads: list = []
+_pending_lock_lock = threading.Lock()
+
+
+def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path: str, result, counters: dict, logger) -> None:
     """파일 하나 처리가 끝날 때마다(배치 전체가 아니라) 바로 불려서, 그
     영상에 대한 디스코드 알림을 즉시 보냅니다 — 채널 대기열 전체(롱폼+쇼츠2)가
     다 끝날 때까지 기다렸다가 한꺼번에 보내면, 롱폼 하나 렌더링에만 1시간
@@ -144,14 +183,28 @@ def _handle_result(name: str, chan: dict, default_privacy: str, story_path: str,
         counters["uploaded"] += 1
         record_upload(result.youtube_video_id, name, result.category, result.title or title, is_shorts)
         if default_privacy == "public":
-            # 개별 승인 대기 스레드 대신 유튜브 자체 예약공개(publishAt)를 씀 —
-            # BatchRunner.run(schedule_today=True)가 core/pipeline.py를 통해
-            # 이미 오늘 config.schedule_hour:schedule_minute으로 예약해서
-            # 올렸으므로, 여기선 그 사실을 알리기만 하면 됨.
+            lock_hour = cfg.get("youtube.review_lock_hour", 19)
+            lock_minute = cfg.get("youtube.review_lock_minute", 40)
+            publish_hour = cfg.get("youtube.schedule_hour", 20)
+            publish_minute = cfg.get("youtube.schedule_minute", 0)
+            lock_at = _today_kst(lock_hour, lock_minute)
+            publish_at = _today_kst(publish_hour, publish_minute)
+            if publish_at <= lock_at:
+                publish_at += timedelta(days=1)
+
             notify_discord(
-                f"📅 [{name}] {kind} 업로드 완료 — 오늘 정해진 시각에 자동 공개 예정: {title}\n"
-                f"https://youtu.be/{result.youtube_video_id}"
+                f"📤 [{name}] {kind} 업로드 완료(비공개) — {title}\n"
+                f"{lock_at.strftime('%H:%M')}까지 `/영상 거절 {result.youtube_video_id}` 안 하면 "
+                f"{publish_at.strftime('%H:%M')} 예약공개로 확정됨."
             )
+            t = threading.Thread(
+                target=_lock_in_schedule,
+                args=(name, chan, result.youtube_video_id, result.title or title, kind, lock_at, publish_at),
+                daemon=True,
+            )
+            t.start()
+            with _pending_lock_lock:
+                _pending_lock_threads.append(t)
         else:
             notify_discord(
                 f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
@@ -176,17 +229,16 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     """채널 하나의 대기열을 처리합니다. (성공 개수, 실패 개수)를 반환."""
     name = chan.get("name") or "(이름없음)"
     default_privacy = cfg.get("youtube.default_privacy", "private")
-    # 공개가 목표인 채널이면 유튜브 자체 예약공개(publishAt)로 올려서 오늘
-    # config.schedule_hour:schedule_minute 정각에 자동 공개되게 하고, 원래
-    # 설정이 private인 채널이면 그대로 private로 둡니다(예약 불필요).
+    # 공개가 목표인 채널이어도 일단 비공개로만 올립니다 — 예약(publishAt)을
+    # 언제 걸지는 _handle_result의 lock-in 스레드가 review_lock 시각까지
+    # 기다렸다가 결정합니다(그 전에 /영상 거절 가능).
     upload_privacy = "private" if default_privacy == "public" else default_privacy
-    schedule_today = default_privacy == "public"
     input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
 
     counters = {"uploaded": 0, "made_but_not_uploaded": 0, "fail": 0}
 
     def _on_file_done(story_path: str, result) -> None:
-        _handle_result(name, chan, default_privacy, story_path, result, counters, logger)
+        _handle_result(name, chan, cfg, default_privacy, story_path, result, counters, logger)
 
     runner = BatchRunner(
         cfg,
@@ -209,7 +261,6 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
             upload_to_youtube=True,
             youtube_privacy=upload_privacy,
             schedule_days_ahead=0,
-            schedule_today=schedule_today,
             also_make_shorts=False,
             stagger_days=0,
         )
@@ -271,6 +322,15 @@ def main() -> int:
         notify_discord(f"📝 대본 생성 완료 — {gen_ok}/{len(channels)}개 채널, 총 {gen_saved}개 저장")
 
     up_ok, up_fail = _process_queue(cfg, channels, logger)
+
+    # 채널 처리는 다 끝났어도, review_lock 시각까지 기다리는 lock-in 스레드가
+    # 아직 돌고 있을 수 있음 — 안 기다리고 프로세스가 끝나면 daemon 스레드가
+    # 죽어서 예약이 영영 안 걸립니다.
+    with _pending_lock_lock:
+        threads = list(_pending_lock_threads)
+    for t in threads:
+        t.join()
+
     elapsed_str = _format_elapsed(time.time() - start)
 
     logger.info(

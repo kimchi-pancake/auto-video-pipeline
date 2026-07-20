@@ -157,6 +157,8 @@
     "retry_delay": 10,
     "schedule_hour": 18,
     "schedule_minute": 0,
+    "review_lock_hour": 17,
+    "review_lock_minute": 40,
     "schedule_timezone": "Asia/Seoul",
     "default_tags": ["자동생성", "AI영상", "스토리"],
     "shorts_tags": ["Shorts", "쇼츠"],

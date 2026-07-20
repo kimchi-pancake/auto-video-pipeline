@@ -122,7 +122,6 @@ class Pipeline:
         upload_to_youtube: bool = True,
         youtube_privacy: str = "private",
         schedule_days_ahead: int = 0,
-        schedule_today: bool = False,
         youtube_credentials_file: Optional[str] = None,
         also_make_shorts: bool = False,
     ) -> PipelineResult:
@@ -295,7 +294,6 @@ class Pipeline:
                         thumbnail_path=str(main_thumb) if main_thumb else None,
                         privacy=youtube_privacy,
                         schedule_days_ahead=schedule_days_ahead,
-                        schedule_today=schedule_today,
                         credentials_file=youtube_credentials_file,
                         is_shorts=main_is_shorts,
                     )
@@ -314,7 +312,6 @@ class Pipeline:
                             thumbnail_path=str(ctx["thumb_shorts"]) if ctx.get("thumb_shorts") else None,
                             privacy=youtube_privacy,
                             schedule_days_ahead=schedule_days_ahead,
-                            schedule_today=schedule_today,
                             credentials_file=youtube_credentials_file,
                             is_shorts=True,
                         )
@@ -521,7 +518,6 @@ class Pipeline:
         thumbnail_path: Optional[str],
         privacy: str,
         schedule_days_ahead: int,
-        schedule_today: bool = False,
         credentials_file: Optional[str] = None,
         is_shorts: bool = False,
     ) -> Optional[str]:
@@ -534,15 +530,7 @@ class Pipeline:
             return None
 
         scheduled_at = None
-        if schedule_today:
-            # config의 schedule_hour:schedule_minute(오늘)에 유튜브가 자체적으로
-            # 공개 전환하도록 예약합니다 — 생성이 그 시각보다 일찍 끝나든
-            # 늦게 끝나든, 실제 공개는 항상 그 정각에 맞춰집니다. 이미 그
-            # 시각이 지났으면(생성이 예상보다 오래 걸린 경우) 다음날 같은
-            # 시각으로 밀립니다(즉시 공개 대신 안전하게 하루 미룸).
-            scheduled_at = uploader.make_schedule_datetime(days_ahead=0)
-            logger.info("Scheduled publish at (today): %s", scheduled_at.isoformat())
-        elif schedule_days_ahead > 0:
+        if schedule_days_ahead > 0:
             scheduled_at = uploader.make_schedule_datetime(days_ahead=schedule_days_ahead)
             logger.info("Scheduled publish at: %s", scheduled_at.isoformat())
 
