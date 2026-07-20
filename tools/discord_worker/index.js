@@ -7,6 +7,7 @@
  *   /영상 취소 channel [date]           — 예약 취소 (date 생략 시 "다음 실행용" 취소)
  *   /영상 분석 [channel]                — 소재 카테고리별 성과(조회수) 요약
  *   /영상 주제생성 channel count [category] — 성과 데이터 참고해서 주제 N개 생성+예약
+ *   /영상 시작                          — daily.yml(전 채널 정기 생성)을 지금 바로 트리거
  *   /영상 상태                          — 현재 실행 중인 작업 / 오늘 업로드 수 / 대기열
  *   /영상 로그                          — 최근 워크플로우 실행 기록 링크
  *   /영상 재생성 channel topic          — 그 자리에서 즉시 새로 생성(전체 재생성)
@@ -88,6 +89,7 @@ async function handleCommand(env, interaction) {
       case "취소": return await handleCancel(env, opts);
       case "분석": return await handleAnalyze(env, opts);
       case "주제생성": return await handleGenerateTopics(env, opts);
+      case "시작": return await handleStart(env);
       case "상태": return await handleStatus(env);
       case "로그": return await handleLogs(env);
       case "재생성": return await handleRegenerate(env, opts);
@@ -226,6 +228,46 @@ async function handleGenerateTopics(env, opts) {
   return json({
     type: 4,
     data: { content: `🧠 [${opts.channel}] 주제 ${opts.count}개 생성 시작. 완료되면 예약 목록에 자동으로 쌓이고 디스코드로 알림 옴.` },
+  });
+}
+
+// ─────────────────────────────────────────
+// 시작 (daily.yml 즉시 트리거)
+// ─────────────────────────────────────────
+
+async function handleStart(env) {
+  // cron이 늦게 겹쳐서 두 실행이 동시에 도는 사고를 겪은 적이 있어서
+  // (같은 대기 파일을 두 실행이 동시에 집어가는 위험 + 유튜브 토큰 갱신 경합),
+  // 이미 도는 게 있으면 새로 트리거하지 않고 그 실행 링크만 알려줍니다.
+  const headers = ghHeaders(env);
+  try {
+    const resp = await fetch(
+      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/runs?per_page=5`,
+      { headers }
+    );
+    if (resp.ok) {
+      const data = await resp.json();
+      const active = (data.workflow_runs || []).find(
+        (r) => r.status === "in_progress" || r.status === "queued"
+      );
+      if (active) {
+        return json({
+          type: 4,
+          data: { content: `⏳ 이미 실행 중임 — 새로 안 만들고 기존 걸로 안내함.\n${active.html_url}` },
+        });
+      }
+    }
+  } catch (e) {
+    // 조회 실패해도 트리거 자체는 계속 진행 (fail-open)
+  }
+
+  const ok = await dispatchWorkflow(env, "daily.yml", {});
+  if (!ok.success) {
+    return json({ type: 4, data: { content: `트리거 실패 (${ok.status}): ${ok.detail}` } });
+  }
+  return json({
+    type: 4,
+    data: { content: "🎬 전 채널 정기 생성(daily.yml) 지금 시작함. 진행 상황은 카드로 올라옴." },
   });
 }
 
@@ -508,6 +550,7 @@ async function registerCommand(env) {
           categoryChoice,
         ],
       },
+      { name: "시작", description: "전 채널 정기 생성(daily.yml)을 지금 바로 시작합니다", type: 1, options: [] },
       { name: "상태", description: "현재 실행 중인 작업과 오늘의 진행 상황을 봅니다", type: 1, options: [] },
       { name: "로그", description: "최근 워크플로우 실행 기록을 봅니다", type: 1, options: [] },
       {
