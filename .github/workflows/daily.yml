@@ -2,12 +2,13 @@ name: Daily Video Pipeline
 
 on:
   workflow_dispatch:
-  # 매일 16:30 KST(UTC+9) = 07:30 UTC에 "생성 시작". 실제 유튜브 공개는
+  # 매일 16:00 KST(UTC+9) = 07:00 UTC에 "생성 시작". 실제 유튜브 공개는
   # config.schedule_hour:schedule_minute(20:00 KST)에 유튜브 자체 예약공개
   # (publishAt)로 맞춰짐 — 이 cron은 그 전에 넉넉히 생성을 끝내기 위한 시작
-  # 시각일 뿐, 공개 시각과는 별개.
+  # 시각일 뿐, 공개 시각과는 별개. review_lock(19:40)까지 3시간40분 버퍼를 둬서
+  # 생성이 오래 걸려도 잠금 시각을 넘길 여지를 줄임.
   schedule:
-    - cron: "30 7 * * *"
+    - cron: "0 7 * * *"
 
 permissions:
   contents: write

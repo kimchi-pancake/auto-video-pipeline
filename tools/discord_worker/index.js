@@ -36,7 +36,7 @@
  * workflow_dispatch를 쏘도록 scheduled() 핸들러를 둡니다.
  *
  * 설정: Cloudflare 대시보드 → 이 Worker → Triggers → Cron Triggers →
- * "30 7 * * *" 추가 (UTC 기준 07:30 = KST 16:30, daily.yml의 cron과 동일한
+ * "0 7 * * *" 추가 (UTC 기준 07:00 = KST 16:00, daily.yml의 cron과 동일한
  * "생성 시작" 시각). daily.yml의 schedule 트리거는 그대로 둬도 되고(둘 다
  * 도는 게 아니라 아래 scheduled()가 "이미 실행 중이면 스킵" 가드를 거치므로
  * 안전), 아예 daily.yml에서 schedule: 을 지워서 이 Worker가 유일한 트리거가
