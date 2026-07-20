@@ -35,22 +35,13 @@ from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
 from core.video_registry import record_upload
-from utils.soft_approval import is_rejected, schedule_publish, sleep_until
+from utils.soft_approval import is_rejected, publish_video, schedule_publish, sleep_until
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
 _STATE_PATH = ROOT / "config" / "daily_generate_state.json"
 
 _KST = pytz.timezone("Asia/Seoul")
-
-
-def _today_kst(hour: int, minute: int) -> datetime:
-    """오늘(KST) 기준 hour:minute 시각을 반환. 이미 지났으면 내일로 넘어감."""
-    now = datetime.now(_KST)
-    target = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
-    if target <= now:
-        target += timedelta(days=1)
-    return target
 
 
 def _load_state() -> dict:
@@ -141,18 +132,37 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
 def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: str, lock_at: datetime, publish_at: datetime) -> None:
     """lock_at까지 기다렸다가(그동안 /영상 거절 가능), 거절 안 됐으면 그때서야
     유튜브에 publish_at 예약공개를 겁니다. 생성이 끝나자마자 바로 예약해버리면
-    거절 창이 사실상 없는 셈이라, "예약을 거는 행위" 자체를 lock_at까지 미룹니다."""
+    거절 창이 사실상 없는 셈이라, "예약을 거는 행위" 자체를 lock_at까지 미룹니다.
+
+    lock_at/publish_at은 호출 시점에 "오늘 이미 지났으면" 절대 하루씩 미루지
+    않습니다(과거에 이 로직이 다음날로 미루다가, GitHub Actions 잡의
+    350분 타임아웃보다 오래 자야 해서 예약이 영영 안 걸린 채로 죽는 사고가
+    있었습니다) — 대신 lock_at은 "이미 지났으면 지금 바로", publish_at도
+    "이미 지났으면 예약 대신 즉시 공개"로 처리합니다."""
     sleep_until(lock_at)
     if is_rejected(video_id):
         notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}")
         return
-    if schedule_publish(video_id, chan.get("credentials_file", ""), publish_at):
-        notify_discord(
-            f"📅 [{name}] {kind} 예약 확정 — {publish_at.strftime('%H:%M')}에 자동 공개 예정: {title}\n"
-            f"https://youtu.be/{video_id}"
-        )
+
+    now = datetime.now(_KST)
+    if publish_at > now:
+        if schedule_publish(video_id, chan.get("credentials_file", ""), publish_at):
+            notify_discord(
+                f"📅 [{name}] {kind} 예약 확정 — {publish_at.strftime('%H:%M')}에 자동 공개 예정: {title}\n"
+                f"https://youtu.be/{video_id}"
+            )
+        else:
+            notify_discord(f"⚠️ [{name}] 예약 확정 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
     else:
-        notify_discord(f"⚠️ [{name}] 예약 확정 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
+        # 목표 공개 시각도 이미 지났음(생성이 아주 오래 걸린 경우) — 예약을
+        # 걸어봤자 과거 시각이라 API가 거부하거나 무의미하므로 바로 공개.
+        if publish_video(video_id, chan.get("credentials_file", "")):
+            notify_discord(
+                f"✅ [{name}] {kind} 공개 완료(목표 시각을 넘겨 즉시 공개됨) — {title}\n"
+                f"https://youtu.be/{video_id}"
+            )
+        else:
+            notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
 
 
 # lock-in 대기 스레드들. main()이 끝나기 전에 전부 join해서, lock_at까지
@@ -187,10 +197,15 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
             lock_minute = cfg.get("youtube.review_lock_minute", 40)
             publish_hour = cfg.get("youtube.schedule_hour", 20)
             publish_minute = cfg.get("youtube.schedule_minute", 0)
-            lock_at = _today_kst(lock_hour, lock_minute)
-            publish_at = _today_kst(publish_hour, publish_minute)
+            now = datetime.now(_KST)
+            lock_at = now.replace(hour=lock_hour, minute=lock_minute, second=0, microsecond=0)
+            publish_at = now.replace(hour=publish_hour, minute=publish_minute, second=0, microsecond=0)
             if publish_at <= lock_at:
                 publish_at += timedelta(days=1)
+            # 생성이 오래 걸려서 이미 잠금 시각이 지났으면, 하루씩 미루지 않고
+            # 지금 바로 처리(=대기 없이 곧장 거절 여부 확인 후 예약/공개)합니다.
+            if lock_at <= now:
+                lock_at = now
 
             notify_discord(
                 f"📤 [{name}] {kind} 업로드 완료(비공개) — {title}\n"
