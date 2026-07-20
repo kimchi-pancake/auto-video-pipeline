@@ -1,26 +1,30 @@
 """
 utils/status_reporter.py
 ==========================
-core/pipeline.py의 progress_callback으로 꽂아서, 영상 하나가 만들어지는
-동안 디스코드 메시지 하나를 실시간으로 "수정(edit)"하는 진행률 카드
-리포터입니다. 새 메시지를 계속 보내지 않고 edit만 쓰기 때문에 채널에
-스팸처럼 쌓이지 않고, edit 자체는 디스코드가 알림을 다시 울리지 않습니다.
+core/pipeline.py의 progress_callback으로 꽂는 리포터. edit도 안 쓰고, 진행
+중에 알림도 안 울리게 하면서 "과정은 다 보이게" 하기 위해 알림/표시를
+분리했습니다(Push vs Pull):
 
-예전 버전은 edit이 실패하면 새 메시지를 또 만드는 폴백이 있었는데, 이게
-반복 알림처럼 느껴지는 원인이었던 것으로 보여서 제거했습니다 — 이제 edit이
-실패하면 그냥 로그만 남기고 다음 단계에서 다시 시도합니다(메시지를 새로
-만들지 않음).
+  - 진행 중 8단계: 새 텍스트 메시지를 매번 보내되, Discord의
+    SUPPRESS_NOTIFICATIONS 플래그로 조용히 보냅니다 — 채널에 쌓여서
+    스크롤하면 전 과정이 다 보이지만, 알림/뱃지는 안 뜹니다.
+  - 완료 시: 진행률 카드(이미지) 1장을 새로 올리고, 이건 소리 나게
+    보냅니다 — "다 됐다"는 사실만 알림으로 부릅니다.
+  - 실패 시에도 즉시 소리 나는 카드로 알립니다.
+
+메시지를 edit하지 않고 매번 새로 보내는 이유: edit 자체는 원래 무음이지만
+edit 실패 시 새 메시지로 폴백하던 예전 로직이 반복 알림처럼 느껴졌던
+원인이었고, 애초에 edit을 아예 안 쓰면 그 문제 자체가 성립하지 않습니다.
 """
 
 from __future__ import annotations
 
 from utils.logger import get_logger
-from utils.notify import notify_discord_status_create, notify_discord_status_update
+from utils.notify import notify_discord_silent, notify_discord_status_create
 from utils.status_card import render_status_card
 
 logger = get_logger(__name__)
 
-_COLOR_PROGRESS = 0x58A6FF
 _COLOR_DONE = 0x3FB984
 _COLOR_FAIL = 0xE05252
 
@@ -32,39 +36,37 @@ class DiscordStatusReporter:
     def __init__(self, title: str, channel: str):
         self._title = title
         self._channel = channel
-        self._message_id: str | None = None
         self._last_stage = -1
 
     def __call__(self, progress) -> None:
         # 같은 단계 안에서는 갱신하지 않음(예: 이미지 1/22 ~ 22/22) — 단계가
-        # 바뀔 때만 카드가 넘어가서 디스코드 레이트리밋을 피합니다.
+        # 바뀔 때만 한 줄 보내서 메시지 수를 아낍니다.
         if progress.stage_index == self._last_stage:
             return
         self._last_stage = progress.stage_index
-        self._push(progress.stage_index, progress.stage_total, progress.overall_pct, progress.message)
-
-    def _push(self, stage_index: int, stage_total: int, overall_pct: float, message: str, done: bool = False, failed: bool = False) -> None:
         try:
-            image_bytes = render_status_card(
-                title=self._title, channel=self._channel,
-                stage_index=stage_index, stage_total=stage_total,
-                overall_pct=overall_pct, message=message,
-                done=done, failed=failed,
+            notify_discord_silent(
+                f"⏳ [{self._channel}] {progress.stage} — {self._title} "
+                f"({progress.stage_index + 1}/{progress.stage_total})"
             )
-            color = _COLOR_FAIL if failed else (_COLOR_DONE if done else _COLOR_PROGRESS)
-            embed = {"title": f"🎬 {self._channel}", "color": color}
-            if self._message_id is None:
-                self._message_id = notify_discord_status_create(embed, image_bytes)
-            else:
-                ok = notify_discord_status_update(self._message_id, embed, image_bytes)
-                if not ok:
-                    logger.warning("DiscordStatusReporter: 카드 수정 실패 — 다음 단계에서 다시 시도")
         except Exception:
-            logger.exception("DiscordStatusReporter 갱신 실패")
+            logger.exception("DiscordStatusReporter 진행 메시지 전송 실패")
 
     def finish(self, success: bool, youtube_video_id: str | None = None, error: str | None = None) -> None:
-        """영상 하나 처리가 끝났을 때(성공/실패) 카드를 최종 상태로 갱신합니다."""
+        """영상 하나 처리가 끝났을 때(성공/실패) 카드를 새로 올립니다(소리 남)."""
         message = "완료" if success else (error or "실패")
         if success and youtube_video_id:
             message = f"https://youtu.be/{youtube_video_id}"
-        self._push(7, 8, 100.0, message, done=success, failed=not success)
+        try:
+            image_bytes = render_status_card(
+                title=self._title, channel=self._channel,
+                stage_index=7, stage_total=8, overall_pct=100.0,
+                message=message, done=success, failed=not success,
+            )
+            embed = {
+                "title": f"🎬 {self._channel}",
+                "color": _COLOR_DONE if success else _COLOR_FAIL,
+            }
+            notify_discord_status_create(embed, image_bytes)
+        except Exception:
+            logger.exception("DiscordStatusReporter 결과 카드 전송 실패")

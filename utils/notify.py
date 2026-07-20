@@ -49,6 +49,27 @@ def notify_discord(message: str, webhook_url: str = DISCORD_WEBHOOK_URL) -> None
         pass
 
 
+# Discord 메시지 플래그 중 SUPPRESS_NOTIFICATIONS(4096) — 채널엔 그대로
+# 남지만 푸시 알림/뱃지를 안 띄웁니다. 진행 중 단계별 메시지처럼 "보러 가면
+# 있어야 하지만 부르지는 말아야 하는" 용도에 씁니다.
+_FLAG_SUPPRESS_NOTIFICATIONS = 1 << 12
+
+
+def notify_discord_silent(message: str, webhook_url: str = DISCORD_WEBHOOK_URL) -> None:
+    """notify_discord와 동일하지만 알림/뱃지 없이 조용히 채널에만 남깁니다."""
+    try:
+        body = json.dumps({"content": message, "flags": _FLAG_SUPPRESS_NOTIFICATIONS}).encode("utf-8")
+        req = urllib.request.Request(
+            webhook_url,
+            data=body,
+            headers={"Content-Type": "application/json", "User-Agent": _BROWSER_UA},
+            method="POST",
+        )
+        urllib.request.urlopen(req, timeout=10)
+    except Exception:
+        pass
+
+
 def notify_discord_status_create(embed: dict, image_bytes: bytes, filename: str = "status.png") -> str | None:
     """이미지(진행률 카드)가 첨부된 임베드 메시지를 새로 올리고, 나중에
     수정(edit)할 수 있도록 메시지 id를 반환합니다. 실패하면 None."""
