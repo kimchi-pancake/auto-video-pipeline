@@ -1,13 +1,14 @@
 """
 utils/status_reporter.py
 ==========================
-core/pipeline.py의 progress_callback으로 꽂아서, 영상 하나가 만들어지는
-동안 디스코드 메시지 하나를 실시간으로 갱신하는 "진행률 카드" 리포터.
+core/pipeline.py의 progress_callback으로 꽂아서, 영상 하나가 시작될 때와
+끝날 때 딱 두 번만 디스코드에 "진행률 카드"(이미지)를 올리는 리포터.
 
-메시지를 새로 계속 보내는 대신 같은 메시지를 edit해서, 디스코드 채널에
-스팸처럼 쌓이지 않고 하나의 카드가 부드럽게 갱신되는 것처럼 보입니다.
-단계(stage)가 바뀔 때만 갱신해서 API 호출을 아낍니다 — 이미지 20장을
-받는 동안 매번 갱신하면 레이트리밋에 걸리기 쉽습니다.
+예전엔 단계(stage)가 바뀔 때마다(8단계) 메시지를 edit했는데, 실제로 써보니
+edit이 실패해서 새 메시지로 재생성되는 경우가 있었고, 결과적으로 단계마다
+알림이 여러 번 오는 것처럼 느껴진다는 피드백을 받았습니다. 텍스트 알림도
+"시작/끝만" 남기기로 한 것과 동일하게, 카드도 시작 1번 + 완료 1번으로
+줄였습니다.
 """
 
 from __future__ import annotations
@@ -31,14 +32,12 @@ class DiscordStatusReporter:
         self._title = title
         self._channel = channel
         self._message_id: str | None = None
-        self._last_stage = -1
 
     def __call__(self, progress) -> None:
-        # 같은 단계 안에서는 갱신하지 않음(예: 이미지 1/22 ~ 22/22) — 단계가
-        # 바뀔 때만 카드가 넘어가서 디스코드 레이트리밋을 피합니다.
-        if progress.stage_index == self._last_stage:
+        # 시작 카드는 딱 한 번만 올림 — 그 이후 단계 진행 상황은 더 이상
+        # 갱신하지 않고, finish()가 마지막에 한 번 더 갱신합니다.
+        if self._message_id is not None:
             return
-        self._last_stage = progress.stage_index
         self._push(progress.stage_index, progress.stage_total, progress.overall_pct, progress.message)
 
     def _push(self, stage_index: int, stage_total: int, overall_pct: float, message: str, done: bool = False, failed: bool = False) -> None:
