@@ -311,10 +311,21 @@ class StoryParser:
             if not stripped:
                 continue
 
-            # 대사 파싱
+            # 대사 파싱. "word: text" 형태로 매칭돼도, CAST에 없는 화자면 실제
+            # 대사가 아니라 이어지는 줄에 우연히 콜론이 들어간 것일 수 있음
+            # (예: "시간: 3시 정각에 그가 왔습니다." 처럼 이어지는 서술문이
+            # 콜론을 포함하면 "시간"이라는 존재하지 않는 화자의 새 대사로
+            # 잘못 갈라져서, TTS에서 매핑 안 되는 화자로 남는 버그가 있었음).
+            # CAST 섹션 자체가 없는 문서는 판별 기준이 없으니 예전처럼 항상
+            # 새 대사로 취급합니다. 이어붙일 직전 대사가 아예 없는 경우(씬의
+            # 첫 줄)도 예전처럼 새 대사로 취급합니다 — continuation으로
+            # 잘못 분류하면 이어붙일 곳이 없어 내용이 통째로 사라집니다.
             m_dial = self._RE_DIALOGUE.match(stripped)
-            if m_dial:
-                speaker_key = m_dial.group(1).strip()
+            speaker_key = m_dial.group(1).strip() if m_dial else None
+            is_real_speaker_line = m_dial and (
+                not cast or speaker_key in cast or not current_scene.dialogues
+            )
+            if is_real_speaker_line:
                 text = m_dial.group(2).strip()
 
                 display_name = cast.get(speaker_key, speaker_key)
