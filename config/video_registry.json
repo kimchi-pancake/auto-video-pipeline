@@ -16,8 +16,12 @@
     "title": "아버지가 죽기 전날, 아들에게 건넨 낡은 통장 한 장",
     "is_shorts": false,
     "uploaded_at": "2026-07-19T03:42:21+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-07-20T16:21:59+00:00"
   },
   {
     "video_id": "1-zMDVto5wQ",
@@ -26,8 +30,12 @@
     "title": "\"절대 열어보지 마세요\" - 폰트까지 위조한 그 편지의 정체",
     "is_shorts": false,
     "uploaded_at": "2026-07-19T04:10:39+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-07-20T16:21:59+00:00"
   },
   {
     "video_id": "oCKRSYNfzA4",
@@ -36,8 +44,12 @@
     "title": "\"절대 열어보지 마세요\" - 폰트까지 위조한 그 편지의 정체",
     "is_shorts": false,
     "uploaded_at": "2026-07-19T04:15:41+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 922,
+      "likes": 2,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-07-20T16:21:59+00:00"
   },
   {
     "video_id": "gEqZE6uCEC8",
@@ -56,8 +68,12 @@
     "title": "\"엄마, 저 죽으면 이것 꺼내세요\" 그 편지의 정체",
     "is_shorts": false,
     "uploaded_at": "2026-07-19T05:01:07+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1002,
+      "likes": 5,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-07-20T16:21:59+00:00"
   },
   {
     "video_id": "nUtH_rOTTLQ",
