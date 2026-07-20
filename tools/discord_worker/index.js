@@ -24,6 +24,19 @@
  *
  * 슬래시 커맨드 정의를 바꿨으면 GITHUB_TOKEN/DISCORD_APP_ID/DISCORD_BOT_TOKEN을
  * 잠깐 추가하고 /register-command-x7k2m9 를 한 번 호출해서 반영해야 합니다.
+ *
+ * 매일 정해진 시각 자동 트리거
+ * ----------------------------
+ * daily.yml 자체의 `schedule: cron`은 GitHub 무료/private 레포 특성상 최대
+ * 1시간 가까이 늦게 도는 걸 실측으로 확인했습니다. Cloudflare Worker의 Cron
+ * Triggers는 그런 큐 지연이 없어서, 이 워커가 직접 정시에 깨어나
+ * workflow_dispatch를 쏘도록 scheduled() 핸들러를 둡니다.
+ *
+ * 설정: Cloudflare 대시보드 → 이 Worker → Triggers → Cron Triggers →
+ * "10 11 * * *" 추가 (UTC 기준 11:10 = KST 20:10, daily.yml의 cron과 동일한
+ * 시각). daily.yml의 schedule 트리거는 그대로 둬도 되고(둘 다 도는 게 아니라
+ * 아래 scheduled()가 "이미 실행 중이면 스킵" 가드를 거치므로 안전), 아예
+ * daily.yml에서 schedule: 을 지워서 이 Worker가 유일한 트리거가 되게 해도 됨.
  */
 
 const BRANCH = "master";
@@ -69,7 +82,35 @@ export default {
     }
     return new Response("unknown interaction type", { status: 400 });
   },
+
+  // Cloudflare Cron Trigger가 정시에 이걸 부릅니다 — daily.yml의 schedule:
+  // 큐 지연 없이 정확한 시각에 workflow_dispatch를 쏩니다.
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(triggerDailyIfIdle(env));
+  },
 };
+
+/** 이미 도는 daily.yml 실행이 없을 때만 새로 트리거합니다(중복 실행 방지). */
+async function triggerDailyIfIdle(env) {
+  const active = await findActiveDailyRun(env);
+  if (active) return; // 이미 돌고 있음 — 새로 안 만듦
+  await dispatchWorkflow(env, "daily.yml", {});
+}
+
+/** in_progress/queued 상태인 daily.yml 실행이 있으면 그 run 객체를, 없으면 null을 반환합니다. */
+async function findActiveDailyRun(env) {
+  try {
+    const resp = await fetch(
+      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/runs?per_page=5`,
+      { headers: ghHeaders(env) }
+    );
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    return (data.workflow_runs || []).find((r) => r.status === "in_progress" || r.status === "queued") || null;
+  } catch (e) {
+    return null; // 조회 실패해도 트리거는 계속 진행 (fail-open)
+  }
+}
 
 // ─────────────────────────────────────────
 // 커맨드 라우팅
@@ -239,26 +280,12 @@ async function handleStart(env) {
   // cron이 늦게 겹쳐서 두 실행이 동시에 도는 사고를 겪은 적이 있어서
   // (같은 대기 파일을 두 실행이 동시에 집어가는 위험 + 유튜브 토큰 갱신 경합),
   // 이미 도는 게 있으면 새로 트리거하지 않고 그 실행 링크만 알려줍니다.
-  const headers = ghHeaders(env);
-  try {
-    const resp = await fetch(
-      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/runs?per_page=5`,
-      { headers }
-    );
-    if (resp.ok) {
-      const data = await resp.json();
-      const active = (data.workflow_runs || []).find(
-        (r) => r.status === "in_progress" || r.status === "queued"
-      );
-      if (active) {
-        return json({
-          type: 4,
-          data: { content: `⏳ 이미 실행 중임 — 새로 안 만들고 기존 걸로 안내함.\n${active.html_url}` },
-        });
-      }
-    }
-  } catch (e) {
-    // 조회 실패해도 트리거 자체는 계속 진행 (fail-open)
+  const active = await findActiveDailyRun(env);
+  if (active) {
+    return json({
+      type: 4,
+      data: { content: `⏳ 이미 실행 중임 — 새로 안 만들고 기존 걸로 안내함.\n${active.html_url}` },
+    });
   }
 
   const ok = await dispatchWorkflow(env, "daily.yml", {});
