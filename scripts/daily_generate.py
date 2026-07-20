@@ -107,7 +107,6 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
         topic = pop_topic(name, today)
         if topic:
             logger.info("daily_generate: '%s' 디스코드로 예약된 주제 사용 — %s", name, topic)
-            notify_discord(f"🎯 [{name}] 오늘은 예약된 주제로 생성함 — \"{topic}\"")
         try:
             meta_list: list[dict] = []
             saved = generate_daily_batch(input_dir, custom_topic=topic, channel=name, meta_out=meta_list)
@@ -118,7 +117,7 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
                     f"후킹 {scores.get('hook', '?')} · 감정 {scores.get('emotion', '?')} · 결말 {scores.get('ending', '?')}"
                     if scores else "검수 점수 없음"
                 )
-                notify_discord(f"📝 [{name}] 대본 준비됨 — \"{meta.get('title')}\"\n{score_str}")
+                logger.info("daily_generate: '%s' 대본 점수 — %s", name, score_str)
             ok_channels += 1
             saved_total += len(saved)
             state[name] = today
@@ -207,11 +206,6 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
             if lock_at <= now:
                 lock_at = now
 
-            notify_discord(
-                f"📤 [{name}] {kind} 업로드 완료(비공개) — {title}\n"
-                f"{lock_at.strftime('%H:%M')}까지 `/영상 거절 {result.youtube_video_id}` 안 하면 "
-                f"{publish_at.strftime('%H:%M')} 예약공개로 확정됨."
-            )
             t = threading.Thread(
                 target=_lock_in_schedule,
                 args=(name, chan, result.youtube_video_id, result.title or title, kind, lock_at, publish_at),
@@ -269,7 +263,6 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         return 0, 0
 
     logger.info("daily_generate: '%s' 영상 생성+업로드 시작 (%d개)", name, len(pending))
-    notify_discord(f"▶️ [{name}] 영상 생성+업로드 시작 — {len(pending)}개 대기 중")
     try:
         runner.run(
             count=len(pending),
@@ -332,9 +325,7 @@ def main() -> int:
     notify_discord(f"🎬 자동화 시작 — {len(channels)}개 채널({channel_names}) 대본 생성 후 영상 제작·업로드 진행")
 
     gen_ok, gen_saved = _generate_scripts(cfg, channels, logger)
-
-    if gen_saved:
-        notify_discord(f"📝 대본 생성 완료 — {gen_ok}/{len(channels)}개 채널, 총 {gen_saved}개 저장")
+    logger.info("daily_generate: 대본 생성 완료 — %d/%d개 채널, 총 %d개 저장", gen_ok, len(channels), gen_saved)
 
     up_ok, up_fail = _process_queue(cfg, channels, logger)
 
