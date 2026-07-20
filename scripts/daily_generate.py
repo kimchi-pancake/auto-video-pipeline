@@ -17,7 +17,6 @@ from __future__ import annotations
 import json
 import re
 import sys
-import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
@@ -33,7 +32,6 @@ from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
 from core.video_registry import record_upload
-from utils.soft_approval import is_rejected, publish_video, sleep_for_review
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
@@ -125,32 +123,6 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
     return ok_channels, saved_total
 
 
-def _hold_then_publish(name: str, chan: dict, video_id: str, title: str, kind: str) -> None:
-    """소프트 승인: 미리보기+점수를 올리고 REVIEW_WINDOW 동안 기다렸다가,
-    /영상 거절이 없었으면 공개로 전환합니다. 실패 시에도 파이프라인 전체는
-    멈추지 않습니다(다음 영상 처리는 계속 진행)."""
-    notify_discord(
-        f"👀 [{name}] {kind} 미리보기 — {title}\n"
-        f"https://youtu.be/{video_id}\n"
-        f"5분 안에 `/영상 거절 {video_id}` 안 하면 자동으로 공개됨."
-    )
-    sleep_for_review()
-    if is_rejected(video_id):
-        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}")
-        return
-    if publish_video(video_id, chan.get("credentials_file", "")):
-        notify_discord(f"✅ [{name}] {kind} 공개 전환 완료 — {title}\nhttps://youtu.be/{video_id}")
-    else:
-        notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
-
-
-# 채널별로 스레드에서 띄우는 "5분 승인 대기 → 공개 전환" 백그라운드 작업들.
-# main()이 끝나기 전에 전부 join해서, 공개 전환이 실제로 끝나기 전에 프로세스가
-# 종료돼 daemon 스레드가 통째로 죽는(=영상이 영원히 비공개로 남는) 일을 막습니다.
-_pending_publish_threads: list = []
-_pending_publish_lock = threading.Lock()
-
-
 def _handle_result(name: str, chan: dict, default_privacy: str, story_path: str, result, counters: dict, logger) -> None:
     """파일 하나 처리가 끝날 때마다(배치 전체가 아니라) 바로 불려서, 그
     영상에 대한 디스코드 알림을 즉시 보냅니다 — 채널 대기열 전체(롱폼+쇼츠2)가
@@ -172,19 +144,14 @@ def _handle_result(name: str, chan: dict, default_privacy: str, story_path: str,
         counters["uploaded"] += 1
         record_upload(result.youtube_video_id, name, result.category, result.title or title, is_shorts)
         if default_privacy == "public":
-            # 5분 승인 대기(sleep_for_review)를 여기서 그냥 기다리면 배치 루프가
-            # 막혀서 다음 영상 생성이 5분씩 밀립니다 — 별도 스레드로 돌려서
-            # 승인 대기 중에도 다음 파일 처리가 바로 이어지게 함. daemon=True라
-            # 메인 프로세스가 먼저 끝나면 죽어버리므로, main()에서 종료 전에
-            # pending_threads를 전부 join해서 승인/공개 전환이 실제로 끝나게 함.
-            t = threading.Thread(
-                target=_hold_then_publish,
-                args=(name, chan, result.youtube_video_id, result.title or title, kind),
-                daemon=True,
+            # 개별 승인 대기 스레드 대신 유튜브 자체 예약공개(publishAt)를 씀 —
+            # BatchRunner.run(schedule_today=True)가 core/pipeline.py를 통해
+            # 이미 오늘 config.schedule_hour:schedule_minute으로 예약해서
+            # 올렸으므로, 여기선 그 사실을 알리기만 하면 됨.
+            notify_discord(
+                f"📅 [{name}] {kind} 업로드 완료 — 오늘 정해진 시각에 자동 공개 예정: {title}\n"
+                f"https://youtu.be/{result.youtube_video_id}"
             )
-            t.start()
-            with _pending_publish_lock:
-                _pending_publish_threads.append(t)
         else:
             notify_discord(
                 f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
@@ -209,9 +176,11 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     """채널 하나의 대기열을 처리합니다. (성공 개수, 실패 개수)를 반환."""
     name = chan.get("name") or "(이름없음)"
     default_privacy = cfg.get("youtube.default_privacy", "private")
-    # 공개가 목표인 채널이면 일단 비공개로 올려서 소프트 승인 창을 거치고,
-    # 원래 설정이 private인 채널이면 그대로 private로 둡니다(승인 절차 불필요).
+    # 공개가 목표인 채널이면 유튜브 자체 예약공개(publishAt)로 올려서 오늘
+    # config.schedule_hour:schedule_minute 정각에 자동 공개되게 하고, 원래
+    # 설정이 private인 채널이면 그대로 private로 둡니다(예약 불필요).
     upload_privacy = "private" if default_privacy == "public" else default_privacy
+    schedule_today = default_privacy == "public"
     input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
 
     counters = {"uploaded": 0, "made_but_not_uploaded": 0, "fail": 0}
@@ -240,6 +209,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
             upload_to_youtube=True,
             youtube_privacy=upload_privacy,
             schedule_days_ahead=0,
+            schedule_today=schedule_today,
             also_make_shorts=False,
             stagger_days=0,
         )
@@ -301,15 +271,6 @@ def main() -> int:
         notify_discord(f"📝 대본 생성 완료 — {gen_ok}/{len(channels)}개 채널, 총 {gen_saved}개 저장")
 
     up_ok, up_fail = _process_queue(cfg, channels, logger)
-
-    # 채널 처리는 다 끝났어도, 소프트 승인(5분 대기 후 공개 전환) 스레드가 아직
-    # 돌고 있을 수 있음 — 이걸 안 기다리고 프로세스가 끝나면 daemon 스레드가
-    # 그대로 죽어서 영상이 영원히 비공개로 남습니다.
-    with _pending_publish_lock:
-        threads = list(_pending_publish_threads)
-    for t in threads:
-        t.join()
-
     elapsed_str = _format_elapsed(time.time() - start)
 
     logger.info(

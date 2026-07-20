@@ -10,9 +10,11 @@
  *   /영상 시작                          — daily.yml(전 채널 정기 생성)을 지금 바로 트리거
  *   /영상 상태                          — 현재 실행 중인 작업 / 오늘 업로드 수 / 대기열
  *   /영상 로그                          — 최근 워크플로우 실행 기록 링크
- *   /영상 재생성 channel topic          — 그 자리에서 즉시 새로 생성(전체 재생성)
+ *   /영상 재생성 channel topic          — 그 자리에서 즉시 새로 생성(전체 재생성, 5분 소프트 승인 적용)
  *   /영상 cta설정 channel position on   — 구독 유도 문구 위치별 on/off
- *   /영상 거절 video_id                 — 소프트 승인 대기 중인 영상 거절(비공개 유지)
+ *   /영상 거절 video_id                 — 소프트 승인 대기 중인 영상 거절(/영상 재생성으로 만든 것만 해당.
+ *                                         daily.yml 정기 생성분은 유튜브 자체 예약공개를 쓰므로 이 커맨드로
+ *                                         취소되지 않음 — 취소하려면 유튜브 스튜디오에서 직접 비공개로 바꿔야 함)
  *
  * config/*.json을 GitHub Contents API로 직접 읽고 씁니다. 평소엔 daily.yml이
  * 완전 자동으로 돌지만, 이 큐/설정 파일들에 예약·설정이 있으면 그걸 반영합니다.
@@ -33,10 +35,15 @@
  * workflow_dispatch를 쏘도록 scheduled() 핸들러를 둡니다.
  *
  * 설정: Cloudflare 대시보드 → 이 Worker → Triggers → Cron Triggers →
- * "10 11 * * *" 추가 (UTC 기준 11:10 = KST 20:10, daily.yml의 cron과 동일한
- * 시각). daily.yml의 schedule 트리거는 그대로 둬도 되고(둘 다 도는 게 아니라
- * 아래 scheduled()가 "이미 실행 중이면 스킵" 가드를 거치므로 안전), 아예
- * daily.yml에서 schedule: 을 지워서 이 Worker가 유일한 트리거가 되게 해도 됨.
+ * "30 7 * * *" 추가 (UTC 기준 07:30 = KST 16:30, daily.yml의 cron과 동일한
+ * "생성 시작" 시각). daily.yml의 schedule 트리거는 그대로 둬도 되고(둘 다
+ * 도는 게 아니라 아래 scheduled()가 "이미 실행 중이면 스킵" 가드를 거치므로
+ * 안전), 아예 daily.yml에서 schedule: 을 지워서 이 Worker가 유일한 트리거가
+ * 되게 해도 됨.
+ *
+ * 실제 유튜브 "공개" 시각(20:00 KST)은 이 트리거 시각과 별개입니다 —
+ * config/config.json의 youtube.schedule_hour/schedule_minute이 그 값을
+ * 결정하고, 업로드 시 유튜브 자체 예약공개(publishAt)로 맞춰집니다.
  */
 
 const BRANCH = "master";

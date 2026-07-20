@@ -67,6 +67,7 @@ class BatchRunner:
         upload_to_youtube: bool = True,
         youtube_privacy: str = "private",
         schedule_days_ahead: int = 0,
+        schedule_today: bool = False,
         also_make_shorts: bool = False,
         stagger_days: int = 1,
     ) -> List[PipelineResult]:
@@ -112,6 +113,7 @@ class BatchRunner:
                 upload_to_youtube=upload_to_youtube,
                 youtube_privacy=youtube_privacy,
                 schedule_days_ahead=schedule_days_ahead + i * stagger_days,
+                schedule_today=schedule_today,
                 youtube_credentials_file=self._yt_creds or None,
                 also_make_shorts=also_make_shorts,
             )
