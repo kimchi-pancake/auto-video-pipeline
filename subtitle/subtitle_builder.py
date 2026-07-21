@@ -73,10 +73,16 @@ class SubtitleBuilder:
         config: dict,
         output_dir: str | Path,
         min_scene_duration: float = 3.0,
+        video_width: int = 1920,
+        video_height: int = 1080,
     ):
         self._cfg = config
         self._output_dir = Path(output_dir)
         self._output_dir.mkdir(parents=True, exist_ok=True)
+
+        self._video_width  = video_width
+        self._video_height = video_height
+        is_portrait = video_height > video_width
 
         self._font_name    = config.get("font_name", "Arial")
         self._font_size    = config.get("font_size", 76)
@@ -85,7 +91,10 @@ class SubtitleBuilder:
         self._shadow_color = config.get("shadow_color", "&H80000000")
         self._outline_w    = config.get("outline_width", 4)
         self._shadow_d     = config.get("shadow_depth", 2)
-        self._margin_v     = config.get("margin_v", 60)
+        # 쇼츠(세로)는 화면 하단에 유튜브 자체 UI(설명/좋아요/댓글 버튼 등)가
+        # 고정 픽셀 높이로 깔려서, 롱폼과 같은 margin_v를 쓰면 그 UI에 가려
+        # 자막이 안 보입니다 — 세로 영상은 훨씬 큰 여백을 기본값으로 씁니다.
+        self._margin_v     = config.get("margin_v_shorts", 220) if is_portrait else config.get("margin_v", 60)
         self._margin_h     = config.get("margin_h", 40)
         self._alignment    = config.get("alignment", 2)
         self._bold         = config.get("bold", -1)
@@ -172,8 +181,8 @@ class SubtitleBuilder:
         return (
             "[Script Info]\n"
             "ScriptType: v4.00+\n"
-            "PlayResX: 1920\n"
-            "PlayResY: 1080\n"
+            f"PlayResX: {self._video_width}\n"
+            f"PlayResY: {self._video_height}\n"
             "ScaledBorderAndShadow: yes\n"
             "\n"
             "[V4+ Styles]\n"

@@ -88,6 +88,7 @@
     "outline_width": 4,
     "shadow_depth": 2,
     "margin_v": 60,
+    "margin_v_shorts": 220,
     "margin_h": 40,
     "alignment": 2,
     "bold": -1,

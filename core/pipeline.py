@@ -412,6 +412,8 @@ class Pipeline:
             config=self._cfg.section("subtitle"),
             output_dir=temp,
             min_scene_duration=self._cfg.get("video.min_scene_duration", 3.0),
+            video_width=self._cfg.get("video.width", 1920),
+            video_height=self._cfg.get("video.height", 1080),
         )
         return builder.build(scene_audios)
 
