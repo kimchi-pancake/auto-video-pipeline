@@ -2,13 +2,15 @@ name: Daily Video Pipeline
 
 on:
   workflow_dispatch:
-  # 매일 16:00 KST(UTC+9) = 07:00 UTC에 "생성 시작". 실제 유튜브 공개는
-  # config.schedule_hour:schedule_minute(20:00 KST)에 유튜브 자체 예약공개
-  # (publishAt)로 맞춰짐 — 이 cron은 그 전에 넉넉히 생성을 끝내기 위한 시작
-  # 시각일 뿐, 공개 시각과는 별개. review_lock(19:40)까지 3시간40분 버퍼를 둬서
-  # 생성이 오래 걸려도 잠금 시각을 넘길 여지를 줄임.
-  schedule:
-    - cron: "0 7 * * *"
+  # 이 워크플로우 자체의 GitHub 네이티브 schedule: cron은 일부러 안 씁니다.
+  # 2026-07-20에 실제로 겪은 사고: 07:00 UTC로 걸어둔 schedule 트리거가
+  # 3시간 15분 늦게(10:15 UTC)에야 발동했는데, 이 경로엔 "이미 실행 중이면
+  # 스킵" 가드가 없어서 그 시각에 아직 돌고 있던 수동 실행과 겹쳐 대본이
+  # 통째로 다시 생성되며 채널당 3개씩(총 6개) 중복 업로드됨. 매일 정시
+  # 트리거는 tools/discord_worker/index.js의 Cloudflare Cron Trigger가
+  # 전담합니다 — 그쪽은 dispatch 전에 findActiveDailyRun()으로 중복 실행
+  # 여부를 확인하는 가드가 있습니다. 필요하면 workflow_dispatch로 수동
+  # 트리거만 가능하게 남겨둡니다.
 
 permissions:
   contents: write
