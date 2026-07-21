@@ -299,22 +299,38 @@ _COMBO_LONG_ANCHOR = (
 _SHORTS_STANDALONE_ANCHOR = "형식은 반드시 아래와 똑같이 지켜줘 (콜론, 대괄호, & 기호 포함):"
 
 
+def _retry_hint_rules(reason: str) -> str:
+    return (
+        f"[재작성 경고] 방금 전 시도는 분량 기준 미달로 반려됐다 ({reason}).\n"
+        "같은 실수를 반복하지 마라 — [SCENE] 블록을 22개보다 확실히 더 여유 있게 쓰고,\n"
+        "각 씬의 나레이터 대사를 200자보다 눈에 띄게 길게(상황 설명+속마음+주변 묘사+대화를\n"
+        "섞어서) 써서, 이번에는 전체 대사 분량이 최소 기준을 넉넉히 넘기게 하라."
+    )
+
+
 def combo_script_prompt(
     custom_topic: str | None = None,
     forced_title: str | None = None,
     cta_settings: dict | None = None,
+    retry_hint: str | None = None,
 ) -> str:
     """COMBO_SCRIPT_PROMPT를 그대로 쓰거나,
     - custom_topic이 있으면 [주제] 섹션을 사용자가 지정한 주제로 바꿔치기하고
     - forced_title이 있으면 THUMBNAIL_LONG/THUMBNAIL_SHORTS 자리에 이미 골라둔
       제목을 그대로 쓰게 강제하고
-    - cta_settings가 있으면 구독 유도 문구 배치 지시를 롱폼 섹션 앞에 추가합니다."""
+    - cta_settings가 있으면 구독 유도 문구 배치 지시를 롱폼 섹션 앞에 추가하고
+    - retry_hint(직전 실패 사유)가 있으면 롱폼 섹션 앞에 재작성 경고를 추가합니다.
+      (재생성 시도가 매번 같은 프롬프트로 "다시 굴리기"만 하면 분량 미달이 반복되기
+      쉬워서, 정확히 뭐가 부족했는지 알려주면 다음 시도가 첫 시도만에 통과할 확률이
+      높아지고, 그만큼 MAX_REGEN_ATTEMPTS를 다 채우는 비싼 재생성 횟수가 줄어듭니다.)"""
     prompt = COMBO_SCRIPT_PROMPT
     if custom_topic:
         prompt = prompt.replace(_TOPIC_RULES, _topic_override_rules(custom_topic))
     if forced_title:
         prompt = prompt.replace(_TITLE_PLACEHOLDER, _forced_title_rules(forced_title))
     prompt = _apply_cta(prompt, cta_settings, _COMBO_LONG_ANCHOR)
+    if retry_hint:
+        prompt = prompt.replace(_COMBO_LONG_ANCHOR, f"{_retry_hint_rules(retry_hint)}\n\n{_COMBO_LONG_ANCHOR}")
     return prompt
 
 

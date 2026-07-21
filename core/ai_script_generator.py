@@ -186,13 +186,17 @@ def generate_combo_script(
     custom_topic: str | None = None,
     forced_title: str | None = None,
     cta_settings: dict | None = None,
+    retry_hint: str | None = None,
 ) -> str:
-    """Claude API를 호출해서 롱폼+쇼츠 통합 대본 원문을 반환합니다."""
+    """Claude API를 호출해서 롱폼+쇼츠 통합 대본 원문을 반환합니다.
+    retry_hint(직전 실패 사유)를 넘기면 그 내용을 프롬프트에 재작성 경고로
+    끼워 넣어, 재생성이 같은 실수를 반복해 MAX_REGEN_ATTEMPTS를 다 채우는
+    (=토큰 비용이 최대 3배로 뛰는) 상황을 줄입니다."""
     logger.info(
-        "Claude API 콤보(롱폼+쇼츠) 대본 생성 요청 (topic=%s, title=%s)",
-        custom_topic or "자동", forced_title or "자동",
+        "Claude API 콤보(롱폼+쇼츠) 대본 생성 요청 (topic=%s, title=%s, retry_hint=%s)",
+        custom_topic or "자동", forced_title or "자동", bool(retry_hint),
     )
-    return _call_claude(combo_script_prompt(custom_topic, forced_title, cta_settings))
+    return _call_claude(combo_script_prompt(custom_topic, forced_title, cta_settings, retry_hint))
 
 
 def generate_shorts_only(cta_settings: dict | None = None) -> str:
@@ -363,7 +367,8 @@ def generate_optimized_script(
     ):
         reason = length_reason if not length_ok else f"hook={scores.get('hook')}, ending={scores.get('ending')}"
         logger.warning("검수 기준 미달(%s) — 재생성 시도 %d/%d", reason, attempts, MAX_REGEN_ATTEMPTS)
-        text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
+        retry_hint = length_reason if not length_ok else None
+        text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta, retry_hint=retry_hint)
         text = _force_thumbnail_titles(text, best_title)
         scores = score_script(text)
         length_ok, length_reason = _long_form_length_ok(text)
