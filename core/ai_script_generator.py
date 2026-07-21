@@ -259,12 +259,17 @@ def _dialogue_char_count(long_part: str) -> int:
     return total
 
 
+def _split_long_part(text: str) -> str:
+    """콤보 응답에서 롱폼 부분만 잘라냅니다(쇼츠 부분 제외)."""
+    return text.split(SPLIT_DELIMITER, 1)[0] if SPLIT_DELIMITER in text else text
+
+
 def _long_form_length_ok(text: str) -> tuple[bool, str]:
     """콤보 응답의 롱폼 부분이 최소 분량(씬 개수/실제 대사 글자수)을 채웠는지
     확인합니다. 부족하면 (False, 이유)를 반환 — score_script의 이야기 품질
     점수와는 별개로 "너무 짧게 써서 8분 목표를 못 채우는" 케이스를 잡아내기
     위한 검사입니다."""
-    long_part = text.split(SPLIT_DELIMITER, 1)[0] if SPLIT_DELIMITER in text else text
+    long_part = _split_long_part(text)
     scene_count = long_part.count("[SCENE:")
     dialogue_chars = _dialogue_char_count(long_part)
     if scene_count < MIN_LONG_SCENES:
@@ -354,8 +359,10 @@ def generate_optimized_script(
 
     text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
     text = _force_thumbnail_titles(text, best_title)
-    scores = score_script(text)
     length_ok, length_reason = _long_form_length_ok(text)
+    # 분량이 이미 미달이면 어차피 재생성하니, 이번 초안을 채점해봤자 결과가
+    # 버려집니다 — score_script 호출(입력 수천 토큰)을 아껴서 통과한 초안만 채점.
+    scores = score_script(_split_long_part(text)) if length_ok else {}
 
     attempts = 1
     while (
@@ -370,8 +377,8 @@ def generate_optimized_script(
         retry_hint = length_reason if not length_ok else None
         text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta, retry_hint=retry_hint)
         text = _force_thumbnail_titles(text, best_title)
-        scores = score_script(text)
         length_ok, length_reason = _long_form_length_ok(text)
+        scores = score_script(_split_long_part(text)) if length_ok else {}
         attempts += 1
 
     meta = {
