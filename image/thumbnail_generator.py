@@ -117,26 +117,31 @@ class ThumbnailGenerator:
         height: int,
     ) -> Image.Image:
         draw = ImageDraw.Draw(img, "RGBA")
-        font = self._load_font(font_size)
+        max_w = int(width * 0.88)
+        max_h = int(height * 0.78)
 
-        lines = self._wrap_text(text, font, draw, int(width * 0.88))
+        font, lines = self._fit_text(draw, text, font_size, max_w, max_h)
+        size = font.size
 
-        line_h = int(font_size * 1.25)
+        line_h = int(size * 1.25)
         total_h = line_h * len(lines)
         y = (height - total_h) // 2
 
         # 텍스트 뒤에 반투명 밴드를 깔아 사진이 화려해도 가독성을 확보
-        pad_x, pad_y = int(width * 0.05), int(font_size * 0.35)
+        pad_y = int(size * 0.35)
         draw.rectangle(
             [0, y - pad_y, width, y + total_h + pad_y],
             fill=(0, 0, 0, 140),
         )
 
-        stroke_w = max(2, font_size // 22)
+        stroke_w = max(2, size // 22)
         for i, line in enumerate(lines):
             bbox = draw.textbbox((0, 0), line, font=font)
             tw = bbox[2] - bbox[0]
-            x = (width - tw) // 2
+            # 강제로 쪼갠 글자 단위 조각이 그래도 max_w를 넘는 극단적인
+            # 경우(글자 하나가 max_w보다 넓은 경우)엔 0으로 클램프해서
+            # 캔버스 밖으로 삐져나가지 않게 합니다.
+            x = max(0, (width - tw) // 2)
             color = self._text_colors[i % len(self._text_colors)]
             draw.text(
                 (x, y), line, font=font, fill=color,
@@ -145,6 +150,28 @@ class ThumbnailGenerator:
             y += line_h
 
         return img
+
+    def _fit_text(
+        self,
+        draw: ImageDraw.ImageDraw,
+        text: str,
+        max_size: int,
+        max_w: int,
+        max_h: int,
+        min_size: int = 32,
+    ) -> tuple:
+        """줄바꿈한 텍스트가 가로(max_w)/세로(max_h) 안에 다 들어갈 때까지
+        글자 크기를 줄여가며 (font, lines)를 반환합니다. 제목이 길어서
+        최소 크기에서도 안 들어가면 그 이상은 줄이지 않고 최소 크기를
+        반환합니다(그 아래는 가독성이 오히려 떨어짐)."""
+        size = max_size
+        while True:
+            font = self._load_font(size)
+            lines = self._wrap_text(text, font, draw, max_w)
+            line_h = int(size * 1.25)
+            if line_h * len(lines) <= max_h or size <= min_size:
+                return font, lines
+            size = max(min_size, size - 6)
 
     def _load_font(self, size: int) -> ImageFont.FreeTypeFont:
         font_candidates = [
@@ -171,13 +198,29 @@ class ThumbnailGenerator:
         draw: ImageDraw.ImageDraw,
         max_width: int,
     ) -> list:
+        def width_of(s: str) -> int:
+            bbox = draw.textbbox((0, 0), s, font=font)
+            return bbox[2] - bbox[0]
+
         words = text.split()
         lines = []
         current = ""
         for word in words:
+            # 단어 자체가 max_width보다 넓으면(공백 없이 긴 한글 단어 등)
+            # split()만으로는 절대 줄바꿈이 안 돼서 그 줄 전체가 캔버스
+            # 밖으로 삐져나갑니다 — 글자 단위로 강제로 잘라냅니다.
+            while width_of(word) > max_width and len(word) > 1:
+                cut = len(word)
+                while cut > 1 and width_of(word[:cut]) > max_width:
+                    cut -= 1
+                piece, word = word[:cut], word[cut:]
+                if current:
+                    lines.append(current)
+                    current = ""
+                lines.append(piece)
+
             test = (current + " " + word).strip()
-            bbox = draw.textbbox((0, 0), test, font=font)
-            if bbox[2] - bbox[0] <= max_width:
+            if width_of(test) <= max_width:
                 current = test
             else:
                 if current:

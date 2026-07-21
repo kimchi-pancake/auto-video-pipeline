@@ -201,6 +201,19 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
     return _call_claude(shorts_script_prompt(cta_settings))
 
 
+_RE_THUMBNAIL_LINE = re.compile(
+    r"(?im)^(THUMBNAIL_LONG|THUMBNAIL_SHORTS):[ \t]*\r?\n[^\r\n]*"
+)
+
+
+def _force_thumbnail_titles(text: str, title: str) -> str:
+    """THUMBNAIL_LONG/THUMBNAIL_SHORTS 첫 줄을 무조건 확정된 title로
+    덮어씁니다. 프롬프트로 "정확히 이 제목 그대로 써라" 라고 지시해도
+    AI가 그 지시문 문장 자체를 값으로 베껴 쓰는 경우가 있어서, 이미
+    확정돼 있는 title을 신뢰하고 후처리로 강제합니다."""
+    return _RE_THUMBNAIL_LINE.sub(lambda m: f"{m.group(1)}:\n{title}", text)
+
+
 # ─────────────────────────────────────────────
 # 4. 자동 검수
 # ─────────────────────────────────────────────
@@ -336,6 +349,7 @@ def generate_optimized_script(
     cta = get_cta_settings(channel) if channel else None
 
     text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
+    text = _force_thumbnail_titles(text, best_title)
     scores = score_script(text)
     length_ok, length_reason = _long_form_length_ok(text)
 
@@ -350,6 +364,7 @@ def generate_optimized_script(
         reason = length_reason if not length_ok else f"hook={scores.get('hook')}, ending={scores.get('ending')}"
         logger.warning("검수 기준 미달(%s) — 재생성 시도 %d/%d", reason, attempts, MAX_REGEN_ATTEMPTS)
         text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
+        text = _force_thumbnail_titles(text, best_title)
         scores = score_script(text)
         length_ok, length_reason = _long_form_length_ok(text)
         attempts += 1
