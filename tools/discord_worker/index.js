@@ -45,6 +45,14 @@
  * 실제 유튜브 "공개" 시각(20:00 KST)은 이 트리거 시각과 별개입니다 —
  * config/config.json의 youtube.schedule_hour/schedule_minute이 그 값을
  * 결정하고, 업로드 시 유튜브 자체 예약공개(publishAt)로 맞춰집니다.
+ *
+ * 매일 23:59 KST 채팅 비우기
+ * -------------------------
+ * 진행바/결과 메시지가 매일 쌓이는 걸 막기 위해, 매일 밤 이 채널의 활성
+ * 스레드와 메시지를 전부 지웁니다. Cron Triggers에 "59 14 * * *"(UTC
+ * 14:59 = KST 23:59)도 같이 등록해야 합니다. DISCORD_BOT_TOKEN에
+ * Manage Messages/Manage Threads 권한이 있어야 동작합니다(그 채널이
+ * 있는 서버에서 봇에게 권한 부여 필요).
  */
 
 const BRANCH = "master";
@@ -91,10 +99,15 @@ export default {
     return new Response("unknown interaction type", { status: 400 });
   },
 
-  // Cloudflare Cron Trigger가 정시에 이걸 부릅니다 — daily.yml의 schedule:
-  // 큐 지연 없이 정확한 시각에 workflow_dispatch를 쏩니다.
+  // Cloudflare Cron Trigger가 정시에 이걸 부릅니다. cron 문자열로 어느
+  // 트리거인지 구분합니다(대시보드에 "0 7 * * *"와 "59 14 * * *" 둘 다
+  // 등록돼있어야 함).
   async scheduled(event, env, ctx) {
-    ctx.waitUntil(triggerDailyIfIdle(env));
+    if (event.cron === "59 14 * * *") {
+      ctx.waitUntil(purgeChannel(env));
+    } else {
+      ctx.waitUntil(triggerDailyIfIdle(env));
+    }
   },
 };
 
@@ -103,6 +116,72 @@ async function triggerDailyIfIdle(env) {
   const active = await findActiveDailyRun(env);
   if (active) return; // 이미 돌고 있음 — 새로 안 만듦
   await dispatchWorkflow(env, "daily.yml", {});
+}
+
+// ─────────────────────────────────────────
+// 채널 비우기 (매일 23:59 KST)
+// ─────────────────────────────────────────
+
+const DISCORD_CHANNEL_ID = "1528006650278187122";
+const DISCORD_BOT_UA = "DiscordBot (https://github.com/kimchi-pancake/auto-video-pipeline, 1.0)";
+
+/** 이 채널의 활성 스레드를 전부 삭제하고, 남은 메시지를 전부(오래된 것도
+ * 하나씩) 지웁니다. DISCORD_BOT_TOKEN에 Manage Messages/Manage Threads
+ * 권한이 있어야 합니다 — 없으면 개별 삭제 호출이 403으로 조용히 실패합니다. */
+async function purgeChannel(env) {
+  const token = env.DISCORD_BOT_TOKEN;
+  if (!token) return;
+  const headers = { Authorization: `Bot ${token}`, "User-Agent": DISCORD_BOT_UA };
+
+  try {
+    const chResp = await fetch(`https://discord.com/api/v10/channels/${DISCORD_CHANNEL_ID}`, { headers });
+    const ch = await chResp.json();
+    const guildId = ch.guild_id;
+    if (guildId) {
+      const threadsResp = await fetch(`https://discord.com/api/v10/guilds/${guildId}/threads/active`, { headers });
+      const data = await threadsResp.json();
+      const threads = (data.threads || []).filter((t) => t.parent_id === DISCORD_CHANNEL_ID);
+      for (const t of threads) {
+        await fetch(`https://discord.com/api/v10/channels/${t.id}`, { method: "DELETE", headers });
+      }
+    }
+  } catch (e) {
+    // 스레드 삭제 실패해도 메시지 삭제는 계속 시도
+  }
+
+  for (let i = 0; i < 30; i++) {
+    let msgs;
+    try {
+      const resp = await fetch(`https://discord.com/api/v10/channels/${DISCORD_CHANNEL_ID}/messages?limit=100`, { headers });
+      if (!resp.ok) break;
+      msgs = await resp.json();
+    } catch (e) {
+      break;
+    }
+    if (!msgs || msgs.length === 0) break;
+
+    const ids = msgs.map((m) => m.id);
+    let resp;
+    if (ids.length === 1) {
+      resp = await fetch(`https://discord.com/api/v10/channels/${DISCORD_CHANNEL_ID}/messages/${ids[0]}`, {
+        method: "DELETE",
+        headers,
+      });
+    } else {
+      resp = await fetch(`https://discord.com/api/v10/channels/${DISCORD_CHANNEL_ID}/messages/bulk-delete`, {
+        method: "POST",
+        headers: { ...headers, "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: ids }),
+      });
+    }
+    if (resp.status === 429) {
+      const body = await resp.json().catch(() => ({}));
+      await new Promise((r) => setTimeout(r, ((body.retry_after || 1) + 0.5) * 1000));
+      continue;
+    }
+    if (!resp.ok) break;
+    await new Promise((r) => setTimeout(r, 1200));
+  }
 }
 
 /** in_progress/queued 상태인 daily.yml 실행이 있으면 그 run 객체를, 없으면 null을 반환합니다. */

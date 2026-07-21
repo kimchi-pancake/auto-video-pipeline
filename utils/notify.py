@@ -14,6 +14,7 @@ NTFY_TOPIC 값으로 구독하면 됨. 토픽 이름을 아는 사람은 누구�
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import urllib.request
 
@@ -26,6 +27,10 @@ NTFY_PUBLISH_URL = "https://ntfy.sh/"
 # 클라우드플레어가 "브라우저 아님"으로 보고 403(에러 1010)으로 막아버립니다.
 DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1528006867110854817/j7g5IHvpIBrONliuToWRfGhsKdYG1LPM1AcEW-vqMNdbgp676AO2meP4hXpNB2ulj63K"
 
+# 위 웹훅이 꽂혀있는 채널의 ID(스레드 생성용, Bot API는 웹훅 토큰이 아니라
+# channel_id + Bot 토큰이 필요합니다).
+DISCORD_CHANNEL_ID = "1528006650278187122"
+
 # 파이썬 urllib 기본 User-Agent("Python-urllib/x.x")도 클라우드플레어가 봇으로
 # 판단해서 막습니다 — 브라우저처럼 보이는 UA로 우회합니다.
 _BROWSER_UA = (
@@ -34,19 +39,26 @@ _BROWSER_UA = (
 )
 
 
-def notify_discord(message: str, webhook_url: str = DISCORD_WEBHOOK_URL) -> None:
-    """디스코드 웹훅으로 메시지 하나를 보냅니다. 실패해도 조용히 넘어갑니다."""
+def _thread_query(thread_id: str | None) -> str:
+    return f"&thread_id={thread_id}" if thread_id else ""
+
+
+def notify_discord(message: str, webhook_url: str = DISCORD_WEBHOOK_URL, thread_id: str | None = None) -> str | None:
+    """디스코드 웹훅으로 메시지 하나를 보냅니다. 실패해도 조용히 넘어갑니다.
+    thread_id를 주면 메인 채널 대신 그 스레드 안에 올립니다. 나중에 이 메시지를
+    수정하고 싶을 수 있어 메시지 id를 반환합니다(실패하면 None)."""
     try:
         body = json.dumps({"content": message}).encode("utf-8")
         req = urllib.request.Request(
-            webhook_url,
+            f"{webhook_url}?wait=true{_thread_query(thread_id)}",
             data=body,
             headers={"Content-Type": "application/json", "User-Agent": _BROWSER_UA},
             method="POST",
         )
-        urllib.request.urlopen(req, timeout=10)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return json.loads(resp.read()).get("id")
     except Exception:
-        pass
+        return None
 
 
 # Discord 메시지 플래그 중 SUPPRESS_NOTIFICATIONS(4096) — 채널엔 그대로
@@ -55,29 +67,65 @@ def notify_discord(message: str, webhook_url: str = DISCORD_WEBHOOK_URL) -> None
 _FLAG_SUPPRESS_NOTIFICATIONS = 1 << 12
 
 
-def notify_discord_silent(message: str, webhook_url: str = DISCORD_WEBHOOK_URL) -> None:
-    """notify_discord와 동일하지만 알림/뱃지 없이 조용히 채널에만 남깁니다."""
+def notify_discord_silent(message: str, webhook_url: str = DISCORD_WEBHOOK_URL, thread_id: str | None = None) -> str | None:
+    """notify_discord와 동일하지만 알림/뱃지 없이 조용히 채널(또는 스레드)에만
+    남깁니다. 메시지 id를 반환합니다(실패하면 None)."""
     try:
         body = json.dumps({"content": message, "flags": _FLAG_SUPPRESS_NOTIFICATIONS}).encode("utf-8")
         req = urllib.request.Request(
-            webhook_url,
+            f"{webhook_url}?wait=true{_thread_query(thread_id)}",
             data=body,
             headers={"Content-Type": "application/json", "User-Agent": _BROWSER_UA},
             method="POST",
         )
-        urllib.request.urlopen(req, timeout=10)
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return json.loads(resp.read()).get("id")
+    except Exception:
+        return None
+
+
+def notify_discord_create_thread(name: str, channel_id: str = DISCORD_CHANNEL_ID) -> str | None:
+    """새 공개 스레드를 만듭니다. Discord Bot API(POST /channels/{id}/threads)를
+    씁니다 — 웹훅만으로는 일반 텍스트 채널에 스레드를 못 만듭니다("Webhooks can
+    only create threads in forum channels"), 그래서 DISCORD_BOT_TOKEN 환경변수가
+    필요합니다. 토큰이 없거나 실패하면 None(호출부는 스레드 없이 메인 채널에
+    바로 쓰도록 폴백해야 합니다).
+
+    User-Agent는 웹훅 호출에 쓰는 _BROWSER_UA를 쓰면 안 됩니다 — Bot 토큰 인증
+    요청에 브라우저 UA를 섞으면 Discord가 이상 행위로 보고 403(internal network
+    error, code 40333)으로 막습니다. Bot API 호출은 항상 봇용 UA를 씁니다."""
+    bot_token = os.environ.get("DISCORD_BOT_TOKEN", "")
+    if not bot_token:
+        return None
+    import requests
+    try:
+        resp = requests.post(
+            f"https://discord.com/api/v10/channels/{channel_id}/threads",
+            json={"name": name[:100], "type": 11, "auto_archive_duration": 1440},
+            headers={
+                "Authorization": f"Bot {bot_token}",
+                "User-Agent": "DiscordBot (https://github.com/kimchi-pancake/auto-video-pipeline, 1.0)",
+            },
+            timeout=15,
+        )
+        if resp.status_code in (200, 201):
+            return resp.json().get("id")
     except Exception:
         pass
+    return None
 
 
-def notify_discord_status_create(embed: dict, image_bytes: bytes, filename: str = "status.png") -> str | None:
+def notify_discord_status_create(
+    embed: dict, image_bytes: bytes, filename: str = "status.png", thread_id: str | None = None
+) -> str | None:
     """이미지(진행률 카드)가 첨부된 임베드 메시지를 새로 올리고, 나중에
-    수정(edit)할 수 있도록 메시지 id를 반환합니다. 실패하면 None."""
+    수정(edit)할 수 있도록 메시지 id를 반환합니다. 실패하면 None.
+    thread_id를 주면 메인 채널 대신 그 스레드 안에 올립니다."""
     import requests
     try:
         payload = {"embeds": [{**embed, "image": {"url": f"attachment://{filename}"}}]}
         resp = requests.post(
-            f"{DISCORD_WEBHOOK_URL}?wait=true",
+            f"{DISCORD_WEBHOOK_URL}?wait=true{_thread_query(thread_id)}",
             data={"payload_json": json.dumps(payload)},
             files={"file": (filename, image_bytes, "image/png")},
             headers={"User-Agent": _BROWSER_UA},
@@ -90,16 +138,37 @@ def notify_discord_status_create(embed: dict, image_bytes: bytes, filename: str 
     return None
 
 
-def notify_discord_status_update(message_id: str, embed: dict, image_bytes: bytes, filename: str = "status.png") -> bool:
+def notify_discord_status_update(
+    message_id: str, embed: dict, image_bytes: bytes, filename: str = "status.png", thread_id: str | None = None
+) -> bool:
     """notify_discord_status_create()로 만든 메시지를 새 진행률 카드로 갈아
-    끼웁니다(같은 메시지를 계속 수정 — 채널에 메시지가 쌓이지 않음)."""
+    끼웁니다(같은 메시지를 계속 수정 — 채널에 메시지가 쌓이지 않음). 스레드
+    안의 메시지를 수정할 땐 thread_id를 꼭 같이 줘야 합니다."""
     import requests
     try:
         payload = {"embeds": [{**embed, "image": {"url": f"attachment://{filename}"}}]}
+        thread_q = f"?thread_id={thread_id}" if thread_id else ""
         resp = requests.patch(
-            f"{DISCORD_WEBHOOK_URL}/messages/{message_id}",
+            f"{DISCORD_WEBHOOK_URL}/messages/{message_id}{thread_q}",
             data={"payload_json": json.dumps(payload)},
             files={"file": (filename, image_bytes, "image/png")},
+            headers={"User-Agent": _BROWSER_UA},
+            timeout=15,
+        )
+        return resp.status_code in (200, 201)
+    except Exception:
+        return False
+
+
+def notify_discord_edit(message_id: str, content: str, thread_id: str | None = None) -> bool:
+    """텍스트 메시지 하나를 수정합니다(이미지 없이). ASCII 진행바처럼 순수
+    텍스트 메시지를 계속 갈아 끼우는 용도."""
+    import requests
+    try:
+        thread_q = f"?thread_id={thread_id}" if thread_id else ""
+        resp = requests.patch(
+            f"{DISCORD_WEBHOOK_URL}/messages/{message_id}{thread_q}",
+            json={"content": content},
             headers={"User-Agent": _BROWSER_UA},
             timeout=15,
         )

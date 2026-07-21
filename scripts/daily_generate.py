@@ -30,7 +30,7 @@ sys.path.insert(0, str(ROOT))
 
 from utils.logger import setup_logging, get_logger
 from utils.config_manager import get_config
-from utils.notify import notify, notify_discord
+from utils.notify import notify, notify_discord, notify_discord_create_thread
 from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
@@ -128,7 +128,7 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
     return ok_channels, saved_total
 
 
-def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: str, lock_at: datetime, publish_at: datetime) -> None:
+def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: str, lock_at: datetime, publish_at: datetime, thread_id: str | None = None) -> None:
     """lock_at까지 기다렸다가(그동안 /영상 거절 가능), 거절 안 됐으면 그때서야
     유튜브에 publish_at 예약공개를 겁니다. 생성이 끝나자마자 바로 예약해버리면
     거절 창이 사실상 없는 셈이라, "예약을 거는 행위" 자체를 lock_at까지 미룹니다.
@@ -140,7 +140,7 @@ def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: st
     "이미 지났으면 예약 대신 즉시 공개"로 처리합니다."""
     sleep_until(lock_at)
     if is_rejected(video_id):
-        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}")
+        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}", thread_id=thread_id)
         return
 
     now = datetime.now(_KST)
@@ -148,20 +148,22 @@ def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: st
         if schedule_publish(video_id, chan.get("credentials_file", ""), publish_at):
             notify_discord(
                 f"📅 [{name}] {kind} 예약 확정 — {publish_at.strftime('%H:%M')}에 자동 공개 예정: {title}\n"
-                f"https://youtu.be/{video_id}"
+                f"https://youtu.be/{video_id}",
+                thread_id=thread_id,
             )
         else:
-            notify_discord(f"⚠️ [{name}] 예약 확정 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
+            notify_discord(f"⚠️ [{name}] 예약 확정 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}", thread_id=thread_id)
     else:
         # 목표 공개 시각도 이미 지났음(생성이 아주 오래 걸린 경우) — 예약을
         # 걸어봤자 과거 시각이라 API가 거부하거나 무의미하므로 바로 공개.
         if publish_video(video_id, chan.get("credentials_file", "")):
             notify_discord(
                 f"✅ [{name}] {kind} 공개 완료(목표 시각을 넘겨 즉시 공개됨) — {title}\n"
-                f"https://youtu.be/{video_id}"
+                f"https://youtu.be/{video_id}",
+                thread_id=thread_id,
             )
         else:
-            notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}")
+            notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}", thread_id=thread_id)
 
 
 # lock-in 대기 스레드들. main()이 끝나기 전에 전부 join해서, lock_at까지
@@ -171,7 +173,7 @@ _pending_lock_threads: list = []
 _pending_lock_lock = threading.Lock()
 
 
-def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path: str, result, counters: dict, logger) -> None:
+def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path: str, result, counters: dict, logger, thread_id: str | None = None) -> None:
     """파일 하나 처리가 끝날 때마다(배치 전체가 아니라) 바로 불려서, 그
     영상에 대한 디스코드 알림을 즉시 보냅니다 — 채널 대기열 전체(롱폼+쇼츠2)가
     다 끝날 때까지 기다렸다가 한꺼번에 보내면, 롱폼 하나 렌더링에만 1시간
@@ -208,7 +210,7 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
 
             t = threading.Thread(
                 target=_lock_in_schedule,
-                args=(name, chan, result.youtube_video_id, result.title or title, kind, lock_at, publish_at),
+                args=(name, chan, result.youtube_video_id, result.title or title, kind, lock_at, publish_at, thread_id),
                 daemon=True,
             )
             t.start()
@@ -217,7 +219,8 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
         else:
             notify_discord(
                 f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
-                f"https://youtu.be/{result.youtube_video_id}"
+                f"https://youtu.be/{result.youtube_video_id}",
+                thread_id=thread_id,
             )
     elif result.success and not result.youtube_video_id:
         counters["made_but_not_uploaded"] += 1
@@ -227,11 +230,12 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
         )
         notify_discord(
             f"⚠️ [{name}] {kind} 영상은 만들어졌지만 업로드 실패 — {title}\n"
-            f"사유: {result.youtube_error or '알 수 없는 오류'}"
+            f"사유: {result.youtube_error or '알 수 없는 오류'}",
+            thread_id=thread_id,
         )
     else:
         counters["fail"] += 1
-        notify_discord(f"🔴 [{name}] {kind} 영상 생성 자체가 실패 — {title}\n사유: {result.error or '알 수 없는 오류'}")
+        notify_discord(f"🔴 [{name}] {kind} 영상 생성 자체가 실패 — {title}\n사유: {result.error or '알 수 없는 오류'}", thread_id=thread_id)
 
 
 def _process_channel(cfg, chan, logger) -> tuple[int, int]:
@@ -246,8 +250,22 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
 
     counters = {"uploaded": 0, "made_but_not_uploaded": 0, "fail": 0}
 
-    def _on_file_done(story_path: str, result) -> None:
-        _handle_result(name, chan, cfg, default_privacy, story_path, result, counters, logger)
+    def _on_file_done(story_path: str, result, tid) -> None:
+        _handle_result(name, chan, cfg, default_privacy, story_path, result, counters, logger, thread_id=tid)
+
+    # 대기 파일 조회는 스레드/BatchRunner 없이도 되니, 처리할 게 있을 때만
+    # 채널별 디스코드 스레드를 만듭니다(빈 채널까지 매번 스레드가 생기지 않게).
+    input_paths = sorted(input_dir.glob("*.txt"), key=lambda p: p.stat().st_ctime)
+    if not input_paths:
+        logger.info("daily_generate: '%s' 처리할 대기 파일 없음", name)
+        return 0, 0
+
+    today_str = date.today().isoformat()
+    thread_id = notify_discord_create_thread(f"{name} {today_str}")
+    if thread_id:
+        logger.info("daily_generate: '%s' 디스코드 스레드 생성 — %s", name, thread_id)
+    else:
+        logger.warning("daily_generate: '%s' 디스코드 스레드 생성 실패 — 메인 채널로 대체", name)
 
     runner = BatchRunner(
         cfg,
@@ -255,12 +273,10 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         youtube_credentials_file=chan.get("credentials_file", ""),
         archive_subdir=name,
         discord_status=True,
-        on_file_done=_on_file_done,
+        discord_thread_id=thread_id,
+        on_file_done=lambda story_path, result: _on_file_done(story_path, result, thread_id),
     )
     pending = runner.get_pending_files()
-    if not pending:
-        logger.info("daily_generate: '%s' 처리할 대기 파일 없음", name)
-        return 0, 0
 
     logger.info("daily_generate: '%s' 영상 생성+업로드 시작 (%d개)", name, len(pending))
     try:
@@ -274,7 +290,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         )
     except Exception as e:
         logger.exception("daily_generate: '%s' 배치 처리 중 예외 발생", name)
-        notify_discord(f"🔴 [{name}] 배치 처리 중 예외 발생: {e}")
+        notify_discord(f"🔴 [{name}] 배치 처리 중 예외 발생: {e}", thread_id=thread_id)
         return counters["uploaded"], counters["made_but_not_uploaded"] + counters["fail"]
 
     total_fail = counters["made_but_not_uploaded"] + counters["fail"]

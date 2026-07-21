@@ -29,6 +29,7 @@ class BatchRunner:
         youtube_credentials_file: Optional[str] = None,
         archive_subdir: str = "",
         discord_status: bool = False,
+        discord_thread_id: Optional[str] = None,
     ):
         self._cfg = config
         self._input_dir = Path(input_dir)
@@ -37,6 +38,7 @@ class BatchRunner:
         self._stop_requested = False
         self._yt_creds = youtube_credentials_file
         self._discord_status = discord_status
+        self._discord_thread_id = discord_thread_id
         self._channel_label = archive_subdir or "채널"
 
         root = Path(__file__).parent.parent
@@ -93,7 +95,7 @@ class BatchRunner:
                 try:
                     from utils.status_reporter import DiscordStatusReporter
                     title = StoryParser(story_path).parse().raw_title or story_path.stem
-                    reporter = DiscordStatusReporter(title, self._channel_label)
+                    reporter = DiscordStatusReporter(title, self._channel_label, thread_id=self._discord_thread_id)
                 except Exception:
                     logger.exception("DiscordStatusReporter 초기화 실패")
 
