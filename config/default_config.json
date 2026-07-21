@@ -82,6 +82,7 @@
   "subtitle": {
     "font_name": "Malgun Gothic",
     "font_size": 76,
+    "font_size_shorts": 96,
     "font_color": "&H00FFFFFF",
     "outline_color": "&H00000000",
     "shadow_color": "&H80000000",
@@ -91,6 +92,7 @@
     "margin_v_shorts": 220,
     "margin_h": 40,
     "alignment": 2,
+    "alignment_shorts": 8,
     "bold": -1,
     "italic": 0,
     "encoding": "UTF-8",

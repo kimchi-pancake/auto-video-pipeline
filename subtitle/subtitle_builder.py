@@ -85,18 +85,21 @@ class SubtitleBuilder:
         is_portrait = video_height > video_width
 
         self._font_name    = config.get("font_name", "Arial")
-        self._font_size    = config.get("font_size", 76)
+        # 쇼츠(세로)는 화면이 훨씬 좁고 손에 가까이 보게 되는 만큼 자막을
+        # 더 크게 써야 잘 읽힙니다.
+        self._font_size    = config.get("font_size_shorts", 96) if is_portrait else config.get("font_size", 76)
         self._font_color   = config.get("font_color", "&H00FFFFFF")
         self._outline_color= config.get("outline_color", "&H00000000")
         self._shadow_color = config.get("shadow_color", "&H80000000")
         self._outline_w    = config.get("outline_width", 4)
         self._shadow_d     = config.get("shadow_depth", 2)
         # 쇼츠(세로)는 화면 하단에 유튜브 자체 UI(설명/좋아요/댓글 버튼 등)가
-        # 고정 픽셀 높이로 깔려서, 롱폼과 같은 margin_v를 쓰면 그 UI에 가려
-        # 자막이 안 보입니다 — 세로 영상은 훨씬 큰 여백을 기본값으로 씁니다.
+        # 고정 픽셀 높이로 깔려서, 롱폼과 같은 하단 배치를 쓰면 그 UI에 가려
+        # 자막이 안 보입니다 — 세로 영상은 화면 위쪽(alignment=8, 상단 중앙)에
+        # 자막을 놓습니다.
         self._margin_v     = config.get("margin_v_shorts", 220) if is_portrait else config.get("margin_v", 60)
         self._margin_h     = config.get("margin_h", 40)
-        self._alignment    = config.get("alignment", 2)
+        self._alignment    = config.get("alignment_shorts", 8) if is_portrait else config.get("alignment", 2)
         self._bold         = config.get("bold", -1)
         self._italic       = config.get("italic", 0)
 
