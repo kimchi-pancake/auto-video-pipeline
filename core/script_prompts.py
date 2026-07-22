@@ -299,44 +299,62 @@ _COMBO_LONG_ANCHOR = (
 _SHORTS_STANDALONE_ANCHOR = "형식은 반드시 아래와 똑같이 지켜줘 (콜론, 대괄호, & 기호 포함):"
 
 
-def _retry_hint_rules(reason: str) -> str:
-    return (
-        f"[재작성 경고] 방금 전 시도는 분량 기준 미달로 반려됐다 ({reason}).\n"
-        "같은 실수를 반복하지 마라 — [SCENE] 블록을 22개보다 확실히 더 여유 있게 쓰고,\n"
-        "각 씬의 나레이터 대사를 200자보다 눈에 띄게 길게(상황 설명+속마음+주변 묘사+대화를\n"
-        "섞어서) 써서, 이번에는 전체 대사 분량이 최소 기준을 넉넉히 넘기게 하라."
-    )
-
-
 def combo_script_prompt(
     custom_topic: str | None = None,
     forced_title: str | None = None,
     cta_settings: dict | None = None,
-    retry_hint: str | None = None,
 ) -> str:
     """COMBO_SCRIPT_PROMPT를 그대로 쓰거나,
     - custom_topic이 있으면 [주제] 섹션을 사용자가 지정한 주제로 바꿔치기하고
     - forced_title이 있으면 THUMBNAIL_LONG/THUMBNAIL_SHORTS 자리에 이미 골라둔
       제목을 그대로 쓰게 강제하고
-    - cta_settings가 있으면 구독 유도 문구 배치 지시를 롱폼 섹션 앞에 추가하고
-    - retry_hint(직전 실패 사유)가 있으면 롱폼 섹션 앞에 재작성 경고를 추가합니다.
-      (재생성 시도가 매번 같은 프롬프트로 "다시 굴리기"만 하면 분량 미달이 반복되기
-      쉬워서, 정확히 뭐가 부족했는지 알려주면 다음 시도가 첫 시도만에 통과할 확률이
-      높아지고, 그만큼 MAX_REGEN_ATTEMPTS를 다 채우는 비싼 재생성 횟수가 줄어듭니다.)"""
+    - cta_settings가 있으면 구독 유도 문구 배치 지시를 롱폼 섹션 앞에 추가합니다."""
     prompt = COMBO_SCRIPT_PROMPT
     if custom_topic:
         prompt = prompt.replace(_TOPIC_RULES, _topic_override_rules(custom_topic))
     if forced_title:
         prompt = prompt.replace(_TITLE_PLACEHOLDER, _forced_title_rules(forced_title))
     prompt = _apply_cta(prompt, cta_settings, _COMBO_LONG_ANCHOR)
-    if retry_hint:
-        prompt = prompt.replace(_COMBO_LONG_ANCHOR, f"{_retry_hint_rules(retry_hint)}\n\n{_COMBO_LONG_ANCHOR}")
     return prompt
 
 
 def shorts_script_prompt(cta_settings: dict | None = None) -> str:
     """SHORTS_SCRIPT_PROMPT에 cta_settings가 있으면 구독 유도 지시를 추가합니다."""
     return _apply_cta(SHORTS_SCRIPT_PROMPT, cta_settings, _SHORTS_STANDALONE_ANCHOR)
+
+
+def extend_long_script_prompt(current_long: str, reason: str) -> str:
+    """이미 만들어진 롱폼 대본이 분량 미달일 때, 처음부터 다시 쓰지 않고
+    "지금 있는 대본을 그대로 살려서 부족한 만큼만 늘려 써"라고 시키는 프롬프트.
+
+    처음부터 재생성하면 (1) 방금 나온 괜찮은 내용을 통째로 버리고 (2) 매번
+    같은 짧은 분량이 또 나올 확률이 높은데, 확장은 이미 3000자쯤 써둔 걸
+    기반으로 몇 씬만 더 붙이면 되니 목표치(4500자/22씬)를 한 번에 채울 확률이
+    훨씬 높고 토큰도 덜 듭니다(쇼츠는 건드리지 않고 롱폼만 다시 받음)."""
+    return f"""\
+{_PERSONA}
+
+아래는 방금 네가 쓴 유튜브 롱폼 사연 대본(story.txt)이다. 그런데 분량이
+부족해서({reason}) 8분짜리 영상으로 쓰기엔 너무 짧다.
+
+**이 대본을 처음부터 다시 쓰지 말고, 지금 내용을 100% 그대로 살린 채 분량만
+늘려라.** 기존 [SCENE] 블록과 대사는 그대로 유지하고:
+  - 중간중간 새로운 [SCENE] 블록을 추가해서 [SCENE] 총 개수가 22개 이상이 되게 하고,
+  - 기존 짧은 대사들은 상황 설명·속마음·주변 묘사·대화를 더 섞어 200자 이상으로 늘리고,
+  - 이야기의 흐름(주제, 등장인물, 결말)은 절대 바꾸지 마라.
+
+목표: 실제 낭독되는 나레이터 대사 총합이 최소 4500자 이상, [SCENE] 22개 이상.
+
+[출력 규칙]
+- 완성된 롱폼 story.txt "전체"를 처음부터 끝까지 다시 출력해라(늘어난 부분만 주지 마라).
+- RESOLUTION:/CATEGORY:/CAST:/BGM:/THUMBNAIL_LONG:/THUMBNAIL_SHORTS: 헤더와 형식은
+  원본과 똑같이 유지해라.
+- 쇼츠 대본이나 "{SPLIT_DELIMITER}" 구분선은 절대 넣지 마라. 롱폼 하나만 출력해라.
+- 설명이나 인사말 없이 story.txt 내용만 출력해라.
+
+--- 기존 대본 시작 ---
+{current_long}
+--- 기존 대본 끝 ---"""
 
 
 def topic_idea_prompt(performance_summary: str = "", recent_titles: list[str] | None = None) -> str:

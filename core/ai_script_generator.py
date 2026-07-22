@@ -34,6 +34,7 @@ from core.script_prompts import (
     SPLIT_DELIMITER,
     combo_script_prompt,
     shorts_script_prompt,
+    extend_long_script_prompt,
     script_score_prompt,
     title_candidates_prompt,
     topic_idea_prompt,
@@ -47,32 +48,34 @@ _ENV_PATH = Path(__file__).parent.parent / ".env"
 # 하루 여러 편씩 대량으로 뽑는 용도라 비용 우선으로 Haiku를 씁니다.
 MODEL = "claude-haiku-4-5"
 
-# 자동 검수 기준 미달 시 재생성을 시도할 최대 횟수 (첫 시도 포함하지 않음)
-# 원래 2였는데, 실제 운영 로그를 보면 Haiku가 이 프롬프트에서 내는 분량이
-# 거의 매번(첫 시도 기준 대부분) 2600~3800자 사이에 걸려서 재생성이 사실상
-# 매일 발생했고, 그마저도 재시도 1번으로 안 끝나고 2번째까지 자주 감 —
-# 재생성 한 번마다 콤보 생성+검수 API 비용이 통째로 다시 드는데, 재시도를
-# 2번까지 다 채우는 게 일상이 되면서 토큰 사용량이 정상 케이스의 3배 가까이
-# 뛰고 있었음(2026-07-20~22 daily.yml 로그로 확인). 1번으로 줄여서 최악의
-# 경우 비용을 2/3로 캡.
-MAX_REGEN_ATTEMPTS = 1
+# 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
+# 대본을 살린 채 부족한 만큼만 늘려 쓰기(extend)"를 시도할 최대 횟수.
+# 실측 로그(2026-07-19~22 daily.yml)상 Haiku 첫 초안은 거의 항상 2600~3800자에
+# 그쳐서 목표(4500자/22씬)에 못 미쳤는데, 처음부터 다시 쓰게 하면 (1) 방금 나온
+# 괜찮은 내용을 통째로 버리고 (2) 또 같은 짧은 분량이 나와 재생성만 반복됐음.
+# 확장은 이미 써둔 3000자쯤을 기반으로 몇 씬만 더 붙이면 되니 목표를 한 번에
+# 채울 확률이 훨씬 높고, 쇼츠는 다시 안 받으니 토큰도 덜 듦.
+MAX_EXTEND_ATTEMPTS = 2
+
+# hook/ending 점수가 크게 미달일 때만(드물게) 콤보를 통째로 다시 생성. 분량은
+# 위 extend로 해결하므로, 이 full regen은 "이야기 자체가 별로인" 경우 전용이라
+# 실제로는 거의 안 걸림 — 1번이면 충분.
+MAX_SCORE_REGEN_ATTEMPTS = 1
 MIN_HOOK_SCORE = 70
 MIN_ENDING_SCORE = 60
 
 # 자동 검수(hook/emotion/ending)는 "이야기가 좋은지"만 보고 "분량이 충분한지"는
 # 안 봅니다 — 점수는 높은데 씬이 20개/대사가 500자밖에 없는 식으로 8분 목표에
 # 한참 못 미치는 롱폼이 그냥 통과해버린 적이 있어서, 분량 자체도 별도로 검사합니다.
-# (LONG_SCRIPT_PROMPT 요구치: 22개 이상 씬, "대사" 4500자 이상 — 씬 개수는 약간의
-# 여유를 두고, 대사 글자수는 [SCENE:...] 영어 묘사를 뺀 실제 낭독 텍스트만 셉니다.
-# 전체 텍스트(장면 묘사 포함) 기준으로 쟀다가 씬 25개·전체 4200자인데 실제 대사는
-# 2100자뿐이라 TTS 낭독시간이 99초밖에 안 나온 사례가 있어서 이렇게 바꿈.)
-# 아래 두 기준도 실측 로그 기준으로 낮춤 — 3800자/18씬은 Haiku가 실제로 내는
-# 분량(대부분 2900~3400자, 16~17씬)보다 높게 잡혀 있어서 첫 시도가 통과하는
-# 경우가 거의 없었음. 3200자/16씬이면 여전히 과거 사고 사례(2100자짜리 99초
-# 영상)보다 확실히 여유 있게 위에 있으면서, 정상적으로 나오는 분량은 재생성
-# 없이 바로 통과시켜 비용을 줄임.
-MIN_LONG_SCENES = 16
-MIN_LONG_DIALOGUE_CHARS = 3200
+# 목표치는 LONG_SCRIPT_PROMPT 요구치(22씬/4500자)에 가깝게 높게 잡되(extend로
+# 채우니까 낮출 필요 없음), 확장 결과가 목표에 200~300자 못 미쳐도 한 번 더
+# 확장하느라 토큰을 더 쓰지 않도록 "수용 기준"은 살짝 아래(20씬/4000자)에 둠 —
+# 4000자면 실제 낭독 약 7분으로, 과거 사고 사례(2100자짜리 99초 영상)와는 확실히
+# 격이 다르게 충분한 분량임. 대사 글자수는 [SCENE:...] 영어 묘사를 뺀 실제 낭독
+# 텍스트만 셉니다(전체 4200자인데 실제 대사는 2100자뿐이라 99초밖에 안 나온
+# 사례가 있어서 이렇게 셈).
+MIN_LONG_SCENES = 20
+MIN_LONG_DIALOGUE_CHARS = 4000
 
 # ProgressCallback(done, total) — generate_daily_batch()가 API 호출 하나 끝날
 # 때마다 부릅니다. GUI에서 진행 상태 표시에 씁니다.
@@ -198,23 +201,26 @@ def generate_combo_script(
     custom_topic: str | None = None,
     forced_title: str | None = None,
     cta_settings: dict | None = None,
-    retry_hint: str | None = None,
 ) -> str:
-    """Claude API를 호출해서 롱폼+쇼츠 통합 대본 원문을 반환합니다.
-    retry_hint(직전 실패 사유)를 넘기면 그 내용을 프롬프트에 재작성 경고로
-    끼워 넣어, 재생성이 같은 실수를 반복해 MAX_REGEN_ATTEMPTS를 다 채우는
-    (=토큰 비용이 최대 3배로 뛰는) 상황을 줄입니다."""
+    """Claude API를 호출해서 롱폼+쇼츠 통합 대본 원문을 반환합니다."""
     logger.info(
-        "Claude API 콤보(롱폼+쇼츠) 대본 생성 요청 (topic=%s, title=%s, retry_hint=%s)",
-        custom_topic or "자동", forced_title or "자동", bool(retry_hint),
+        "Claude API 콤보(롱폼+쇼츠) 대본 생성 요청 (topic=%s, title=%s)",
+        custom_topic or "자동", forced_title or "자동",
     )
-    return _call_claude(combo_script_prompt(custom_topic, forced_title, cta_settings, retry_hint))
+    return _call_claude(combo_script_prompt(custom_topic, forced_title, cta_settings))
 
 
 def generate_shorts_only(cta_settings: dict | None = None) -> str:
-    """Claude API를 호출해서 쇼츠 대본 원문 하나만 반환합니다."""
+    """Claude API를 호출해서 쇼츠 단독 대본 원문 하나만 반환합니다."""
     logger.info("Claude API 쇼츠 단독 대본 생성 요청 시작")
     return _call_claude(shorts_script_prompt(cta_settings))
+
+
+def extend_long_script(current_long: str, reason: str) -> str:
+    """분량 미달인 롱폼 대본을 처음부터 다시 쓰지 않고, 지금 내용을 살린 채
+    부족한 만큼만 늘려서 다시 받아옵니다(쇼츠는 건드리지 않음)."""
+    logger.info("Claude API 롱폼 대본 확장 요청 (사유=%s)", reason)
+    return _call_claude(extend_long_script_prompt(current_long, reason))
 
 
 _RE_THUMBNAIL_LINE = re.compile(
@@ -274,6 +280,23 @@ def _dialogue_char_count(long_part: str) -> int:
 def _split_long_part(text: str) -> str:
     """콤보 응답에서 롱폼 부분만 잘라냅니다(쇼츠 부분 제외)."""
     return text.split(SPLIT_DELIMITER, 1)[0] if SPLIT_DELIMITER in text else text
+
+
+def _split_combo(text: str) -> tuple[str, str]:
+    """콤보 응답을 (롱폼, 쇼츠꼬리) 로 나눕니다. 쇼츠꼬리는 구분선 이후 전체를
+    구분선 포함해서 그대로 담고 있어서, 롱폼만 확장한 뒤 다시 이어붙이면 원래
+    콤보 형식이 그대로 복원됩니다. 구분선이 없으면 쇼츠꼬리는 빈 문자열."""
+    if SPLIT_DELIMITER in text:
+        long_part, _, shorts_rest = text.partition(SPLIT_DELIMITER)
+        return long_part.rstrip(), SPLIT_DELIMITER + shorts_rest
+    return text, ""
+
+
+def _stitch_combo(long_part: str, shorts_tail: str) -> str:
+    """확장된 롱폼과 원래 쇼츠꼬리를 다시 콤보 형식으로 붙입니다."""
+    if not shorts_tail:
+        return long_part
+    return f"{long_part.rstrip()}\n\n{shorts_tail}"
 
 
 def _long_form_length_ok(text: str) -> tuple[bool, str]:
@@ -369,29 +392,35 @@ def generate_optimized_script(
     best_title, candidates = pick_best_title(topic)
     cta = get_cta_settings(channel) if channel else None
 
-    text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
-    text = _force_thumbnail_titles(text, best_title)
-    length_ok, length_reason = _long_form_length_ok(text)
-    # 분량이 이미 미달이면 어차피 재생성하니, 이번 초안을 채점해봤자 결과가
-    # 버려집니다 — score_script 호출(입력 수천 토큰)을 아껴서 통과한 초안만 채점.
-    scores = score_script(_split_long_part(text)) if length_ok else {}
+    # 1) 콤보 생성 → 롱폼이 짧으면 "처음부터 다시"가 아니라 "지금 걸 늘려서"
+    #    목표 분량을 채웁니다(extend). 쇼츠 부분은 건드리지 않고 롱폼만 확장.
+    text, long_part, length_ok, length_reason, extends = _extend_to_length(
+        generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta),
+        best_title,
+    )
+    # 2) 분량이 확보된 롱폼만 채점(쇼츠 제외 = 입력 토큰 절약). 분량 미달로
+    #    끝난 경우엔 어차피 최선을 다한 결과라 굳이 채점하지 않습니다.
+    scores = score_script(long_part) if length_ok else {}
 
-    attempts = 1
+    # 3) hook/ending 점수가 크게 미달인 경우에만(드물게) 콤보를 통째로 다시
+    #    생성. 이 경로도 재생성 후 다시 확장까지 태워 분량을 보장합니다.
+    score_regens = 0
     while (
-        attempts <= MAX_REGEN_ATTEMPTS
-        and (
-            not length_ok
-            or (scores and (scores.get("hook", 100) < MIN_HOOK_SCORE or scores.get("ending", 100) < MIN_ENDING_SCORE))
-        )
+        scores
+        and (scores.get("hook", 100) < MIN_HOOK_SCORE or scores.get("ending", 100) < MIN_ENDING_SCORE)
+        and score_regens < MAX_SCORE_REGEN_ATTEMPTS
     ):
-        reason = length_reason if not length_ok else f"hook={scores.get('hook')}, ending={scores.get('ending')}"
-        logger.warning("검수 기준 미달(%s) — 재생성 시도 %d/%d", reason, attempts, MAX_REGEN_ATTEMPTS)
-        retry_hint = length_reason if not length_ok else None
-        text = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta, retry_hint=retry_hint)
-        text = _force_thumbnail_titles(text, best_title)
-        length_ok, length_reason = _long_form_length_ok(text)
-        scores = score_script(_split_long_part(text)) if length_ok else {}
-        attempts += 1
+        logger.warning(
+            "검수 점수 미달(hook=%s, ending=%s) — 재생성 %d/%d",
+            scores.get("hook"), scores.get("ending"), score_regens + 1, MAX_SCORE_REGEN_ATTEMPTS,
+        )
+        text, long_part, length_ok, length_reason, ext = _extend_to_length(
+            generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta),
+            best_title,
+        )
+        extends += ext
+        scores = score_script(long_part) if length_ok else {}
+        score_regens += 1
 
     meta = {
         "topic": topic,
@@ -399,9 +428,26 @@ def generate_optimized_script(
         "title": best_title,
         "title_candidates": candidates,
         "scores": scores,
-        "attempts": attempts,
+        "extends": extends,
+        "score_regens": score_regens,
     }
     return text, meta
+
+
+def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, int]:
+    """콤보 응답을 받아 제목을 강제 교정하고, 롱폼이 분량 미달이면 목표를
+    채울 때까지(또는 MAX_EXTEND_ATTEMPTS 도달까지) 롱폼만 확장한 뒤,
+    (재조립된 콤보 텍스트, 롱폼 부분, 분량통과여부, 미달사유, 확장횟수)를 반환합니다."""
+    text = _force_thumbnail_titles(text, best_title)
+    long_part, shorts_tail = _split_combo(text)
+    length_ok, reason = _long_form_length_ok(long_part)
+    extends = 0
+    while not length_ok and extends < MAX_EXTEND_ATTEMPTS:
+        logger.warning("롱폼 분량 미달(%s) — 확장 %d/%d", reason, extends + 1, MAX_EXTEND_ATTEMPTS)
+        long_part = _force_thumbnail_titles(extend_long_script(long_part, reason), best_title)
+        length_ok, reason = _long_form_length_ok(long_part)
+        extends += 1
+    return _stitch_combo(long_part, shorts_tail), long_part, length_ok, reason, extends
 
 
 def generate_and_save(
