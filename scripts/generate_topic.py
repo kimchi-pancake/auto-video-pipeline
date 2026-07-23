@@ -92,12 +92,8 @@ def main() -> int:
         notify_discord(f"🔴 [{args.channel}] 대본 생성 실패 — {e}")
         return 1
 
-    scores = meta.get("scores") or {}
-    if scores:
-        notify_discord(
-            f"📝 [{args.channel}] 대본 준비됨 — \"{meta.get('title')}\"\n"
-            f"후킹 {scores.get('hook', '?')} · 감정 {scores.get('emotion', '?')} · 결말 {scores.get('ending', '?')}"
-        )
+    if meta.get("title"):
+        notify_discord(f"📝 [{args.channel}] 대본 준비됨 — \"{meta.get('title')}\"")
     logger.info("generate_topic: '%s' 대본 %d개 저장 — 영상 제작+업로드 시작", args.channel, len(saved))
 
     default_privacy = cfg.get("youtube.default_privacy", "private")

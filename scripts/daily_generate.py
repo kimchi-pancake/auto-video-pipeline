@@ -112,12 +112,11 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             saved = generate_daily_batch(input_dir, custom_topic=topic, channel=name, meta_out=meta_list)
             logger.info("daily_generate: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             for meta in meta_list:
-                scores = meta.get("scores") or {}
-                score_str = (
-                    f"후킹 {scores.get('hook', '?')} · 감정 {scores.get('emotion', '?')} · 결말 {scores.get('ending', '?')}"
-                    if scores else "검수 점수 없음"
+                logger.info(
+                    "daily_generate: '%s' 대본 — 제목 \"%s\" · 확장 %s회 · 분량기준 %s",
+                    name, meta.get("title", "?"), meta.get("extends", 0),
+                    "충족" if meta.get("length_ok") else "미달",
                 )
-                logger.info("daily_generate: '%s' 대본 점수 — %s", name, score_str)
             ok_channels += 1
             saved_total += len(saved)
             state[name] = today

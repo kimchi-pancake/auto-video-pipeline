@@ -35,7 +35,6 @@ from core.script_prompts import (
     combo_script_prompt,
     shorts_script_prompt,
     extend_long_script_prompt,
-    script_score_prompt,
     title_candidates_prompt,
     topic_idea_prompt,
 )
@@ -57,16 +56,14 @@ MODEL = "claude-haiku-4-5"
 # 채울 확률이 훨씬 높고, 쇼츠는 다시 안 받으니 토큰도 덜 듦.
 MAX_EXTEND_ATTEMPTS = 2
 
-# hook/ending 점수가 크게 미달일 때만(드물게) 콤보를 통째로 다시 생성. 분량은
-# 위 extend로 해결하므로, 이 full regen은 "이야기 자체가 별로인" 경우 전용이라
-# 실제로는 거의 안 걸림 — 1번이면 충분.
-MAX_SCORE_REGEN_ATTEMPTS = 1
-MIN_HOOK_SCORE = 70
-MIN_ENDING_SCORE = 60
+# (과거엔 hook/emotion/ending을 Claude로 채점하는 자동 검수(score_script)가 있었지만,
+#  실제로 판단에 쓰이는 값은 hook/ending 2개뿐이고 그마저 재생성이 거의 안 걸렸던 반면
+#  채점 호출은 입력 수천 토큰을 매번 먹어서, 토큰 대비 실효성이 없어 통째로 제거함.
+#  대본 품질은 프롬프트(사이다 구조/시청 유지 장치)와 아래 분량 검사로 담보함.)
 
-# 자동 검수(hook/emotion/ending)는 "이야기가 좋은지"만 보고 "분량이 충분한지"는
-# 안 봅니다 — 점수는 높은데 씬이 20개/대사가 500자밖에 없는 식으로 8분 목표에
-# 한참 못 미치는 롱폼이 그냥 통과해버린 적이 있어서, 분량 자체도 별도로 검사합니다.
+# 분량 검사: 점수와 무관하게 "너무 짧게 써서 8분 목표를 못 채우는" 경우를 잡습니다 —
+# 씬이 20개여도 대사가 500자밖에 없어 낭독 시간이 한참 모자란 롱폼을 걸러내려고
+# 실제 대사 글자수/씬 개수를 직접 셉니다.
 # 목표치는 LONG_SCRIPT_PROMPT 요구치(22씬/4500자)에 가깝게 높게 잡되(extend로
 # 채우니까 낮출 필요 없음), 확장 결과가 목표에 200~300자 못 미쳐도 한 번 더
 # 확장하느라 토큰을 더 쓰지 않도록 "수용 기준"은 살짝 아래(20씬/4000자)에 둠 —
@@ -301,9 +298,8 @@ def _stitch_combo(long_part: str, shorts_tail: str) -> str:
 
 def _long_form_length_ok(text: str) -> tuple[bool, str]:
     """콤보 응답의 롱폼 부분이 최소 분량(씬 개수/실제 대사 글자수)을 채웠는지
-    확인합니다. 부족하면 (False, 이유)를 반환 — score_script의 이야기 품질
-    점수와는 별개로 "너무 짧게 써서 8분 목표를 못 채우는" 케이스를 잡아내기
-    위한 검사입니다."""
+    확인합니다. 부족하면 (False, 이유)를 반환 — "너무 짧게 써서 8분 목표를 못
+    채우는" 케이스를 잡아내기 위한 검사입니다."""
     long_part = _split_long_part(text)
     scene_count = long_part.count("[SCENE:")
     dialogue_chars = _dialogue_char_count(long_part)
@@ -314,21 +310,6 @@ def _long_form_length_ok(text: str) -> tuple[bool, str]:
     return True, ""
 
 
-def score_script(script_text: str) -> dict:
-    """{"hook": int, "emotion": int, "ending": int, "dropout_risk": str, "cta_excess": bool}."""
-    logger.info("Claude API 대본 자동 검수 요청")
-    text = _call_claude(script_score_prompt(script_text))
-    try:
-        scores = _parse_json_response(text)
-    except (json.JSONDecodeError, ValueError) as e:
-        logger.warning("검수 응답 파싱 실패, 검수 없이 통과 처리: %s", e)
-        return {}
-    logger.info(
-        "검수 결과: hook=%s emotion=%s ending=%s dropout_risk=%s cta_excess=%s",
-        scores.get("hook"), scores.get("emotion"), scores.get("ending"),
-        scores.get("dropout_risk"), scores.get("cta_excess"),
-    )
-    return scores
 
 
 # ─────────────────────────────────────────────
@@ -392,44 +373,22 @@ def generate_optimized_script(
     best_title, candidates = pick_best_title(topic)
     cta = get_cta_settings(channel) if channel else None
 
-    # 1) 콤보 생성 → 롱폼이 짧으면 "처음부터 다시"가 아니라 "지금 걸 늘려서"
-    #    목표 분량을 채웁니다(extend). 쇼츠 부분은 건드리지 않고 롱폼만 확장.
+    # 콤보 생성 → 롱폼이 짧으면 "처음부터 다시"가 아니라 "지금 걸 늘려서" 목표
+    # 분량을 채웁니다(extend). 쇼츠 부분은 건드리지 않고 롱폼만 확장.
+    # (품질 채점(score_script)은 토큰 대비 실효성이 없어 제거 — 대본 품질은
+    #  프롬프트와 이 분량 검사로 담보하고, Claude 추가 호출은 하지 않습니다.)
     text, long_part, length_ok, length_reason, extends = _extend_to_length(
         generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta),
         best_title,
     )
-    # 2) 분량이 확보된 롱폼만 채점(쇼츠 제외 = 입력 토큰 절약). 분량 미달로
-    #    끝난 경우엔 어차피 최선을 다한 결과라 굳이 채점하지 않습니다.
-    scores = score_script(long_part) if length_ok else {}
-
-    # 3) hook/ending 점수가 크게 미달인 경우에만(드물게) 콤보를 통째로 다시
-    #    생성. 이 경로도 재생성 후 다시 확장까지 태워 분량을 보장합니다.
-    score_regens = 0
-    while (
-        scores
-        and (scores.get("hook", 100) < MIN_HOOK_SCORE or scores.get("ending", 100) < MIN_ENDING_SCORE)
-        and score_regens < MAX_SCORE_REGEN_ATTEMPTS
-    ):
-        logger.warning(
-            "검수 점수 미달(hook=%s, ending=%s) — 재생성 %d/%d",
-            scores.get("hook"), scores.get("ending"), score_regens + 1, MAX_SCORE_REGEN_ATTEMPTS,
-        )
-        text, long_part, length_ok, length_reason, ext = _extend_to_length(
-            generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta),
-            best_title,
-        )
-        extends += ext
-        scores = score_script(long_part) if length_ok else {}
-        score_regens += 1
 
     meta = {
         "topic": topic,
         "category_hint": category_hint,
         "title": best_title,
         "title_candidates": candidates,
-        "scores": scores,
         "extends": extends,
-        "score_regens": score_regens,
+        "length_ok": length_ok,
     }
     return text, meta
 
