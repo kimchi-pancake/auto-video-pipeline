@@ -8,6 +8,7 @@ OAuth2 인증, 예약 업로드, 썸네일 설정을 지원합니다.
 from __future__ import annotations
 
 import os
+import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -65,6 +66,19 @@ class YouTubeUploader:
     # 인증
     # ─────────────────────────────────────────
 
+    @staticmethod
+    def _is_headless() -> bool:
+        """브라우저를 띄울 수 없는 무인 환경인지 판단합니다.
+        GitHub Actions/CI는 CI·GITHUB_ACTIONS 환경변수로, 그 외 서버는
+        DISPLAY(리눅스 X11) 부재로 감지합니다. 로컬 GUI(Windows/맥)에서는
+        평소처럼 대화형 브라우저 인증이 되도록 여기서 False를 반환합니다."""
+        if os.environ.get("CI") or os.environ.get("GITHUB_ACTIONS"):
+            return True
+        # 리눅스인데 X 디스플레이가 없으면 헤드리스. Windows/맥은 os.name으로 제외.
+        if os.name == "posix" and sys.platform.startswith("linux") and not os.environ.get("DISPLAY"):
+            return True
+        return False
+
     def authenticate(self) -> bool:
         """OAuth2 인증을 수행합니다. 자격증명을 캐시합니다."""
         creds = None
@@ -76,15 +90,37 @@ class YouTubeUploader:
             except Exception as e:
                 logger.warning("Failed to load cached credentials: %s", e)
 
+        refresh_error: str | None = None
         if creds and creds.expired and creds.refresh_token:
             try:
                 creds.refresh(Request())
                 logger.info("YouTube credentials refreshed.")
             except Exception as e:
                 logger.warning("Credentials refresh failed: %s", e)
+                refresh_error = str(e)
                 creds = None
 
         if not creds or not creds.valid:
+            # 헤드리스(GitHub Actions/서버)에서는 브라우저를 띄우는 대화형 OAuth
+            # 인증(run_local_server)을 할 수 없습니다. 그냥 두면 webbrowser가
+            # "could not locate runnable browser"로 죽고, 그 알쏭달쏭한 메시지가
+            # 그대로 디스코드에 올라와 원인 파악이 어려웠습니다 — 여기서 자격증명
+            # 문제임을 분명히 알리고 깔끔하게 실패시킵니다.
+            #   * refresh_error에 'deleted_client'가 담기면 구글 클라우드의 OAuth
+            #     클라이언트 자체가 삭제된 것 → 클라이언트 재생성 후 재인증 필요.
+            #   * 그 외(invalid_grant 등)면 리프레시 토큰 만료/취소 → 재인증 필요.
+            if self._is_headless():
+                hint = (
+                    "구글 OAuth 클라이언트가 삭제됨(deleted_client) — Google Cloud Console에서 "
+                    "OAuth 클라이언트를 다시 만들고 두 채널을 재인증해야 합니다."
+                    if refresh_error and "deleted_client" in refresh_error
+                    else "리프레시 토큰이 만료/취소됨 — 로컬에서 재인증 후 credentials를 갱신해야 합니다."
+                )
+                raise RuntimeError(
+                    f"YouTube 자격증명 무효({self._creds_file}). 헤드리스 환경에서는 "
+                    f"브라우저 인증을 할 수 없습니다. {hint}"
+                    + (f" (원인: {refresh_error})" if refresh_error else "")
+                )
             secrets = Path(self._secrets_file)
             if not secrets.exists():
                 logger.error(

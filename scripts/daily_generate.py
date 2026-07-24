@@ -237,6 +237,25 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
         notify_discord(f"🔴 [{name}] {kind} 영상 생성 자체가 실패 — {title}\n사유: {result.error or '알 수 없는 오류'}", thread_id=thread_id)
 
 
+def _preflight_youtube_auth(cfg, chan, logger) -> tuple[bool, str]:
+    """렌더링을 시작하기 전에 채널의 유튜브 자격증명이 유효한지 확인합니다.
+    (성공 여부, 실패 사유)를 반환. 무거운 작업(build 이후)은 하지 않고
+    토큰 리프레시까지만 검증합니다."""
+    from youtube.youtube_uploader import YouTubeUploader
+
+    yt_cfg = cfg.section("youtube")
+    cred_file = chan.get("credentials_file", "")
+    if cred_file:
+        yt_cfg["credentials_file"] = cred_file
+    try:
+        uploader = YouTubeUploader(yt_cfg)
+        if uploader.authenticate():
+            return True, ""
+        return False, "자격증명을 불러오지 못했습니다(파일 없음/형식 오류)."
+    except Exception as e:
+        return False, str(e)
+
+
 def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     """채널 하나의 대기열을 처리합니다. (성공 개수, 실패 개수)를 반환."""
     name = chan.get("name") or "(이름없음)"
@@ -258,6 +277,20 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     if not input_paths:
         logger.info("daily_generate: '%s' 처리할 대기 파일 없음", name)
         return 0, 0
+
+    # 사전 인증 점검: 유튜브 자격증명이 죽어 있으면(리프레시 실패/클라이언트 삭제)
+    # 어차피 모든 업로드가 실패합니다. 그런데 업로드는 각 영상을 1시간 가까이
+    # 렌더링한 "뒤"에야 시도되므로, 죽은 자격증명으로 채널당 3편을 통째로
+    # 렌더링하고 나서야 전부 실패하는 낭비(런너 시간·토큰)가 발생합니다 —
+    # 렌더 시작 전에 인증을 한 번 확인해서, 죽어 있으면 채널을 통째로 건너뜁니다.
+    ok, auth_err = _preflight_youtube_auth(cfg, chan, logger)
+    if not ok:
+        logger.error("daily_generate: '%s' 유튜브 인증 실패 — 채널 건너뜀: %s", name, auth_err)
+        notify_discord(
+            f"🔴 [{name}] 유튜브 인증이 만료돼 업로드를 못 합니다 — 재인증 필요.\n{auth_err}\n"
+            f"({len(input_paths)}편은 렌더링하지 않고 대기열에 그대로 둡니다.)"
+        )
+        return 0, len(input_paths)
 
     today_str = date.today().isoformat()
     thread_id = notify_discord_create_thread(f"{name} {today_str}")
