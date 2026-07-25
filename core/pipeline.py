@@ -16,7 +16,7 @@ from typing import Callable, List, Optional
 
 from image.image_generator import ImageGenerator, ImageResult
 from image.thumbnail_generator import ThumbnailGenerator
-from parser.story_parser import StoryParser, StoryData
+from parser.story_parser import StoryParser, StoryData, Scene, DialogueLine
 from subtitle.subtitle_builder import SubtitleBuilder
 from tts.tts_builder import TTSBuilder, SceneAudio
 from utils.config_manager import ConfigManager
@@ -165,6 +165,27 @@ class Pipeline:
                 )
                 also_make_shorts = False
 
+            # ── 인트로: "제목만 큼직하게 보여주며 읽어주는" 타이틀 카드 씬을
+            # 맨 앞에 끼워 넣습니다 — 후킹을 이야기 전개가 아니라 자극적인
+            # 제목 자체로 거는 방식(2026-07-25 결정). TTS/자막은 일반 씬과
+            # 완전히 동일한 경로를 타므로(합성 텍스트가 하나 늘어난 것뿐)
+            # 손댈 게 없고, 이미지만 Pixabay 검색 대신 전용 타이틀 카드를
+            # 씁니다(stage_images에서 처리).
+            intro_title = (story.raw_title or "").strip()
+            has_intro = bool(intro_title) and bool(story.scenes)
+            if has_intro:
+                for s in story.scenes:
+                    s.index += 1
+                story.scenes.insert(0, Scene(
+                    index=0,
+                    prompt="",
+                    resolution=None,
+                    dialogues=[DialogueLine(
+                        speaker="나레이터", display_name="나레이터",
+                        text=intro_title, segments=[intro_title], line_index=0,
+                    )],
+                ))
+
             # 런 디렉터리 생성
             safe_title = sanitize_filename(story.raw_title or "video", 50)
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -202,7 +223,19 @@ class Pipeline:
             def stage_images():
                 self._emit(2, 0, len(story.scenes), "이미지 생성 중...")
                 t0 = time.time()
-                ctx["image_results"] = self._run_images(story, temp / "images")
+                real_scenes = story.scenes[1:] if has_intro else story.scenes
+                real_images = self._run_images(real_scenes, story.photo_files, temp / "images")
+                if has_intro:
+                    title_card = self._build_title_card(intro_title, temp / "images")
+                    intro_image = ImageResult(
+                        scene_index=0,
+                        image_path=str(title_card) if title_card else None,
+                        prompt="title_card",
+                        success=bool(title_card),
+                    )
+                    ctx["image_results"] = [intro_image] + real_images
+                else:
+                    ctx["image_results"] = real_images
                 stage_times["images"] = time.time() - t0
 
             def stage_subtitles():
@@ -390,7 +423,9 @@ class Pipeline:
         )
         return builder.build(story)
 
-    def _run_images(self, story: StoryData, temp: Path) -> List[ImageResult]:
+    def _run_images(
+        self, scenes: List[Scene], photo_files: Optional[List[str]], temp: Path
+    ) -> List[ImageResult]:
         def cb(done, total, idx):
             self._emit(2, done, total, f"이미지 {done}/{total}")
 
@@ -400,10 +435,24 @@ class Pipeline:
             progress_callback=cb,
         )
         return gen.generate_all(
-            scenes=story.scenes,
-            photo_files=story.photo_files if story.photo_files else None,
+            scenes=scenes,
+            photo_files=photo_files or None,
             photo_base_dir=self._photo_dir,
         )
+
+    def _build_title_card(self, title: str, temp: Path) -> Optional[Path]:
+        """인트로 씬(맨 앞 타이틀 카드)에 쓸 이미지를 만듭니다. 순수 로컬
+        렌더링(Pillow)이라 실패 가능성이 낮지만, 혹시 실패해도 파이프라인
+        전체를 죽이지 않고 None을 반환해 검은 화면으로 대체되게 합니다
+        (video_composer의 기존 폴백)."""
+        width = self._cfg.get("video.width", 1920)
+        height = self._cfg.get("video.height", 1080)
+        gen = ThumbnailGenerator(self._cfg.section("thumbnail"), self._assets_dir)
+        try:
+            return gen.generate_title_card(title, width, height, temp)
+        except Exception:
+            logger.exception("타이틀 카드 생성 실패 — 검은 화면으로 대체됩니다")
+            return None
 
     def _run_subtitles(
         self, scene_audios: List[SceneAudio], temp: Path

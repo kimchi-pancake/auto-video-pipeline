@@ -68,6 +68,25 @@ class ThumbnailGenerator:
         out = Path(output_dir) / "thumbnail_shorts.jpg"
         return self._generate(info, out, self._shorts_w, self._shorts_h, self._font_size_shorts, bg_image_path)
 
+    def generate_title_card(
+        self,
+        title: str,
+        width: int,
+        height: int,
+        output_dir: str | Path,
+        filename: str = "title_card.jpg",
+    ) -> Optional[Path]:
+        """영상 맨 앞에 붙는 인트로 "제목 카드" 이미지를 만듭니다 — 유튜브
+        썸네일과 달리 실제 영상 해상도(width x height)에 맞춰서 만들어야
+        영상 합성 시 크롭 없이 그대로 씁니다. 검은 배경 위에 제목 텍스트만
+        큼직하게 얹는 걸로 충분해서 배경 사진은 안 씁니다."""
+        out = Path(output_dir) / filename
+        font_size = max(48, int(width * 0.09))
+        return self._generate(
+            ThumbnailInfo(image_path="", title_text=title),
+            out, width, height, font_size, bg_image_path=None,
+        )
+
     # ─────────────────────────────────────────
     # 내부 구현
     # ─────────────────────────────────────────
