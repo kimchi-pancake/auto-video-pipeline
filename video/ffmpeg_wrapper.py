@@ -31,9 +31,16 @@ class FFmpegWrapper:
     def run(self, args: List[str], capture: bool = False) -> subprocess.CompletedProcess:
         cmd = [self._ffmpeg, "-y", "-loglevel", "error"] + args
         logger.debug("FFmpeg: %s", " ".join(cmd))
+        # capture_output은 모든 호출부가 항상 stderr를 캡처하도록 True로 고정합니다.
+        # -loglevel error 라서 표준출력에 실제 미디어 데이터가 안 섞이니 캡처해도
+        # 안전합니다. 예전에는 이 인자가 그대로 전달돼서 대부분의 호출이 stderr를
+        # 안 받아왔고, 그 결과 실패해도 진짜 원인 없이 "(no stderr)"로만 로깅되는
+        # 문제가 실제로 있었습니다(2026-07-25 웃짬 채널 영상 2개가 rc=254로 3번
+        # 다 실패했는데 원인을 하나도 못 봄). `capture` 인자는 호환을 위해 남겨
+        # 두되 내부적으로는 강제로 True를 씁니다.
         result = subprocess.run(
             cmd,
-            capture_output=capture,
+            capture_output=True,
             text=True,
             encoding="utf-8",
             errors="replace",
