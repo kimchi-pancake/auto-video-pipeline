@@ -37,6 +37,10 @@ from core.topic_queue import pop_topic
 from core.video_registry import record_upload
 from utils.soft_approval import is_rejected, publish_video, schedule_publish, sleep_until
 
+# 모듈 레벨 로거. _lock_in_schedule는 threading.Thread의 target으로 직접
+# 호출되는(main()의 지역 logger를 인자로 못 넘기는) 함수라 따로 필요합니다.
+_module_logger = get_logger(__name__)
+
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
 _STATE_PATH = ROOT / "config" / "daily_generate_state.json"
@@ -136,8 +140,21 @@ def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: st
     않습니다(과거에 이 로직이 다음날로 미루다가, GitHub Actions 잡의
     350분 타임아웃보다 오래 자야 해서 예약이 영영 안 걸린 채로 죽는 사고가
     있었습니다) — 대신 lock_at은 "이미 지났으면 지금 바로", publish_at도
-    "이미 지났으면 예약 대신 즉시 공개"로 처리합니다."""
-    sleep_until(lock_at)
+    "이미 지났으면 예약 대신 즉시 공개"로 처리합니다.
+
+    lock_at 자체가 CI 타임아웃 예산을 넘을 만큼 멀면(예: 이른 시각에 수동
+    트리거해서 review_lock까지 몇 시간씩 남은 경우) 그 시각까지 다 기다리지
+    않고 예산 한도에서 앞당겨 lock-in합니다 — 거절 창은 줄어들지만, 예약
+    자체가 통째로 유실되는 것보다는 훨씬 낫습니다."""
+    deadline = _JOB_STARTED_AT + timedelta(minutes=_JOB_LOCK_IN_BUDGET_MINUTES)
+    safe_lock_at = min(lock_at, deadline)
+    if safe_lock_at < lock_at:
+        _module_logger.warning(
+            "daily_generate: '%s' review_lock(%s)까지 다 기다리면 CI 타임아웃을 넘길 것 "
+            "같아 %s로 앞당겨 lock-in합니다(거절 창 축소)",
+            name, lock_at.isoformat(), safe_lock_at.isoformat(),
+        )
+    sleep_until(safe_lock_at)
     if is_rejected(video_id):
         notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}", thread_id=thread_id)
         return
@@ -170,6 +187,17 @@ def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: st
 # 걸리는) 일을 막습니다.
 _pending_lock_threads: list = []
 _pending_lock_lock = threading.Lock()
+
+# GitHub Actions job의 timeout-minutes(daily.yml, 350분)을 넘기면 프로세스가
+# 강제종료되면서 그 시점에 sleep_until(lock_at)로 대기 중이던 스레드가 통째로
+# 죽어 스케줄링이 영영 안 걸립니다 — 2026-07-25 사고: 오전에 수동 트리거해서
+# review_lock까지 대기시간이 거의 10시간이 됐고, 5시간50분 타임아웃에 걸려
+# 강제종료되면서 그날 업로드된 영상 4개가 전부 예약 안 걸린 채 비공개로
+# 방치됨. "거절 창을 최대한 보장"하는 것보다 "예약이 아예 안 걸리는 것"이
+# 훨씬 나쁘므로, 대기시간이 안전 예산을 넘으면 거절 창을 줄여서라도(0분까지
+# 줄어들 수 있음) 반드시 lock-in을 완료시킵니다.
+_JOB_STARTED_AT = datetime.now(pytz.utc)
+_JOB_LOCK_IN_BUDGET_MINUTES = 300  # daily.yml timeout-minutes(350)보다 50분 여유
 
 
 def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path: str, result, counters: dict, logger, thread_id: str | None = None) -> None:
