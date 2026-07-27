@@ -526,5 +526,65 @@
     "uploaded_at": "2026-07-26T09:08:34+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "m7TaxAIivzk",
+    "channel": "도개",
+    "category": "부모자식갈등",
+    "title": "서울대 나온 딸이 시골에서 장사하겠대요. 아버지가 40년간 강요한 것의 정체는?",
+    "is_shorts": false,
+    "uploaded_at": "2026-07-27T08:25:36+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "RvkNKXwCq3U",
+    "channel": "웃짬",
+    "category": "형제유산",
+    "title": "아버지 관 앞에서 둘째가 외친 말, 형제가 깨졌다",
+    "is_shorts": false,
+    "uploaded_at": "2026-07-27T08:36:12+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "JKkpJaEoMJE",
+    "channel": "도개",
+    "category": "부모자식갈등",
+    "title": "서울대 나온 딸이 시골에서 장사하겠대요. 아버지가 40년간 강요한 것의 정체는?",
+    "is_shorts": true,
+    "uploaded_at": "2026-07-27T08:41:07+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "crU5eh8t8Dk",
+    "channel": "웃짬",
+    "category": "형제유산",
+    "title": "아버지 관 앞에서 둘째가 외친 말, 형제가 깨졌다",
+    "is_shorts": true,
+    "uploaded_at": "2026-07-27T08:52:33+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "CAOdg-SxTJw",
+    "channel": "도개",
+    "category": "부모자식갈등",
+    "title": "\"아버지, 이제 연락 마세요\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-07-27T09:02:44+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KQQTdgu7mZE",
+    "channel": "웃짬",
+    "category": "손주문제",
+    "title": "손주 학원비 100만 원, 며느리가 뺏어갔다",
+    "is_shorts": true,
+    "uploaded_at": "2026-07-27T09:08:24+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
