@@ -184,6 +184,12 @@ class FFmpegWrapper:
             vf = f"scale={width}:{height}:force_original_aspect_ratio=decrease,"
             vf += f"pad={width}:{height}:(ow-iw)/2:(oh-ih)/2"
 
+        # preset=ultrafast/crf=23: 이 출력은 concat_videos()가 크로스페이드로
+        # 다시 읽어서 재인코딩하는 중간산출물이라(아무도 직접 안 봄), 최종
+        # 화질(burn_subtitles의 preset/crf, config 기준)과 무관하게 최대한
+        # 빨리 뽑는 게 이득입니다. 실측(2026-07-28): 8초 클립 기준 preset=fast
+        # 대비 약 44% 빠름. 롱폼은 씬마다(20개 이상) 이 인코딩이 반복되므로
+        # GitHub Actions 러너 시간(=과금) 절감 효과가 씬 수만큼 누적됩니다.
         self.run([
             "-loop", "1",
             "-i", image_path,
@@ -192,8 +198,8 @@ class FFmpegWrapper:
             "-r", str(fps),
             "-pix_fmt", "yuv420p",
             "-c:v", "libx264",
-            "-preset", "fast",
-            "-crf", "18",
+            "-preset", "ultrafast",
+            "-crf", "23",
             output,
         ])
 
@@ -231,13 +237,16 @@ class FFmpegWrapper:
             cumulative = offset + durations[i]
 
         filter_chain = ";".join(filter_parts)
+        # image_to_video()와 같은 이유로 preset=ultrafast/crf=23 — 이 출력
+        # (silent_video.mp4)도 BGM 믹싱 후 burn_subtitles()에서 최종 화질로
+        # 다시 인코딩되는 중간산출물입니다.
         self.run(input_args + [
             "-filter_complex", filter_chain,
             "-map", "[vout]",
             "-pix_fmt", "yuv420p",
             "-c:v", "libx264",
-            "-preset", "fast",
-            "-crf", "18",
+            "-preset", "ultrafast",
+            "-crf", "23",
             output,
         ])
 
