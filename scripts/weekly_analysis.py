@@ -58,32 +58,39 @@ def main() -> int:
             report_lines.append(f"⚠️ [{name}] 지표 수집 실패 — {e}")
             continue
 
-        ranking = category_retention_stats(name, metrics)
+        ranking = category_retention_stats(name, metrics)  # {"long":[...], "shorts":[...]}
         result[name] = {
             "computed_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-            "categories": ranking,
+            "long": ranking.get("long", []),
+            "shorts": ranking.get("shorts", []),
         }
 
-        if not ranking:
+        if not ranking.get("long") and not ranking.get("shorts"):
             report_lines.append(f"[{name}] 분석할 데이터 없음(신규 채널이거나 최근 조회수 없음)")
             continue
 
-        top = ranking[:3]
-        bottom = ranking[-3:] if len(ranking) > 3 else []
         report_lines.append(f"**[{name}]**")
-        report_lines.append(
-            "👍 " + ", ".join(
-                f"{s['category']}({s['avg_retention']:.0f}%, {int(s['avg_views'])}회)" for s in top
-            )
-        )
-        if bottom and bottom != top:
+        # 롱폼/쇼츠는 지속률 척도가 달라(쇼츠는 반복재생으로 100%+ 가능) 항상
+        # 구분해서 보여줍니다 — core.performance_analysis.category_retention_stats 참고.
+        for kind, label in (("long", "롱폼"), ("shorts", "쇼츠")):
+            rows = ranking.get(kind) or []
+            if not rows:
+                continue
+            top = rows[:3]
+            bottom = rows[-3:] if len(rows) > 3 else []
             report_lines.append(
-                "👎 " + ", ".join(f"{s['category']}({s['avg_retention']:.0f}%)" for s in bottom)
+                f"{label} 👍 " + ", ".join(
+                    f"{s['category']}({s['avg_retention']:.0f}%, {int(s['avg_views'])}회)" for s in top
+                )
             )
-        logger.info(
-            "weekly_analysis: '%s' 카테고리 %d개 집계 (1위: %s %.0f%%)",
-            name, len(ranking), ranking[0]["category"], ranking[0]["avg_retention"],
-        )
+            if bottom and bottom != top:
+                report_lines.append(
+                    f"{label} 👎 " + ", ".join(f"{s['category']}({s['avg_retention']:.0f}%)" for s in bottom)
+                )
+            logger.info(
+                "weekly_analysis: '%s' %s 카테고리 %d개 집계 (1위: %s %.0f%%)",
+                name, label, len(rows), rows[0]["category"], rows[0]["avg_retention"],
+            )
 
     _OUT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info("weekly_analysis: %s 저장 완료", _OUT_PATH)

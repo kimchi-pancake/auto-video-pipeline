@@ -25,38 +25,50 @@ def _nfc(s: str) -> str:
     return unicodedata.normalize("NFC", s)
 
 
-def category_retention_stats(channel: str, video_metrics: dict[str, dict]) -> list[dict]:
+def category_retention_stats(channel: str, video_metrics: dict[str, dict]) -> dict[str, list[dict]]:
     """video_registry의 카테고리 매핑과 YouTube Analytics 지표(video_metrics:
     {video_id: {"views","avg_view_duration","avg_view_percentage"}})를
-    조인해서 카테고리별 {category, count, avg_views, avg_retention}을
-    시청 지속률(%) 내림차순으로 반환합니다. 그 기간에 조회수가 없던
-    영상(=video_metrics에 없는 video_id)은 제외됩니다."""
+    조인해서 {"long": [...], "shorts": [...]} 형태로, 각각 카테고리별
+    {category, count, avg_views, avg_retention}을 시청 지속률(%) 내림차순
+    으로 반환합니다.
+
+    롱폼/쇼츠를 반드시 분리합니다 — 쇼츠는 자동 반복재생 때문에
+    averageViewPercentage가 100%를 넘는 경우가 흔한 반면(실측: 이 채널
+    쇼츠의 절반 가까이가 100%+, 롱폼은 전부 100% 미만) 롱폼은 구조적으로
+    100%를 못 넘습니다 — 척도 자체가 다른 둘을 섞어서 평균 내면(쇼츠
+    165% + 롱폼 5% → 85%처럼) 롱폼 성과가 나쁜 카테고리가 "지속률 좋은
+    카테고리"로 왜곡됩니다. 그 기간에 조회수가 없던 영상(=video_metrics에
+    없는 video_id)은 제외됩니다."""
     entries = all_entries()
     channel = _nfc(channel)
-    by_cat: dict[str, list[dict]] = {}
+    by_kind_cat: dict[str, dict[str, list[dict]]] = {"long": {}, "shorts": {}}
     for e in entries:
         if _nfc(e.get("channel", "")) != channel:
             continue
         m = video_metrics.get(e["video_id"])
         if not m:
             continue
+        kind = "shorts" if e.get("is_shorts") else "long"
         cat = e.get("category") or "미분류"
-        by_cat.setdefault(cat, []).append(m)
+        by_kind_cat[kind].setdefault(cat, []).append(m)
 
-    result = []
-    for cat, ms in by_cat.items():
-        n = len(ms)
-        result.append({
-            "category": cat,
-            "count": n,
-            "avg_views": sum(m["views"] for m in ms) / n,
-            "avg_retention": sum(m["avg_view_percentage"] for m in ms) / n,
-        })
-    result.sort(key=lambda r: r["avg_retention"], reverse=True)
+    result: dict[str, list[dict]] = {}
+    for kind, by_cat in by_kind_cat.items():
+        rows = []
+        for cat, ms in by_cat.items():
+            n = len(ms)
+            rows.append({
+                "category": cat,
+                "count": n,
+                "avg_views": sum(m["views"] for m in ms) / n,
+                "avg_retention": sum(m["avg_view_percentage"] for m in ms) / n,
+            })
+        rows.sort(key=lambda r: r["avg_retention"], reverse=True)
+        result[kind] = rows
     return result
 
 
-def _load_retention_ranking(channel: str) -> list[dict] | None:
+def _load_retention_ranking(channel: str) -> dict[str, list[dict]] | None:
     if not _CATEGORY_PERF_PATH.exists():
         return None
     try:
@@ -64,8 +76,13 @@ def _load_retention_ranking(channel: str) -> list[dict] | None:
     except Exception:
         return None
     entry = data.get(channel) or data.get(_nfc(channel))
-    categories = (entry or {}).get("categories")
-    return categories or None
+    if not entry:
+        return None
+    long_rows = entry.get("long") or []
+    shorts_rows = entry.get("shorts") or []
+    if not long_rows and not shorts_rows:
+        return None
+    return {"long": long_rows, "shorts": shorts_rows}
 
 
 def category_stats(channel: str | None = None) -> list[dict]:
@@ -107,22 +124,30 @@ def summarize_for_prompt(channel: str | None = None, top_n: int = 3) -> str:
     기존처럼 조회수 기준으로 폴백합니다."""
     retention_ranking = _load_retention_ranking(channel) if channel else None
     if retention_ranking:
-        good = retention_ranking[:top_n]
-        bad = retention_ranking[-top_n:] if len(retention_ranking) > top_n else []
         lines = ["[참고: 최근 소재별 시청 지속률 — 끝까지 보게 되는 소재를 우선 고려해라]"]
-        lines.append(
-            "시청 지속률 높은 소재: "
-            + ", ".join(
-                f"{s['category']}(평균 시청률 {s['avg_retention']:.0f}%, 조회수 {int(s['avg_views'])})"
-                for s in good
-            )
-        )
-        if bad and bad != good:
+        # 쇼츠는 반복재생 때문에 지속률이 100%를 넘을 수 있어 롱폼과 척도가
+        # 다르므로(core.performance_analysis.category_retention_stats 참고)
+        # 절대 합쳐서 보여주지 않고 항상 구분해서 보여줍니다.
+        for kind, label in (("long", "롱폼"), ("shorts", "쇼츠")):
+            rows = retention_ranking.get(kind) or []
+            if not rows:
+                continue
+            good = rows[:top_n]
+            bad = rows[-top_n:] if len(rows) > top_n else []
             lines.append(
-                "시청 지속률 낮은 소재(초반 이탈 많음): "
-                + ", ".join(f"{s['category']}(평균 시청률 {s['avg_retention']:.0f}%)" for s in bad)
+                f"{label} 지속률 높은 소재: "
+                + ", ".join(
+                    f"{s['category']}(평균 시청률 {s['avg_retention']:.0f}%, 조회수 {int(s['avg_views'])})"
+                    for s in good
+                )
             )
-        return "\n".join(lines)
+            if bad and bad != good:
+                lines.append(
+                    f"{label} 지속률 낮은 소재(초반 이탈 많음): "
+                    + ", ".join(f"{s['category']}(평균 시청률 {s['avg_retention']:.0f}%)" for s in bad)
+                )
+        if len(lines) > 1:
+            return "\n".join(lines)
 
     stats = category_stats(channel)
     if not stats:
