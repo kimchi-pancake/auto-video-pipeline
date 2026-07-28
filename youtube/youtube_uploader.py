@@ -29,6 +29,11 @@ logger = get_logger(__name__)
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube",
+    # 주간 성과 분석(core/youtube_analytics.py)이 YouTube Analytics API로
+    # 조회수/시청 지속률을 읽어오는 데 필요. 이미 재인증된 자격증명 파일에는
+    # 이 스코프가 없으니, 추가한 뒤 채널별로 재인증(tools/reauthorize_youtube.py)
+    # 해야 실제로 적용됩니다.
+    "https://www.googleapis.com/auth/yt-analytics.readonly",
 ]
 
 RETRIABLE_STATUS_CODES = {500, 502, 503, 504}
