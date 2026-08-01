@@ -115,64 +115,17 @@ def notify_discord_create_thread(name: str, channel_id: str = DISCORD_CHANNEL_ID
     return None
 
 
-def notify_discord_status_create(
-    embed: dict, image_bytes: bytes, filename: str = "status.png", thread_id: str | None = None
-) -> str | None:
-    """이미지(진행률 카드)가 첨부된 임베드 메시지를 새로 올리고, 나중에
-    수정(edit)할 수 있도록 메시지 id를 반환합니다. 실패하면 None.
-    thread_id를 주면 메인 채널 대신 그 스레드 안에 올립니다."""
-    import requests
-    try:
-        payload = {"embeds": [{**embed, "image": {"url": f"attachment://{filename}"}}]}
-        resp = requests.post(
-            f"{DISCORD_WEBHOOK_URL}?wait=true{_thread_query(thread_id)}",
-            data={"payload_json": json.dumps(payload)},
-            files={"file": (filename, image_bytes, "image/png")},
-            headers={"User-Agent": _BROWSER_UA},
-            timeout=15,
-        )
-        if resp.status_code in (200, 201):
-            return resp.json().get("id")
-    except Exception:
-        pass
-    return None
-
-
-def notify_discord_status_update(
-    message_id: str, embed: dict, image_bytes: bytes, filename: str = "status.png", thread_id: str | None = None
-) -> bool:
-    """notify_discord_status_create()로 만든 메시지를 새 진행률 카드로 갈아
-    끼웁니다(같은 메시지를 계속 수정 — 채널에 메시지가 쌓이지 않음). 스레드
-    안의 메시지를 수정할 땐 thread_id를 꼭 같이 줘야 합니다."""
-    import requests
-    try:
-        payload = {"embeds": [{**embed, "image": {"url": f"attachment://{filename}"}}]}
-        thread_q = f"?thread_id={thread_id}" if thread_id else ""
-        resp = requests.patch(
-            f"{DISCORD_WEBHOOK_URL}/messages/{message_id}{thread_q}",
-            data={"payload_json": json.dumps(payload)},
-            files={"file": (filename, image_bytes, "image/png")},
-            headers={"User-Agent": _BROWSER_UA},
-            timeout=15,
-        )
-        return resp.status_code in (200, 201)
-    except Exception:
-        return False
-
-
-def notify_discord_edit(message_id: str, content: str, thread_id: str | None = None) -> bool:
-    """텍스트 메시지 하나를 수정합니다(이미지 없이). ASCII 진행바처럼 순수
-    텍스트 메시지를 계속 갈아 끼우는 용도."""
+def notify_discord_delete(message_id: str, thread_id: str | None = None) -> bool:
+    """웹훅으로 보낸 메시지를 삭제합니다. 실패해도 조용히 넘어갑니다."""
     import requests
     try:
         thread_q = f"?thread_id={thread_id}" if thread_id else ""
-        resp = requests.patch(
+        resp = requests.delete(
             f"{DISCORD_WEBHOOK_URL}/messages/{message_id}{thread_q}",
-            json={"content": content},
             headers={"User-Agent": _BROWSER_UA},
             timeout=15,
         )
-        return resp.status_code in (200, 201)
+        return resp.status_code in (200, 204)
     except Exception:
         return False
 

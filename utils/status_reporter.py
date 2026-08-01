@@ -2,25 +2,45 @@
 utils/status_reporter.py
 ==========================
 core/pipeline.py의 progress_callback에 꽂는 리포터. 채널별 디스코드
-스레드(도개/웃짬) 안에 메시지를 딱 하나만 만들고, 단계가 바뀔 때마다 그
-메시지를 계속 수정(edit)합니다 — 새 메시지를 추가로 보내지 않습니다
-(완료/실패 결과도 같은 메시지를 마지막으로 한 번 더 수정해서 반영).
+스레드(도개/웃짬) 안에 진행 상황 메시지를 올립니다.
+
+2026-08-01: 이미지 카드(Pillow 렌더링) 대신 코드블록 텍스트로 되돌렸습니다 —
+이미지 생성/업로드 없이 메시지 하나만 보내면 되니 훨씬 단순하고 빠릅니다.
+같은 메시지를 PATCH로 수정하지 않고, 매번 이전 메시지를 삭제하고 새로
+올립니다(요청사항). 모든 전송은 무음(알림/뱃지 없음)입니다.
 """
 
 from __future__ import annotations
 
 from utils.logger import get_logger
-from utils.notify import notify_discord_edit, notify_discord_silent
+from utils.notify import notify_discord_delete, notify_discord_silent
 
 logger = get_logger(__name__)
 
-_BAR_WIDTH = 20
+STAGES_KO = ["파싱", "TTS", "이미지", "자막", "합성", "썸네일", "업로드", "정리"]
+_BAR_WIDTH = 24
 
 
-def _ascii_bar(pct: float, width: int = _BAR_WIDTH) -> str:
+def _bar(pct: float, width: int = _BAR_WIDTH) -> str:
     pct = max(0.0, min(pct, 100.0))
     filled = round(width * pct / 100)
-    return "[" + "■" * filled + "□" * (width - filled) + "]"
+    return "█" * filled + "░" * (width - filled)
+
+
+def _stage_grid(stage_index: int, done: bool, failed: bool) -> str:
+    cells = []
+    for i, name in enumerate(STAGES_KO):
+        if failed and i == stage_index:
+            mark = "✕"
+        elif i < stage_index or done:
+            mark = "✓"
+        elif i == stage_index:
+            mark = "›"
+        else:
+            mark = "○"
+        cells.append(f"{mark} {name}")
+    rows = [cells[i:i + 4] for i in range(0, len(cells), 4)]
+    return "\n".join("  ".join(f"{c:<8}" for c in row) for row in rows)
 
 
 class DiscordStatusReporter:
@@ -34,45 +54,63 @@ class DiscordStatusReporter:
         self._message_id: str | None = None
         self._last_stage = -1
 
-    def _render(self, stage: str, stage_index: int, stage_total: int, pct: float, done: bool = False, failed: bool = False, extra: str = "") -> str:
-        bar = _ascii_bar(100.0 if done else pct)
-        status = "실패" if failed else ("완료" if done else f"{stage} ({stage_index + 1}/{stage_total})")
-        text = f"`{bar}` {100 if done else round(pct)}%  **[{self._channel}] {self._title}**\n현재: {status}"
+    def _render(self, stage_index: int, pct: float, done: bool = False, failed: bool = False, extra: str = "") -> str:
+        status_word = "FAILED" if failed else ("DONE" if done else "RUNNING")
+        pct = 100.0 if done else max(0.0, min(pct, 100.0))
+        if failed:
+            status_line = "현재 단계: 실패"
+        elif done:
+            status_line = "현재 단계: 완료"
+        else:
+            stage_name = STAGES_KO[stage_index] if 0 <= stage_index < len(STAGES_KO) else ""
+            status_line = f"현재 단계: {stage_name} 중..."
+
+        body = "\n".join([
+            f"[{self._channel}] ● {status_word}",
+            self._title,
+            "",
+            f"{_bar(pct)}  {pct:.0f}%",
+            status_line,
+            "",
+            _stage_grid(stage_index, done, failed),
+        ])
+        text = f"```\n{body}\n```"
         if extra:
+            # URL은 코드블록 밖에 있어야 디스코드가 링크로 인식합니다.
             text += f"\n{extra}"
         return text
 
+    def _swap(self, text: str) -> None:
+        """이전 메시지를 지우고(있으면) 새 메시지를 무음으로 올려서 message_id를
+        갱신합니다. 삭제가 실패해도(이미 지워졌거나 네트워크 오류) 새로 올리는
+        건 계속 진행합니다 — 진행 표시가 끊기는 것보다 메시지 하나 안 지워지고
+        남는 게 낫습니다."""
+        if self._message_id:
+            notify_discord_delete(self._message_id, thread_id=self._thread_id)
+        self._message_id = notify_discord_silent(text, thread_id=self._thread_id)
+
     def __call__(self, progress) -> None:
         # 같은 단계 안에서는 갱신하지 않음(예: 이미지 1/22 ~ 22/22) — 단계가
-        # 바뀔 때만 한 번 수정해서 API 호출을 아낍니다.
+        # 바뀔 때만 한 번 갈아끼워서 API 호출을 아낍니다.
         if progress.stage_index == self._last_stage:
             return
         self._last_stage = progress.stage_index
-        text = self._render(progress.stage, progress.stage_index, progress.stage_total, progress.overall_pct)
+        text = self._render(progress.stage_index, progress.overall_pct)
         try:
-            if self._message_id is None:
-                self._message_id = notify_discord_silent(text, thread_id=self._thread_id)
-            else:
-                if not notify_discord_edit(self._message_id, text, thread_id=self._thread_id):
-                    logger.warning("DiscordStatusReporter: 진행바 수정 실패 — 다음 단계에서 다시 시도")
+            self._swap(text)
         except Exception:
-            logger.exception("DiscordStatusReporter 진행바 갱신 실패")
+            logger.exception("DiscordStatusReporter 진행 메시지 갱신 실패")
 
     def finish(self, success: bool, youtube_video_id: str | None = None, error: str | None = None) -> None:
-        """영상 하나 처리가 끝났을 때: 새 메시지를 보내지 않고, 같은 진행바
-        메시지를 최종 상태로 마지막 수정합니다."""
+        """영상 하나 처리가 끝났을 때: 이전 진행 메시지를 지우고, 최종 상태
+        메시지를 새로 하나 올립니다."""
         try:
             extra = ""
             if success and youtube_video_id:
                 extra = f"https://youtu.be/{youtube_video_id}"
             elif not success and error:
                 extra = f"사유: {error}"
-            final_text = self._render("", 7, 8, 100.0, done=success, failed=not success, extra=extra)
-            if self._message_id:
-                notify_discord_edit(self._message_id, final_text, thread_id=self._thread_id)
-            else:
-                # 진행바 메시지가 애초에 안 만들어졌으면(무음 전송 실패 등)
-                # 결과라도 새로 하나 남김 — 완전히 조용히 유실되진 않게.
-                self._message_id = notify_discord_silent(final_text, thread_id=self._thread_id)
+            text = self._render(len(STAGES_KO) - 1, 100.0, done=success, failed=not success, extra=extra)
+            self._swap(text)
         except Exception:
             logger.exception("DiscordStatusReporter 결과 메시지 전송 실패")
