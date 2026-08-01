@@ -1,21 +1,16 @@
 """
 utils/soft_approval.py
 ========================
-"소프트 승인" 흐름 — 영상을 일단 비공개로 올려두고, REVIEW_WINDOW_SECONDS
-동안 디스코드에서 /영상 거절이 안 오면 자동으로 공개 전환합니다.
+유튜브 공개/예약공개 전환 헬퍼.
 
-기본값은 "거절 안 하면 바로 올리는" 쪽입니다 — 조회 실패 등 예외 상황에서도
-전체 파이프라인이 멈추지 않도록 항상 "거절 안 됨"으로 간주(fail-open)합니다.
+2026-08-01: "소프트 승인"(디스코드 /영상 거절로 일정 시간 안에 취소 가능한 대기
+창) 기능을 제거했습니다 — daily.yml에서 이 대기(review_lock까지 매번 최소
+3시간40분)가 GitHub Actions 과금의 실제 원인으로 드러나서, 대기 없이 생성
+직후 바로 예약/공개하는 방식으로 바꿨습니다.
 """
 
 from __future__ import annotations
 
-import base64
-import json
-import os
-import time
-import urllib.error
-import urllib.request
 from datetime import datetime
 
 from google.auth.transport.requests import Request
@@ -25,48 +20,6 @@ from googleapiclient.discovery import build
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
-
-REVIEW_WINDOW_SECONDS = 300  # 5분
-
-
-def sleep_for_review(seconds: int = REVIEW_WINDOW_SECONDS) -> None:
-    logger.info("소프트 승인 대기 중 (%d초)...", seconds)
-    time.sleep(seconds)
-
-
-def sleep_until(target: datetime) -> None:
-    """target 시각(timezone-aware)까지 잡니다. 이미 지난 시각이면 바로 반환."""
-    remaining = (target - datetime.now(target.tzinfo)).total_seconds()
-    if remaining > 0:
-        logger.info("%s까지 대기 중 (%.0f초)...", target.isoformat(), remaining)
-        time.sleep(remaining)
-
-
-def is_rejected(video_id: str) -> bool:
-    """config/rejections.json을 GitHub API로 직접 조회합니다. 로컬 git 체크아웃은
-    워크플로우 시작 시점 스냅샷이라 대기 중에 들어온 거절을 못 보므로, 항상
-    GitHub에서 최신 상태를 다시 읽어야 합니다. 조회 실패 시 "거절 안 됨"으로
-    간주합니다(자동 공개 우선)."""
-    token = os.environ.get("GITHUB_TOKEN", "")
-    repo = os.environ.get("GITHUB_REPOSITORY", "")
-    if not token or not repo:
-        return False
-    try:
-        req = urllib.request.Request(
-            f"https://api.github.com/repos/{repo}/contents/config/rejections.json",
-            headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
-        )
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read())
-            content = json.loads(base64.b64decode(data["content"]).decode("utf-8"))
-            return video_id in (content.get("rejected") or [])
-    except urllib.error.HTTPError as e:
-        if e.code != 404:
-            logger.warning("거절 여부 조회 실패 (HTTP %s), 거절 안 된 것으로 간주", e.code)
-        return False
-    except Exception as e:
-        logger.warning("거절 여부 조회 실패: %s, 거절 안 된 것으로 간주", e)
-        return False
 
 
 def publish_video(video_id: str, credentials_file: str) -> bool:

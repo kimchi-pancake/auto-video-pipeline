@@ -10,12 +10,13 @@
  *   /영상 시작                          — daily.yml(전 채널 정기 생성)을 지금 바로 트리거
  *   /영상 상태                          — 현재 실행 중인 작업 / 오늘 업로드 수 / 대기열
  *   /영상 로그                          — 최근 워크플로우 실행 기록 링크
- *   /영상 재생성 channel topic          — 그 자리에서 즉시 새로 생성(전체 재생성, 5분 소프트 승인 적용)
+ *   /영상 재생성 channel topic          — 그 자리에서 즉시 새로 생성(전체 재생성)
  *   /영상 cta설정 channel position on   — 구독 유도 문구 위치별 on/off
- *   /영상 거절 video_id                 — 승인 대기 중인 영상 거절(비공개로 유지). daily.yml 정기 생성분은
- *                                         review_lock 시각(기본 19:40 KST)까지 이 커맨드로 거절 가능 —
- *                                         그 시각이 지나면 유튜브에 예약공개(20:00 KST)가 이미 확정된 뒤라
- *                                         거절해도 취소되지 않음(유튜브 스튜디오에서 직접 비공개로 바꿔야 함)
+ *
+ * 2026-08-01: "/영상 거절"(소프트 승인 대기 중 거절) 기능 제거 — daily.yml에서
+ * review_lock 시각까지 매번 최소 3시간40분씩 대기하던 게 GitHub Actions 과금의
+ * 실제 원인으로 드러나서, 대기 없이 생성 직후 바로 예약공개를 확정하는 방식으로
+ * 바꿨습니다. 취소하고 싶으면 유튜브 스튜디오에서 직접 비공개로 바꿔야 합니다.
  *
  * config/*.json을 GitHub Contents API로 직접 읽고 씁니다. 평소엔 daily.yml이
  * 완전 자동으로 돌지만, 이 큐/설정 파일들에 예약·설정이 있으면 그걸 반영합니다.
@@ -24,6 +25,12 @@
  *   DISCORD_PUBLIC_KEY   디스코드 개발자 포털 → General Information → Public Key
  *   GITHUB_TOKEN         repo(Contents: write, Actions: write) 권한의 GitHub PAT
  *   GITHUB_REPO          "kimchi-pancake/auto-video-pipeline" 형태
+ *   OCI_TENANCY_OCID     ~/.oci/config의 tenancy
+ *   OCI_USER_OCID        ~/.oci/config의 user
+ *   OCI_FINGERPRINT      ~/.oci/config의 fingerprint
+ *   OCI_PRIVATE_KEY_PEM  ~/.oci/oci_api_key.pem 파일 내용 그대로(PKCS8, "-----BEGIN
+ *                        PRIVATE KEY-----" 포함) — Secret으로 등록 권장
+ *   OCI_SSH_PUBLIC_KEY   ~/.ssh/oci_a1_key.pub 파일 내용 그대로
  *
  * 슬래시 커맨드 정의를 바꿨으면 GITHUB_TOKEN/DISCORD_APP_ID/DISCORD_BOT_TOKEN을
  * 잠깐 추가하고 /register-command-x7k2m9 를 한 번 호출해서 반영해야 합니다.
@@ -53,13 +60,25 @@
  * 14:59 = KST 23:59)도 같이 등록해야 합니다. DISCORD_BOT_TOKEN에
  * Manage Messages/Manage Threads 권한이 있어야 동작합니다(그 채널이
  * 있는 서버에서 봇에게 권한 부여 필요).
+ *
+ * Oracle Cloud Ampere A1 "Always Free" 서버 자리 재시도
+ * -----------------------------------------------------
+ * scripts/oci_a1_retry.py(로컬 PC 상시 실행 필요)를 대체. 10분마다 깨어나
+ * Oracle에 A1.Flex 인스턴스 생성을 시도하고, 자리가 나서 성공하면(혹은
+ * 용량 부족이 아닌 진짜 오류가 나면) 디스코드로 알립니다. "자리 없음"
+ * 실패는 매번 있는 정상 상황이라 알림을 보내지 않습니다(스팸 방지).
+ * 이미 인스턴스가 있으면 아무것도 안 하는 멱등 로직이라 몇 번을 더 돌아도
+ * 안전합니다. Cloudflare 무료 티어 Cron Trigger라 추가 비용 없음.
+ *
+ * 설정: Cloudflare 대시보드 → 이 Worker → Triggers → Cron Triggers → 아래
+ * scheduled()의 retryOracleA1 분기 조건과 정확히 같은 cron 표현식(10분
+ * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
 const CTA_PATH = "config/cta_settings.json";
-const REJECTIONS_PATH = "config/rejections.json";
 
 export default {
   async fetch(request, env) {
@@ -100,11 +119,13 @@ export default {
   },
 
   // Cloudflare Cron Trigger가 정시에 이걸 부릅니다. cron 문자열로 어느
-  // 트리거인지 구분합니다(대시보드에 "0 7 * * *"와 "59 14 * * *" 둘 다
-  // 등록돼있어야 함).
+  // 트리거인지 구분합니다(대시보드에 "0 7 * * *", "59 14 * * *", "*/10 * * * *"
+  // 세 개 다 등록돼있어야 함).
   async scheduled(event, env, ctx) {
     if (event.cron === "59 14 * * *") {
       ctx.waitUntil(purgeChannel(env));
+    } else if (event.cron === "*/10 * * * *") {
+      ctx.waitUntil(retryOracleA1(env));
     } else {
       ctx.waitUntil(triggerDailyIfIdle(env));
     }
@@ -222,7 +243,6 @@ async function handleCommand(env, interaction) {
       case "로그": return await handleLogs(env);
       case "재생성": return await handleRegenerate(env, opts);
       case "cta설정": return await handleCtaSettings(env, opts);
-      case "거절": return await handleReject(env, opts);
       default: return json({ type: 4, data: { content: "알 수 없는 명령어" } });
     }
   } catch (e) {
@@ -471,30 +491,6 @@ async function handleCtaSettings(env, opts) {
 }
 
 // ─────────────────────────────────────────
-// 거절 (소프트 승인)
-// ─────────────────────────────────────────
-
-async function handleReject(env, opts) {
-  if (!opts.video_id) {
-    return json({ type: 4, data: { content: "영상 ID(또는 링크)를 입력해줘." } });
-  }
-  const videoId = extractVideoId(opts.video_id);
-  await ghUpdateFile(env, REJECTIONS_PATH, (x) => x || { rejected: [] }, `reject video ${videoId}`, (obj) => {
-    obj.rejected = obj.rejected || [];
-    if (!obj.rejected.includes(videoId)) obj.rejected.push(videoId);
-  });
-  return json({
-    type: 4,
-    data: { content: `🚫 ${videoId} 거절 처리함 — 공개 대기 중이면 비공개로 남고, 이미 공개됐으면 유튜브 스튜디오에서 직접 내려야 함.` },
-  });
-}
-
-function extractVideoId(input) {
-  const m = input.match(/(?:youtu\.be\/|v=)([a-zA-Z0-9_-]{6,})/);
-  return m ? m[1] : input.trim();
-}
-
-// ─────────────────────────────────────────
 // GitHub API 공통 헬퍼
 // ─────────────────────────────────────────
 
@@ -621,8 +617,8 @@ async function registerCommand(env) {
     type: 3,
     required: false,
     choices: [
-      "고부갈등", "부모자식갈등", "손주문제", "형제유산", "노년외로움",
-      "부부갈등", "부모부양", "명절갈등", "노후자금", "가족오해", "반전사연", "재회",
+      "혈관혈압", "당뇨관리", "관절근육", "장건강", "수면건강",
+      "치매인지", "눈건강", "뼈건강", "면역력", "체중대사", "심장건강", "약물주의", "계절건강", "스트레스",
     ].map((c) => ({ name: c, value: c })),
   };
 
@@ -687,10 +683,6 @@ async function registerCommand(env) {
           { name: "on", description: "켤지 여부", type: 5, required: true },
         ],
       },
-      {
-        name: "거절", description: "소프트 승인 대기 중인 영상을 거절합니다 (비공개로 유지)", type: 1,
-        options: [{ name: "video_id", description: "유튜브 영상 ID 또는 링크", type: 3, required: true }],
-      },
     ],
   };
 
@@ -701,4 +693,198 @@ async function registerCommand(env) {
   });
   const text = await resp.text();
   return new Response(`${resp.status} ${text}`, { status: 200 });
+}
+
+// ─────────────────────────────────────────
+// Oracle Cloud Always Free Ampere A1 재시도 봇
+// ─────────────────────────────────────────
+// scripts/oci_a1_retry.py(로컬 Windows 스케줄러용)를 Cloudflare Worker로
+// 이식한 버전. 노트북을 안 켜놔도 되고, GitHub Actions처럼 분 단위로
+// 과금되지 않습니다(Cloudflare Workers Cron Trigger는 무료 티어에 포함).
+//
+// OCI REST API는 Signature Version 1(RSA-SHA256 기반 커스텀 서명)을 씁니다.
+// Python oci SDK가 내부적으로 하는 걸 Web Crypto API로 직접 구현했습니다 —
+// 2026-07-28에 로컬 Node.js로 실제 API(ListInstances/LaunchInstance) 호출까지
+// 검증 완료(GET 200, POST가 "Out of host capacity"로 정상 실패 = 서명 정확).
+//
+// 필요한 환경변수(Cloudflare 대시보드 → Worker → Settings → Variables):
+//   OCI_USER_OCID, OCI_FINGERPRINT, OCI_TENANCY_OCID, OCI_PRIVATE_KEY_PEM,
+//   OCI_SSH_PUBLIC_KEY
+// Cron Trigger "*/10 * * * *" (10분마다)도 등록해야 합니다. GitHub Actions와
+// 달리 Cloudflare Cron Trigger는 호출 빈도로 과금되지 않으므로(무료 플랜
+// 하루 10만 요청 한도 안에서 자유), 자리 잡을 확률을 위해 짧은 간격으로 둡니다.
+
+const OCI_REGION = "ap-osaka-1";
+const OCI_HOST = `iaas.${OCI_REGION}.oraclecloud.com`;
+const OCI_AVAILABILITY_DOMAIN = "lYdr:AP-OSAKA-1-AD-1";
+const OCI_SUBNET_ID = "ocid1.subnet.oc1.ap-osaka-1.aaaaaaaagpflof3hvkkrzhsnozrbz3fbr3ffy3qnaen3ggidluxxrux3ovoa";
+const OCI_IMAGE_ID = "ocid1.image.oc1.ap-osaka-1.aaaaaaaacxblapqsiodvwbiyhnuzv4edk5uw23boofijdlit2xtgz3f3h6eq";
+const OCI_INSTANCE_NAME = "auto-video-pipeline-a1";
+const OCI_OCPUS = 2.0;
+const OCI_MEMORY_GBS = 12.0;
+
+function _pemToArrayBuffer(pem) {
+  const b64 = pem
+    .replace(/-----BEGIN PRIVATE KEY-----/, "")
+    .replace(/-----END PRIVATE KEY-----/, "")
+    .replace(/\s+/g, "");
+  const raw = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  return raw.buffer;
+}
+
+async function _importOciPrivateKey(pem) {
+  return crypto.subtle.importKey(
+    "pkcs8",
+    _pemToArrayBuffer(pem),
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    false,
+    ["sign"]
+  );
+}
+
+function _base64(buf) {
+  const bytes = new Uint8Array(buf);
+  let bin = "";
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin);
+}
+
+async function _sha256Base64(text) {
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+  return _base64(digest);
+}
+
+/** OCI Signature v1 헤더를 만듭니다. method는 "GET" 또는 "POST". */
+async function _signOciRequest(method, path, bodyText, privateKey, env) {
+  const date = new Date().toUTCString();
+  const requestTarget = `${method.toLowerCase()} ${path}`;
+  const keyId = `${env.OCI_TENANCY_OCID}/${env.OCI_USER_OCID}/${env.OCI_FINGERPRINT}`;
+
+  let headersToSign, signingLines, extraHeaders;
+  if (method === "GET") {
+    headersToSign = "date (request-target) host";
+    signingLines = [`date: ${date}`, `(request-target): ${requestTarget}`, `host: ${OCI_HOST}`];
+    extraHeaders = {};
+  } else {
+    const contentSha256 = await _sha256Base64(bodyText);
+    const contentLength = String(new TextEncoder().encode(bodyText).length);
+    headersToSign = "date (request-target) host content-length content-type x-content-sha256";
+    signingLines = [
+      `date: ${date}`,
+      `(request-target): ${requestTarget}`,
+      `host: ${OCI_HOST}`,
+      `content-length: ${contentLength}`,
+      `content-type: application/json`,
+      `x-content-sha256: ${contentSha256}`,
+    ];
+    extraHeaders = {
+      "content-length": contentLength,
+      "content-type": "application/json",
+      "x-content-sha256": contentSha256,
+    };
+  }
+
+  const signature = await crypto.subtle.sign(
+    "RSASSA-PKCS1-v1_5",
+    privateKey,
+    new TextEncoder().encode(signingLines.join("\n"))
+  );
+
+  return {
+    Date: date,
+    Authorization:
+      `Signature version="1",headers="${headersToSign}",keyId="${keyId}",` +
+      `algorithm="rsa-sha256",signature="${_base64(signature)}"`,
+    ...extraHeaders,
+  };
+}
+
+async function _notifyOracleDiscord(env, message) {
+  try {
+    await fetch(`https://discord.com/api/v10/channels/${DISCORD_CHANNEL_ID}/messages`, {
+      method: "POST",
+      headers: { Authorization: `Bot ${env.DISCORD_BOT_TOKEN}`, "Content-Type": "application/json", "User-Agent": DISCORD_BOT_UA },
+      body: JSON.stringify({ content: message }),
+    });
+  } catch {
+    // 알림 실패는 무시 — 재시도 로직 자체는 계속 돼야 함
+  }
+}
+
+/** OCI 응답 본문을 안전하게 파싱합니다. JSON이 아니거나 비어있어도 절대 던지지 않고,
+ * 항상 { parsed, raw } 형태로 돌려줍니다 — 알림 문구에 "undefined — undefined"처럼
+ * 의미 없는 텍스트가 찍히는 걸 막기 위해, 실패하면 원문(raw)을 그대로 보존합니다. */
+async function _safeReadJson(resp) {
+  const raw = await resp.text().catch(() => "");
+  try {
+    return { parsed: raw ? JSON.parse(raw) : {}, raw };
+  } catch {
+    return { parsed: {}, raw };
+  }
+}
+
+/** 인스턴스 생성을 한 번 시도합니다. 10분마다 Cron Trigger가 이걸 부릅니다.
+ * OCI 응답 형태가 예상과 다르거나 서명/키 문제로 예외가 나도 조용히 사라지지
+ * 않도록 전체를 try/catch로 감싸고, 실패하면 디스코드로 알립니다 — 이 크론은
+ * ctx.waitUntil() 안에서 도는 거라 이 알림이 유일한 관찰 창구입니다. */
+async function retryOracleA1(env) {
+  try {
+    await _retryOracleA1Inner(env);
+  } catch (e) {
+    await _notifyOracleDiscord(env, `⚠️ Ampere A1 재시도 중 예외 발생: ${e && e.message ? e.message : String(e)}`);
+  }
+}
+
+async function _retryOracleA1Inner(env) {
+  const privateKey = await _importOciPrivateKey(env.OCI_PRIVATE_KEY_PEM);
+  const compartmentId = env.OCI_TENANCY_OCID;
+
+  // 1) 이미 있는지 확인 (멱등 — 있으면 아무것도 안 하고 끝)
+  const listPath = `/20160918/instances?compartmentId=${encodeURIComponent(compartmentId)}&displayName=${OCI_INSTANCE_NAME}`;
+  const listHeaders = await _signOciRequest("GET", listPath, "", privateKey, env);
+  const listResp = await fetch(`https://${OCI_HOST}${listPath}`, { headers: listHeaders });
+  if (listResp.ok) {
+    const { parsed: instances } = await _safeReadJson(listResp);
+    if (Array.isArray(instances)) {
+      const active = instances.find((i) => !["TERMINATED", "TERMINATING"].includes(i.lifecycleState));
+      if (active) return; // 이미 확보됨 — 재시도 불필요
+    }
+    // 응답이 배열이 아니면(예상과 다른 형태) 존재 확인을 건너뛰고 그냥 생성을
+    // 시도합니다 — 어차피 이미 인스턴스가 있으면 아래 POST가 자연스럽게
+    // 실패(진짜 오류)로 알림이 가서 눈에 띕니다.
+  }
+
+  // 2) 생성 시도
+  const body = JSON.stringify({
+    compartmentId,
+    availabilityDomain: OCI_AVAILABILITY_DOMAIN,
+    shape: "VM.Standard.A1.Flex",
+    shapeConfig: { ocpus: OCI_OCPUS, memoryInGBs: OCI_MEMORY_GBS },
+    displayName: OCI_INSTANCE_NAME,
+    createVnicDetails: { subnetId: OCI_SUBNET_ID, assignPublicIp: true },
+    sourceDetails: { sourceType: "image", imageId: OCI_IMAGE_ID },
+    metadata: { ssh_authorized_keys: env.OCI_SSH_PUBLIC_KEY },
+  });
+  const launchPath = "/20160918/instances";
+  const launchHeaders = await _signOciRequest("POST", launchPath, body, privateKey, env);
+  const launchResp = await fetch(`https://${OCI_HOST}${launchPath}`, { method: "POST", headers: launchHeaders, body });
+
+  if (launchResp.ok) {
+    const { parsed: data, raw } = await _safeReadJson(launchResp);
+    const instanceId = data && data.id ? data.id : `(응답 파싱 실패, 원문: ${raw.slice(0, 200)})`;
+    await _notifyOracleDiscord(env, `🎉 잡았다! Ampere A1 서버 확보 성공! instance_id=${instanceId}`);
+    return;
+  }
+
+  const { parsed: errBody, raw: errRaw } = await _safeReadJson(launchResp);
+  const capacityErrors = ["LimitExceeded", "InternalError", "OutOfCapacity", "TooManyRequests"];
+  if (capacityErrors.includes(errBody.code) || /capacity/i.test(errBody.message || "")) {
+    return; // 자리 없음 — 다음 스케줄에 재시도, 알림 안 보냄(스팸 방지)
+  }
+  // 용량 문제가 아닌 진짜 오류만 알림 — code/message가 없으면(형태가 다른 응답)
+  // 원문(errRaw)을 그대로 보여줘서 "undefined — undefined" 같은 무의미한 알림을 막는다.
+  const errText = errBody.code || errBody.message
+    ? `${errBody.code} — ${errBody.message}`
+    : `HTTP ${launchResp.status}, 원문: ${errRaw.slice(0, 300)}`;
+  await _notifyOracleDiscord(env, `⚠️ Ampere A1 재시도 중 예상 못한 오류: ${errText}`);
 }

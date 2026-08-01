@@ -17,7 +17,6 @@ from __future__ import annotations
 import json
 import re
 import sys
-import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timedelta
@@ -35,11 +34,7 @@ from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
 from core.topic_queue import pop_topic
 from core.video_registry import record_upload
-from utils.soft_approval import is_rejected, publish_video, schedule_publish, sleep_until
-
-# 모듈 레벨 로거. _lock_in_schedule는 threading.Thread의 target으로 직접
-# 호출되는(main()의 지역 logger를 인자로 못 넘기는) 함수라 따로 필요합니다.
-_module_logger = get_logger(__name__)
+from utils.soft_approval import publish_video, schedule_publish
 
 # 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
 # (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
@@ -131,34 +126,12 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
     return ok_channels, saved_total
 
 
-def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: str, lock_at: datetime, publish_at: datetime, thread_id: str | None = None) -> None:
-    """lock_at까지 기다렸다가(그동안 /영상 거절 가능), 거절 안 됐으면 그때서야
-    유튜브에 publish_at 예약공개를 겁니다. 생성이 끝나자마자 바로 예약해버리면
-    거절 창이 사실상 없는 셈이라, "예약을 거는 행위" 자체를 lock_at까지 미룹니다.
-
-    lock_at/publish_at은 호출 시점에 "오늘 이미 지났으면" 절대 하루씩 미루지
-    않습니다(과거에 이 로직이 다음날로 미루다가, GitHub Actions 잡의
-    350분 타임아웃보다 오래 자야 해서 예약이 영영 안 걸린 채로 죽는 사고가
-    있었습니다) — 대신 lock_at은 "이미 지났으면 지금 바로", publish_at도
-    "이미 지났으면 예약 대신 즉시 공개"로 처리합니다.
-
-    lock_at 자체가 CI 타임아웃 예산을 넘을 만큼 멀면(예: 이른 시각에 수동
-    트리거해서 review_lock까지 몇 시간씩 남은 경우) 그 시각까지 다 기다리지
-    않고 예산 한도에서 앞당겨 lock-in합니다 — 거절 창은 줄어들지만, 예약
-    자체가 통째로 유실되는 것보다는 훨씬 낫습니다."""
-    deadline = _JOB_STARTED_AT + timedelta(minutes=_JOB_LOCK_IN_BUDGET_MINUTES)
-    safe_lock_at = min(lock_at, deadline)
-    if safe_lock_at < lock_at:
-        _module_logger.warning(
-            "daily_generate: '%s' review_lock(%s)까지 다 기다리면 CI 타임아웃을 넘길 것 "
-            "같아 %s로 앞당겨 lock-in합니다(거절 창 축소)",
-            name, lock_at.isoformat(), safe_lock_at.isoformat(),
-        )
-    sleep_until(safe_lock_at)
-    if is_rejected(video_id):
-        notify_discord(f"🚫 [{name}] 거절됨 — 비공개로 유지: {title}", thread_id=thread_id)
-        return
-
+def _finalize_publish(name: str, chan: dict, video_id: str, title: str, kind: str, publish_at: datetime, thread_id: str | None = None) -> None:
+    """업로드 직후 곧바로 예약공개(또는 목표 시각이 이미 지났으면 즉시 공개)를
+    확정합니다. 예전에는 review_lock 시각까지 대기(/영상 거절 여부 확인)한
+    뒤에야 이 처리를 했는데, 그 대기가 매번 최소 3시간40분씩 걸려서 GitHub
+    Actions 과금의 실제 원인이었습니다(2026-08-01 확인). 소프트 승인/거절
+    기능 자체를 제거하고 생성 직후 바로 확정하는 방식으로 바꿨습니다."""
     now = datetime.now(_KST)
     if publish_at > now:
         if schedule_publish(video_id, chan.get("credentials_file", ""), publish_at):
@@ -182,24 +155,6 @@ def _lock_in_schedule(name: str, chan: dict, video_id: str, title: str, kind: st
             notify_discord(f"⚠️ [{name}] 공개 전환 실패 — 유튜브 스튜디오에서 직접 공개로 바꿔야 함: {title}", thread_id=thread_id)
 
 
-# lock-in 대기 스레드들. main()이 끝나기 전에 전부 join해서, lock_at까지
-# 기다리는 도중 프로세스가 먼저 끝나 daemon 스레드가 죽는(=예약이 영영 안
-# 걸리는) 일을 막습니다.
-_pending_lock_threads: list = []
-_pending_lock_lock = threading.Lock()
-
-# GitHub Actions job의 timeout-minutes(daily.yml, 350분)을 넘기면 프로세스가
-# 강제종료되면서 그 시점에 sleep_until(lock_at)로 대기 중이던 스레드가 통째로
-# 죽어 스케줄링이 영영 안 걸립니다 — 2026-07-25 사고: 오전에 수동 트리거해서
-# review_lock까지 대기시간이 거의 10시간이 됐고, 5시간50분 타임아웃에 걸려
-# 강제종료되면서 그날 업로드된 영상 4개가 전부 예약 안 걸린 채 비공개로
-# 방치됨. "거절 창을 최대한 보장"하는 것보다 "예약이 아예 안 걸리는 것"이
-# 훨씬 나쁘므로, 대기시간이 안전 예산을 넘으면 거절 창을 줄여서라도(0분까지
-# 줄어들 수 있음) 반드시 lock-in을 완료시킵니다.
-_JOB_STARTED_AT = datetime.now(pytz.utc)
-_JOB_LOCK_IN_BUDGET_MINUTES = 300  # daily.yml timeout-minutes(350)보다 50분 여유
-
-
 def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path: str, result, counters: dict, logger, thread_id: str | None = None) -> None:
     """파일 하나 처리가 끝날 때마다(배치 전체가 아니라) 바로 불려서, 그
     영상에 대한 디스코드 알림을 즉시 보냅니다 — 채널 대기열 전체(롱폼+쇼츠2)가
@@ -221,28 +176,13 @@ def _handle_result(name: str, chan: dict, cfg, default_privacy: str, story_path:
         counters["uploaded"] += 1
         record_upload(result.youtube_video_id, name, result.category, result.title or title, is_shorts)
         if default_privacy == "public":
-            lock_hour = cfg.get("youtube.review_lock_hour", 19)
-            lock_minute = cfg.get("youtube.review_lock_minute", 40)
             publish_hour = cfg.get("youtube.schedule_hour", 20)
             publish_minute = cfg.get("youtube.schedule_minute", 0)
             now = datetime.now(_KST)
-            lock_at = now.replace(hour=lock_hour, minute=lock_minute, second=0, microsecond=0)
             publish_at = now.replace(hour=publish_hour, minute=publish_minute, second=0, microsecond=0)
-            if publish_at <= lock_at:
+            if publish_at <= now:
                 publish_at += timedelta(days=1)
-            # 생성이 오래 걸려서 이미 잠금 시각이 지났으면, 하루씩 미루지 않고
-            # 지금 바로 처리(=대기 없이 곧장 거절 여부 확인 후 예약/공개)합니다.
-            if lock_at <= now:
-                lock_at = now
-
-            t = threading.Thread(
-                target=_lock_in_schedule,
-                args=(name, chan, result.youtube_video_id, result.title or title, kind, lock_at, publish_at, thread_id),
-                daemon=True,
-            )
-            t.start()
-            with _pending_lock_lock:
-                _pending_lock_threads.append(t)
+            _finalize_publish(name, chan, result.youtube_video_id, result.title or title, kind, publish_at, thread_id)
         else:
             notify_discord(
                 f"✅ [{name}] {kind} 업로드 완료(비공개) — {title}\n"
@@ -288,9 +228,8 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     """채널 하나의 대기열을 처리합니다. (성공 개수, 실패 개수)를 반환."""
     name = chan.get("name") or "(이름없음)"
     default_privacy = cfg.get("youtube.default_privacy", "private")
-    # 공개가 목표인 채널이어도 일단 비공개로만 올립니다 — 예약(publishAt)을
-    # 언제 걸지는 _handle_result의 lock-in 스레드가 review_lock 시각까지
-    # 기다렸다가 결정합니다(그 전에 /영상 거절 가능).
+    # 공개가 목표인 채널이어도 일단 비공개로 올린 뒤, _handle_result가 곧바로
+    # _finalize_publish로 예약공개(publishAt)를 확정합니다.
     upload_privacy = "private" if default_privacy == "public" else default_privacy
     input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
 
@@ -404,14 +343,6 @@ def main() -> int:
     logger.info("daily_generate: 대본 생성 완료 — %d/%d개 채널, 총 %d개 저장", gen_ok, len(channels), gen_saved)
 
     up_ok, up_fail = _process_queue(cfg, channels, logger)
-
-    # 채널 처리는 다 끝났어도, review_lock 시각까지 기다리는 lock-in 스레드가
-    # 아직 돌고 있을 수 있음 — 안 기다리고 프로세스가 끝나면 daemon 스레드가
-    # 죽어서 예약이 영영 안 걸립니다.
-    with _pending_lock_lock:
-        threads = list(_pending_lock_threads)
-    for t in threads:
-        t.join()
 
     elapsed_str = _format_elapsed(time.time() - start)
 
