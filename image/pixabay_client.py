@@ -20,6 +20,7 @@ from utils.logger import get_logger
 logger = get_logger(__name__)
 
 PIXABAY_API_URL = "https://pixabay.com/api/"
+PIXABAY_VIDEO_API_URL = "https://pixabay.com/api/videos/"
 
 
 class PixabayClient:
@@ -129,6 +130,74 @@ class PixabayClient:
         logger.info("[Pixabay] Downloaded: %s → %s", image_url[:60], dest.name)
         return dest
 
+    def download_video_for_prompt(
+        self,
+        prompt: str,
+        save_dir: str | Path,
+        filename: Optional[str] = None,
+        index: int = 0,
+    ) -> Optional[Path]:
+        """
+        프롬프트로 Pixabay 비디오 검색 후 첫 번째 클립을 다운로드합니다.
+        정지 이미지(download_for_prompt)와 동일한 캐시/키워드추출/재시도 로직을
+        쓰되, 비디오 전용 엔드포인트·hit 구조(videos.{large,medium,small,tiny})를
+        사용합니다. 씬 화면비에 맞춰 가로(horizontal)/세로(vertical) 여부와 무관하게
+        일단 가장 화질 좋은 것부터 시도하고, 없으면 그 다음 화질로 내려갑니다
+        (Pixabay 비디오는 사진보다 검색 결과가 훨씬 적어서, 없으면 호출부가
+        정지 이미지로 자연스럽게 폴백합니다).
+        """
+        save_dir = Path(save_dir)
+        save_dir.mkdir(parents=True, exist_ok=True)
+
+        cache_key = "vid_" + self._cache_key(prompt, index)
+        if self._cache_dir:
+            cached = self._find_video_cache(cache_key)
+            if cached:
+                logger.debug("[Pixabay] Video cache hit: %s", prompt[:40])
+                dest = save_dir / (filename or cached.name)
+                import shutil
+                shutil.copy2(cached, dest)
+                return dest
+
+        keywords = self._extract_keywords(prompt)
+        logger.info("[Pixabay] Video searching: %r", keywords)
+
+        hits = self._search_video(keywords)
+        if not hits:
+            short = " ".join(keywords.split()[:2])
+            logger.warning("[Pixabay] No video results for %r, retrying with %r", keywords, short)
+            hits = self._search_video(short)
+
+        if not hits:
+            logger.info("[Pixabay] No videos found for prompt: %s", prompt[:60])
+            return None
+
+        hit = hits[min(index, len(hits) - 1)]
+        videos = hit.get("videos", {})
+        video_url = None
+        for quality in ("large", "medium", "small", "tiny"):
+            candidate = videos.get(quality, {})
+            if candidate.get("url"):
+                video_url = candidate["url"]
+                break
+        if not video_url:
+            logger.error("[Pixabay] No video URL in hit: %s", hit)
+            return None
+
+        fname = filename or f"{cache_key}.mp4"
+        dest = save_dir / fname
+
+        if not self._download(video_url, dest):
+            return None
+
+        if self._cache_dir:
+            cache_path = self._cache_dir / f"{cache_key}.mp4"
+            import shutil
+            shutil.copy2(dest, cache_path)
+
+        logger.info("[Pixabay] Video downloaded: %s → %s", video_url[:60], dest.name)
+        return dest
+
     def test_api_key(self) -> bool:
         """API 키가 유효한지 확인합니다."""
         try:
@@ -165,6 +234,27 @@ class PixabayClient:
                 return hits
         except Exception as e:
             logger.error("[Pixabay] Search error: %s", e)
+            return None
+
+    def _search_video(self, query: str, per_page: Optional[int] = None) -> Optional[List[dict]]:
+        """Pixabay 비디오 API 검색 요청을 보내고 hits 목록을 반환합니다."""
+        params = {
+            "key":        self._api_key,
+            "q":          query,
+            "safesearch": "true" if self._safe_search else "false",
+            "per_page":   per_page or self._per_page,
+            "lang":       "en",
+        }
+        url = PIXABAY_VIDEO_API_URL + "?" + urlencode(params)
+
+        try:
+            with urllib_request.urlopen(url, timeout=15) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                hits = data.get("hits", [])
+                logger.debug("[Pixabay] Video search %r → %d hits", query, len(hits))
+                return hits
+        except Exception as e:
+            logger.error("[Pixabay] Video search error: %s", e)
             return None
 
     def _download(self, url: str, dest: Path) -> bool:
@@ -217,3 +307,9 @@ class PixabayClient:
             if p.exists():
                 return p
         return None
+
+    def _find_video_cache(self, key: str) -> Optional[Path]:
+        if not self._cache_dir:
+            return None
+        p = self._cache_dir / f"{key}.mp4"
+        return p if p.exists() else None

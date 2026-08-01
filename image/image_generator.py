@@ -27,6 +27,7 @@ class ImageResult:
     success: bool
     error: Optional[str] = None
     elapsed: float = 0.0
+    is_video: bool = False          # True면 image_path가 정지 이미지가 아니라 비디오 클립
 
 
 class ImageGenerator:
@@ -56,6 +57,7 @@ class ImageGenerator:
 
         # Pixabay fallback
         pixabay_key = config.get("pixabay_api_key", "")
+        self._use_video = config.get("use_pixabay_video", True)
         self._pixabay: Optional[PixabayClient] = None
         if pixabay_key:
             self._pixabay = PixabayClient(
@@ -64,7 +66,9 @@ class ImageGenerator:
                 min_height=self._default_height,
                 cache_dir=self._temp_dir / "pixabay_cache",
             )
-            logger.info("[Image] Pixabay fallback 활성화됨")
+            logger.info(
+                "[Image] Pixabay fallback 활성화됨 (video=%s)", self._use_video
+            )
 
     # ─────────────────────────────────────────
     # 공개 API
@@ -100,9 +104,29 @@ class ImageGenerator:
                     success=True,
                 )
 
-            # 2) Pixabay fallback
+            # 2) Pixabay 비디오 (활성화 시 사진보다 우선 시도 — 검색 결과가 사진보다
+            #    훨씬 적어서, 없으면 자연스럽게 아래 3) 사진 검색으로 폴백됨)
+            if result is None and self._pixabay and self._use_video:
+                logger.info("[Image] Scene %d: Pixabay 비디오 검색 중...", scene.index)
+                pb_video = self._pixabay.download_video_for_prompt(
+                    prompt=scene.prompt,
+                    save_dir=self._temp_dir,
+                    filename=f"scene_{scene.index:04d}_pixabay.mp4",
+                    index=idx % 5,
+                )
+                if pb_video:
+                    result = ImageResult(
+                        scene_index=scene.index,
+                        image_path=str(pb_video),
+                        prompt=scene.prompt,
+                        success=True,
+                        is_video=True,
+                    )
+
+            # 3) Pixabay 사진 (비디오가 비활성화됐거나, 이 씬은 비디오 검색 결과가
+            #    없었을 때의 최종 폴백)
             if result is None and self._pixabay:
-                logger.info("[Image] Scene %d: Pixabay 검색 중...", scene.index)
+                logger.info("[Image] Scene %d: Pixabay 사진 검색 중...", scene.index)
                 pb_path = self._pixabay.download_for_prompt(
                     prompt=scene.prompt,
                     save_dir=self._temp_dir,

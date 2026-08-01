@@ -76,7 +76,8 @@
   "image": {
     "pixabay_api_key": "",
     "default_width": 1920,
-    "default_height": 1080
+    "default_height": 1080,
+    "use_pixabay_video": true
   },
 
   "subtitle": {

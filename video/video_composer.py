@@ -254,18 +254,28 @@ class VideoComposer:
         else:
             video_duration = clip_duration + self._crossfade
 
-        # 이미지 → 무음 비디오 클립
+        # 이미지/비디오 → 무음 비디오 클립
         silent_clip = str(self._temp / f"silent_{clip_index:04d}.mp4")
-        self._ff.image_to_video(
-            image_path=img,
-            output=silent_clip,
-            duration=video_duration,
-            width=self._w,
-            height=self._h,
-            fps=self._fps,
-            zoom_effect=self._zoom,
-            zoom_scale=self._zoom_scale,
-        )
+        if img_result and img_result.success and img_result.is_video:
+            self._ff.video_clip_to_scene(
+                video_path=img,
+                output=silent_clip,
+                duration=video_duration,
+                width=self._w,
+                height=self._h,
+                fps=self._fps,
+            )
+        else:
+            self._ff.image_to_video(
+                image_path=img,
+                output=silent_clip,
+                duration=video_duration,
+                width=self._w,
+                height=self._h,
+                fps=self._fps,
+                zoom_effect=self._zoom,
+                zoom_scale=self._zoom_scale,
+            )
 
         # 오디오 합치기
         self._ff.add_audio_to_video(silent_clip, voice_path, out, shortest=False)

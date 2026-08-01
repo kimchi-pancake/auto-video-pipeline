@@ -203,6 +203,43 @@ class FFmpegWrapper:
             output,
         ])
 
+    def video_clip_to_scene(
+        self,
+        video_path: str,
+        output: str,
+        duration: float,
+        width: int,
+        height: int,
+        fps: int = 30,
+    ) -> None:
+        """Pixabay 등에서 받은 비디오 클립을 씬 길이(duration)에 맞춰 정규화합니다.
+        image_to_video()와 같은 자리에 쓰이는 함수라 화면비 처리(꽉 채우게 확대 후
+        중앙 크롭)와 출력 인코딩 설정(ultrafast/crf23, 폐기될 중간 산출물)도 동일하게
+        맞췄습니다. 소스가 목표 길이보다 짧으면 반복 재생(loop)해서 채웁니다."""
+        src_duration = self.get_duration(video_path)
+        # -stream_loop는 입력 옵션이라 -i 앞에 와야 합니다. 소스 길이를 몰라서
+        # (probe 실패 등) 0으로 나오면 안전하게 루프를 걸어 최소한 잘리지 않게 합니다.
+        needs_loop = src_duration <= 0 or src_duration < duration
+        input_args = ["-stream_loop", "-1"] if needs_loop else []
+
+        vf = (
+            f"scale={width}:{height}:force_original_aspect_ratio=increase,"
+            f"crop={width}:{height},fps={fps}"
+        )
+
+        self.run([
+            *input_args,
+            "-i", video_path,
+            "-an",
+            "-vf", vf,
+            "-t", str(duration),
+            "-pix_fmt", "yuv420p",
+            "-c:v", "libx264",
+            "-preset", "ultrafast",
+            "-crf", "23",
+            output,
+        ])
+
     def concat_videos(self, inputs: List[str], output: str, crossfade: float = 0.8) -> None:
         """여러 영상을 크로스페이드로 연결합니다."""
         if not inputs:
