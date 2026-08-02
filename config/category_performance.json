@@ -1,6 +1,6 @@
 {
   "웃짬": {
-    "computed_at": "2026-07-28T07:24:24+00:00",
+    "computed_at": "2026-08-02T22:59:52+00:00",
     "long": [
       {
         "category": "고부갈등",
@@ -17,16 +17,16 @@
       {
         "category": "부부갈등",
         "count": 1,
-        "avg_views": 2.0,
-        "avg_retention": 3.9
+        "avg_views": 3.0,
+        "avg_retention": 11.58
       }
     ],
     "shorts": [
       {
         "category": "손주문제",
-        "count": 1,
-        "avg_views": 609.0,
-        "avg_retention": 135.62
+        "count": 2,
+        "avg_views": 818.0,
+        "avg_retention": 127.73499999999999
       },
       {
         "category": "부부갈등",
@@ -36,27 +36,21 @@
       },
       {
         "category": "고부갈등",
-        "count": 3,
-        "avg_views": 884.3333333333334,
-        "avg_retention": 87.68333333333334
+        "count": 4,
+        "avg_views": 886.0,
+        "avg_retention": 93.87
       },
       {
         "category": "형제유산",
-        "count": 3,
-        "avg_views": 748.0,
-        "avg_retention": 82.72333333333334
+        "count": 5,
+        "avg_views": 631.0,
+        "avg_retention": 74.066
       }
     ]
   },
   "도개": {
-    "computed_at": "2026-07-28T07:24:25+00:00",
+    "computed_at": "2026-08-02T22:59:53+00:00",
     "long": [
-      {
-        "category": "부모자식갈등",
-        "count": 1,
-        "avg_views": 8.0,
-        "avg_retention": 20.62
-      },
       {
         "category": "부모부양",
         "count": 1,
@@ -64,10 +58,22 @@
         "avg_retention": 19.1
       },
       {
+        "category": "부모자식갈등",
+        "count": 2,
+        "avg_views": 19.0,
+        "avg_retention": 14.985
+      },
+      {
         "category": "부부갈등",
         "count": 1,
         "avg_views": 25.0,
         "avg_retention": 7.99
+      },
+      {
+        "category": "고부갈등",
+        "count": 1,
+        "avg_views": 10.0,
+        "avg_retention": 3.62
       },
       {
         "category": "손주문제",
@@ -80,7 +86,7 @@
       {
         "category": "손주문제",
         "count": 2,
-        "avg_views": 1259.5,
+        "avg_views": 1259.0,
         "avg_retention": 175.315
       },
       {
@@ -97,20 +103,20 @@
       },
       {
         "category": "부모자식갈등",
-        "count": 1,
-        "avg_views": 1341.0,
-        "avg_retention": 122.78999999999999
+        "count": 3,
+        "avg_views": 1162.0,
+        "avg_retention": 103.71
       },
       {
         "category": "고부갈등",
-        "count": 2,
-        "avg_views": 1017.0,
-        "avg_retention": 110.935
+        "count": 4,
+        "avg_views": 950.5,
+        "avg_retention": 94.7075
       },
       {
         "category": "형제유산",
         "count": 3,
-        "avg_views": 1061.6666666666667,
+        "avg_views": 1062.0,
         "avg_retention": 80.24
       }
     ]
