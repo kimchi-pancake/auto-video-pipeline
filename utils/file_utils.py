@@ -212,9 +212,15 @@ def unique_path(path: str | Path) -> Path:
 def sanitize_filename(name: str, max_length: int = 200) -> str:
     """
     윈도우/리눅스에서 사용할 수 없는 문자를 제거하여 안전한 파일명을 만듭니다.
+
+    작은따옴표(')와 스마트 따옴표(‘’“”)도 제거합니다 — 파일시스템 자체에는
+    합법인 문자라 예전엔 안 걸렀는데, 이 이름이 그대로 run 디렉터리명이 되고
+    그 경로가 ffmpeg concat 리스트 파일(`file '경로'` 형식)에 그대로 들어가서,
+    제목에 따옴표가 섞이면(2026-08-02: "척추 전문의들이 경고하는 '그 앉기'...")
+    concat 파싱이 그 따옴표에서 끊겨 렌더링이 통째로 실패하는 사고가 있었습니다.
     """
-    # 사용 불가 문자 제거
-    illegal = r'\/:*?"<>|'
+    # 사용 불가 문자 + ffmpeg concat 리스트 파일을 깨뜨리는 따옴표류 제거
+    illegal = r'\/:*?"<>|' + "'‘’“”"
     for ch in illegal:
         name = name.replace(ch, "_")
     name = name.strip(". ")

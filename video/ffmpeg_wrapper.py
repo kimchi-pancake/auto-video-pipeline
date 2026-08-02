@@ -105,7 +105,14 @@ class FFmpegWrapper:
     def concat_audio(self, inputs: List[str], output: str) -> None:
         """여러 오디오 파일을 순서대로 이어붙입니다."""
         list_file = Path(output).with_suffix(".txt")
-        lines = "\n".join(f"file '{Path(p).as_posix()}'" for p in inputs)
+        # concat 리스트 파일은 `file '경로'` 형식이라, 경로 안에 작은따옴표가
+        # 있으면(예: 제목에서 파생된 폴더명에 따옴표가 남아있는 경우) 그 지점에서
+        # 따옴표가 조기 종료돼 파싱이 깨집니다. sanitize_filename()에서 이제
+        # 따옴표를 걸러내긴 하지만, 이 함수 자체도 어떤 경로가 들어와도 안전하게
+        # ffmpeg 표준 이스케이프(' -> '\'')를 적용합니다.
+        def _escape(p: str) -> str:
+            return Path(p).as_posix().replace("'", "'\\''")
+        lines = "\n".join(f"file '{_escape(p)}'" for p in inputs)
         list_file.write_text(lines, encoding="utf-8")
         self.run([
             "-f", "concat", "-safe", "0",
