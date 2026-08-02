@@ -734,5 +734,25 @@
     "uploaded_at": "2026-08-02T08:28:26+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "jxwjSFpuTFE",
+    "channel": "웃짬",
+    "category": "장건강",
+    "title": "식후 바로 누우신다면, 이미 식도가 망가지고 있습니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-08-02T10:43:56+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "PL0cZWZ30bU",
+    "channel": "웃짬",
+    "category": "장건강",
+    "title": "식후 바로 누우신다면, 이미 식도가 망가지고 있습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-02T10:49:46+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
