@@ -778,5 +778,65 @@
     "uploaded_at": "2026-08-02T10:49:46+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "WNN-8xfO1iE",
+    "channel": "웃짬",
+    "category": "당뇨관리",
+    "title": "아침에 이것 먹으면, 점심 1시에 배고픔 폭탄 옵니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-08-03T08:24:50+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "V4mObjl__mc",
+    "channel": "웃짬",
+    "category": "당뇨관리",
+    "title": "아침에 이것 먹으면, 점심 1시에 배고픔 폭탄 옵니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-03T08:36:45+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "dL35Co1sWxo",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "\"밤에 종아리 경련, 뼈가 부르는 신호입니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-03T08:52:12+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "PFHfMZwnI18",
+    "channel": "도개",
+    "category": "혈관혈압",
+    "title": "밤에 3번 이상 깨신다면, 혈관이 부르는 신호입니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-08-03T08:52:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ZZzGrRMRE1k",
+    "channel": "도개",
+    "category": "혈관혈압",
+    "title": "밤에 3번 이상 깨신다면, 혈관이 부르는 신호입니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-03T09:01:15+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "DSnp3CZEPd8",
+    "channel": "도개",
+    "category": "뼈건강",
+    "title": "\"우유 매일 마시는데 뼈가 약해진다고?\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-03T09:08:11+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
