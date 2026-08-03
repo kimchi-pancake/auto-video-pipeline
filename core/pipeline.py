@@ -536,6 +536,33 @@ class Pipeline:
             bgm_base_dir=self._bgm_dir,
         )
 
+    # 썸네일 배경 전용 "놀란 반응샷" 검색어 — 매번 다른 걸 쓰도록 순환합니다.
+    # 씬 이미지(담백한 상황 묘사)를 그대로 재활용하면 썸네일이 밋밋해서,
+    # 클릭을 유도하는 반응샷을 따로 검색합니다(2026-08-02 요청).
+    _THUMBNAIL_REACTION_QUERIES = [
+        "shocked surprised middle aged Korean woman face",
+        "shocked surprised Korean woman covering mouth",
+        "surprised senior Korean woman wide eyes",
+        "shocked Korean woman looking at phone",
+    ]
+
+    def _search_thumbnail_bg(self, out_dir: Path) -> Optional[str]:
+        """썸네일 배경용 "놀란 반응샷" 이미지를 Pixabay에서 검색해 다운로드합니다.
+        실패하면 None(호출부가 씬 이미지로 폴백)."""
+        pixabay_key = self._cfg.get("image.pixabay_api_key", "")
+        if not pixabay_key:
+            return None
+        try:
+            from image.pixabay_client import PixabayClient
+            import random
+            client = PixabayClient(api_key=pixabay_key, min_width=1280, min_height=720)
+            query = random.choice(self._THUMBNAIL_REACTION_QUERIES)
+            path = client.download_for_prompt(query, save_dir=out_dir, filename="thumbnail_bg_reaction.jpg")
+            return str(path) if path else None
+        except Exception as e:
+            logger.warning("[Thumbnail] 반응샷 배경 검색 실패, 씬 이미지로 대체: %s", e)
+            return None
+
     def _run_thumbnails(
         self, story: StoryData, out_dir: Path, image_results: Optional[List[ImageResult]] = None
     ):
@@ -543,10 +570,10 @@ class Pipeline:
             config=self._cfg.section("thumbnail"),
             assets_dir=self._assets_dir,
         )
-        # 첫 번째로 실제 다운로드된 장면 이미지를 썸네일 배경으로 재활용합니다
-        # (영상 도입부와 톤이 맞아서 검정 배경보다 시선을 더 끕니다).
-        bg_image_path = None
-        if image_results:
+        # 놀란 반응샷을 썸네일 전용 배경으로 우선 검색합니다 — 이게 실패할 때만
+        # 첫 번째로 실제 다운로드된 장면 이미지로 대체합니다.
+        bg_image_path = self._search_thumbnail_bg(out_dir)
+        if bg_image_path is None and image_results:
             for r in sorted(image_results, key=lambda r: r.scene_index):
                 if r.image_path:
                     bg_image_path = r.image_path
