@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import shutil
 import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -293,16 +294,37 @@ class Pipeline:
                 shutil.copy2(ctx["srt_path"], run_out / "subtitles.srt")
                 shutil.copy2(ctx["ass_path"], run_out / "subtitles.ass")
 
-            jm.add("TTS 생성",    stage_tts,        max_retries=max_retries, retry_delay=3.0)
-            jm.add("이미지 생성", stage_images,     max_retries=max_retries, retry_delay=5.0)
+            tts_job = jm.add("TTS 생성",    stage_tts,        max_retries=max_retries, retry_delay=3.0)
+            img_job = jm.add("이미지 생성", stage_images,     max_retries=max_retries, retry_delay=5.0)
             jm.add("자막 생성",   stage_subtitles,  max_retries=max_retries, retry_delay=2.0)
             jm.add("영상 합성",   stage_video,      max_retries=max_retries, retry_delay=5.0)
             if also_make_shorts:
                 jm.add("쇼츠 영상 합성", stage_shorts_video, max_retries=max_retries, retry_delay=5.0)
             jm.add("썸네일 생성", stage_thumbnails, max_retries=2,           retry_delay=2.0)
 
-            # 순차 실행 (중지 요청 반영)
+            # TTS 생성과 이미지 생성은 서로 결과를 참조하지 않는 독립 단계라서
+            # (둘 다 story만 읽고, ctx의 서로 다른 키에 씀) 동시에 돌립니다.
+            # 이미지 쪽(특히 AI 이미지 생성처럼 느린 소스)이 TTS 생성 시간 뒤에
+            # "숨겨져서" 전체 소요시간이 줄어듭니다. 나머지 단계(자막→영상 합성
+            # →...)는 실제로 이전 단계 결과에 의존하니 그대로 순차 실행합니다.
+            if self._stop_requested:
+                raise _StopRequested()
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                futures = [
+                    pool.submit(jm._execute, j)
+                    for j in jm._jobs if j.job_id in (tts_job, img_job)
+                ]
+                for f in futures:
+                    f.result()
+            for job_id in (tts_job, img_job):
+                job = jm.get_job(job_id)
+                if job.status == JobStatus.FAILED:
+                    raise RuntimeError(f"단계 [{job.name}] 실패: {job.error}")
+
+            # 나머지는 순차 실행 (중지 요청 반영)
             for job in jm._jobs:
+                if job.job_id in (tts_job, img_job):
+                    continue
                 if self._stop_requested:
                     raise _StopRequested()
                 jm._execute(job)

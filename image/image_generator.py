@@ -112,7 +112,12 @@ class ImageGenerator:
                     prompt=scene.prompt,
                     save_dir=self._temp_dir,
                     filename=f"scene_{scene.index:04d}_pixabay.mp4",
-                    index=idx % 5,
+                    # 씬마다 프롬프트가 이미 다 다르므로 굳이 2~5등(덜 맞는 결과)을
+                    # 순환해서 쓸 이유가 없습니다 — 항상 최상위(가장 잘 맞는) 결과를
+                    # 씁니다. 예전엔 idx % 5로 순환했는데, "화면이 다양해 보이게"
+                    # 하려던 의도였을 것으로 추정되나 실제로는 검색 연관성만
+                    # 떨어뜨렸습니다(2026-08-03 확인).
+                    index=0,
                 )
                 if pb_video:
                     result = ImageResult(
@@ -131,7 +136,12 @@ class ImageGenerator:
                     prompt=scene.prompt,
                     save_dir=self._temp_dir,
                     filename=f"scene_{scene.index:04d}_pixabay.jpg",
-                    index=idx % 5,
+                    # 씬마다 프롬프트가 이미 다 다르므로 굳이 2~5등(덜 맞는 결과)을
+                    # 순환해서 쓸 이유가 없습니다 — 항상 최상위(가장 잘 맞는) 결과를
+                    # 씁니다. 예전엔 idx % 5로 순환했는데, "화면이 다양해 보이게"
+                    # 하려던 의도였을 것으로 추정되나 실제로는 검색 연관성만
+                    # 떨어뜨렸습니다(2026-08-03 확인).
+                    index=0,
                 )
                 if pb_path:
                     result = ImageResult(
