@@ -726,8 +726,12 @@
     "title": "골밀도 떨어지는 중, 아직 모르시나요",
     "is_shorts": true,
     "uploaded_at": "2026-08-02T07:23:36+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 616,
+      "likes": 12,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-03T17:06:47+00:00"
   },
   {
     "video_id": "CarRNuN49dA",
@@ -736,8 +740,12 @@
     "title": "밤 11시 넘어 누우신다면, 이미 수면 부채가 쌓이고 있습니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-02T08:15:08+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-03T17:06:47+00:00"
   },
   {
     "video_id": "VZjaKvcWlIc",
@@ -746,8 +754,12 @@
     "title": "밤 11시 넘어 누우신다면, 이미 수면 부채가 쌓이고 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-02T08:21:29+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 254,
+      "likes": 4,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-03T17:06:47+00:00"
   },
   {
     "video_id": "HJICeiSv_io",
@@ -756,8 +768,12 @@
     "title": "\"골밀도 낮아지는 신호, 놓치면 안 됩니다\"",
     "is_shorts": true,
     "uploaded_at": "2026-08-02T08:28:26+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 583,
+      "likes": 11,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-03T17:06:47+00:00"
   },
   {
     "video_id": "jxwjSFpuTFE",
@@ -766,8 +782,12 @@
     "title": "식후 바로 누우신다면, 이미 식도가 망가지고 있습니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-02T10:43:56+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-03T17:06:47+00:00"
   },
   {
     "video_id": "PL0cZWZ30bU",
@@ -776,8 +796,12 @@
     "title": "식후 바로 누우신다면, 이미 식도가 망가지고 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-02T10:49:46+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 873,
+      "likes": 14,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-03T17:06:47+00:00"
   },
   {
     "video_id": "WNN-8xfO1iE",
