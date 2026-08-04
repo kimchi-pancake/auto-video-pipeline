@@ -1,0 +1,61 @@
+RUN_ID:
+claude_20260804_011924_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+뼈가 자꾸 부러진다면, 이미 늦은 걸 수도
+
+THUMBNAIL_SHORTS:
+뼈가 자꾸 부러진다면, 이미 늦은 걸
+
+---
+
+[SCENE: senior Asian woman holding wrist after minor fall in kitchen, 1080x1920]
+나레이터: 작은 넘어짐에 뼈가 부러지셨다면, 이미 골다공증이 상당히 진행됐을 수 있습니다.
+
+[SCENE: close-up of fragile bone structure diagram, 1080x1920]
+나레이터: 대부분의 분들은 뼈가 약해졌다는 걸 부러질 때까지 모릅니다.& 그게 가장 위험한 부분입니다.
+
+[SCENE: Korean elderly woman touching lower back with pain expression, 1080x1920]
+나레이터: 특히 여성분들은 폐경 이후 뼈 밀도가 빠르게 떨어집니다.& 10년 사이에 30%까지 손실될 수 있습니다.
+
+[SCENE: multiple images showing common daily activities - cooking, gardening, playing with grandchildren, 1080x1920]
+나레이터: 평소에 뼈의 건강 상태를 확인할 수 있는 신호들이 있습니다.& 손목을 삐끗한 것도 아닌데 자주 아프거나, 키가 줄어든 것 같거나, 허리가 자꾸 굽어진다면 주의가 필요합니다.
+
+[SCENE: doctor showing bone density scan results to senior patient, 1080x1920]
+나레이터: 증상이 나타났을 때는 이미 뼈 손실이 상당히 진행된 상태입니다.& 정확한 진단과 치료는 반드시 전문의와 상담하시길 바랍니다.
+
+[SCENE: question mark with finger pointing at screen, 1080x1920]
+나레이터: 그럼 지금부터 뼈를 지키는 방법을 알려드릴 텐데요.& 화면을 두 번 눌러주시겠어요?
+
+[SCENE: senior Asian woman drinking milk at breakfast table, 1080x1920]
+나레이터: 첫 번째는 칼슘입니다.& 우유 한 잔, 요구르트, 치즈 같은 유제품을 매일 섭취하세요.
+
+[SCENE: various calcium-rich foods - fish, leafy greens, nuts displayed on table, 1080x1920]
+나레이터: 유제품이 부담스럽다면 멸치볶음이나 시금치, 두부도 좋습니다.& 하루에 우유 2잔 정도의 칼슘이 필요합니다.
+
+[SCENE: senior Asian man walking outdoors in morning sunlight, 1080x1920]
+나레이터: 두 번째는 햇빛입니다.& 하루 20분, 오전 10시부터 오후 3시 사이에 팔다리가 노출되도록 산책하세요.
+
+[SCENE: close-up of vitamin D supplement pills and glass of water, 1080x1920]
+나레이터: 햇빛이 부족하면 비타민 D 흡수가 떨어지고, 칼슘을 제대로 쓸 수 없습니다.& 겨울철이나 외출이 어려우면 전문의와 상담 후 보충제를 고려하세요.
+
+[SCENE: senior Asian couple doing light resistance exercises - light weight training with dumbbells at home, 1080x1920]
+나레이터: 세 번째는 운동입니다.& 주 3일, 하루 10분씩 가벼운 아령이나 저항 운동을 하면 뼈가 강해집니다.& 이 다음 내용이 사실 가장 중요하니 조금만 더 함께해 주세요.
+
+[SCENE: Asian senior woman checking calendar on wall, planning future medical appointments, 1080x1920]
+나레이터: 가장 중요한 것은 미리 확인하는 것입니다.& 50대 이상이라면 한 번은 뼈 밀도 검사를 받아보세요.& 조기에 발견하면 진행을 크게 늦출 수 있습니다.
+
+[SCENE: senior Asian person doing simple daily activities with confidence - climbing stairs, opening jars, moving freely, 1080x1920]
+나레이터: 뼈가 약해지면 일상 자체가 힘들어집니다.& 지금부터 준비하면 얼마든지 예방할 수 있습니다.& 오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.& 여러분은 가장 최근에 뼈 검사를 받으신 지 얼마나 되셨나요?& 댓글로 나눠주시면 좋겠습니다.

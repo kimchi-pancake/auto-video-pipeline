@@ -1,0 +1,59 @@
+RUN_ID:
+claude_20260804_011910_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+매일 아침 이것 하시는 분, 장이 썩어가고 있습니다
+
+THUMBNAIL_SHORTS:
+매일 아침 이것 하시는 분, 장이 썩어가고 있습니다
+
+[SCENE: senior Korean woman drinking hot water from cup in early morning, close-up, 1080x1920]
+나레이터: 아침에 뜨거운 물 마시시는 분들, 장에 염증이 쌓이고 있습니다.
+
+[SCENE: medical illustration of intestinal wall with inflammation markers, 1080x1920]
+나레이터: 공복 상태의 장벽은 매우 얇고 민감합니다.&갑자기 뜨거운 자극이 들어오면 미세한 상처가 생기죠.
+
+[SCENE: Korean person experiencing stomach discomfort, holding belly, 1080x1920]
+나레이터: 이런 상처가 매일 반복되면,&만성 염증으로 발전하게 됩니다.
+
+[SCENE: person checking digestion problems symptoms on phone, concerned look, 1080x1920]
+나레이터: 소화 안 되고, 배 더부룩하고, 피로가 풀리지 않나요?&그건 장 염증의 신호입니다.
+
+[SCENE: various breakfast items - coffee, hot water, spicy foods - displayed with X marks, 1080x1920]
+나레이터: 공복에 피해야 할 것들:&뜨거운 물, 커피, 맵고 자극적인 음식.
+
+[SCENE: close-up of finger testing water temperature, perfect warmth level, 1080x1920]
+나레이터: 화면을 두 번 눌러서 좋아요를 눌러주시면,&지금부터 해결 방법을 알려드리겠습니다.
+
+[SCENE: person pouring warm water at ideal temperature, 1080x1920]
+나레이터: 첫째, 미지근한 물(35~40도)로 시작하세요.&뜨거운 물이 절대 아닙니다.
+
+[SCENE: clock showing 30 minutes passing, time-lapse effect, 1080x1920]
+나레이터: 둘째, 30분을 기다린 후에 식사하세요.&장이 깨어날 시간을 주는 겁니다.
+
+[SCENE: slow-motion of chewing food thoroughly, peaceful eating, 1080x1920]
+나레이터: 셋째, 한 입에 30번 이상 씹으세요.&빨리 먹는 게 장의 가장 큰 적입니다.
+
+[SCENE: person doing gentle abdominal massage in circular motion, 1080x1920]
+나레이터: 식사 후엔 시계 방향으로 10분간 복부 마사지하세요.&장의 연동 운동이 활발해집니다.
+
+[SCENE: calendar showing 2 weeks, 4 weeks, 8 weeks with improvement marks, 1080x1920]
+나레이터: 2주면 배부룩함이 줄고,&4주면 소화가 편하고,&8주면 피로가 사라집니다.
+
+[SCENE: happy senior person with more energy, bright morning, 1080x1920]
+나레이터: 작은 습관이 장을 살립니다.&지금부터 바꿔보세요.
+
+[SCENE: person looking at camera, warm and encouraging expression, 1080x1920]
+나레이터: 여러분은 지금 아침에 뭘 먼저 드시나요?&댓글로 알려주세요.

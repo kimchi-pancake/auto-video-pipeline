@@ -1,0 +1,53 @@
+RUN_ID:
+claude_20260804_012241_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+매일 아침 이것 하시는 분, 장이 썩고 있는데 모르십니다
+
+THUMBNAIL_SHORTS:
+매일 아침 이것 하시는 분, 장이 썩고 있는데 모르십니다
+
+[SCENE: Korean elderly woman drinking cold water immediately after waking up, 1080x1920]
+나레이터: 아침에 일어나서 찬물을 마시는 습관, 사실 장을 망치고 있습니다.
+
+[SCENE: diagram showing stomach with acid, digestive system illustration, 1080x1920]
+나레이터: 공복 상태의 위는 소화 효소와 위산으로 가득합니다.&여기 갑자기 차가운 물이 들어오면, 위산의 농도가 떨어지고 위 점막이 손상됩니다.
+
+[SCENE: Korean elderly person holding stomach with discomfort, 1080x1920]
+나레이터: 아침에 일어나 1~2시간 뒤 속이 불편하신 적 있나요?&자주 설사나 복부 팽만감이 느껴진다면, 바로 이것 때문일 수 있습니다.
+
+[SCENE: close-up of inflamed intestinal lining, medical visualization, 1080x1920]
+나레이터: 이 습관이 반복되면 만성 염증이 생기고, 결국 여러 장 질환의 시작점이 됩니다.
+
+[SCENE: finger tapping on phone screen, "double tap" gesture indicator, 1080x1920]
+나레이터: 궁금한데 해결방법을 알고 싶으신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: glass of warm water at proper temperature, thermometer showing 35-40 degrees, 1080x1920]
+나레이터: 첫째, 아침에 일어나 5~10분 뒤 따뜻한 물(35~40도)을 마세요.&찬물이 절대 안 됩니다.
+
+[SCENE: measuring water with cup, showing small portion, 1080x1920]
+나레이터: 둘째, 한 번에 150~200ml, 즉 컵 반 잔만 마세요.&500ml 이상은 위에 부담을 줍니다.
+
+[SCENE: clock showing time passing, waiting period visualization, 1080x1920]
+나레이터: 셋째, 물을 마신 후 최소 15분을 기다린 뒤 밥을 먹으세요.&이 타이밍이 장 손상을 막습니다.
+
+[SCENE: healthy Korean breakfast - soft porridge, steamed egg, vegetables, 1080x1920]
+나레이터: 아침 식사는 흰죽이나 계란 같은 소화하기 쉬운 음식으로 하세요.&기름진 음식, 커피는 이미 손상된 위에 더 자극을 줍니다.
+
+[SCENE: Korean elderly woman following new morning routine, looking relieved, 1080x1920]
+나레이터: 2~3주 이 루틴을 지키면, 대부분 아침 소화 불편함이 사라집니다.&배변도 규칙적이 되고요.
+
+[SCENE: Korean elderly person noting experience in comments, phone screen, 1080x1920]
+나레이터: 여러분은 아침에 물을 어떻게 마시고 있나요?&오늘부터 이 방법으로 바꾼 뒤 경험을 댓글에 남겨주세요.
