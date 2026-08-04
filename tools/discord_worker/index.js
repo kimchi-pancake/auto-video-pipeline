@@ -96,7 +96,7 @@ const REGISTRY_PATH = "config/video_registry.json";
 const CTA_PATH = "config/cta_settings.json";
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === "/register-command-x7k2m9") {
