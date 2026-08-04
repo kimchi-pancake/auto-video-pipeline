@@ -7,7 +7,8 @@
  *   /영상 취소 channel [date]           — 예약 취소 (date 생략 시 "다음 실행용" 취소)
  *   /영상 분석 [channel]                — 소재 카테고리별 성과(조회수) 요약
  *   /영상 주제생성 channel count [category] — 성과 데이터 참고해서 주제 N개 생성+예약
- *   /영상 시작                          — daily.yml(전 채널 정기 생성)을 지금 바로 트리거
+ *   /영상 시작                          — daily.yml(전 채널 대본 생성)을 지금 바로 트리거.
+ *                                          이미지 준비되면 조립은 자동으로 이어짐
  *   /영상 상태                          — 현재 실행 중인 작업 / 오늘 업로드 수 / 대기열
  *   /영상 로그                          — 최근 워크플로우 실행 기록 링크
  *   /영상 재생성 channel topic          — 그 자리에서 즉시 새로 생성(전체 재생성)
@@ -53,6 +54,20 @@
  * config/config.json의 youtube.schedule_hour/schedule_minute이 그 값을
  * 결정하고, 업로드 시 유튜브 자체 예약공개(publishAt)로 맞춰집니다.
  *
+ * AI 씬 이미지(Pollinations) 생성 + 조립 트리거
+ * ---------------------------------------------
+ * 2026-08-04: daily.yml(대본 생성)과 실제 영상 조립을 분리했습니다. 대본이
+ * 저장되는 순간 파이썬 쪽(core/ai_script_generator.py)이 /generate-images-x9k3m2
+ * 를 호출해 이 워커에게 씬 이미지 생성을 맡기고, 이 워커는 ctx.waitUntil()로
+ * Pollinations를 순차 호출해 assets/pending_images/{run_id}/에 커밋합니다.
+ * 그 생성이 끝나면(generateSceneImages 마지막) 이 워커가 곧바로
+ * assemble_daily.yml(TTS+영상 조립+업로드)을 트리거합니다 — 그 시점엔 이미지가
+ * 이미 다 있어서 GH Actions가 기다릴 시간이 거의 없습니다. 혹시 이 즉시
+ * 트리거가 실패해도(네트워크 오류 등) 놓치지 않도록, daily.yml cron보다 3시간
+ * 늦은 안전망 cron("0 10 * * *")도 같이 등록해야 합니다 — 그때도 큐가
+ * 비어 있으면 assemble_daily.yml이 조용히 아무 것도 안 하고 끝납니다.
+ * IMAGE_GEN_SECRET 환경변수(파이썬 쪽과 동일한 값)도 등록해야 합니다.
+ *
  * 매일 23:59 KST 채팅 비우기
  * -------------------------
  * 진행바/결과 메시지가 매일 쌓이는 걸 막기 위해, 매일 밤 이 채널의 활성
@@ -91,6 +106,32 @@ export default {
       return registerCommand(env);
     }
 
+    // GitHub Actions가 대본 파싱 직후(TTS 시작 전) 여기로 씬 프롬프트 목록을
+    // 던지면, 응답은 바로 주고(ctx.waitUntil로) 백그라운드에서 Pollinations
+    // AI 이미지를 순차 생성해 레포에 커밋합니다. GitHub Actions 잡 시간과
+    // 무관하게(Cloudflare는 대기시간을 과금하지 않음) 도는 게 핵심이라 —
+    // 파이프라인은 그동안 TTS를 진행하다가, 합성 직전에 git pull로 준비된
+    // 만큼만 가져다 쓰고 나머지는 Pixabay로 폴백합니다(2026-08-03).
+    if (url.pathname === "/generate-images-x9k3m2" && request.method === "POST") {
+      if (!env.IMAGE_GEN_SECRET || request.headers.get("X-Secret") !== env.IMAGE_GEN_SECRET) {
+        return new Response("not configured", { status: 404 });
+      }
+      if (!env.GITHUB_TOKEN || !env.GITHUB_REPO) {
+        return new Response("not configured", { status: 404 });
+      }
+      let payload;
+      try {
+        payload = await request.json();
+      } catch {
+        return new Response("invalid json", { status: 400 });
+      }
+      if (!payload.run_id || !Array.isArray(payload.scenes)) {
+        return new Response("missing run_id/scenes", { status: 400 });
+      }
+      ctx.waitUntil(generateSceneImages(env, payload.run_id, payload.scenes));
+      return json({ accepted: true, scene_count: payload.scenes.length });
+    }
+
     if (request.method !== "POST") {
       return new Response("OK", { status: 200 });
     }
@@ -119,13 +160,18 @@ export default {
   },
 
   // Cloudflare Cron Trigger가 정시에 이걸 부릅니다. cron 문자열로 어느
-  // 트리거인지 구분합니다(대시보드에 "0 7 * * *", "59 14 * * *", "*/10 * * * *"
-  // 세 개 다 등록돼있어야 함).
+  // 트리거인지 구분합니다(대시보드에 "0 7 * * *", "0 10 * * *", "59 14 * * *",
+  // "*/10 * * * *" 네 개 다 등록돼있어야 함).
   async scheduled(event, env, ctx) {
     if (event.cron === "59 14 * * *") {
       ctx.waitUntil(purgeChannel(env));
     } else if (event.cron === "*/10 * * * *") {
       ctx.waitUntil(retryOracleA1(env));
+    } else if (event.cron === "0 10 * * *") {
+      // daily.yml(대본 생성)보다 3시간 늦은 안전망 — generateSceneImages()가
+      // 끝나자마자 부르는 즉시 트리거(빠른 경로)가 실패했을 때만 의미가 있고,
+      // 이미 조립이 끝났으면 assemble_daily.yml이 큐가 비어 조용히 종료됩니다.
+      ctx.waitUntil(triggerAssembleIfIdle(env));
     } else {
       ctx.waitUntil(triggerDailyIfIdle(env));
     }
@@ -207,9 +253,14 @@ async function purgeChannel(env) {
 
 /** in_progress/queued 상태인 daily.yml 실행이 있으면 그 run 객체를, 없으면 null을 반환합니다. */
 async function findActiveDailyRun(env) {
+  return findActiveRun(env, "daily.yml");
+}
+
+/** in_progress/queued 상태인 workflowFile 실행이 있으면 그 run 객체를, 없으면 null을 반환합니다. */
+async function findActiveRun(env, workflowFile) {
   try {
     const resp = await fetch(
-      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/daily.yml/runs?per_page=5`,
+      `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/${workflowFile}/runs?per_page=5`,
       { headers: ghHeaders(env) }
     );
     if (!resp.ok) return null;
@@ -218,6 +269,15 @@ async function findActiveDailyRun(env) {
   } catch (e) {
     return null; // 조회 실패해도 트리거는 계속 진행 (fail-open)
   }
+}
+
+/** 이미 도는 assemble_daily.yml 실행이 없을 때만 새로 트리거합니다(중복 실행 방지).
+ * daily.yml의 cron 트리거보다 몇 시간 늦게 도는 안전망 — generateSceneImages()가
+ * 끝나자마자 곧바로 부르는 트리거(아래)가 실패했을 때를 대비합니다(2026-08-04). */
+async function triggerAssembleIfIdle(env) {
+  const active = await findActiveRun(env, "assemble_daily.yml");
+  if (active) return;
+  await dispatchWorkflow(env, "assemble_daily.yml", {});
 }
 
 // ─────────────────────────────────────────
@@ -401,7 +461,7 @@ async function handleStart(env) {
   }
   return json({
     type: 4,
-    data: { content: "🎬 전 채널 정기 생성(daily.yml) 지금 시작함. 진행 상황은 카드로 올라옴." },
+    data: { content: "📝 전 채널 대본 생성(daily.yml) 지금 시작함. AI 이미지 준비되는 대로 영상 조립(assemble_daily.yml)이 자동으로 이어짐." },
   });
 }
 
@@ -568,6 +628,102 @@ function encodeBase64(str) {
   let binary = "";
   bytes.forEach((b) => (binary += String.fromCharCode(b)));
   return btoa(binary);
+}
+
+/** ghPutFile/encodeBase64는 JSON 텍스트 전용이라 이미지 원본 바이트에는 못 씁니다.
+ *  raw ArrayBuffer를 그대로 base64로 인코딩하는 바이너리 전용 버전. */
+function encodeBase64Bytes(buffer) {
+  const bytes = new Uint8Array(buffer);
+  let binary = "";
+  const chunk = 0x8000;
+  for (let i = 0; i < bytes.length; i += chunk) {
+    binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
+  }
+  return btoa(binary);
+}
+
+/** JSON.stringify를 거치지 않고 raw 바이너리(ArrayBuffer)를 그대로 커밋합니다. */
+async function ghPutBinaryFile(env, path, buffer, message) {
+  const apiUrl = `https://api.github.com/repos/${env.GITHUB_REPO}/contents/${path}`;
+  const resp = await fetch(apiUrl, {
+    method: "PUT",
+    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: `${message} [skip ci]`,
+      content: encodeBase64Bytes(buffer),
+      branch: BRANCH,
+    }),
+  });
+  if (!resp.ok) {
+    const errText = await resp.text();
+    throw new Error(`이미지 커밋 실패 (${resp.status}): ${errText.slice(0, 200)}`);
+  }
+}
+
+// ─────────────────────────────────────────
+// AI 이미지 생성 (Pollinations) — 백그라운드 커밋
+// ─────────────────────────────────────────
+
+// 2026-08-04: 사용자가 직접 테스트해서 고른 톤 — 실사에 가까운 "AI 티" 나는
+// 얼굴 대신 따뜻한 색감의 수채화/스토리북 느낌. 주제(씬 프롬프트) 뒤에
+// 붙여야만 정상 동작합니다 — 이 문구를 주제보다 앞에 놓으면 Pollinations가
+// 주제 자체를 무시하고 엉뚱한 그림을 그리는 게 실측으로 확인됐습니다.
+const _IMAGE_STYLE_SUFFIX =
+  ", warm watercolor illustration, soft muted color palette, gentle golden hour lighting, " +
+  "visible paper texture, loose expressive brushstrokes, soft bleeding edges between colors, " +
+  "warm beige and amber undertones, cozy nostalgic atmosphere, hand-painted storybook feel, " +
+  "soft focus background, no harsh outlines, emotionally warm and comforting mood, " +
+  "traditional watercolor paper grain, delicate color washes";
+
+// 사람이 나오는 씬에서만 얼굴/손 관련 보정 문구를 추가합니다 — 이 문구를
+// 사람이 없는 씬(사과, 바나나, 풍경 등)에도 똑같이 넣었더니 주제를 무시하고
+// 매번 여자 얼굴 클로즈업을 그려버리는 문제가 실측으로 확인돼서, 씬 프롬프트에
+// 사람을 가리키는 단어가 있을 때만 조건부로 붙입니다(2026-08-04).
+const _PERSON_KEYWORDS =
+  /\b(woman|women|man|men|person|people|elderly|grandmother|grandma|grandfather|grandpa|doctor|patient|nurse|child|children|boy|girl|family|couple|human|face|portrait|lady|gentleman|senior|adult)\b/i;
+
+const _FACE_QUALITY_BOOST =
+  ", detailed symmetrical face, sharp clear eyes, correct facial anatomy, close-up portrait, " +
+  "headshot framing, hands not visible, wearing modest crew-neck clothing, fully clothed, covered shoulders";
+
+/**
+ * run_id에 속한 씬들을 하나씩 순차로 Pollinations(flux)에 요청해
+ * assets/pending_images/{run_id}/scene_{index:04d}.jpg 로 커밋합니다.
+ * ctx.waitUntil()로 호출되므로 GitHub Actions 잡 시간과는 무관하게 돕니다.
+ * Pollinations는 동시요청을 429로 막기 때문에 반드시 순차 처리합니다.
+ */
+async function generateSceneImages(env, runId, scenes) {
+  for (const scene of scenes) {
+    try {
+      const faceBoost = _PERSON_KEYWORDS.test(scene.prompt) ? _FACE_QUALITY_BOOST : "";
+      const prompt = `${scene.prompt}${faceBoost}${_IMAGE_STYLE_SUFFIX}`;
+      const seed = Math.floor(Math.random() * 1e9);
+      const url =
+        `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}` +
+        `?width=1920&height=1080&nologo=true&model=flux&seed=${seed}`;
+      const resp = await fetch(url);
+      if (!resp.ok) {
+        console.log(`[image-gen] scene ${scene.index} 실패 (${resp.status})`);
+        continue;
+      }
+      const buffer = await resp.arrayBuffer();
+      const path = `assets/pending_images/${runId}/scene_${String(scene.index).padStart(4, "0")}.jpg`;
+      await ghPutBinaryFile(env, path, buffer, `AI image scene ${scene.index} (${runId})`);
+      console.log(`[image-gen] scene ${scene.index} 완료`);
+    } catch (e) {
+      console.log(`[image-gen] scene ${scene.index} 에러: ${e.message}`);
+    }
+  }
+
+  // 대본 하나(run_id 하나)의 이미지가 다 끝날 때마다 곧바로 조립 워크플로우를
+  // 깨워봅니다 — 채널당 하루 3편(롱폼1+쇼츠2)이라 이 함수가 여러 번 불리는데,
+  // idle-guard(findActiveRun) 덕분에 이미 조립이 돌고 있으면 그냥 스킵되고,
+  // 마지막 run_id가 끝났을 때 비로소 실제로 새로 트리거됩니다(2026-08-04).
+  try {
+    await triggerAssembleIfIdle(env);
+  } catch (e) {
+    console.log(`[image-gen] assemble 트리거 실패(무시, 안전망 cron이 나중에 처리함): ${e.message}`);
+  }
 }
 
 function json(obj) {

@@ -89,6 +89,10 @@ class StoryData:
     raw_path: str                     # 원본 story.txt 경로
     resolution: Optional[Tuple[int, int]] = None  # RESOLUTION: 섹션 (예: 1080x1920). 없으면 GUI 설정값 사용
     category: Optional[str] = None    # CATEGORY: 섹션 (소재 분류, 성과 분석용). 없으면 None
+    run_id: Optional[str] = None      # RUN_ID: 섹션. core/ai_script_generator.py가 저장 시점에
+                                       # 미리 박아두는 값 — 이 값이 있으면 Pipeline이 이미 그
+                                       # run_id로 Worker에 AI 이미지 생성을 요청해둔 상태라는 뜻이라,
+                                       # 새 run_id를 만들지 않고 그대로 재사용합니다(중복 킥오프 방지).
 
 
 # ─────────────────────────────────────────────
@@ -130,6 +134,7 @@ class StoryParser:
 
         resolution = self._parse_resolution_directive()
         category = self._parse_single_line_section("CATEGORY")
+        run_id = self._parse_single_line_section("RUN_ID")
         cast = self._parse_section("CAST")
         bgm_files = self._parse_list_section("BGM")
         photo_files = self._parse_list_section("PHOTO")
@@ -155,6 +160,7 @@ class StoryParser:
             raw_path=str(self._path),
             resolution=resolution,
             category=category,
+            run_id=run_id,
         )
 
         self._validate(data)
@@ -399,7 +405,7 @@ class StoryParser:
     @staticmethod
     def _is_section_header(line: str) -> bool:
         """섹션 헤더(CAST:, BGM:, etc.) 인지 확인합니다."""
-        headers = {"RESOLUTION:", "CATEGORY:", "CAST:", "BGM:", "PHOTO:", "THUMBNAIL_LONG:", "THUMBNAIL_SHORTS:"}
+        headers = {"RESOLUTION:", "CATEGORY:", "RUN_ID:", "CAST:", "BGM:", "PHOTO:", "THUMBNAIL_LONG:", "THUMBNAIL_SHORTS:"}
         return line.upper() in {h.upper() for h in headers}
 
     def _read_lines(self) -> List[str]:

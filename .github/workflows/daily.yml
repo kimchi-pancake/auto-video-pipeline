@@ -1,4 +1,4 @@
-name: Daily Video Pipeline
+name: Daily Script Prepare
 
 on:
   workflow_dispatch:
@@ -11,6 +11,13 @@ on:
   # 전담합니다 — 그쪽은 dispatch 전에 findActiveDailyRun()으로 중복 실행
   # 여부를 확인하는 가드가 있습니다. 필요하면 workflow_dispatch로 수동
   # 트리거만 가능하게 남겨둡니다.
+  #
+  # 2026-08-04: "대본 생성 + 영상 조립"을 한 잡에서 같이 하던 걸 분리했습니다
+  # (assemble_daily.yml 참고). 이 워크플로우는 이제 대본 생성만 하고, 저장
+  # 시점에 Cloudflare Worker에 AI 씬 이미지 생성을 미리 요청해둡니다 — 그래야
+  # Worker가 그림을 다 그릴 때까지 실제 조립(GH Actions 시간이 드는 무거운
+  # 작업)을 기다리지 않아도 됩니다. Worker는 이미지 생성이 끝나면
+  # assemble_daily.yml을 직접 트리거합니다.
 
 permissions:
   contents: write
@@ -18,7 +25,7 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 350
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -26,66 +33,36 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
-
-      - name: Register Korean fonts (fontconfig) for subtitle burn-in
-        run: |
-          sudo mkdir -p /usr/share/fonts/truetype/custom
-          sudo cp assets/fonts/*.ttf /usr/share/fonts/truetype/custom/
-          sudo fc-cache -f
-
       - name: Install Python dependencies
         run: pip install -r requirements-headless.txt
 
       - name: Write secrets to config files
         env:
           CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
-          CLIENT_SECRETS_JSON: ${{ secrets.CLIENT_SECRETS_JSON }}
-          YT_CHANNEL_UJJJAM_CREDENTIALS: ${{ secrets.YT_CHANNEL_UJJJAM_CREDENTIALS }}
-          YT_CHANNEL_DOGAE_CREDENTIALS: ${{ secrets.YT_CHANNEL_DOGAE_CREDENTIALS }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          mkdir -p config/channels
           printf '%s' "$CONFIG_JSON" > config/config.json
-          printf '%s' "$CLIENT_SECRETS_JSON" > config/client_secrets.json
-          printf '%s' "$YT_CHANNEL_UJJJAM_CREDENTIALS" > "config/channels/웃짬_credentials.json"
-          printf '%s' "$YT_CHANNEL_DOGAE_CREDENTIALS" > "config/channels/도개_credentials.json"
           printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
           # Windows PowerShell로 등록한 시크릿에 UTF-8 BOM이 섞여 들어올 수 있어 제거
-          for f in config/config.json config/client_secrets.json "config/channels/웃짬_credentials.json" "config/channels/도개_credentials.json"; do
-            sed -i '1s/^\xEF\xBB\xBF//' "$f"
-          done
+          sed -i '1s/^\xEF\xBB\xBF//' config/config.json
 
-      - name: Run daily pipeline (script gen + video + upload)
+      - name: Generate daily scripts + kick off AI image generation
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/daily_generate.py
+          DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
+          IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
+        run: python scripts/prepare_daily.py
 
-      # 렌더링은 성공했는데 유튜브 업로드만 실패하는 경우(자격증명 만료 등)가
-      # 있었는데, 이 러너는 job이 끝나면 파일시스템이 통째로 사라져서 archive/
-      # 안의 완성된 영상이 그대로 유실됐음(2026-07-24 사고). 업로드 성공 여부와
-      # 무관하게 archive/ 를 항상 artifact로 잠깐 보관해서, 실패했을 때 처음부터
-      # 다시 만들지 않고 tools/upload_from_archive.py 로 재업로드만 하면 되게 함.
-      - name: Upload produced videos as a recovery artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: produced-videos-${{ github.run_id }}
-          path: archive/
-          retention-days: 3
-          if-no-files-found: ignore
-
-      - name: Commit updated state
+      - name: Commit queued scripts + state
         if: always()
         run: |
           git config user.name "auto-video-pipeline-bot"
           git config user.email "actions@users.noreply.github.com"
-          for f in config/daily_generate_state.json config/topic_queue.json config/video_registry.json; do
+          git add -A -- queue/pending_scripts
+          for f in config/daily_generate_state.json config/topic_queue.json; do
             [ -f "$f" ] && git add "$f"
           done
-          git diff --staged --quiet || git commit -m "update daily generation state [skip ci]"
+          git diff --staged --quiet || git commit -m "queue daily scripts for assembly [skip ci]"
           git pull --rebase --autostash
           git push

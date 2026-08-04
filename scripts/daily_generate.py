@@ -1,20 +1,29 @@
 """
 scripts/daily_generate.py
 ==========================
-GUI 없이 돌아가는 헤드리스 스크립트. 설정에 등록된 모든 채널에 대해:
+채널별 대기열(큐)을 실제 영상으로 만들고 YouTube에 업로드까지 진행하는
+"조립" 단계 전용 스크립트입니다.
 
-  1. 하루치 대본(채널당 롱폼 1개 + 쇼츠 2개)을 Claude API로 생성해서 대기열에 저장
-  2. 대기열에 쌓인 모든 파일을 실제로 영상으로 만들고 YouTube에 업로드까지 진행
+2026-08-04 이전에는 "대본 생성 + 영상 조립"이 이 스크립트 하나에서 한 번에
+돌았는데, AI 이미지를 Cloudflare Worker(Pollinations)로 미리 그려두는
+구조로 바꾸면서 두 단계로 쪼갰습니다:
+  1. scripts/prepare_daily.py — 대본만 생성해서 queue/pending_scripts/에
+     커밋해두고, 그 자리에서 Worker에 씬 이미지 생성을 요청함(대기 없음).
+  2. 이 스크립트(daily_generate.py) — queue/pending_scripts/에 쌓인 대본을
+     로컬 input_dir로 가져와 실제 영상(TTS+이미지+자막+합성)을 만들고 업로드.
+     이미지는 이미 Worker가 미리 그려뒀을 확률이 높아 대기 시간이 거의 없음.
 
-Windows 작업 스케줄러가 매일 이 스크립트를 실행합니다 — 이 한 번의 실행으로
-"대본 작성 → 영상 생성 → 업로드"가 전부 끝납니다.
+Worker가 이미지 생성을 다 끝내면 이 스크립트를 담은 assemble_daily.yml
+워크플로우를 직접 트리거합니다(tools/discord_worker/index.js). 혹시 그
+트리거가 실패해도 놓치지 않도록, Worker의 별도 cron이 몇 시간 뒤 안전망으로
+한 번 더 트리거합니다 — 그때도 대기열이 비어 있으면 이 스크립트는 아무것도
+안 하고 조용히 끝납니다.
 
 수동 실행: python scripts/daily_generate.py
 """
 
 from __future__ import annotations
 
-import json
 import re
 import sys
 import time
@@ -30,31 +39,12 @@ sys.path.insert(0, str(ROOT))
 from utils.logger import setup_logging, get_logger
 from utils.config_manager import get_config
 from utils.notify import notify, notify_discord, notify_discord_create_thread
-from core.ai_script_generator import ScriptGenerationError, generate_daily_batch
 from core.batch_runner import BatchRunner
-from core.topic_queue import pop_topic
+from core.daily_queue import pull_queue_into_input_dir
 from core.video_registry import record_upload
 from utils.soft_approval import publish_video, schedule_publish
 
-# 채널별 "오늘 이미 대본 생성했음" 기록. 같은 날 이 스크립트를 두 번 돌려도
-# (예: 스케줄 실행 후 수동 테스트) 대본이 중복으로 쌓이지 않도록 막습니다.
-_STATE_PATH = ROOT / "config" / "daily_generate_state.json"
-
 _KST = pytz.timezone("Asia/Seoul")
-
-
-def _load_state() -> dict:
-    if not _STATE_PATH.exists():
-        return {}
-    try:
-        return json.loads(_STATE_PATH.read_text(encoding="utf-8"))
-    except Exception:
-        return {}
-
-
-def _save_state(state: dict) -> None:
-    _STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    _STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def _extract_title(video_path: str | None) -> str:
@@ -83,47 +73,6 @@ def _resolve_input_dir(input_dir: str, cfg) -> Path:
     path = ROOT / rel
     path.mkdir(parents=True, exist_ok=True)
     return path
-
-
-def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
-    """모든 채널에 하루치 대본을 생성합니다. 채널별로 오늘 이미 생성했으면
-    건너뜁니다. (성공 채널 수, 저장된 파일 총수)를 반환."""
-    today = date.today().isoformat()
-    state = _load_state()
-
-    logger.info("daily_generate: %d개 채널 대상으로 하루치 대본 생성 시작", len(channels))
-    ok_channels = 0
-    saved_total = 0
-    for chan in channels:
-        name = chan.get("name") or "(이름없음)"
-
-        if state.get(name) == today:
-            logger.info("daily_generate: '%s' 오늘 이미 대본 생성함 — 건너뜀", name)
-            ok_channels += 1
-            continue
-
-        input_dir = _resolve_input_dir(chan.get("input_dir", ""), cfg)
-        topic = pop_topic(name, today)
-        if topic:
-            logger.info("daily_generate: '%s' 디스코드로 예약된 주제 사용 — %s", name, topic)
-        try:
-            meta_list: list[dict] = []
-            saved = generate_daily_batch(input_dir, custom_topic=topic, channel=name, meta_out=meta_list)
-            logger.info("daily_generate: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
-            for meta in meta_list:
-                logger.info(
-                    "daily_generate: '%s' 대본 — 제목 \"%s\" · 확장 %s회 · 분량기준 %s",
-                    name, meta.get("title", "?"), meta.get("extends", 0),
-                    "충족" if meta.get("length_ok") else "미달",
-                )
-            ok_channels += 1
-            saved_total += len(saved)
-            state[name] = today
-            _save_state(state)
-        except ScriptGenerationError as e:
-            logger.error("daily_generate: '%s' 대본 생성 전체 실패 — %s", name, e)
-    logger.info("daily_generate: 대본 생성 종료 (%d/%d 채널 성공)", ok_channels, len(channels))
-    return ok_channels, saved_total
 
 
 def _finalize_publish(name: str, chan: dict, video_id: str, title: str, kind: str, publish_at: datetime, thread_id: str | None = None) -> None:
@@ -238,6 +187,13 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     def _on_file_done(story_path: str, result, tid) -> None:
         _handle_result(name, chan, cfg, default_privacy, story_path, result, counters, logger, thread_id=tid)
 
+    # queue/pending_scripts/{채널}/(scripts/prepare_daily.py가 미리 커밋해둔
+    # 대본)를 로컬 input_dir로 가져옵니다 — 이 스크립트가 조립 전용으로
+    # 쪼개지면서 생긴 단계입니다(2026-08-04).
+    pulled = pull_queue_into_input_dir(name, input_dir)
+    if pulled:
+        logger.info("daily_generate: '%s' 큐에서 대본 %d개 가져옴", name, len(pulled))
+
     # 대기 파일 조회는 스레드/BatchRunner 없이도 되니, 처리할 게 있을 때만
     # 채널별 디스코드 스레드를 만듭니다(빈 채널까지 매번 스레드가 생기지 않게).
     input_paths = sorted(input_dir.glob("*.txt"), key=lambda p: p.stat().st_ctime)
@@ -335,29 +291,25 @@ def main() -> int:
         return 1
 
     start = time.time()
-    channel_names = ", ".join(c.get("name", "?") for c in channels)
-    notify("자동화 시작", f"{len(channels)}개 채널 — 대본 생성 후 영상 제작·업로드까지 진행합니다.")
-    notify_discord(f"🎬 자동화 시작 — {len(channels)}개 채널({channel_names}) 대본 생성 후 영상 제작·업로드 진행")
-
-    gen_ok, gen_saved = _generate_scripts(cfg, channels, logger)
-    logger.info("daily_generate: 대본 생성 완료 — %d/%d개 채널, 총 %d개 저장", gen_ok, len(channels), gen_saved)
 
     up_ok, up_fail = _process_queue(cfg, channels, logger)
 
     elapsed_str = _format_elapsed(time.time() - start)
 
+    if up_ok == 0 and up_fail == 0:
+        # 큐가 비어 있어서 조용히 끝남 — Worker의 안전망 cron이 실제로 처리할
+        # 게 없는데도 매번 부를 수 있어서, 이 경우는 알림 없이 조용히 종료함.
+        logger.info("daily_generate: 처리할 대기열이 없어 종료 (%s 소요)", elapsed_str)
+        return 0
+
     logger.info(
-        "daily_generate: 전체 종료 (대본 %d/%d 채널, 영상 성공 %d개/실패 %d개, %s 소요)",
-        gen_ok, len(channels), up_ok, up_fail, elapsed_str,
+        "daily_generate: 전체 종료 (영상 성공 %d개/실패 %d개, %s 소요)",
+        up_ok, up_fail, elapsed_str,
     )
-    summary = (
-        f"대본 {gen_saved}개 생성 · 영상 {up_ok}개 업로드 성공"
-        + (f" · {up_fail}개 실패" if up_fail else "")
-        + f" · {elapsed_str} 소요"
-    )
+    summary = f"영상 {up_ok}개 업로드 성공" + (f" · {up_fail}개 실패" if up_fail else "") + f" · {elapsed_str} 소요"
     notify("자동화 완료", summary)
     notify_discord(("✅" if up_fail == 0 else "⚠️") + f" 자동화 완료 — {summary}")
-    return 0 if (gen_ok > 0 or up_ok > 0) else 1
+    return 0 if up_ok > 0 else 1
 
 
 if __name__ == "__main__":

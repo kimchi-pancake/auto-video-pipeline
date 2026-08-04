@@ -15,6 +15,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Callable, List, Optional
 
+from image.ai_image_kickoff import kickoff_ai_images
 from image.image_generator import ImageGenerator, ImageResult
 from image.thumbnail_generator import ThumbnailGenerator
 from parser.story_parser import StoryParser, StoryData, Scene, DialogueLine
@@ -96,6 +97,7 @@ class Pipeline:
         self._stop_requested = False
 
         root = Path(__file__).parent.parent
+        self._root = root
         self._temp_dir    = root / self._cfg.get("paths.temp_dir",    "temp")
         self._output_dir  = root / self._cfg.get("paths.output_dir",  "output")
         self._archive_dir = root / self._cfg.get("paths.archive_dir", "archive")
@@ -172,13 +174,18 @@ class Pipeline:
             # 완전히 동일한 경로를 타므로(합성 텍스트가 하나 늘어난 것뿐)
             # 손댈 게 없고, 이미지만 Pixabay 검색 대신 전용 타이틀 카드를
             # 씁니다(stage_images에서 처리).
+            # 실제 씬 index는 절대 건드리지 않습니다 — RUN_ID가 있는 story는
+            # core/ai_script_generator.py가 저장 시점에 이미 이 index 그대로
+            # Worker에 AI 이미지 생성을 요청해뒀기 때문에(image/ai_image_kickoff.py),
+            # 여기서 +1씩 밀어버리면 pending_images/{run_id}/scene_XXXX.jpg
+            # 파일명과 실제 조회하는 index가 어긋나서 전부 못 찾게 됩니다
+            # (2026-08-04). 인트로 카드는 실제 씬과 절대 안 겹치는 -1을 씁니다
+            # (.index는 딕셔너리 키로만 쓰여서 연속된 숫자일 필요가 없음).
             intro_title = (story.raw_title or "").strip()
             has_intro = bool(intro_title) and bool(story.scenes)
             if has_intro:
-                for s in story.scenes:
-                    s.index += 1
                 story.scenes.insert(0, Scene(
-                    index=0,
+                    index=-1,
                     prompt="",
                     resolution=None,
                     dialogues=[DialogueLine(
@@ -189,7 +196,17 @@ class Pipeline:
 
             # 런 디렉터리 생성
             safe_title = sanitize_filename(story.raw_title or "video", 50)
-            ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+            # story.txt에 RUN_ID:(core/ai_script_generator.py가 저장 시점에 이미
+            # 박아둔 값)가 있으면 그대로 재사용합니다 — 이미 그 run_id로 Worker에
+            # AI 이미지 생성을 요청해뒀다는 뜻이라(대본 생성 직후, 지금보다 몇
+            # 시간 전일 수도 있음), 여기서 새로 kickoff하면 같은 이미지를 중복
+            # 요청하는 낭비가 됩니다. RUN_ID가 없는 story(수동/GUI로 붙여넣은
+            # 대본)는 예전처럼 지금 이 자리에서 새로 발급하고 바로 킥오프합니다.
+            if story.run_id:
+                ts = story.run_id
+            else:
+                ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+                kickoff_ai_images(ts, story.scenes)
             run_name = f"{ts}_{safe_title}"
 
             run_out = self._output_dir / run_name
@@ -225,11 +242,11 @@ class Pipeline:
                 self._emit(2, 0, len(story.scenes), "이미지 생성 중...")
                 t0 = time.time()
                 real_scenes = story.scenes[1:] if has_intro else story.scenes
-                real_images = self._run_images(real_scenes, story.photo_files, temp / "images")
+                real_images = self._run_images(real_scenes, story.photo_files, temp / "images", run_id=ts)
                 if has_intro:
                     title_card = self._build_title_card(intro_title, temp / "images")
                     intro_image = ImageResult(
-                        scene_index=0,
+                        scene_index=-1,
                         image_path=str(title_card) if title_card else None,
                         prompt="title_card",
                         success=bool(title_card),
@@ -446,7 +463,8 @@ class Pipeline:
         return builder.build(story)
 
     def _run_images(
-        self, scenes: List[Scene], photo_files: Optional[List[str]], temp: Path
+        self, scenes: List[Scene], photo_files: Optional[List[str]], temp: Path,
+        run_id: Optional[str] = None,
     ) -> List[ImageResult]:
         def cb(done, total, idx):
             self._emit(2, done, total, f"이미지 {done}/{total}")
@@ -455,6 +473,8 @@ class Pipeline:
             config=self._cfg.section("image"),
             temp_dir=temp,
             progress_callback=cb,
+            run_id=run_id,
+            repo_root=self._root,
         )
         return gen.generate_all(
             scenes=scenes,

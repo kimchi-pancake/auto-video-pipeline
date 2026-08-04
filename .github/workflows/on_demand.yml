@@ -60,6 +60,8 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
+          IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
         run: python scripts/generate_topic.py --channel "${{ inputs.channel }}" --topic "${{ inputs.topic }}"
 
       - name: Commit updated registry
@@ -68,6 +70,11 @@ jobs:
           git config user.name "auto-video-pipeline-bot"
           git config user.email "actions@users.noreply.github.com"
           [ -f config/video_registry.json ] && git add config/video_registry.json
+          # 2시간 넘은 AI 이미지 임시 폴더 정리 (daily.yml과 동일한 이유)
+          if [ -d assets/pending_images ]; then
+            find assets/pending_images -mindepth 1 -maxdepth 1 -type d -mmin +120 -print0 \
+              | xargs -0 -r git rm -rq --ignore-unmatch -r
+          fi
           git diff --staged --quiet || git commit -m "update video registry [skip ci]"
           git pull --rebase --autostash
           git push

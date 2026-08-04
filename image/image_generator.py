@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, List, Optional
 
+from image.ai_image_kickoff import pending_image_path, wait_for_pending_images
 from image.pixabay_client import PixabayClient
 from parser.story_parser import Scene
 from utils.logger import get_logger
@@ -46,11 +47,21 @@ class ImageGenerator:
         config: dict,
         temp_dir: str | Path,
         progress_callback: Optional[Callable] = None,
+        run_id: Optional[str] = None,
+        repo_root: Optional[str | Path] = None,
     ):
         self._cfg = config
         self._temp_dir = Path(temp_dir)
         self._temp_dir.mkdir(parents=True, exist_ok=True)
         self._progress_callback = progress_callback
+
+        # Cloudflare Worker가 백그라운드에서 미리 생성해둔 AI 이미지를 쓰기
+        # 위한 run_id/저장소 경로. 둘 다 있어야 pending_images를 확인합니다
+        # (없으면 예전처럼 Pixabay만 사용 — 기존 동작 그대로 유지).
+        self._run_id = run_id
+        self._repo_root = Path(repo_root) if repo_root else None
+        self._ai_wait_timeout = config.get("ai_image_wait_timeout_sec", 1200)
+        self._ai_poll_interval = config.get("ai_image_poll_interval_sec", 15)
 
         self._default_width = config.get("default_width", 1920)
         self._default_height = config.get("default_height", 1080)
@@ -87,6 +98,20 @@ class ImageGenerator:
         results: List[ImageResult] = []
         total = len(scenes)
 
+        if self._run_id and self._repo_root:
+            # "모든 사진을 AI로 대체"가 목표라서, 한 번 pull해보고 없으면
+            # 바로 Pixabay로 넘기지 않고 Worker가 다 그릴 때까지(설정된
+            # 타임아웃 한도 내에서) 기다립니다. 이 대기는 stage_tts와 같은
+            # 스레드풀에서 동시에 돌기 때문에 TTS 시간만큼은 겹쳐지지만,
+            # 그 이상 걸리면 GH Actions 시간이 실제로 늘어납니다(2026-08-04).
+            logger.info("[Image] AI 이미지 준비 대기 중... (run_id=%s, 최대 %d초)", self._run_id, self._ai_wait_timeout)
+            wait_for_pending_images(
+                self._repo_root, self._run_id,
+                [s.index for s in scenes],
+                timeout_sec=self._ai_wait_timeout,
+                poll_interval_sec=self._ai_poll_interval,
+            )
+
         for idx, scene in enumerate(scenes):
             logger.info("[Image] Scene %d/%d: %s", idx + 1, total, scene.prompt[:60])
             result: Optional[ImageResult] = None
@@ -104,7 +129,22 @@ class ImageGenerator:
                     success=True,
                 )
 
-            # 2) Pixabay 비디오 (활성화 시 사진보다 우선 시도 — 검색 결과가 사진보다
+            # 2) Worker가 미리 생성해둔 AI 이미지 (수채화/만화풍) — 대본 파싱
+            #    직후 Worker에 비동기로 던져놓고 위에서 완성될 때까지 기다린
+            #    뒤라서, 여기서는 로컬에 받아진 파일만 확인하면 됩니다. 대기
+            #    시간 내에 못 끝난 씬만 아래 Pixabay로 폴백됩니다.
+            if result is None and self._run_id and self._repo_root:
+                ai_path = pending_image_path(self._repo_root, self._run_id, scene.index)
+                if ai_path.exists():
+                    logger.info("[Image] Scene %d: AI 생성 이미지 사용 → %s", scene.index, ai_path)
+                    result = ImageResult(
+                        scene_index=scene.index,
+                        image_path=str(ai_path),
+                        prompt=scene.prompt,
+                        success=True,
+                    )
+
+            # 3) Pixabay 비디오 (활성화 시 사진보다 우선 시도 — 검색 결과가 사진보다
             #    훨씬 적어서, 없으면 자연스럽게 아래 3) 사진 검색으로 폴백됨)
             if result is None and self._pixabay and self._use_video:
                 logger.info("[Image] Scene %d: Pixabay 비디오 검색 중...", scene.index)
@@ -128,7 +168,7 @@ class ImageGenerator:
                         is_video=True,
                     )
 
-            # 3) Pixabay 사진 (비디오가 비활성화됐거나, 이 씬은 비디오 검색 결과가
+            # 4) Pixabay 사진 (비디오가 비활성화됐거나, 이 씬은 비디오 검색 결과가
             #    없었을 때의 최종 폴백)
             if result is None and self._pixabay:
                 logger.info("[Image] Scene %d: Pixabay 사진 검색 중...", scene.index)

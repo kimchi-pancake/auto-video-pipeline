@@ -339,15 +339,38 @@ def save_combo_script(text: str, input_dir: Path) -> list[Path]:
 
 
 def save_story(input_dir: Path, base_filename: str, content: str) -> Path:
-    """파일명이 겹치면 뒤에 번호를 붙여가며 저장합니다. (수동 가져오기와 동일 로직)"""
+    """파일명이 겹치면 뒤에 번호를 붙여가며 저장합니다. (수동 가져오기와 동일 로직)
+
+    저장하는 김에 RUN_ID: 헤더를 맨 앞에 박아 넣고, 그 자리에서 바로 Worker에
+    AI 이미지 생성을 요청합니다(image/ai_image_kickoff.py) — 대본이 만들어진
+    시점(합성보다 몇 시간 전일 수도 있음)에 최대한 빨리 던져둬야 Worker가
+    그림을 다 그릴 시간을 벌 수 있습니다. run_id는 파일명 그대로 써서 나중에
+    Pipeline이 같은 story.txt를 열어보면 어떤 run_id로 요청해뒀는지 바로
+    알 수 있게 합니다(2026-08-04)."""
     dest = input_dir / base_filename
     stem, suffix = dest.stem, dest.suffix
     n = 1
     while dest.exists():
         dest = input_dir / f"{stem}_{n}{suffix}"
         n += 1
-    dest.write_text(content, encoding="utf-8")
+    run_id = dest.stem
+    dest.write_text(f"RUN_ID:\n{run_id}\n\n{content}", encoding="utf-8")
+    _kickoff_ai_images_for_story(dest, run_id)
     return dest
+
+
+def _kickoff_ai_images_for_story(path: Path, run_id: str) -> None:
+    """방금 저장한 story.txt를 다시 파싱해 씬 프롬프트를 뽑고, Worker에 AI
+    이미지 생성을 비동기로 요청합니다. 실패해도 무시합니다 — 합성 단계
+    (core/pipeline.py)에 Pixabay 폴백이 항상 있어서 이 킥오프가 파이프라인을
+    막으면 안 됩니다."""
+    try:
+        from image.ai_image_kickoff import kickoff_ai_images
+        from parser.story_parser import StoryParser
+        story = StoryParser(path).parse()
+        kickoff_ai_images(run_id, story.scenes)
+    except Exception as e:
+        logger.warning("대본 저장 직후 AI 이미지 킥오프 실패(무시): %s", e)
 
 
 # ─────────────────────────────────────────────
