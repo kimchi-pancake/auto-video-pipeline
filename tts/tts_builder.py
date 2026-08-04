@@ -175,8 +175,15 @@ class TTSBuilder:
         """TTSResult를 SceneAudio 구조로 조립합니다."""
         # scene_idx → SceneAudio
         scene_audio_map: Dict[int, SceneAudio] = {}
+        # scene_idx → Scene. story.scenes[scene_idx]로 바로 인덱싱하면 안 됩니다 —
+        # .index는 리스트 위치와 다를 수 있습니다(예: 인트로 타이틀 카드는
+        # index=-1이지만 리스트 맨 앞(위치 0)에 옵니다. 2026-08-04: 이걸 리스트
+        # 인덱스로 잘못 쓰다가 모든 씬의 대사-오디오 매칭이 통째로 어긋나는
+        # 사고가 있었습니다 — 반드시 .index 기준 딕셔너리로 조회해야 합니다.
+        scene_by_index: Dict[int, Scene] = {}
         for scene in story.scenes:
             scene_audio_map[scene.index] = SceneAudio(scene.index, scene)
+            scene_by_index[scene.index] = scene
 
         for (scene_idx, dial_idx, seg_idx), req_id in zip(
             meta,
@@ -186,7 +193,7 @@ class TTSBuilder:
             ],
         ):
             result = result_map.get(req_id)
-            scene = story.scenes[scene_idx]
+            scene = scene_by_index[scene_idx]
             dial = scene.dialogues[dial_idx]
             seg_text = dial.segments[seg_idx] if seg_idx < len(dial.segments) else ""
 
