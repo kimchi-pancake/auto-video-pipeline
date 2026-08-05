@@ -810,8 +810,12 @@
     "title": "아침에 이것 먹으면, 점심 1시에 배고픔 폭탄 옵니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-03T08:24:50+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 3,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-05T16:28:31+00:00"
   },
   {
     "video_id": "V4mObjl__mc",
@@ -820,8 +824,12 @@
     "title": "아침에 이것 먹으면, 점심 1시에 배고픔 폭탄 옵니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-03T08:36:45+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 463,
+      "likes": 5,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-05T16:28:31+00:00"
   },
   {
     "video_id": "dL35Co1sWxo",
@@ -830,8 +838,12 @@
     "title": "\"밤에 종아리 경련, 뼈가 부르는 신호입니다\"",
     "is_shorts": true,
     "uploaded_at": "2026-08-03T08:52:12+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 716,
+      "likes": 17,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-05T16:28:31+00:00"
   },
   {
     "video_id": "PFHfMZwnI18",
@@ -870,8 +882,12 @@
     "title": "매일 아침 이것 하시는 분, 장이 썩어가고 있습니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-04T03:28:53+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-05T16:28:31+00:00"
   },
   {
     "video_id": "rQ0e3Zenp-M",
@@ -890,8 +906,12 @@
     "title": "매일 아침 이것 하시는 분, 장이 썩어가고 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-04T03:55:49+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-05T16:28:31+00:00"
   },
   {
     "video_id": "o1bkp3VE5-I",
@@ -910,8 +930,12 @@
     "title": "뼈가 자꾸 부러진다면, 이미 늦은 걸 수도",
     "is_shorts": true,
     "uploaded_at": "2026-08-04T04:23:47+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-05T16:28:31+00:00"
   },
   {
     "video_id": "JWfyFZnYH0w",
