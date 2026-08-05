@@ -1,0 +1,62 @@
+RUN_ID:
+claude_20260805_070236_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+의사들이 숨기는 무릎통증 원인
+
+THUMBNAIL_SHORTS:
+무릎통증, 연골이 아니었습니다
+
+[SCENE: Korean senior woman wincing while climbing stairs, holding knee, 1080x1920]
+나레이터: 계단을 오를 때 무릎이 시큰거리신다면, 단순 노화가 아닐 수 있습니다.
+
+[SCENE: close-up of older Korean man massaging his knee in pain, sitting on couch, 1080x1920]
+나레이터: 많은 분들이 그냥 나이 탓이라고 넘기시는데& 사실은 다른 원인 때문일 수 있습니다.
+
+[SCENE: medical illustration of knee joint with highlight on quadriceps muscle, 1080x1920]
+나레이터: 바로 무릎 위쪽 다리 근육, 즉 넓다리근이 약해졌기 때문입니다.& 연골이 아니라 말입니다.
+
+[SCENE: anatomical diagram showing muscle weakness causing knee misalignment, 1080x1920]
+나레이터: 넓다리근이 약하면 무릎뼈가 제 위치에서 벗어납니다.& 그러면서 자꾸 통증이 생기는 겁니다.
+
+[SCENE: Korean senior person doing daily activities, bending, sitting down, 1080x1920]
+나레이터: 특히 의자에서 일어날 때, 계단 내려올 때 이런 통증이 심하신가요?& 그렇다면 이게 맞는 신호입니다.
+
+[SCENE: woman touching her thigh muscles while looking thoughtful, 1080x1920]
+나레이터: 50대 이후로는 누구나 근육이 빠집니다.& 운동을 안 하면 더 빨리 빠집니다.
+
+[SCENE: text on screen saying "지금부터 해결법을 알려드립니다", with hand gesture indicating like button, 1080x1920]
+나레이터: 화면을 두 번 눌러서 좋아요를 눌러주시면, 이제부터 정확한 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman sitting on chair, demonstrating quad muscle exercise, straightening leg, 1080x1920]
+나레이터: 방법은 간단합니다.& 의자에 앉아서 다리를 쭉 펴는 운동을 매일 10번씩 3세트 하세요.
+
+[SCENE: close-up of leg being extended with muscle engagement, 1080x1920]
+나레이터: 다리를 펼 때 무릎 위쪽 근육을 의식하며 5초간 힘을 주세요.& 그 다음 천천히 내립니다.
+
+[SCENE: Korean senior man doing wall squat against wall, feet slightly forward, 1080x1920]
+나레이터: 더 강하게 하고 싶으신 분들은 벽에 등을 대고 앉기를 하세요.& 무릎을 45도 정도 구부린 상태에서 10초 유지합니다.
+
+[SCENE: doctor with clipboard speaking to senior patient during consultation, friendly manner, 1080x1920]
+나레이터: 정확한 진단과 치료는 반드시 전문의와 상담하세요.& 이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: calendar showing daily routine with exercise marked, Korean household setting, 1080x1920]
+나레이터: 이 운동을 꾸준히 하면 2주 후부터 변화를 느낄 수 있습니다.& 통증이 줄어들고 계단이 편해집니다.
+
+[SCENE: happy Korean senior woman walking confidently without pain, stairs in background, 1080x1920]
+나레이터: 무릎 통증의 진짜 원인은 연골이 아니라 근육 약화였습니다.& 지금부터라도 이 운동을 시작하면 달라집니다.
+
+[SCENE: Korean senior person looking at camera with thoughtful expression, 1080x1920]
+나레이터: 오늘부터 이 운동을 시작하실 분은 댓글에 '시작'이라고 남겨주세요.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.

@@ -1,0 +1,65 @@
+RUN_ID:
+claude_20260805_070354_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮으면 이 자세, 위험합니다
+
+THUMBNAIL_SHORTS:
+골밀도 낮으면 이 자세, 위험합니다
+
+[SCENE: Korean elderly woman bending forward to pick up object from floor, 1080x1920]
+나레이터: 바닥에 떨어진 것을 줍는 그 순간, 뼈가 부러질 수 있습니다.
+
+[SCENE: senior Asian woman touching lower back in pain, 1080x1920]
+나레이터: 특히 50대 이후 여성분들이 조심해야 할 위험한 순간입니다.
+
+[SCENE: close-up of calcium-rich foods like milk, yogurt, leafy greens, 1080x1920]
+나레이터: 우리 뼈는 나이가 들면서 점점 약해집니다.& 골밀도가 떨어지면서요.
+
+[SCENE: Korean senior woman doing light stretching at home, 1080x1920]
+나레이터: 그런데 대부분의 분들은 뼈가 약해졌다는 걸 느끼지 못합니다.& 증상이 거의 없거든요.
+
+[SCENE: woman falling or stumbling, injury risk illustration, 1080x1920]
+나레이터: 그러다가 작은 충격에도 쉽게 골절이 됩니다.& 특히 척추와 손목, 엉덩이뼈가 위험합니다.
+
+[SCENE: medical illustration of spine and bone density, 1080x1920]
+나레이터: 골밀도가 낮으면 뼈 안의 구멍이 커져서& 마치 스펀지처럼 약해지는 겁니다.
+
+[SCENE: Korean senior woman drinking milk or eating dairy, 1080x1920]
+나레이터: 이게 그냥 넘어가면 안 되는 이유는& 한 번 부러지면 회복이 정말 오래 걸리기 때문입니다.
+
+[SCENE: doctor consultation with senior patient, 1080x1920]
+나레이터: 정확한 진단을 위해서는 반드시 병원에서 골밀도 검사를 받으셔야 합니다.& 이 다음 내용이 정말 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: screen with thumbs up icon, engagement prompt, 1080x1920]
+나레이터: 지금부터 알려드릴 방법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman drinking milk or eating cheese, 1080x1920]
+나레이터: 첫 번째, 칼슘을 충분히 섭취하세요.& 하루에 우유 한 잔, 요구르트 한 개, 된장국 한 그릇이면 기본입니다.
+
+[SCENE: senior Asian woman doing weight-bearing exercise, walking outdoors, 1080x1920]
+나레이터: 두 번째, 매일 20~30분 햇빛을 받으며 걸으세요.& 뼈가 튼튼해지는 데 비타민D가 꼭 필요합니다.
+
+[SCENE: Korean senior woman doing squats or light weight-bearing movements, 1080x1920]
+나레이터: 세 번째, 주 2~3회 가벼운 근력운동을 하세요.& 근육이 뼈를 보호하고 지탱하기 때문입니다.
+
+[SCENE: senior woman avoiding bending forward, practicing safe posture, 1080x1920]
+나레이터: 그리고 무엇보다 중요한 건 자세입니다.& 허리를 급하게 굽혀서 물건을 집으면 절대 안 됩니다.& 반드시 무릎을 구부려서 내려가세요.
+
+[SCENE: montage of healthy lifestyle habits for bone health, 1080x1920]
+나레이터: 골밀도는 지금 당장 챙기지 않으면& 65세 이후에 큰 부상으로 찾아옵니다.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 함께해 주세요.
+
+[SCENE: Korean senior woman nodding or smiling, encouraging gesture, 1080x1920]
+나레이터: 여러분은 최근에 뼈 검사를 받으신 적이 있으신가요?& 댓글로 알려주세요.

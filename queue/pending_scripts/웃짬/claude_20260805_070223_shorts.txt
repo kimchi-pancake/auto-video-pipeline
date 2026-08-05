@@ -1,0 +1,59 @@
+RUN_ID:
+claude_20260805_070223_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+심장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아침 혈압 20 올라간다면, 심장이 이미 신호를 보내고 있습니다
+
+THUMBNAIL_SHORTS:
+아침 혈압 20 올라간다면, 심장이 이미 신호를 보내고 있습니다
+
+[SCENE: Korean elderly man checking blood pressure monitor immediately after waking, concerned facial expression, 1080x1920]
+나레이터: 아침 혈압이 저녁보다 20 이상 높다면, 이미 심장이 경고 신호를 보내고 있습니다.
+
+[SCENE: Animated diagram showing stress hormones cortisol and adrenaline in body at morning wake time, 1080x1920]
+나레이터: 깨어날 때 분비되는 스트레스 호르몬들이 혈관을 수축시키기 때문입니다.&하지만 이 정도가 계속되면 심장 근육이 두꺼워지는 문제가 생깁니다.
+
+[SCENE: Medical illustration of enlarged left ventricle compared to normal heart, 1080x1920]
+나레이터: 이것을 '좌심실비대'라고 하는데, 처음에는 증상이 없다가 어느 날 갑자기 숨이 차는 경험을 하게 됩니다.
+
+[SCENE: Person sitting on bed, looking at notebook with blood pressure readings written down, morning light, 1080x1920]
+나레이터: 혹시 여러분은 자신의 아침 혈압과 저녁 혈압의 차이를 확인해본 적이 있나요?
+
+[SCENE: Checklist showing proper blood pressure measurement: correct arm position, heart level, timing after waking, 1080x1920]
+나레이터: 정확한 측정이 중요합니다.&팔이 심장 높이에 와야 하고, 일어난 후 최소 5분 지난 후에 재야 합니다.
+
+[SCENE: Screen showing "Like this video to see the solution" with thumbs-up icon highlighted, 1080x1920]
+나레이터: 화면을 두 번 눌러서 좋아요를 눌러주시면, 지금부터 이 문제를 해결하는 방법을 알려드리겠습니다.
+
+[SCENE: Person doing slow breathing exercise sitting in bed, calm posture, 1080x1920]
+나레이터: 첫 번째는 '아침 명상 호흡'입니다.&일어나서 천천히 숨을 4초 동안 멈춘 후 내쉬는 것을 5분 반복하세요.
+
+[SCENE: Person drinking warm water from cup slowly, relaxed expression, 1080x1920]
+나레이터: 두 번째는 '따뜻한 물 마시기'입니다.&미지근한 물 한 잔을 5분에 걸쳐 천천히 마시면 혈관이 이완됩니다.
+
+[SCENE: Person on bed doing gentle stretching—leg movements, shoulder rolls, neck stretches, 1080x1920]
+나레이터: 세 번째는 '부드러운 스트레칭'입니다.&급한 운동은 혈압을 더 올리니, 침대에서 다리와 어깨를 천천히 풀어주세요.
+
+[SCENE: Plate of healthy breakfast with eggs, tomato, banana, and yogurt, 1080x1920]
+나레이터: 네 번째는 '아침 식단 조절'입니다.&짠 음식은 피하고 칼륨 많은 바나나, 계란, 요거트를 선택하세요.
+
+[SCENE: Person writing blood pressure readings in health journal or phone app with dates, 1080x1920]
+나레이터: 다섯 번째는 '혈압 기록 습관'입니다.&2주일 이상 매일 아침, 저녁을 기록하면 패턴을 발견하게 됩니다.
+
+[SCENE: Checkmark appearing next to each method—breathing, water, stretching, food, recording—showing completion, 1080x1920]
+나레이터: 이 다섯 가지 모두 급하지 않고 부드럽게 시작할 수 있습니다.&가장 중요한 것은 아침을 여유 있게 보내는 것입니다.
+
+[SCENE: Person looking relieved and confident, looking at blood pressure monitor showing improved numbers, 1080x1920]
+나레이터: 정확한 진단과 치료는 전문의와 꼭 상담하세요.&여러분은 오늘부터 이 다섯 가지 중 몇 가지부터 시작하실 건가요?&댓글에 어떤 방법부터 해볼 것인지 알려주세요.
