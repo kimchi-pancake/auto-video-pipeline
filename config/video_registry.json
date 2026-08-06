@@ -946,5 +946,35 @@
     "uploaded_at": "2026-08-04T04:32:55+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "Df9znZ2UcPE",
+    "channel": "웃짬",
+    "category": "심장건강",
+    "title": "매일 아침 이것 마시는 분, 심장이 이미 신호 보내고 있습니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-08-06T11:00:03+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "8nQ-AEoQ8wI",
+    "channel": "웃짬",
+    "category": "심장건강",
+    "title": "매일 아침 이것 마시는 분, 심장이 이미 신호 보내고 있습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-06T11:27:36+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "OS3qAdzz7mk",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "뼈가 자꾸 부러지신다면, 이걸 놓쳤을 겁니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-06T11:52:58+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
