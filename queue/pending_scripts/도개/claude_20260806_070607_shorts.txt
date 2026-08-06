@@ -1,0 +1,59 @@
+RUN_ID:
+claude_20260806_070607_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+면역력
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+매일 드시는 그것, 면역력을 반으로 깎고 계셨습니다
+
+THUMBNAIL_SHORTS:
+매일 드시는 그것, 면역력을 반으로 깎고 계셨습니다
+
+[SCENE: Close-up of Korean senior man eating instant noodles at kitchen table, 1080x1920]
+나레이터: 매일 드시는 라면, 실은 면역력을 깎고 계셨습니다.
+
+[SCENE: Animated visualization of intestinal bacteria dying, medical illustration style, 1080x1920]
+나레이터: 우리 면역력의 70%는 장에서 만들어집니다.&그런데 가공식품의 고나트륨이 장 내 좋은 균을 죽여버리죠.
+
+[SCENE: Food labels showing sodium content - instant noodles, canned goods, processed snacks, 1080x1920]
+나레이터: 라면 한 끼에만 하루 권장 나트륨의 80%가 들어있습니다.&이게 매일 반복되면 어떻게 될까요?
+
+[SCENE: Medical chart showing immune function decline over months, 1080x1920]
+나레이터: 3개월만 지나도 장 내 유익한 균이 30% 이상 줄어듭니다.&감기가 자주 걸리고, 피로가 쌓이죠.
+
+[SCENE: Asian senior woman checking herself for fatigue symptoms, concerned look, 1080x1920]
+나레이터: 혹시 최근에 감기가 자주 걸리셨나요?&피로가 유독 잘 풀리지 않으셨나요?&단순 노화가 아닐 수 있습니다.
+
+[SCENE: Hand reaching toward screen with shimmering effect, 1080x1920]
+나레이터: 지금부터 방법을 알려드릴게요.&화면을 두 번 눌러주세요.
+
+[SCENE: Colorful fermented foods and fresh vegetables on wooden table, 1080x1920]
+나레이터: 첫째, 가공식품을 일주일에 2회 이하로 줄이세요.&완전히 끊을 필요는 없습니다.
+
+[SCENE: Kimchi jar, yogurt, miso bowl arranged on kitchen counter, 1080x1920]
+나레이터: 둘째, 발효식품을 매일 한두 스푼씩 먹으세요.&무염 김치, 된장, 미소가 최고입니다.&3주 안에 장 내 좋은 균이 늘어납니다.
+
+[SCENE: Brown rice, mixed grains, colorful vegetables being prepared, 1080x1920]
+나레이터: 셋째, 흰쌀밥 대신 현미밥으로, &야채를 한 접시씩 더 추가하세요.&이것이 좋은 균의 먹이가 됩니다.
+
+[SCENE: Calendar with checkmarks, Korean senior woman marking off successful days, positive expression, 1080x1920]
+나레이터: 단 3개월이면 변화를 느낄 수 있습니다.&감기 횟수가 줄어들고, 피로가 개선되죠.
+
+[SCENE: Senior couple enjoying healthy meal together, smiling, natural daylight, 1080x1920]
+나레이터: 지금 가공식품을 자주 드신다면,&지금이 바로 바뀔 때입니다.
+
+[SCENE: Text overlay showing summary, with background of fresh produce, 1080x1920]
+나레이터: 정리하면, 가공식품이 장 건강을 망치고&면역력까지 떨어뜨린다는 거예요.&하지만 지금부터라도 식습관을 바꾸면&우리 몸은 생각보다 빠르게 회복됩니다.
+
+[SCENE: Senior woman looking directly at camera with thoughtful expression, 1080x1920]
+나레이터: 여러분은 이 방법 중에 가장 쉽게 시작할 수 있는 게 뭘까요?&댓글로 알려주세요.

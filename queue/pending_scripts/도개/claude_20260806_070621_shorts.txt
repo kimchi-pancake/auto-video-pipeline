@@ -1,0 +1,59 @@
+RUN_ID:
+claude_20260806_070621_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+밤에 뒤척이면 뼈가 약해집니다
+
+THUMBNAIL_SHORTS:
+밤에 뒤척이면 뼈가 약해집니다
+
+[SCENE: Korean senior woman tossing and turning in bed at night, 1080x1920]
+나레이터: 밤새 뒤척이며 자신 있으세요? 그 습관이 뼈를 서서히 약하게 만들고 있습니다.
+
+[SCENE: close-up of an older person's face looking tired and exhausted in the morning, 1080x1920]
+나레이터: 아침에 일어났는데 더 피곤하고, 특히 허리와 골반이 뻐근하다면 주목하세요.
+
+[SCENE: medical illustration of bone density and calcium loss, 1080x1920]
+나레이터: 뼈는 자는 동안 '골밀도'를 유지하는 작업을 합니다.& 깊은 수면 중에 말이죠.
+
+[SCENE: restless sleep animation showing interrupted sleep cycles, 1080x1920]
+나레이터: 그런데 자주 깨고 뒤척이면, 그 과정이 제대로 일어나지 않습니다.& 골밀도가 떨어지는 겁니다.
+
+[SCENE: Korean senior woman checking her bones and posture in mirror, 1080x1920]
+나레ياtor: 특히 50대 이후 분들은 여성호르몬 감소로 이미 뼈가 약해지고 있는데, 수면까지 안 되면 골다공증 위험이 훨씬 커집니다.
+
+[SCENE: calendar showing poor sleep patterns and checkmarks, 1080x1920]
+나레이터: 혹시 당신도 밤마다 3번 이상 깨거나, 한 번 깨면 다시 잠을 못 이루시나요?
+
+[SCENE: person lying in bed unable to sleep, looking at ceiling, 1080x1920]
+나레이터: 그렇다면 지금부터 알려드릴 방법이 정말 중요합니다.& 화면을 두 번 눌러주세요.
+
+[SCENE: finger double-tapping on smartphone screen with heart animation, 1080x1920]
+나레이터: 지금부터 뼈 건강을 지키는 수면 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior person adjusting pillow height and sleeping position, 1080x1920]
+나레이터: 첫째, 베개 높이를 조정하세요.& 너무 높으면 목이 꺾이고, 너무 낮으면 뒤척입니다.& 어깨 높이만큼이 정답입니다.
+
+[SCENE: person doing gentle stretching exercises before bed, 1080x1920]
+나레이터: 둘째, 자기 30분 전에 가벼운 스트레칭을 하세요.& 목과 허리를 천천히 풀어주면, 뼈로 가는 혈액순환이 좋아집니다.& 그러면 깊은 잠을 이룹니다.
+
+[SCENE: bedroom with dim warm lighting and open window, 1080x1920]
+나레이터: 셋째, 자는 동안 실내 온도를 16~18도로 유지하세요.& 너무 따뜻하면 뒤척이고, 너무 차가우면 자다가 깹니다.& 약간 서늘할 정도가 정말 중요합니다.
+
+[SCENE: Korean senior person drinking milk or taking calcium supplement before bed, 1080x1920]
+나레이터: 정확한 진단과 치료는 반드시 전문의와 상담하시고, 동시에 이 세 가지를 오늘부터 시작하면 2주 후에 뒤척임이 줄어들 겁니다.& 뼈 건강도 지킬 수 있습니다.
+
+[SCENE: Korean senior woman waking up refreshed and stretching peacefully in morning sunlight, 1080x1920]
+나레이터: 깊은 수면이 곧 강한 뼈를 만듭니다.& 여러분은 밤에 몇 번이나 깨세요? 댓글로 나눠주세요.

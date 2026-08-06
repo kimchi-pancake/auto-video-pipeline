@@ -1,0 +1,61 @@
+RUN_ID:
+claude_20260806_070411_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+뼈가 자꾸 부러지신다면, 이걸 놓쳤을 겁니다
+
+THUMBNAIL_SHORTS:
+뼈가 자꾸 부러지는 진짜 이유
+
+---
+
+[SCENE: elderly Korean woman with osteoporosis feeling lower back pain while sitting, 1080x1920]
+나레이터: 사소한 넘어짐에도 뼈가 부러지신다면, 이미 뼈 밀도가 많이 떨어져 있다는 신호입니다.
+
+[SCENE: Korean senior man at hospital getting X-ray examination, 1080x1920]
+나레이터: 대부분의 분들이 이미 증상이 심해진 후에야 알아차리게 됩니다.
+
+[SCENE: close-up of calcium-rich foods including milk, cheese, sardines, and leafy greens on table, 1080x1920]
+나레이터: 뼈가 약해지는 이유를 정확히 알아야 지금부터라도 막을 수 있습니다.
+
+[SCENE: Korean woman in her 60s touching her wrist and ankle area uncomfortably, 1080x1920]
+나레이터: 손목이나 발목, 척추 부분에서 자주 통증이 있으신가요?
+
+[SCENE: calendar showing years progression, highlighting menopausal age for women, 1080x1920]
+나레이터: 특히 50대 이후 여성분들은 여성호르몬이 급격히 줄어들면서 뼈 손실이 급속도로 진행됩니다.
+
+[SCENE: illustration of bone cross-section showing density decrease, calcium depletion, 1080x1920]
+나레이터: 뼈 속의 칼슘과 미네랄이 빠져나가는데, 이를 그냥 두면 뼈가 스펀지처럼 푸석푸석해집니다.
+
+[SCENE: Korean senior man and woman looking at their bones' condition with concerned expression, 1080x1920]
+나레이터: 남성분들도 안심하시면 안 됩니다.&60대 이후부터 뼈 손실 속도가 여성만큼 빨라집니다.
+
+[SCENE: nutritionist pointing to dairy products, fish, and vegetables on nutritional chart, 1080x1920]
+나레이터: 이 다음 내용이 사실 가장 중요합니다.&지금부터 어떻게 해야 하는지 함께 해주세요.
+
+[SCENE: elderly Korean woman drinking milk glass in morning light, 1080x1920]
+나레이터: 첫째, 칼슘을 매일 섭취해야 합니다.&우유 한 잔, 치즈 한두 조각, 또는 멸치 한줌으로도 충분합니다.
+
+[SCENE: Korean senior couple walking together in park doing light exercise, 1080x1920]
+나레이터: 둘째, 햇빛을 받으면서 가벼운 산책을 하세요.&하루 15분, 일주일에 3번만으로도 뼈가 튼튼해집니다.
+
+[SCENE: elderly Korean woman doing gentle weight-bearing exercises with small dumbbells at home, 1080x1920]
+나레이터: 셋째, 가벼운 근력운동을 병행하세요.&물 채운 1리터 페트병을 들고 팔을 10번씩 들었다 내리기만 해도 됩니다.
+
+[SCENE: Asian woman at doctor's office discussing bone health screening with healthcare professional, 1080x1920]
+나레이터: 정확한 진단과 치료 계획은 반드시 전문의와 상담하세요.
+
+[SCENE: calendar showing daily routine with exercise, food intake, and sunlight exposure marked, 1080x1920]
+나레이터: 지금부터 시작해야 10년 뒤 골절을 예방할 수 있습니다.&이 방법들, 오늘부터 하나씩 시작하실 준비가 되셨나요?&댓글로 알려주세요.
