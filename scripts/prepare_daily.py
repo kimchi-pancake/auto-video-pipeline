@@ -72,10 +72,18 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
         queue_dir = queue_dir_for_channel(name)
         topic = pop_topic(name, today)
         if topic:
-            logger.info("prepare_daily: '%s' 디스코드로 예약된 주제 사용 — %s", name, topic)
+            # 2026-08-07: 롱폼을 끄고 쇼츠 전용(long_count=0)으로 바꾸면서, 예약된
+            # 주제를 강제할 대상(원래는 롱폼 콤보 호출)이 없어졌습니다. generate_shorts_only()는
+            # 주제를 안 받고 매번 스스로 고르므로, 예약 주제는 당장은 무시됩니다 —
+            # 필요해지면 generate_shorts_only에 topic 파라미터를 추가해야 합니다.
+            logger.warning("prepare_daily: '%s' 디스코드로 예약된 주제(%s)가 있지만, 쇼츠 전용 모드에서는 아직 반영되지 않습니다.", name, topic)
         try:
             meta_list: list[dict] = []
-            saved = generate_daily_batch(queue_dir, custom_topic=topic, channel=name, meta_out=meta_list)
+            # 2026-08-07: 롱폼 중단, 채널당 쇼츠 5개(50초 이내)로 전환. 롱폼 없이
+            # 쇼츠만 5개 쓰면 Claude 호출도 줄고 AI 이미지 요청 씬 수도 크게
+            # 줄어서(쇼츠 하나당 7~9씬 × 5개 ≈ 35~45씬, 예전 롱폼+쇼츠2개 ≈ 49씬보다
+            # 적음), Pollinations 대기가 덜 밀립니다.
+            saved = generate_daily_batch(queue_dir, channel=name, meta_out=meta_list, long_count=0, extra_shorts_count=5)
             logger.info("prepare_daily: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             for meta in meta_list:
                 logger.info(

@@ -44,15 +44,19 @@
  * workflow_dispatch를 쏘도록 scheduled() 핸들러를 둡니다.
  *
  * 설정: Cloudflare 대시보드 → 이 Worker → Triggers → Cron Triggers →
- * "0 7 * * *" 추가 (UTC 기준 07:00 = KST 16:00, daily.yml의 cron과 동일한
- * "생성 시작" 시각). daily.yml의 schedule 트리거는 그대로 둬도 되고(둘 다
- * 도는 게 아니라 아래 scheduled()가 "이미 실행 중이면 스킵" 가드를 거치므로
- * 안전), 아예 daily.yml에서 schedule: 을 지워서 이 Worker가 유일한 트리거가
- * 되게 해도 됨.
+ * "0 16 * * *" 추가 (UTC 기준 16:00 = KST 01:00, daily.yml의 cron과 동일한
+ * "생성 시작" 시각). 2026-08-07: 20:00 KST 업로드 목표까지 시간을 최대한
+ * 벌어서 AI 이미지가 Pollinations 동시요청 제한 없이 순서대로 다 그려질
+ * 여유를 주려고 07:00(16:00 KST)에서 01:00 KST로 앞당겼습니다. daily.yml의
+ * schedule 트리거는 그대로 둬도 되고(둘 다 도는 게 아니라 아래 scheduled()가
+ * "이미 실행 중이면 스킵" 가드를 거치므로 안전), 아예 daily.yml에서 schedule:
+ * 을 지워서 이 Worker가 유일한 트리거가 되게 해도 됨.
  *
  * 실제 유튜브 "공개" 시각(20:00 KST)은 이 트리거 시각과 별개입니다 —
  * config/config.json의 youtube.schedule_hour/schedule_minute이 그 값을
- * 결정하고, 업로드 시 유튜브 자체 예약공개(publishAt)로 맞춰집니다.
+ * 결정하고, 업로드 시 유튜브 자체 예약공개(publishAt)로 맞춰집니다. 다만
+ * "공개"가 아니라 "업로드(비공개+예약) 자체가 20시 전에 반드시 끝나야
+ * 한다"는 건 이 트리거 타이밍(01시 시작)과 아래 안전망 cron이 같이 보장합니다.
  *
  * AI 씬 이미지(Pollinations) 생성 + 조립 트리거
  * ---------------------------------------------
@@ -63,9 +67,10 @@
  * 그 생성이 끝나면(generateSceneImages 마지막) 이 워커가 곧바로
  * assemble_daily.yml(TTS+영상 조립+업로드)을 트리거합니다 — 그 시점엔 이미지가
  * 이미 다 있어서 GH Actions가 기다릴 시간이 거의 없습니다. 혹시 이 즉시
- * 트리거가 실패해도(네트워크 오류 등) 놓치지 않도록, daily.yml cron보다 3시간
- * 늦은 안전망 cron("0 10 * * *")도 같이 등록해야 합니다 — 그때도 큐가
- * 비어 있으면 assemble_daily.yml이 조용히 아무 것도 안 하고 끝납니다.
+ * 트리거가 실패해도(네트워크 오류 등) 놓치지 않도록, 20:00 KST 목표보다
+ * 2시간 여유를 두고 18:00 KST에 도는 안전망 cron("0 9 * * *")도 같이
+ * 등록해야 합니다 — 그때도 큐가 비어 있으면 assemble_daily.yml이 조용히
+ * 아무 것도 안 하고 끝납니다.
  * IMAGE_GEN_SECRET 환경변수(파이썬 쪽과 동일한 값)도 등록해야 합니다.
  *
  * 매일 23:59 KST 채팅 비우기
@@ -161,17 +166,18 @@ export default {
   },
 
   // Cloudflare Cron Trigger가 정시에 이걸 부릅니다. cron 문자열로 어느
-  // 트리거인지 구분합니다(대시보드에 "0 7 * * *", "0 10 * * *", "59 14 * * *",
+  // 트리거인지 구분합니다(대시보드에 "0 16 * * *", "0 9 * * *", "59 14 * * *",
   // "*/10 * * * *" 네 개 다 등록돼있어야 함).
   async scheduled(event, env, ctx) {
     if (event.cron === "59 14 * * *") {
       ctx.waitUntil(purgeChannel(env));
     } else if (event.cron === "*/10 * * * *") {
       ctx.waitUntil(retryOracleA1(env));
-    } else if (event.cron === "0 10 * * *") {
-      // daily.yml(대본 생성)보다 3시간 늦은 안전망 — generateSceneImages()가
-      // 끝나자마자 부르는 즉시 트리거(빠른 경로)가 실패했을 때만 의미가 있고,
-      // 이미 조립이 끝났으면 assemble_daily.yml이 큐가 비어 조용히 종료됩니다.
+    } else if (event.cron === "0 9 * * *") {
+      // daily.yml(대본 생성, 01:00 KST 시작)보다 17시간 늦은 안전망(18:00 KST,
+      // 20시 목표 2시간 전) — generateSceneImages()가 끝나자마자 부르는 즉시
+      // 트리거(빠른 경로)가 실패했을 때만 의미가 있고, 이미 조립이 끝났으면
+      // assemble_daily.yml이 큐가 비어 조용히 종료됩니다.
       ctx.waitUntil(triggerAssembleIfIdle(env));
     } else {
       ctx.waitUntil(triggerDailyIfIdle(env));
@@ -693,6 +699,27 @@ const _FACE_QUALITY_BOOST =
  * ctx.waitUntil()로 호출되므로 GitHub Actions 잡 시간과는 무관하게 돕니다.
  * Pollinations는 동시요청을 429로 막기 때문에 반드시 순차 처리합니다.
  */
+// 하루에 여러 run_id(채널당 쇼츠 5개)가 거의 동시에 저장되면서 각자
+// generateSceneImages()를 독립적으로 돌리다 보니, 전부 Pollinations 전역
+// 동시요청 제한(429)에 부딪혀서 서로를 밀어내는 문제가 실측으로 확인됐습니다
+// (21씬 중 1개만 성공). 429/일시적 실패는 그 자리에서 포기하지 않고 지수
+// 백오프로 재시도합니다 — 하루 일정에 여유가 생겨서(1시 시작, 8시 목표) 몇 분
+// 더 기다리는 건 문제가 안 되고, 그러면 서로 다른 run_id들이 자연스럽게
+// 시간차를 두고 겹치지 않게 됩니다(2026-08-07).
+const _IMAGE_MAX_RETRIES = 6;
+const _IMAGE_RETRY_BASE_MS = 20000; // 20s, 40s, 80s, 160s, 320s, 640s ...
+
+async function _fetchImageWithRetry(url) {
+  for (let attempt = 0; attempt <= _IMAGE_MAX_RETRIES; attempt++) {
+    const resp = await fetch(url);
+    if (resp.ok) return resp;
+    if (attempt === _IMAGE_MAX_RETRIES) return resp;
+    const wait = _IMAGE_RETRY_BASE_MS * Math.pow(2, attempt);
+    console.log(`[image-gen] ${resp.status} 응답 — ${Math.round(wait / 1000)}초 뒤 재시도 (${attempt + 1}/${_IMAGE_MAX_RETRIES})`);
+    await new Promise((r) => setTimeout(r, wait));
+  }
+}
+
 async function generateSceneImages(env, runId, scenes) {
   for (const scene of scenes) {
     try {
@@ -702,9 +729,9 @@ async function generateSceneImages(env, runId, scenes) {
       const url =
         `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}` +
         `?width=1920&height=1080&nologo=true&model=flux&seed=${seed}`;
-      const resp = await fetch(url);
+      const resp = await _fetchImageWithRetry(url);
       if (!resp.ok) {
-        console.log(`[image-gen] scene ${scene.index} 실패 (${resp.status})`);
+        console.log(`[image-gen] scene ${scene.index} 최종 실패 (${resp.status})`);
         continue;
       }
       const buffer = await resp.arrayBuffer();

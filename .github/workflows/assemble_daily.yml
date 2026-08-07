@@ -8,9 +8,9 @@ on:
   #      끝내면 곧바로 이 워크플로우를 트리거함(빠른 경로 — 이미지가 이미
   #      다 있어서 core/pipeline.py의 대기 시간이 거의 없음).
   #   2. 혹시 1번 트리거가 (Worker가 죽어있거나 네트워크 문제로) 안 왔을 때를
-  #      대비한 안전망으로, Worker의 별도 cron이 daily.yml보다 몇 시간 늦게
-  #      한 번 더 트리거함 — 그때도 큐가 비어 있으면 scripts/daily_generate.py가
-  #      조용히 아무 일도 안 하고 끝남.
+  #      대비한 안전망으로, Worker의 별도 cron이 18:00 KST(20시 업로드 목표
+  #      2시간 전)에 한 번 더 트리거함 — 그때도 큐가 비어 있으면
+  #      scripts/daily_generate.py가 조용히 아무 일도 안 하고 끝남.
   # concurrency 그룹으로 두 트리거가 겹쳐도 동시에 두 잡이 돌지 않게 막습니다.
 
 concurrency:

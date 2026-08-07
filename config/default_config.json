@@ -78,7 +78,7 @@
     "default_width": 1920,
     "default_height": 1080,
     "use_pixabay_video": true,
-    "ai_image_wait_timeout_sec": 90,
+    "ai_image_wait_timeout_sec": 1800,
     "ai_image_poll_interval_sec": 15
   },
 
