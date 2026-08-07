@@ -1,0 +1,59 @@
+RUN_ID:
+claude_20260807_070440_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+스트레스
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아침에 핸드폰부터 드신다면, 지금 당신의 코르티솔이 3배 뛰고 있습니다
+
+THUMBNAIL_SHORTS:
+아침에 핸드폰부터 드신다면, 지금 당신의 코르티솔이 3배 뛰고 있습니다
+
+[SCENE: elderly Korean man reaching for smartphone on nightstand immediately after waking, 1080x1920]
+나레이터: 아침에 눈을 뜨자마자 핸드폰부터 드신다면, 지금 당신의 몸은 스트레스 호르몬이 폭발 상태입니다.
+
+[SCENE: stressed expression on face, hand on chest, anxiety gesture, 1080x1920]
+나레이터: 뉴스, 메시지, SNS 알림 — 이 모든 것이 당신의 뇌를 자극해서 코르티솔을 3배까지 올립니다.&마치 호랑이를 만난 것처럼요.
+
+[SCENE: cortisol hormone spike visualization or chart, stress hormone concept, 1080x1920]
+나레이터: 코르티솔이 높으면 피로감, 불면증, 소화 문제가 생깁니다.& 하지만 대부분 "나이 탓"이라고 넘기죠.
+
+[SCENE: heart rate monitor showing elevated readings, or tired person in morning, 1080x1920]
+나레이터: 혈압도 올라가고, 면역력도 떨어집니다.& 이 모든 게 15분의 아침 핸드폰 습관 때문일 수 있다는 거 알고 계셨나요?
+
+[SCENE: phone with notifications turned off, silenced symbol, 1080x1920]
+나레이터: 궁금하신 분은 화면을 두 번 눌러주세요.& 지금부터 이를 바꾸는 방법을 알려드리겠습니다.
+
+[SCENE: person in bed doing calm breathing exercises, peaceful expression, 1080x1920]
+나레이터: 첫째, 아침에 눈을 뜬 직후 5분간 천천히 숨을 쉬세요.& 4초 들이마시고, 6초 내쉬기를 반복하면 코르티솔이 안정됩니다.
+
+[SCENE: hand holding glass of warm water with lemon, 1080x1920]
+나레이터: 둘째, 미지근한 물 한 컵을 마세요.& 소화기를 깨워주고, 몸의 신진대사를 정상화합니다.
+
+[SCENE: elderly person doing gentle stretching in bedroom or living room, sunlight coming in, 1080x1920]
+나레이터: 셋째, 10~15분 가벼운 스트레칭을 하세요.& 목, 팔, 다리를 천천히 풀어주는 것으로 충분합니다.
+
+[SCENE: person sitting by window, morning sunlight on face, peaceful and calm, 1080x1920]
+나레이터: 넷째, 햇빛을 5~10분 맞으세요.& 아침 빛이 생체리듐을 정상화해서, 저녁에 숙면을 도와줍니다.
+
+[SCENE: phone placed face-down on table, out of sight, 1080x1920]
+나레이터: 가장 중요한 것, 이 30분에서 1시간 동안 핸드폰은 보지 마세요.& 정말 중요한 일은 나중에 봐도 괜찮습니다.
+
+[SCENE: calendar showing consistent daily routine with checkmarks, progress tracking, 1080x1920]
+나레이터: 이 습관을 2~3주 지속하면, 피로감이 줄어들고 수면 질이 확연히 좋아집니다.
+
+[SCENE: elderly Korean person looking refreshed, energetic, smiling in the morning, 1080x1920]
+나레이터: 당신은 약에 의존하기 전에, 아침 30분을 자신을 위해 써 보세요.&당신의 하루, 당신의 건강이 확 달라질 것입니다.
+
+[SCENE: person's hand hovering over phone, decision moment, moment of choice, 1080x1920]
+나레이터: 내일 아침부터 이 루틴을 시작하실 분, 댓글에 "시작"이라고 남겨주세요.&당신의 결정이 당신의 건강을 바꿀 겁니다.

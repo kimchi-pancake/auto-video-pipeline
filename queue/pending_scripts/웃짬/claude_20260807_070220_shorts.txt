@@ -1,0 +1,56 @@
+RUN_ID:
+claude_20260807_070220_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+심장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+자다가 숨이 차오르면, 심장이 이미 망가지고 있습니다
+
+THUMBNAIL_SHORTS:
+자다가 숨이 차오르면, 심장이 이미 망가지고 있습니다
+
+[SCENE: Korean elderly man waking up suddenly in bed at night, gasping for breath, hand on chest, distressed expression, 1080x1920]
+나레이터: 밤중에 자다가 갑자기 숨이 차오르신다면,&이미 심장이 신호를 보내고 있는 겁니다.
+
+[SCENE: close-up of concerned face in darkness, nighttime bedroom, heavy breathing visible, 1080x1920]
+나레이터: 많은 분들이 단순 피로나 나이 탓이라고 넘기세요.&하지만 이것은 심장 근육이 약해져서&혈액을 제대로 펌프질하지 못할 때 생기는&폐부종 증상입니다.
+
+[SCENE: simplified anatomical illustration of heart and lungs, blood flow visualization, 1080x1920]
+나레이터: 심장이 약하면 혈액이 폐로 역류하고,&폐에 물이 고이게 됩니다.&특히 누워있을 때 하반신 혈액이&심장으로 몰리면서 증상이 악화되죠.
+
+[SCENE: elderly person checking swollen ankle with finger, pressing to check for pitting edema, 1080x1920]
+나레이터: 혹시 저녁때 발목이 자주 부어 있거나,&계단을 오를 때만 유독 숨이 찬가요?&이것도 같은 신호입니다.
+
+[SCENE: person climbing stairs slowly, holding railing, breathing heavily, exhausted expression, 1080x1920]
+나레이터: 이 세 가지 증상 중 하나라도 있다면&지금 바로 알려드릴 방법을 써보세요.&화면을 두 번 눌러주시면&증상을 완화하는 방법을 알려드리겠습니다.
+
+[SCENE: text or visual prompt for engagement, screen with "like" indicator, 1080x1920]
+나레이터: 화면을 두 번 눌러주세요.
+
+[SCENE: elderly person arranging multiple pillows behind back, adjusting bed position, 1080x1920]
+나레이터: 첫 번째, 자는 자세를 바꾸세요.&베개를 2개 이상 쓰고&상반신을 30도 이상 높여서 자세요.&이것만으로도 70% 증상이 개선됩니다.
+
+[SCENE: person reducing salt intake, pouring less salt, preparing fresh unseasoned food, 1080x1920]
+나레이터: 두 번째, 하루 염분을 6그램 이하로 제한하세요.&국, 된장, 간장을 적게 쓰고&신선한 음식을 그대로 드세요.
+
+[SCENE: person drinking measured water, pouring exact amount into glass, conscious of intake, 1080x1920]
+나레이터: 세 번째, 하루 수분을 1.5리터 이하로 하고&저녁 6시 이후로는 물을 마시지 마세요.
+
+[SCENE: elderly person doing brisk walking in park, morning light, walking steadily, 1080x1920]
+나레이터: 네 번째, 하루 20분 빠른 걷기를&주 3회 이상 하세요.&숨이 조금 찬 정도의 운동입니다.
+
+[SCENE: elderly person opening calendar or scheduling a doctor appointment, phone in hand, 1080x1920]
+나레이터: 그리고 반드시 3개월마다&병원에서 검진을 받으세요.&심장 질환은 초기 발견이 전부입니다.
+
+[SCENE: confident elderly person looking peacefully toward window, hopeful expression, morning light, 1080x1920]
+나레이터: 지금부터 이 네 가지를 시작하면,&당신의 밤이 훨씬 편해질 겁니다.&혹시 한밤중에 깬 경험이 있으신가요?&댓글에 그 증상을 알려주시면,&더 맞춤형 조언을 드릴 수 있습니다.
