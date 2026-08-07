@@ -976,5 +976,65 @@
     "uploaded_at": "2026-08-06T11:52:58+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "1jhpWHt24FE",
+    "channel": "웃짬",
+    "category": "심장건강",
+    "title": "자다가 숨이 차오르면, 심장이 이미 망가지고 있습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-07T10:32:50+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "PUk2L5GORqE",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "골밀도 검사 안 받으면 늦습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-07T11:03:17+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "Ig7Gbhp3RLI",
+    "channel": "도개",
+    "category": "스트레스",
+    "title": "아침에 핸드폰부터 드신다면, 지금 당신의 코르티솔이 3배 뛰고 있습니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-08-07T11:03:44+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "gf6RFjE_gKM",
+    "channel": "도개",
+    "category": "스트레스",
+    "title": "아침에 핸드폰부터 드신다면, 지금 당신의 코르티솔이 3배 뛰고 있습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-07T11:34:24+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "LBqXjUoqn08",
+    "channel": "웃짬",
+    "category": "심장건강",
+    "title": "자다가 숨이 차오르면, 심장이 이미 망가지고 있습니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-08-07T12:00:03+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "x38tj5o3SFY",
+    "channel": "도개",
+    "category": "관절근육",
+    "title": "의사가 말 안 하는 무릎통증 진짜 원인",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-07T12:13:43+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
