@@ -852,8 +852,12 @@
     "title": "밤에 3번 이상 깨신다면, 혈관이 부르는 신호입니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-03T08:52:54+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "ZZzGrRMRE1k",
@@ -862,8 +866,12 @@
     "title": "밤에 3번 이상 깨신다면, 혈관이 부르는 신호입니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-03T09:01:15+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 750,
+      "likes": 12,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "DSnp3CZEPd8",
@@ -872,8 +880,12 @@
     "title": "\"우유 매일 마시는데 뼈가 약해진다고?\"",
     "is_shorts": true,
     "uploaded_at": "2026-08-03T09:08:11+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 548,
+      "likes": 5,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "edTzsh2MS5E",
@@ -896,8 +908,12 @@
     "title": "매일 아침 이것 하시는 분, 장이 썩고 있는데 모르십니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-04T03:40:39+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "_OReiNxWsOs",
@@ -920,8 +936,12 @@
     "title": "매일 아침 이것 하시는 분, 장이 썩고 있는데 모르십니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-04T04:06:04+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "wdUrHObFOAo",
@@ -944,8 +964,12 @@
     "title": "의사들도 놓치는 무릎통증의 진짜 원인",
     "is_shorts": true,
     "uploaded_at": "2026-08-04T04:32:55+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 334,
+      "likes": 6,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "Df9znZ2UcPE",
@@ -954,8 +978,12 @@
     "title": "매일 아침 이것 마시는 분, 심장이 이미 신호 보내고 있습니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-06T11:00:03+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "8nQ-AEoQ8wI",
@@ -964,8 +992,12 @@
     "title": "매일 아침 이것 마시는 분, 심장이 이미 신호 보내고 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-06T11:27:36+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 497,
+      "likes": 10,
+      "comments": 1
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "OS3qAdzz7mk",
@@ -974,8 +1006,12 @@
     "title": "뼈가 자꾸 부러지신다면, 이걸 놓쳤을 겁니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-06T11:52:58+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 469,
+      "likes": 10,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-07T15:51:13+00:00"
   },
   {
     "video_id": "1jhpWHt24FE",
