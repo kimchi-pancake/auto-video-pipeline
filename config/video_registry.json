@@ -1020,8 +1020,12 @@
     "title": "자다가 숨이 차오르면, 심장이 이미 망가지고 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-07T10:32:50+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-08T15:24:20+00:00"
   },
   {
     "video_id": "PUk2L5GORqE",
@@ -1030,8 +1034,12 @@
     "title": "골밀도 검사 안 받으면 늦습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-07T11:03:17+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 469,
+      "likes": 16,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-08T15:24:20+00:00"
   },
   {
     "video_id": "Ig7Gbhp3RLI",
@@ -1040,8 +1048,12 @@
     "title": "아침에 핸드폰부터 드신다면, 지금 당신의 코르티솔이 3배 뛰고 있습니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-07T11:03:44+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-08T15:24:20+00:00"
   },
   {
     "video_id": "gf6RFjE_gKM",
@@ -1050,8 +1062,12 @@
     "title": "아침에 핸드폰부터 드신다면, 지금 당신의 코르티솔이 3배 뛰고 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-07T11:34:24+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 340,
+      "likes": 11,
+      "comments": 1
+    },
+    "stats_collected_at": "2026-08-08T15:24:20+00:00"
   },
   {
     "video_id": "LBqXjUoqn08",
@@ -1060,8 +1076,12 @@
     "title": "자다가 숨이 차오르면, 심장이 이미 망가지고 있습니다",
     "is_shorts": false,
     "uploaded_at": "2026-08-07T12:00:03+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-08T15:24:20+00:00"
   },
   {
     "video_id": "x38tj5o3SFY",
@@ -1070,7 +1090,11 @@
     "title": "의사가 말 안 하는 무릎통증 진짜 원인",
     "is_shorts": true,
     "uploaded_at": "2026-08-07T12:13:43+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 515,
+      "likes": 11,
+      "comments": 1
+    },
+    "stats_collected_at": "2026-08-08T15:24:20+00:00"
   }
 ]
