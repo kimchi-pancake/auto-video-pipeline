@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260808_100147_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+"우유 마셔도 안 되는 이유"
+
+THUMBNAIL_SHORTS:
+"우유 마셔도 안 되는 이유"
+
+[SCENE: Korean senior woman holding a glass of milk at breakfast table, looking uncertain, 1080x1920]
+나레이터: 뼈를 튼튼하게 하려고 매일 우유를 마신다면, 사실 역효과일 수 있습니다.
+
+[SCENE: close-up of woman's face with concerned expression, thinking, 1080x1920]
+나레이터: 특히 50대 이후 여성분들이 더 그렇습니다.&실제로 우유만 마셔서는 부족한 게 있거든요.
+
+[SCENE: medical illustration of calcium absorption in intestines, simple animation, 1080x1920]
+나레이터: 칼슘이 뼈에 제대로 흡수되려면, 우유 속 칼슘만으로는 부족합니다.&함께 필요한 게 또 있기 때문입니다.
+
+[SCENE: Korean senior woman sitting on couch, rubbing lower back with discomfort, 1080x1920]
+나레이터: 골다공증이나 뼈 통증으로 고생하신다면, 이게 원인일 가능성이 높습니다.&정확한 진단은 반드시 전문의와 상담하세요.
+
+[SCENE: split screen showing milk glass on left, vitamin D rich foods on right (eggs, salmon, mushrooms), 1080x1920]
+나레이터: 우유의 칼슘이 뼈에 들어가려면, 비타민 D가 꼭 필요합니다.&비타민 D 없으면 칼슘은 그냥 빠져나갑니다.
+
+[SCENE: bright sunny window with person looking outside, warm natural light, 1080x1920]
+나레이터: 궁금하신 분들은 화면을 두 번 눌러주세요.&지금부터 뼈를 튼튼하게 하는 실제 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior man and woman walking together in morning sunlight, park background, 1080x1920]
+나레이터: 첫째, 일주일에 3번 이상 햇빛을 15분씩 쬐세요.&우리 몸은 햇빛으로 비타민 D를 만듭니다.
+
+[SCENE: close-up of healthy foods - cooked salmon, egg yolk, mushrooms on plate, 1080x1920]
+나레이터: 둘째, 우유와 함께 달걀 노른자, 생선, 버섯 중 하나를 매일 먹으세요.&이것들이 비타민 D의 최고 공급원입니다.&이 두 가지를 함께 할 때 뼈가 단단해집니다.
+
+[SCENE: Korean senior woman confidently drinking milk with a plate of eggs beside her, smiling naturally, 1080x1920]
+나레이터: 결국 우유만으로는 부족하고, 햇빛과 음식이 함께해야 진정한 뼈 건강이 됩니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&여러분은 지금 우유와 함께 비타민 D를 챙기고 계신가요? 댓글로 알려주세요.

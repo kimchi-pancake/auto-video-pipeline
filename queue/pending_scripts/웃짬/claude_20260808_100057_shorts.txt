@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260808_100057_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮아졌는데 모르고 계신가요
+
+THUMBNAIL_SHORTS:
+50대부터 시작되는 뼈 손실의 신호
+
+[SCENE: Korean senior woman standing up from sofa with hand on lower back, 1080x1920]
+나레이터: 일어날 때 등이 자꾸 굽어지는 분들, 이미 뼈가 약해지고 있을 수 있습니다.
+
+[SCENE: close-up of older woman's posture becoming noticeably hunched while standing, 1080x1920]
+나레이터: 특히 50대 이후 여성분들은 급속도로 뼈가 약해집니다.& 호르몬 변화 때문입니다.
+
+[SCENE: Asian senior woman holding her wrist, examining hands with concerned expression, 1080x1920]
+나레이터: 손목이 자꾸 아프거나 넘어질 때 손을 짚다가 뼈가 부러지는 분들이 많습니다.& 단순한 손목 통증이 아니라 뼈 밀도 신호일 수 있습니다.
+
+[SCENE: Korean senior man and woman walking together in park, both appearing aware of posture, 1080x1920]
+나레이터: 넘어지지도 않았는데 척추가 부러지거나 골절이 쉽게 생기는 이유가 바로 이것입니다.& 이 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: woman pressing thumb into wrist area, testing bone density in relaxed position, 1080x1920]
+나레이터: 궁금하신 분들은 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior woman drinking milk at breakfast table with fresh vegetables and dairy products visible, 1080x1920]
+나레이터: 지금부터 할 수 있는 방법은 간단합니다.& 첫째, 하루 우유 한 잔은 꼭 드세요.& 칼슘이 가장 쉽게 흡수되는 형태입니다.
+
+[SCENE: Korean senior couple doing light weight-bearing exercise together indoors, gentle movements, 1080x1920]
+나레이터: 둘째, 하루 15분 실내에서 가볍게 걷거나 계단을 오르내리세요.& 뼈에 자극을 주는 것만으로도 밀도가 유지됩니다.
+
+[SCENE: senior Asian woman enjoying sunlight by window, peaceful expression, 1080x1920]
+나레이터: 셋째, 하루 10분 이상 햇빛을 받으세요.& 비타민D가 칼슘 흡수를 돕습니다.& 정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: close-up of Korean senior woman's face with gentle, hopeful expression looking directly at camera, 1080x1920]
+나레이터: 지금 시작하면 50대, 60대에도 뼈를 지킬 수 있습니다.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.& 여러분은 이 중에 해보신 방법이 있으신가요? 댓글로 알려주세요.

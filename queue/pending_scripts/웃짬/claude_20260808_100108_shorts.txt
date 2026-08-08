@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260808_100108_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+칼슘만 먹어선 부족합니다
+
+THUMBNAIL_SHORTS:
+칼슘만 먹어선 부족합니다
+
+[SCENE: Korean senior woman holding wrist after minor fall, wincing in pain, 1080x1920]
+나레이터: 작은 충격에도 뼈가 부러지신다면, 단순 골다공증이 아닐 수 있습니다.
+
+[SCENE: close-up of calcium supplement bottle and milk glass on table, 1080x1920]
+나레이터: 많은 분들이 칼슘만 열심히 챙기시는데, 사실 더 중요한 게 빠져 있습니다.
+
+[SCENE: anatomical diagram or illustration of bone structure with minerals, 1080x1920]
+나레이터: 뼈는 칼슘만으로 단단해지는 게 아닙니다.& 마그네슘, 비타민K, 비타민D가 함께 작용해야 뼈에 칼슘이 제대로 흡수됩니다.
+
+[SCENE: Korean senior person looking thoughtful, touching their bones, 1080x1920]
+나레이터: 칼슘을 아무리 먹어도 이 네 가지 영양소가 없으면 뼈를 빠져나가기만 합니다.& 당신도 혹시 칼슘만 챙기고 계신가요?
+
+[SCENE: colorful foods - leafy greens, almonds, eggs, salmon arranged on plate, 1080x1920]
+나레이터: 오늘부터 이렇게 하시면 됩니다.& 매일 시금치나 케일 같은 녹색 잎채소 한 줌, 견과류 한 줌, 달걀 하나, 생선 한 토막을 섞어서 드세요.
+
+[SCENE: Korean senior man walking outdoors in sunlight, 1080x1920]
+나레이터: 그리고 가장 중요한 것이 있습니다.& 하루 15분, 햇빛 속에서 걸으세요.& 비타민D는 햇빛 속에서만 우리 몸이 만들어집니다.& 이 다음 내용이 사실 뼈를 지키는 가장 결정적인 부분입니다, 잠시만 더 함께해 주세요.
+
+[SCENE: Korean senior doing light squats or standing exercises at home, 1080x1920]
+나레이터: 주 3회, 하루 10분씩 스쿼트나 계단 오르기처럼 다리에 무게가 실리는 운동을 하세요.& 뼈는 자극을 받아야 단단해집니다.
+
+[SCENE: doctor consultation scene - senior patient talking with healthcare professional, 1080x1920]
+나레이터: 뼈 건강을 위해서는 칼슘뿐 아니라 마그네슘, 비타민D, K의 균형이 필수입니다.& 정확한 진단과 영양 상담은 반드시 전문의와 함께하시기 바랍니다.& 오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior woman smiling, writing in a health diary or planner, 1080x1920]
+나레이터: 칼슘, 마그네슘, 햇빛, 운동.& 이 네 가지를 오늘부터 시작하실 계획이신가요?& 댓글로 '시작'이라고 남겨주세요.

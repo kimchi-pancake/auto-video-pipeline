@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260808_100117_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮은 당신, 이미 늦을 수도
+
+THUMBNAIL_SHORTS:
+골밀도 낮은 당신, 이미 늦을 수도
+
+[SCENE: senior Korean woman holding her lower back in discomfort while standing, 1080x1920]
+나레이터: 최근 몇 년 사이 키가 줄어드셨다면, 단순 노화가 아닙니다.
+
+[SCENE: close-up of hands showing age spots and thin skin texture, 1080x1920]
+나레이터: 뼈가 조용히 약해지고 있다는 신호일 수 있습니다.
+
+[SCENE: Korean senior man taking calcium supplement with water at breakfast table, 1080x1920]
+나레이터: 많은 분들이 칼슘만 먹으면 된다고 생각하시는데&사실은 이것이 빠지면 아무 효과가 없습니다.
+
+[SCENE: elderly Asian woman sitting in bright sunlight by window, smiling, 1080x1920]
+나레이터: 뼈에 칼슘이 흡수되려면, 비타민D가 반드시 필요합니다.&칼슘만 먹는 것보다 비타민D가 부족하면 흡수율이 60% 이상 떨어집니다.
+
+[SCENE: doctor's hand holding spine model pointing to vertebrae, 1080x1920]
+나레이터: 뼈 건강 진단은 반드시 전문의와 상담하셔야 정확합니다.
+
+[SCENE: bright sunshine casting shadows on outdoor path, golden hour lighting, 1080x1920]
+나레이터: 지금부터 할 수 있는 방법이 있습니다&화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior couple walking outdoors in daylight, wearing casual comfortable clothes, 1080x1920]
+나레이터: 일주일에 3일 이상, 하루 15~20분 햇빛을 직접 받으세요.&팔다리가 노출되어야 비타민D가 만들어집니다.&동시에 우유, 달걀노른자, 생선 같은 음식으로 칼슘을 함께 섭취하면 됩니다.
+
+[SCENE: Korean elderly person eating fish and vegetables with rice, seated at dining table, 1080x1920]
+나레이터: 오늘부터 시작해야 뼈가 강해지는 이유는&뼈도 살처럼 계속 새로워지기 때문입니다.&지금 3개월만 신경 써도 다음 검사에서 차이가 납니다.&당신은 오늘부터 이 방법을 시작하실 건가요? 댓글로 남겨주세요.

@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260808_100137_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+아침마다 화장실 급하신 분, 이미 늦었을 수 있습니다
+
+THUMBNAIL_SHORTS:
+아침 화장실 습관, 장을 망치고 있습니다
+
+[SCENE: Korean senior man rushing to bathroom early morning with urgent expression, 1080x1920]
+나레이터: 아침마다 화장실을 급하게 다녀오신다면, 그건 건강한 신호가 아닐 수 있습니다.
+
+[SCENE: close-up of person holding stomach with discomfort, 1080x1920]
+나레이터: 많은 분들이 "아, 소화가 잘되는구나"라고 착각하시는데&사실은 장이 보내는 경고신호입니다.
+
+[SCENE: Asian senior woman drinking water in morning light, 1080x1920]
+나레이터: 이 현상의 대부분은 자극적인 식습관과 아침에 너무 빨리 먹는 습관 때문입니다.&찬 음식이나 카페인도 원인이 될 수 있습니다.
+
+[SCENE: Korean senior person doing gentle abdominal massage, 1080x1920]
+나레이터: 지금부터 장을 안정시키는 방법을 알려드리겠습니다&화면을 두 번 눌러주세요.
+
+[SCENE: person eating warm porridge slowly with spoon, 1080x1920]
+나레이터: 첫째, 아침에 일어나서 30분 뒤에 따뜻한 죽이나 계란 같은 부드러운 음식부터 시작하세요.&빨리 먹지 말고 천천히 씹어서 먹는 게 중요합니다.
+
+[SCENE: person drinking warm water with both hands, 1080x1920]
+나레이터: 둘째, 아침에 일어나자마자 찬 음식이나 커피 대신 따뜻한 물을 한 컵 마시세요.&장의 움직임을 자연스럽게 도와줍니다.
+
+[SCENE: Asian senior doing light walking outdoors in morning, 1080x1920]
+나레이터: 셋째, 아침 식사 후 10분 정도 천천히 산책을 하세요.&이것만으로도 장의 리듬이 안정됩니다.&정확한 진단이 필요하시면 전문의와 상담해 주세요.
+
+[SCENE: Korean senior person looking relieved and comfortable, 1080x1920]
+나레이터: 이 방법들은 2주 정도 지속하면 변화를 느끼실 수 있습니다.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 다음 정보에도 함께해 주세요.&여러분은 아침에 어떤 식습관을 가지고 계신가요? 댓글로 나눠주세요.
