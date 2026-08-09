@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260809_160145_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"자다가 쥐나신다면, 골밀도가 위험합니다"
+
+THUMBNAIL_SHORTS:
+"자다가 쥐나신다면, 골밀도가 위험합니다"
+
+[SCENE: close-up of Korean senior woman's leg cramping at night in bed, 1080x1920]
+나레이터: 밤에 자다가 갑자기 종아리가 쥐어드신 경험, 많으신가요?
+
+[SCENE: Korean elderly couple, one person holding their cramped leg, bedside lamp on, 1080x1920]
+나레이터: 단순한 근경련으로 넘기셨다면, 놓치고 있는 신호가 있을 수 있습니다.
+
+[SCENE: illustration of bones with decreasing density, medical visualization, 1080x1920]
+나레이터: 야간 경련은 칼슘 부족의 신호일 수 있고&특히 50대 이상이라면 골밀도 저하와 연결될 가능성이 높습니다.&골다공증으로 진행되기 전에 지금 바로 관리해야 합니다.&자세한 해결책이 궁금하시다면, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean woman tapping heart twice on phone screen, 1080x1920]
+나레이터: 화면을 두 번 눌러주신 분들을 위해 지금부터 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior man eating dairy products - milk, yogurt, cheese on table, 1080x1920]
+나레이터: 첫 번째, 하루 세 끼에 칼슘 음식을 꼭 한 가지씩 챙기세요.&우유 한 잔, 요거트, 두부, 등푸른 생선 같은 것들입니다.&특히 저녁 식사 때 챙기면 야간 경련을 줄이는 데 효과적입니다.
+
+[SCENE: Korean elderly person doing gentle stretching and calf exercises at home, 1080x1920]
+나레이터: 두 번째, 자기 전에 종아리를 5분간 천천히 스트레칭하세요.&발을 꿈치 방향으로 천천히 당기기를 10번, 반대 방향으로도 10번 반복하면 충분합니다.
+
+[SCENE: Korean senior man walking outdoors in sunlight during daytime, 1080x1920]
+나레이터: 세 번째, 하루 15분 이상 햇빛을 쬐세요.&비타민 D는 칼슘 흡수를 돕는데, 햇빛이 제일 좋은 공급처입니다.&정확한 진단과 관리는 반드시 전문의와 상담하세요.&정기적인 야간 경련과 뼈 건강은 지금부터 관리하면 충분히 예방할 수 있습니다.&오늘 방법, 이번 주부터 시작하실 분은 댓글에 '시작'이라고 남겨주세요.

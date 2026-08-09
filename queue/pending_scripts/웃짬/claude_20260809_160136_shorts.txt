@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260809_160136_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+"밤에 다리가 저린다면, 뼈가 약해지는 신호입니다"
+
+THUMBNAIL_SHORTS:
+"밤에 다리 저림, 뼈 약화 신호"
+
+[SCENE: Korean senior woman in bed at night, rubbing her legs uncomfortably, 1080x1920]
+나레이터: 밤에 자려고 누우면 다리가 저린다면, 단순한 피로가 아닐 수 있습니다.
+
+[SCENE: close-up of Korean elderly woman's concerned face, 1080x1920]
+나레이터: 많은 분들이 그냥 혈액순환 때문이라고 생각하시는데&사실은 뼈와 근육이 약해지고 있다는 신호일 수 있습니다.
+
+[SCENE: medical illustration or diagram showing bone density and calcium, 1080x1920]
+나레이터: 나이가 들면서 뼈에서 칼슘과 미네랄이 빠져나갑니다.&특히 밤에 누웠을 때 신경이 압박되면서 저림이 생기는 겁니다.&근데 사실 여기서 어떻게 대처하는지가 제일 중요합니다.
+
+[SCENE: Korean senior person tapping their smartphone screen twice, 1080x1920]
+나레이터: 지금 도움이 되신다면, 화면을 두 번 눌러서 좋아요를 눌러주세요.&그럼 바로 해결법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman drinking milk or having calcium-rich food at breakfast table, 1080x1920]
+나레이터: 첫 번째, 아침에 일어나자마자 칼슘이 많은 음식을 먹습니다.&우유 한 잔, 요거트, 멸치 한 줌이면 충분합니다.
+
+[SCENE: Korean elderly person doing gentle leg stretches in sitting position, 1080x1920]
+나레이터: 두 번째, 자기 30분 전에 다리를 위아래로 가볍게 펴는 스트레칭을 2분만 해보세요.&신경 압박을 풀어주는 겁니다.
+
+[SCENE: Korean senior walking outdoors in sunlight, getting natural vitamin D, 1080x1920]
+나레이터: 세 번째, 하루 10분이라도 햇빛에 나가보세요.&칼슘 흡수를 돕는 비타민 D가 만들어집니다.&정확한 진단과 치료는 반드시 전문의와 상담하시기 바랍니다.
+
+[SCENE: Korean senior woman looking peaceful and comfortable in bed at night, 1080x1920]
+나레이터: 밤의 다리 저림은 뼈가 도움을 청하는 신호입니다.&오늘부터 이 세 가지를 시작해 보셨으면 좋겠습니다.&여러분은 밤에 다리가 저린 경험이 있으신가요?&댓글로 나눠주세요.
