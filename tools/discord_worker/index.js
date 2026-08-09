@@ -179,8 +179,17 @@ export default {
       // 트리거(빠른 경로)가 실패했을 때만 의미가 있고, 이미 조립이 끝났으면
       // assemble_daily.yml이 큐가 비어 조용히 종료됩니다.
       ctx.waitUntil(triggerAssembleIfIdle(env));
-    } else {
+    } else if (event.cron === "0 16 * * *") {
       ctx.waitUntil(triggerDailyIfIdle(env));
+    } else {
+      // 모르는 cron 문자열이면 아무것도 안 하고 로그만 남깁니다 — 예전엔 이
+      // 자리가 "그 외엔 전부 대본 생성 트리거"인 catch-all else였는데, 대시보드에
+      // 지웠어야 할 옛날 cron(예: "0 10 * * *")이 남아있으면 그게 매번 대본
+      // 생성을 또 트리거해서 하루에 여러 번 중복 생성되는 사고가 있었습니다
+      // (2026-08-09 확인 — 디스코드 알림이 이상한 시각에 여러 번 온 원인이었음).
+      // 대시보드 Cron Triggers에 실제로 등록된 값과 위 4개 분기가 정확히 일치하는지
+      // 반드시 확인하세요.
+      console.log(`[scheduled] 알 수 없는 cron("${event.cron}") — 아무 것도 안 함. 대시보드에서 이 트리거를 확인/삭제하세요.`);
     }
   },
 };
@@ -703,11 +712,13 @@ const _FACE_QUALITY_BOOST =
 // generateSceneImages()를 독립적으로 돌리다 보니, 전부 Pollinations 전역
 // 동시요청 제한(429)에 부딪혀서 서로를 밀어내는 문제가 실측으로 확인됐습니다
 // (21씬 중 1개만 성공). 429/일시적 실패는 그 자리에서 포기하지 않고 지수
-// 백오프로 재시도합니다 — 하루 일정에 여유가 생겨서(1시 시작, 8시 목표) 몇 분
-// 더 기다리는 건 문제가 안 되고, 그러면 서로 다른 run_id들이 자연스럽게
-// 시간차를 두고 겹치지 않게 됩니다(2026-08-07).
-const _IMAGE_MAX_RETRIES = 6;
-const _IMAGE_RETRY_BASE_MS = 20000; // 20s, 40s, 80s, 160s, 320s, 640s ...
+// 백오프로 재시도합니다. 처음엔 최대 21분/씬까지 재시도하게 했는데, 파이썬
+// 쪽 대기(ai_image_wait_timeout_sec)가 훨씬 짧게(90초) 줄어든 이상 그렇게 길게
+// 재시도해봤자 그 결과를 써먹을 조립 실행은 이미 Pixabay로 넘어간 뒤라
+// 의미가 없고, 오히려 다음 run_id들을 계속 밀어내기만 합니다 — 최대
+// ~5분/씬(20+40+80+160s)으로 줄였습니다(2026-08-09).
+const _IMAGE_MAX_RETRIES = 4;
+const _IMAGE_RETRY_BASE_MS = 20000; // 20s, 40s, 80s, 160s ...
 
 async function _fetchImageWithRetry(url) {
   for (let attempt = 0; attempt <= _IMAGE_MAX_RETRIES; attempt++) {
