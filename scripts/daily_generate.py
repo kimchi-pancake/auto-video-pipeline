@@ -190,6 +190,12 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
     # queue/pending_scripts/{채널}/(scripts/prepare_daily.py가 미리 커밋해둔
     # 대본)를 로컬 input_dir로 가져옵니다 — 이 스크립트가 조립 전용으로
     # 쪼개지면서 생긴 단계입니다(2026-08-04).
+    from core.daily_queue import queue_dir_for_channel
+    _qd = queue_dir_for_channel(name)
+    logger.info(
+        "daily_generate: DEBUG '%s' queue_dir=%s exists=%s contents=%s",
+        name, _qd, _qd.exists(), list(_qd.glob("*")) if _qd.exists() else "N/A",
+    )
     pulled = pull_queue_into_input_dir(name, input_dir)
     if pulled:
         logger.info("daily_generate: '%s' 큐에서 대본 %d개 가져옴", name, len(pulled))
