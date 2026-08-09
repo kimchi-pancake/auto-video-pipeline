@@ -2,7 +2,7 @@
 scripts/prepare_daily.py
 =========================
 "대본 생성" 전용 헤드리스 스크립트 — 설정에 등록된 모든 채널에 대해 하루치
-대본(채널당 롱폼 1개 + 쇼츠 2개)을 Claude API로 생성해서
+대본(채널당 쇼츠 5개, 2026-08-08부터 롱폼 없음)을 Claude API로 생성해서
 queue/pending_scripts/{채널}/ 에 저장합니다.
 
 대본이 저장되는 순간(core/ai_script_generator.py의 save_story) Cloudflare
@@ -21,8 +21,10 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import date
+from datetime import datetime
 from pathlib import Path
+
+import pytz
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
@@ -35,6 +37,14 @@ from core.daily_queue import queue_dir_for_channel
 from core.topic_queue import pop_topic
 
 _STATE_PATH = ROOT / "config" / "daily_generate_state.json"
+# GitHub Actions 러너는 UTC로 돕니다 — date.today()를 그대로 쓰면 "오늘 이미
+# 생성함" 판정 기준이 UTC 날짜가 되는데, 이 배치는 01:00 KST(=16:00 UTC, UTC로는
+# 전날)에 시작하도록 스케줄돼 있어서 어긋납니다. 같은 UTC 날짜 안에 수동 트리거
+# (예: /영상 시작, 테스트 실행)가 먼저 한 번 돌면 state[channel]에 그 UTC 날짜가
+# 찍혀버리고, 몇 시간 뒤 진짜 01:00 KST 정기 실행이 "오늘 이미 생성함"으로
+# 오판해서 통째로 건너뛰는 사고가 있었습니다(2026-08-09 확인). KST 기준 날짜로
+# 판정해야 스케줄 의도와 맞습니다.
+_KST = pytz.timezone("Asia/Seoul")
 
 
 def _load_state() -> dict:
@@ -55,7 +65,7 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
     """모든 채널에 하루치 대본을 생성해 queue/pending_scripts/에 저장합니다.
     채널별로 오늘 이미 생성했으면 건너뜁니다. (성공 채널 수, 저장된 파일
     총수)를 반환."""
-    today = date.today().isoformat()
+    today = datetime.now(_KST).date().isoformat()
     state = _load_state()
 
     logger.info("prepare_daily: %d개 채널 대상으로 하루치 대본 생성 시작", len(channels))
