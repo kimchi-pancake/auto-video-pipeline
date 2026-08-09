@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260809_005145_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+의사들이 말 안 해주는 무릎 통증의 진짜 원인
+
+THUMBNAIL_SHORTS:
+무릎 통증, 나이 탓이 아닙니다
+
+[SCENE: Korean senior man holding knee while sitting on couch with painful expression, 1080x1920]
+나레이터: 계단 오를 때 무릎이 시큰거리신다면, 단순 노화가 아닐 수도 있습니다.
+
+[SCENE: close-up of person's leg showing knee area during sitting position, 1080x1920]
+나레이터: 많은 분들이 "나이가 들어서 그렇다"고 생각하시는데&실제 원인은 따로 있을 수 있습니다.
+
+[SCENE: illustration of thigh muscles and knee joint anatomy, 1080x1920]
+나레이터: 바로 허벅지 근육이 약해져서 무릎 관절이 불안정해지기 때문입니다.& 근육이 부족하면 무릎 뼈가 제 위치를 잃고&연골에 불필요한 압력이 계속 가해지게 됩니다.& 이게 통증의 진짜 범인인데&중요한 건 지금부터입니다.
+
+[SCENE: happy Korean senior man touching screen twice with both hands, smiling, 1080x1920]
+나레이터: 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman doing simple chair-based leg exercises indoors, 1080x1920]
+나레이터: 하루 10분, 의자에 앉아서 다리를 천천히 펼쳤다 구부렸다 반복하기만 해도 됩니다.& 이렇게 허벅지 앞쪽 근육을 깨우는 것만으로도 무릎 안정성이 크게 달라집니다.
+
+[SCENE: Korean senior man walking slowly and carefully on flat ground with good posture, 1080x1920]
+나레이터: 또한 계단을 오를 때는 발끝이 무릎 방향을 따라가도록 천천히 올라가세요.& 이렇게 하면 무릎에 걸리는 부담이 줄어듭니다.& 정확한 진단과 심한 통증은 반드시 전문의와 상담해야 합니다.
+
+[SCENE: Korean senior person showing thumbs up with satisfied expression, 1080x1920]
+나레이터: 허벅지 근육을 깨우면 무릎 통증이 크게 달라집니다.& 오늘부터 시작하신 분, 댓글에 '시작'이라고 남겨주세요.
