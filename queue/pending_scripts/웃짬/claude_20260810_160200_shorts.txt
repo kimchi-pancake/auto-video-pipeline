@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260810_160200_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+"골밀도 낮아진다는 그 신호, 놓치면 큽니다"
+
+THUMBNAIL_SHORTS:
+"골밀도 신호, 놓치면 큽니다"
+
+[SCENE: Korean senior woman looking at her hands with concern, examining thin wrists, 1080x1920]
+나레이터: 손목이 가늘어 보이신다면, 뼈가 약해지는 신호일 수 있습니다.
+
+[SCENE: Asian elderly man and woman examining wrists together in natural light, 1080x1920]
+나레이터: 특히 여성분들이 폐경 이후 갑자기 이런 변화를 겪으시는데요.&뼈에서 칼슘이 빠져나가는 속도가 평상시의 10배까지 늘어난다는 사실, 알고 계셨나요?
+
+[SCENE: close-up of Korean senior person's thin, frail-looking hands, 1080x1920]
+나레이터: 손목이 가늘어지는 건 피부 문제가 아니라, 뼈 안의 칼슘과 미네랄이 감소했다는 신호입니다.&방치하면 작은 넘어짐에도 골절 위험이 높아집니다.&이 다음 내용이 정말 중요하니 함께해 주세요.
+
+[SCENE: person's wrist being measured with a measuring tape, bright studio setting, 1080x1920]
+나레이터: 화면을 두 번 눌러서 좋아요를 눌러주시면, 지금부터 뼈 건강을 지키는 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman drinking milk at a sunny kitchen table, 1080x1920]
+나레이터: 첫째, 하루 세 끼마다 한 가지씩 칼슘 음식을 먹는 겁니다.&우유 한 잔, 두부 한 모, 멸치볶음 한 숟가락 이렇게요.
+
+[SCENE: Asian senior couple taking a 20-minute morning walk in a park, 1080x1920]
+나레이터: 둘째, 하루 20분만이라도 햇빛을 받으며 걷기입니다.&햇빛이 비타민 D를 만들고, 이게 칼슘 흡수를 도와줍니다.
+
+[SCENE: Korean senior woman doing simple standing balance exercises at home, holding chair, 1080x1920]
+나레이터: 손목이 가늘어지기 시작했다면, 이미 뼈 건강 신호가 울리고 있다는 뜻입니다.&정확한 진단과 치료는 반드시 전문의와 상담하시고, 오늘부터 칼슘 섭취와 햇빛 걷기를 시작하세요.&여러분은 요즘 손목이 변했다고 느껴지신 적이 있으신가요?&댓글로 알려주세요.

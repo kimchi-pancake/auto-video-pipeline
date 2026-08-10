@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260810_160209_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"밤중에 다리 쥐난다면, 뼈가 부르는 신호"
+
+THUMBNAIL_SHORTS:
+"밤중에 다리 쥐난다면, 뼈가 부르는 신호"
+
+[SCENE: Korean senior woman grimacing in bed at night, clutching calf muscle, 1080x1920]
+나레이터: 밤중에 갑자기 다리가 쥐나서 깨신 적 있으신가요?
+
+[SCENE: close-up of elderly person's leg with visible muscle tension, 1080x1920]
+나레이터: 대부분 '그냥 다리 경련'이라고 생각하시는데&사실 뼈와 근육의 신호일 수 있습니다.
+
+[SCENE: anatomical illustration showing calcium deficiency in bones, medical style, 1080x1920]
+나레이터: 우리 몸이 칼슘이 부족해지면&뼈에서 칼슘을 빼내 혈액에 보냅니다.&이때 근육이 갑자기 수축하면서 쥐가 나는 거예요.&특히 50대 이상이시면 더 주의해야 하는데&지금부터 알려드릴 방법이 정말 중요합니다.
+
+[SCENE: Korean senior man and woman nodding in recognition, sitting together, 1080x1920]
+나레이터: 혹시 이런 경험이 한 달에 3번 이상이신가요?&화면을 두 번 눌러주세요.
+
+[SCENE: glass of milk, small fish (dried anchovies), and leafy greens on table, 1080x1920]
+나레이터: 가장 빠른 방법은&하루에 우유 한 잔, 멸치 한 줌, 브로콜리 한 줌을 섭취하는 겁니다.&이것만으로도 일일 칼슘의 60%를 채울 수 있습니다.
+
+[SCENE: Korean senior woman doing light stretching in morning sunlight, 1080x1920]
+나레이터: 그리고 아침에 10분만 햇빛을 쬐세요.&햇빛이 비타민 D를 만들어서&칼슘 흡수를 도와줍니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman waking up refreshed, stretching peacefully in bed, 1080x1920]
+나레이터: 밤중에 다리 쥐나는 것도 뼈 건강의 신호예요.&당신은 지난 한 달간 이런 증상이 몇 번이나 있으셨나요?&댓글로 알려주세요.

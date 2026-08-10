@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260810_160245_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"우유 매일 마셔도 뼈가 약해지는 이유"
+
+THUMBNAIL_SHORTS:
+"우유만 마셨다간 뼈가?"
+
+[SCENE: Korean senior woman holding a glass of milk in kitchen, looking confused, 1080x1920]
+나레이터: 매일 우유를 마시시는데 뼈가 자꾸 약해지신다면, 우유만 마시는 게 문제일 수 있습니다.
+
+[SCENE: close-up of woman's hands with visible joint stiffness or concern, 1080x1920]
+나레이터: 특히 폐경기 이후 여성분들이 이런 경험을 많이 하시죠.&"우유를 열심히 마시는데 왜 뼈가 약할까" 하고요.
+
+[SCENE: animation or graphic showing calcium absorption in intestines, 1080x1920]
+나레이터: 사실 칼슘은 그냥 먹는 것만으로는 부족합니다.&칼슘이 뼈에 제대로 흡수되려면 비타민D가 꼭 필요한데&많은 분들이 이걸 놓치고 계십니다.&이게 뼈 건강의 핵심이거든요, 지금부터 알려드릴게요.
+
+[SCENE: Korean senior woman nodding with interest, touching screen, 1080x1920]
+나레이터: 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: sunny window or outdoor scene showing sunlight, 1080x1920]
+나레이터: 비타민D를 늘리는 가장 쉬운 방법은 햇빛입니다.&하루에 15분에서 20분, 팔과 다리가 드러난 상태로 햇빛을 쬐면&피부에서 자연스럽게 비타민D가 만들어집니다.
+
+[SCENE: Asian senior person eating salmon or egg yolk at meal, 1080x1920]
+나레이터: 그리고 계란노른자, 연어, 버섯 같은 음식도 비타민D가 풍부합니다.&우유와 함께 이런 음식들을 정기적으로 드시면 칼슘 흡수가 훨씬 좋아집니다.&정확한 식단 관리는 전문의와 상담하세요.
+
+[SCENE: Korean senior woman smiling with determination, ready to take action, 1080x1920]
+나레이터: 결국 우유 + 햇빛 + 음식이 함께 만날 때 뼈가 튼튼해진다는 뜻입니다.&여러분은 지금 비타민D는 충분히 챙기고 계신가요?&댓글로 알려주세요.

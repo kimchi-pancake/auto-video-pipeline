@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260810_160236_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+의사들이 말 안 해주는 무릎 통증의 진짜 원인
+
+THUMBNAIL_SHORTS:
+의사들이 말 안 해주는 무릎 통증의 진짜 원인
+
+[SCENE: Korean senior man climbing stairs while holding knee in pain, 1080x1920]
+나레이터: 계단 오를 때마다 무릎이 시큰거리신다면, 단순 노화가 아닐 수 있습니다.
+
+[SCENE: close-up of an elderly Asian woman's leg showing knee area, sitting on couch, 1080x1920]
+나레이터: 많은 분들이 나이 탓이라고 넘기시는데&사실 다리 근육이 약해져서 생기는 문제일 수 있습니다.
+
+[SCENE: anatomical illustration of knee joint and thigh muscle, 1080x1920]
+나레이터: 넓다리근육이라고 하는 허벅지 앞의 근육이 약해지면&무릎이 제대로 지탱을 못 하게 됩니다.&그러면서 무릎 관절에 자꾸만 부담이 몰리는 거죠.&이게 바로 통증의 원인입니다.&지금부터 가장 중요한 해결법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman double-tapping phone screen with smile, 1080x1920]
+나레이터: 화면을 두 번 눌러서 좋아요를 눌러주시면, 지금부터 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman doing wall squat exercise against wall indoors, 1080x1920]
+나레이터: 벽에 등을 기대고&무릎을 천천히 구부렸다 펴는 동작입니다.&하루에 아침, 저녁 각각 10번씩&3주만 꾸준히 해보세요.
+
+[SCENE: Korean senior man walking slowly on flat ground with proper posture, 1080x1920]
+나레이터: 또 하나는 평지에서 천천히 걷기입니다.&하루 15분, 너무 빠르지 않게 걷는 것만으로도&허벅지 근육이 조금씩 강해집니다.&정확한 진단과 심한 통증은 반드시 전문의와 상담하시기 바랍니다.
+
+[SCENE: Korean senior couple sitting together, one person nodding with understanding expression, 1080x1920]
+나레이터: 무릎 통증의 진짜 원인은 근육 약화였습니다.&여러분은 벽에 기대고 하는 이 운동&오늘부터 한 번 해보실 수 있으신가요?
