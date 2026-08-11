@@ -32,7 +32,7 @@
 
   "tts": {
     "default_voice": "ko-KR-SunHiNeural",
-    "default_rate": "+0%",
+    "default_rate": "+20%",
     "default_pitch": "+0Hz",
     "default_volume": "+0%",
     "max_workers": 4,
@@ -42,31 +42,31 @@
     "voices": {
       "나레이터": {
         "voice": "ko-KR-SunHiNeural",
-        "rate": "-5%",
+        "rate": "+18%",
         "pitch": "+0Hz",
         "volume": "+0%"
       },
       "남자1": {
         "voice": "ko-KR-InJoonNeural",
-        "rate": "+0%",
+        "rate": "+20%",
         "pitch": "-5Hz",
         "volume": "+0%"
       },
       "여자1": {
         "voice": "ko-KR-SunHiNeural",
-        "rate": "+0%",
+        "rate": "+20%",
         "pitch": "+5Hz",
         "volume": "+0%"
       },
       "남자2": {
         "voice": "ko-KR-InJoonNeural",
-        "rate": "+5%",
+        "rate": "+25%",
         "pitch": "+0Hz",
         "volume": "+0%"
       },
       "여자2": {
         "voice": "ko-KR-SunHiNeural",
-        "rate": "-5%",
+        "rate": "+15%",
         "pitch": "-3Hz",
         "volume": "+0%"
       }
