@@ -206,8 +206,18 @@ class SubtitleBuilder:
             "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
         )
 
+    # "정확한 진단과 치료는 전문의와 상담하세요" 같은 안전 고지 문구는 내용상
+    # 반드시 남겨야 하지만(2026-08-11 사용자 확인 — 의료 오정보 리스크 때문에
+    # 완전 삭제는 안 함), 화면에서는 눈에 덜 띄게 작게 표시합니다. "전문의"라는
+    # 단어가 들어간 자막 줄에만 ASS 인라인 태그로 폰트 크기를 줄입니다.
+    _DISCLAIMER_KEYWORD = "전문의"
+    _DISCLAIMER_FONT_SCALE = 0.55
+
     def _ass_dialogue(self, entry: SubtitleEntry) -> str:
         text = entry.text.replace("\n", "\\N")
+        if self._DISCLAIMER_KEYWORD in entry.text:
+            small_size = max(int(self._font_size * self._DISCLAIMER_FONT_SCALE), 1)
+            text = f"{{\\fs{small_size}}}{text}"
         return (
             f"Dialogue: 0,"
             f"{_ass_time(entry.start)},"
