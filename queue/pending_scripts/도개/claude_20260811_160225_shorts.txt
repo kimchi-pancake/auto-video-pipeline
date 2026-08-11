@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260811_160225_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+앉았다 일어날 때 다리가 후들거린다면
+
+THUMBNAIL_SHORTS:
+앉았다 일어날 때 다리가 후들거린다면
+
+[SCENE: Korean senior woman struggling to stand up from sofa, visibly trembling in legs, 1080x1920]
+나레이터: 의자에서 일어날 때 다리가 후들거린다면, 단순 약화가 아닙니다.
+
+[SCENE: close-up of elderly person's leg muscles appearing weak and thin, 1080x1920]
+나레이터: 많은 분들이 그냥 나이 탓이라고 넘기시는데, 사실 특정 근육이 빠져나가고 있다는 신호입니다.
+
+[SCENE: anatomical illustration of thigh and leg muscles, 1080x1920]
+나레이터: 50대부터 매년 1%씩 근육량이 줄어듭니다.&특히 다리 근육이 먼저 사라지면서 일상 활동 자체가 어려워지는데, 지금부터가 가장 중요한 시점입니다.
+
+[SCENE: Korean senior person nodding with recognition, understanding expression, 1080x1920]
+나레이터: 화면을 두 번 눌러서 좋아요를 눌러주세요.&지금부터 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman doing simple chair squats with proper form, 1080x1920]
+나레이터: 첫 번째, 의자에 앉은 상태에서 일어났다 앉기를 하루에 10번씩, 하루 2~3번 반복하세요.&천천히, 무리하지 않게 하는 게 핵심입니다.
+
+[SCENE: Korean senior person walking at moderate pace indoors, 1080x1920]
+나레이터: 두 번째, 하루 20분 정도 천천히 걷기를 하세요.&계단이나 경사진 곳을 포함하면 더 효과적입니다.&정확한 운동 방법은 반드시 전문가와 상담해 주세요.
+
+[SCENE: Korean senior person feeling more confident, smiling while standing, 1080x1920]
+나레이터: 다리 근육을 지금부터 지켜야 향후 넘어짐이나 일상 활동 제한을 막을 수 있습니다.&당신도 오늘부터 시작하실 수 있습니다.&여러분은 언제부터 운동을 시작하고 싶으신가요? 댓글로 알려주세요.

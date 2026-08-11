@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260811_160111_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+"그 음식 매일 드시면, 뼈가 녹습니다"
+
+THUMBNAIL_SHORTS:
+"그 음식 매일 드시면, 뼈가 녹습니다"
+
+[SCENE: Korean senior woman holding wrist in pain, close-up of hand trembling slightly, 1080x1920]
+나레이터: 손목이 자주 시큰거리신다면, 단순 피로가 아닐 수 있습니다.
+
+[SCENE: Korean elderly person eating processed food with soda, sitting at dining table, 1080x1920]
+나레이터: 사실 여러분이 매일 드시는 그 음식 때문에 뼈에서 칼슘이 빠져나가고 있습니다.
+
+[SCENE: anatomical illustration of bone structure becoming porous and weak, medical diagram style, 1080x1920]
+나레이터: 산성 음식을 자주 섭취하면 몸이 이를 중화하려고 뼈에서 칼슘을 꺼내 쓰는데, 이게 반복되면 뼈가 약해지는 겁니다.& 진짜 중요한 건 지금부터입니다.
+
+[SCENE: finger double-tapping heart icon on smartphone screen, close-up, 1080x1920]
+나레이터: 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior person eating fresh vegetables and grilled fish, balanced meal on plate, 1080x1920]
+나레이터: 첫째, 산성 음식을 줄이세요.& 탄산음료, 라면, 튀긴 음식보다는 신선한 채소와 생선을 드세요.
+
+[SCENE: Korean woman drinking milk or taking calcium supplement with water, sunny kitchen background, 1080x1920]
+나레이터: 둘째, 하루 한 두 잔의 우유나 요구르트로 칼슘을 보충하세요.& 햇빛에 10분만 노출돼도 비타민 D가 만들어져 칼슘 흡수가 훨씬 잘됩니다.& 정확한 진단과 관리는 전문의와 상담하세요.
+
+[SCENE: Korean senior woman smiling, checking wrist mobility and strength, 1080x1920]
+나레이터: 지금 바꾼 식습관이 모인 뼈가 단단해지려면 3개월이 걸립니다.& 오늘부터 시작하신다면 댓글에 '시작'이라고 남겨주시겠어요?

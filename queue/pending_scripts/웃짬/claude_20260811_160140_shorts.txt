@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260811_160140_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+의사들이 말 안 하는 무릎 통증의 진짜 원인
+
+THUMBNAIL_SHORTS:
+무릎 통증, 나이 탓이 아닙니다
+
+[SCENE: Korean senior man rubbing sore knee while sitting, close-up of knee joint, 1080x1920]
+나레이터: 계단 오를 때 무릎이 시큰거리신다면, 단순 노화가 아닐 수 있습니다.
+
+[SCENE: Korean elderly woman struggling to stand up from low chair, 1080x1920]
+나레이터: 의자에서 일어날 때&앉을 때 무릎이 먼저 아픈 게 아니라 다리가 떨린다면 특히 그렇습니다.
+
+[SCENE: anatomical illustration of thigh muscle and knee joint, 1080x1920]
+나레이터: 실제 원인은 연골 닳음보다 허벅지 근육이 약해지는 것 때문입니다.&다리 근육이 약하면 무릎이 충격을 혼자 감당하게 되기 때문이죠.&지금부터가 제일 중요합니다.
+
+[SCENE: Korean senior person double-tapping heart icon on smartphone screen, smiling, 1080x1920]
+나레이터: 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man doing simple squats against wall, proper form demonstrated, 1080x1920]
+나레이터: 해결법은 간단합니다.&벽에 등을 대고 서서, 천천히 무릎을 구부렸다 펴는 동작을 하루에 10번씩 3세트만 하세요.&처음에는 얕게 내려가도 괜찮습니다.
+
+[SCENE: Korean senior woman walking slowly on flat ground, proper posture, 1080x1920]
+나레이터: 이 다음 중요한 건 매일 10분씩 느리게 걷는 것입니다.&가파른 곳은 피하고, 평탄한 길에서 천천히 꾸준히 걷는 게 핵심입니다.&정확한 진단과 운동법은 반드시 전문가와 상담하세요.
+
+[SCENE: Korean senior person flexing thigh muscle, satisfied expression, 1080x1920]
+나레이터: 허벅지 근육이 강해지면, 무릎의 부담이 확 줄어듭니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&혹시 이미 이 운동을 하고 계신 분 있으신가요? 댓글로 경험담을 나눠주세요.

@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260811_160150_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+우유 많이 마셔도 골다공증 온다고?
+
+THUMBNAIL_SHORTS:
+우유 많이 마셔도 골다공증?
+
+[SCENE: senior Korean woman holding her lower back in pain, 1080x1920]
+나레이터: 우유를 열심히 마셔도 뼈가 약해지는 분들이 있습니다.
+
+[SCENE: close-up of milk glass being poured, 1080x1920]
+나레이터: 칼슘만으로는 부족하다는 뜻입니다.& 아마 이것 때문일 겁니다.
+
+[SCENE: Korean elderly person sitting with poor posture at desk, 1080x1920]
+나레이터: 뼈에 칼슘을 흡수시키려면 반드시 필요한 것이 있는데&정확한 진단과 관리는 의사와 상담하시고, 지금부터 알려드릴 방법이 사실 더 중요합니다.
+
+[SCENE: person doing weight-bearing exercise or standing, 1080x1920]
+나레이터: 화면을 두 번 눌러주세요.& 지금부터 뼈를 단단하게 만드는 방법을 알려드리겠습니다.
+
+[SCENE: Korean senior woman doing light weight-bearing exercises or walking outdoors, 1080x1920]
+나레이터: 첫째, 햇빛에 10~15분 노출되세요.& 우리 피부가 비타민D를 만들어 칼슘 흡수를 돕습니다.
+
+[SCENE: senior Korean person doing gentle resistance movements with their body weight, 1080x1920]
+나레이터: 둘째, 하루 20분 정도 살짝 힘을 주는 움직임을 하세요.& 계단 오르내리기나 천천히 스쿼트를 하는 것도 좋습니다.& 뼈에 자극을 주면 더 단단해집니다.
+
+[SCENE: Korean woman eating balanced meal with vegetables and protein, 1080x1920]
+나레이터: 셋째, 우유와 함께 단백질 음식을 드세요.& 멸치, 두부, 계란도 뼈 건강에 도움이 됩니다.& 칼슘 섭취와 햇빛, 그리고 뼈 자극까지 모두 해야 효과가 나타납니다.& 오늘 정보가 도움이 되셨다면 구독으로 응원해 주세요.
+
+[SCENE: close-up of senior Korean woman's face with thoughtful expression, 1080x1920]
+나레이터: 여러분은 지난주에 햇빛에 나가신 날이 며칠이었나요?& 댓글로 나눠주세요.

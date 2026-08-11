@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260811_160102_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+변비약 드신 지 10년, 장이 망가집니다
+
+THUMBNAIL_SHORTS:
+변비약 오래 먹으면 장이 망가집니다
+
+[SCENE: elderly Korean woman holding her stomach in discomfort while sitting, 1080x1920]
+나레이터: 변비약을 자주 드시는 분들, 곧 더 심한 문제가 생깁니다.
+
+[SCENE: close-up of various over-the-counter laxative medications and pills, 1080x1920]
+나레이터: 특히 자극성 변비약을 계속 먹으시면, 장이 스스로 움직이는 힘을 잃어버립니다.
+
+[SCENE: anatomical illustration of colon and digestive system, 1080x1920]
+나레이터: 처음엔 약이 잘 듣다가도, 계속 쓰면 장이 습관이 돼서&약 없이는 아무것도 못 하게 되는 거죠.&이게 가장 무서운 부분입니다.
+
+[SCENE: Korean senior man drinking water glass in the morning, 1080x1920]
+나레이터: 지금부터 알려드리는 방법이 사실 가장 근본적인 해결책입니다.&끝까지 봐 주세요.
+
+[SCENE: animated double-tap heart icon appearing on mobile screen, 1080x1920]
+나레이터: 궁금하신 분들, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior couple eating fiber-rich foods including vegetables, fruits, and whole grains at dining table, 1080x1920]
+나레이터: 첫째, 매일 아침 공복에 물 한 잔을 마시고&최소 30분 뒤에 아침을 드세요.&그리고 밥은 흰쌀밥보다 현미나 보리밥으로 바꾸세요.
+
+[SCENE: elderly Korean man taking a slow, gentle walk in a park during morning, 1080x1920]
+나레이터: 둘째, 하루 20분, 가볍게 산책하세요.&이건 장의 연동 운동을 자극하는 가장 효과적인 방법입니다.
+
+[SCENE: close-up of various vegetables, prunes, and fiber-rich foods on wooden table, 1080x1920]
+나레이터: 셋째, 자극성 약 대신 식이섬유가 많은 음식을 늘리세요.&다시마, 미역, 자두, 당근 같은 음식들이 장을 천천히 자극합니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman smiling while writing in health journal, 1080x1920]
+나레이터: 약에 의존하는 것보다 장이 제 기능을 하도록 돌려놓는 게 더 빠릅니다.&여러분은 지금 변비약을 얼마나 자주 드시나요?&댓글로 알려주세요.
