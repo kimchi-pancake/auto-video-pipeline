@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260812_160108_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+변비약 5년 드신다면, 장이 이미 망했을 수도
+
+THUMBNAIL_SHORTS:
+변비약 5년, 장이 망합니다
+
+[SCENE: Korean senior woman holding stomach in discomfort while sitting on toilet, 1080x1920]
+나레이터: 변비약을 자주 드신다면, 그게 당신 장을 더 망치고 있다는 걸 아시나요?
+
+[SCENE: close-up of multiple laxative medicine bottles and pills on white surface, 1080x1920]
+나레이터: 많은 분들이 변비 해결하려고 약에 손을 대는데&그 약이 실제로는 장의 자연스러운 기능을 마비시킵니다.
+
+[SCENE: anatomical illustration of human digestive system and intestines glowing, 1080x1920]
+나레이터: 변비약을 3년, 5년 계속 쓰면 당신의 장은 약 없이는 움직이지 않는 "게으른 장"이 되어버립니다.&이게 바로 약물 의존성이고, 한 번 이렇게 되면 돌이키기가 매우 어렵습니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 이 다음이 제일 중요합니다&화면을 두 번 눌러서 장을 살리는 방법을 알아보세요.
+
+[SCENE: Korean senior man drinking water from glass at dining table, 1080x1920]
+나레이터: 첫째, 아침에 일어나자마자 따뜻한 물 한 잔을 마십시오.&이것만으로도 장이 자연스럽게 깨어나고 움직입니다.
+
+[SCENE: close-up of fresh vegetables and high-fiber foods like broccoli, carrots, whole grain bread on cutting board, 1080x1920]
+나레이터: 둘째, 하루에 섬유질 25~30그램을 먹으세요.&현미, 채소, 과일에 많은데, 이게 장 속 음식물을 자연스럽게 밀어내줍니다.
+
+[SCENE: Korean senior couple taking slow morning walk in park, peaceful outdoor scenery, 1080x1920]
+나레이터: 셋째, 매일 20분 정도 느긋하게 산책하세요.&움직임이 장의 근육을 다시 깨워주고, 약 없이도 정상적으로 일하게 만듭니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman smiling with hand on stomach, natural daylight indoors, 1080x1920]
+나레이터: 약에 의존하던 장은 3주, 4주 정도 이 세 가지를 꾸준히 하면 서서히 제 기능을 되찾습니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.&지금 바로 변비약을 끊고 물을 마시셨다면, 댓글에 '물'이라고만 남겨주세요.

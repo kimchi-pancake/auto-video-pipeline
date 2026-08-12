@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260812_160126_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+밤에 자다 깨는 이유, 뼈 탓일 수 있습니다
+
+THUMBNAIL_SHORTS:
+밤중 깨짐, 뼈 결핍 신호
+
+[SCENE: Asian senior woman lying in bed at night, looking restless and unable to sleep, 1080x1920]
+나레이터: 밤중에 자꾸 깨신다면, 그냥 나이 탓이 아닐 수도 있습니다.
+
+[SCENE: close-up of woman's face showing discomfort, with shadowy bedroom background, 1080x1920]
+나레이터: 실제로는 뼈에서 보내는 신호일 수 있습니다.&특히 50대 이후 여성분들이 주의해야 합니다.
+
+[SCENE: anatomical illustration of calcium deposits in bone structure, glowing effect, 1080x1920]
+나레이터: 나이가 들면서 뼈 속 칼슘이 빠져나갑니다.&그러면 뼈가 약해지면서 자도 자도 피로하고 밤중에 자꾸 깨는 거입니다.&지금부터 말씀드릴 방법이 정말 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 뼈 건강 비결을 알고 싶으신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman holding a glass of milk, sunny kitchen window background, 1080x1920]
+나레이터: 하루 한 번, 저지방 우유 한 잔이나 요구르트 한 개를 드세요.&이건 칼슘 흡수를 돕는 가장 간단한 방법입니다.
+
+[SCENE: Asian senior couple walking outdoors in natural sunlight, park setting, 1080x1920]
+나레이터: 그리고 하루 15분, 햇빛을 쐬면서 가볍게 산책하세요.&햇빛은 뼈가 칼슘을 흡수하도록 도와줍니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Asian senior woman sleeping peacefully in bed, morning light coming through window, 1080x1920]
+나레이터: 이 습관 둘을 지금부터 시작하면, 밤중 깬 횟수가 확실히 줄어듭니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&댓글에 '오늘부터 시작'이라고 남겨주신 분들이 정말 많더라고요.

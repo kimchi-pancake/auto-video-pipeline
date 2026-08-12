@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260812_160224_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+장을 늙게 만드는 습관, 알고 있었나요
+
+THUMBNAIL_SHORTS:
+장을 늙게 만드는 습관
+
+[SCENE: Asian senior woman holding stomach with uncomfortable expression, 1080x1920]
+나레이터: 변비, 설사를 반복하신다면, 단순한 소화 문제가 아닐 수 있습니다.
+
+[SCENE: close-up of intestines diagram with visual representation of aging, 1080x1920]
+나레이터: 사실 당신의 장이 빠르게 늙고 있다는 신호입니다.& 이를 모르면 이제 돌이킬 수 없는 지점까지 갈 수 있습니다.
+
+[SCENE: Asian senior person eating processed foods and sugary snacks, 1080x1920]
+나레이터: 대부분의 분들이 흰쌀밥, 단 음식, 자극적인 음식을 매일 드십니다.& 이것들이 장 속의 좋은 균을 죽이고 있다는 걸 아십니까?
+
+[SCENE: animated bacteria colony transforming from healthy to unhealthy, 1080x1920]
+나레이터: 장 건강은 곧 뇌 건강, 면역력까지 결정합니다.& 이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 장 복구법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior person eating fermented foods like kimchi and yogurt, 1080x1920]
+나레이터: 매일 아침 식사 전에 따뜻한 물 한 잔을 마신 후, 발효식품을 한두 스푼 드세요.& 일주일만 해도 달라집니다.
+
+[SCENE: Asian senior man with relieved expression, holding glass of water at morning table, 1080x1920]
+나레이터: 흰쌀밥 대신 잡곡밥으로 바꾸고, 하루 식이섬유 20g을 의식적으로 챙기세요.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Asian senior person writing notes about daily routine changes, 1080x1920]
+나레이터: 결국 당신의 장이 젊을수록, 당신의 몸도 10년을 더 젊게 삽니다.& 당신은 오늘부터 이 세 가지 중 몇 개를 실천해 보실 예정인가요?& 댓글에 개수만 남겨주세요.

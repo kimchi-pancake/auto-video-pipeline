@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260812_160136_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+의사들이 말 안 하는 골다공증의 진짜 신호
+
+THUMBNAIL_SHORTS:
+골다공증, 이 신호 놓치면 안 됩니다
+
+[SCENE: Korean senior woman holding lower back in pain while standing from couch, 1080x1920]
+나레이터: 허리가 자꾸 아프다고 생각하셨다면, 이미 뼈가 약해지고 있을 수 있습니다.
+
+[SCENE: elderly Korean man unable to reach high shelf, stretching with difficulty, 1080x1920]
+나레이터: 특히 이런 증상이 있으신 분들은 주의해야 합니다.&손톱이 자꾸 부러지거나, 쉽게 멍이 드는 경우요.
+
+[SCENE: close-up of brittle fingernails and bruised arm skin, 1080x1920]
+나레이터: 이건 단순한 피부 문제가 아닙니다.&몸 전체의 칼슘과 비타민 D가 부족하다는 신호입니다.&골다공증은 증상 없이 진행되다가, 한 번 골절되면 회복이 어렵습니다.&진짜 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 예방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman drinking milk glass at breakfast table, 1080x1920]
+나레이터: 첫째, 칼슘 흡수를 높이려면 우유는 아침에 마시는 게 좋습니다.&저녁에 마시면 우리 몸이 칼슘을 제대로 못 흡수합니다.
+
+[SCENE: Korean senior couple walking in morning sunlight in park, 1080x1920]
+나레이터: 둘째, 하루 30분 햇빛을 쐬며 걷기입니다.&비타민 D는 햇빛에서만 만들어집니다.&아침 10시~오후 3시 사이가 가장 좋습니다.
+
+[SCENE: close-up of food bowl with spinach, sardines, and egg, 1080x1920]
+나레이터: 셋째, 시금치, 멸치, 계란을 매일 조금씩 챙기세요.&이 세 음식이 칼슘과 단백질의 황금 조합입니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior woman writing checklist on paper with pen, 1080x1920]
+나레이터: 골다공증은 조용히 오지만, 예방은 지금이 아니면 늦습니다.&당신은 위의 세 가지 중 몇 개를 이미 실천하고 계세요?&댓글에 숫자로만 남겨주세요.

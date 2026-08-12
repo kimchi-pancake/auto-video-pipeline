@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260812_160155_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮다는 진단 받기 전에
+
+THUMBNAIL_SHORTS:
+골밀도 낮다는 진단 받기 전에
+
+[SCENE: Korean senior woman holding wrist, wincing at pain, 1080x1920]
+나레이터: 손목을 짚고 일어날 때 통증이 있으신가요?& 그것, 단순 삐끗한 게 아닐 수 있습니다.
+
+[SCENE: X-ray of human bones, skeletal structure highlighted, 1080x1920]
+나레이터: 뼈가 약해지면 골절까지 가기 전에 신호를 보냅니다.& 그 신호를 놓치면 이제 돌이킬 수 없습니다.
+
+[SCENE: Korean senior woman touching lower back with discomfort, 1080x1920]
+나레이터: 허리가 자주 결린다& 가만히 앉아만 있어도 허리가 아프다& 이런 증상들이 사실 뼈 밀도 저하의 신호일 수 있습니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 지금부터 알려드릴 방법이 정말 중요합니다.& 화면을 두 번 눌러서 더 자세한 내용을 확인해 주세요.
+
+[SCENE: Korean senior woman walking outdoors in sunlight, smiling, 1080x1920]
+나레이터: 먼저 햇빛입니다.& 하루 15분, 정오 전후에 팔과 다리에 햇빛을 직접 받으세요.& 비타민D는 칼슘 흡수의 열쇠입니다.
+
+[SCENE: Korean senior person doing weight-bearing exercises, standing on one leg, 1080x1920]
+나레이터: 둘째, 뼈에 자극을 주는 운동입니다.& 하루 10분, 제자리 걷기나 계단 오르기처럼 뼈에 무게가 실리는 움직임을 하세요.& 정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman eating dairy products, yogurt and cheese on table, 1080x1920]
+나레이터: 손목 통증, 허리 불편함이 느껴진다면 지금이 마지막 기회입니다.& 오늘부터 햇빛 15분과 운동 10분, 이 두 가지를 시작하신 분들은 댓글에 '오늘부터'라고 남겨주세요.
