@@ -1524,5 +1524,55 @@
     "uploaded_at": "2026-08-11T09:53:12+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "ryBUq7wipiQ",
+    "channel": "도개",
+    "category": "장건강",
+    "title": "매일 하는 이것, 장을 망칩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-12T23:44:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "TZmAG9GCPZw",
+    "channel": "도개",
+    "category": "뼈건강",
+    "title": "골밀도 낮으면 넘어져도 골절, 이미 늦었을 수도",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-12T23:49:32+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "y9Bg_ou-5wU",
+    "channel": "도개",
+    "category": "뼈건강",
+    "title": "골밀도 빠지면 돌이킬 수 없습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-12T23:54:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ZWbKu17faUM",
+    "channel": "도개",
+    "category": "뼈건강",
+    "title": "골밀도 낮다는 진단 받기 전에",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-12T23:58:59+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "GGxGB-9jOJ0",
+    "channel": "도개",
+    "category": "장건강",
+    "title": "장을 늙게 만드는 습관, 알고 있었나요",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-13T00:04:09+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
