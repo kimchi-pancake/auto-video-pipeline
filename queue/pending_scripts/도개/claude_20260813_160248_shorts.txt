@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260813_160248_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 떨어지는 이유, 칼슘 아니었습니다
+
+THUMBNAIL_SHORTS:
+골밀도 떨어지는 진짜 범인
+
+[SCENE: Korean senior woman holding wrist in pain, closeup of hand trembling slightly, 1080x1920]
+나레이터: 뼈가 약해진다고 하면 다들 칼슘 부족이라고 생각하시는데&사실 그게 아닙니다.
+
+[SCENE: woman in her 60s avoiding sunlight, staying indoors by window with curtains drawn, 1080x1920]
+나레이터: 햇빛을 피하시는 습관이 있으신가요?&아니면 실내에만 주로 계신 분이신가요?
+
+[SCENE: human skeleton diagram with vitamin D highlighted, medical illustration style, 1080x1920]
+나레이터: 칼슘이 뼈에 붙으려면 비타민D가 절대 필요한데&햇빛을 안 보면 비타민D가 제대로 만들어지지 않습니다.&정확한 진단은 반드시 전문의와 상담하세요.&이제부터가 정말 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 오늘 꿀팁이 도움이 되셨다면 화면을 두 번 눌러서 더 자세한 방법을 알아보세요.
+
+[SCENE: Korean senior couple walking outside in morning sunlight, park setting, 1080x1920]
+나레이터: 매일 아침 20분, 팔 벗겨낸 상태로 햇빛을 받으세요.&손가락, 팔뚝, 얼굴 중 최소 하나는 햇빛에 닿아야 합니다.
+
+[SCENE: various vitamin D-rich foods on table - salmon, eggs, mushrooms, dairy products, 1080x1920]
+나레이터: 동시에 비타민D 많은 음식도 챙기세요.&계란, 연어, 버터, 버섯 같은 것들입니다.&이렇게 두 가지를 동시에 하면 뼈는 이미 달라지고 있습니다.
+
+[SCENE: Korean senior woman smiling, doing light stretching or gentle exercise at home, 1080x1920]
+나레이터: 결국 뼈 건강은 칼슘만 많이 먹는 게 아니라&햇빛과 비타민D가 함께 작동할 때 만들어집니다.&오늘부터 이 습관을 시작하신 분, 댓글에 '햇빛'이라고만 남겨주세요.

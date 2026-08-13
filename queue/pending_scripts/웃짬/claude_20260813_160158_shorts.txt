@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260813_160158_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+화장실 자주 가신다면, 이미 늦을 수도
+
+THUMBNAIL_SHORTS:
+화장실 자주 가신다면, 이미 늦을 수도
+
+[SCENE: Asian senior man waking up in the middle of the night, walking to bathroom in the dark, 1080x1920]
+나레이터: 밤에 화장실 3번 이상 가신다면, 단순히 나이 탓이 아닙니다.
+
+[SCENE: close-up of a gut or intestinal system diagram, 1080x1920]
+나레이터: 사실 그건 장의 신호입니다.&당신의 몸이 경고하고 있다는 뜻입니다.
+
+[SCENE: Korean senior woman looking tired during the day, sitting on couch, 1080x1920]
+나레이터: 밤에 자주 깨니까 낮에 피로하고&이게 반복되면 대사가 무너집니다.
+
+[SCENE: digestive system showing inflammation, red highlighted intestines, 1080x1920]
+나레이터: 장 벽이 자극받으면&수분 재흡수가 제대로 안 되기 때문입니다.&진짜 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 오늘 해결책이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior person eating fiber-rich foods like vegetables, whole grain bread, berries on a white plate, 1080x1920]
+나레이터: 하루 25~30그램의 식이섬유를 챙기세요.&채소, 통곡물, 나물이 가장 쉽습니다.
+
+[SCENE: person drinking warm water slowly in the morning, 1080x1920]
+나레이터: 아침에 일어나서 따뜻한 물 한 잔을 천천히 마시세요.&이것만으로도 장이 깨어납니다.&이 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior man sleeping peacefully through the entire night, peaceful bedroom scene, 1080x1920]
+나레이터: 밤에 화장실을 4번 가던 분이 2번으로 줄었다고 하시는데&당신은 몇 번에서 시작하실 계획이신가요?&댓글에 현재 횟수만 적어주세요.

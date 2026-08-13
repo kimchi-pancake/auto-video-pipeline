@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260813_160150_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+뼈가 약해지는 신호, 이미 늦을 수 있습니다
+
+THUMBNAIL_SHORTS:
+뼈가 약해지는 신호, 이미 늦을 수 있습니다
+
+[SCENE: Korean senior woman holding lower back with both hands, wincing, 1080x1920]
+나레이터: 최근 몇 달간 키가 자꾸 작아진다고 느껴지신다면, 단순히 구부정해진 게 아닐 수 있습니다.
+
+[SCENE: close-up of hands showing wrinkled skin texture, elderly woman's hands, 1080x1920]
+나레이터: 손가락 뼈가 갑자기 튀어나오거나&발뒤꿈치가 아프신 분들이 있으신데&이미 뼈 손실이 꽤 진행됐을 가능성이 있습니다.
+
+[SCENE: elderly Korean woman bending forward to pick something up from ground, difficulty shown in posture, 1080x1920]
+나레이터: 뼈는 눈으로 보이지 않기 때문에&증상이 나타날 땐 이미 30~40%가 손상돼 있을 수 있습니다.&특히 폐경 이후 여성분들은 더 빠르게 진행되는데&이게 왜 위험한지가 정말 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 뼈 손실의 신호와 예방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman doing simple weight-bearing exercise, standing on one leg with support, 1080x1920]
+나레이터: 가장 효과적인 방법은 매일 10분씩&자신의 체중으로 하는 운동입니다.&계단 오르내리기, 가벼운 스쿼트, 또는 그냥 서 있는 상태에서 한 발씩 드는 것도 충분합니다.
+
+[SCENE: close-up of plate with calcium-rich foods - milk, cheese, leafy greens, salmon, 1080x1920]
+나레이터: 동시에 칼슘과 비타민D를 함께 섭취하셔야 하는데&흰 우유보다는 마른 멸치, 검은깨, 케일 같은 식품이 흡수율이 훨씬 좋습니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman smiling, looking healthier and more energetic, standing with good posture, 1080x1920]
+나레이터: 지금 시작하면 5년 뒤 골절 위험을 50% 이상 줄일 수 있습니다.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.&본인은 방금 말한 증상 중 몇 개나 해당되세요? 댓글에 개수만 적어주세요.

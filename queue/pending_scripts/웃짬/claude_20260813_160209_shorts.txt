@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260813_160209_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+밤중 종아리 경련, 이미 뼈가 약해진 신호입니다
+
+THUMBNAIL_SHORTS:
+밤중 경련은 골다공증 신호입니다
+
+[SCENE: Asian senior woman suddenly grabbing her calf at night in bed, pain expression, 1080x1920]
+나레이터: 밤중에 종아리가 갑자기 철렁 내려앉는 경험, 해보셨죠?
+
+[SCENE: close-up of leg muscle spasm, highlighting calf area, 1080x1920]
+나레이터: 대부분 피로 때문이라고 생각하신데&사실 그게 전부가 아닙니다.
+
+[SCENE: illustration of calcium depletion in bones, skeletal system highlighted, medical diagram style, 1080x1920]
+나레이터: 뼈 속 칼슘이 계속 빠져나가고 있다는 경고신호일 수 있습니다.&지금 모르고 넘기면&나중에 골다공증으로 진행돼 골절 위험이 높아집니다.&더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 더 많은 정보를 알아보세요.
+
+[SCENE: Korean senior woman drinking milk, eating dairy products and leafy greens on table, 1080x1920]
+나레이터: 일단 칼슘 섭취를 늘려야 합니다.&우유 한 잔, 시금치나 멸치 한 줌, 요구르트 한 개&이 정도면 하루에 필요한 칼슘의 절반을 채울 수 있습니다.
+
+[SCENE: Korean senior woman doing gentle walking in park, natural sunlight, 1080x1920]
+나레이터: 다음으로 중요한 건 햇빛입니다.&하루 10분, 아침 햇빛에만 노출돼도&뼈가 칼슘을 흡수하는 능력이 크게 높아집니다.&이 다음 정보가 사실 가장 실질적입니다, 조금만 더 함께해 주세요.
+
+[SCENE: Asian senior person doing simple squats or leg stretches at home, 1080x1920]
+나레이터: 마지막으로 주 3회, 하루 5분 정도 스쿼트나 가벼운 다리 운동을 하세요.&뼈에 자극을 주면 칼슘 흡수가 더욱 촉진됩니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: close-up of calendar marking three days with checkmarks, habit tracking visual, 1080x1920]
+나레이터: 오늘부터 칼슘 섭취, 햇빛 노출, 다리 운동 중 오늘 실천할 수 있는 게 몇 개입니까?&댓글에 숫자 하나만 남겨주세요.

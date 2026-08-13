@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260813_160258_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 떨어졌다면 이미 늦을 수 있습니다
+
+THUMBNAIL_SHORTS:
+골밀도, 이미 늦었을 수 있습니다
+
+[SCENE: senior Korean woman holding her lower back in pain while standing, looking uncomfortable, 1080x1920]
+나레이터: 골밀도가 떨어졌다는 진단을 받으셨다면, 이미 뼈가 상당히 손상된 상태입니다.
+
+[SCENE: x-ray image of spine with highlighted weak bone areas, medical visualization, white background, 1080x1920]
+나레이터: 많은 분들이 증상이 나타나야 병원에 가는데, 골다공증은 조용한 질병이라 깨달았을 땐 돌이킬 수 없습니다.
+
+[SCENE: close-up of Asian senior woman's hands showing tremor or weakness, natural lighting, 1080x1920]
+나레이터: 사소한 넘어짐으로도 골절이 생기고, 한 번 부러진 뼈는 예전처럼 회복되지 않습니다.& 정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: senior Korean couple walking together in morning sunlight, bright outdoor scene, 1080x1920]
+나레이터: 당신은 지금 햇빛을 충분히 받고 계신가요?& 비타민D는 칼슘 흡수의 핵심입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 예방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: senior Korean woman doing weight-bearing exercises with light dumbbells, focused posture, natural home setting, 1080x1920]
+나레이터: 하루 15분, 가벼운 아령으로 팔과 다리 근력 운동을 하세요.& 근육이 뼈를 지탱하는 힘이 됩니다.
+
+[SCENE: close-up of calcium-rich foods arranged on table - yogurt, cheese, leafy greens, salmon, sunny kitchen lighting, 1080x1920]
+나레이터: 매일 우유 한 잔, 뼈 생선 통째로 먹기, 시금치 한 줌이면 충분합니다.& 오늘부터 지금 당장 시작해야 하는 이유입니다.& 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: senior Korean woman smiling, looking at camera with hopeful expression, natural home background, 1080x1920]
+나레이터: 본인이 방금 말한 증상 중 몇 개나 경험하고 계신가요?& 댓글에 개수만 적어주세요.

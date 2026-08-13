@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260813_160139_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮다면, 이미 늦었을 수 있습니다
+
+THUMBNAIL_SHORTS:
+뼈가 부러지기 전에 확인하세요
+
+[SCENE: Asian senior woman holding lower back in pain while standing, 1080x1920]
+나레이터: 최근 3년간 척추 골절로 입원한 분들이 50% 증가했습니다.&가장 무서운 건 자신이 골다공증인 줄 모르다는 겁니다.
+
+[SCENE: X-ray image of spine showing bone density loss, medical scan visualization, 1080x1920]
+나레이터: 뼈는 조용히 약해집니다.&아프지도 않다가, 어느 날 갑자기 부러집니다.&그리고 그 순간이 돌이킬 수 없는 시작일 수 있습니다.
+
+[SCENE: Korean senior person doing daily activities like standing up from chair, reaching for cabinet, 1080x1920]
+나레이터: 당신은 지금 이런 일상적인 동작에서 척추가 흔들리고 있을 수도 있습니다.&재채기 한 번, 넘어질 뻔한 상황 하나가 골절로 이어지는 나이가 바로 지금입니다.
+
+[SCENE: doctor explaining bone health to patient with anatomical spine model, medical consultation, 1080x1920]
+나레이터: 뼈 손실은 50대 이후 매년 1~2%씩 빨라집니다.&특히 여성은 폐경 후 가속화돼, 10년이면 뼈의 25%까지 잃을 수 있습니다.&정확한 진단과 예방은 반드시 전문의와 상담하세요.&더 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 오늘의 골밀도 회복법이 궁금하신 분, 화면을 두 번 눌러서 자세한 방법을 확인해 주세요.
+
+[SCENE: Asian senior woman doing weight-bearing exercise with resistance band, 1080x1920]
+나레이터: 하루 15분, 가벼운 저항 운동이 답입니다.&팔에 밴드를 감고 팔을 위아래로 천천히 움직이면 됩니다.&근력이 늘어야 뼈도 단단해집니다.
+
+[SCENE: Korean senior person eating calcium and vitamin D rich foods - dairy, leafy greens, fish, 1080x1920]
+나레이터: 동시에 칼슘과 비타민D 음식을 매일 챙기세요.&우유 한 잔, 치즈, 멸치, 미역, 계란노른자처럼 이미 아시는 음식들입니다.&오늘부터 이 운동과 음식을 함께 시작해야 3년 뒤 뼈가 살아납니다.
+
+[SCENE: Asian senior person writing down exercise plan or health checklist on paper, 1080x1920]
+나레이터: 좋아요와 구독으로 다음 건강 정보도 함께해 주세요.&당신은 오늘부터 저항 운동을 시작하실 건가요, 아니면 이미 하고 계신가요?&댓글에 "시작합니다" 또는 "이미 하고 있습니다"라고 남겨주세요.
