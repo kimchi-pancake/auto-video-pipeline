@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260814_160134_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 검사 안 받으면 늦습니다
+
+THUMBNAIL_SHORTS:
+골밀도, 이제 모르면 안 됩니다
+
+[SCENE: Korean senior woman holding her lower back in pain, sitting on edge of bed, morning light, 1080x1920]
+나레이터: 허리가 자꾸 아프다고 생각했는데, 사실 이미 "뼈"가 망가지고 있었다는 거 아세요?
+
+[SCENE: X-ray of spine showing bone density loss, medical illustration, close-up, 1080x1920]
+나레이터: 골다공증은 증상이 없습니다.&통증을 느낄 땐 이미 골밀도가 30~40% 손실된 상태일 수 있습니다.
+
+[SCENE: Korean senior woman doing daily activities - bending down, picking up object from floor, 1080x1920]
+나레이터: 일상 중에 가볍게 넘어지거나 물건을 들 때 갈비뼈가 부러진다면?&그건 골다공증이 상당히 진행된 신호입니다.&이 다음 설명이 가장 중요합니다, 잠깐만 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 예방법과 검사 시기가 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman at hospital, nurse giving bone density scan (DEXA scan), medical equipment, 1080x1920]
+나레이터: 첫 번째, 50대 이상이면 "골밀도 검사"를 반드시 받으세요.&특히 폐경 후 여성은 더욱 급속도로 손실됩니다.&두 번째, 매일 "햇빛 15분"과 "칼슘 음식"을 함께하세요.&우유, 멸치, 두부처럼 쉽게 구할 수 있는 음식으로도 충분합니다.&세 번째, 주 3회 이상 "가벼운 근력 운동"을 하세요.&계단 오르기, 팔굽혀펴기 같은 체중을 받는 운동이 뼈를 강하게 만듭니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman doing light exercise - walking or climbing stairs, bright daylight, 1080x1920]
+나레이터: 뼈는 한번 손상되면 다시 돌이킬 수 없습니다.&지금 이 순간부터 시작하는 것이 가장 중요합니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: close-up of calendar with checkmark, Korean senior woman writing notes, planning schedule, 1080x1920]
+나레이터: 이 3가지 중에서 당신은 지금 몇 가지를 하고 계세요?&댓글에 숫자 하나만 남겨주세요.

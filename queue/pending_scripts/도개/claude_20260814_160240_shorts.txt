@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260814_160240_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+밤에 다리가 저리면 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+밤에 다리가 저리면 이미 늦었을 수도
+
+[SCENE: Asian senior woman sitting on bed at night, rubbing her legs with both hands, 1080x1920]
+나레이터: 밤마다 다리가 저려서 깨신다면, 단순히 자세 탓이 아닐 수 있습니다.
+
+[SCENE: close-up of elderly hands massaging lower back and leg, showing discomfort, 1080x1920]
+나레이터: 많은 분들이 그냥 혈액순환이 안 좋은 줄 아시는데&사실은 척추에서 나온 신경이 눌리고 있을 가능성이 높습니다.
+
+[SCENE: medical illustration of spine and pinched nerve, simple diagram on white background, 1080x1920]
+나레이터: 척추 사이의 쿠션이 밀려나가면서 신경을 누르게 되는 건데&방치하면 다리 힘이 빠져서 걷기도 힘들어집니다.&이 다음 내용이 정말 중요하니 잠시만 더 봐주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 해결법이 궁금하신 분들은 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior man doing gentle stretching, bending forward slowly from waist, 1080x1920]
+나레이터: 먼저 자기 전에 이 스트레칭을 하루 3번&각각 30초씩 천천히 해보세요.&허리를 앞으로 구부렸다 펴는 동작만으로도 눌린 신경 주변의 압력이 조금씩 풀립니다.
+
+[SCENE: Asian senior woman lying on back on firm mattress, knees slightly bent with pillow under knees, 1080x1920]
+나레이터: 그리고 밤에 잘 때는 무릎 아래에 쿠션을 받쳐서&척추에 무리가 안 가도록 누워주세요.&이렇게 하면 신경 압박이 훨씬 줄어듭니다.
+
+[SCENE: Asian senior person sitting at dining table, drinking water, bright morning light, 1080x1920]
+나레이터: 정확한 진단과 치료는 반드시 전문의와 상담하셔야 합니다&하지만 지금부터라도 이 두 가지만 해도 밤마다 깨는 불편함을 크게 줄일 수 있습니다.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: close-up of person's hands, notepad with pen, ready to write, 1080x1920]
+나레이터: 댓글에 "오늘부터 스트레칭 3번 한다"라고 남겨주세요&당신의 다짐이 저를 더 좋은 정보로 찾아오게 합니다.

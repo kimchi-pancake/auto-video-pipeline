@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260814_160229_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮아도 골절 안 되는 법
+
+THUMBNAIL_SHORTS:
+골밀도 낮아도 골절 안 되는 법
+
+[SCENE: elderly Korean woman holding lower back in pain while standing up from chair, 1080x1920]
+나레이터: 골다공증 검사에서 수치는 낮아도, 뼈가 부러지지 않는 분들 있습니다.&반대로 수치는 정상이어도 자꾸 부러지시는 분들도 있습니다.
+
+[SCENE: close-up of medical clipboard with bone density test results, 1080x1920]
+나레이터: 왜 그럴까요?&골밀도가 전부가 아니기 때문입니다.
+
+[SCENE: 3D animation showing bone structure with cross-hatching pattern inside, white background, 1080x1920]
+나레이터: 뼈는 단순히 딱딱한 돌멩이가 아닙니다.&안쪽에 그물처럼 얽혀 있는 구조가 있는데, 이게 튼튼해야 실제로 부러지지 않습니다.&바로 이 구조가 약해지면, 골밀도는 높아도 넘어지면 부러집니다.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button symbol, white background, 1080x1920]
+나레이터: 뼈 건강의 더 자세한 원리가 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man doing gentle weight-bearing exercise, holding onto railing, doing small squats, 1080x1920]
+나레이터: 해결법은 간단합니다.&뼈 안쪽 구조를 강화하려면, 가볍지만 꾸준한 자극이 필요합니다.&하루 15분, 천천히 계단 오르내리기만 해도 뼈 구조가 단단해집니다.
+
+[SCENE: Korean senior couple walking together in park, leisurely pace, natural sunlight, 1080x1920]
+나레이터: 그리고 햇빛을 받아야 합니다.&하루 20분, 팔다리가 햇빛에 노출되면, 칼슘 흡수가 훨씬 잘됩니다.&골밀도 수치만 보고 포기하지 마세요, 실제 뼈 튼튼함은 생활 습관으로 만들어집니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: elderly Korean man checking calendar on wall, marking today's date, 1080x1920]
+나레이터: 당신은 오늘부터 계단 운동과 햇빛 산책 중에, 어느 것부터 먼저 시작하실 건가요?&댓글에 '계단' 또는 '산책' 중 하나만 남겨주세요.

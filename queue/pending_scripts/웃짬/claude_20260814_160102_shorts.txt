@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260814_160102_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 검사 안 받으면 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+골밀도 검사 안 받으면 이미 늦었을 수도
+
+[SCENE: Korean senior woman with osteoporosis feeling back pain while standing in kitchen, 1080x1920]
+나레이터: 요즘 허리가 자꾸만 구부러지신다면, 이미 뼈가 부서지기 시작했을 수 있습니다.
+
+[SCENE: X-ray image of spine showing bone density loss, medical visualization, 1080x1920]
+나레이터: 많은 분들이 단순 피로라고 생각하시는데&사실은 뼈 밀도가 무너지고 있는 신호일 수 있습니다.
+
+[SCENE: Korean senior woman falling or stumbling indoors, close-up of wrist area, 1080x1920]
+나레이터: 가벼운 넘어짐에도 뼈가 부러지는 일이 생기면, 그때부턴 일상이 완전히 달라집니다.&이것을 모르고 넘기면 "척추", "골반" 더 이상 회복이 어렵습니다.
+
+[SCENE: doctor performing bone density test, DEXA scan machine, medical setting, 1080x1920]
+나레이터: 진짜 중요한 건 지금부터입니다.&50세 이상이신 분은 반드시 골밀도 검사부터 받아야 합니다.&이것이 현재 상태를 파악하는 유일한 방법입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 예방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman eating calcium-rich foods like milk, sardines, leafy greens on table, 1080x1920]
+나레이터: 매일 칼슘 음식을 챙기되&우유 한 잔, 멸치 한 줌, 시금치 한 접시를 하루에 나눠 먹으세요.&단, 칼슘만으로는 부족합니다.
+
+[SCENE: Korean senior couple walking outdoors in sunlight, morning or afternoon, 1080x1920]
+나레이터: 하루 20분, 햇빛 아래에서 걷기만 해도 비타민 D가 만들어져&칼슘 흡수가 3배 이상 높아집니다.&오늘부터 시작해야 10년 뒤 골절을 막을 수 있습니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman looking determined, making a decision, hands together, bright natural light, 1080x1920]
+나레이터: 지금 당신의 뼈 상태가 어떤지 아는 것이&20년 건강을 결정합니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 더 많은 건강 정보를 함께해 주세요.&본인은 언제쯤 골밀도 검사를 받을 계획이신가요?&댓글에 구체적인 시기를 남겨주세요.

@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260814_160207_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아침에 화장실 3번 가신다면, 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+아침 화장실 3번, 이미 늦었을 수도
+
+[SCENE: Korean senior man rushing to bathroom multiple times in morning, 1080x1920]
+나레이터: 아침마다 화장실을 3번 이상 가신다면, 단순히 물을 많이 드셨기 때문이 아닙니다.
+
+[SCENE: close-up of intestinal system illustration, unhealthy state, 1080x1920]
+나레이터: 장의 "운동 능력"이 떨어져 있을 가능성이 높습니다.&일단 이 상태가 지속되면 역으로 변비까지 오게 됩니다.
+
+[SCENE: Korean senior woman holding stomach in discomfort, 1080x1920]
+나레이터: 장이 약해지면 영양 흡수도 떨어지고&면역력도 함께 내려갑니다.&정확한 진단은 의사와 상담하시길 바랍니다만, 지금부터 말씀드릴 방법이 가장 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 장 건강 관리법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man doing gentle twisting motion while standing, 1080x1920]
+나레이터: 먼저 매일 아침, 일어나자마자 시계 반대 방향으로 배를 원을 그리며 손으로 10번 문질러 주세요.&이건 장을 깨우는 첫 단계입니다.
+
+[SCENE: glass of water with lemon and ginger on table, morning sunlight, 1080x1920]
+나레이터: 그 다음, 미지근한 물에 생강 한 조각을 넣어 천천히 마셔주세요.&차가운 물이 아니라, 반드시 미지근한 온도가 중요합니다.&오늘부터 이 습관 하나로 장이 살아나기 시작합니다.
+
+[SCENE: Korean senior person eating bowl of fiber-rich food, gentle smile, 1080x1920]
+나레이터: 아침 화장실 횟수가 줄어들고 장이 정상화되려면 최소 2주가 필요합니다.&지금 바로 시작하지 않으면 더 늦어집니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: text overlay asking question on soft background]
+나레이터: 본인은 아침에 화장실을 며칠에 한 번 정도 가세요?&댓글에 정확한 횟수만 숫자로 남겨주세요.

@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260814_160219_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+변비약 30년 먹는 분들, 진짜 원인 몰랐습니다
+
+THUMBNAIL_SHORTS:
+변비약 30년 먹는 분, 원인 몰랐습니다
+
+[SCENE: elderly Korean woman sitting on toilet looking uncomfortable and strained, 1080x1920]
+나레이터: 변비약을 10년, 20년 드시는 분들, 약 때문에 더 망치고 있을 수도 있습니다.
+
+[SCENE: close-up of elderly Korean hands holding multiple medication bottles and pills, white background, 1080x1920]
+나레이터: 대부분은 "자극성 변비약이 최고"라고 알고 계신데&사실 이게 장을 점점 약하게 만드는 겁니다.
+
+[SCENE: anatomical illustration of colon and intestines with arrows showing sluggish movement, medical diagram style, 1080x1920]
+나레이터: 자극성 약을 자주 쓰면 장이 그 자극에만 반응하게 돼서&약 없이는 절대 움직이지 않는 악순환에 빠집니다.&진짜 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 해결 방법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man drinking water while sitting at kitchen table in morning sunlight, 1080x1920]
+나레이터: 첫째, 아침에 일어나자마자 찬물 한 잔을 마시세요.&이게 장을 자연스럽게 깨웁니다.
+
+[SCENE: close-up of fiber-rich foods - whole grain bread, vegetables, fruits arranged on wooden table, 1080x1920]
+나레이터: 둘째, 매 끼니마다 "식이섬유"를 꼬박꼬박 드세요.&고구마, 현미밥, 브로콜리 같은 것들입니다.&약이 아니라 음식으로 장을 훈련시키는 거예요.
+
+[SCENE: Korean senior man walking slowly in park on sunny day, comfortable pace, 1080x1920]
+나레이터: 셋째, 식후 20분 뒤에 천천히 15분만 걸으세요.&이 정도면 장 운동이 자극됩니다.&이 다음이 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: elderly Korean woman sitting on toilet with relieved, happy expression, 1080x1920]
+나레이터: 약에만 의존하면 절대 나아지지 않습니다.&"자연스러운 장 운동"을 되살리는 게 진짜 해결책입니다.&정확한 진단과 치료는 반드시 의사와 상담하세요.
+
+[SCENE: Korean senior woman writing in health diary or taking notes at table, pen in hand, 1080x1920]
+나레이터: 오늘 알려드린 세 가지를 이번 주부터 시작하면, 한 달 뒤엔 확실히 다릅니다.&본인은 지금 변비약을 몇 년을 드셨습니까?&댓글에 "몇 년" 또는 "아직 안 먹어요"라고만 남겨주세요.

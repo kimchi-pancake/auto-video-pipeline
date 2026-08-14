@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260814_160122_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+밥 먹을 때 이것 안 하면, 장이 망합니다
+
+THUMBNAIL_SHORTS:
+밥 먹을 때 이것 안 하면, 장이 망합니다
+
+[SCENE: elderly Korean man eating rice quickly at dining table, chewing minimally, 1080x1920]
+나레이터: 밥을 빨리 먹는 습관, 사실 단순히 소화만 안 되는 게 아닙니다.
+
+[SCENE: close-up of stomach and intestines diagram, digestive system illustration, 1080x1920]
+나레이터: 충분히 씹지 않은 음식이 장으로 내려오면, 장은 과부하 상태가 됩니다.& 이게 계속되면 장 기능 자체가 약해집니다.
+
+[SCENE: elderly Korean woman with hand on stomach, discomfort expression, 1080x1920]
+나레이터: "어? 나도 그런데?"라고 생각되신다면, 지금부터 말씀드릴 방법이 정말 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 해결법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: elderly Korean man eating slowly, focusing on chewing rice thoroughly, 1080x1920]
+나레이터: 해결법은 간단합니다.& 한 입에 30번 이상 씹으세요.& 이렇게 하면 음식이 부드러워져서 장의 부담이 확 줄어듭니다.
+
+[SCENE: elderly Asian couple sitting together, smiling with healthy meal, 1080x1920]
+나레이터: 특히 아침밥과 점심밥, 이 두 끼는 꼭 천천히 씹어 드세요.& 밤엔 음식이 천천히 내려가야 수면도 방해 안 됩니다.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: elderly Korean man nodding, giving thumbs up at dining table, 1080x1920]
+나레이터: 그럼 한 가지 질문입니다.& 지금 현재 밥을 한 입에 몇 번이나 씹고 넘기세요?& 댓글에 숫자만 남겨주세요.
