@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260815_160223_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+변비약 드시면, 장이 못 움직입니다
+
+THUMBNAIL_SHORTS:
+변비약, 장을 망치고 있습니다
+
+[SCENE: Korean senior woman sitting on toilet looking uncomfortable and frustrated, 1080x1920]
+나레이터: 변비약을 자주 드시는 분들, 이미 장이 스스로 움직이지 못하게 되고 있습니다.
+
+[SCENE: intestines diagram with arrows showing weakening movement, medical illustration style, 1080x1920]
+나레이터: 변비약은 장을 강제로 움직이게 하는 거라고 생각하시는데&사실은 정반대입니다.&장이 약에만 의존하게 되면서 자체 힘을 잃어버린다는 뜻입니다.
+
+[SCENE: Korean senior person holding stomach in pain, clutching abdomen, 1080x1920]
+나레이터: 처음엔 효과가 좋아 보이지만&반복하다 보면 약 없이는 배변이 불가능해지는 악순환에 빠집니다.&진짜 중요한 건 여기부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button symbol, white background, 1080x1920]
+나레이터: 장 건강을 되돌리는 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior person drinking water and eating fiber-rich vegetables like broccoli and spinach, 1080x1920]
+나레이터: 첫째, 하루에 물을 8잔 이상 천천히 마시세요.&둘째, 매일 아침 공복에 미지근한 물 한 잔을 15분 안에 마셔서 장을 자극하세요.&셋째, 식이섬유가 많은 채소와 통곡물을 매일 먹되&갑자기 많이 먹지 말고 2주에 걸쳐 천천히 늘려 가세요.
+
+[SCENE: Korean senior person walking briskly in a park or neighborhood, moving naturally, 1080x1920]
+나레이터: 그리고 매일 30분 정도 걷는 것만으로도 장의 연동 운동이 살아납니다.&이 방법들을 3주 이상 꾸준히 하면 약 없이도 정상 배변이 돌아옵니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: close-up of Korean senior person's face with hopeful expression, 1080x1920]
+나레이터: 그런데 본인은 지난 1년간 변비약을 몇 번이나 드셨나요?&댓글에 숫자만 남겨주세요.

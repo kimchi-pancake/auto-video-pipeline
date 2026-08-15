@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260815_160113_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"척추" 휘는 습관, 이미 돌이킬 수 없습니다
+
+THUMBNAIL_SHORTS:
+척추 휘는 습관, 이제 늦었을 수도
+
+[SCENE: elderly Korean woman sitting hunched over at a table, looking at phone, 1080x1920]
+나레이터: 휴대폰을 자주 들여다보신다면, 당신의 척추는 지금 이 순간도 망가지고 있습니다.
+
+[SCENE: side profile illustration of spine curving forward in C-shape versus straight spine, medical diagram style, 1080x1920]
+나레이터: 목을 앞으로 쭉 내밀고 허리를 굽히는 자세가 반복되면&척추뼈가 휠 수밖에 없습니다.&그런데 한 번 휘면, 이제 원래대로 돌아오지 않습니다.
+
+[SCENE: Asian senior man wincing with neck and back pain while standing, hands on lower back, 1080x1920]
+나레이터: 목 통증, 만성 허리 통증, 심하면 내장기 압박까지 생기는데&당신도 지금 이 3가지 중 하나 이상 겪고 계실 수 있습니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 척추 교정법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman sitting upright at desk with correct posture, shoulders back, 1080x1920]
+나레이터: 방법은 간단합니다.&하루 3번, 아침·점심·저녁에 1분씩 '턱을 안으로 당겨 목을 쭉 펴는 운동'을 하세요.&그리고 휴대폰은 눈높이에 맞춰 들어올림으로써 자세를 바꿔야 합니다.
+
+[SCENE: close-up of Korean senior person's correct sitting posture from side angle, straight back and neck, 1080x1920]
+나레이터: 지금부터라도 척추가 휘는 걸 멈추는 것이 가장 중요합니다.&당신은 오늘부터 이 3분 운동과 휴대폰 높이 조절, 둘 다 실천하실 건가요?&댓글에 '시작'이라고만 남겨주세요.

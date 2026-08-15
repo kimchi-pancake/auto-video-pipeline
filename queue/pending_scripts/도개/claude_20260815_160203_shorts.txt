@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260815_160203_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮으면 이미 늦었을 수 있습니다
+
+THUMBNAIL_SHORTS:
+골밀도 낮으면 이미 늦었을 수 있습니다
+
+[SCENE: Korean senior woman looking down at her wrist, touching her arm with concern, close-up of hand and forearm, 1080x1920]
+나레이터: 골밀도가 낮다고 진단받으셨다면, 지금 당장 확인해야 합니다.
+
+[SCENE: X-ray image of bones fading or becoming translucent, medical scan visualization, 1080x1920]
+나레이터: 뼈가 약해지면 넘어지지 않아도 금이 가고, 한 번 골절되면 회복이 6개월 이상 걸립니다.&이미 손상된 뼈는 돌이킬 수 없습니다.
+
+[SCENE: Korean senior woman at home, sitting on sofa, pressing hands on lower back and hip area, looking uncomfortable, 1080x1920]
+나레이터: 최근 5년 사이 자기도 모르게 키가 2센티미터 이상 줄었거나, 허리가 자주 아프다면 골밀도가 급격히 떨어지고 있을 수 있습니다.&진짜 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 해결법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman and man doing weight-bearing exercises, standing on one leg holding onto chair, practicing balance, 1080x1920]
+나레이터: 뼈를 강하게 만들려면 매일 하루 10분 이상 서 있거나 걸어야 합니다.&중력에 저항하는 운동이 뼈에 자극을 줍니다.&또한 우유 한 잔, 계란 한 개, 멸치 한 줌을 매일 섭취하면 충분합니다.
+
+[SCENE: Korean senior woman eating calcium-rich foods at dining table, milk glass, eggs, small dried fish (anchovies) visible on plate, 1080x1920]
+나레이터: 오늘부터 실천하면 1년 후 골밀도 수치가 확실히 달라집니다.&정확한 진단과 관리는 반드시 전문의와 상담하세요.&이 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior woman smiling, nodding, giving thumbs up gesture, bright natural lighting, 1080x1920]
+나레이터: 본인은 지난 5년 사이 키가 얼마나 줄었나요?&댓글에 숫자만 적어주세요.

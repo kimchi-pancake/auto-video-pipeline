@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260815_160143_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골다공증, 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+우유 마셔도 뼈가 약해집니다
+
+[SCENE: Asian senior woman holding wrist in pain, white background, 1080x1920]
+나레이터: 우유를 매일 마시는데도 뼈가 자꾸 약해진다면, 단순히 칼슘 부족이 아닐 수 있습니다.
+
+[SCENE: calcium milk glass and bone X-ray image split screen, 1080x1920]
+나레이터: 대부분의 분들이 "뼈 건강은 칼슘만 먹으면 된다"고 착각하고 계신데&사실은 그게 절반도 안 됩니다.
+
+[SCENE: human skeleton showing spine and hip bones, anatomical illustration, 1080x1920]
+나레이터: 뼈의 밀도를 결정하는 건 칼슘뿐 아니라 마그네슘, 비타민K, 비타민D가 함께 작용합니다.&이 중 하나라도 부족하면 칼슘을 아무리 먹어도 뼈에 제대로 흡수되지 않습니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 뼈 건강 관리법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior woman eating leafy green vegetables, almonds, egg yolk, 1080x1920]
+나레이터: 오늘부터 실천할 세 가지입니다.&첫째, 시금치·케일 같은 녹색 채소를 하루 한 끼에 한 줌씩 드세요.&비타민K가 뼈에 칼슘을 붙이는 역할을 합니다.
+
+[SCENE: Asian senior woman walking in sunlight outdoors, park background, 1080x1920]
+나레이터: 둘째, 햇빛을 하루 15~20분 받으세요.&비타민D는 햇빛이 없으면 만들어지지 않습니다.
+
+[SCENE: close-up of almonds, pumpkin seeds, dairy products on table, 1080x1920]
+나레이터: 셋째, 견과류와 우유를 함께 섭취하세요.&마그네슘과 칼슘이 함께 있어야 뼈가 단단해집니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Asian senior woman checking calendar with exercise routine marked, 1080x1920]
+나레이터: 칼슘만 먹는 것과 전체 영양을 갖춘 것, 결과는 5년 뒤 완전히 달라집니다.&당신은 오늘부터 이 세 가지 중 몇 개부터 시작하실 건가요?&댓글에 숫자로 남겨주세요.

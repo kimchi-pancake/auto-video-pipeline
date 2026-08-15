@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260815_160054_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+50대부터 골밀도가 떨어지는 이유, 몰랐습니다
+
+THUMBNAIL_SHORTS:
+50대부터 골밀도가 떨어지는 이유, 몰랐습니다
+
+[SCENE: Asian senior woman holding wrist in pain, sitting on bed at morning, 1080x1920]
+나레이터: 팔목 부딪히고 금방 부러지신 분 계신가요?&그건 넘어진 충격 때문이 아닐 수도 있습니다.
+
+[SCENE: skeletal system diagram showing bone density decrease, white background, 1080x1920]
+나레이터: 50대부터 매년 골밀도가 1%씩 떨어집니다.&그래서 가벼운 충격에도 쉽게 부러지게 되는 겁니다.
+
+[SCENE: Korean senior woman drinking coffee at breakfast table, 1080x1920]
+나레이터: 문제는 여기입니다.&매일 마시는 커피와 짠 음식이 칼슘을 빼앗아 가고 있습니다.&그런데 가장 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 골밀도 높이는 구체적인 방법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior woman drinking milk and eating cheese, bright kitchen, 1080x1920]
+나레이터: 첫째, 매일 우유 한 잔과 치즈 두 조각으로 칼슘을 채우세요.&둘째, 햇빛을 받으며 하루 20분 산책하세요.&이게 뼈에 칼슘을 흡수시키는 비타민D를 만듭니다.
+
+[SCENE: Asian senior man doing weight-bearing exercise with light dumbbells, standing position, 1080x1920]
+나레이터: 셋째, 가벼운 역기나 스쿼트를 주 3회 하세요.&뼈에 자극을 주면 더 단단해집니다.
+
+[SCENE: close-up of calendar with checkmarks, pen pointing to dates, 1080x1920]
+나레이터: 이 세 가지를 지금 당장 시작하면, 5년 뒤 뼈가 얼마나 달라져 있을지 직접 느낄 겁니다.&오늘 정보가 도움되셨다면, 좋아요와 구독으로 응원해 주세요.&당신은 지금부터 몇 주 안에 이 습관을 시작하실 건가요?
+
+[SCENE: Asian senior woman doing light stretching near window with sunlight, 1080x1920]
+나레이터: 댓글에 '오늘부터 시작'이라고 적어주시거나, 아니면 '이미 하고 있다'고 남겨주세요.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
