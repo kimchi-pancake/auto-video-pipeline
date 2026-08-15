@@ -1644,5 +1644,55 @@
     "uploaded_at": "2026-08-14T09:30:28+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "fvQd_K7kfgY",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "골밀도 낮으면 이미 늦었습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-15T09:05:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ZfVEgXFw1ao",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "골밀도 검사 안 받으면 이미 늦었을 수도",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-15T09:11:09+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "lxTSzjV1t2E",
+    "channel": "웃짬",
+    "category": "장건강",
+    "title": "밥 먹을 때 이것 안 하면, 장이 망합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-15T09:15:13+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "kwAmiMKcJFQ",
+    "channel": "웃짬",
+    "category": "장건강",
+    "title": "화장실 자주 간다면, 장이 이미 망가졌을 수 있습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-15T09:20:28+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "7lc31VtNnGY",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "골밀도 검사 안 받으면 늦습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-15T09:25:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
