@@ -1602,8 +1602,12 @@
     "title": "골밀도 낮다면, 이미 늦었을 수 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-14T09:10:05+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 177,
+      "likes": 2,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-15T15:14:38+00:00"
   },
   {
     "video_id": "QwB99ksrMuQ",
@@ -1612,8 +1616,12 @@
     "title": "아침마다 화장실 3번, 이미 늦었습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-14T09:15:14+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 324,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-15T15:14:38+00:00"
   },
   {
     "video_id": "RV7uRgW8Gt0",
@@ -1622,8 +1630,12 @@
     "title": "뼈가 약해지는 신호, 이미 늦을 수 있습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-14T09:20:46+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-15T15:14:38+00:00"
   },
   {
     "video_id": "d0o2mnCuesg",
@@ -1632,8 +1644,12 @@
     "title": "화장실 자주 가신다면, 이미 늦을 수도",
     "is_shorts": true,
     "uploaded_at": "2026-08-14T09:24:55+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-15T15:14:38+00:00"
   },
   {
     "video_id": "LbveTfCPrkg",
@@ -1642,8 +1658,12 @@
     "title": "밤중 종아리 경련, 이미 뼈가 약해진 신호입니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-14T09:30:28+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 353,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-15T15:14:38+00:00"
   },
   {
     "video_id": "fvQd_K7kfgY",
