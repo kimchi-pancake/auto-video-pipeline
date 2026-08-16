@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260816_160112_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 검사 안 받으면 돌이킬 수 없습니다
+
+THUMBNAIL_SHORTS:
+골밀도 검사, 이 나이 넘으면 필수입니다
+
+[SCENE: Korean senior woman holding her lower back in pain while sitting on a chair, looking uncomfortable, 1080x1920]
+나레이터: 최근에 가벼운 충격에도 뼈가 부러지신 분 있으신가요?&그건 나이 탓이 아닙니다.
+
+[SCENE: close-up of a fragile eggshell cracking easily under slight pressure, white background, 1080x1920]
+나레이터: 실제로는 뼈 속이 이미 비어있는 상태일 수 있습니다.&지금 바로 확인해야 합니다.
+
+[SCENE: medical DEXA scan machine showing bone density results on monitor, hospital setting, 1080x1920]
+나레이터: 골밀도 검사를 받아본 적이 없다면, 자신의 뼈가 얼마나 약한지 전혀 모를 가능성이 높습니다.&골밀도는 증상 없이 무너집니다.
+
+[SCENE: Korean senior woman eating calcium-rich foods like milk, cheese, and leafy greens on a dining table, 1080x1920]
+나레이터: 우선 지금부터 할 수 있는 게 있습니다.&칼슘과 비타민D를 함께 섭취하는 것인데, 더 자세한 식단 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 구체적인 방법을 알아보려면 두 번 눌러주세요.
+
+[SCENE: Korean senior man doing weight-bearing exercises like walking or light resistance training indoors, 1080x1920]
+나레이터: 매일 20~30분 정도 걷기나 가벼운 근력운동을 하면 뼈 손실을 크게 늦출 수 있습니다.&특히 폐경기 이후 여성분들은 1년에 한 번은 반드시 골밀도 검사를 받으셔야 합니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.
+
+[SCENE: Korean senior woman writing notes or checking off a health checklist with determination, 1080x1920]
+나레이터: 뼈는 한 번 약해지면 회복이 매우 어렵습니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&본인이 마지막으로 골밀도 검사받은 지 몇 년 되셨나요?&댓글에 연도만 적어주세요.

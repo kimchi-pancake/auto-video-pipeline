@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260816_160223_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"변비약" 먹고 있다면, 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+변비약 먹고 있다면 이미 늦었을 수도
+
+[SCENE: Asian senior man sitting on toilet, holding stomach in discomfort, 1080x1920]
+나레이터: 변비약을 자주 드시는 분들, 그 약이 장을 더 망치고 있다는 거 아세요?
+
+[SCENE: close-up of intestinal diagram fading and deteriorating, medical illustration style, 1080x1920]
+나레이터: 변비약을 쓸수록 장의 반응성이 떨어집니다.&약 없이는 배변이 불가능해지는 악순환에 빠지는 거죠.
+
+[SCENE: Asian senior woman drinking water with hesitant expression, holding glass, 1080x1920]
+나레이터: 혹시 당신도 변비약에 의존하고 계세요?&아침에 일어나자마자 물 한 잔도 못 마신다면 특히 위험합니다.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 회복 방법이 알고 싶으신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior man eating fiber-rich foods like vegetables and whole grains on plate, 1080x1920]
+나레이터: 첫째, 아침 공복에 미지근한 물 한 잔을 마시세요.&물이 장을 자극해서 자연스러운 배변을 돕습니다.
+
+[SCENE: Asian senior couple taking slow, leisurely walk in park during daytime, 1080x1920]
+나레이터: 둘째, 매일 10분 이상 천천히 걸으세요.&움직임이 곧 장의 자극입니다.
+
+[SCENE: Asian senior man sleeping peacefully on bed at night, relaxed posture, 1080x1920]
+나레이터: 셋째, 밤 10시 전에 자세요.&규칙적인 수면이 장의 리듬을 되살립니다.
+
+[SCENE: doctor in white coat gesturing reassuringly to senior patient, clinical setting, 1080x1920]
+나레이터: 정확한 진단과 치료는 반드시 전문의와 상담하세요.&약에 의존하지 않고도 장이 다시 살아날 수 있습니다.
+
+[SCENE: Asian senior man giving thumbs up with satisfied smile, bright natural lighting, 1080x1920]
+나레이터: 변비약의 악순환에서 벗어나는 것, 지금부터 시작하세요.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.&당신은 지금 이 세 가지 중 몇 개나 하고 계신가요?&댓글에 숫자만 남겨주세요.

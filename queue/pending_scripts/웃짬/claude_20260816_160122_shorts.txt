@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260816_160122_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+변비약 자주 쓰면, 장이 망합니다
+
+THUMBNAIL_SHORTS:
+변비약 자주 쓰면, 장이 망합니다
+
+[SCENE: Korean senior woman holding stomach in discomfort on couch, 1080x1920]
+나레이터: 변비약을 자주 쓰신다면, 지금부터라도 멈춰야 합니다.
+
+[SCENE: medicine bottles and pills scattered on table, 1080x1920]
+나레이터: 많은 분들이 모르시는데, 변비약에 자주 의존하면 장은 스스로 움직이는 능력을 잃어버립니다.
+
+[SCENE: anatomical illustration of human intestines with arrows showing reduced movement, 1080x1920]
+나레이터: 약이 자꾸만 배변을 도와주니까, 장의 근육이 점점 약해지는 거예요.&결국 약 없이는 움직일 수 없는 악순환에 빠지게 됩니다.&이걸 모르면 나중에 약에만 의존하는 몸이 돼버립니다.&이 다음 내용이 정말 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and glowing, like button symbol, white background, 1080x1920]
+나레이터: 변비 해결하는 진짜 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man drinking water and eating fiber-rich vegetables and whole grains on table, 1080x1920]
+나레이터: 답은 간단합니다.&아침에 일어나서 냉수 한 잔을 마시고, 하루에 통곡물과 채소를 한 끼에 한 줌씩 더 섭취하세요.&그리고 매일 5~10분 걸으면서 배를 시계 방향으로 원을 그려가며 문질러 주면 됩니다.
+
+[SCENE: Korean senior woman smiling, touching stomach area with relief expression, 1080x1920]
+나레이터: 변비약에 의존하는 대신, 장 스스로 움직이게 만드는 게 진짜 해결책입니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&당신은 지금까지 변비약을 주 몇 번 정도 복용하고 계세요? 댓글에 정확한 횟수를 남겨주세요.

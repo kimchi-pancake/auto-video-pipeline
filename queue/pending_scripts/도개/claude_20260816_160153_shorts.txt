@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260816_160153_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+매일 먹는 그것, 장을 망치고 있습니다
+
+THUMBNAIL_SHORTS:
+매일 먹는 그것, 장을 망칩니다
+
+[SCENE: Asian senior man holding stomach in discomfort, sitting on toilet, 1080x1920]
+나레이터: 변비나 설사로 고생하신다면, 단순 나이 탓이 아닙니다.
+
+[SCENE: Korean elderly couple at breakfast table, woman eating processed food and instant noodles, 1080x1920]
+나레이터: 우리가 매일 입에 넣는 그 음식, 사실 장의 좋은 박테리아를 죽이고 있습니다.&당신도 모르는 사이에 말입니다.
+
+[SCENE: medical illustration of healthy intestines versus damaged intestines with bacteria, 1080x1920]
+나레이터: 장에 나쁜 박테리아만 남으면 소화 기능이 떨어지고, 독소가 쌓입니다.&이게 바로 만성 소화 불편의 진짜 원인입니다.&그런데 이걸 아는 사람은 거의 없습니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 지금부터 말씀드릴 내용이 정말 중요합니다.&더 자세히 알고 싶으시면 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior woman eating fermented kimchi and yogurt, drinking water, 1080x1920]
+나레이터: 오늘부터 이렇게 하세요.&첫째, 하루에 발효 음식을 한 끼에 한 가지씩&김치나 된장, 요구르트처럼 장 건강 박테리아가 가득한 것을 먹으세요.&둘째, 자기 전 따뜻한 물 한 잔을 마시세요&이것만으로도 장의 연동 운동이 깨어납니다.
+
+[SCENE: Korean senior man smiling, checking calendar with checkmarks, healthy routine, 1080x1920]
+나레이터: 발효 음식과 따뜻한 물, 이 두 가지만 2주 지속해 보세요.&당신의 소화 상태가 얼마나 달라졌는지 느낄 겁니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: close-up of calendar with two weeks marked, senior hand pointing, 1080x1920]
+나레이터: 댓글에 정확히 이렇게 남겨주세요.&"발효 음식 + 따뜨한 물" 이 둘 중 어느 것부터 오늘 시작하실 건지&숫자 '1'이면 발효 음식, '2'면 따뜨한 물이라고만 적어주세요.
