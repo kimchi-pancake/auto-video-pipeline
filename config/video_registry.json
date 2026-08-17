@@ -1784,5 +1784,45 @@
     "uploaded_at": "2026-08-16T09:18:44+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "K7XSPp7qFRU",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "의사들도 모르는 골다공증의 진짜 신호",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-17T09:04:21+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "sXRVjH5cJ_w",
+    "channel": "웃짬",
+    "category": "장건강",
+    "title": "변비약 자주 쓰면, 장이 망합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-17T09:07:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "bBac9M0Smmw",
+    "channel": "웃짬",
+    "category": "뼈건강",
+    "title": "골밀도 검사 안 받으면 돌이킬 수 없습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-17T09:11:09+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "UNYtVIW_tq8",
+    "channel": "웃짬",
+    "category": "관절근육",
+    "title": "계단만 내려가도 통증, 이것 모르면 안 됩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-17T09:14:51+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
