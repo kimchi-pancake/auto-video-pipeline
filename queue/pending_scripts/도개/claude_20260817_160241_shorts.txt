@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260817_160241_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"우유 매일 마셔도" 골다공증 온다?
+
+THUMBNAIL_SHORTS:
+"우유 매일 마셔도" 골다공증 온다?
+
+[SCENE: Asian senior woman drinking milk at kitchen table, looking concerned, 1080x1920]
+나레이터: 우유를 매일 마시는데도 골다공증이 온다면, 우유만으로는 부족하다는 뜻입니다.
+
+[SCENE: close-up of milk glass and orange, calcium-rich foods on table, 1080x1920]
+나레이터: 많은 분들이 "우유만 마시면 뼈가 튼튼해진다"고 생각하시는데&사실 이것까지 챙겨야 뼈가 단단해집니다.
+
+[SCENE: skeleton x-ray image, highlighting spine and hip bones, medical illustration, 1080x1920]
+나레이터: 칼슘만으로는 뼈에 흡수가 잘 안 됩니다.&뼈 속에 칼슘을 가둬두려면 비타민 D와 마그네슘이 반드시 필요합니다.&이 사실을 모르고 넘기면, 아무리 마셔도 소용이 없습니다.&지금부터 말씀해드릴 방법이 제일 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 뼈 건강 해결법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Asian senior woman sunbathing outdoors, 15 minutes marked on clock, 1080x1920]
+나레이터: 첫 번째, 하루 15분 햇빛을 쐬세요.&햇빛이 피부에 닿으면 비타민 D가 만들어집니다.
+
+[SCENE: plate with spinach, almonds, pumpkin seeds, dark leafy greens close-up, 1080x1920]
+나레이터: 두 번째, 시금치, 호두, 해바라기씨처럼 마그네슘 많은 음식을 매일 한 줌씩 섭취하세요.&우유와 함께 먹으면 칼슘 흡수가 3배 빨라집니다.
+
+[SCENE: Asian senior couple preparing fresh vegetables in kitchen, 1080x1920]
+나레이터: 오늘부터 우유뿐 아니라 햇빛과 마그네슘까지 챙기면, 뼈가 정말 달라집니다.&정확한 진단과 치료는 반드시 전문의와 상담하세요.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.&당신은 이 세 가지 중 몇 개를 지금 하고 있나요? 댓글에 개수를 남겨주세요.

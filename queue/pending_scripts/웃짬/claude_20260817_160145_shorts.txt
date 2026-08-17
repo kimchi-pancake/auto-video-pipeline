@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260817_160145_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"골밀도" 잃는 그 습관, 아직도 모르세요?
+
+THUMBNAIL_SHORTS:
+골밀도 빠지는 습관, 당신일 수도
+
+[SCENE: Asian senior woman holding lower back in pain, sitting on edge of bed, 1080x1920]
+나레이터: 넘어진 것도 아닌데 허리가 으스러진다면, 단순 근육통이 아닐 수 있습니다.
+
+[SCENE: close-up of hands, showing trembling or fragile appearance, 1080x1920]
+나레이터: 많은 분들이 모르고 있는데, 뼈는 지금 이 시간에도 밀려나가고 있을 수 있습니다.& 특히 폐경 이후 여성분들이나 활동량이 적은 남성분들은 더욱 그렇습니다.
+
+[SCENE: bone structure diagram or X-ray image showing bone density loss, 1080x1920]
+나레이터: 뼈가 약해지는 이유는 단순합니다.& 뼈를 만드는 속도보다 빠져나가는 속도가 더 빨라질 때, 골밀도가 떨어지는 것입니다.& 이미 진행 중이라면 회복이 어렵다는 게 문제입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 지금 이 방법이 사실 가장 중요합니다, 화면을 두 번 눌러서 더 자세한 내용을 확인해 주세요.
+
+[SCENE: Asian senior person doing weight-bearing exercises or walking outdoors in sunlight, 1080x1920]
+나레이터: 뼈를 살리려면 두 가지만 하면 됩니다.& 첫째, 햇빛에 15분 이상 나가세요.& 햇빛 속 자외선이 비타민D를 만들고, 이게 칼슘 흡수를 도웁니다.& 둘째, 계단 오르내리기나 걷기처럼 뼈에 자극을 주는 운동을 하루 20분만 하세요.& 이 두 가지가 뼈 손실을 막는 가장 확실한 방법입니다.
+
+[SCENE: Asian senior person drinking milk or eating calcium-rich foods like yogurt, broccoli on plate, 1080x1920]
+나레이터: 오늘부터 햇빛 15분, 운동 20분, 이 두 개만 기억하세요.& 정확한 진단과 개선 방법은 반드시 전문의와 상담하세요.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.
+
+[SCENE: simple close-up text overlay asking "You - start today? How many minutes?", white background, 1080x1920]
+나레이터: 당신은 오늘부터 이 운동을 며칠 할 수 있을 것 같으세요?& 댓글에 숫자만 남겨주세요.

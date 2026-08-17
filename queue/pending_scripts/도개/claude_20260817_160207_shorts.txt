@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260817_160207_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+골밀도 낮다면, 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+골밀도 낮다면, 이미 늦었을 수도
+
+[SCENE: Korean senior woman holding lower back in pain while standing in kitchen, 1080x1920]
+나레이터: 골밀도가 낮다는 진단받으신 분들, 지금이 정말 마지막 기회입니다.
+
+[SCENE: X-ray image of spine showing bone density comparison, 1080x1920]
+나레이터: 뼈는 한 번 약해지면 돌이킬 수 없습니다.& 특히 50대 이후 여성들은 급격히 떨어집니다.
+
+[SCENE: Asian senior woman falling on wet floor, close-up of hand hitting ground, 1080x1920]
+나레이터: 사소한 넘어짐이 골절로 이어지고, 골절이 되면 거동이 불가능해집니다.& 당신이 정말 모르고 있던 원인이 하나 있습니다.
+
+[SCENE: close-up of glass of milk and dairy products on wooden table, 1080x1920]
+나레이터: 우유만 마신다고 뼈가 강해지지 않습니다.& 칼슘 흡수에 가장 중요한 게 따로 있습니다.& 이게 부족하면 우유를 아무리 마셔도 소용없다는 뜻입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 지금 바로 확인하고 싶으신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman doing weight-bearing exercises with light dumbbells indoors, 1080x1920]
+나레이터: 바로 햇빛 속에서 하는 가벼운 근력운동입니다.& 하루 20분, 햇빛이 나는 낮시간에 팔다리를 움직이세요.& 비타민 D가 피부에서 만들어지면서 칼슘 흡수가 확 높아집니다.
+
+[SCENE: Korean senior couple walking together in sunny park in the morning, 1080x1920]
+나레이터: 또 하나는 단백질입니다.& 하루 계란 1개, 두부 한 모, 생선 한 토막.& 이 정도면 뼈의 기초가 튼튼해집니다.& 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: close-up of kitchen scale showing weight measurement and healthy foods arranged nearby, 1080x1920]
+나레이터: 당신은 지난주에 비타민 D 보충을 위해 햇빛 속에서 운동하신 적이 있으신가요?& 댓글에 '있다' 또는 '없다'라고만 남겨주세요.

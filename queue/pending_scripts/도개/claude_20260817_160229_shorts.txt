@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260817_160229_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+"앉았다 일어날 때 무릎이 저린다면, 이미 늦었을 수도"
+
+THUMBNAIL_SHORTS:
+"앉았다 일어날 때 무릎저림, 이미 늦었을 수도"
+
+[SCENE: Korean senior man struggling to stand up from a chair with hand on knee, 1080x1920]
+나레이터: 앉았다 일어날 때 무릎이 저리고 쑤신다면, 단순히 나이 탓이 아닙니다.
+
+[SCENE: close-up of knee joint with anatomical illustration of cartilage, 1080x1920]
+나레이터: 무릎 연골이 이미 손상되고 있다는 신호입니다.&넘어지지도 않았는데 왜 그럴까요?
+
+[SCENE: side view of Korean elderly person sitting at desk for long hours, 1080x1920]
+나레이터: 하루 종일 앉아만 있으면, 무릎 뒤쪽 근육이 경직됩니다.&그러면 일어날 때 연골에 가해지는 압력이 정상의 3배까지 늘어납니다.&정확한 진단은 전문의와 상담하시고, 이 다음 내용이 정말 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 회복법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior person performing seated hamstring stretch, leaning forward gently, 1080x1920]
+나레이터: 지금부터 하루 3번, 단 30초면 됩니다.&의자에 앉아서 다리를 쭉 펴고, 천천히 발끝을 향해 손을 뻗으세요.&근육이 당기는 느낌이 들 때 10초씩 3번 반복하세요.
+
+[SCENE: Korean senior woman doing standing quad stretch against wall for balance, 1080x1920]
+나레이터: 그리고 일어나기 전에 반대쪽 다리도 같은 방식으로 스트레칭하세요.&이건 무릎 뒤쪽 근육을 풀어주는 동작입니다.&이 습관만 30일 유지하면, 계단 올라갈 때의 저림이 확연히 달라집니다.
+
+[SCENE: Korean senior couple walking comfortably outdoors without pain, bright daylight, 1080x1920]
+나레이터: 앉았다 일어날 때 무릎 저림은 연골 손상의 초기 신호입니다.&지금 이 스트레칭을 시작하면 아직도 돌이킬 수 있습니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&본인은 오늘부터 이 스트레칭을 하루 몇 번 할 생각이신지, 댓글에 숫자만 남겨주세요.

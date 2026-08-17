@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260817_160133_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+변비약, 10년 먹으면 장이 썩습니다
+
+THUMBNAIL_SHORTS:
+변비약 상습, 장 기능 회복 불가
+
+[SCENE: Asian senior woman holding stomach in discomfort, sitting on couch, 1080x1920]
+나레이터: 매일 변비약을 드시는 분들, 지금 당장 멈춰야 합니다.&약이 아니라 장을 망치고 있기 때문입니다.
+
+[SCENE: close-up of various laxative pills and tablets, white background, 1080x1920]
+나레이터: 변비약을 계속 쓰면, 장의 신경이 점점 둔해집니다.&결국 약 없이는 절대 움직이지 않는 장이 돼버립니다.
+
+[SCENE: anatomical diagram of human intestines showing damage, 3D medical illustration, 1080x1920]
+나레이터: 3개월만 매일 먹어도 장 근육이 약해지고, 1년을 넘기면 돌이킬 수 없는 손상이 생깁니다.&진짜 무서운 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 이 다음이 가장 중요한데, 더 자세한 해결 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man drinking water from glass at kitchen table, natural lighting, 1080x1920]
+나레이터: 변비약 대신 하루에 물을 4~5잔, 미온수로 천천히 마시세요.&공복에 마시는 게 가장 효과적입니다.
+
+[SCENE: Asian senior woman eating high-fiber foods like vegetables, fruits, whole grain bread, close-up, 1080x1920]
+나레이터: 밥은 현미밥으로, 반찬은 나물·야채를 충분히 드세요.&식이섬유가 약보다 훨씬 안전하게 장을 살립니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior person walking slowly outdoors in park, gentle pace, 1080x1920]
+나레이터: 변비약을 끊으면 처음 1~2주는 힘들 수 있지만, 물·식이섬유·가벼운 산책이면 충분합니다.&당신의 장은 아직 살릴 수 있습니다.&지금부터 시작하신다면 3개월 뒤 확연한 변화를 느낄 겁니다.&본인이 변비약을 얼마나 오래 드셨나요? 댓글에 년 수를 적어주세요.
