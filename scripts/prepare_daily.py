@@ -2,7 +2,9 @@
 scripts/prepare_daily.py
 =========================
 "대본 생성" 전용 헤드리스 스크립트 — 설정에 등록된 모든 채널에 대해 하루치
-대본(채널당 쇼츠 5개, 2026-08-08부터 롱폼 없음)을 Claude API로 생성해서
+대본(채널당 쇼츠 3개, 2026-08-08부터 롱폼 없음 — 5개는 8/17까지 시험해봤는데
+하루에 몰아 올리면 서로 노출을 깎아먹는 게 조회수로 확인돼서 3개로 줄임)을
+Claude API로 생성해서
 queue/pending_scripts/{채널}/ 에 저장합니다.
 
 대본이 저장되는 순간(core/ai_script_generator.py의 save_story) Cloudflare
@@ -89,11 +91,12 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             logger.warning("prepare_daily: '%s' 디스코드로 예약된 주제(%s)가 있지만, 쇼츠 전용 모드에서는 아직 반영되지 않습니다.", name, topic)
         try:
             meta_list: list[dict] = []
-            # 2026-08-07: 롱폼 중단, 채널당 쇼츠 5개(50초 이내)로 전환. 롱폼 없이
-            # 쇼츠만 5개 쓰면 Claude 호출도 줄고 AI 이미지 요청 씬 수도 크게
-            # 줄어서(쇼츠 하나당 7~9씬 × 5개 ≈ 35~45씬, 예전 롱폼+쇼츠2개 ≈ 49씬보다
-            # 적음), Pollinations 대기가 덜 밀립니다.
-            saved = generate_daily_batch(queue_dir, channel=name, meta_out=meta_list, long_count=0, extra_shorts_count=5)
+            # 2026-08-07: 롱폼 중단, 쇼츠 전용으로 전환(30~40초 목표). 처음엔
+            # 채널당 5개씩 돌렸는데, 하루치 조회수 데이터를 보니 같은 채널이
+            # 같은 날 여러 개를 몰아 올리면 1~2개만 터지고 나머지는 조회수가
+            # 거의 안 나오는 패턴이 뚜렷해서(2026-08-17 확인), 채널당 3개로
+            # 줄였습니다.
+            saved = generate_daily_batch(queue_dir, channel=name, meta_out=meta_list, long_count=0, extra_shorts_count=3)
             logger.info("prepare_daily: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             for meta in meta_list:
                 logger.info(
