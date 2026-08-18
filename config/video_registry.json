@@ -1552,8 +1552,12 @@
     "title": "매일 하는 이것, 장을 망칩니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-12T23:44:57+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "TZmAG9GCPZw",
@@ -1562,8 +1566,12 @@
     "title": "골밀도 낮으면 넘어져도 골절, 이미 늦었을 수도",
     "is_shorts": true,
     "uploaded_at": "2026-08-12T23:49:32+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 22,
+      "likes": 3,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "y9Bg_ou-5wU",
@@ -1572,8 +1580,12 @@
     "title": "골밀도 빠지면 돌이킬 수 없습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-12T23:54:20+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "ZWbKu17faUM",
@@ -1582,8 +1594,12 @@
     "title": "골밀도 낮다는 진단 받기 전에",
     "is_shorts": true,
     "uploaded_at": "2026-08-12T23:58:59+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 315,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "GGxGB-9jOJ0",
@@ -1592,8 +1608,12 @@
     "title": "장을 늙게 만드는 습관, 알고 있었나요",
     "is_shorts": true,
     "uploaded_at": "2026-08-13T00:04:09+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 641,
+      "likes": 11,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "H3XxjqVi60w",
@@ -1812,8 +1832,12 @@
     "title": "의사들도 모르는 골다공증의 진짜 신호",
     "is_shorts": true,
     "uploaded_at": "2026-08-17T09:04:21+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 455,
+      "likes": 6,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "sXRVjH5cJ_w",
@@ -1822,8 +1846,12 @@
     "title": "변비약 자주 쓰면, 장이 망합니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-17T09:07:49+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 397,
+      "likes": 2,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "bBac9M0Smmw",
@@ -1832,8 +1860,12 @@
     "title": "골밀도 검사 안 받으면 돌이킬 수 없습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-17T09:11:09+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "UNYtVIW_tq8",
@@ -1842,8 +1874,12 @@
     "title": "계단만 내려가도 통증, 이것 모르면 안 됩니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-17T09:14:51+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 733,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-18T15:25:31+00:00"
   },
   {
     "video_id": "xtr0nYhAZFA",
