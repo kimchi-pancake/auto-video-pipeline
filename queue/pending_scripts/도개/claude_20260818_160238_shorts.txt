@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260818_160238_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아침에 이것 먹으면 장이 망합니다
+
+THUMBNAIL_SHORTS:
+아침에 이것 먹으면 장이 망합니다
+
+[SCENE: Korean senior woman drinking orange juice in morning kitchen, 1080x1920]
+나레이터: 아침에 마시는 그 습관, 장을 망치고 있습니다.
+
+[SCENE: glass of orange juice with pulp, sunlight streaming through, close-up, 1080x1920]
+나레이터: 많은 분들이 건강하다고 생각해서 아침에 챙겨 드시는데&사실 당신의 장 점막을 손상시키고 있습니다.
+
+[SCENE: animation of stomach lining being damaged, digestive tract inflammation illustration, 1080x1920]
+나레이터: 과일 주스는 통째로 먹은 과일과는 완전히 다릅니다.&껍질과 섬유질이 모두 제거되고 순수한 당분만 남기 때문입니다.&이 다음 내용이 사실 가장 중요하니, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 장 건강법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man with stomach discomfort, holding belly, looking uncomfortable, 1080x1920]
+나레이터: 당분이 빠르게 흡수되면서 혈당이 급격히 올라갑니다.&동시에 장 점막의 염증이 생기고&장내 좋은 세균들까지 죽어나갑니다.
+
+[SCENE: glass of water with lemon slice, fresh morning light, natural beverage, 1080x1920]
+나레이터: 아침에는 주스 대신 물을 먼저 마시세요.&그 다음 통째로 먹을 수 있는 과일을 드세요.&사과, 귤, 딸기처럼 그냥 그대로 먹는 게 장 건강의 시작입니다.
+
+[SCENE: Korean senior couple eating fresh fruit together at breakfast table, smiling, 1080x1920]
+나레이터: 아침 습관 하나가 당신의 장을 살리거나 망칩니다.&오늘부터 주스를 끊고 물과 생과일로 바꾸실 분, 댓글에 '오늘부터'라고만 남겨주세요.

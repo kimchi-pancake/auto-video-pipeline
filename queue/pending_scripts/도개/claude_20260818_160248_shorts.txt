@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260818_160248_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아침에 화장실 3번 간다면, 이미 늦었을 수도
+
+THUMBNAIL_SHORTS:
+아침 화장실 3번, 이미 늦었을 수도
+
+[SCENE: Asian senior man rushing to bathroom in the morning, holding stomach, 1080x1920]
+나레이터: 아침마다 화장실을 2번, 3번 가시는 분들 많으시죠?&다들 그냥 장이 약하다고 넘기시는데, 사실 당신의 장은 이미 손상되고 있을 수 있습니다.
+
+[SCENE: close-up of intestinal wall with inflammation illustration, medical diagram, 1080x1920]
+나레이터: 아침에 자꾸 화장실을 가는 건, 장 점막이 "자극받고 있다"는 신호입니다.&방치하면 만성 염증으로 이어져서 회복이 어려워집니다.
+
+[SCENE: Korean senior man eating fast food, fried chicken and processed snacks, dinner table, 1080x1920]
+나레이터: 전날 저녁에 튀긴 음식, 자극적인 가공식품을 드셨다면 다음날 아침이 더 심해집니다.&이런 음식들이 장을 자극해서 과민해지게 만드는 거예요.&근데 사실 여기서부터가 중요합니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 장 복구 방법이 궁금하신 분, 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior man drinking warm water, holding glass, morning sunlight, 1080x1920]
+나레이터: 아침에 일어나자마자 따뜻한 물 한잔을 천천히 마시세요.&그 다음 하루 종일 튀긴 음식과 자극적인 가공식품을 피하고&부드러운 죽이나 흰살 생선, 계란 같은 소화하기 쉬운 음식을 드세요.&이렇게 3주만 하셔도 아침 화장실 횟수가 크게 줄어듭니다.
+
+[SCENE: Korean senior man feeling relieved, smiling, touching stomach comfortably, morning, 1080x1920]
+나레이터: 정확한 진단과 치료는 반드시 전문의와 상담하세요.&아침마다 화장실을 자주 가는 건 단순한 습관이 아니라, 당신의 장이 도움을 요청하는 신호입니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.&본인은 아침에 화장실을 몇 번 가세요?&댓글에 숫자만 남겨주세요.
