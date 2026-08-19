@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260819_160134_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+매일 마시는 그것, 장을 망치고 있습니다
+
+THUMBNAIL_SHORTS:
+매일 마시는 그것, 장을 망칩니다
+
+[SCENE: close-up of carbonated beverage being poured into glass, fizzing bubbles, 1080x1920]
+나레이터: 다들 소화가 안 된다고 하는데, 사실 당신이 매일 마시는 그것 때문일 수 있습니다.
+
+[SCENE: Asian senior man holding stomach in discomfort, looking at empty cola bottle, 1080x1920]
+나레이터: 특히 자극적인 음료를 자주 마시시는 분들은 이미 장 점막이 손상되고 있을 수 있습니다.&인공감미료와 과도한 탄산이 장내세균총을 망가뜨리기 때문입니다.
+
+[SCENE: animated illustration of gut bacteria, colored red and blue bacteria colonies in stomach, medical diagram style, 1080x1920]
+나레이터: 한 번 손상된 장내세균총은 회복하는 데 최소 3개월이 걸립니다.&지금 바로 멈추지 않으면, 당신의 장 건강은 계속 나빠질 것입니다.&이 다음 해결법이 가장 중요하니, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 장 건강법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior woman drinking plain water from glass, 1080x1920]
+나레이터: 지금부터 할 일은 간단합니다.&콜라, 사이다, 인공감미료 음료는 완전히 끊으세요.&대신 하루에 따뜻한 물 8잔, 무가당 미숫가루나 따뜻한 우유로 바꿔보세요.
+
+[SCENE: close-up of kimchi, probiotic rich fermented vegetables in bowl, 1080x1920]
+나레이터: 그리고 매일 한 끼에 발효식품, 김치나 된장국을 한 숟가락씩 넣으세요.&손상된 장내세균총을 빠르게 복구하는 가장 확실한 방법입니다.
+
+[SCENE: calendar showing 3 months progression, checkmarks on days, 1080x1920]
+나레이터: 정확한 진단과 치료는 반드시 전문의와 상담하세요.&이 습관을 3개월 유지하면, 당신은 아침에 일어났을 때 소화 편함을 분명히 느낄 것입니다.&지금부터 자극적인 음료를 끊으실 건가요, 아니면 계속하실 건가요?&댓글에 당신의 선택을 남겨주세요.
