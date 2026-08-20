@@ -5,7 +5,13 @@ Claude API를 직접 호출해서 대본을 생성하고 story.txt로 저장합�
 gui/claude_panel.py의 수동(웹뷰에 붙여넣고 복사해오는) 플로우와 완전히 별개의,
 API 키 기반 자동 생성 경로입니다.
 
-API 키는 프로젝트 루트의 .env 파일(ANTHROPIC_API_KEY=...)에서 읽습니다.
+API 키는 프로젝트 루트의 .env 파일(NVIDIA_API_KEY=...)에서 읽습니다.
+2026-08-19: 대본 생성 전체를 Claude에서 NVIDIA(build.nvidia.com, OpenAI 호환
+API)의 nvidia/nemotron-3-super-120b-a12b로 옮겼습니다 — 실제 SHORTS_SCRIPT_PROMPT로
+비교 테스트한 결과 이 모델이 훅 공식·좋아요 유도 문구·댓글 유도 구체성을 Claude에
+가장 가깝게 따라왔습니다(다른 후보 nemotron-3.5-lightning/llama-3.3-70b는 구조
+누락·문법 오류가 있었음). 이 모델은 "생각(thinking)" 모델이라 답변 전에 내부
+추론을 하므로 max_tokens을 넉넉히(16000) 줘야 추론만 하다 잘리지 않습니다.
 
 전체 생성 파이프라인(generate_and_save):
   주제 선정(또는 custom_topic 그대로 사용)
@@ -44,8 +50,12 @@ logger = get_logger(__name__)
 
 _ENV_PATH = Path(__file__).parent.parent / ".env"
 
-# 하루 여러 편씩 대량으로 뽑는 용도라 비용 우선으로 Haiku를 씁니다.
-MODEL = "claude-haiku-4-5"
+# NVIDIA API 카탈로그(build.nvidia.com) 모델. 2026-08-19 실측 비교(같은
+# SHORTS_SCRIPT_PROMPT로 nemotron-3.5-lightning-30b / llama-3.3-70b-instruct /
+# nemotron-3-super-120b 세 개를 돌려봄)에서 이 모델만 훅 공식·좋아요 유도·
+# 댓글 유도 지시를 전부 정확히 따랐습니다. 속도는 20~40초로 Claude보다 느리지만
+# 무료라 이 채널 물량(하루 채널당 3개)에는 문제 없습니다.
+MODEL = "nvidia/nemotron-3-super-120b-a12b"
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
 # 대본을 살린 채 부족한 만큼만 늘려 쓰기(extend)"를 시도할 최대 횟수.
@@ -85,51 +95,56 @@ class ScriptGenerationError(Exception):
 
 def _get_api_key() -> str:
     load_dotenv(_ENV_PATH)
-    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    key = os.environ.get("NVIDIA_API_KEY", "").strip()
     if not key:
         raise ScriptGenerationError(
             f".env 파일에 API 키가 없습니다.\n{_ENV_PATH}\n"
-            "파일을 열어서 ANTHROPIC_API_KEY= 뒤에 콘솔에서 발급받은 키를 붙여넣으세요."
+            "파일을 열어서 NVIDIA_API_KEY= 뒤에 build.nvidia.com에서 발급받은 키를 붙여넣으세요."
         )
     return key
 
 
 def _call_claude(prompt: str) -> str:
-    """Claude API를 한 번 호출해서 응답 원문을 반환합니다. 생성 함수들의 공통 경로."""
-    import anthropic  # 지연 임포트: API 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
+    """NVIDIA API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
+    함수들의 공통 경로 — 함수 이름은 예전 그대로 남겨뒀습니다(호출부 5곳을
+    다 바꾸는 것보다 안전)."""
+    import openai  # 지연 임포트: API 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
 
     key = _get_api_key()
-    client = anthropic.Anthropic(api_key=key)
+    client = openai.OpenAI(base_url="https://integrate.api.nvidia.com/v1", api_key=key)
 
     try:
-        # Haiku 4.5는 adaptive thinking을 지원 안 해서(400 에러) thinking 파라미터
-        # 자체를 아예 안 보냅니다 — Opus/Sonnet류로 모델을 바꾸면 다시 켜도 됨.
-        with client.messages.stream(
+        resp = client.chat.completions.create(
             model=MODEL,
-            max_tokens=16000,
             messages=[{"role": "user", "content": prompt}],
-        ) as stream:
-            message = stream.get_final_message()
-    except anthropic.AuthenticationError as e:
+            temperature=0.9,
+            top_p=0.95,
+            max_tokens=16000,
+        )
+    except openai.AuthenticationError as e:
         raise ScriptGenerationError("API 키가 유효하지 않습니다. .env 파일의 키를 다시 확인하세요.") from e
-    except anthropic.RateLimitError as e:
+    except openai.RateLimitError as e:
         raise ScriptGenerationError("요청 한도를 초과했습니다. 잠시 후 다시 시도하세요.") from e
-    except anthropic.APIConnectionError as e:
+    except openai.APIConnectionError as e:
         raise ScriptGenerationError("네트워크 연결에 실패했습니다. 인터넷 연결을 확인하세요.") from e
-    except anthropic.APIStatusError as e:
+    except openai.APIStatusError as e:
         raise ScriptGenerationError(f"API 오류 (상태코드 {e.status_code}): {e.message}") from e
 
-    if message.stop_reason == "refusal":
-        raise ScriptGenerationError("Claude가 이 요청을 안전 정책상 거부했습니다. 다시 시도해보세요.")
+    choice = resp.choices[0]
+    if choice.finish_reason == "length":
+        raise ScriptGenerationError(
+            "모델이 생각(thinking)만 하다가 토큰 한도에 걸려 답변을 못 끝냈습니다. "
+            "다시 시도해보세요."
+        )
 
-    text = "".join(block.text for block in message.content if block.type == "text").strip()
+    text = (choice.message.content or "").strip()
     if not text:
         raise ScriptGenerationError("빈 응답을 받았습니다. 다시 시도해주세요.")
 
-    usage = message.usage
+    usage = resp.usage
     logger.info(
-        "Claude API 호출 완료 (model=%s, input=%s, output=%s tokens)",
-        MODEL, usage.input_tokens, usage.output_tokens,
+        "NVIDIA API 호출 완료 (model=%s, input=%s, output=%s tokens)",
+        MODEL, usage.prompt_tokens if usage else "?", usage.completion_tokens if usage else "?",
     )
     return text
 

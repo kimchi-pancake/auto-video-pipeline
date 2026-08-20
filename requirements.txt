@@ -28,6 +28,7 @@ google-auth-httplib2>=0.2.0
 
 # AI Script Generation
 anthropic>=0.69.0
+openai>=1.50.0
 
 # Utilities
 python-dotenv>=1.0.1

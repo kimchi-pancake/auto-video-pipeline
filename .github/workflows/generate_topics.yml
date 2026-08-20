@@ -31,12 +31,12 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python dependencies
-        run: pip install anthropic python-dotenv colorlog
+        run: pip install anthropic openai python-dotenv colorlog
 
       - name: Write secrets
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: printf 'NVIDIA_API_KEY=%s\n' "$NVIDIA_API_KEY" > .env
 
       - name: Generate topics
         env:

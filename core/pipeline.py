@@ -181,8 +181,11 @@ class Pipeline:
             # 파일명과 실제 조회하는 index가 어긋나서 전부 못 찾게 됩니다
             # (2026-08-04). 인트로 카드는 실제 씬과 절대 안 겹치는 -1을 씁니다
             # (.index는 딕셔너리 키로만 쓰여서 연속된 숫자일 필요가 없음).
+            # 2026-08-19: 검정 배경+빨간 글씨 타이틀 카드를 첫 씬으로 넣던 걸
+            # 사용자 요청으로 껐습니다 — 이제 영상은 바로 실제 SCENE부터
+            # 시작합니다(썸네일에서만 제목을 강하게 보여줌).
             intro_title = (story.raw_title or "").strip()
-            has_intro = bool(intro_title) and bool(story.scenes)
+            has_intro = False
             if has_intro:
                 story.scenes.insert(0, Scene(
                     index=-1,
