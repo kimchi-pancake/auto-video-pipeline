@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260820_160649_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+sad.mp3
+THUMBNAIL_LONG:
+당신 흰쌀밥 매일 혈관 위험
+THUMBNAIL_SHORTS:
+당신 흰쌀밥 매일 혈관 위험
+[SCENE: close-up of a steaming bowl of white rice, 1080x1920]
+나레이터: 이거 모르면 '혈관' 이제 못 돌립니다.
+[SCENE: Korean senior man looking at a bowl of white rice at dining table, 1080x1920]
+나레이터: 아침·점심·저녁, 흰쌀밥 한 그릇씩 드십니까?&혹시 하루에 세 그릇 이상 드신다면 주목해 주세요.
+[SCENE: animated graphic showing glucose spikes damaging blood vessel walls, 1080x1920]
+나레이터: 흰쌀밥은 소화가 빨리 돼 혈당을 급격히 올려 혈관 벽에 염증을 일으킵니다.&근데 사실 제일 중요한 건 지금부터입니다, 잠시만 더 함께해 주세요.
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 더 많은 방법을 알아보세요.
+[SCENE: Korean senior woman mixing grains in a rice cooker, 1080x1920]
+나레이터: 흰쌀밥 반 그릇 대신 잡곡밥 한 그릇을 드시고, 식사 전 물 한 잔 마시세요.&정확한 진단과 치료는 전문의와 상담하세요, 오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
+[SCENE: Korean senior woman smiling, pointing to comment box, 1080x1920]
+나레이터: 오늘부터 흰쌀밥 대신 잡곡밥 한 그릇 드실 분, 댓글에 숫자 '1' 남겨주세요.

@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260820_160253_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+흰쌀밥 한 그릇, 당뇨 2배
+THUMBNAIL_SHORTS:
+흰쌀밥 한 그릇, 당뇨 2배
+[SCENE: Korean senior man holding a bowl of white rice, looking concerned, 1080x1920]
+나레이터: 흰쌀밥을 매일 드시면 '혈당' 돌이킬 수 없습니다.
+[SCENE: Close-up of a rice spoon scooping white rice, steam rising, 1080x1920]
+나레이터: 하루에 흰쌀밥 두 그릇 이상 드신다면, 이미 위험 신호입니다.
+[SCENE: Animated graphic showing glucose spike after eating white rice, 1080x1920]
+나레이터: 흰쌀밥은 정제 탄수화물로 빨리 분해되어 혈당을 급격히 올리고, 인슐린 과다 분비를 유발합니다.&근데 사실 제일 중요한 건 지금부터입니다.
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 더 많은 방법을 알아보시기 바랍니다.
+[SCENE: Korean senior woman mixing brown rice with white rice in a bowl, 1080x1920]
+나레이터: 식사 때 흰쌀밥 반과 현미 반을 섞어 드시기 바랍니다.&식후 10분 정도 가볍게 걸으시면 혈당 상승을 완화할 수 있습니다.&정확한 진단과 치료는 전문의와 상담하세요.
+[SCENE: Korean senior man smiling, pointing at comment box, 1080x1920]
+나레이터: 오늘부터 흰쌀밥 대신 현미 반반 섞으실 분, 댓글에 '현미'라고 적어 주시기 바랍니다.
