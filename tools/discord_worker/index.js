@@ -46,7 +46,7 @@
  * 설정: Cloudflare 대시보드 → 이 Worker → Triggers → Cron Triggers →
  * "0 16 * * *" 추가 (UTC 기준 16:00 = KST 01:00, daily.yml의 cron과 동일한
  * "생성 시작" 시각). 2026-08-07: 20:00 KST 업로드 목표까지 시간을 최대한
- * 벌어서 AI 이미지가 Pollinations 동시요청 제한 없이 순서대로 다 그려질
+ * 벌어서 AI 이미지 생성(현재 NVIDIA FLUX — 2026-08-19)이 순서대로 다 그려질
  * 여유를 주려고 07:00(16:00 KST)에서 01:00 KST로 앞당겼습니다. daily.yml의
  * schedule 트리거는 그대로 둬도 되고(둘 다 도는 게 아니라 아래 scheduled()가
  * "이미 실행 중이면 스킵" 가드를 거치므로 안전), 아예 daily.yml에서 schedule:
@@ -58,20 +58,22 @@
  * "공개"가 아니라 "업로드(비공개+예약) 자체가 20시 전에 반드시 끝나야
  * 한다"는 건 이 트리거 타이밍(01시 시작)과 아래 안전망 cron이 같이 보장합니다.
  *
- * AI 씬 이미지(Pollinations) 생성 + 조립 트리거
- * ---------------------------------------------
+ * AI 씬 이미지(NVIDIA FLUX.1-dev) 생성 + 조립 트리거
+ * ----------------------------------------------------
  * 2026-08-04: daily.yml(대본 생성)과 실제 영상 조립을 분리했습니다. 대본이
  * 저장되는 순간 파이썬 쪽(core/ai_script_generator.py)이 /generate-images-x9k3m2
  * 를 호출해 이 워커에게 씬 이미지 생성을 맡기고, 이 워커는 ctx.waitUntil()로
- * Pollinations를 순차 호출해 assets/pending_images/{run_id}/에 커밋합니다.
- * 그 생성이 끝나면(generateSceneImages 마지막) 이 워커가 곧바로
- * assemble_daily.yml(TTS+영상 조립+업로드)을 트리거합니다 — 그 시점엔 이미지가
- * 이미 다 있어서 GH Actions가 기다릴 시간이 거의 없습니다. 혹시 이 즉시
- * 트리거가 실패해도(네트워크 오류 등) 놓치지 않도록, 20:00 KST 목표보다
- * 2시간 여유를 두고 18:00 KST에 도는 안전망 cron("0 9 * * *")도 같이
- * 등록해야 합니다 — 그때도 큐가 비어 있으면 assemble_daily.yml이 조용히
- * 아무 것도 안 하고 끝납니다.
- * IMAGE_GEN_SECRET 환경변수(파이썬 쪽과 동일한 값)도 등록해야 합니다.
+ * NVIDIA(build.nvidia.com)의 FLUX.1-dev를 4개씩 병렬 호출해
+ * assets/pending_images/{run_id}/에 커밋합니다(2026-08-19, Pollinations에서
+ * 교체 — 동시요청 처리가 훨씬 안정적임). 그 생성이 끝나면(generateSceneImages
+ * 마지막) 이 워커가 곧바로 assemble_daily.yml(TTS+영상 조립+업로드)을
+ * 트리거합니다 — 그 시점엔 이미지가 이미 다 있어서 GH Actions가 기다릴 시간이
+ * 거의 없습니다. 혹시 이 즉시 트리거가 실패해도(네트워크 오류 등) 놓치지
+ * 않도록, 20:00 KST 목표보다 2시간 여유를 두고 18:00 KST에 도는 안전망
+ * cron("0 9 * * *")도 같이 등록해야 합니다 — 그때도 큐가 비어 있으면
+ * assemble_daily.yml이 조용히 아무 것도 안 하고 끝납니다.
+ * IMAGE_GEN_SECRET과 NVIDIA_API_KEY 환경변수(파이썬 쪽 .env와 동일한 값)도
+ * 등록해야 합니다.
  *
  * 매일 23:59 KST 채팅 비우기
  * -------------------------
@@ -113,8 +115,8 @@ export default {
     }
 
     // GitHub Actions가 대본 파싱 직후(TTS 시작 전) 여기로 씬 프롬프트 목록을
-    // 던지면, 응답은 바로 주고(ctx.waitUntil로) 백그라운드에서 Pollinations
-    // AI 이미지를 순차 생성해 레포에 커밋합니다. GitHub Actions 잡 시간과
+    // 던지면, 응답은 바로 주고(ctx.waitUntil로) 백그라운드에서 NVIDIA
+    // AI 이미지를 병렬 생성해 레포에 커밋합니다. GitHub Actions 잡 시간과
     // 무관하게(Cloudflare는 대기시간을 과금하지 않음) 도는 게 핵심이라 —
     // 파이프라인은 그동안 TTS를 진행하다가, 합성 직전에 git pull로 준비된
     // 만큼만 가져다 쓰고 나머지는 Pixabay로 폴백합니다(2026-08-03).
@@ -658,6 +660,15 @@ function encodeBase64Bytes(buffer) {
   return btoa(binary);
 }
 
+/** encodeBase64Bytes의 반대 — base64 문자열을 raw 바이트(Uint8Array)로 되돌립니다.
+ * decodeBase64()는 UTF-8 텍스트 전용이라 이미지처럼 임의 바이너리에는 못 씁니다. */
+function decodeBase64Bytes(b64) {
+  const binary = atob(b64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return bytes.buffer;
+}
+
 /** JSON.stringify를 거치지 않고 raw 바이너리(ArrayBuffer)를 그대로 커밋합니다. */
 async function ghPutBinaryFile(env, path, buffer, message) {
   const apiUrl = `https://api.github.com/repos/${env.GITHUB_REPO}/contents/${path}`;
@@ -677,12 +688,18 @@ async function ghPutBinaryFile(env, path, buffer, message) {
 }
 
 // ─────────────────────────────────────────
-// AI 이미지 생성 (Pollinations) — 백그라운드 커밋
+// AI 이미지 생성 (NVIDIA build.nvidia.com, FLUX.1-dev) — 백그라운드 커밋
 // ─────────────────────────────────────────
+// 2026-08-19: Pollinations에서 NVIDIA로 교체 — Pollinations는 전역 동시요청
+// 제한이 너무 빡빡해서(익명 티어 사실상 1개씩만) 채널당 하루 3개씩 run_id가
+// 겹치면 대부분 429로 실패했습니다(실측: 21씬 중 1개만 성공). NVIDIA는 실측
+// 테스트에서 8개 동시 요청 중 7개가 성공했고(13초), 장당 4~13초로 훨씬
+// 빠릅니다. IMAGE_GEN_SECRET과 별개로 NVIDIA_API_KEY 환경변수(파이썬 쪽
+// .env와 같은 값)를 이 Worker에도 등록해야 합니다.
 
 // 2026-08-04: 사용자가 직접 테스트해서 고른 톤 — 실사에 가까운 "AI 티" 나는
 // 얼굴 대신 따뜻한 색감의 수채화/스토리북 느낌. 주제(씬 프롬프트) 뒤에
-// 붙여야만 정상 동작합니다 — 이 문구를 주제보다 앞에 놓으면 Pollinations가
+// 붙여야만 정상 동작합니다 — 이 문구를 주제보다 앞에 놓으면 이미지 생성 모델이
 // 주제 자체를 무시하고 엉뚱한 그림을 그리는 게 실측으로 확인됐습니다.
 const _IMAGE_STYLE_SUFFIX =
   ", warm watercolor illustration, soft muted color palette, gentle golden hour lighting, " +
@@ -702,27 +719,37 @@ const _FACE_QUALITY_BOOST =
   ", detailed symmetrical face, sharp clear eyes, correct facial anatomy, close-up portrait, " +
   "headshot framing, hands not visible, wearing modest crew-neck clothing, fully clothed, covered shoulders";
 
-/**
- * run_id에 속한 씬들을 하나씩 순차로 Pollinations(flux)에 요청해
- * assets/pending_images/{run_id}/scene_{index:04d}.jpg 로 커밋합니다.
- * ctx.waitUntil()로 호출되므로 GitHub Actions 잡 시간과는 무관하게 돕니다.
- * Pollinations는 동시요청을 429로 막기 때문에 반드시 순차 처리합니다.
- */
-// 하루에 여러 run_id(채널당 쇼츠 5개)가 거의 동시에 저장되면서 각자
-// generateSceneImages()를 독립적으로 돌리다 보니, 전부 Pollinations 전역
-// 동시요청 제한(429)에 부딪혀서 서로를 밀어내는 문제가 실측으로 확인됐습니다
-// (21씬 중 1개만 성공). 429/일시적 실패는 그 자리에서 포기하지 않고 지수
-// 백오프로 재시도합니다. 처음엔 최대 21분/씬까지 재시도하게 했는데, 파이썬
-// 쪽 대기(ai_image_wait_timeout_sec)가 훨씬 짧게(90초) 줄어든 이상 그렇게 길게
-// 재시도해봤자 그 결과를 써먹을 조립 실행은 이미 Pixabay로 넘어간 뒤라
-// 의미가 없고, 오히려 다음 run_id들을 계속 밀어내기만 합니다 — 최대
-// ~5분/씬(20+40+80+160s)으로 줄였습니다(2026-08-09).
-const _IMAGE_MAX_RETRIES = 4;
-const _IMAGE_RETRY_BASE_MS = 20000; // 20s, 40s, 80s, 160s ...
+// NVIDIA FLUX.1-dev는 width/height가 임의값이 아니라 정해진 값만 허용합니다
+// (실측 확인: 768/832/896/960/1024/1088/1152/1216/1280/1344). 쇼츠(1080x1920,
+// 9:16)에 가장 가까운 조합으로 골랐습니다.
+const _NVIDIA_IMAGE_WIDTH = 768;
+const _NVIDIA_IMAGE_HEIGHT = 1344;
+const _NVIDIA_IMAGE_MODEL = "black-forest-labs/flux.1-dev";
 
-async function _fetchImageWithRetry(url) {
+// NVIDIA는 Pollinations와 달리 동시요청을 잘 버팁니다(실측: 8개 동시 요청 중
+// 7개 성공). 그래도 완전 무제한은 아니라서(가끔 429), 적당한 동시 개수로
+// 배치 처리하고 429/일시 오류는 짧게 재시도합니다(2026-08-19).
+const _IMAGE_CONCURRENCY = 4;
+const _IMAGE_MAX_RETRIES = 3;
+const _IMAGE_RETRY_BASE_MS = 5000; // 5s, 10s, 20s
+
+async function _fetchNvidiaImage(env, prompt, seed) {
   for (let attempt = 0; attempt <= _IMAGE_MAX_RETRIES; attempt++) {
-    const resp = await fetch(url);
+    const resp = await fetch(`https://ai.api.nvidia.com/v1/genai/${_NVIDIA_IMAGE_MODEL}`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.NVIDIA_API_KEY}`,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt,
+        width: _NVIDIA_IMAGE_WIDTH,
+        height: _NVIDIA_IMAGE_HEIGHT,
+        steps: 25,
+        seed,
+      }),
+    });
     if (resp.ok) return resp;
     if (attempt === _IMAGE_MAX_RETRIES) return resp;
     const wait = _IMAGE_RETRY_BASE_MS * Math.pow(2, attempt);
@@ -731,33 +758,48 @@ async function _fetchImageWithRetry(url) {
   }
 }
 
-async function generateSceneImages(env, runId, scenes) {
-  for (const scene of scenes) {
-    try {
-      const faceBoost = _PERSON_KEYWORDS.test(scene.prompt) ? _FACE_QUALITY_BOOST : "";
-      const prompt = `${scene.prompt}${faceBoost}${_IMAGE_STYLE_SUFFIX}`;
-      const seed = Math.floor(Math.random() * 1e9);
-      const url =
-        `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}` +
-        `?width=1920&height=1080&nologo=true&model=flux&seed=${seed}`;
-      const resp = await _fetchImageWithRetry(url);
-      if (!resp.ok) {
-        console.log(`[image-gen] scene ${scene.index} 최종 실패 (${resp.status})`);
-        continue;
-      }
-      const buffer = await resp.arrayBuffer();
-      const path = `assets/pending_images/${runId}/scene_${String(scene.index).padStart(4, "0")}.jpg`;
-      await ghPutBinaryFile(env, path, buffer, `AI image scene ${scene.index} (${runId})`);
-      console.log(`[image-gen] scene ${scene.index} 완료`);
-    } catch (e) {
-      console.log(`[image-gen] scene ${scene.index} 에러: ${e.message}`);
+async function _generateOneScene(env, runId, scene) {
+  try {
+    const faceBoost = _PERSON_KEYWORDS.test(scene.prompt) ? _FACE_QUALITY_BOOST : "";
+    const prompt = `${scene.prompt}${faceBoost}${_IMAGE_STYLE_SUFFIX}`;
+    const seed = Math.floor(Math.random() * 1e9);
+    const resp = await _fetchNvidiaImage(env, prompt, seed);
+    if (!resp.ok) {
+      console.log(`[image-gen] scene ${scene.index} 최종 실패 (${resp.status})`);
+      return;
     }
+    const body = await resp.json();
+    const b64 = body.artifacts && body.artifacts[0] && body.artifacts[0].base64;
+    if (!b64) {
+      console.log(`[image-gen] scene ${scene.index} 실패 — 응답에 이미지 없음`);
+      return;
+    }
+    const buffer = decodeBase64Bytes(b64);
+    const path = `assets/pending_images/${runId}/scene_${String(scene.index).padStart(4, "0")}.jpg`;
+    await ghPutBinaryFile(env, path, buffer, `AI image scene ${scene.index} (${runId})`);
+    console.log(`[image-gen] scene ${scene.index} 완료`);
+  } catch (e) {
+    console.log(`[image-gen] scene ${scene.index} 에러: ${e.message}`);
+  }
+}
+
+/**
+ * run_id에 속한 씬들을 NVIDIA(FLUX.1-dev)로 그려서
+ * assets/pending_images/{run_id}/scene_{index:04d}.jpg 로 커밋합니다.
+ * ctx.waitUntil()로 호출되므로 GitHub Actions 잡 시간과는 무관하게 돕니다.
+ * _IMAGE_CONCURRENCY개씩 배치로 병렬 처리합니다(순차 처리했던 Pollinations
+ * 시절과 달리 NVIDIA는 동시요청을 잘 버팀 — 2026-08-19).
+ */
+async function generateSceneImages(env, runId, scenes) {
+  for (let i = 0; i < scenes.length; i += _IMAGE_CONCURRENCY) {
+    const batch = scenes.slice(i, i + _IMAGE_CONCURRENCY);
+    await Promise.all(batch.map((scene) => _generateOneScene(env, runId, scene)));
   }
 
   // 대본 하나(run_id 하나)의 이미지가 다 끝날 때마다 곧바로 조립 워크플로우를
-  // 깨워봅니다 — 채널당 하루 3편(롱폼1+쇼츠2)이라 이 함수가 여러 번 불리는데,
-  // idle-guard(findActiveRun) 덕분에 이미 조립이 돌고 있으면 그냥 스킵되고,
-  // 마지막 run_id가 끝났을 때 비로소 실제로 새로 트리거됩니다(2026-08-04).
+  // 깨워봅니다 — 채널당 하루 3편이라 이 함수가 여러 번 불리는데, idle-guard
+  // (findActiveRun) 덕분에 이미 조립이 돌고 있으면 그냥 스킵되고, 마지막
+  // run_id가 끝났을 때 비로소 실제로 새로 트리거됩니다(2026-08-04).
   try {
     await triggerAssembleIfIdle(env);
   } catch (e) {
