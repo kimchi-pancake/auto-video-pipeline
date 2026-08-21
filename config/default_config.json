@@ -31,7 +31,7 @@
   },
 
   "tts": {
-    "default_voice": "ko-KR-SunHiNeural",
+    "default_voice": "ko-KR-HyunsuMultilingualNeural",
     "default_rate": "+20%",
     "default_pitch": "+0Hz",
     "default_volume": "+0%",
@@ -41,7 +41,7 @@
     "output_format": "mp3",
     "voices": {
       "나레이터": {
-        "voice": "ko-KR-SunHiNeural",
+        "voice": "ko-KR-HyunsuMultilingualNeural",
         "rate": "+18%",
         "pitch": "+0Hz",
         "volume": "+0%"
