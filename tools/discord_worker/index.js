@@ -701,9 +701,12 @@ async function ghPutBinaryFile(env, path, buffer, message) {
 // 얼굴 대신 따뜻한 색감의 수채화/스토리북 느낌. 주제(씬 프롬프트) 뒤에
 // 붙여야만 정상 동작합니다 — 이 문구를 주제보다 앞에 놓으면 이미지 생성 모델이
 // 주제 자체를 무시하고 엉뚱한 그림을 그리는 게 실측으로 확인됐습니다.
+// 2026-08-21: "bleeding edges"(수채화 기법 용어)가 NVIDIA 안전 필터에 걸려서
+// 이 문구가 붙은 모든 이미지가 CONTENT_FILTERED(새까만 이미지)로 나오는 사고가
+// 있었습니다 — "bleeding"을 "blended"로 바꿔서 실측 확인 후 고침.
 const _IMAGE_STYLE_SUFFIX =
   ", warm watercolor illustration, soft muted color palette, gentle golden hour lighting, " +
-  "visible paper texture, loose expressive brushstrokes, soft bleeding edges between colors, " +
+  "visible paper texture, loose expressive brushstrokes, soft blended edges between colors, " +
   "warm beige and amber undertones, cozy nostalgic atmosphere, hand-painted storybook feel, " +
   "soft focus background, no harsh outlines, emotionally warm and comforting mood, " +
   "traditional watercolor paper grain, delicate color washes";
@@ -769,9 +772,18 @@ async function _generateOneScene(env, runId, scene) {
       return;
     }
     const body = await resp.json();
-    const b64 = body.artifacts && body.artifacts[0] && body.artifacts[0].base64;
+    const artifact = body.artifacts && body.artifacts[0];
+    const b64 = artifact && artifact.base64;
     if (!b64) {
       console.log(`[image-gen] scene ${scene.index} 실패 — 응답에 이미지 없음`);
+      return;
+    }
+    // finishReason이 SUCCESS가 아니면(주로 CONTENT_FILTERED) 실제로는 새까만
+    // 플레이스홀더 이미지가 옵니다 — 그걸 그대로 커밋하면 파이프라인이 "AI
+    // 이미지 있음"으로 착각해서 씁니다. 걸러서 그냥 실패 처리(Pixabay 폴백으로
+    // 넘어가게)합니다(2026-08-21).
+    if (artifact.finishReason && artifact.finishReason !== "SUCCESS") {
+      console.log(`[image-gen] scene ${scene.index} 필터링됨 (${artifact.finishReason}) — 건너뜀`);
       return;
     }
     const buffer = decodeBase64Bytes(b64);
