@@ -2248,5 +2248,65 @@
     "uploaded_at": "2026-08-21T03:35:16+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "I1dHTJ591Lk",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신 지금 흰쌀밥 당뇨 2배",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T16:16:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "JAwPI7NMfxc",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "당신설탕이혈관을망친다10g",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T16:18:42+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ZJgDLp1arZc",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신 주3번 라면 혈관위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T16:19:42+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "gn32zg0mOX0",
+    "channel": "도개",
+    "category": "당뇨관리",
+    "title": "당신,흰밥한그릇,당뇨2배",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T16:21:50+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "zHDrPYCtk2g",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신 흰밥 당뇨 2배",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T16:22:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "lvDvXLiIHho",
+    "channel": "도개",
+    "category": "혈관혈압",
+    "title": "매일 라면 혈관 위험 3번",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T16:24:58+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
