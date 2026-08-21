@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260821_160220_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+당신 흰밥 당뇨 2배
+THUMBNAIL_SHORTS:
+당신 흰밥 당뇨 2배
+[SCENE:Korean senior man looking worried at a bowl of steaming white rice, 1080x1920]
+나레이터: 이 흰밥 모르면 혈당 회복 불가합니다.
+[SCENE:Korean senior woman holding a spoon over a plate of white rice, thinking, 1080x1920]
+나레이터: 아침, 점심, 저녁에 흰밥 한 그릇씩 드시나요?
+[SCENE:Close-up of white rice grains turning into sugar cubes in a digestive illustration, 1080x1920]
+나레이터: 흰밥은 소화되면서 빨리 당이 되어 혈당을 급격히 올리고, 당뇨 위험을 높입니다&근데 사실 제일 중요한 건 지금부터입니다.
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요
+[SCENE:Korean senior man mixing brown rice with white rice in a bowl, drinking water, then walking outside, 1080x1920]
+나레이터: 식사 전 물 한 잔 마시고 흰밥 대신 현미밥 반 그릇을 섞어 드세요&식후 10분 정도 느리게 걸으시고 정확한 진단과 치료는 전문의와 상담하세요
+[SCENE:Korean senior woman smiling while holding a plate of mixed rice, with a comment bubble showing the word '실천', 1080x1920]
+나레이터: 하루에 흰밥 대신 현미밥 반 그릇을 섞고 물 한 잔 마시고 10분 걸으시면 혈당 관리에 도움이 됩니다&오늘부터 이 방법 실천하실 분은 댓글에 '실천'이라고 남겨주세요

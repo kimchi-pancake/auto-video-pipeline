@@ -1,0 +1,28 @@
+RUN_ID:
+claude_20260821_161325_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+당뇨관리
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+당신,흰밥한그릇,당뇨2배
+THUMBNAIL_SHORTS:
+당신,흰밥한그릇,당뇨2배
+
+[SCENE: close-up of steaming white rice in a bowl, Korean senior hand holding spoon, 1080x1920]
+나레이터: 이거 모르면 '혈당' 회복 불가입니다.
+
+[SCENE: Korean senior man sitting at table, eyes drooping after a meal, 1080x1920]
+나레이터: 아침에 흰밥 한 그릇 드시고 출근하신다면, 혹시 밥 뒤에 졸음이 오시진 않으세요?&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: simple graphic showing blood sugar rising after eating white rice, 1080x1920]
+나레이터: 흰밥은 정제 탄수화물이라 섬유소가 없어 소화가 빠르고 혈당을 급격히 올립니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior woman mixing vegetables into brown rice bowl, smiling, 1080x1920]
+나레이터: 하루에 흰밥 대신 반은 현미나 잡곡밥으로 바꾸고, 식사 전 콩나물 한 줌을 드시면 혈당 상승을 완화할 수 있어요, 이렇게 실천하시면 혈당 관리에 도움이 됩니다.&정확한 진단과 치료는 전문의와 상담하세요, 그리고 오늘부터 현미밥을 반 이상 드실 분은 댓글에 '현미'라고 남겨주세요.

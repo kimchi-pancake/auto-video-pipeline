@@ -1,0 +1,33 @@
+RUN_ID:
+claude_20260821_160923_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+sad.mp3
+THUMBNAIL_LONG:
+당신설탕이혈관을망친다10g
+THUMBNAIL_SHORTS:
+당신설탕이혈관을망친다10g
+
+[SCENE:Korean senior man pouring sugar into coffee cup, close-up, 1080x1920]
+나레이터: 매일 드시는 그 설탕.&모르면 '혈관' 회복 불가합니다.
+
+[SCENE:Korean senior woman holding a tea cup with a sugar spoon, thinking, 1080x1920]
+나레이터: 커피나 차에 설탕을 한 스푼씩 넣으시는 분.&혹시 하루에 몇 잔이나 드시나요?
+
+[SCENE:illustration of sugar molecules binding to blood vessel wall showing stiffening, 1080x1920]
+나레이터: 설탕이 혈관 속 단백질과 결합해 당화산물을 만들면, 혈관이 딱딱해지고 염증이 생깁니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하시면 화면을 두 번 눌러주세요.
+
+[SCENE:Korean senior reading nutrition label on a food package, holding a stevia packet, 1080x1920]
+나레이터: 하루에 설탕 10g 이하로 줄이세요, 예를 들어 스테비아나 과일로 단맛을 내세요.&정확한 진단과 치료는 전문의와 상담하세요.
+
+[SCENE:Korean senior smiling, pointing to smartphone comment section, 1080x1920]
+나레이터: 오늘부터 설탕 대신 스테비아를 하루 2번 사용하실 분, 댓글에 숫자 '2' 남겨주세요.
