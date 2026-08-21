@@ -2140,5 +2140,65 @@
     "uploaded_at": "2026-08-20T00:04:12+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "QY7oD8YSH38",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신 흰쌀밥 매일 혈관 위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T03:27:29+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "cSYTH-1WpnQ",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "흰빵 매일드시면 당뇨위험1주",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T03:27:36+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "-TjR8pDwkK0",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "흰쌀밥 한 그릇, 당뇨 2배",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T03:31:08+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "HGgEYFJuyfw",
+    "channel": "도개",
+    "category": null,
+    "title": "claude_20260820_161116_shorts_video",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T03:31:08+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "899XrJSiLU0",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 빵 2개 드시면 당뇨 위험 2배",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T03:35:12+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ECHm8-_KMpo",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신 매일 튀김 혈관 위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-21T03:35:16+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
