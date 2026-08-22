@@ -1,0 +1,36 @@
+RUN_ID:
+claude_20260822_160248_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+당뇨관리
+CAST:
+나레이터: 나레이터
+BGM:
+sad.mp3
+THUMBNAIL_LONG:
+당신 흰밥 당뇨 3배 위험
+THUMBNAIL_SHORTS:
+당신 흰밥 당뇨 3배 위험
+
+[SCENE: Korean senior man looking at a bowl of white rice with worried expression, 1080x1920]
+나레이터: 다들 배부르니까 흰 밥 먹는 줄 아는 그거, 사실 당뇨를 부릅니다.
+
+[SCENE: Korean senior woman feeling sleepy after a meal, hand on forehead, 1080x1920]
+나레이터: 식후에 졸음이 오고 배가 부푸르시다면, 흰 밥 때문일 수 있습니다.
+
+[SCENE: Close-up of white rice grains turning into sugar cubes animation, 1080x1920]
+나레이터: 흰 밥은 정제 탄수화물이어서 소화가 빨라 혈당을 급격히 올리고,これが 인슐린 과다 분비를 불러 당뇨 위험을 높이고, 이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+나레이터: 근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 더 많은 정보를 알아보세요.
+
+[SCENE: Korean senior man swapping white rice for brown rice bowl, then walking slowly in park, 1080x1920]
+나레이터: 하루에 흰 밥 대신 현미 반 공기를 드시고, 식후 10분 가볍게 걸으세요.
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요, 오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean senior woman giving thumbs up, background kitchen, 1080x1920]
+나레이터: 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.
+나레이터: 오늘부터 흰 밥 대신 현미 반 공기 드실 분, 댓글에 '현미'라고 남겨주세요.

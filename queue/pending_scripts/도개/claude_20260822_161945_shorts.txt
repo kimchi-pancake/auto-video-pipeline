@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260822_161945_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+흰쌀밥 하루 2그릇 당뇨 경보
+THUMBNAIL_SHORTS:
+흰쌀밥 하루 2그릇 당뇨 경보
+[SCENE:Korean senior man holding a bowl of white rice, looking concerned, 1080x1920]
+나레이터: 이 것 모르면 '혈당' 이제 돌릴 수 없습니다.
+[SCENE:Korean senior woman feeling sleepy after a meal, hand on forehead, 1080x1920]
+나레이터: 식후에 졸음이 오거나 손이 떨리신 적 있나요?
+[SCENE:Close-up of white rice grains being poured into a pot, steam rising, 1080x1920]
+나레이터: 흰쌀밥은 정제 탄수화물이라 소화가 빨라 혈당을 급격히 올립니다.&근데 사실 제일 중요한 건 지금부터입니다.
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+[SCENE:Korean senior couple preparing a plate with vegetables before rice, then walking in a park, 1080x1920]
+나레이터: 식사 전 채소 반 그릇을 먼저 드시고, 식후 10분 정도 가볍게 걸어주세요.&정확한 진단과 치료는 전문의와 상담하세요.
+[SCENE:Korean senior man smiling, giving thumbs up, 1080x1920]
+나레이터: 오늘부터 식사 전 채소 먼저 드시고 댓글에 '채소'라고 남겨주시면 같이 실천해봐요.

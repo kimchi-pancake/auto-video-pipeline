@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260822_161236_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+당신, 라면 국물 절반만 드시면 혈압 위험
+THUMBNAIL_SHORTS:
+당신, 라면 국물 절반만 드시면 혈압 위험
+[SCENE: Korean senior man looking at a bowl of instant ramen with concern, 1080x1920]
+나레이터: 이거 모르면 '혈압' 절대 안 잡힙니다.
+[SCENE: Korean senior woman tapping her chin while thinking about ramen consumption, 1080x1920]
+나레이터: 지난 주에 라면 세 그릇 이상 드셨다면, 지금 이 순간에도 혈압이 오르고 있습니다.&이 증상이 익숙하신가요?
+[SCENE: illustration of sodium molecules constricting blood vessels, 1080x1920]
+나레이터: 라면 국물에 들어 있는 나트륨이 혈관을 수축시켜 혈압을 올립니다.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 방법이 궁금하시면 화면을 두 번 눌러주세요.&정확한 진단과 치료는 전문의와 상담하세요.
+[SCENE: Korean senior man pouring half of ramen broth into sink, 1080x1920]
+나레이터: 먼저, 라면 국물은 절반만 드시고 남은 국물은 버리세요.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+[SCENE: Korean senior woman pointing at smartphone comment box, 1080x1920]
+나레이터: 오늘 내용은 라면 국물 나트륨을 줄여 혈압을守る 것이 중요합니다, 오늘부터 국물 절반만 드실 분은 댓글에 '반' 남겨주세요.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.
