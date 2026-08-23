@@ -2332,5 +2332,65 @@
     "uploaded_at": "2026-08-21T16:24:58+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "HnWLYI94Rfk",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신, 라면 국물 절반만 드시면 혈압 위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-23T09:04:27+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "xx1tP8ygoU0",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 라면 혈관 망가진다 1봉",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-23T09:04:29+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "aQB8YS4TrSA",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "당신 빵 혈관 10년 늙음",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-23T09:08:28+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "bfZ2e1k1FII",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "흰빵 한조각 혈당폭등 5분 당신",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-23T09:08:37+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "tyP9QARMyl4",
+    "channel": "웃짬",
+    "category": "당뇨관리",
+    "title": "당신 흰밥 당뇨 3배 위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-23T09:09:51+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ViKesla1d5E",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "흰쌀밥 하루 2그릇 당뇨 경보",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-23T09:11:03+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
