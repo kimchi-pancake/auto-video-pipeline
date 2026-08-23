@@ -2280,8 +2280,12 @@
     "title": "당신 지금 흰쌀밥 당뇨 2배",
     "is_shorts": true,
     "uploaded_at": "2026-08-21T16:16:49+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 57,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-23T15:16:38+00:00"
   },
   {
     "video_id": "JAwPI7NMfxc",
@@ -2290,8 +2294,12 @@
     "title": "당신설탕이혈관을망친다10g",
     "is_shorts": true,
     "uploaded_at": "2026-08-21T16:18:42+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 14,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-23T15:16:38+00:00"
   },
   {
     "video_id": "ZJgDLp1arZc",
@@ -2300,8 +2308,12 @@
     "title": "당신 주3번 라면 혈관위험",
     "is_shorts": true,
     "uploaded_at": "2026-08-21T16:19:42+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 59,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-23T15:16:38+00:00"
   },
   {
     "video_id": "gn32zg0mOX0",
@@ -2310,8 +2322,12 @@
     "title": "당신,흰밥한그릇,당뇨2배",
     "is_shorts": true,
     "uploaded_at": "2026-08-21T16:21:50+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 119,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-23T15:16:38+00:00"
   },
   {
     "video_id": "zHDrPYCtk2g",
@@ -2320,8 +2336,12 @@
     "title": "당신 흰밥 당뇨 2배",
     "is_shorts": true,
     "uploaded_at": "2026-08-21T16:22:49+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 71,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-23T15:16:38+00:00"
   },
   {
     "video_id": "lvDvXLiIHho",
@@ -2330,8 +2350,12 @@
     "title": "매일 라면 혈관 위험 3번",
     "is_shorts": true,
     "uploaded_at": "2026-08-21T16:24:58+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 527,
+      "likes": 4,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-23T15:16:38+00:00"
   },
   {
     "video_id": "HnWLYI94Rfk",
