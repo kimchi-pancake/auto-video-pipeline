@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260823_161434_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+당신이것 모르면 혈압 위험3일
+THUMBNAIL_SHORTS:
+당신이것 모르면 혈압 위험3일
+[SCENE:Korean senior woman holding a processed meat pack, worried face, kitchen background, 1080x1920]
+나레이터: 이것 모르면 '혈압' '안 잡힙니다'
+[SCENE:Close-up of breakfast table with sausage, ham, coffee, Korean senior man's hand reaching for sausage, 1080x1920]
+나레이터: 아침에 소시지나 햄 한 조각을 드셔 보셨나요?
+[SCENE:Illustration showing sodium crystals sticking to blood vessels causing constriction, 1080x1920]
+나레이터: 가공육에는 나트륨과 인산염이 많아 혈관을 수축시켜 혈압을 올립니다.&근데 사실 제일 중요한 건 지금부터입니다
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요
+[SCENE:Korean senior woman preparing boiled egg and drinking water, 1080x1920]
+나레이터: 가공육 대신 삶은 계란 한 개를 드세요.&식사 전 물 한 잔을 마시면 나트륨 흡수를 줄여줍니다
+[SCENE:Korean senior woman smiling, giving thumbs up, with comment bubble icon, 1080x1920]
+나레이터: 오늘 가공육을 줄이고 물 한 잔 더 드셨다면 댓글에 'OK'를 남겨주세요, 그리고 정확한 진단과 치료는 전문의와 상담하세요
