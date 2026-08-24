@@ -2364,8 +2364,12 @@
     "title": "당신, 라면 국물 절반만 드시면 혈압 위험",
     "is_shorts": true,
     "uploaded_at": "2026-08-23T09:04:27+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 456,
+      "likes": 5,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-24T15:33:50+00:00"
   },
   {
     "video_id": "xx1tP8ygoU0",
@@ -2374,8 +2378,12 @@
     "title": "이 라면 혈관 망가진다 1봉",
     "is_shorts": true,
     "uploaded_at": "2026-08-23T09:04:29+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 248,
+      "likes": 3,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-24T15:33:50+00:00"
   },
   {
     "video_id": "aQB8YS4TrSA",
@@ -2384,8 +2392,12 @@
     "title": "당신 빵 혈관 10년 늙음",
     "is_shorts": true,
     "uploaded_at": "2026-08-23T09:08:28+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 455,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-24T15:33:50+00:00"
   },
   {
     "video_id": "bfZ2e1k1FII",
@@ -2394,8 +2406,12 @@
     "title": "흰빵 한조각 혈당폭등 5분 당신",
     "is_shorts": true,
     "uploaded_at": "2026-08-23T09:08:37+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-24T15:33:50+00:00"
   },
   {
     "video_id": "tyP9QARMyl4",
@@ -2404,8 +2420,12 @@
     "title": "당신 흰밥 당뇨 3배 위험",
     "is_shorts": true,
     "uploaded_at": "2026-08-23T09:09:51+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 307,
+      "likes": 3,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-24T15:33:50+00:00"
   },
   {
     "video_id": "ViKesla1d5E",
@@ -2414,8 +2434,12 @@
     "title": "흰쌀밥 하루 2그릇 당뇨 경보",
     "is_shorts": true,
     "uploaded_at": "2026-08-23T09:11:03+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-24T15:33:50+00:00"
   },
   {
     "video_id": "TfOUKKL8umw",
