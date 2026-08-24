@@ -7,11 +7,17 @@ API 키 기반 자동 생성 경로입니다.
 
 API 키는 프로젝트 루트의 .env 파일(NVIDIA_API_KEY=...)에서 읽습니다.
 2026-08-19: 대본 생성 전체를 Claude에서 NVIDIA(build.nvidia.com, OpenAI 호환
-API)의 nvidia/nemotron-3-super-120b-a12b로 옮겼습니다 — 실제 SHORTS_SCRIPT_PROMPT로
-비교 테스트한 결과 이 모델이 훅 공식·좋아요 유도 문구·댓글 유도 구체성을 Claude에
-가장 가깝게 따라왔습니다(다른 후보 nemotron-3.5-lightning/llama-3.3-70b는 구조
-누락·문법 오류가 있었음). 이 모델은 "생각(thinking)" 모델이라 답변 전에 내부
-추론을 하므로 max_tokens을 넉넉히(16000) 줘야 추론만 하다 잘리지 않습니다.
+API)의 nvidia/nemotron-3-super-120b-a12b로 옮겼습니다.
+2026-08-24: 위 nemotron 모델로 실제 하루치 물량을 뽑아보니 프롬프트 안 예시
+문구("근데 사실 제일 중요한 건 지금부터입니다" 등)를 토씨 하나 안 틀리고 그대로
+베껴 쓰는 문제가 반복 확인됨(퀄리티 저하 원인) — 형식은 지키지만 내용이 매번
+비슷하고 진짜 정보가 빈약함. moonshotai/kimi-k3로 같은 프롬프트를 비교 테스트한
+결과, 예시 문구를 그대로 베끼지 않고 실제 근거 있는 디테일(예: 라면 스프를 안
+넣어도 면 반죽 자체에 소금이 들어가 짜다는 사실, WHO 나트륨 권장량 수치 등)을
+채워 넣어 훨씬 나은 퀄리티가 나와 이 모델로 교체함. 대신 응답이 훨씬 길고 느려서
+(콤보 기준 ~5분) 스트리밍 없이 논스트리밍으로 호출하면 NVIDIA 게이트웨이가 응답
+도중 연결을 끊어버림("Server disconnected") — 그래서 _call_claude를 스트리밍
+호출로 바꿨습니다. max_tokens은 여전히 넉넉히(16000) 줍니다.
 
 전체 생성 파이프라인(generate_and_save):
   주제 선정(또는 custom_topic 그대로 사용)
@@ -50,12 +56,15 @@ logger = get_logger(__name__)
 
 _ENV_PATH = Path(__file__).parent.parent / ".env"
 
-# NVIDIA API 카탈로그(build.nvidia.com) 모델. 2026-08-19 실측 비교(같은
-# SHORTS_SCRIPT_PROMPT로 nemotron-3.5-lightning-30b / llama-3.3-70b-instruct /
-# nemotron-3-super-120b 세 개를 돌려봄)에서 이 모델만 훅 공식·좋아요 유도·
-# 댓글 유도 지시를 전부 정확히 따랐습니다. 속도는 20~40초로 Claude보다 느리지만
-# 무료라 이 채널 물량(하루 채널당 3개)에는 문제 없습니다.
-MODEL = "nvidia/nemotron-3-super-120b-a12b"
+# NVIDIA API 카탈로그(build.nvidia.com) 모델. 2026-08-24 실측 비교(같은
+# SHORTS_SCRIPT_PROMPT/COMBO_SCRIPT_PROMPT로 nemotron-3-super-120b /
+# nemotron-3-ultra-550b / gpt-oss-120b / kimi-k3 네 개를 돌려봄)에서 이 모델만
+# 프롬프트 안 예시 문구를 그대로 베끼지 않고 실제 근거 있는 구체적 정보를 채워
+# 넣었습니다. 속도는 훨씬 느림(쇼츠 단독 ~2분, 콤보 ~5분)이지만 무료이고 하루
+# 배치 작업이라 문제 없습니다. 응답이 길어서 논스트리밍으로 호출하면 NVIDIA
+# 게이트웨이가 도중에 연결을 끊으므로(아래 _call_claude 참고) 반드시 스트리밍으로
+# 호출해야 합니다.
+MODEL = "moonshotai/kimi-k3"
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
 # 대본을 살린 채 부족한 만큼만 늘려 쓰기(extend)"를 시도할 최대 횟수.
@@ -107,20 +116,37 @@ def _get_api_key() -> str:
 def _call_claude(prompt: str) -> str:
     """NVIDIA API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
     함수들의 공통 경로 — 함수 이름은 예전 그대로 남겨뒀습니다(호출부 5곳을
-    다 바꾸는 것보다 안전)."""
+    다 바꾸는 것보다 안전).
+
+    반드시 스트리밍(stream=True)으로 호출합니다 — kimi-k3는 콤보(롱폼+쇼츠)
+    응답이 몇 분씩 걸리는데, 논스트리밍으로 호출하면 그동안 아무 바이트도 안
+    오다가 NVIDIA 게이트웨이가 도중에 연결을 끊어버립니다(APIConnectionError:
+    "Server disconnected without sending a response", 2026-08-24 실측 확인).
+    스트리밍은 청크가 계속 흘러오니 이 문제가 없습니다."""
     import openai  # 지연 임포트: API 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
 
     key = _get_api_key()
-    client = openai.OpenAI(base_url="https://integrate.api.nvidia.com/v1", api_key=key)
+    client = openai.OpenAI(base_url="https://integrate.api.nvidia.com/v1", api_key=key, timeout=600.0)
 
     try:
-        resp = client.chat.completions.create(
+        stream = client.chat.completions.create(
             model=MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.9,
             top_p=0.95,
             max_tokens=16000,
+            stream=True,
         )
+        chunks: list[str] = []
+        finish_reason = None
+        for event in stream:
+            if not event.choices:
+                continue
+            delta = event.choices[0].delta
+            if delta and delta.content:
+                chunks.append(delta.content)
+            if event.choices[0].finish_reason:
+                finish_reason = event.choices[0].finish_reason
     except openai.AuthenticationError as e:
         raise ScriptGenerationError("API 키가 유효하지 않습니다. .env 파일의 키를 다시 확인하세요.") from e
     except openai.RateLimitError as e:
@@ -130,22 +156,17 @@ def _call_claude(prompt: str) -> str:
     except openai.APIStatusError as e:
         raise ScriptGenerationError(f"API 오류 (상태코드 {e.status_code}): {e.message}") from e
 
-    choice = resp.choices[0]
-    if choice.finish_reason == "length":
+    if finish_reason == "length":
         raise ScriptGenerationError(
             "모델이 생각(thinking)만 하다가 토큰 한도에 걸려 답변을 못 끝냈습니다. "
             "다시 시도해보세요."
         )
 
-    text = (choice.message.content or "").strip()
+    text = "".join(chunks).strip()
     if not text:
         raise ScriptGenerationError("빈 응답을 받았습니다. 다시 시도해주세요.")
 
-    usage = resp.usage
-    logger.info(
-        "NVIDIA API 호출 완료 (model=%s, input=%s, output=%s tokens)",
-        MODEL, usage.prompt_tokens if usage else "?", usage.completion_tokens if usage else "?",
-    )
+    logger.info("NVIDIA API 호출 완료 (model=%s, output=%s자)", MODEL, len(text))
     return text
 
 
