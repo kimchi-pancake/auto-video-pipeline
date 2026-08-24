@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260824_160136_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+당신 이거1컵 혈관 망가진다
+THUMBNAIL_SHORTS:
+당신 이거1컵 혈관 망가진다
+
+[SCENE:Korean senior man pouring sugary drink into glass, close-up]
+나레이터: 이거 모르면 '혈관' 이제 못 돌립니다.
+
+[SCENE:Korean senior woman looking at beverage label, doubtful expression]
+나레이터: 매일 아침에 이거 한 잔 마시고 계신가요? 이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE:illustration of blood vessel wall damaged by food additives, red highlight]
+나레이터: 이거에 들어 있는 첨가물이 혈관 벽을 서서히 손상시켜 딱딱하게 만들고, 근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 더 많은 정보를 알아보세요.
+
+[SCENE:Korean senior man drinking water, walking in park, mixing brown rice into bowl]
+나레이터: 이거 대신 물을 한 잔 마시고, 식사 후 10분 가볍게 걷고, 주 2회 식사에 현미를 섞어 드세요, 정확한 진단과 치료는 전문의와 상담하세요.
+나레이터: 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE:Korean senior woman smiling, pointing to smartphone comment section]
+나레이터: 오늘은 위험한 이거 한 잔 대신 물을 마시고 걷는 습관이 혈관을 지키는 첫걸음입니다, 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.
+나레이터: 오늘부터 이거 대신 물 한 잔을 드실 분, 댓글에 '물'이라고만 남겨주세요.

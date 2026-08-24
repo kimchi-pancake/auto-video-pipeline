@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260824_160456_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+sad.mp3
+THUMBNAIL_LONG:
+하얀빵 2조각 매일 혈당위험
+THUMBNAIL_SHORTS:
+하얀빵 2조각 매일 혈당위험
+[SCENE: close up of white bread slices on a wooden plate, 1080x1920]
+나레이터: 하얀 빵을 매일 드시는 습관, 모르면 '혈당' '회복 불가'합니다.
+[SCENE: Korean senior man holding toast with butter, looking tired after meal, 1080x1920]
+나레이터: 아침에 토스트 한 조각, 점심에 샌드위치, 간식에 빵 조각까지, 이렇게 드시고 나면 식후에 피곤하거나 졸음이 오신 적 있나요?
+[SCENE: animation showing refined carbs turning into sugar spikes in bloodstream, 1080x1920]
+나레이터: 흰 빵은 정제된 탄수화물이라 소화가 빨라 혈당을 급격히 올리고,これが 인슐린 과다 분비를 불러 insulin 저항성을 높여 당뇨 위험을 키웁니다.&근데 사실 제일 중요한 건 지금부터입니다.
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+[SCENE: Korean senior woman swapping white bread for whole grain bread with boiled egg and avocado, 1080x1920]
+나레이터: 아침에 흰 빵 대신 현미빵 두 조각과 삶은 달걀 하나, 혹은 아보카도 슬라이스를 함께 드시면 혈당 상승을 완만하게 할 수 있습니다.&정확한 진단과 치료는 전문의와 상담하세요.
+[SCENE: Korean senior couple smiling while eating healthy breakfast, 1080x1920]
+나레이터: 오늘부터 현미빵 두 조각과 단백질을 함께 드실 분, 댓글에 숫자 '2' 남겨주세요.
