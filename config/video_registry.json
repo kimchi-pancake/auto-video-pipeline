@@ -2416,5 +2416,55 @@
     "uploaded_at": "2026-08-23T09:11:03+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "TfOUKKL8umw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "매일 김치 당뇨 위험 2배",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-24T09:04:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "d8Aux6yHXXQ",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "흰쌀밥 혈당폭탄 30분,당신",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-24T09:04:56+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "-NpMJrOnF9Y",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "당신이것 모르면 혈압 위험3일",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-24T09:07:47+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "V1uVTYQJTlM",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "흰쌀밥 위험! 당신도 3가지",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-24T09:07:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "-XBLBZPkj4Q",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 빵 드시면 혈관 막힙니다, 당신 10분",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-24T09:10:12+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
