@@ -47,6 +47,13 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
+# Windows 콘솔(cp949)은 이모지/em-dash 같은 문자를 못 찍어서 print()가 그대로
+# 죽습니다(UnicodeEncodeError) — 개별 문자를 하나씩 빼는 대신 stdout/stderr
+# 자체를 UTF-8로 강제해서 이 종류의 문제를 다 없앱니다.
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
@@ -88,9 +95,9 @@ def reauthorize_one(cfg, chan: dict) -> bool:
         return False
 
     if ok and cred_path.exists():
-        print(f"[{name}] ✅ 재인증 완료 — 새 자격증명 저장됨: {cred_path}")
+        print(f"[{name}] 재인증 완료 — 새 자격증명 저장됨: {cred_path}")
         return True
-    print(f"[{name}] ❌ 재인증 실패.")
+    print(f"[{name}] 재인증 실패.")
     return False
 
 
