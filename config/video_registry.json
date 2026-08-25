@@ -2458,8 +2458,12 @@
     "title": "흰쌀밥 혈당폭탄 30분,당신",
     "is_shorts": true,
     "uploaded_at": "2026-08-24T09:04:56+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 711,
+      "likes": 2,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-25T15:36:55+00:00"
   },
   {
     "video_id": "-NpMJrOnF9Y",
@@ -2478,8 +2482,12 @@
     "title": "흰쌀밥 위험! 당신도 3가지",
     "is_shorts": true,
     "uploaded_at": "2026-08-24T09:07:57+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1002,
+      "likes": 5,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-25T15:36:55+00:00"
   },
   {
     "video_id": "-XBLBZPkj4Q",
