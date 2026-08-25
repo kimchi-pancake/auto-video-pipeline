@@ -2528,5 +2528,35 @@
     "uploaded_at": "2026-08-25T09:09:57+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "nJ_TbUifkmk",
+    "channel": "웃짬",
+    "category": "혈관혈압",
+    "title": "흰쌀밥 하루한그릇 혈관위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-25T16:13:09+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "V_uoPa5FvU0",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "과일 주스, 혈당 폭탄",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-25T16:15:50+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "FhCIayZihLk",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "흰쌀밥 한 그릇,당신 30분",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-25T16:18:26+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
