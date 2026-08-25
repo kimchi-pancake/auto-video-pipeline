@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260825_160230_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+혈관혈압
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+흰쌀밥 하루한그릇 혈관위험
+THUMBNAIL_SHORTS:
+흰쌀밥 하루한그릇 혈관위험
+[SCENE:Close-up of a steaming bowl of white rice with a red warning overlay, 1080x1920]
+나레이터: 매일 드시는 흰쌀밥을 모르면 '혈관'은 회복 불가입니다.&지금 당장 확인해야 합니다.
+[SCENE:Korean senior woman looking at her lunch plate filled with white rice, hand on chin, 1080x1920]
+나레이터: 아침, 점심, 저녁에 흰쌀밥 한 그릇씩 드시나요?
+[SCENE:Animated illustration of sugar molecules damaging blood vessel walls, 1080x1920]
+나레이터: 흰쌀밥은 정제 탄수화물이라 혈당을 급격히 올려 혈관 벽에 염증을 일으킵니다.&근데 사실 제일 중요한 건 지금부터입니다.
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 방법이 궁금하시면 화면을 두 번 눌러주세요.
+[SCENE:Korean senior man replacing white rice with brown rice in a bowl, then walking outside, 1080x1920]
+나레이터: 식사 때 흰쌀밥 반 그릇을 현미밥으로 바꾸세요.&식후 10분, 느긋하게 걷세요.&정확한 진단과 치료는 전문의와 상담하세요.
+[SCENE:Smartphone screen showing a comment box with a Korean word typed, 1080x1920]
+나레이터: 오늘 흰쌀밥 대신 현미밥 반 그릇만 바꾸면 혈관 건강을 지킬 수 있습니다.&오늘부터 실천하실 분은 댓글에 '현미'라고만 남겨주세요.

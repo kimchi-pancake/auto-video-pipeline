@@ -1,0 +1,33 @@
+RUN_ID:
+claude_20260825_160331_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+ambient_piano.mp3
+THUMBNAIL_LONG:
+과일 주스, 혈당 폭탄
+THUMBNAIL_SHORTS:
+과일 주스, 혈당 폭탄
+
+[SCENE: Korean senior man pouring fruit juice into a glass in a bright kitchen, 1080x1920]
+나레이터: 과일 주스를 모르시면 "혈당"을 절대 잡을 수 없습니다.
+
+[SCENE: Korean senior woman sitting at breakfast table, looking at a juice carton, 1080x1920]
+나레이터: 아침에 사과 주스 한 잔, 건강하다고 생각하시나요?
+
+[SCENE: Close-up of juice bottle label showing sugar content, 1080x1920]
+나레이터: 과일 주스가 혈당을 급격히 올리는 이유는 섬유질이 없기 때문입니다.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.&하지만 사실 가장 중요한 부분은 지금부터입니다.
+
+[SCENE: Korean senior man holding a whole fruit and a glass of water, 1080x1920]
+나레이터: 하루에 과일 주스는 100밀리리터 이하로 드시고, 나머지는 물이나 차로 대체하시기 바랍니다.&오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 응원해 주세요.&정확한 진단과 치료는 전문의와 상담하세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE: Korean senior couple smiling while eating sliced fruit, 1080x1920]
+나레이터: 오늘 정보가 도움이 되셨다면, 좋아요와 구독으로 다음 정보에도 함께해 주세요.&오늘부터 과일 주스 대신 통 과일을 드실 분, 댓글에 '과일'이라고 남겨주세요.

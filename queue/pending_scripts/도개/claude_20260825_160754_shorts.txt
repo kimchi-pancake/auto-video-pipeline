@@ -1,0 +1,27 @@
+RUN_ID:
+claude_20260825_160754_shorts
+
+RESOLUTION:
+1080x1920
+CATEGORY:
+위험식품
+CAST:
+나레이터: 나레이터
+BGM:
+sad.mp3
+THUMBNAIL_LONG:
+흰쌀밥 매일 드시는 분, 당뇨 위험 2배
+THUMBNAIL_SHORTS:
+흰쌀밥 매일 드시는 분, 당뇨 위험 2배
+[SCENE:Korean senior man looking at a bowl of white rice on a dining table, 1080x1920]
+나레이터: 다들 흰쌀밥이 건강한 주식인 줄 아는 그거, 사실 혈당을 급격히 올려 당뇨 위험을 높입니다.
+[SCENE:Korean senior woman serving rice at a family dinner, 1080x1920]
+나레이터: 아침·점심·저녁, 밥 한 공기 꼭 드십니까?&그러시다면 지금 당장 체크해 보셔야 합니다.
+[SCENE:Close-up animation of white rice grains turning into sugar cubes, 1080x1920]
+나레이터: 흰쌀밥은 정제 탄수화물이라 소화가 빠르고 혈당을 급격히 올립니다.&이런 급격한 혈당 상승이 반복되면 인슐린 저항성이 생겨 당뇨 위험이 커지고, 근데 사실 제일 중요한 건 지금부터입니다.
+[SCENE:Red heart icon animation pulsing and growing like a button on white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러 주셔야 합니다.
+[SCENE:Korean senior man eating a mixed rice bowl with side dishes, then walking slowly outdoors, 1080x1920]
+나레이터: 식사 전 반찬부터 먼저 드셔야 하고, 흰쌀밥은 현미 절반과 섞어 드셔야 합니다.&식후 10분 가벼운 산책으로 혈당 상승을 막으셔야 하며, 정확한 진단과 치료는 전문의와 상담하세요.
+[SCENE:Korean senior woman holding smartphone, pointing at comment section, 1080x1920]
+나레이터: 오늘부터 현미 반 섞은 밥을 드실 분, 댓글에 '현미'만 남겨 주시겠습니까?
