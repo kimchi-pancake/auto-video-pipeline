@@ -39,10 +39,10 @@ jobs:
       - name: Write secrets to config files
         env:
           CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           printf '%s' "$CONFIG_JSON" > config/config.json
-          printf 'NVIDIA_API_KEY=%s\n' "$NVIDIA_API_KEY" > .env
+          printf 'OPENROUTER_API_KEY=%s\n' "$OPENROUTER_API_KEY" > .env
           # Windows PowerShell로 등록한 시크릿에 UTF-8 BOM이 섞여 들어올 수 있어 제거
           sed -i '1s/^\xEF\xBB\xBF//' config/config.json
 

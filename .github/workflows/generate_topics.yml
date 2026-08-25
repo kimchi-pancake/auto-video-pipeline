@@ -35,8 +35,8 @@ jobs:
 
       - name: Write secrets
         env:
-          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-        run: printf 'NVIDIA_API_KEY=%s\n' "$NVIDIA_API_KEY" > .env
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: printf 'OPENROUTER_API_KEY=%s\n' "$OPENROUTER_API_KEY" > .env
 
       - name: Generate topics
         env:

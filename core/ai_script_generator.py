@@ -5,19 +5,23 @@ Claude API를 직접 호출해서 대본을 생성하고 story.txt로 저장합�
 gui/claude_panel.py의 수동(웹뷰에 붙여넣고 복사해오는) 플로우와 완전히 별개의,
 API 키 기반 자동 생성 경로입니다.
 
-API 키는 프로젝트 루트의 .env 파일(NVIDIA_API_KEY=...)에서 읽습니다.
+API 키는 프로젝트 루트의 .env 파일(OPENROUTER_API_KEY=...)에서 읽습니다.
 2026-08-19: 대본 생성 전체를 Claude에서 NVIDIA(build.nvidia.com, OpenAI 호환
 API)의 nvidia/nemotron-3-super-120b-a12b로 옮겼습니다.
 2026-08-24: 위 nemotron 모델로 실제 하루치 물량을 뽑아보니 프롬프트 안 예시
 문구("근데 사실 제일 중요한 건 지금부터입니다" 등)를 토씨 하나 안 틀리고 그대로
 베껴 쓰는 문제가 반복 확인됨(퀄리티 저하 원인) — 형식은 지키지만 내용이 매번
-비슷하고 진짜 정보가 빈약함. moonshotai/kimi-k3로 같은 프롬프트를 비교 테스트한
-결과, 예시 문구를 그대로 베끼지 않고 실제 근거 있는 디테일(예: 라면 스프를 안
-넣어도 면 반죽 자체에 소금이 들어가 짜다는 사실, WHO 나트륨 권장량 수치 등)을
-채워 넣어 훨씬 나은 퀄리티가 나와 이 모델로 교체함. 대신 응답이 훨씬 길고 느려서
-(콤보 기준 ~5분) 스트리밍 없이 논스트리밍으로 호출하면 NVIDIA 게이트웨이가 응답
-도중 연결을 끊어버림("Server disconnected") — 그래서 _call_claude를 스트리밍
-호출로 바꿨습니다. max_tokens은 여전히 넉넉히(16000) 줍니다.
+비슷하고 진짜 정보가 빈약함. moonshotai/kimi-k3(NVIDIA 카탈로그)로 같은
+프롬프트를 비교 테스트한 결과, 예시 문구를 그대로 베끼지 않고 실제 근거 있는
+디테일(예: 라면 스프를 안 넣어도 면 반죽 자체에 소금이 들어가 짜다는 사실, WHO
+나트륨 권장량 수치 등)을 채워 넣어 훨씬 나은 퀄리티가 나와 이 모델로 교체했었음.
+2026-08-26: 그럼에도 사용자 피드백으로 대본 퀄리티가 여전히 부족하다고 판단돼,
+NVIDIA 카탈로그를 벗어나 OpenRouter(openrouter.ai, OpenAI 호환 API)의
+qwen/qwen3-235b-a22b-2507(Qwen3 235B A22B Instruct 2507)로 다시 교체함 —
+사용자가 직접 발급받은 OpenRouter 키로 테스트를 지시함. max_tokens은 여전히
+넉넉히(16000) 줍니다. 응답이 길 수 있어 스트리밍 호출은 유지합니다(NVIDIA
+게이트웨이의 논스트리밍 연결 끊김 문제가 OpenRouter에도 있는지는 확인 안 됐지만,
+안전하게 유지).
 
 전체 생성 파이프라인(generate_and_save):
   주제 선정(또는 custom_topic 그대로 사용)
@@ -56,15 +60,13 @@ logger = get_logger(__name__)
 
 _ENV_PATH = Path(__file__).parent.parent / ".env"
 
-# NVIDIA API 카탈로그(build.nvidia.com) 모델. 2026-08-24 실측 비교(같은
-# SHORTS_SCRIPT_PROMPT/COMBO_SCRIPT_PROMPT로 nemotron-3-super-120b /
-# nemotron-3-ultra-550b / gpt-oss-120b / kimi-k3 네 개를 돌려봄)에서 이 모델만
-# 프롬프트 안 예시 문구를 그대로 베끼지 않고 실제 근거 있는 구체적 정보를 채워
-# 넣었습니다. 속도는 훨씬 느림(쇼츠 단독 ~2분, 콤보 ~5분)이지만 무료이고 하루
-# 배치 작업이라 문제 없습니다. 응답이 길어서 논스트리밍으로 호출하면 NVIDIA
-# 게이트웨이가 도중에 연결을 끊으므로(아래 _call_claude 참고) 반드시 스트리밍으로
-# 호출해야 합니다.
-MODEL = "moonshotai/kimi-k3"
+# OpenRouter(openrouter.ai) 모델. 2026-08-26 사용자 지시로 NVIDIA 카탈로그에서
+# OpenRouter로 공급자 자체를 교체 — kimi-k3(NVIDIA)로도 여전히 대본 퀄리티가
+# 부족하다는 피드백에 따름. 실측(shorts_script_prompt, 29초/1059자)에서 형식
+# 준수와 문장 구체성 모두 양호했음. OpenRouter는 NVIDIA 카탈로그가 아니므로
+# BASE_URL도 함께 바뀝니다(아래 _call_claude 참고).
+BASE_URL = "https://openrouter.ai/api/v1"
+MODEL = "qwen/qwen3-235b-a22b-2507"
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
 # 대본을 살린 채 부족한 만큼만 늘려 쓰기(extend)"를 시도할 최대 횟수.
@@ -104,29 +106,28 @@ class ScriptGenerationError(Exception):
 
 def _get_api_key() -> str:
     load_dotenv(_ENV_PATH)
-    key = os.environ.get("NVIDIA_API_KEY", "").strip()
+    key = os.environ.get("OPENROUTER_API_KEY", "").strip()
     if not key:
         raise ScriptGenerationError(
             f".env 파일에 API 키가 없습니다.\n{_ENV_PATH}\n"
-            "파일을 열어서 NVIDIA_API_KEY= 뒤에 build.nvidia.com에서 발급받은 키를 붙여넣으세요."
+            "파일을 열어서 OPENROUTER_API_KEY= 뒤에 openrouter.ai에서 발급받은 키를 붙여넣으세요."
         )
     return key
 
 
 def _call_claude(prompt: str) -> str:
-    """NVIDIA API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
+    """OpenRouter API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
     함수들의 공통 경로 — 함수 이름은 예전 그대로 남겨뒀습니다(호출부 5곳을
     다 바꾸는 것보다 안전).
 
-    반드시 스트리밍(stream=True)으로 호출합니다 — kimi-k3는 콤보(롱폼+쇼츠)
-    응답이 몇 분씩 걸리는데, 논스트리밍으로 호출하면 그동안 아무 바이트도 안
-    오다가 NVIDIA 게이트웨이가 도중에 연결을 끊어버립니다(APIConnectionError:
-    "Server disconnected without sending a response", 2026-08-24 실측 확인).
-    스트리밍은 청크가 계속 흘러오니 이 문제가 없습니다."""
+    스트리밍(stream=True)으로 호출합니다 — NVIDIA 게이트웨이는 논스트리밍
+    호출에서 응답이 긴 경우 도중에 연결을 끊는 문제가 있었는데(2026-08-24
+    실측), OpenRouter도 같은 문제가 있는지 확인 안 된 상태라 안전하게
+    스트리밍을 유지합니다."""
     import openai  # 지연 임포트: API 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
 
     key = _get_api_key()
-    client = openai.OpenAI(base_url="https://integrate.api.nvidia.com/v1", api_key=key, timeout=600.0)
+    client = openai.OpenAI(base_url=BASE_URL, api_key=key, timeout=600.0)
 
     try:
         stream = client.chat.completions.create(
@@ -158,15 +159,14 @@ def _call_claude(prompt: str) -> str:
 
     if finish_reason == "length":
         raise ScriptGenerationError(
-            "모델이 생각(thinking)만 하다가 토큰 한도에 걸려 답변을 못 끝냈습니다. "
-            "다시 시도해보세요."
+            "모델 응답이 토큰 한도에 걸려 끝까지 안 끝났습니다. 다시 시도해보세요."
         )
 
     text = "".join(chunks).strip()
     if not text:
         raise ScriptGenerationError("빈 응답을 받았습니다. 다시 시도해주세요.")
 
-    logger.info("NVIDIA API 호출 완료 (model=%s, output=%s자)", MODEL, len(text))
+    logger.info("OpenRouter API 호출 완료 (model=%s, output=%s자)", MODEL, len(text))
     return text
 
 
