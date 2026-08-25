@@ -2490,5 +2490,35 @@
     "uploaded_at": "2026-08-24T09:10:12+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "iMyX4on7RwQ",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "당신 이거1컵 혈관 망가진다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-25T09:04:09+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "vrhyG1-N20U",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이러시는 분, 아침 주스 한 잔 위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-25T09:07:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "I1OGiM1WAsg",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이반찬당뇨위험",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-25T09:09:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
