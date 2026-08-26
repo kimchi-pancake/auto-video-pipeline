@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260826_160358_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+"이 음료 마시면 뇌졸중 위험 커집니다"  
+
+THUMBNAIL_SHORTS:  
+"이것 마시면 뇌졸중 옵니다"  
+
+[SCENE:elderly Korean woman drinking sweet packaged juice, 1080x1920]  
+나레이터: 이거 하루 한 잔이라도 드신다면&"뇌졸중" 이제 "돌이킬 수 없습니다".  
+
+[SCENE:Korean senior couple at breakfast table with sugary drinks, 1080x1920]  
+나레이터: 아침에 시원한 과일 음료 한 잔, 기분 좋게 시작하신다 싶죠?&근데 사실 그게 뇌를 녹이고 있습니다.  
+
+[SCENE:animation of blood vessel narrowing with sugar molecules, 1080x1920]  
+나레이터: 설탕이 혈관 안에서 '당화현상'을 일으켜 혈관을 딱딱하게 만들고&혈류 흐름을 막습니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 안전한 대체법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:elderly Korean man pouring water into glass, fresh lemon slice, 1080x1920]  
+나레이터: 오늘부터는 시럽·가공 주스 대신 레몬 넣은 냉수 한 잔으로 바꾸세요.&식후 30분 안에 마시면 당 흡수를 40% 줄입니다.  
+
+[SCENE:elderly Korean woman writing in notebook with checkmarks, 1080x1920]  
+나레이터: 기억하세요&정확한 진단과 치료는 전문의와 상담하세요.&이 음료 대신 무엇을 드실지 오늘 바로 적어보셨나요? 댓글에 '바꿨다' 적어주세요.

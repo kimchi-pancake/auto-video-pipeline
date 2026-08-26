@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260826_160243_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+"이 음료, 내장 썩입니다" 지금 마시는 분?  
+
+THUMBNAIL_SHORTS:  
+"이 음료, 내장 썩입니다" 지금 마시는 분?  
+
+[SCENE: Korean senior woman drinking sweet fruit juice at breakfast table, sunlight through window, 1080x1920]  
+나레이터: 이거 드시면 내장이 썩습니다.&당장 확인해야 합니다.  
+
+[SCENE: Asian man in 60s checking stomach discomfort, close-up face showing mild pain, 1080x1920]  
+나레이터: 아침에 속이 더부룩하거나&더운 줄 알았는데 땀이 나는 분?  
+
+[SCENE: animated graphic of gut lining damage, red inflamed intestine, sugar molecules attacking, 1080x1920]  
+나레이터: 이건 단순 소화 문제 아닙니다.&과당이 장벽을 녹이고 있습니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior couple replacing juice with water and lemon slice, kitchen scene, 1080x1920]  
+나레이터: 아침 첫 한 잔, 과일주스 대신 레몬 물로 시작하세요.&하루 두 잔 이하로 줄이세요.&과일은 하루 한 컵만 드세요.  
+
+[SCENE: elderly man writing down on notebook: "No juice, lemon water", 1080x1920]  
+나레이터: 오늘부터 과일주스 끊는 분,&댓글에 '끊는다'라고만 남겨주세요.&정확한 진단과 치료는 전문의와 상담하세요.
