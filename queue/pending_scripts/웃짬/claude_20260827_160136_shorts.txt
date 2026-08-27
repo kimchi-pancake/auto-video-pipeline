@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260827_160136_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뇌가 녹습니다  
+
+THUMBNAIL_SHORTS:  
+이거 드시면 치매 위험 3배  
+
+[SCENE: Korean senior couple eating fried dumplings at home, close-up on pan with oil smoke, 1080x1920]  
+나레이터: 매일 드시는 이 음식, 뇌를 서서히 녹이고 있습니다&이제 돌이킬 수 없습니다.  
+
+[SCENE: elderly Korean woman rubbing her temple while looking confused, sitting on couch, 1080x1920]  
+나레이터: 최근 자주 헷갈리고, 말을 잊어버리신다 싶으셨다면&이미 신호일 수 있습니다.  
+
+[SCENE: side-by-side comparison of fresh vs. reused cooking oil in pot, 1080x1920]  
+나레이터: 반복해서 사용하는 식용유에서 독성 물질이 생기며&뇌 손상과 치매 위험을 키웁니다&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: elderly man pouring fresh oil into pan, separating fried food with chopsticks, 1080x1920]  
+나레이터: 오늘부터 기름은 한 번만 사용하세요&튀긴 후엔 바로 버리고, 새 기름으로 갈아 주세요&하루에 기름진 음식은 한 끼로 줄이세요.  
+
+[SCENE: elderly woman writing down '1' on sticky note, smiling with relief, 1080x1920]  
+나레이터: 반복된 기름은 뇌를 망칩니다&지금 멈추는 것만으로도 손상은 막을 수 있습니다&정확한 진단과 치료는 전문의와 상담하세요&이걸 오늘 처음 알았다고 하시는 분, 댓글에 '몰랐다'만 남겨주세요.

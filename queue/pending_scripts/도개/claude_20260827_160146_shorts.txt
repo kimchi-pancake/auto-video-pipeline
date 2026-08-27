@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260827_160146_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 과일 주스 마시면 노화 2배 빨라져요  
+
+THUMBNAIL_SHORTS:  
+이 주스 마시면 피부 점 점 늘어요  
+
+[SCENE: Asian senior woman drinking fruit juice at breakfast table, close-up on glass, 1080x1920]  
+나레이터: 이 과일 주스, 매일 드신다면 피부와 혈관이 하루아침에 늙고 있습니다.&이제 돌이킬 수 없습니다.  
+
+[SCENE: Korean woman looking at mirror touching age spots on face, 1080x1920]  
+나레이터: 얼굴에 점이 늘어나시거나 피부 탄력 떨어지신 적 있으신가요?&입 안은 건조하고 잔주름 생기셨나요?  
+
+[SCENE: animation of sugar molecules attacking collagen fibers in skin, red warning signs, 1080x1920]  
+나레이터: 과일 주스에는 설탕이 통조림 음료보다 더 많습니다.&당분이 피부 콜라겐을 녹이며 노화를 가속시킵니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: elderly Korean couple swapping fruit juice for sliced apples and water, 1080x1920]  
+나레이터: 과일은 꼭 씹어 드세요.&하루 한 컵 이상 주스는 이제 끊으세요.&식후 30분 내 물 한 잔씩 추가로 드시면 당 흡수를 늦출 수 있습니다.  
+
+[SCENE: elderly woman smiling while eating apple, text overlay: "정확한 진단과 치료는 전문의와 상담하세요"]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&오늘부터 과일 주스 대신 씹는 과일 드시는 분, 댓글에 '1잔 끊기'라고만 남겨주세요.
