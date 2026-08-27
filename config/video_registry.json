@@ -2646,5 +2646,65 @@
     "uploaded_at": "2026-08-27T09:11:35+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "3ZQ5uSJKXhQ",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T16:08:17+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "_Db8dz51tEE",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "\"이 음식 드시면 뇌가 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T16:08:30+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "AicXymgKd_o",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이 음식 드시면 뼈가 녹습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T16:11:39+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "rZ6vbP68scA",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T16:11:59+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "x8nbQ8fgpdo",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 과일 주스 마시면 노화 2배 빨라져요",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T16:14:59+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "xcNOrEAuq1U",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T16:15:07+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
