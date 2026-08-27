@@ -2586,5 +2586,65 @@
     "uploaded_at": "2026-08-25T16:18:26+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "kMy0VXGQBSA",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 치매 옵니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T09:04:36+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "-RN15vHMdxg",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 과일 주스 마시면 당이 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T09:04:42+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "Mj0DOJw9Om4",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "\"이 음료, 내장 썩입니다\" 지금 마시는 분?",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T09:07:39+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "dZfJe5fULGs",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이 음료 마시면 뇌졸중 위험 커집니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T09:08:02+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KyXSDufgafU",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈당 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T09:11:01+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "dpHlWFLHrhw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음료 마시면 치매 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-27T09:11:35+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
