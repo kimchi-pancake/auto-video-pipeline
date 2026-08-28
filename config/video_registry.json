@@ -2574,8 +2574,12 @@
     "title": "과일 주스, 혈당 폭탄",
     "is_shorts": true,
     "uploaded_at": "2026-08-25T16:15:50+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 22,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-28T00:12:06+00:00"
   },
   {
     "video_id": "FhCIayZihLk",
@@ -2584,8 +2588,12 @@
     "title": "흰쌀밥 한 그릇,당신 30분",
     "is_shorts": true,
     "uploaded_at": "2026-08-25T16:18:26+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 49,
+      "likes": 5,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-28T00:12:06+00:00"
   },
   {
     "video_id": "kMy0VXGQBSA",
