@@ -1,0 +1,36 @@
+RUN_ID:
+claude_20260828_160102_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 뇌가 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이 음료 마시면 뇌가 썩습니다  
+
+[SCENE:elderly Korean woman drinking packaged fruit juice at breakfast table, 1080x1920]  
+나레이터: 이거 모르면 "뇌" "회복 불가"합니다.&매일 아침 드시는 그 과즙 음료가 문제입니다.  
+
+[SCENE:Korean senior couple at dining table, one checking phone, 1080x1920]  
+나레이터: 아침에 머리가 멍하고 집중 안 되신다 싶죠?&기억이 자주 날아가는 것 같으신가요?  
+
+[SCENE:animation of sugar molecules entering brain cells, red warning signs flashing, 1080x1920]  
+나레이터: 포장 과일 주스는 설탕 물보다 더 위험합니다.&혈당을 급상승시켜 뇌세포를 점점 손상시킵니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:elderly Korean man pouring fresh water into glass, 1080x1920]  
+나레이터: 오늘부터 아침엔 따뜻한 물 한 잔으로 시작하세요.&과일은 꼭 신선한 거 그대로 드시고&주스는 이제 완전히 끊어야 합니다.  
+
+[SCENE:elderly Korean woman writing in notebook, smiling, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&뇌 건강 지키는 첫걸음, 지금 시작해야 합니다.  
+오늘부터 이 습관 끊겠다 하시는 분, 댓글에 ‘끊는다’만 남겨주세요.
