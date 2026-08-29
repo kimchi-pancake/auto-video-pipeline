@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20260829_160147_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이것 드시면 내장이 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이것만 먹어도 내장 망가집니다  
+
+[SCENE:Korean senior woman drinking orange juice from a glass at breakfast table, kitchen background, 1080x1920]  
+나레이터: 아침에 과일주스 한 잔, 건강에 좋다고 생각하셨다면&이제부터는 조심하셔야 합니다.  
+
+[SCENE:Korean senior man checking his belly in mirror, concerned expression, 1080x1920]  
+나레이터: 배가 나온다, 더부룩하다, 변비가 잦다 하시는 분&이것 때문일 수 있습니다.  
+
+[SCENE:animation of sugar molecules entering bloodstream, glowing red, 1080x1920]  
+나레이터: 과일주스에는 설탕이 20초만에 흡수돼&장벽을 약하게 만들고 염증을 키웁니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior couple preparing whole fruit salad in kitchen, 1080x1920]  
+나레이터: 오늘부터는 과일을 껍질째 갈아 드세요.&물 1컵에 한입 크기 과일 넣고 갈아 마시면 설탕 흡수를 70% 줄일 수 있습니다.  
+
+[SCENE:Korean senior man writing in a health journal, smiling, 1080x1920]  
+나레이터: 이 습관, 바로 오늘 시작하세요.&정확한 진단과 치료는 전문의와 상담하세요.  
+오늘부터 과일주스 대신 과일 그대로 드시는 분, 댓글에 '과일'이라고만 남겨주세요.

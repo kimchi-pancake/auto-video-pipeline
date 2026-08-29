@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260829_160313_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이거 매일 드시면 뇌가 녹습니다  
+
+THUMBNAIL_SHORTS:  
+이거 드시면 뇌가 녹습니다  
+
+[SCENE: Korean senior couple eating white rice with side dishes, kitchen background, 1080x1920]  
+나레이터: 백미밥 하루 세 번 드시는 분,&지금 당장 멈춰야 할 수 있습니다.  
+
+[SCENE: elderly Korean woman feeling dizzy, sitting on couch, 1080x1920]  
+나레이터: 평소에는 멀쩡하다가도&오후 세 시만 지나면 정신이 몽롱해지시나요?  
+
+[SCENE: glucose molecule animation and brain shrinkage diagram, white background, 1080x1920]  
+나레이터: 백미는 금방 혈당을 올려,&뇌 세포 하나하나를 녹여갑니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: elderly Korean man eating brown rice and vegetables, 1080x1920]  
+나레이터: 오늘부터 백미를 흰 쌀 1컵에 잡곡 2컵 비율로 바꾸세요.&밥 먹기 30분 전에 견과류 세 알만 먼저 드셔보세요.  
+
+[SCENE: elderly people typing comments on phone, split screen, white background]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이거 오늘 처음 알았다고? 댓글에 ‘몰랐다’만 남겨주세요.

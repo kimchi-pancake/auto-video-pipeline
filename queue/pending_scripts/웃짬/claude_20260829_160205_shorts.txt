@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260829_160205_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뇌가 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이거 드시면 뇌가 썩습니다  
+
+[SCENE: Korean senior couple eating fried dumplings at home, table with processed food packages, 1080x1920]  
+나레이터: 매일 드시는 이 음식, "뇌" "회복 불가"하게 만들고 있습니다&알고 드시는 건가요?  
+
+[SCENE: Korean woman in her 60s holding her head, looking confused while reading newspaper, 1080x1920]  
+나레이터: 자주 집중이 안 되고&말 하다 말을 깜빡이신다면&이제 나이 탓만은 아닙니다.  
+
+[SCENE: animation of brain with inflammation areas glowing red, fried foods and processed meats circling around, 1080x1920]  
+나레이터: 가공육과 튀긴 음식엔 산화 스트레스를 유발하는 성분이 있습니다&이게 뇌 염증을 키우고&인지 기능을 서서히 무너뜨립니다&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 해결법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean man in his 60s preparing fresh vegetables and grilled fish at kitchen counter, 1080x1920]  
+나레이터: 하루 한 끼라도 가공식 대신&신선한 채소와 등푸른생선을 선택하세요&조리 시 식용유 대신 들기름이나 올리브유를 사용하면 더 좋습니다.  
+
+[SCENE: Korean senior woman writing down grocery list, smiling, with brain health foods on table, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요&오늘부터라도 가공식 섭취를 줄이실 분&댓글에 '줄일래요'만 적어주세요.

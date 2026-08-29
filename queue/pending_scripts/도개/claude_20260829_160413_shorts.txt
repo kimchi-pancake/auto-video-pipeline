@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260829_160413_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+"이 음료 마시면 뇌가 썩습니다"  
+
+THUMBNAIL_SHORTS:  
+"이 음료, 치매 위험 2배"  
+
+[SCENE:elderly Korean woman drinking packaged fruit juice at breakfast table, kitchen background, 1080x1920]  
+나레이터: 이거 드시면 뇌가 '녹아내립니다'.&정말 이제 돌이킬 수 없습니다.  
+
+[SCENE:Korean senior couple looking concerned while reading health report, 1080x1920]  
+나레이터: 아침에 두통 오시고&기억이 자주 끊기신다면, 이 음료 때문일 수 있습니다.  
+
+[SCENE:animation of sugar molecules entering brain blood vessels, red warning icons, 1080x1920]  
+나레이터: 이 과일주스, 설탕 농도가 탄산음료보다 높습니다.&뇌혈관에 염증을 일으키고&치매 위험을 키우는 겁니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 목록이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:elderly man replacing juice with lemon water, 1080x1920]  
+나레이터: 오늘부터 아침엔 이걸로 바꾸세요.&1. 찬물에 레몬 한 조각&2. 설탕·시럽·과즙 음료 완전 차단&3. 물 마시고 30분 후에 식사 시작.  
+
+[SCENE:elderly people chatting in park, one smiling and raising glass of water, 1080x1920]  
+나레이터: 오늘 드신 과일주스 있으면&댓글에 '끊었다'라고만 적어주세요.&정확한 진단과 치료는 전문의와 상담하세요.
