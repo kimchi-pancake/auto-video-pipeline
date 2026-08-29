@@ -2762,5 +2762,65 @@
       "comments": 0
     },
     "stats_collected_at": "2026-08-28T23:49:05+00:00"
+  },
+  {
+    "video_id": "3E1nkFNe5Ic",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음료 마시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-29T09:04:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "Iti8FXYNeAE",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 먹고 혈압 오르면, 돌이킬 수 없습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-29T09:04:58+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "4Vc9qEeNlak",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뼈가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-29T09:08:40+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "QRWKMRP8To4",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음료 마시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-29T09:08:40+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "_4zJx-2A7vs",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌졸중 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-29T09:12:46+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "umzCn9kiFbo",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈당 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-29T09:12:46+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
