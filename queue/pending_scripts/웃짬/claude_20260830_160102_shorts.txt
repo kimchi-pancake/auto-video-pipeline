@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260830_160102_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뼈가 녹습니다  
+
+THUMBNAIL_SHORTS:  
+이것 먹으면 뼈가 녹습니다  
+
+[SCENE:elderly Korean woman looking at osteoporosis X-ray image with worried expression, 1080x1920]  
+나레이터: 이것 모르면 "뼈 밀도" "회복 불가"합니다.  
+
+[SCENE:Korean senior couple eating fried chicken and canned beer at home, 1080x1920]  
+나레이터: 매일 한 캔, 맥주 안주로 삼는 그 음식&뼈가 서서히 약해지고 있습니다.  
+
+[SCENE:animation of calcium leaking from bone structure, 1080x1920]  
+나레이터: 탄산음료와 맥주에는 인이 과도하게 들어있어&칼슘을 몸 밖으로 밀어냅니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 정보가 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:elderly Korean man putting down soda can and drinking water instead, 1080x1920]  
+나레이터: 오늘부터 탄산음료 대신 물 한 잔&맥주 한 캔은 반드시 끼니 후로 바꾸세요.&식후 30분 안에 우유 한 잔 마시면 칼슘 보충에 더 좋습니다.  
+
+[SCENE:elderly Korean woman writing in a journal with checklist, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이 습관 오늘부터 바꾸실 분, 댓글에 '뼈지킴'이라고만 남겨주세요.
