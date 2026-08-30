@@ -2822,5 +2822,65 @@
     "uploaded_at": "2026-08-29T09:12:46+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "6cUA2yRozY4",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈당 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-30T09:04:45+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "vMmPRsf0TfA",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈당 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-30T09:04:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "FJgUM2QifsQ",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 뇌가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-30T09:07:58+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "A-2nwm1OVqk",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이것 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-30T09:08:28+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "5IMAXoafiaw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이 음료 마시면 뇌가 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-30T09:11:11+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "mlzqDfXezKE",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-08-30T09:11:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
