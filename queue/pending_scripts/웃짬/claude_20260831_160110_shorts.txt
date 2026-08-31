@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260831_160110_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 당이 폭발합니다  
+
+THUMBNAIL_SHORTS:  
+이것 마시면 당뇨 위험 3배  
+
+[SCENE:Asian senior couple drinking sweetened fruit juice at breakfast table, kitchen background, 1080x1920]  
+나레이터: 이것이 당신의 혈당을 지금 이 순간에도 올리고 있습니다.&이제 돌이킬 수 없습니다.  
+
+[SCENE:Korean older man checking blood sugar with glucometer, worried expression, 1080x1920]  
+나레이터: 아침에 피로하고&정신이 몽롱하시다면&이것 때문일 수 있습니다.  
+
+[SCENE:glass of orange-colored sugary drink with sugar cubes pouring in, white background, 1080x1920]  
+나레이터: 과일 주스 한 잔에는 설탕 7~8티스푼이 들어갑니다.&공복에 마시면 인슐린이 폭주하며&세포가 둔해집니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior woman pouring water instead of juice into glass, morning sunlight, 1080x1920]  
+나레이터: 오늘부터는 과일 주스 대신&물 한 잔과 신선한 과일 반 조각으로 시작하세요.&출출할 땐 호두 세 알 드세요.  
+
+[SCENE:elderly Korean man writing on notebook with checklist, smiling, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&오늘부터 이 습관 바꾸실 분, 댓글에 '바꿀래요' 적어주세요.

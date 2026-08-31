@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260831_160052_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 먹는 분, 혈관 벽에 독 됩니다  
+
+THUMBNAIL_SHORTS:  
+이거 드시면, 내장이 썩습니다  
+
+[SCENE: Korean senior couple eating rice with side dishes, close-up of white rice bowl, 1080x1920]  
+나레이터: 아침에 흰밥 한 그릇 드신다면&혈관 벽이 지금 이 순간에도 손상되고 있습니다.  
+
+[SCENE: Korean senior man checking blood sugar at home, finger pricking, glucose meter display, 1080x1920]  
+나레이터: 피곤하고 입이 마르고 자주 화장실 가신다 하시면&당뇨 초기 신호일 수 있습니다.  
+
+[SCENE: animation of blood sugar spike and glycated proteins damaging blood vessel walls, red hot spots, 1080x1920]  
+나레이터: 흰쌀은 소화되며 급격히 당을 올리고&혈관 내벽에 '당화'로 염증을 만듭니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: split screen: left side white rice, right side brown rice + mixed grains + vegetables, 1080x1920]  
+나레이터: 첫째, 오늘부터 백미 대신 현미나 잡곡을 섞어 드세요.&둘째, 밥 앞에 채소 반찬 한 가지 꼭 먼저 드세요.&셋째, 한 끼에 밥은 도시락 용기 기준 젓가락으로 세 번만 덜어내세요.  
+
+[SCENE: elderly Korean woman putting down spoon, looking determined, kitchen background, 1080x1920]  
+나레이터: 오늘 정보는 "당화된 혈관" 다시 회복하기 전에 실천해야 합니다.&정확한 진단과 치료는 전문의와 상담하세요.&이 음식 조합 오늘 바로 시작하실 분, 댓글에 '지금바로' 남겨주세요.
