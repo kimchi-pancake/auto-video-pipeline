@@ -1,13 +1,7 @@
 {
   "웃짬": {
-    "computed_at": "2026-08-23T22:28:08+00:00",
+    "computed_at": "2026-08-31T00:19:29+00:00",
     "long": [
-      {
-        "category": "부부갈등",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 26.93
-      },
       {
         "category": "장건강",
         "count": 1,
@@ -59,46 +53,46 @@
         "avg_retention": 114.60999999999999
       },
       {
-        "category": "당뇨관리",
-        "count": 1,
-        "avg_views": 465.0,
-        "avg_retention": 89.7
-      },
-      {
-        "category": "손주문제",
-        "count": 2,
-        "avg_views": 518.0,
-        "avg_retention": 89.26499999999999
-      },
-      {
         "category": "고부갈등",
-        "count": 5,
-        "avg_views": 476.6,
-        "avg_retention": 88.89
+        "count": 2,
+        "avg_views": 217.5,
+        "avg_retention": 96.515
       },
       {
-        "category": "형제유산",
-        "count": 4,
-        "avg_views": 233.5,
-        "avg_retention": 56.585
+        "category": "혈관혈압",
+        "count": 1,
+        "avg_views": 89.0,
+        "avg_retention": 74.29
+      },
+      {
+        "category": "당뇨관리",
+        "count": 2,
+        "avg_views": 387.0,
+        "avg_retention": 66.855
+      },
+      {
+        "category": "위험식품",
+        "count": 20,
+        "avg_views": 256.65,
+        "avg_retention": 59.678
       },
       {
         "category": "뼈건강",
-        "count": 22,
-        "avg_views": 446.77272727272725,
-        "avg_retention": 46.38590909090909
+        "count": 20,
+        "avg_views": 491.4,
+        "avg_retention": 51.025
       },
       {
         "category": "장건강",
         "count": 11,
-        "avg_views": 445.3636363636364,
-        "avg_retention": 44.42272727272728
+        "avg_views": 445.6363636363636,
+        "avg_retention": 44.401818181818186
       },
       {
-        "category": "위험식품",
-        "count": 3,
-        "avg_views": 446.6666666666667,
-        "avg_retention": 42.98
+        "category": "관절근육",
+        "count": 4,
+        "avg_views": 466.75,
+        "avg_retention": 40.8875
       },
       {
         "category": "심장건강",
@@ -107,45 +101,39 @@
         "avg_retention": 34.410000000000004
       },
       {
-        "category": "관절근육",
-        "count": 5,
-        "avg_views": 373.0,
-        "avg_retention": 32.71
+        "category": "손주문제",
+        "count": 1,
+        "avg_views": 3.0,
+        "avg_retention": 4.67
+      },
+      {
+        "category": "형제유산",
+        "count": 4,
+        "avg_views": 1.0,
+        "avg_retention": 3.5825000000000005
       }
     ]
   },
   "도개": {
-    "computed_at": "2026-08-23T22:28:08+00:00",
+    "computed_at": "2026-08-31T00:19:30+00:00",
     "long": [
-      {
-        "category": "부부갈등",
-        "count": 1,
-        "avg_views": 3.0,
-        "avg_retention": 20.04
-      },
       {
         "category": "스트레스",
         "count": 1,
-        "avg_views": 13.0,
-        "avg_retention": 19.56
+        "avg_views": 15.0,
+        "avg_retention": 18.17
       },
       {
-        "category": "부모자식갈등",
-        "count": 2,
-        "avg_views": 18.0,
-        "avg_retention": 14.985
-      },
-      {
-        "category": "고부갈등",
+        "category": "부부갈등",
         "count": 1,
-        "avg_views": 10.0,
-        "avg_retention": 3.62
+        "avg_views": 4.0,
+        "avg_retention": 16.14
       },
       {
         "category": "손주문제",
         "count": 1,
         "avg_views": 1.0,
-        "avg_retention": 0.83
+        "avg_retention": 5.03
       },
       {
         "category": "장건강",
@@ -158,38 +146,56 @@
       {
         "category": "부모부양",
         "count": 1,
-        "avg_views": 9.0,
+        "avg_views": 5.0,
         "avg_retention": 497.6
+      },
+      {
+        "category": "부모자식갈등",
+        "count": 1,
+        "avg_views": 2.0,
+        "avg_retention": 137.88
       },
       {
         "category": "고부갈등",
         "count": 5,
-        "avg_views": 681.8,
-        "avg_retention": 138.778
-      },
-      {
-        "category": "부모자식갈등",
-        "count": 3,
-        "avg_views": 1162.3333333333333,
-        "avg_retention": 103.61666666666667
-      },
-      {
-        "category": "손주문제",
-        "count": 2,
-        "avg_views": 2.5,
-        "avg_retention": 70.07
+        "avg_views": 98.8,
+        "avg_retention": 128.036
       },
       {
         "category": "위험식품",
-        "count": 2,
-        "avg_views": 281.0,
-        "avg_retention": 65.04999999999998
+        "count": 15,
+        "avg_views": 265.93333333333334,
+        "avg_retention": 122.62933333333334
+      },
+      {
+        "category": "손주문제",
+        "count": 1,
+        "avg_views": 2.0,
+        "avg_retention": 103.78
+      },
+      {
+        "category": "형제유산",
+        "count": 1,
+        "avg_views": 2.0,
+        "avg_retention": 103.05
+      },
+      {
+        "category": "부부갈등",
+        "count": 1,
+        "avg_views": 582.0,
+        "avg_retention": 88.07
       },
       {
         "category": "장건강",
         "count": 6,
-        "avg_views": 424.8333333333333,
-        "avg_retention": 61.73166666666666
+        "avg_views": 423.8333333333333,
+        "avg_retention": 61.76166666666666
+      },
+      {
+        "category": "관절근육",
+        "count": 4,
+        "avg_views": 439.25,
+        "avg_retention": 61.6875
       },
       {
         "category": "뼈건강",
@@ -198,22 +204,16 @@
         "avg_retention": 56.231874999999995
       },
       {
-        "category": "혈관혈압",
+        "category": "당뇨관리",
         "count": 1,
-        "avg_views": 750.0,
-        "avg_retention": 55.37
+        "avg_views": 116.0,
+        "avg_retention": 54.2
       },
       {
-        "category": "관절근육",
-        "count": 5,
-        "avg_views": 351.4,
-        "avg_retention": 49.35
-      },
-      {
-        "category": "부부갈등",
+        "category": "혈관혈압",
         "count": 2,
-        "avg_views": 292.0,
-        "avg_retention": 44.035
+        "avg_views": 639.0,
+        "avg_retention": 54.05
       },
       {
         "category": "미분류",
@@ -226,12 +226,6 @@
         "count": 1,
         "avg_views": 445.0,
         "avg_retention": 30.519999999999996
-      },
-      {
-        "category": "형제유산",
-        "count": 3,
-        "avg_views": 3.0,
-        "avg_retention": 27.293333333333333
       }
     ]
   }
