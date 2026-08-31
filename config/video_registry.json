@@ -2854,8 +2854,12 @@
     "title": "이 음식 먹으면 혈당 폭발합니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-30T09:04:45+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 202,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-31T20:35:35+00:00"
   },
   {
     "video_id": "vMmPRsf0TfA",
@@ -2864,8 +2868,12 @@
     "title": "이 음식 먹으면 혈당 폭발합니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-30T09:04:54+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 256,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-31T20:35:35+00:00"
   },
   {
     "video_id": "FJgUM2QifsQ",
@@ -2874,8 +2882,12 @@
     "title": "이거 매일 드시면 뇌가 녹습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-30T09:07:58+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 3,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-31T20:35:35+00:00"
   },
   {
     "video_id": "A-2nwm1OVqk",
@@ -2884,8 +2896,12 @@
     "title": "이것 드시면 내장이 썩습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-30T09:08:28+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-31T20:35:35+00:00"
   },
   {
     "video_id": "5IMAXoafiaw",
@@ -2894,8 +2910,12 @@
     "title": "\"이 음료 마시면 뇌가 썩습니다\"",
     "is_shorts": true,
     "uploaded_at": "2026-08-30T09:11:11+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 2,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-31T20:35:35+00:00"
   },
   {
     "video_id": "mlzqDfXezKE",
@@ -2904,8 +2924,12 @@
     "title": "이 음식 드시면 뇌가 썩습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-30T09:11:49+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 62,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-08-31T20:35:35+00:00"
   },
   {
     "video_id": "NX2DDhuFkz0",
