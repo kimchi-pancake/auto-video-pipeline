@@ -2938,8 +2938,12 @@
     "title": "이 음료 마시면 뇌가 썩습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-31T09:02:46+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 3,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-01T18:06:19+00:00"
   },
   {
     "video_id": "Wd_bNNvDCfc",
@@ -2948,8 +2952,12 @@
     "title": "이 음식 드시면 뼈가 녹습니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-31T09:04:07+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 74,
+      "likes": 2,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-01T18:06:19+00:00"
   },
   {
     "video_id": "JTuaGdkAApY",
@@ -2958,8 +2966,12 @@
     "title": "이 음식 먹으면 \"혈관\" \"다 망칩니다\"",
     "is_shorts": true,
     "uploaded_at": "2026-08-31T09:05:17+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 97,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-01T18:06:19+00:00"
   },
   {
     "video_id": "CrNRkMqHPOA",
@@ -2968,8 +2980,12 @@
     "title": "이 음식 드시면 \"장\" 점막 다 망칩니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-31T09:06:41+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 192,
+      "likes": 1,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-01T18:06:19+00:00"
   },
   {
     "video_id": "0BAdG8d1OEw",
@@ -2978,8 +2994,12 @@
     "title": "이 과일 주스 마시면 당이 폭발합니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-31T09:07:51+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 76,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-01T18:06:19+00:00"
   },
   {
     "video_id": "ykZ61P8AmVE",
@@ -2988,8 +3008,12 @@
     "title": "이 과일, 당뇨 위험 3배 됩니다",
     "is_shorts": true,
     "uploaded_at": "2026-08-31T09:09:08+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 1,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-01T18:06:19+00:00"
   },
   {
     "video_id": "y04tyO6qcTw",
