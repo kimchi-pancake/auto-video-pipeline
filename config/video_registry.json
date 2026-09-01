@@ -2990,5 +2990,35 @@
     "uploaded_at": "2026-08-31T09:09:08+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "y04tyO6qcTw",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹는 분, 혈관 벽에 독 됩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-01T09:05:03+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "5iUm3ENwGtI",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-01T09:07:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "xQKxUcFHuBQ",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음료 마시면 당이 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-01T09:10:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
