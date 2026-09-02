@@ -66,3 +66,19 @@ jobs:
           git diff --staged --quiet || git commit -m "queue daily scripts for assembly [skip ci]"
           git pull --rebase --autostash
           git push
+
+      # 2026-08-26: Worker가 "이미지 생성 끝날 때마다" 조립을 트리거하던 방식은
+      # 경쟁 상태(race condition)가 있었습니다 — 채널당 대본 3개 중 첫 번째
+      # 것의 이미지가 (NVIDIA로 빨라진 뒤로는) 몇 초~몇십 초 만에 다 그려져서,
+      # 나머지 대본들이 이 큐 커밋에 반영되기도 전에 조립이 트리거되고, 그
+      # 시점의 git 상태엔 큐가 비어 있어서 "처리할 파일 없음"으로 조용히
+      # 헛돌고 끝나버리는 사고가 실측으로 확인됐습니다(대본은 정상 생성되고
+      # 이미지도 다 그려졌는데 업로드가 하나도 안 됨). 큐 커밋+푸시가 확실히
+      # 끝난 이 시점에만 조립을 트리거해야 이 경쟁 상태가 원천적으로 없습니다
+      # — Worker 쪽 트리거는 제거했고, 이게 유일한 트리거입니다(안전망 cron은
+      # 그대로 둠).
+      - name: Trigger assembly now that the queue is safely committed
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run assemble_daily.yml --repo "${{ github.repository }}"

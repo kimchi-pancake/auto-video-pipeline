@@ -807,16 +807,14 @@ async function generateSceneImages(env, runId, scenes) {
     const batch = scenes.slice(i, i + _IMAGE_CONCURRENCY);
     await Promise.all(batch.map((scene) => _generateOneScene(env, runId, scene)));
   }
-
-  // 대본 하나(run_id 하나)의 이미지가 다 끝날 때마다 곧바로 조립 워크플로우를
-  // 깨워봅니다 — 채널당 하루 3편이라 이 함수가 여러 번 불리는데, idle-guard
-  // (findActiveRun) 덕분에 이미 조립이 돌고 있으면 그냥 스킵되고, 마지막
-  // run_id가 끝났을 때 비로소 실제로 새로 트리거됩니다(2026-08-04).
-  try {
-    await triggerAssembleIfIdle(env);
-  } catch (e) {
-    console.log(`[image-gen] assemble 트리거 실패(무시, 안전망 cron이 나중에 처리함): ${e.message}`);
-  }
+  // 2026-08-26: 예전엔 여기서 이미지 다 끝날 때마다 조립을 바로 트리거했는데,
+  // NVIDIA로 이미지 생성이 훨씬 빨라진 뒤로 채널당 대본 3개 중 첫 번째 것의
+  // 이미지가 (몇 초~몇십 초 만에) 나머지 대본이 큐에 커밋되기도 전에 다
+  // 끝나버리는 경쟁 상태가 생겼습니다 — 그 시점에 조립이 트리거되면 git엔
+  // 아직 큐가 비어 있어서 "처리할 파일 없음"으로 조용히 헛돌고 끝나(대본도
+  // 이미지도 다 준비됐는데 업로드가 통째로 스킵되는 사고). 대본 생성 워크플로우
+  // (daily.yml) 자체가 큐 커밋+푸시를 확실히 끝낸 뒤에만 조립을 트리거하도록
+  // 옮겼습니다 — 여기서는 더 이상 트리거하지 않습니다(안전망 cron은 그대로).
 }
 
 function json(obj) {
