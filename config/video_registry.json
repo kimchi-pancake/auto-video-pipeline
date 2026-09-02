@@ -3022,8 +3022,12 @@
     "title": "이 음식 먹는 분, 혈관 벽에 독 됩니다",
     "is_shorts": true,
     "uploaded_at": "2026-09-01T09:05:03+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-02T18:21:46+00:00"
   },
   {
     "video_id": "5iUm3ENwGtI",
@@ -3032,8 +3036,12 @@
     "title": "이 음식 드시면 뇌가 녹습니다",
     "is_shorts": true,
     "uploaded_at": "2026-09-01T09:07:57+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-02T18:21:46+00:00"
   },
   {
     "video_id": "xQKxUcFHuBQ",
@@ -3042,7 +3050,11 @@
     "title": "이 음료 마시면 당이 폭발합니다",
     "is_shorts": true,
     "uploaded_at": "2026-09-01T09:10:54+00:00",
-    "stats": null,
-    "stats_collected_at": null
+    "stats": {
+      "views": 216,
+      "likes": 0,
+      "comments": 0
+    },
+    "stats_collected_at": "2026-09-02T18:21:46+00:00"
   }
 ]
