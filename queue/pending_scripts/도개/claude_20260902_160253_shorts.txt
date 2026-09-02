@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260902_160253_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 노화가 2배로 빨라집니다  
+
+THUMBNAIL_SHORTS:  
+이것 마시면 피부 노화 2배 빨라집니다  
+
+[SCENE:Korean senior woman drinking bottled fruit juice at breakfast table, 1080x1920]  
+나레이터: 아침에 과일 주스 한 잔, 건강에 좋다면서 드시죠?&이것이 당신의 노화 속도를 두 배로 만듭니다.  
+
+[SCENE:Korean senior couple looking at mirror, one touching face wrinkles, 1080x1920]  
+나레이터: 요즘 거울 볼 때 피부가 탄력을 잃은 것 같고&자주 피로함을 느끼시는 분, 이것 때문일 수 있습니다.  
+
+[SCENE:animation of sugar molecules attaching to collagen fibers, skin aging process, 1080x1920]  
+나레이터: 과일 주스의 농축 당이 피부 콜라겐을 '당화'시키며 노화를 가속합니다.&근데 사실, 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방어법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior woman cutting fresh apples and putting in water, 1080x1920]  
+나레이터: 오늘부터는 과일을 껍질째 썰어 물에 우려 마시고&당분 섭취는 하루 한 컵 이내로 줄이세요.  
+
+[SCENE:Korean senior woman smiling while drinking infused water, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이걸 오늘 처음 알았다고 하시는 분, 댓글에 '몰랐다'만 남겨주세요.

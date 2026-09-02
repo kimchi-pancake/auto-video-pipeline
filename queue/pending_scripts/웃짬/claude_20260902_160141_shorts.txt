@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260902_160141_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 혈관이 곧 망가집니다  
+
+THUMBNAIL_SHORTS:  
+이거 매일 드시면 혈관 이미 늦었을 수도  
+
+[SCENE: Korean senior couple eating white rice with side dishes, close-up on steaming bowl of rice, 1080x1920]  
+나레이터: 하루 세 끼 드시는 이 흰밥, 혈관을 점점 '굳게' 만들고 있습니다.&이제 돌이킬 수 없습니다.  
+
+[SCENE: Korean man checking blood pressure at home, looking concerned, 1080x1920]  
+나레이터: 피곤하고 어지러우신 날이 잦아지셨나요?&머리가 맑지 않으신가요?&이것이 다 흰밥과 연결돼 있습니다.  
+
+[SCENE: animation of blood vessel with sticky sugar residue building up, red warning pulse, 1080x1920]  
+나레이터: 흰밥은 금방 소화돼 혈당을 폭등시키고, 혈관 안에 당화물질이 쌓입니다.&이걸 모르고 계속 드시면 '혈관' '노화'가 가속됩니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean woman replacing white rice with barley rice in kitchen, mixing grains, 1080x1920]  
+나레이터: 오늘부터 밥에 현미나 보리를 섞어 드세요.&적어도 30%는 잡곡으로 대체하면 혈당 상승을 크게 줄일 수 있습니다.&하루 한 끼라도 이렇게 바꾸는 것만으로도 충분합니다.  
+
+[SCENE: elderly man walking outdoors, smiling, with checklist animation floating: “잡곡밥”, “물 2잔”, “산책 10분”, 1080x1920]  
+나레이터: 작은 습관 하나가 혈관 나이를 되돌릴 수 있습니다.&정확한 진단과 치료는 전문의와 상담하세요.&이제 드실 밥, 다시 생각해 보시겠어요?  
+
+[SCENE: comment prompt screen with text: “잡곡밥 시작할 분, 댓글에 ‘시작’ 입력!”]  
+나레이터: 오늘부터 잡곡밥 드실 분, 댓글에 ‘시작’만 남겨주세요.

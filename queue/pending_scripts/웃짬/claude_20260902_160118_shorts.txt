@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260902_160118_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이거 매일 드시면 뼈가 녹습니다  
+
+THUMBNAIL_SHORTS:  
+이거 매일 드시면 뼈가 녹습니다  
+
+[SCENE: Korean senior woman drinking cola at dining table, close-up of can and aging hands, 1080x1920]  
+나레이터: 이 음료 마시는 습관, 뼈가 "녹아내리고" 있습니다&이제 돌이킬 수 없습니다.  
+
+[SCENE: Korean senior couple walking slowly in park, woman slightly hunched, 1080x1920]  
+나레이터: 허리가 자주 결리시고&걷다 발목 삐끗하셨다면, 뼈밀도 위기信號입니다.  
+
+[SCENE: animated cross-section of bone showing porous structure, red warning flashes, 1080x1920]  
+나레이터: 탄산음료 속 인산이 칼슘을 빼앗아 갑니다&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior man placing cola can in trash bin, switching to glass of milk and yogurt, 1080x1920]  
+나레이터: 하루 한 캔이라도 줄이고&칼슘 보충은 아침 식사 때 우유나 두유로 시작하세요&전문의 상담 없이 약 복용은 피하세요.  
+
+[SCENE: elderly Korean woman doing gentle balance exercise near wall, smiling, 1080x1920]  
+나레이터: 오늘부터 탄산 끊고 뼈 지키기 시작하신 분&댓글에 ‘지금’이라고만 적어주세요.
