@@ -2,8 +2,11 @@ name: Collect Video Stats
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 15 * * *" # 매일 00:00 KST(UTC+9) = 전날 15:00 UTC
+  # 2026-09-02: 사용자 요청으로 자동 수집(매일 00:00 KST) 중단. 필요하면
+  # workflow_dispatch로 수동 실행은 여전히 가능. 다시 켜려면 아래 주석을
+  # 풀면 됨:
+  # schedule:
+  #   - cron: "0 15 * * *" # 매일 00:00 KST(UTC+9) = 전날 15:00 UTC
 
 permissions:
   contents: write
