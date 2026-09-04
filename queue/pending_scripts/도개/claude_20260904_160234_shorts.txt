@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260904_160234_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이것 드시면 내장이 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이것 드시면 내장이 썩습니다  
+
+[SCENE: Korean senior woman holding white rice bowl with steam rising, kitchen background, 1080x1920]  
+나레이터: 흰밥 한 그릇이&당신의 장을 서서히 망가뜨리고 있습니다.  
+
+[SCENE: Korean senior couple eating lunch at table, looking tired, 1080x1920]  
+나레이터: 점심 후 졸리고&배는 불룩하며&화장실 가기 불편하시죠?  
+
+[SCENE: close-up of white rice turning into gel-like sticky substance in slow motion, 1080x1920]  
+나레이터: 흰밥은 소화되면서 찐득한 덩어리가 됩니다.&이게 장 벽에 달라붙어 염증을 만듭니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은&화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior man adding brown rice and vegetables to rice bowl, 1080x1920]  
+나레이터: 오늘 저녁부터 밥에 현미를 섞어 드세요.&하루 한 끼라도 꼭 채소를 곁들여 드세요.&물을 식사 30분 전에 한 잔 마셔주면 장이 깨끗해집니다.  
+
+[SCENE: elderly Korean man smiling, pointing at camera, kitchen background]  
+나레이터: 흰밥이 장 건강의 적이라는 사실을 아는 것만으로도 큰 변화입니다.&정확한 진단과 치료는 전문의와 상담하세요.&이제부터라도 바꾸실 분, 댓글에 '지금부터'라고 적어주세요.

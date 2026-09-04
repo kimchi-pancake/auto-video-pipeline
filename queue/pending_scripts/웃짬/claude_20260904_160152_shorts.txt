@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260904_160152_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뇌가 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이 음식 먹으면 뇌가 썩습니다  
+
+[SCENE: Korean senior woman pouring instant noodle soup into bowl, close-up on seasoning packet, 1080x1920]  
+나레이터: 이 음식 드시면 "뇌" "회복 불가"합니다&매일 드시는 그 인스턴트 스프입니다.  
+
+[SCENE: Korean senior man eating instant noodles late at night, dim lighting, 1080x1920]  
+나레이터: 자주 두통 오시죠&기억이 자주 날아가시는 분&이 습관과 관련 있을 수 있습니다.  
+
+[SCENE: animation of brain with inflammation signs, red glowing spots, dark background, 1080x1920]  
+나레이터: 인스턴트 스프에는 글루탐산나트륨과 과도한 나트륨이 있습니다&뇌 속 염증을 키우고&신경세포를 서서히 손상시킵니다&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대체법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior woman adding garlic, green onion, dried seaweed to homemade broth in pot, 1080x1920]  
+나레이터: 스프는 버리고 끓인 국물로&다진 마늘과 깨소금으로 간 맞추기&하루 한 끼라도 이렇게 바꾸세요.  
+
+[SCENE: elderly couple smiling, eating noodles from ceramic bowl, natural light, 1080x1920]  
+나레이터: 이 한 습관이 뇌 건강의 시작입니다&정확한 진단과 치료는 전문의와 상담하세요&오늘부터 스프 버리시는 분&댓글에 '버린다' 적어주세요.
