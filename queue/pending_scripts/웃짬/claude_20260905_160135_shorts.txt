@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260905_160135_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뼈가 부서집니다  
+
+THUMBNAIL_SHORTS:  
+이거 먹는 분, 뼈 위험합니다  
+
+[SCENE: Korean senior woman holding a bowl of instant ramen, kitchen background, 1080x1920]  
+나레이터: 이 음식 드시면 "뼈" "부서질 수 있습니다".  
+
+[SCENE: Korean senior man reading medicine instructions, living room, 1080x1920]  
+나레이터: 하루 한 끼라도 라면 드시는 분&이제 골다공증 신경 쓰셔야 할 때입니다.  
+
+[SCENE: animation of calcium leaking from bone structure, white background, 1080x1920]  
+나레이터: 라면 속 과도한 나트륨이 뼈에서 칼슘을 빼내고 있습니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 해결법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior couple cooking vegetables in kitchen, 1080x1920]  
+나레이터: 매일 라면 한 줄이라도 드신다면&즉시 국물은 버리고 반숙 계란 하나 넣어 드세요.&또 하루 두 끼는 된장국 대신 미역국으로 바꾸세요.  
+
+[SCENE: elderly Korean woman walking confidently outdoors, 1080x1920]  
+나레이터: 오늘 알려드린 방법만 실천해도 뼈 손실을 막을 수 있습니다.&정확한 진단과 치료는 전문의와 상담하세요.&이제부터 라면 국물 버리실 분, 댓글에 '버린다'라고만 남겨주세요.

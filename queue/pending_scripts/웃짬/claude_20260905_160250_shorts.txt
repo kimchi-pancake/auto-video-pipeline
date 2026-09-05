@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260905_160250_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 뇌졸중 위험 커집니다  
+
+THUMBNAIL_SHORTS:  
+이거 마시면 혈관 다 망칩니다  
+
+[SCENE:Korean senior woman drinking fruit juice at breakfast table, close-up on glass, 1080x1920]  
+나레이터: 과일 주스 한 잔이&당신의 뇌졸중 위험을 지금 이 순간에도 높이고 있습니다.  
+
+[SCENE:Korean senior man checking blood pressure at home, confused expression, 1080x1920]  
+나레이터: 아침마다 과일 주스 드신다구요?&혈압이 잘 안 잡히시는 분들 많습니다.  
+
+[SCENE:animation of sugar molecules entering bloodstream and sticking to blood vessel walls, red warning glow, 1080x1920]  
+나레이터: 과일 주스에는 설탕이 탄산음료보다 많고&혈관 벽을 손상시키는 당화현상이 일어납니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior woman pouring fruit juice into sink and slicing fresh fruit instead, 1080x1920]  
+나레이터: 오늘부터 주스 대신&신선한 과일 한 조각 드세요.&물 한 컵에 간식용으로 섞는 것도 방법입니다.  
+
+[SCENE:elderly couple walking in park, smiling, holding water bottles, text overlay "전문의와 상담하세요", 1080x1920]  
+나레이터: 혈관 건강은 작은 습관에서 시작됩니다.&정확한 진단과 치료는 전문의와 상담하세요.&이거 오늘 처음 알았다고 느끼신 분, 댓글에 '몰랐다'만 남겨주세요.

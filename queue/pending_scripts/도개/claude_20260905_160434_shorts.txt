@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260905_160434_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 당이 폭발합니다  
+
+THUMBNAIL_SHORTS:  
+당 오르는 이 음료, 지금 멈춰라  
+
+[SCENE:elderly Korean woman drinking a glass of fruit juice at breakfast table, 1080x1920]  
+나레이터: 아침에 과일주스 한 잔&혈당 폭탄을 마시는 것과 같습니다.  
+
+[SCENE:close-up of sugar crystals pouring into a glass, 1080x1920]  
+나레이터: 속이 더부룩하거나 자주 배고프신 적 있나요&이건 단순한 배고픔이 아닙니다.  
+
+[SCENE:animation of blood sugar spike on a line graph, red warning flash, 1080x1920]  
+나레이터: 과즙에는 섬유질 없이 순수 당분만 남아 있습니다&이거 매일 드시면 인슐린 기관이 망가집니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대체법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:elderly Korean man swapping fruit juice for whole orange and water, 1080x1920]  
+나레이터: 과일은 꼭 씹어 드세요&하루 한 컵도 주스로 마시지 마세요&물에 레몬 한 조각 넣어 드시면 됩니다.  
+
+[SCENE:elderly couple looking at camera with hopeful expression, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&오늘부터 과일주스 대신 통째로 드실 분, 댓글에 '먹을래'라고만 남겨주세요.

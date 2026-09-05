@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260905_160727_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뇌졸중 위험 커집니다  
+
+THUMBNAIL_SHORTS:  
+이 음식 먹으면 혈관 막힙니다  
+
+[SCENE:Korean senior couple eating white rice and side dishes at home, dining table, close-up of polished white rice in bowl, 1080x1920]  
+나레이터: 흰쌀밥, 매일 드시면 “혈관” “회복 불가”합니다.  
+
+[SCENE:Korean senior woman checking blood pressure at home, wrist monitor, worried expression, 1080x1920]  
+나레이터: 아침마다 뻐근한 두통, 어지러움 있으신가요?&그거 단순 스트레스가 아닐 수 있습니다.  
+
+[SCENE:animation of blood vessels narrowing, sugar spikes on graph, red warning signs, 1080x1920]  
+나레이터: 흰쌀은 금방 혈당을 올리고&혈관 내벽을 손상시키는 ‘당화현상’을 가속합니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior man adding brown rice to pot, mixing with black beans and barley, 1080x1920]  
+나레이터: 오늘부터 밥을 흰쌀 1에 잡곡 2 비율로 바꾸세요.&아침에 물 한 잔 마시고 10분 뒤에 식사하세요.  
+
+[SCENE:elderly hand writing comment on phone, screen showing comment box, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이걸 오늘 처음 알았다는 분, 댓글에 ‘몰랐다’만 남겨주세요.

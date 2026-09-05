@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260905_160420_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 뇌가 녹습니다  
+
+THUMBNAIL_SHORTS:  
+이 음료 마시면 뇌가 녹습니다  
+
+[SCENE:Korean senior couple drinking fruit juice at breakfast table, 1080x1920]  
+나레이터: 이거 아침마다 드신다면&"뇌" 이미 "녹고 있습니다".  
+
+[SCENE:Korean senior man looking confused while holding fruit juice bottle, 1080x1920]  
+나레이터: 기분 좋고 상큼하다고&과일주스 매일 드시는 분들 많습니다.  
+
+[SCENE:Korean senior woman checking blood sugar with glucometer, 1080x1920]  
+나레이터: 하루 한 잔도&당화현상으로 뇌세포가 손상됩니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior man pouring water instead of juice, 1080x1920]  
+나레이터: 오늘부터 아침엔 물 한 잔과&과일은 통째로 먹으세요.&정확한 진단과 치료는 전문의와 상담하세요.  
+
+[SCENE:comment prompt text on screen with white background, 1080x1920]  
+나레이터: 과일주스 매일 드시는 분, 댓글에 '1잔'이라고만 남겨주세요.
