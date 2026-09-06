@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260906_160217_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이거 매일 드시면 내장이 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이거 매일 드시면 내장이 썩습니다  
+
+[SCENE: Korean senior woman holding white rice bowl, kitchen background, 1080x1920]  
+나레이터: 흰밥 한 공기, 이것이 "혈당 폭탄"입니다&이제 돌이킬 수 없습니다.  
+
+[SCENE: Korean senior man checking blood sugar at home, glucose meter in hand, 1080x1920]  
+나레이터: 아침마다 흰밥 드시고 속 더부룩하시거나&낮엔 금세 허기지고 졸리신 적 있나요?  
+
+[SCENE: animation of blood sugar spiking rapidly, red arrow rising on graph, 1080x1920]  
+나레이터: 흰쌀은 소화되며 순식간에 포도당으로 변합니다&혈관 속에서 '당화'라는 노화폭탄을 키우죠&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior woman replacing white rice with mixed grain bowl, 1080x1920]  
+나레이터: 오늘부터 밥을 절반만 흰쌀로 드세요&나머지는 현미나 보리로 채우고&한 끼에 견과류 3알 꼭 섞어 드세요.  
+
+[SCENE: elderly couple walking after meal, park path, 1080x1920]  
+나레이터: 밥 먹고 10분 뒤 5분이라도 걷는 습관, 이것만으로 혈당을 30% 낮출 수 있습니다&정확한 진단과 치료는 전문의와 상담하세요.  
+
+[SCENE: text on screen: "이 중 지금 당장 바꿀 수 있는 건 무엇인가요? 1. 밥 양 줄이기 2. 잡곡 섞기 3. 산후 산책 — 선택한 번호 댓글에"]  
+나레이터: 지금 당장 실천할 수 있는 건 무엇인지&댓글에 선택한 번호 하나만 적어주세요.
