@@ -3176,5 +3176,65 @@
     "uploaded_at": "2026-09-05T09:12:33+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "yIR9Hd5OTE4",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이것 드시면 내장 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-06T09:05:38+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "Q4nbL4GQVns",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음료 마시면 뇌졸중 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-06T09:05:38+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ens_LLLzQTc",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음료 마시면 뇌가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-06T09:09:13+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "VWxCrb6WPMg",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음료 마시면 당이 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-06T09:09:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ujk8GItejBE",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뼈가 부서집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-06T09:13:02+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "jkF4_GWZrMM",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌졸중 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-06T09:13:02+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
