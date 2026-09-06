@@ -74,11 +74,21 @@ jobs:
       # 시점의 git 상태엔 큐가 비어 있어서 "처리할 파일 없음"으로 조용히
       # 헛돌고 끝나버리는 사고가 실측으로 확인됐습니다(대본은 정상 생성되고
       # 이미지도 다 그려졌는데 업로드가 하나도 안 됨). 큐 커밋+푸시가 확실히
-      # 끝난 이 시점에만 조립을 트리거해야 이 경쟁 상태가 원천적으로 없습니다
-      # — Worker 쪽 트리거는 제거했고, 이게 유일한 트리거입니다(안전망 cron은
-      # 그대로 둠).
+      # 끝난 이 시점에만 조립을 트리거해야 이 경쟁 상태가 원천적으로 없습니다.
+      #
+      # 2026-09-06: 처음엔 여기서 `gh workflow run`으로 직접 트리거했는데,
+      # GH Actions 기본 GITHUB_TOKEN은 다른 워크플로우를 못 켜게 막혀 있어서
+      # (재귀 트리거 방지용 GitHub 자체 제한) 403으로 4일 내내 이 스텝만
+      # 조용히 실패하고 있었습니다(대본 생성은 매번 성공했지만 이 스텝
+      # 때문에 잡 전체가 "실패"로 뜸 — 실제 업로드는 안전망 cron이 늦게
+      # 대신 처리해서 몰랐음). GH Actions 토큰 대신, 이미 진짜 PAT로
+      # dispatchWorkflow를 잘 쓰고 있는 Worker에게 요청만 던지는 걸로
+      # 바꿨습니다(새 시크릿 필요 없이 IMAGE_GEN_SECRET 재사용).
       - name: Trigger assembly now that the queue is safely committed
         if: always()
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run assemble_daily.yml --repo "${{ github.repository }}"
+          DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
+          IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
+        run: |
+          curl -sS -f -X POST "${DISCORD_WORKER_URL%/}/trigger-assemble-x4k8p1" \
+            -H "X-Secret: ${IMAGE_GEN_SECRET}"

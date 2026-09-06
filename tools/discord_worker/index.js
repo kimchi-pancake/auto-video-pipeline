@@ -140,6 +140,23 @@ export default {
       return json({ accepted: true, scene_count: payload.scenes.length });
     }
 
+    // 2026-09-06: daily.yml이 큐 커밋+푸시를 끝낸 직후 조립을 바로 트리거하려고
+    // 했는데, GH Actions 기본 GITHUB_TOKEN으로는 gh workflow run이 403(다른
+    // 워크플로우를 못 켜게 막는 GitHub 자체 제한)으로 매번 실패했습니다. 이
+    // Worker는 이미 진짜 PAT(GITHUB_TOKEN 환경변수)로 dispatchWorkflow를 계속
+    // 성공시켜왔으니(안전망 cron, /영상 시작 등), 그걸 그대로 재사용합니다 —
+    // 새 시크릿 발급 없이 IMAGE_GEN_SECRET을 그대로 인증에 씁니다.
+    if (url.pathname === "/trigger-assemble-x4k8p1" && request.method === "POST") {
+      if (!env.IMAGE_GEN_SECRET || request.headers.get("X-Secret") !== env.IMAGE_GEN_SECRET) {
+        return new Response("not configured", { status: 404 });
+      }
+      const ok = await dispatchWorkflow(env, "assemble_daily.yml", {});
+      if (!ok.success) {
+        return json({ success: false, status: ok.status, detail: ok.detail }, 502);
+      }
+      return json({ success: true });
+    }
+
     if (request.method !== "POST") {
       return new Response("OK", { status: 200 });
     }
@@ -817,8 +834,11 @@ async function generateSceneImages(env, runId, scenes) {
   // 옮겼습니다 — 여기서는 더 이상 트리거하지 않습니다(안전망 cron은 그대로).
 }
 
-function json(obj) {
-  return new Response(JSON.stringify(obj), { headers: { "Content-Type": "application/json" } });
+function json(obj, status) {
+  return new Response(JSON.stringify(obj), {
+    status: status || 200,
+    headers: { "Content-Type": "application/json" },
+  });
 }
 
 // ─────────────────────────────────────────
