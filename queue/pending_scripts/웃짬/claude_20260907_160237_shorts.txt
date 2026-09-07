@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260907_160237_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 "장" 점막이 다 망칩니다  
+
+THUMBNAIL_SHORTS:  
+이 음식 드시면 "장" 점막이 다 망칩니다  
+
+[SCENE:Asian senior woman holding white bread sandwich, kitchen background, 1080x1920]  
+나레이터: 이거 드시면 & "장" 점막이 다 망가집니다.  
+
+[SCENE:Korean senior man looking concerned at toilet, bathroom interior, 1080x1920]  
+나레이터: 속이 더부룩하고 & 변비나 설사가 반복된다면 & 장내 환경이 이미 위험 신호를 보내고 있습니다.  
+
+[SCENE:animation of gut lining damage by processed food, white background, close-up]  
+나레이터: 정제된 밀가루는 장벽을 뚫고 & 염증을 만듭니다.& 근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 & 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior couple cooking with whole grains, kitchen, 1080x1920]  
+나레이터: 오늘부터 백미 대신 현미를 & 하루 한 끼라도 넣어 드시고 & 빵은 통밀로 바꿔보세요.  
+
+[SCENE:Korean senior woman writing in notebook, smiling, 1080x1920]  
+나레이터: 오늘 알려드린 음식을 한 가지라도 줄이셨다면 & 댓글에 ‘1’만 남겨주세요.& 정확한 진단과 치료는 전문의와 상담하세요.

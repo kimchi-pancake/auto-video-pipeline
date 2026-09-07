@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260907_160353_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 매일 드신다면, 간이 이미 손상됐을 수 있습니다  
+
+THUMBNAIL_SHORTS:  
+이 음식 매일 드신다면, 간이 이미 손상됐을 수 있습니다  
+
+[SCENE: close-up of white rice bowl with chopsticks, steam rising, kitchen background]  
+나레이터: 이거 매일 드시면 간이 ‘이렇게’ 망가집니다.&지금이라도 멈추지 않으면 돌이킬 수 없습니다.  
+
+[SCENE: Korean senior couple eating rice-heavy meal at home, dining table]  
+나레이터: 밥을 안 먹고는 삼시세끼가 못 된다 하시는 분,&이제부터 조심하셔야 합니다.  
+
+[SCENE: animation of liver organ with glowing damage spots, red warning pulses]  
+나레이터: 백미는 소화되면서 혈당을 급등시키고,&이는 간에 지방을 축적하게 만듭니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: split screen: white rice vs brown rice, side by side comparison]  
+나레이터: 오늘부터 밥은 절반만 백미로 먹고,&나머지는 현미나 보리로 바꿔보세요.&하루 한 끼만 이렇게 해도 간 부담이 확 줄어듭니다.  
+
+[SCENE: elderly Korean woman placing brown rice in cooker, smiling slightly]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이 음식을 오늘 처음 줄여보겠다 하시는 분, 댓글에 ‘줄일래’라고만 남겨주세요.
