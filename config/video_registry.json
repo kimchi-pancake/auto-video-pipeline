@@ -3236,5 +3236,65 @@
     "uploaded_at": "2026-09-06T09:13:02+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "7ljG0oQvaqQ",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 내장 다 망칩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-07T00:00:10+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "R8M9fa0_kVA",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-07T00:00:17+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "0PLzTElgk3A",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-07T00:03:27+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "70BxmkuCVkQ",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-07T00:03:29+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "0WUEUW8cI3k",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-07T00:06:47+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "VrzIhCk9d_Y",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-07T00:06:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
