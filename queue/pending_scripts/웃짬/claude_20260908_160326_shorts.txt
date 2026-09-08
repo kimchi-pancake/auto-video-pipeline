@@ -1,0 +1,36 @@
+RUN_ID:
+claude_20260908_160326_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 먹으면 "혈관" "노화" 시작됩니다  
+
+THUMBNAIL_SHORTS:  
+이거 매일 드시면 "혈관" "회복 불가"  
+
+[SCENE: Korean senior couple eating white rice with side dishes, close-up on rice bowl, 1080x1920]  
+나레이터: 이거 드시면 혈관이 하루만에 늙습니다&흰쌀밥이 그 주범일 수 있습니다.  
+
+[SCENE: Korean senior man checking blood sugar at home, finger pricking device in hand, 1080x1920]  
+나레이터: 밥 먹고 더운 줄 알았는데 땀이 흐르시는 분&속으로 혈당이 폭발하고 있는 겁니다.  
+
+[SCENE: animation of sugar molecules sticking to blood vessel walls, glowing red inflammation spots, 1080x1920]  
+나레이터: 흰쌀은 빠르게 당으로 변해 혈관 벽을 손상시키고&염증을 키웁니다&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior woman mixing brown rice and barley in rice cooker, hands pouring grains, 1080x1920]  
+나레이터: 오늘부터 밥은 흰쌀 50%에 현미나 보리 50% 섞어 드세요&식전에 떫은柿단 1조각 드시면 당 흡수도 막아줍니다.  
+
+[SCENE: elderly man writing in journal, checking off daily meal, with text overlay "오늘 밥, 섞어 먹었나요?"]  
+나레이터: 작은 습관이 혈관 수명을 바꿉니다&정확한 진단과 치료는 전문의와 상담하세요.  
+나레이터: 이 정보 처음 아셨다면 댓글에 '몰랐다'만 남겨주세요.
