@@ -3356,5 +3356,65 @@
     "uploaded_at": "2026-09-07T16:15:58+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "sOBeSSN27Jw",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 장이 망가집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-08T16:09:16+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "Ygo0jDed6JM",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 \"혈관\" \"기형성장\" 시작됩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-08T16:09:19+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "RkBoPcECYbw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이 음료 마시면 뇌가 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-08T16:13:15+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "zYuVctMvVps",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈당 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-08T16:13:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "OrPltGi8BOE",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-08T16:17:07+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "jXjI5Dg3WSk",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 \"혈관\" \"노화\" 시작됩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-08T16:17:10+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
