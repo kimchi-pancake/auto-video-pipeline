@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260909_160307_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 뇌가 썩는다  
+
+THUMBNAIL_SHORTS:  
+이 음료 마시면 뇌가 썩는다  
+
+[SCENE: Korean senior woman drinking sweetened fruit juice at breakfast table, morning sunlight, 1080x1920]  
+나레이터: 아침에 과일주스 한 잔, 건강한 습관이라 생각하셨다면&이제부터라도 멈춰야 합니다.  
+
+[SCENE: close-up of sugar crystals pouring into glass, sticky liquid, 1080x1920]  
+나레이터: 이 순간에도 당신의 뇌혈관은 손상되고 있으며&이미 돌이킬 수 없는 변화가 시작될 수 있습니다.  
+
+[SCENE: animation of brain with inflammation markers, red spots spreading, 1080x1920]  
+나레이터: 과일주스는 설탕 물과 다름없고&이것이 뇌 염증을 일으켜 치매 위험을 높입니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior man pouring juice into sink, switching to drinking water with lemon slice, 1080x1920]  
+나레이터: 오늘부터 아침에는 과일주스 대신 물 한 잔에 레몬 한 조각 넣어 드세요.&또는 신선한 과일을 껍질째 갈아 드시면 섬유소까지 챙깁니다.  
+
+[SCENE: elderly couple walking in park, smiling, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이 음료를 오늘도 드신 분, 댓글에 ‘끊을게’라고만 적어주세요.

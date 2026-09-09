@@ -1,0 +1,36 @@
+RUN_ID:
+claude_20260909_160217_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 노화 10년 빨라집니다  
+
+THUMBNAIL_SHORTS:  
+이거 매일 드시면 피부가 썩습니다  
+
+[SCENE: Korean senior woman holding fried food with concerned expression, kitchen background, 1080x1920]  
+나레이터: 매일 드시는 이 음식, 피부는 물론 내장까지 "노화" "돌이킬 수 없게" 만듭니다.  
+
+[SCENE: Korean senior couple eating fried chicken at home, casual dining, 1080x1920]  
+나레이터: 바삭한 게 땡길 땐 튀김만 한 게 없죠&근데 요즘 피부 칙칙하고&아침에 몸이 무겁지 않으신가요?  
+
+[SCENE: close-up of oil bubbling in frying pan, crispy fried food sizzling, 1080x1920]  
+나레이터: 고온에서 기름에 튀기면 음식 속에 '당화물질'이 폭발적으로 생깁니다&이게 우리 몸 곳곳의 단백질을 딱딱하게 만드는 게 문제죠&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방어법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior woman switching to steamed fish and vegetables, healthy meal on table, 1080x1920]  
+나레이터: 오늘부터 튀긴 음식은 일주일에 2번 이하로 줄이고&대신 찜, 삶기, 구이로 조리하세요&이렇게만 바꿔도 노화 속도가 확 달라집니다.  
+
+[SCENE: elderly Korean man checking skin elasticity in mirror, bathroom, 1080x1920]  
+나레이터: 이 정보를 알고 실천하시는 것과 모르고 지내는 것은 몇 년 후 완전히 다른 삶입니다&정확한 진단과 치료는 전문의와 상담하세요.  
+오늘부터 튀김 대신 찜 요리 하실 분, 댓글에 '찜'이라고만 남겨주세요.

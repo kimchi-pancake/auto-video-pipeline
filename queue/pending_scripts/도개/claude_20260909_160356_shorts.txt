@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260909_160356_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 노화 10년 빨라집니다  
+
+THUMBNAIL_SHORTS:  
+이거 드시면 피부 빠르게 늙습니다  
+
+[SCENE: Korean senior woman looking at mirror with tired face, dark spots visible, 1080x1920]  
+나레이터: 피부 주름과 기미가 갑자기 깊어진다면&노화 탓만이 아닐 수 있습니다.  
+
+[SCENE: close-up of white rice bowl with chopsticks, steam rising, 1080x1920]  
+나레이터: 매일 드시는 흰쌀밥 하나가&노화 속도를 10년 앞당기고 있습니다.  
+
+[SCENE: animation of sugar molecules attacking collagen fibers in skin, 1080x1920]  
+나레이터: 흰밥은 빠르게 당으로 바뀌어&콜라겐을 붙잡고 당화 시킵니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대체 식단이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: split screen — left: white rice, right: brown rice and barley mix, 1080x1920]  
+나레이터: 오늘부터 밥에 현미나 보리 30% 섞어 드세요.&하루 한 끼만 바꿔도 당화 반응이 확 줄어듭니다.  
+
+[SCENE: Korean senior couple eating from colorful meal with vegetables and grain mix, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이 방법 오늘 바로 시작하실 분, 댓글에 ‘시작’만 적어주세요.
