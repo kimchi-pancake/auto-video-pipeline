@@ -3416,5 +3416,65 @@
     "uploaded_at": "2026-09-08T16:17:10+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "2zz6uL4kGcU",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 노화 10년 빨라집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-09T16:08:52+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "C6Aip5IPyag",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-09T16:08:52+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "-KIZ3yPWYLw",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뼈가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-09T16:12:15+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "nNRoqSuQzZA",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌졸중 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-09T16:12:16+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "sYRcLhlSW4I",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음료 마시면 뇌가 썩는다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-09T16:16:05+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "JupqQL_ZYHY",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 노화 10년 빨라집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-09T16:16:14+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
