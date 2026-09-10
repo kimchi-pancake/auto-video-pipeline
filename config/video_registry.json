@@ -3476,5 +3476,65 @@
     "uploaded_at": "2026-09-09T16:16:14+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "xbFOq7WzEFg",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 매일 드시면 뇌가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-10T16:07:36+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "wAgJqQtsZT0",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-10T16:07:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "AXmFhCOmb0E",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌졸중 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-10T16:11:14+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KeLZjxGI2ag",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이것 먹으면 혈관이 곧 망가집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-10T16:11:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "pb0A-ztlaZI",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이것 드시면 \"간\" 절대 못 구합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-10T16:14:13+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KBEK0KGUP64",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이것 먹으면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-10T16:14:41+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
