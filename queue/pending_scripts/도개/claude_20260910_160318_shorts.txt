@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260910_160318_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이것 드시면 "간" 절대 못 구합니다  
+
+THUMBNAIL_SHORTS:  
+이것 먹으면 "간" 이미 늦습니다  
+
+[SCENE: Korean senior couple eating white rice and fried food at home, dining table, 1080x1920]  
+나레이터: 이거 매일 드시면 & "간" 이제 못 구합니다.  
+
+[SCENE: Korean woman holding belly, looking uncomfortable at night, indoor, 1080x1920]  
+나레이터: 새벽에 더부룩하고 & 옆구리 뻐근하시나요? & 지금 바로 점검하셔야 합니다.  
+
+[SCENE: animation of liver with fatty deposits glowing yellow, medical style, 1080x1920]  
+나레이터: 정제 탄수화물과 튀긴 음식은 & 간에 기름을 쌓이게 합니다.& 근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 해결법이 궁금하신 분은 & 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior man drinking water before meal, clock showing 30 minutes, kitchen, 1080x1920]  
+나레이터: 식사 30분 전 물 한 잔 & 하루 세 끼 그릴에 굽거나 찜 요리로 바꾸세요. & 간 부담 확 줄어듭니다.  
+
+[SCENE: Korean woman stretching gently in living room, smiling, daylight, 1080x1920]  
+나레이터: 오늘부터 실천하시고 & 증상이 몇 개나 해당되셨는지 & 댓글에 숫자만 적어주세요.& 정확한 진단과 치료는 전문의와 상담하세요.

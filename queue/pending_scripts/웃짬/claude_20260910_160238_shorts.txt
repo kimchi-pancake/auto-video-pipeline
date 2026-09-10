@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260910_160238_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 내장이 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이거 먹으면 내장 썩는다  
+
+[SCENE: Korean senior woman eating white rice with processed meat, kitchen background, 1080x1920]  
+나레이터: 매일 드시는 이 조합, 내장부터 망가집니다.  
+
+[SCENE: Korean man holding stomach in discomfort, sitting on sofa, 1080x1920]  
+나레이터: 더부룩함, 더 자주 오셨다면&이미 내장 기능이 약해지고 있을 수 있습니다.  
+
+[SCENE: animation of sugar molecules attaching to blood vessels and intestine lining, 1080x1920]  
+나레이터: 흰밥에 가공육은 혈당을 급상승시키고&내장 점막을 손상시킵니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 조합과 안전한 대체법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior couple replacing processed meat with boiled egg and spinach, 1080x1920]  
+나레이터: 오늘부터 아침엔 흰밥 대신 현미를 반만 넣고&가공육은 계란이나 두부로 바꾸세요.&한 끼만이라도 이렇게 시작해 보세요.  
+
+[SCENE: Korean woman smiling, checking rice cooker with mixed grains, 1080x1920]  
+나레이터: 이 조정 하나면 내장 회복의 길이 열립니다.&정확한 진단과 치료는 전문의와 상담하세요.&이제라도 바꾸지 않으면 돌이킬 수 없습니다.&오늘 아침 조합을 바꾸실 분, 댓글에 '바꿀게'라고만 남겨주세요.

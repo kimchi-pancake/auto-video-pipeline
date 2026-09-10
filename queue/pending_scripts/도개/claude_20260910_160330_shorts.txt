@@ -1,0 +1,36 @@
+RUN_ID:
+claude_20260910_160330_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뇌졸중 위험 커집니다  
+
+THUMBNAIL_SHORTS:  
+이 음식 드시면 뇌졸중 위험 커집니다  
+
+[SCENE: Korean senior woman holding instant noodle cup at kitchen table, worried expression, 1080x1920]  
+나레이터: 이 음식 하루 한 번만 드셔도 & "혈관 벽" 이제 "되돌릴 수 없습니다".  
+
+[SCENE: Korean senior man checking blood pressure at home, 1080x1920]  
+나레이터: 손이 저리거나 & 아침에 두통이 자주 오신다면 & 지금 당장 확인해야 합니다.  
+
+[SCENE: animation of sodium particles damaging blood vessel walls, red warning flashes, 1080x1920]  
+나레이터: 인스턴트 면류의 나트륨은 & 혈관 내벽을 지속적으로 손상시킵니다 & 근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대체 식단이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior woman cooking fresh vegetable soup in pot, 1080x1920]  
+나레이터: 하루 한 끼라도 & 나트륨 500mg 이하의 국물 요리로 바꾸세요 & 즉석면 대신 두부·미역국 추천드립니다.  
+
+[SCENE: elderly couple walking in park, smiling, 1080x1920]  
+나레이터: 오늘부터라도 나트륨 줄이면 & 혈관 회복 가능성은 여전히 있습니다 & 정확한 진단과 치료는 전문의와 상담하세요.  
+나레이터: 이 영상 보고 오늘 즉석면 끊어보실 분 & 댓글에 '끊는다'라고만 적어주세요.
