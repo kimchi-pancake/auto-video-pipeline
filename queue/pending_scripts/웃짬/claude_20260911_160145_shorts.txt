@@ -1,0 +1,37 @@
+RUN_ID:
+claude_20260911_160145_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뼈가 녹습니다  
+
+THUMBNAIL_SHORTS:  
+이 음식 먹으면 뼈 녹아요  
+
+[SCENE: Korean senior woman holding calcium supplement bottle, looking concerned, 1080x1920]  
+나레이터: 이것 모르고 드시면 "뼈" "이제 못 살립니다".  
+
+[SCENE: Korean man drinking cola from a can at dining table, 1080x1920]  
+나레이터: 하루 한 잔이라도 탄산음료 마시시는 분&발목이 자주 뻐근하신가요?  
+
+[SCENE: animated diagram of bone density loss, calcium leaching out, 1080x1920]  
+나레이터: 탄산음료 속 인산이 뼈에서 칼슘을 빼냅니다&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: senior couple replacing cola with barley tea and water, 1080x1920]  
+나레이터: 탄산음료 대신 물 또는 보리차로 바꾸고&하루 섭취는 반드시 1잔 이내로 줄이세요.  
+
+[SCENE: elderly woman walking confidently, smiling at camera, 1080x1920]  
+나레이터: 뼈 밀도는 60대부터 급격히 떨어집니다&오늘부터 시작해야 내년에 후회 안 합니다.  
+정확한 진단과 치료는 전문의와 상담하세요.  
+본인은 지금 탄산음료를 하루 몇 잔 드시나요? 댓글에 숫자만 적어주세요.

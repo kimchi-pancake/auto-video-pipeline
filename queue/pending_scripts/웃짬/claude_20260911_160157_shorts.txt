@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260911_160157_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이것 드시면 장이 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이것 드시면 장이 썩습니다  
+
+[SCENE: Korean senior woman holding a bowl of instant ramen, looking concerned, indoor kitchen, 1080x1920]  
+나레이터: 이거 매일 드시면 “장 점막” 이제 “복구 불가”합니다.&돌이킬 수 없습니다.  
+
+[SCENE: Korean senior man reading nutrition label on processed food package, close-up on sodium and additives, 1080x1920]  
+나레이터: 라면, 소시지, 캔음식—이렇게 매일 드시는 분이라면 지금 당장 확인해야 합니다.  
+
+[SCENE: animated intestine with inflamed lining, redness and damage visualization, white background, 1080x1920]  
+나레이터: 인공첨가물과 나트륨은 장벽을 뚫고 염증을 키웁니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방어법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: Korean senior couple cooking fresh vegetables in kitchen, chopping peppers and garlic, 1080x1920]  
+나레이터: 오늘부터 가공식품 끊고, 하루 2끼는 재료 본연의 음식으로 드세요.&된장국은 생으로 끓이지 말고 10분 더 끓여 잔류물 제거하세요.  
+
+[SCENE: elderly Korean woman writing in a journal, smiling, with fresh meal on table, 1080x1920]  
+나레이터: 정확한 진단과 치료는 전문의와 상담하세요.&이 음식 중 오늘 먹은 게 있으신 분, 댓글에 '먹었다'만 남겨주세요.

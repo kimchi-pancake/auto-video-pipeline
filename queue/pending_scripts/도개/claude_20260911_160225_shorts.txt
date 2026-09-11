@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260911_160225_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 먹으면 "혈관" "회복 불가"  
+
+THUMBNAIL_SHORTS:  
+이거 매일 드시면 "혈관" 이미 늦습니다  
+
+[SCENE:Korean senior couple eating white rice and side dishes at home, close-up on rice bowl, 1080x1920]  
+나레이터: 하얀 밥이 당신의 혈관을 서서히 썩이고 있습니다.&이제 돌이킬 수 없습니다.  
+
+[SCENE:Korean man checking blood pressure at home with concerned expression, 1080x1920]  
+나레이터: 오전보다 저녁에 혈압이 더 높으신가요?&배 안 고파도 밥을 드시나요?  
+
+[SCENE:animation of sugar crystals entering bloodstream, blood vessels hardening, 1080x1920]  
+나레이터: 백미는 빠르게 당으로 바뀌어 혈관 안쪽을 손상시킵니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean woman mixing brown rice and barley in rice cooker, 1080x1920]  
+나레이터: 오늘 저녁부터 백미를 현미나 보리와 반반 섞어 드세요.&한 입이라도 줄이면 혈관 부담이 확 줄어듭니다.  
+
+[SCENE:Korean senior man putting down rice bowl and picking up water glass, 1080x1920]  
+나레이터: 이 작은 습관이 혈압과 혈당을 잡는 첫걸음입니다.&정확한 진단과 치료는 전문의와 상담하세요.&이제부터라도 바꾸실 분, 댓글에 '지금부터'라고만 남겨주세요.
