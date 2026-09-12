@@ -3536,5 +3536,65 @@
     "uploaded_at": "2026-09-10T16:14:41+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "P2Sc72m3Ts8",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뼈가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-12T09:06:23+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "5SDsnOTtvoQ",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이 음료 마시면 뇌가 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-12T09:06:26+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "tqcf3bI9TyU",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이것 드시면 장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-12T09:10:14+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "BSkH3NRhURc",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이것 먹으면 장이 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-12T09:10:26+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "vr1pyfpVuX4",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈당 폭발합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-12T09:13:46+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "FOMEGVV600Y",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 \"혈관\" \"회복 불가\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-12T09:14:00+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
