@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260912_160310_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음료 마시면 노화 10년 빠릅니다  
+
+THUMBNAIL_SHORTS:  
+당신 오늘 이거 마셨다면, 이미 늦었을 수도 있습니다  
+
+[SCENE:elderly Korean woman holding sweet fruit juice in plastic cup, sitting at park bench, daytime, 1080x1920]  
+나레이터: 외국에서도 난리난 그 음료&"노화촉진제"라 불리는 이것&매일 드시면 피부·관절·혈관이 동시에 망가집니다.  
+
+[SCENE:Korean senior couple eating breakfast at home, one sipping juice, concerned expression, 1080x1920]  
+나레이터: 하루 한 잔이라도 괜찮을까?&아침마다 과일주스 드시는 분&피로 회복 안 되고 피부 처지고 관절도 뻐근하지 않으십니까?  
+
+[SCENE:animation of sugar molecules attaching to collagen fibers, turning skin saggy, red warning signs, 1080x1920]  
+나레이터: 과일주스 속 당분은 몸속 단백질과 결합해 '당화'를 일으킵니다&이 반응은 피부 주름은 물론 혈관 벽과 연골까지 딱딱하게 만듭니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대체 음료와 안전한 섭취 기준 알고 싶으신 분은 화면 두 번 눌러주세요.  
+
+[SCENE:elderly Korean man pouring fresh carrot-apple juice into glass, no sugar added, kitchen setting, 1080x1920]  
+나레이터: 오늘부터는 이렇게 바꾸세요&첫째, 생과일은 껍질째 갈아 마시되 설탕 절대 추가하지 마세요.&둘째, 주스는 식사 중에만 작은 컵 반만 드세요.&셋째, 아침 공복엔 차나 물로 시작하세요.  
+
+[SCENE:elderly Korean woman smiling, holding herbal tea, sitting by window with sunlight, 1080x1920]  
+나레이터: 과일주스 대신 이 방법 시도해 보신다고요?&정확한 진단과 치료는 전문의와 상담하세요.&오늘부터 이 습관 고치실 분, 댓글에 ‘고친다’라고만 남겨주세요.
