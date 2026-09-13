@@ -3656,5 +3656,65 @@
     "uploaded_at": "2026-09-12T16:15:02+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "SFJeyrjG0C8",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 과일, 당뇨 위험 2배로 올립니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-13T16:08:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "tAqK9mbLm9I",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-13T16:08:27+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KTeBaOPI8Fg",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 먹으면 혈관이 곧 망가집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-13T16:11:56+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "bV1vmjTt2L4",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 드시면 내장이 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-13T16:12:14+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "DgyoIcZStfY",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이거 드시면 노화 10년 빨라집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-13T16:15:20+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "9VZOZaceLWk",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뼈가 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-13T16:15:39+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
