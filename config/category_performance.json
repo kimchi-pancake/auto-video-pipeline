@@ -1,36 +1,12 @@
 {
   "웃짬": {
-    "computed_at": "2026-09-06T23:39:47+00:00",
+    "computed_at": "2026-09-13T23:59:39+00:00",
     "long": [
-      {
-        "category": "당뇨관리",
-        "count": 1,
-        "avg_views": 13.0,
-        "avg_retention": 21.73
-      },
-      {
-        "category": "부모자식갈등",
-        "count": 1,
-        "avg_views": 32.0,
-        "avg_retention": 10.35
-      },
-      {
-        "category": "장건강",
-        "count": 1,
-        "avg_views": 5.0,
-        "avg_retention": 9.71
-      },
       {
         "category": "형제유산",
         "count": 1,
         "avg_views": 1.0,
         "avg_retention": 3.9599999999999995
-      },
-      {
-        "category": "심장건강",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 1.23
       },
       {
         "category": "수면건강",
@@ -41,12 +17,6 @@
     ],
     "shorts": [
       {
-        "category": "부모자식갈등",
-        "count": 1,
-        "avg_views": 3.0,
-        "avg_retention": 77.54
-      },
-      {
         "category": "혈관혈압",
         "count": 1,
         "avg_views": 89.0,
@@ -54,74 +24,50 @@
       },
       {
         "category": "위험식품",
-        "count": 31,
-        "avg_views": 226.09677419354838,
-        "avg_retention": 60.97870967741936
-      },
-      {
-        "category": "고부갈등",
-        "count": 2,
-        "avg_views": 1.5,
-        "avg_retention": 51.61000000000001
-      },
-      {
-        "category": "장건강",
-        "count": 11,
-        "avg_views": 367.1818181818182,
-        "avg_retention": 47.05
-      },
-      {
-        "category": "뼈건강",
-        "count": 20,
-        "avg_views": 427.15,
-        "avg_retention": 43.4755
+        "count": 45,
+        "avg_views": 179.2,
+        "avg_retention": 53.12488888888889
       },
       {
         "category": "관절근육",
-        "count": 4,
-        "avg_views": 466.75,
-        "avg_retention": 40.8875
-      },
-      {
-        "category": "심장건강",
-        "count": 2,
-        "avg_views": 345.0,
-        "avg_retention": 34.410000000000004
+        "count": 1,
+        "avg_views": 731.0,
+        "avg_retention": 44.46
       },
       {
         "category": "당뇨관리",
-        "count": 2,
-        "avg_views": 155.0,
-        "avg_retention": 33.175
+        "count": 1,
+        "avg_views": 309.0,
+        "avg_retention": 44.01
       },
       {
-        "category": "수면건강",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 21.2
+        "category": "장건강",
+        "count": 9,
+        "avg_views": 376.3333333333333,
+        "avg_retention": 41.25
       },
       {
-        "category": "손주문제",
-        "count": 1,
-        "avg_views": 2.0,
-        "avg_retention": 5.66
+        "category": "뼈건강",
+        "count": 11,
+        "avg_views": 336.1818181818182,
+        "avg_retention": 37.303636363636365
       },
       {
         "category": "형제유산",
-        "count": 3,
+        "count": 1,
         "avg_views": 1.0,
-        "avg_retention": 2.1900000000000004
+        "avg_retention": 0.0
       }
     ]
   },
   "도개": {
-    "computed_at": "2026-09-06T23:39:48+00:00",
+    "computed_at": "2026-09-13T23:59:40+00:00",
     "long": [
       {
         "category": "스트레스",
         "count": 1,
-        "avg_views": 15.0,
-        "avg_retention": 18.17
+        "avg_views": 11.0,
+        "avg_retention": 21.85
       },
       {
         "category": "손주문제",
@@ -139,27 +85,21 @@
     "shorts": [
       {
         "category": "고부갈등",
-        "count": 1,
-        "avg_views": 3.0,
-        "avg_retention": 200.70999999999998
-      },
-      {
-        "category": "관절근육",
-        "count": 4,
-        "avg_views": 357.0,
-        "avg_retention": 115.9325
+        "count": 2,
+        "avg_views": 2.5,
+        "avg_retention": 146.86499999999998
       },
       {
         "category": "위험식품",
-        "count": 25,
-        "avg_views": 183.12,
-        "avg_retention": 100.38960000000002
+        "count": 40,
+        "avg_views": 126.275,
+        "avg_retention": 82.47525
       },
       {
-        "category": "장건강",
-        "count": 5,
-        "avg_views": 508.6,
-        "avg_retention": 72.944
+        "category": "뼈건강",
+        "count": 8,
+        "avg_views": 32.0,
+        "avg_retention": 69.71249999999999
       },
       {
         "category": "당뇨관리",
@@ -174,22 +114,22 @@
         "avg_retention": 52.73
       },
       {
-        "category": "뼈건강",
-        "count": 15,
-        "avg_views": 233.13333333333333,
-        "avg_retention": 50.668
+        "category": "장건강",
+        "count": 3,
+        "avg_views": 427.3333333333333,
+        "avg_retention": 49.25
+      },
+      {
+        "category": "관절근육",
+        "count": 1,
+        "avg_views": 4.0,
+        "avg_retention": 39.56
       },
       {
         "category": "미분류",
         "count": 1,
         "avg_views": 374.0,
         "avg_retention": 37.66
-      },
-      {
-        "category": "스트레스",
-        "count": 1,
-        "avg_views": 445.0,
-        "avg_retention": 30.519999999999996
       }
     ]
   }
