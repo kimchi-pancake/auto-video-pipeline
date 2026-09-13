@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260913_160249_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이거 드시면 노화 10년 빨라집니다  
+
+THUMBNAIL_SHORTS:  
+노안 망치는 음식, 지금 멈춰야  
+
+[SCENE: Korean senior woman squinting at phone, rubbing forehead, close-up of tired eyes, 1080x1920]  
+나레이터: 눈이 침침해지고 초점이 안 맞는다면&노화 때문만은 아닙니다.  
+
+[SCENE: elderly Korean couple eating fried dumplings at home table, 1080x1920]  
+나레이터: 매일 드시는 이 튀김류가&눈 속 '황반'을 서서히 썩게 만들고 있습니다.  
+
+[SCENE: animated cross-section of human eye, macula darkening, 1080x1920]  
+나레이터: 튀긴 음식 속 산화물질이 혈액을 타고 눈까지 도달하면&황반 조직이 딱딱하게 굳고 시력 저하로 이어집니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 눈 보호 식단이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE: split screen — left: frying pan with oil smoking, right: steamed dumplings and boiled eggs, 1080x1920]  
+나레이터: 오늘부터 기름 없이 조리하세요.&찐 만두, 수란, 찜 요리는 하루 2끼라도 가능합니다.&정확한 진단과 치료는 전문의와 상담하세요.  
+
+[SCENE: elderly man reading book clearly without glasses, smiling, 1080x1920]  
+나레이터: 기름기 줄인 식사는 눈이 편해지는 첫걸음입니다.&지금 당장 내일 아침 메뉴를 바꾸실 분, 댓글에 ‘1’만 남겨주세요.
