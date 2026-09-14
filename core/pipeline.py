@@ -593,7 +593,10 @@ class Pipeline:
 
     def _search_thumbnail_bg(self, out_dir: Path) -> Optional[str]:
         """썸네일 배경용 "놀란 반응샷" 이미지를 Pixabay에서 검색해 다운로드합니다.
-        실패하면 None(호출부가 씬 이미지로 폴백)."""
+        실패하면 None(호출부가 AI/씬 이미지로 폴백). AI 씬 이미지가 있으면
+        이 검색 자체를 건너뛰므로(2026-09-14, 사용자 요청 — 스톡사진보다
+        AI 그림으로 어그로를 끄는 쪽을 우선), 실제로는 AI 이미지가 하나도
+        없는 씬에서만 호출됩니다."""
         pixabay_key = self._cfg.get("image.pixabay_api_key", "")
         if not pixabay_key:
             return None
@@ -615,9 +618,18 @@ class Pipeline:
             config=self._cfg.section("thumbnail"),
             assets_dir=self._assets_dir,
         )
-        # 놀란 반응샷을 썸네일 전용 배경으로 우선 검색합니다 — 이게 실패할 때만
-        # 첫 번째로 실제 다운로드된 장면 이미지로 대체합니다.
-        bg_image_path = self._search_thumbnail_bg(out_dir)
+        # 2026-09-14: AI 씬 이미지(수채화풍)가 있으면 그걸 최우선으로 씁니다 —
+        # 뻔한 Pixabay 반응샷보다 이 영상만의 그림으로 어그로를 끄는 쪽이
+        # 낫다는 사용자 판단. AI 이미지가 하나도 없는 씬(NVIDIA 다운 등)에서만
+        # 기존처럼 Pixabay 반응샷 검색 → 그마저 실패하면 첫 번째 장면 이미지 순.
+        bg_image_path = None
+        if image_results:
+            for r in sorted(image_results, key=lambda r: r.scene_index):
+                if r.image_path and r.source == "ai":
+                    bg_image_path = r.image_path
+                    break
+        if bg_image_path is None:
+            bg_image_path = self._search_thumbnail_bg(out_dir)
         if bg_image_path is None and image_results:
             for r in sorted(image_results, key=lambda r: r.scene_index):
                 if r.image_path:

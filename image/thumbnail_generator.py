@@ -153,19 +153,31 @@ class ThumbnailGenerator:
             fill=(0, 0, 0, 140),
         )
 
+        # 2026-09-14: 줄 단위가 아니라 "단어" 단위로 색을 바꿔가며 그립니다 —
+        # 제목이 짧아서 줄이 1~2개뿐이면 줄 단위 순환으로는 거의 항상 단색으로
+        # 보였는데(알록달록한 느낌이 안 남), 단어마다 바꾸면 짧은 제목에서도
+        # 빨/노/파가 확실히 섞여 보입니다. 줄이 바뀌어도 색 순환은 끊지 않고
+        # 이어갑니다(줄마다 항상 같은 색으로 시작하면 패턴이 반복돼 보임).
         stroke_w = max(2, size // 22)
-        for i, line in enumerate(lines):
-            bbox = draw.textbbox((0, 0), line, font=font)
-            tw = bbox[2] - bbox[0]
+        space_bbox = draw.textbbox((0, 0), " ", font=font)
+        space_w = space_bbox[2] - space_bbox[0]
+        word_i = 0
+        for line in lines:
+            words = line.split(" ") if " " in line else [line]
+            word_widths = [draw.textbbox((0, 0), w, font=font)[2] for w in words]
+            total_w = sum(word_widths) + space_w * (len(words) - 1)
             # 강제로 쪼갠 글자 단위 조각이 그래도 max_w를 넘는 극단적인
             # 경우(글자 하나가 max_w보다 넓은 경우)엔 0으로 클램프해서
             # 캔버스 밖으로 삐져나가지 않게 합니다.
-            x = max(0, (width - tw) // 2)
-            color = self._text_colors[i % len(self._text_colors)]
-            draw.text(
-                (x, y), line, font=font, fill=color,
-                stroke_width=stroke_w, stroke_fill=(0, 0, 0, 255),
-            )
+            x = max(0, (width - total_w) // 2)
+            for w, ww in zip(words, word_widths):
+                color = self._text_colors[word_i % len(self._text_colors)]
+                draw.text(
+                    (x, y), w, font=font, fill=color,
+                    stroke_width=stroke_w, stroke_fill=(0, 0, 0, 255),
+                )
+                x += ww + space_w
+                word_i += 1
             y += line_h
 
         return img

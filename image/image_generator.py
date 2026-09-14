@@ -29,6 +29,7 @@ class ImageResult:
     error: Optional[str] = None
     elapsed: float = 0.0
     is_video: bool = False          # True면 image_path가 정지 이미지가 아니라 비디오 클립
+    source: str = ""                # "photo" | "ai" | "pixabay_video" | "pixabay_photo"
 
 
 class ImageGenerator:
@@ -127,6 +128,7 @@ class ImageGenerator:
                     image_path=str(dest),
                     prompt=scene.prompt,
                     success=True,
+                    source="photo",
                 )
 
             # 2) Worker가 미리 생성해둔 AI 이미지 (수채화/만화풍) — 대본 파싱
@@ -142,6 +144,7 @@ class ImageGenerator:
                         image_path=str(ai_path),
                         prompt=scene.prompt,
                         success=True,
+                        source="ai",
                     )
 
             # 3) Pixabay 비디오 (활성화 시 사진보다 우선 시도 — 검색 결과가 사진보다
@@ -166,6 +169,7 @@ class ImageGenerator:
                         prompt=scene.prompt,
                         success=True,
                         is_video=True,
+                        source="pixabay_video",
                     )
 
             # 4) Pixabay 사진 (비디오가 비활성화됐거나, 이 씬은 비디오 검색 결과가
@@ -189,6 +193,7 @@ class ImageGenerator:
                         image_path=str(pb_path),
                         prompt=scene.prompt,
                         success=True,
+                        source="pixabay_photo",
                     )
 
             if result is None:

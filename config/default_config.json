@@ -151,7 +151,7 @@
     "font_size_long": 140,
     "font_size_shorts": 125,
     "bg_color": [0, 0, 0],
-    "text_colors": [[255, 32, 32]],
+    "text_colors": [[255, 45, 45], [255, 214, 10], [50, 130, 255]],
     "quality": 95
   },
 
