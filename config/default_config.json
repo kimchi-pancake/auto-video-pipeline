@@ -31,6 +31,9 @@
   },
 
   "tts": {
+    "provider": "openai",
+    "openai_model": "gpt-4o-mini-tts",
+    "openai_default_voice": "onyx",
     "default_voice": "ko-KR-HyunsuMultilingualNeural",
     "default_rate": "+20%",
     "default_pitch": "+0Hz",
@@ -42,30 +45,35 @@
     "voices": {
       "나레이터": {
         "voice": "ko-KR-HyunsuMultilingualNeural",
+        "openai_voice": "onyx",
         "rate": "+18%",
         "pitch": "+0Hz",
         "volume": "+0%"
       },
       "남자1": {
         "voice": "ko-KR-InJoonNeural",
+        "openai_voice": "echo",
         "rate": "+20%",
         "pitch": "-5Hz",
         "volume": "+0%"
       },
       "여자1": {
         "voice": "ko-KR-SunHiNeural",
+        "openai_voice": "shimmer",
         "rate": "+20%",
         "pitch": "+5Hz",
         "volume": "+0%"
       },
       "남자2": {
         "voice": "ko-KR-InJoonNeural",
+        "openai_voice": "echo",
         "rate": "+25%",
         "pitch": "+0Hz",
         "volume": "+0%"
       },
       "여자2": {
         "voice": "ko-KR-SunHiNeural",
+        "openai_voice": "nova",
         "rate": "+15%",
         "pitch": "-3Hz",
         "volume": "+0%"
@@ -78,7 +86,7 @@
     "default_width": 1920,
     "default_height": 1080,
     "use_pixabay_video": true,
-    "ai_image_wait_timeout_sec": 90,
+    "ai_image_wait_timeout_sec": 240,
     "ai_image_poll_interval_sec": 15
   },
 

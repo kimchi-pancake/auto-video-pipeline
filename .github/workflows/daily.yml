@@ -25,7 +25,9 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 2026-09-14: 롱폼(10분 이상) 재도입으로 채널당 LLM 호출이 늘어남(콤보+분량
+    # 미달 시 extend 재시도 최대 2회+단독 쇼츠) — 30분으로는 빠듯해서 60분으로 늘림.
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 

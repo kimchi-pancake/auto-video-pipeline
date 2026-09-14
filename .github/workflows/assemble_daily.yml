@@ -67,6 +67,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
           IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/daily_generate.py
 
       # 렌더링은 성공했는데 유튜브 업로드만 실패하는 경우(자격증명 만료 등)가

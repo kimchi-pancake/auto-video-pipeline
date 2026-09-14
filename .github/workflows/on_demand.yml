@@ -62,6 +62,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
           IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/generate_topic.py --channel "${{ inputs.channel }}" --topic "${{ inputs.topic }}"
 
       - name: Commit updated registry

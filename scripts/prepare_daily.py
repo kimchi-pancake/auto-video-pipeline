@@ -2,10 +2,13 @@
 scripts/prepare_daily.py
 =========================
 "대본 생성" 전용 헤드리스 스크립트 — 설정에 등록된 모든 채널에 대해 하루치
-대본(채널당 쇼츠 3개, 2026-08-08부터 롱폼 없음 — 5개는 8/17까지 시험해봤는데
-하루에 몰아 올리면 서로 노출을 깎아먹는 게 조회수로 확인돼서 3개로 줄임)을
-Claude API로 생성해서
-queue/pending_scripts/{채널}/ 에 저장합니다.
+대본(채널당 롱폼 1개 + 쇼츠 2개)을 API로 생성해서 queue/pending_scripts/{채널}/
+에 저장합니다.
+
+2026-08-08~2026-09-14: 쇼츠 전용(long_count=0, 채널당 쇼츠 3개)으로 운영—
+하루에 몰아 올리면 서로 노출을 깎아먹는 게 조회수로 확인돼서 5개→3개로
+줄였던 시기. 2026-09-14: 사용자 지시로 롱폼(10분 이상, TOP10 리스트형 소재,
+AI 이미지) 위주로 다시 전환 — long_count=1, extra_shorts_count=1로 복귀.
 
 대본이 저장되는 순간(core/ai_script_generator.py의 save_story) Cloudflare
 Worker에 AI 씬 이미지 생성을 비동기로 요청해두므로, 이 스크립트는 대본
@@ -84,19 +87,16 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
         queue_dir = queue_dir_for_channel(name)
         topic = pop_topic(name, today)
         if topic:
-            # 2026-08-07: 롱폼을 끄고 쇼츠 전용(long_count=0)으로 바꾸면서, 예약된
-            # 주제를 강제할 대상(원래는 롱폼 콤보 호출)이 없어졌습니다. generate_shorts_only()는
-            # 주제를 안 받고 매번 스스로 고르므로, 예약 주제는 당장은 무시됩니다 —
-            # 필요해지면 generate_shorts_only에 topic 파라미터를 추가해야 합니다.
-            logger.warning("prepare_daily: '%s' 디스코드로 예약된 주제(%s)가 있지만, 쇼츠 전용 모드에서는 아직 반영되지 않습니다.", name, topic)
+            # generate_daily_batch의 콤보(롱폼+쇼츠) 호출은 custom_topic을 안 받고
+            # 있어서(generate_and_save에 channel만 넘기고 있음), 디스코드로 예약된
+            # 주제는 당장은 반영되지 않습니다 — 필요해지면 여기서 custom_topic=topic을
+            # generate_daily_batch에 넘기도록 연결해야 합니다.
+            logger.warning("prepare_daily: '%s' 디스코드로 예약된 주제(%s)가 있지만, 자동 생성에는 아직 반영되지 않습니다.", name, topic)
         try:
             meta_list: list[dict] = []
-            # 2026-08-07: 롱폼 중단, 쇼츠 전용으로 전환(30~40초 목표). 처음엔
-            # 채널당 5개씩 돌렸는데, 하루치 조회수 데이터를 보니 같은 채널이
-            # 같은 날 여러 개를 몰아 올리면 1~2개만 터지고 나머지는 조회수가
-            # 거의 안 나오는 패턴이 뚜렷해서(2026-08-17 확인), 채널당 3개로
-            # 줄였습니다.
-            saved = generate_daily_batch(queue_dir, channel=name, meta_out=meta_list, long_count=0, extra_shorts_count=3)
+            # 2026-09-14: 사용자 지시로 롱폼(10분 이상) 위주로 복귀 — 채널당
+            # 롱폼 1개 + 쇼츠 2개(콤보 호출의 쇼츠 1개 + 단독 쇼츠 1개).
+            saved = generate_daily_batch(queue_dir, channel=name, meta_out=meta_list, long_count=1, extra_shorts_count=1)
             logger.info("prepare_daily: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             for meta in meta_list:
                 logger.info(

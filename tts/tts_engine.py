@@ -1,9 +1,14 @@
 """
 tts/tts_engine.py
 =================
-Edge-TTS를 사용한 음성 합성 엔진.
+Edge-TTS 또는 OpenAI TTS를 사용한 음성 합성 엔진(config의 tts.provider로 선택).
 캐릭터별 보이스, 속도, 피치, 볼륨 설정 지원.
 병렬 생성 + 자동 재시도 지원.
+
+2026-09-14: Edge-TTS(무료)의 부자연스러움 때문에 tts.provider="openai"를
+추가했습니다 — OPENAI_API_KEY(.env)가 필요합니다. OpenAI TTS API는
+pitch/volume 파라미터가 없어서(속도만 조절 가능), rate("+20%" 같은 edge-tts
+표기)를 speed(0.25~4.0 배율)로 환산해서 씁니다.
 """
 
 from __future__ import annotations
@@ -16,10 +21,14 @@ from pathlib import Path
 from typing import Callable, Dict, List, Optional
 
 import edge_tts
+from dotenv import load_dotenv
+from openai import AsyncOpenAI
 
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+_ENV_PATH = Path(__file__).parent.parent / ".env"
 
 
 # ─────────────────────────────────────────────
@@ -80,6 +89,25 @@ class TTSEngine:
         self._max_workers = config.get("max_workers", 4)
         self._progress_callback = progress_callback
 
+        self._provider = config.get("provider", "edge")
+        self._openai_model = config.get("openai_model", "gpt-4o-mini-tts")
+        self._openai_default_voice = config.get("openai_default_voice", "onyx")
+        self._openai_client: Optional[AsyncOpenAI] = None
+        if self._provider == "openai":
+            load_dotenv(_ENV_PATH)
+            api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+            if not api_key:
+                # 키가 없다고 영상 생성 전체를 멈추면 안 됨(이 파이프라인의 기존
+                # 원칙 — AI 이미지도 NVIDIA가 죽으면 Pixabay로 조용히 폴백함) —
+                # Edge-TTS(무료, 키 불필요)로 조용히 내려가고 경고만 남깁니다.
+                logger.warning(
+                    "tts.provider=openai인데 OPENAI_API_KEY(.env)가 없습니다 — "
+                    "Edge-TTS로 폴백합니다."
+                )
+                self._provider = "edge"
+            else:
+                self._openai_client = AsyncOpenAI(api_key=api_key)
+
     def build_request(
         self,
         request_id: str,
@@ -89,12 +117,16 @@ class TTSEngine:
     ) -> TTSRequest:
         """화자 설정을 config에서 조회하여 TTSRequest를 생성합니다."""
         voice_cfg = self._voices.get(speaker, {})
+        if self._provider == "openai":
+            voice = voice_cfg.get("openai_voice", self._openai_default_voice)
+        else:
+            voice = voice_cfg.get("voice", self._default_voice)
         return TTSRequest(
             request_id=request_id,
             speaker=speaker,
             text=text,
             output_path=output_path,
-            voice=voice_cfg.get("voice", self._default_voice),
+            voice=voice,
             rate=voice_cfg.get("rate", self._default_rate),
             pitch=voice_cfg.get("pitch", self._default_pitch),
             volume=voice_cfg.get("volume", self._default_volume),
@@ -184,6 +216,13 @@ class TTSEngine:
         )
 
     async def _generate_once(self, req: TTSRequest) -> None:
+        """설정된 provider로 한 번 생성합니다."""
+        if self._provider == "openai":
+            await self._generate_once_openai(req)
+        else:
+            await self._generate_once_edge(req)
+
+    async def _generate_once_edge(self, req: TTSRequest) -> None:
         """Edge-TTS로 한 번 생성합니다."""
         communicate = edge_tts.Communicate(
             text=req.text,
@@ -193,6 +232,29 @@ class TTSEngine:
             volume=req.volume,
         )
         await communicate.save(req.output_path)
+
+    async def _generate_once_openai(self, req: TTSRequest) -> None:
+        """OpenAI TTS API로 한 번 생성합니다. pitch/volume은 이 API에 없어서
+        무시되고, rate만 speed로 환산해서 반영됩니다."""
+        speed = self._rate_to_speed(req.rate)
+        async with self._openai_client.audio.speech.with_streaming_response.create(
+            model=self._openai_model,
+            voice=req.voice,
+            input=req.text,
+            response_format="mp3",
+            speed=speed,
+        ) as response:
+            await response.stream_to_file(req.output_path)
+
+    @staticmethod
+    def _rate_to_speed(rate: str) -> float:
+        """edge-tts 스타일 rate 문자열("+20%")을 OpenAI TTS의 speed(0.25~4.0)로
+        환산합니다."""
+        try:
+            pct = float(rate.strip().rstrip("%"))
+        except (ValueError, AttributeError):
+            pct = 0.0
+        return max(0.25, min(4.0, 1.0 + pct / 100.0))
 
     @staticmethod
     def _get_audio_duration(path: str) -> float:
