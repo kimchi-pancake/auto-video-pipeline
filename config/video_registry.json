@@ -3716,5 +3716,65 @@
     "uploaded_at": "2026-09-13T16:15:39+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "mKoeUu3DPuw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음식 드시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-15T16:20:22+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "iL0nP66uXrU",
+    "channel": "웃짬",
+    "category": "관절근육",
+    "title": "무릎 연골 녹는 소리, 바로 이 순간 들립니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-15T16:20:52+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "k8ZQbh2kVnE",
+    "channel": "도개",
+    "category": "혈관혈압",
+    "title": "밤 10시 후 물은 혈관에 독이다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-15T16:25:23+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "jllVBQtJn9k",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이것 드시면 뇌졸중 위험이 2배입니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-15T16:26:05+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "u7NZhHZrLag",
+    "channel": "도개",
+    "category": "혈관혈압",
+    "title": "밤 10시 후 물은 혈관에 독이다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-15T16:47:15+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "-WqlRxmCbP4",
+    "channel": "웃짬",
+    "category": "관절근육",
+    "title": "무릎 연골 녹는 소리, 바로 이 순간 들립니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-15T16:52:39+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
