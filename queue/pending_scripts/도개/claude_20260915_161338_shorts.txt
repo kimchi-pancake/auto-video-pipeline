@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260915_161338_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+혈관혈압  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:
+밤 10시 후 물은 혈관에 독이다
+
+THUMBNAIL_SHORTS:
+밤 10시 후 물은 혈관에 독이다
+
+[SCENE:Korean elderly man drinking water from glass in dark room, clock shows 10:45 PM, 1080x1920]  
+나레이터: 이것 모르면 "혈압" 절대 "안 잡힙니다".&밤 10시 이후 물 한 잔, 혈관에 독이 됩니다.  
+
+[SCENE:elderly woman waking up at night to use bathroom, rubbing eyes, 1080x1920]  
+나레이터: 밤에 두 번 이상 화장실 가신 적 있나요?&이것이 바로 혈압이 요동치는 신호입니다.  
+
+[SCENE:illustration of blood pressure graph spiking at night, 1080x1920]  
+나레이터: 밤에 마신 물은 2~3시간 후 신장에서 처리되며&혈액량을 늘려 혈압을 다시 끌어올립니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean elderly woman setting phone timer labeled "last water 9 PM", 1080x1920]  
+나레이터: 매일 밤 9시 정각에 알람을 맞추고&그 후로는 물, 국물, 차 모두 멈추세요.&아침에는 미지근한 물을 200ml 이내로 천천히 마셔야 합니다.  
+
+[SCENE:elderly man checking blood pressure monitor showing 120/80, smiling, 1080x1920]  
+나레이터: 밤 9시 이후 물을 끊는 습관, 오늘 시작하셨나요?&댓글에 '시작'이라고만 적어주세요.

@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260915_161349_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 뇌가 썩습니다  
+
+THUMBNAIL_SHORTS:  
+이거 먹으면 치매 위험 3배  
+
+[SCENE:Korean senior couple eating white rice with side dishes, kitchen setting, 1080x1920]  
+나레이터: 밥을 매일 세 번 드신다면&이제부터 주의하셔야 합니다.  
+
+[SCENE:elderly Korean man checking memory on calendar, looking confused, 1080x1920]  
+나레이터: 최근 이름이 자주 생각나지 않거나&약속을 자주 잊으신 적 있으신가요?  
+
+[SCENE:animation of glucose molecules attacking brain cells, dark background, 1080x1920]  
+나레이터: 흰쌀은 소화되면서 급격히 당수치를 올립니다&이는 뇌세포 염증을 유발하고&치매 진행 속도를 높입니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대체 식단이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean senior woman serving brown rice and barley mix in bowl, 1080x1920]  
+나레이터: 하루 한 끼라도 흰쌀 대신 잡곡밥을 드세요&특히 아침은 현미·보리·귀리 조합이 뇌 건강에 최고입니다.&정확한 진단과 치료는 전문의와 상담하세요.  
+
+[SCENE:elderly Korean man writing comment on phone, close-up of screen with text input, 1080x1920]  
+나레이터: 오늘부터 잡곡밥 시작하시는 분&댓글에 ‘시작’이라고만 남겨주세요.
