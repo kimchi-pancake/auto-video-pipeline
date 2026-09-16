@@ -66,8 +66,21 @@ jobs:
             [ -f "$f" ] && git add "$f"
           done
           git diff --staged --quiet || git commit -m "queue daily scripts for assembly [skip ci]"
-          git pull --rebase --autostash
-          git push
+          # 2026-09-16: 롱폼 도입 후 대본 생성이 최대 18분까지 걸리게 되면서,
+          # 그동안 Worker가 AI 이미지를 계속 커밋해대는 통에 pull --rebase 직후
+          # push하는 그 짧은 틈에도 또 새 커밋이 껴들어와 push가 거절되는 사고가
+          # 실제로 한 번 발생(9/14, 대본 6개가 큐에 못 들어가 그날 업로드 0건).
+          # 실패해도 큐 파일은 로컬에 그대로 있으니 pull+push만 재시도하면
+          # 안전하게 해결됨 — 최대 5번, 짧은 대기 후 재시도.
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && break
+            echo "push 실패 (시도 $attempt/5) — 잠시 뒤 재시도"
+            sleep $((attempt * 3))
+            if [ "$attempt" = 5 ]; then
+              echo "::error::5번 재시도 후에도 push 실패 — 큐 커밋이 반영되지 않았습니다."
+              exit 1
+            fi
+          done
 
       # 2026-08-26: Worker가 "이미지 생성 끝날 때마다" 조립을 트리거하던 방식은
       # 경쟁 상태(race condition)가 있었습니다 — 채널당 대본 3개 중 첫 번째
