@@ -3776,5 +3776,65 @@
     "uploaded_at": "2026-09-15T16:52:39+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "usVa4yq631o",
+    "channel": "웃짬",
+    "category": "수면건강",
+    "title": "의사들이 조용히 지켜보는 그 증상",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-16T16:39:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "p4pmNRe_P9Q",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이거 드시면 \"간\" \"회복 불가\"합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-16T16:40:00+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "EFjQaWR7SUw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이걸 마신 후 3시간, 뇌경색 위험이 치솟는다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-16T17:22:59+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "n32yHLOe2N4",
+    "channel": "웃짬",
+    "category": "수면건강",
+    "title": "의사들이 조용히 지켜보는 그 증상",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-16T17:27:42+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "UifKTqrrIr0",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이걸 마신 후 3시간, 뇌경색 위험이 치솟는다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-16T17:28:50+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "a1snIK2sW7o",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이 음식 드시면 당뇨 옵니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-16T17:33:08+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
