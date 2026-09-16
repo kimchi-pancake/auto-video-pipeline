@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260916_163207_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+위험식품
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+이걸 마신 후 3시간, 뇌경색 위험이 치솟는다
+
+THUMBNAIL_SHORTS:
+이걸 마신 후 3시간, 뇌경색 위험이 치솟는다
+
+[SCENE:elderly Korean woman drinking sweet iced tea, 1080x1920]
+나레이터: 이것 모르면 "뇌" "회복 불가"합니다.&단 음료, 하루 한 잔이라도 당신의 뇌를 갉아먹고 있습니다.
+
+[SCENE:Korean elderly man looking at soda can with concern, 1080x1920]
+나레이터: “잠시 시원한 거 마셨다”고 생각하시죠?&그 음료가 마신 지 3시간 후 뇌혈관을 완전히 막습니다.
+
+[SCENE:animation of sugar entering bloodstream, 1080x1920]
+나레이터: 단 음료 속 설탕은 혈관 내벽을 공격해 염증을 일으킵니다.&이게 반복되면 혈관이 굳고, 뇌로 가는 피가 끊깁니다.
+
+[SCENE:Korean woman clutching head suddenly, 1080x1920]
+나레이터: 뇌경색은 갑자기 오지 않습니다.&단 음료를 마신 후 3시간, 이미 혈전이 형성되고 있습니다.
+
+[SCENE:elderly Korean man reading drink label, 1080x1920]
+나레이터: 많은 분들이 “나는 정상이니까 괜찮다”고 생각하지만, 혈관은 이미 손상되고 있습니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 뇌 보호 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:elderly woman pouring lemon into glass of water, 1080x1920]
+나레이터: 오늘부터 단 음료 대신 레몬 물을 마셔보세요.&아침과 저녁, 미온수에 레몬 한 조각 넣어 드시면 혈관 청소가 됩니다.
+
+[SCENE:elderly man discarding soda into trash can, 1080x1920]
+나레이터: 냉장고에서 단 음료를 먼저 치우세요.&이 작은 행동이 뇌경색 위험을 30% 줄입니다.
+
+[SCENE:Korean couple smiling while drinking water, 1080x1920]
+나레이터: 오늘 알려드린 세 가지 중, 어느 걸 먼저 실천해보실 계획이신가요?&댓글에 ‘1’ ‘2’ ‘3’ 중 하나만 적어주세요.

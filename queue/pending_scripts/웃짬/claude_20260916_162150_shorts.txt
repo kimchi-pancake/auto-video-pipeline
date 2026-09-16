@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260916_162150_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이 음식 드시면 당뇨 옵니다  
+
+THUMBNAIL_SHORTS:  
+이것 먹으면 당뇨 옵니다  
+
+[SCENE:Korean senior couple eating white rice with side dishes, kitchen background, 1080x1920]  
+나레이터: 하루 세 끼 흰밥 드신다면&당뇨로 가는 지름길입니다.  
+
+[SCENE:Korean man in his 60s checking blood sugar with glucometer, worried expression, 1080x1920]  
+나레이터: 자주 피로하고&물 자주 드시진 않으신가요?&이건 단순 피로가 아닙니다.  
+
+[SCENE:animation of blood sugar spiking after eating white rice, red graph rising, 1080x1920]  
+나레이터: 흰쌀은 소화되자마자 혈당을 폭발시킵니다.&인슐린이 과부하되고&췌장이 망가집니다.&근데 진짜 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대안 식단이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:Korean woman serving brown rice and barley mix in bowl, side view, 1080x1920]  
+나레이터: 오늘부터 백미 절반은 현미나 보리로 바꾸세요.&하루 한 끼만 바꿔도 혈당 부담이 확 줄어듭니다.&정확한 진단과 치료는 전문의와 상담하세요.  
+
+[SCENE:elderly man smiling while eating mixed grain rice, table setting, 1080x1920]  
+나레이터: 지금 바꾸면 췌장이 아직 살아납니다.&이 영상 보고 오늘 바로 밥을 바꾸실 분&댓글에 ‘1’만 남겨주세요.

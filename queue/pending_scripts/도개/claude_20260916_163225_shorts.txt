@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260916_163225_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:  
+이거 드시면 "간" "회복 불가"합니다  
+
+THUMBNAIL_SHORTS:  
+이 음식, 간을 녹입니다  
+
+[SCENE:Korean senior man drinking clear yellow liquid from a glass at dinner table, late evening, 1080x1920]  
+나레이터: 이것 모르면 "간" "이제 못 살립니다".&매일 드시는 그 술, 문제 아닙니다.
+
+[SCENE:Korean woman checking expired seasoning bottles in kitchen cabinet, 1080x1920]  
+나레이터: 국 끓일 때 넣는 그 건더기, 대부분 방치된 지 2년 넘었습니다.&이걸 매일 드시면 어떻게 될지 아세요?
+
+[SCENE:animation of liver tissue slowly turning damaged with red inflamed areas, 1080x1920]  
+나레이터: 이건 '산패된 기름'입니다.&고온에서 오래 된 식용유나 건조 식재료에선 나쁜 지방이 생기고&이게 간에 쌓여 '지방간'으로 직행합니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 식재료 목록이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:Korean senior couple discarding old cooking oil and dried fish in trash bin, 1080x1920]  
+나레이터: 첫째, 조리용 기름은 3개월마다 꼭 교체하세요.&둘째, 말린 멸치·김·나물은 냉동 보관하고 6개월 안에 드세요.&셋째, 냄새 좀 난다고 버리기 아까우면, 그게 바로 버려야 할 신호입니다.
+
+[SCENE:Korean senior man placing fresh vegetables and new oil bottle in kitchen shelf, smiling, 1080x1920]  
+나레이터: 오늘 버리신 분, 댓글에 '버림'이라고만 남겨주세요.&정확한 진단과 치료는 전문의와 상담하세요.
