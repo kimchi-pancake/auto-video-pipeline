@@ -43,6 +43,13 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+# 자막 세그먼트 하나가 화면에 안 끊기고 너무 길게 뜨는 걸 막는 상한선
+# (config/default_config.json의 subtitle.max_line_length와 같은 값). 대본은
+# "문장이 끝날 때마다 & 로 끊어라"라고 프롬프트에 못박아뒀지만, 롱폼처럼 씬 하나당
+# 대사가 훨씬 길어지면 모델이 & 를 빠뜨리는 경우가 실측으로 확인됨(2026-09-17) —
+# 프롬프트 준수에만 기대지 않고 코드에서도 최종 방어선을 둔다.
+_MAX_SEGMENT_CHARS = 30
+
 
 # ─────────────────────────────────────────────
 # 데이터 클래스 정의
@@ -398,9 +405,40 @@ class StoryParser:
 
     @staticmethod
     def _split_segments(text: str) -> List[str]:
-        """& 기준으로 대사를 자막 세그먼트로 분리합니다."""
+        """& 기준으로 대사를 자막 세그먼트로 분리합니다. 그러고도 한 세그먼트가
+        너무 길면(모델이 & 를 빠뜨린 경우) 공백 경계에서 추가로 쪼갭니다."""
         raw_segments = text.split("&")
-        return [seg.strip() for seg in raw_segments if seg.strip()]
+        segments: List[str] = []
+        for raw in raw_segments:
+            seg = raw.strip()
+            if seg:
+                segments.extend(StoryParser._wrap_long_segment(seg))
+        return segments
+
+    @staticmethod
+    def _wrap_long_segment(text: str, max_chars: int = _MAX_SEGMENT_CHARS) -> List[str]:
+        """공백(단어) 경계에서 잘라 조각마다 대략 max_chars 이내가 되게 합니다.
+        각 조각은 그대로 별도 TTS 세그먼트가 되므로(& 로 나눈 것과 동일하게
+        처리됨), 자막뿐 아니라 낭독도 자연스러운 호흡 단위로 끊깁니다. 공백이
+        없어 못 쪼개는 극단적인 경우엔 원문 그대로 반환합니다(억지로 글자
+        단위로 끊으면 더 어색하다)."""
+        if len(text) <= max_chars:
+            return [text]
+        words = text.split(" ")
+        if len(words) == 1:
+            return [text]
+        pieces: List[str] = []
+        current = ""
+        for word in words:
+            candidate = f"{current} {word}".strip()
+            if current and len(candidate) > max_chars:
+                pieces.append(current)
+                current = word
+            else:
+                current = candidate
+        if current:
+            pieces.append(current)
+        return pieces
 
     @staticmethod
     def _is_section_header(line: str) -> bool:
