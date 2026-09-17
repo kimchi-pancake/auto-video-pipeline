@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260917_160859_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+혈관혈압
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+새벽 3시 물 마신 분 계십니까? 지금 당장 멈춰야 합니다
+
+THUMBNAIL_SHORTS:
+새벽 3시 물 마신 분 계십니까? 지금 당장 멈춰야 합니다
+
+[SCENE:Korean elderly woman drinking water from glass at night, clock showing 3:00 AM, dim light, 1080x1920]
+나레이터: 이것 모르면 "혈압" "절대 잡히지" 않습니다.&새벽 3시, 물 한 잔 마시는 습관, 지금 당장 멈춰야 할 위험한 행동입니다.
+
+[SCENE:Korean elderly man looking at blood pressure monitor showing high reading, 1080x1920]
+나레이터: 아침에 혈압이 160이 넘는다구요?&밤에 물 마시는 습관, 그게 원인이었을 수 있습니다.&자주 깨서 마시시나요?
+
+[SCENE:animation of blood vessels constricting and pressure rising suddenly, 1080x1920]
+나레이터: 밤사이 혈관은 수축된 상태입니다.&갑자기 물을 마시면 혈액량이 늘어나고, 심장에 부담이 급증합니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:elderly woman placing glass of water on kitchen counter, not bedside, 1080x1920]
+나레이터: 첫째, 침대 옆에 물 두지 마세요.&둘째, 저녁 7시 이후 물은 200ml 이하로 줄이세요.&셋째, 아침 6시 이후에 첫 물 한 잔 마시세요.
+
+[SCENE:Korean elderly woman writing in a notebook: "No water after 10PM", 1080x1920]
+나레이터: 이 세 가지만 지켜도 혈압 조절이 완전히 달라집니다.&지금 바로 행동으로 옮기세요.
+
+[SCENE:elderly man looking at camera, hand raised as if asking a question, soft light, 1080x1920]
+나레이터: 오늘 밤부터 침대 옆 물잔 치우실 분, 댓글에 '멈춥니다'라고만 남겨주세요.
