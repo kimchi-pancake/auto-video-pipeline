@@ -9,6 +9,7 @@ Pillow를 사용해 썸네일(LONG 1280x720, SHORTS 1080x1920)을 생성합니�
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -18,6 +19,17 @@ from parser.story_parser import ThumbnailInfo
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+# 제목에서 "충격 키워드"를 찾아 항상 text_colors[0](기본 빨강)으로 강조합니다.
+# 나머지 단어는 text_colors[1:](기본 노랑/파랑)을 순환시킵니다 — 무작위로 3색을
+# 돌리면 정작 중요한 단어가 파랑으로 묻히는 경우가 많아서(2026-09-17 사용자
+# 피드백), 이 채널에서 실제로 반복 등장하는 위협 어휘를 기준으로 고정합니다.
+_KEYWORD_PATTERNS = [
+    "위험", "폭발", "썩", "녹습", "녹는", "망가", "독", "마비", "죽", "괴사",
+    "손상", "충격", "경고", "치명", "돌연사", "뇌졸중", "심장마비", "불가",
+    "최악", "심각", "악화", "터지", "터집", "무너", "막히", "터짐",
+]
+_KEYWORD_RE = re.compile("|".join(re.escape(p) for p in _KEYWORD_PATTERNS))
 
 
 class ThumbnailGenerator:
@@ -156,12 +168,23 @@ class ThumbnailGenerator:
         # 2026-09-14: 줄 단위가 아니라 "단어" 단위로 색을 바꿔가며 그립니다 —
         # 제목이 짧아서 줄이 1~2개뿐이면 줄 단위 순환으로는 거의 항상 단색으로
         # 보였는데(알록달록한 느낌이 안 남), 단어마다 바꾸면 짧은 제목에서도
-        # 빨/노/파가 확실히 섞여 보입니다. 줄이 바뀌어도 색 순환은 끊지 않고
-        # 이어갑니다(줄마다 항상 같은 색으로 시작하면 패턴이 반복돼 보임).
+        # 빨/노/파가 확실히 섞여 보입니다.
+        # 2026-09-17: 단순 순환이면 정작 중요한 단어가 파랑/노랑으로 묻히는
+        # 경우가 많다는 피드백 — "위험", "썩는다" 같은 충격 키워드는 항상
+        # text_colors[0](빨강)으로 고정하고, 나머지 단어만 text_colors[1:]을
+        # 순환시킵니다. 키워드가 하나도 없는 제목이면(드묾) 기존처럼 전체
+        # 순환으로 대체해 그래도 알록달록하게 나오게 합니다.
         stroke_w = max(2, size // 22)
         space_bbox = draw.textbbox((0, 0), " ", font=font)
         space_w = space_bbox[2] - space_bbox[0]
+
+        all_words = [w for line in lines for w in (line.split(" ") if " " in line else [line])]
+        has_keyword = any(_KEYWORD_RE.search(w) for w in all_words)
+        keyword_color = self._text_colors[0]
+        cycle_colors = self._text_colors[1:] or self._text_colors
+
         word_i = 0
+        cycle_i = 0
         for line in lines:
             words = line.split(" ") if " " in line else [line]
             word_widths = [draw.textbbox((0, 0), w, font=font)[2] for w in words]
@@ -171,7 +194,13 @@ class ThumbnailGenerator:
             # 캔버스 밖으로 삐져나가지 않게 합니다.
             x = max(0, (width - total_w) // 2)
             for w, ww in zip(words, word_widths):
-                color = self._text_colors[word_i % len(self._text_colors)]
+                if not has_keyword:
+                    color = self._text_colors[word_i % len(self._text_colors)]
+                elif _KEYWORD_RE.search(w):
+                    color = keyword_color
+                else:
+                    color = cycle_colors[cycle_i % len(cycle_colors)]
+                    cycle_i += 1
                 draw.text(
                     (x, y), w, font=font, fill=color,
                     stroke_width=stroke_w, stroke_fill=(0, 0, 0, 255),

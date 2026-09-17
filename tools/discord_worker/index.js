@@ -749,7 +749,12 @@ const _NVIDIA_IMAGE_MODEL = "black-forest-labs/flux.1-dev";
 // NVIDIA는 Pollinations와 달리 동시요청을 잘 버팁니다(실측: 8개 동시 요청 중
 // 7개 성공). 그래도 완전 무제한은 아니라서(가끔 429), 적당한 동시 개수로
 // 배치 처리하고 429/일시 오류는 짧게 재시도합니다(2026-08-19).
-const _IMAGE_CONCURRENCY = 4;
+// 2026-09-17: 롱폼(28씬 이상)이 기본이 되면서 채널당 씬 수가 6~7개→28개+로
+// 늘었는데, 4개씩 순차 배치로는 한 스크립트에만 7배치(각 배치가 재시도까지
+// 포함해 수십 초)가 필요해져 조립 쪽 대기시간(ai_image_wait_timeout_sec) 안에
+// 못 끝나는 씬이 실측으로 급증(29씬 중 4개만 성공 등). 8개로 늘려 배치 수를
+// 절반으로 줄임 — 원래 실측한 "8개 동시 7개 성공" 그 수치 그대로 씀.
+const _IMAGE_CONCURRENCY = 8;
 const _IMAGE_MAX_RETRIES = 3;
 const _IMAGE_RETRY_BASE_MS = 5000; // 5s, 10s, 20s
 
