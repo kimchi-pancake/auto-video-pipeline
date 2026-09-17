@@ -3836,5 +3836,65 @@
     "uploaded_at": "2026-09-16T17:33:08+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "PNifr1-_lrw",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "이 음료 마시면 뇌가 썩습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-17T16:15:03+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "yPWGuSJheRY",
+    "channel": "웃짬",
+    "category": "혈관혈압",
+    "title": "새벽 3시 물 마신 분 계십니까? 지금 당장 멈춰야 합니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-17T16:30:12+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "JS0ezbVnCCA",
+    "channel": "도개",
+    "category": "수면건강",
+    "title": "당신 오늘 밤 세 번 이상 깼나요?",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-17T16:31:21+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "6iXjr9Td_Sw",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "\"이 음식 드시면 치매 옵니다, 지금 당장 끊어야\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-17T16:46:11+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "VOdtUvwJW2Q",
+    "channel": "도개",
+    "category": "수면건강",
+    "title": "당신 오늘 밤 세 번 이상 깼나요?",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-17T17:01:08+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "CreJ9Jitwso",
+    "channel": "웃짬",
+    "category": "혈관혈압",
+    "title": "새벽 3시 물 마신 분 계십니까? 지금 당장 멈춰야 합니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-17T17:14:17+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
