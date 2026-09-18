@@ -299,7 +299,7 @@ img.cap{width:15px;height:15px;margin-right:-4px;opacity:.85}
         <button class="thm" id="thm">어두운 판면</button>
       </div>
       <button class="go" id="go">분석 시작</button>
-      <button class="linky" id="sample">예시 기보 넣기</button>
+      <button class="linky" id="sample">예시 기보로 해보기</button>
       <div class="err hidden" id="err"></div>
     </div>
   </section>
@@ -312,8 +312,8 @@ img.cap{width:15px;height:15px;margin-right:-4px;opacity:.85}
       <div class="sub2" id="pcount"></div>
       <div class="track"><i id="pbar"></i></div>
       <p class="hint hidden" id="pmode" style="color:var(--c-int)">이 환경은
-        WebAssembly가 막혀 있어 느린 대체 엔진으로 돌고 있습니다. 서너 배 오래 걸립니다 —
-        파일을 내려받아 브라우저에서 직접 열면 훨씬 빠릅니다.</p>
+        빠른 엔진을 쓸 수 없어 <b>느린 대체 엔진</b>으로 돌고 있습니다.
+        서너 배 오래 걸리지만 결과는 같습니다. 그대로 두시면 끝납니다.</p>
       <p class="hint">국면 하나씩 엔진에 물어보는 중입니다. 깊이를 올릴수록 정확해지지만
         시간이 더 걸립니다. 이 탭을 열어 두세요.</p>
       <p style="margin-top:18px"><button class="linky" id="cancel">취소</button></p>
@@ -2405,42 +2405,54 @@ function wasmAllowed(){
 }
 
 class Engine {
-  constructor(){ this.w = null; this.handlers = []; this.mode = null; }
-  async boot(){
-    this.mode = wasmAllowed() ? "wasm" : "asm";
-    const js = await gunzipB64(this.mode === "wasm" ? SF_WASM_GZ : SF_ASM_GZ);
-    /* 엔진 소스로 워커를 바로 만든다.
-       예전엔 부트스트랩 워커를 띄워 importScripts로 엔진을 불러왔는데,
-       file:// 로 열면 origin이 null이라 blob 워커가 다른 blob을 불러오지 못한다.
-       emscripten 워커 빌드는 원래 워커 스크립트로 직접 쓰도록 만들어져 있으니
-       중간 단계가 애초에 필요 없다. */
-    const jsUrl = URL.createObjectURL(new Blob([js], {type:"text/javascript"}));
-    return new Promise((res, rej) => {
-      let settled = false;
+  constructor(){ this.w = null; this.handlers = []; this.mode = null; this.why = ""; }
+
+  /* wasm이 허용돼 보여도 실제로 안 뜨는 환경이 있다(메모리 부족, data: 가져오기 차단 등).
+     그래서 짧게 기다려 보고 안 되면 말없이 asm.js로 갈아탄다. 느릴지언정 돌아간다. */
+  async boot(onNote){
+    if (wasmAllowed()){
+      try { await this._start("wasm", 15000); return; }
+      catch(e){
+        this.why = String(e && e.message || e);
+        this.kill();
+      }
+    } else {
+      this.why = "이 환경은 WebAssembly를 막고 있습니다.";
+    }
+    if (onNote) onNote(this.why);
+    await this._start("asm", 120000);
+  }
+
+  _start(mode, budget){
+    this.mode = mode;
+    return new Promise(async (res, rej) => {
+      let settled = false, t = null;
       const done = fn => (...a) => { if (!settled){ settled = true; clearTimeout(t); fn(...a); } };
       const ok = done(res), no = done(rej);
+      let js;
+      try { js = await gunzipB64(mode === "wasm" ? SF_WASM_GZ : SF_ASM_GZ); }
+      catch(e){ return no(e); }
       try {
-        this.w = new Worker(jsUrl);
+        this.w = new Worker(URL.createObjectURL(new Blob([js], {type:"text/javascript"})));
       } catch(e){
         return no(new Error("이 환경이 백그라운드 작업(Worker) 생성을 막고 있습니다. "
                           + "(" + (e.message || e) + ")"));
       }
-      this.w.onerror = e => no(new Error(e.message || "엔진을 시작하지 못했습니다"));
+      this.w.onerror = e => no(new Error(e.message || "엔진 내부 오류"));
       this.w.onmessage = e => {
-        const t = typeof e.data === "string" ? e.data : (e.data && e.data.data) || "";
-        this.handlers.forEach(h => h(t));
+        const t2 = typeof e.data === "string" ? e.data : (e.data && e.data.data) || "";
+        this.handlers.forEach(h => h(t2));
       };
-      const onBoot = t => {
-        if (t.indexOf("uciok") < 0) return;
+      const onBoot = t2 => {
+        if (t2.indexOf("uciok") < 0) return;
         this.off(onBoot); this.send("setoption name MultiPV value 2"); ok();
       };
       this.on(onBoot);
       this.send("uci");
-      const t = setTimeout(() => no(new Error(
-        this.mode === "asm"
-          ? "엔진이 시간 안에 뜨지 않았습니다. 이 환경은 WebAssembly가 막혀 있어 "
-          + "느린 대체 엔진을 쓰는데, 그마저 준비되지 않았습니다."
-          : "엔진이 시간 안에 뜨지 않았습니다.")), 90000);
+      t = setTimeout(() => no(new Error(
+        mode === "wasm" ? "빠른 엔진이 뜨지 않았습니다."
+                        : "엔진이 시간 안에 뜨지 않았습니다. 이 환경에서는 내장 엔진을 "
+                        + "띄울 수 없습니다. 다른 브라우저에서 열어 보세요.")), budget);
     });
   }
   on(h){ this.handlers.push(h); }
@@ -3179,22 +3191,16 @@ function stopPlay(){ if (timer){ clearInterval(timer); timer = null;
   $("#play").setAttribute("aria-pressed","false"); $("#play").textContent = "재생"; } }
 </script>
 <script>/* ══ 화면 전환과 배선 ═══════════════════════════════════════ */
-const SAMPLE = `[Event "tequila-soda vs cijeonchesspro"]
-[Site "Chess.com"]
-[Date "2026-09-18"]
-[White "tequila-soda"]
-[Black "cijeonchesspro"]
-[Result "0-1"]
-[WhiteElo "204"]
-[BlackElo "299"]
-[TimeControl "600"]
+const SAMPLE = `[Event "Paris Opera"]
+[Site "Paris"]
+[Date "1858.??.??"]
+[White "Paul Morphy"]
+[Black "Duke of Brunswick and Count Isouard"]
+[Result "1-0"]
 
-1. e4 c5 2. f3 Nc6 3. Bb5 Ne5 4. d3 a6 5. Bc4 Nf6 6. g3 Qa5+ 7. c3 g5 8. f4 gxf4
-9. gxf4 Neg4 10. h3 Nh6 11. Nf3 Bg7 12. e5 O-O 13. exf6 Bxf6 14. b4 cxb4 15.
-cxb4 Qxb4+ 16. Nfd2 Bh4+ 17. Kf1 Nf5 18. Rg1+ Kh8 19. a3 Ne3+ 20. Ke2 Qc5 21.
-Qa4 Qh5+ 22. Kxe3 b5 23. Bb2+ f6 24. Bxb5 axb5 25. Qxa8 d5 26. Qa7 Re8 27. Qc7
-Bxh3 28. Nc3 h6 29. Nxd5 Qxd5 30. Rg6 Kh7 31. Rxf6 Qg2 32. Rf7+ Kg6 33. Rxe7
-Rxe7+ 34. Qxe7 Bxe7 35. Ne4 Qxb2 0-1`;
+1. e4 e5 2. Nf3 d6 3. d4 Bg4 4. dxe5 Bxf3 5. Qxf3 dxe5 6. Bc4 Nf6 7. Qb3 Qe7
+8. Nc3 c6 9. Bg5 b5 10. Nxb5 cxb5 11. Bxb5+ Nbd7 12. O-O-O Rd8 13. Rxd7 Rxd7
+14. Rd1 Qe6 15. Bxd7+ Nxd7 16. Qb8+ Nxb8 17. Rd8# 1-0`;
 
 const show = id => ["s-input","s-prog","s-rev"].forEach(s =>
   document.getElementById(s).classList.toggle("hidden", s !== id));
@@ -3202,7 +3208,7 @@ const showErr = msg => { const e = $("#err");
   e.innerHTML = `<b>분석할 수 없습니다.</b> ${msg}`; e.classList.remove("hidden"); };
 
 let engine = null, cancelled = false;
-const LS_PGN = "chessreview.pgn", LS_THEME = "chessreview.theme";
+const LS_THEME = "chessreview.theme";
 
 async function run(){
   const pgn = $("#pgn").value.trim();
@@ -3217,7 +3223,6 @@ async function run(){
     + "확인해 주세요. (" + String(e.message || e).slice(0,120) + ")"); }
   if (!probe.history().length) return showErr("기보에 수가 하나도 없습니다.");
 
-  try { localStorage.setItem(LS_PGN, pgn); } catch(e){}
   cancelled = false;
   const h = probe.header();
   $("#pname").textContent = (h.White || "백") + " – " + (h.Black || "흑");
@@ -3228,9 +3233,8 @@ async function run(){
 
   try {
     engine = new Engine();
-    await engine.boot();
+    await engine.boot(() => $("#pmode").classList.remove("hidden"));
     $("#pstat").textContent = "국면을 분석하고 있습니다";
-    $("#pmode").classList.toggle("hidden", engine.mode !== "asm");
     const t0 = performance.now();
     const data = await analysePgn(pgn, depth, engine,
       (i, n) => {
@@ -3241,6 +3245,7 @@ async function run(){
           + (i > 2 ? `   남은 시간 약 ${left}초` : "");
       },
       () => cancelled);
+    window.engineMode = engine.mode;
     engine.kill(); engine = null;
     DATA = data; idx = -1;
     show("s-rev");
@@ -3313,7 +3318,7 @@ document.addEventListener("keydown", e => {
 /* 기본은 밝은 판면. 저장된 선택만 따른다 */
 let savedTheme = null; try { savedTheme = localStorage.getItem(LS_THEME); } catch(e){}
 setTheme(savedTheme === "dark" ? "dark" : "light");
-try { const p = localStorage.getItem(LS_PGN); if (p) $("#pgn").value = p; } catch(e){}
+try { localStorage.removeItem("chessreview.pgn"); } catch(e){}   /* 예전에 저장해 둔 기보를 지운다 */
 </script>
 </body>
 </html>
