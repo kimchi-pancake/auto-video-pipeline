@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260918_160902_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+수면건강
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+외국에서도 난리난 수면 중 물 섭취
+
+THUMBNAIL_SHORTS:
+외국에서도 난리난 수면 중 물 섭취
+
+[SCENE:elderly Korean man reaching for water glass at night, dark room, 1080x1920]
+나레이터: 이걸 모르면 "뇌" "이제 못 막습니다".
+
+[SCENE:elderly woman waking up at night, holding head, 1080x1920]
+나레이터: 밤에 물 마시는 분들,&잠 깨면 한 잔씩 마시는 습관,&지금 당장 멈춰야 합니다.
+
+[SCENE:animation of brain with toxic buildup, 1080x1920]
+나레이터: 수면 중 물 섭취는 뇌 해독을 방해합니다.&밤 11시부터 새벽 2시까지 뇌는 노폐물을 씻어냅니다.&이 시간에 깨면 독소가 뇌에 그대로 남습니다.
+
+[SCENE:elderly man checking clock showing 2 AM, 1080x1920]
+나레이터: 성인 10명 중 8명이 밤에 물을 마십니다.&하지만 이 습관이 뇌를 서서히 녹입니다.&지금부터라도 멈춰야 손 쓸 수 있습니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:elderly woman drinking water at 6 PM, clock visible, 1080x1920]
+나레이터: 해결법은 간단합니다.&첫째, 물은 오후 7시 전에 끝내세요.&둘째, 침대 옆 물은 제거하세요.&셋째, 실내 습도 50% 유지하세요.
+
+[SCENE:elderly man placing glass away from bed, 1080x1920]
+나레이터: 오늘 내용 정리합니다.&밤에 물 마시면 뇌 해독이 멈춥니다.&지금 당장 고쳐야 할 습관입니다.
+
+[SCENE:elderly woman looking at camera, asking question, 1080x1920]
+나레이터: 오늘부터 침대 옆 물 없이 잘 수 있겠습니까?&댓글에 "할 수 있다" 또는 "못 하겠다"만 적어주세요.
