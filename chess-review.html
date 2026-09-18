@@ -2358,18 +2358,21 @@ class Engine {
   async boot(){
     this.mode = wasmAllowed() ? "wasm" : "asm";
     const js = await gunzipB64(this.mode === "wasm" ? SF_WASM_GZ : SF_ASM_GZ);
+    /* 엔진 소스로 워커를 바로 만든다.
+       예전엔 부트스트랩 워커를 띄워 importScripts로 엔진을 불러왔는데,
+       file:// 로 열면 origin이 null이라 blob 워커가 다른 blob을 불러오지 못한다.
+       emscripten 워커 빌드는 원래 워커 스크립트로 직접 쓰도록 만들어져 있으니
+       중간 단계가 애초에 필요 없다. */
     const jsUrl = URL.createObjectURL(new Blob([js], {type:"text/javascript"}));
     return new Promise((res, rej) => {
       let settled = false;
       const done = fn => (...a) => { if (!settled){ settled = true; clearTimeout(t); fn(...a); } };
       const ok = done(res), no = done(rej);
       try {
-        const boot = `self.onmessage=function(e){if(e.data&&e.data.__boot){`
-                   + `importScripts(e.data.js);}};`;
-        this.w = new Worker(URL.createObjectURL(new Blob([boot], {type:"text/javascript"})));
+        this.w = new Worker(jsUrl);
       } catch(e){
         return no(new Error("이 환경이 백그라운드 작업(Worker) 생성을 막고 있습니다. "
-                          + "파일을 내려받아 브라우저에서 직접 열면 동작합니다."));
+                          + "(" + (e.message || e) + ")"));
       }
       this.w.onerror = e => no(new Error(e.message || "엔진을 시작하지 못했습니다"));
       this.w.onmessage = e => {
@@ -2381,7 +2384,6 @@ class Engine {
         this.off(onBoot); this.send("setoption name MultiPV value 2"); ok();
       };
       this.on(onBoot);
-      this.w.postMessage({__boot:true, js:jsUrl});
       this.send("uci");
       const t = setTimeout(() => no(new Error(
         this.mode === "asm"
