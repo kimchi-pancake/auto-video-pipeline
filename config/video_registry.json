@@ -3896,5 +3896,25 @@
     "uploaded_at": "2026-09-17T17:14:17+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "lEdZIQGGcG0",
+    "channel": "웃짬",
+    "category": "수면건강",
+    "title": "외국에서도 난리난 수면 중 물 섭취",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-18T16:26:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "lDK4N3h_SIc",
+    "channel": "웃짬",
+    "category": "수면건강",
+    "title": "외국에서도 난리난 수면 중 물 섭취",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-18T17:02:21+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
