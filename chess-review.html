@@ -2440,9 +2440,18 @@ function classify(r){
     if (drop <= 8)      return ["plain", drop];
     return ["dubious", drop];
   }
-  if (matedAfter && !r.is_best)                return ["blunder", drop];
-  if (hadMate && !keepsMate && !r.is_best)
-    return [r.played_cp < 300 ? "blunder" : "mistake", drop];
+  /* 메이트를 허용한 건, 그 전까지 버틸 만했을 때에만 블런더다.
+     이미 크게 진 국면에서 메이트가 생기는 건 그 수의 잘못이 아니다.
+     또 이런 경우 승률은 이미 바닥이라 손실이 0에 가깝게 나오므로,
+     이름과 점수가 어긋나지 않도록 손실에 최소값을 준다. */
+  if (matedAfter && !r.is_best && r.best_cp > -600)
+    return ["blunder", Math.max(drop, 25)];
+  /* 메이트를 놓쳤어도 여전히 압도적으로 이기고 있으면 벌하지 않는다.
+     룩을 앞선 채 M12 대신 +9를 두는 건 실수가 아니라 조금 느린 것뿐이다. */
+  if (hadMate && !keepsMate && !r.is_best){
+    if (r.played_cp < 300) return ["blunder", Math.max(drop, 18)];
+    if (r.played_cp < 800) return ["mistake", Math.max(drop, 12)];
+  }
   if (hadMate && keepsMate)                    return [r.is_best ? "great" : "plain", drop];
   if (r.is_best){
     const hard = r.sac >= 150 ||
@@ -2558,9 +2567,38 @@ function prettyTC(tc){
   return base + (inc ? " +" + inc + "초" : "");
 }
 
+/* 붙여 넣은 PGN을 chess.js가 받아들이는 모양으로 다듬는다.
+   Chess.com에서 복사하면 헤더와 수순 사이 빈 줄이 없는데,
+   그대로 넘기면 헤더를 수로 읽으려다 실패한다. */
+function normalizePgn(raw){
+  const lines = String(raw).replace(/\r\n?/g, "\n").trim().split("\n");
+  const head = [], body = [];
+  let inHead = true;
+  for (const ln of lines){
+    if (inHead && /^\s*\[[^\]]*\]\s*$/.test(ln)){ head.push(ln.trim()); continue; }
+    if (!inHead && body.length && /^\s*\[Event\b/.test(ln)) break;   // 두 번째 대국은 버린다
+    inHead = false;
+    body.push(ln);
+  }
+  const movetext = body.join("\n").trim();
+  if (!movetext) return head.join("\n");
+  return head.length ? head.join("\n") + "\n\n" + movetext : movetext;
+}
+/* 헤더가 깨져 있어도 수순만 살아 있으면 읽어 준다 */
+function loadAnyPgn(raw){
+  const cleaned = normalizePgn(raw);
+  try { const c = new Chess(); c.loadPgn(cleaned); return c; }
+  catch(first){
+    const movetext = cleaned.replace(/^\s*\[[^\]]*\]\s*$/gm, "").trim();
+    if (movetext && movetext !== cleaned){
+      try { const c = new Chess(); c.loadPgn(movetext); return c; } catch(e){}
+    }
+    throw first;
+  }
+}
+
 async function analysePgn(pgn, depth, engine, onProgress, shouldStop){
-  const game = new Chess();
-  game.loadPgn(pgn);                                   // 실패하면 예외
+  const game = loadAnyPgn(pgn);                        // 실패하면 예외
   const header  = game.header();
   const verbose = game.history({verbose:true});
   if (!verbose.length) throw new Error("기보에 수가 없습니다.");
@@ -2903,7 +2941,7 @@ async function run(){
 
   /* 기보부터 검사해서, 엔진을 띄우기 전에 잘못된 입력을 걸러낸다 */
   let probe;
-  try { probe = new Chess(); probe.loadPgn(pgn); }
+  try { probe = loadAnyPgn(pgn); }
   catch(e){ return showErr("PGN을 읽지 못했습니다. 헤더와 수순을 그대로 복사했는지 "
     + "확인해 주세요. (" + String(e.message || e).slice(0,120) + ")"); }
   if (!probe.history().length) return showErr("기보에 수가 하나도 없습니다.");
