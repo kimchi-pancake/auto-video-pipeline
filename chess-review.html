@@ -196,6 +196,42 @@ body{background:var(--paper);color:var(--ink);font-family:var(--serif);
 kbd{font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--rule2);padding:0 2px}
 
 
+/* ── 보드 레이어 (기물 노드를 유지해야 전환이 살아난다) ── */
+.lay{position:absolute;inset:0}
+#pieces{z-index:3} #marks{z-index:5;pointer-events:none}
+.pc{position:absolute;width:12.5%;height:12.5%;background-size:88%;
+  background-repeat:no-repeat;background-position:center;opacity:1;
+  transition:left .22s cubic-bezier(.3,.75,.25,1),
+             top  .22s cubic-bezier(.3,.75,.25,1), opacity .18s linear}
+.pc.fade{opacity:0}
+.board.noanim .pc{transition:none}
+
+/* ── 권장 수순 ── */
+.linkmv{background:none;border:0;border-bottom:1px solid var(--c-great);
+  color:var(--c-great);font-family:var(--serif);font-weight:700;font-size:inherit;
+  cursor:pointer;padding:0 1px;transition:background .14s cubic-bezier(.2,.6,.2,1)}
+.linkmv:hover{background:var(--panel)}
+.pvbar{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:12px;
+  padding:9px 12px;background:var(--panel);border-left:3px solid var(--c-great);
+  font-size:13.5px;color:var(--ink2)}
+.pvbar .pvlab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--c-great);font-weight:700;white-space:nowrap}
+.pvbar #pvtxt{font-family:var(--serif);font-weight:600;color:var(--ink)}
+.pvbar .linky{margin-left:auto}
+
+/* ── 잡은 기물 ── */
+.caps{display:inline-flex;align-items:center;gap:0;margin-left:9px;vertical-align:middle}
+img.cap{width:15px;height:15px;margin-right:-4px;opacity:.85}
+.caps .lead{font-family:var(--mono);font-size:11px;color:var(--ink3);
+  margin-left:9px;font-weight:500}
+
+/* ── 읽는 법 ── */
+.howto{columns:2;column-gap:34px;column-rule:1px solid var(--rule)}
+@media(max-width:760px){.howto{columns:1}}
+.howto p{break-inside:avoid;font-size:13.5px;line-height:1.75;color:var(--ink2);
+  margin-bottom:12px}
+.howto b{color:var(--ink);font-weight:600}
+
 /* ── 입력 화면 ── */
 .intro{max-width:760px}
 .intro .lead{font-size:15px;color:var(--ink2);line-height:1.8;margin:18px 0 22px}
@@ -311,6 +347,11 @@ kbd{font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--rule2);
           <button id="arrow" aria-pressed="true">권장수</button>
           <span class="spacer"></span><span class="read" id="read"></span>
         </nav>
+        <div class="pvbar hidden" id="pv">
+          <span class="pvlab">권장 수순</span>
+          <span id="pvtxt"></span>
+          <button class="linky" id="pvstop">되돌리기</button>
+        </div>
         <div class="now" id="now"></div>
       </div>
       <div class="gutter"></div>
@@ -325,6 +366,16 @@ kbd{font-family:var(--mono);font-size:11px;border-bottom:1px solid var(--rule2);
         <table class="leg"><thead><tr><th class="s"></th><th class="n">이름</th>
           <th>뜻</th><th class="c">백</th><th class="c">흑</th></tr></thead>
           <tbody id="leg"></tbody></table></section>
+      <section class="band"><h2>읽는 법</h2>
+        <div class="howto">
+          <p><b>정확도</b>는 100에 가까울수록 엔진이 고른 수에 가깝게 뒀다는 뜻입니다.
+             초보 대국에서 40~60이면 흔한 수치입니다.</p>
+          <p><b>+1.5 / 흑 +3.0</b> 같은 숫자는 폰 몇 개만큼 유리한지를 나타냅니다.
+             0.0이면 팽팽, 3 이상이면 보통 승부가 기울었다고 봅니다.
+             <b>메이트</b>는 상대 킹을 강제로 잡아내는 길이 있다는 뜻입니다.</p>
+          <p>나쁜 수 옆의 <b>대신 ○○ ▶</b>를 누르면 엔진이 권한 수순을
+             보드에서 그대로 재생해 보여 줍니다.</p>
+        </div></section>
       <p class="colophon"><span id="colo"></span> 기물은 Cburnett 세트.<br>
         <kbd>←</kbd> <kbd>→</kbd> 이동 · <kbd>Home</kbd> <kbd>End</kbd> 처음과 끝 ·
         <kbd>F</kbd> 뒤집기 · <kbd>Space</kbd> 재생</p>
@@ -2489,78 +2540,109 @@ function classify(r){
   if (r.is_best){
     const hard = r.sac >= 150 ||
                  (gap !== null && gap >= 300 && r.nlegal >= 10 && !r.is_cap);
-    if (hard && drop <= 1 && Math.abs(r.best_cp) < 9000) return ["brilliant", drop];
+    /* 이미 크게 지고 있는데 "가장 덜 나쁜 수"를 찾은 것은 탁월수가 아니다 */
+    if (hard && drop <= 1 && r.best_cp > -200 && Math.abs(r.best_cp) < 9000)
+      return ["brilliant", drop];
     return ["great", drop];
   }
-  if (drop <= 4 && sharp) return ["interesting", drop];
+  /* 이미 승부가 결정된 국면에서는 기물 교환마다 !? 가 붙어 의미가 없어진다 */
+  if (drop <= 4 && sharp && Math.abs(r.best_cp) < 500) return ["interesting", drop];
   if (drop <= 5)          return ["plain", drop];
   if (drop <= 10)         return ["dubious", drop];
   if (drop <= 20)         return ["mistake", drop];
   return ["blunder", drop];
 }
 
-/* ══ 자동 해설 ══════════════════════════════════════════════ */
-/* 모든 평가는 백 기준으로 바꿔서 말한다 */
-function wSide(cp, mover){ return mover === "w" ? cp : -cp; }
-function evalWord(cp, mate, mover){
-  if (mate !== null && mate !== undefined){
-    const m = wSide(mate, mover);
-    return (m > 0 ? "백" : "흑") + " 메이트";
-  }
-  const w = wSide(cp, mover) / 100;
-  if (Math.abs(w) < 0.2) return "±0.0";
-  return (w > 0 ? "백 +" : "흑 +") + Math.abs(w).toFixed(1);
+/* ══ 자동 해설 ═══════════════════════════════════════════════
+   먼저 사람 말로 무슨 일이 일어났는지, 그다음에 숫자.
+   초보는 앞부분만 읽어도 되고, 고수는 뒤의 평가와 수순을 본다. */
+const PIECE_KO = {p:"폰", n:"나이트", b:"비숍", r:"룩", q:"퀸", k:"킹"};
+/* 받침에 따라 을/를을 고른다 — "비숍를"이 되지 않도록 */
+function eul(w){
+  const c = w.charCodeAt(w.length - 1) - 0xAC00;
+  return w + (c >= 0 && c <= 11171 && c % 28 !== 0 ? "을" : "를");
 }
-function swingWord(r){
-  const a = evalWord(r.best_cp,   r.mate_best,  r.color);
-  const b = evalWord(r.played_cp, r.mate_after, r.color);
-  return a === b ? "" : `${a}에서 ${b}로 넘어갔습니다.`;
+const wSide = (cp, mover) => mover === "w" ? cp : -cp;
+
+function evalWord(cp, mate, mover){
+  if (mate !== null && mate !== undefined)
+    return (wSide(mate, mover) > 0 ? "백" : "흑") + " 메이트";
+  const w = wSide(cp, mover) / 100;
+  if (Math.abs(w) < 0.2) return "0.0";
+  return (w > 0 ? "백 +" : "흑 +") + Math.abs(w).toFixed(1);
 }
 function standWord(r){
   const w = wSide(r.played_cp, r.color) / 100;
-  if (Math.abs(w) < 0.5) return "국면은 팽팽합니다.";
-  if (Math.abs(w) < 1.5) return (w > 0 ? "백" : "흑") + "이 조금 앞섭니다.";
-  if (Math.abs(w) < 3.5) return (w > 0 ? "백" : "흑") + "이 확실히 앞섭니다.";
-  return (w > 0 ? "백" : "흑") + "이 이기는 국면입니다.";
+  const who = w > 0 ? "백" : "흑";
+  if (Math.abs(w) < 0.5) return "국면은 아직 팽팽합니다.";
+  if (Math.abs(w) < 1.5) return who + "이 조금 낫습니다.";
+  if (Math.abs(w) < 3.5) return who + "이 확실히 앞섭니다.";
+  if (Math.abs(w) < 8)   return who + "이 이기는 국면입니다.";
+  return who + "의 승리가 사실상 확정입니다.";
+}
+/* 이 수가 왜 나쁜지를 구체적으로 — 기물을 잃는지, 상대가 뭘로 받는지 */
+function whyBad(r){
+  const opp = r.color === "w" ? "흑" : "백";
+  if (r.loses && VAL[r.loses] >= 300)
+    return `${opp}이 <b>${r.reply_pv[0]}</b>로 ${eul(PIECE_KO[r.loses])} 가져갑니다.`;
+  if (r.sac >= 300) return `${PIECE_KO[r.loses] || "기물"}이 그냥 잡힙니다.`;
+  if (r.sac >= 150) return "기물 손해를 피할 수 없게 됩니다.";
+  if (r.loses)      return `${opp}이 <b>${r.reply_pv[0]}</b>로 받으면 폰을 잃습니다.`;
+  /* 잃는 게 없으면 굳이 상대 수를 들먹이지 않는다.
+     무엇을 뒀어야 했는지는 바로 아래 "대신 ○○"가 말해 준다. */
+  return "";
 }
 function comment(r){
-  const other = r.color === "w" ? "흑" : "백";
-  const me    = r.color === "w" ? "백" : "흑";
-  const bits  = [];
+  const opp = r.color === "w" ? "흑" : "백";
+  const me  = r.color === "w" ? "백" : "흑";
   const matedAfter = r.mate_after !== null && r.mate_after < 0;
   const hadMate    = r.mate_best  !== null && r.mate_best  > 0;
   const keepsMate  = r.mate_after !== null && r.mate_after > 0;
   const bad = ["dubious","mistake","blunder"].indexOf(r.cls) >= 0;
+  const head = [], tail = [];
 
+  if (r.cls === "forced")
+    return "이 국면에서 <b>둘 수 있는 수가 이것 하나뿐</b>입니다. "
+         + "선택의 여지가 없으니 좋고 나쁨을 따지지 않습니다.";
+
+  /* ① 무슨 일이 일어났는지 */
+  const alreadyLost = r.best_cp <= -600;
+  if (matedAfter && !alreadyLost)
+    head.push(`이 수로 <b>${opp}에게 외통(메이트)까지 가는 길</b>이 열렸습니다. `
+            + `막을 방법이 없습니다.`);
+  else if (matedAfter)
+    head.push(`이미 되돌리기 어려운 국면이라, 어떤 수를 둬도 결과는 크게 달라지지 않습니다.`);
+  else if (hadMate && !keepsMate)
+    head.push(bad
+      ? `<b>외통으로 끝낼 기회를 놓쳤습니다.</b> 직전 국면에서 ${me}은 `
+        + `상대 킹을 강제로 잡아낼 수 있었습니다.`
+      : `더 빨리 외통으로 끝내는 길이 있었지만, ${me}이 이기는 데에는 지장이 없습니다.`);
+  else if (keepsMate)
+    head.push("외통으로 몰아가는 수순을 그대로 이어갑니다.");
+  else if (bad){
+    const w = whyBad(r);
+    if (w) head.push(w);
+  }
+
+  /* ② 등급의 뜻 */
   switch (r.cls){
-    case "forced":
-      return "<b>둘 수 있는 수가 이것 하나뿐</b>입니다. 관례대로 평가하지 않습니다.";
     case "brilliant":
-      bits.push(r.sac >= 150
-        ? "<b>기물을 내주면서 그보다 큰 것을 얻는 수</b>입니다. 눈앞의 손해만 보면 두기 어려운 수예요."
-        : "<b>우위를 지키는 사실상 유일한 길</b>이고, 정확히 그 수를 찾았습니다.");
+      head.unshift(r.sac >= 150
+        ? "<b>기물을 내주고 그보다 큰 것을 얻는 수</b>입니다. 손해처럼 보여서 찾기 어렵습니다."
+        : "<b>국면을 지탱하는 사실상 유일한 길</b>을 정확히 찾았습니다. "
+          + "다른 수는 모두 무너집니다.");
       break;
-    case "great":       bits.push("엔진이 꼽은 <b>최선의 수</b>입니다."); break;
-    case "interesting": bits.push("최선은 아니지만 <b>국면을 날카롭게 이끄는 수</b>입니다."); break;
-    case "plain":       bits.push("무난합니다."); break;
-    case "dubious":     bits.push("<b>부정확합니다.</b>"); break;
-    case "mistake":     bits.push("<b>실수입니다.</b>"); break;
-    case "blunder":     bits.push("<b>블런더입니다.</b>"); break;
+    case "great":       head.unshift("엔진이 꼽은 <b>최선의 수</b>입니다."); break;
+    case "interesting": head.unshift("최선은 아니지만 <b>국면을 날카롭게 만드는 수</b>입니다."); break;
+    case "plain":       head.unshift("무난합니다. 손해 없이 계획을 이어갑니다."); break;
+    case "dubious":     head.unshift("<b>조금 부정확합니다.</b>"); break;
+    case "mistake":     head.unshift("<b>실수입니다.</b>"); break;
+    case "blunder":     head.unshift("<b>큰 실수입니다.</b>"); break;
   }
-  if (matedAfter){
-    bits.push(`이 수로 <b>${other}에게 강제 메이트</b>가 생깁니다.`);
-  } else if (hadMate && !keepsMate){
-    bits.push(`<b>강제 메이트를 놓쳤습니다.</b> 직전 국면에서 ${me}은 메이트로 끝낼 수 있었습니다.`);
-  } else if (keepsMate){
-    bits.push("메이트로 가는 수순을 유지합니다.");
-  } else if (bad){
-    if (r.sac >= 150) bits.push("기물이 그대로 잡힙니다.");
-    const sw = swingWord(r);
-    bits.push(sw || standWord(r));
-  } else {
-    bits.push(standWord(r));
-  }
-  return bits.join(" ");
+
+  /* ③ 형세와 숫자 */
+  if (!matedAfter && !keepsMate) tail.push(standWord(r));
+  return head.join(" ") + (tail.length ? " " + tail.join(" ") : "");
 }
 </script>
 <script>/* ══ PGN → 분석 결과 ════════════════════════════════════════ */
@@ -2666,7 +2748,19 @@ async function analysePgn(pgn, depth, engine, onProgress, shouldStop){
     const bm = bp.move({from:P.bestUci.slice(0,2), to:P.bestUci.slice(2,4),
                         promotion:P.bestUci[4] || "q"});
 
+    /* 실제로 둔 수를 탐색한 결과의 PV는 [둔 수, 상대의 반박, …] 이다.
+       "왜 나쁜지"를 말하려면 이 반박 수순이 필요하다. */
     board.move(mv.san);
+    const after = new Chess(board.fen());
+    const replySan = [];
+    let loses = null;
+    for (const u of (Q.pvUci || []).slice(1)){
+      const m3 = after.move({from:u.slice(0,2), to:u.slice(2,4), promotion:u[4] || "q"});
+      if (!m3) break;
+      if (replySan.length === 0 && m3.captured) loses = m3.captured;
+      replySan.push(m3.san);
+      if (replySan.length >= 5) break;
+    }
     const capVal = mv.captured ? VAL[mv.captured] : 0;
     const row = {
       ply: i + 1, no: (i >> 1) + 1, color: mover, san: mv.san,
@@ -2680,6 +2774,7 @@ async function analysePgn(pgn, depth, engine, onProgress, shouldStop){
       nlegal: new Chess(fen).moves().length,
       mate_best: P.mate, mate_after: Q.mate,
       wp_before: winPct(P.cp), wp_after: winPct(Q.cp),
+      reply_pv: replySan, loses,
       tn: nBook > 0 && (i + 1) === nBook + 1,
     };
     const [cls, drop] = classify(row);
@@ -2760,12 +2855,28 @@ function evalText(m){
   return (v > 0 ? "+" : v < 0 ? "−" : "±") + Math.abs(v).toFixed(2);
 }
 
-function drawBoard(){
-  const m = cur(), bd = parseFen(fenN()), hl = m ? [m.from_sq, m.to_sq] : [];
+/* ── 보드 ────────────────────────────────────────────────
+   기물 DOM을 매번 새로 만들면 CSS 전환이 발동하지 않아 순간이동한다.
+   같은 기물 노드를 찾아 좌표만 바꿔 주어야 미끄러지듯 움직인다. */
+let squaresEl = null, piecesEl = null, layerEl = null, noAnimOnce = false;
+function ensureLayers(){
+  const b = $("#board");
+  if (piecesEl && b.contains(piecesEl)) return;
+  b.innerHTML = '<div class="lay" id="squares"></div>'
+              + '<div class="lay" id="pieces"></div>'
+              + '<div class="lay" id="marks"></div>';
+  squaresEl = $("#squares"); piecesEl = $("#pieces"); layerEl = $("#marks");
+}
+/* 지금 화면에 보여야 할 국면 — 권장 수순 재생 중이면 그쪽이 우선 */
+const viewFen  = () => preview ? preview.fens[preview.i] : fenN();
+const viewMove = () => preview ? preview.marks[preview.i] : (idx >= 0 ? cur() : null);
+
+function renderSquares(mv){
+  const hl = mv ? [mv.from_sq, mv.to_sq] : [];
   let chk = null;
-  if (m && m.check){
-    const k = m.color === "w" ? "bk" : "wk";
-    bd.forEach((row,r) => row.forEach((p,f) => { if (p === k) chk = sqNm(f,r); }));
+  if (mv && mv.check){
+    const k = mv.color === "w" ? "bk" : "wk";
+    parseFen(viewFen()).forEach((row,r) => row.forEach((p,f) => { if (p === k) chk = sqNm(f,r); }));
   }
   let h = "";
   for (let r = 0; r < 8; r++) for (let f = 0; f < 8; f++){
@@ -2773,13 +2884,49 @@ function drawBoard(){
     h += `<div class="sq ${(f+r)%2 ? "d" : "l"}${hl.indexOf(n) >= 0 ? " hl" : ""}`
        + `${n === chk ? " chk" : ""}" style="left:${p.x}%;top:${p.y}%"></div>`;
   }
-  bd.forEach((row,r) => row.forEach((pc,f) => {
-    if (!pc) return;
-    const p = pos(f,r);
-    h += `<div class="pc" style="left:${p.x}%;top:${p.y}%;background-image:url(${PIECES[pc]})"></div>`;
-  }));
-  if (m && showArrow && !m.is_best && ["dubious","mistake","blunder"].indexOf(m.cls) >= 0){
-    const [f1,r1] = fr(m.best_uci.slice(0,2)), [f2,r2] = fr(m.best_uci.slice(2,4));
+  squaresEl.innerHTML = h;
+}
+function renderPieces(){
+  const bd = parseFen(viewFen()), want = [];
+  bd.forEach((row,r) => row.forEach((c,f) => { if (c) want.push({code:c, f, r}); }));
+  const have = Array.prototype.slice.call(piecesEl.children);
+  const used = new Set(), got = new Map();
+  want.forEach((w,i) => {                       // 제자리에 있는 기물부터 붙잡는다
+    const n = have.find(n => !used.has(n) && n.dataset.k === w.code
+                          && +n.dataset.f === w.f && +n.dataset.r === w.r);
+    if (n){ used.add(n); got.set(i, n); }
+  });
+  want.forEach((w,i) => {                       // 나머지는 같은 종류 중 가장 가까운 것
+    if (got.has(i)) return;
+    let best = null, bd2 = 1e9;
+    have.forEach(n => {
+      if (used.has(n) || n.dataset.k !== w.code) return;
+      const d = Math.abs(+n.dataset.f - w.f) + Math.abs(+n.dataset.r - w.r);
+      if (d < bd2){ bd2 = d; best = n; }
+    });
+    if (best){ used.add(best); got.set(i, best); }
+  });
+  want.forEach((w,i) => {
+    let n = got.get(i);
+    if (!n){
+      n = document.createElement("div");
+      n.className = "pc fade"; n.dataset.k = w.code;
+      n.style.backgroundImage = `url(${PIECES[w.code]})`;
+      piecesEl.appendChild(n);
+      requestAnimationFrame(() => n.classList.remove("fade"));
+    }
+    n.dataset.f = w.f; n.dataset.r = w.r;
+    const p = pos(w.f, w.r);
+    n.style.left = p.x + "%"; n.style.top = p.y + "%";
+  });
+  have.forEach(n => { if (!used.has(n)) n.remove(); });
+}
+function renderMarks(mv){
+  let h = "";
+  const showBest = mv && !preview && showArrow && !mv.is_best
+    && ["dubious","mistake","blunder"].indexOf(mv.cls) >= 0;
+  if (showBest){
+    const [f1,r1] = fr(mv.best_uci.slice(0,2)), [f2,r2] = fr(mv.best_uci.slice(2,4));
     const a = pos(f1,r1), b = pos(f2,r2);
     const x1 = a.x+6.25, y1 = a.y+6.25, x2 = b.x+6.25, y2 = b.y+6.25;
     const L = Math.hypot(x2-x1, y2-y1) || 1;
@@ -2787,26 +2934,82 @@ function drawBoard(){
       <defs><marker id="hd" markerWidth="3.4" markerHeight="3.4" refX="3" refY="1.7"
         orient="auto"><path d="M0,0 L3.4,1.7 L0,3.4 z" fill="var(--c-great)"/></marker></defs>
       <line x1="${x1}" y1="${y1}" x2="${x2-(x2-x1)/L*5.2}" y2="${y2-(y2-y1)/L*5.2}"
-        stroke="var(--c-great)" stroke-width="1.5" opacity=".8" marker-end="url(#hd)"/></svg>`;
+        stroke="var(--c-great)" stroke-width="1.5" opacity=".85" marker-end="url(#hd)"/></svg>`;
   }
-  if (m && CLS[m.cls].s){
-    const [f,r] = fr(m.to_sq), p = pos(f,r);
+  if (mv && !preview && CLS[mv.cls].s){
+    const [f,r] = fr(mv.to_sq), p = pos(f,r);
     const df = flipped ? 7-f : f, dr = flipped ? 7-r : r;
     h += `<div class="tag" style="left:${df === 7 ? p.x : p.x+12.5}%;`
-       + `top:${dr === 0 ? p.y+12.5 : p.y}%;background:${colv(m.cls)}">${CLS[m.cls].s}</div>`;
+       + `top:${dr === 0 ? p.y+12.5 : p.y}%;background:${colv(mv.cls)}">${CLS[mv.cls].s}</div>`;
   }
-  $("#board").innerHTML = h;
+  layerEl.innerHTML = h;
+}
+function drawBoard(){
+  ensureLayers();
+  if (noAnimOnce){ $("#board").classList.add("noanim"); }
+  const mv = viewMove();
+  renderSquares(mv); renderPieces(); renderMarks(mv);
+  if (noAnimOnce){
+    noAnimOnce = false;
+    void $("#board").offsetWidth;                 // 강제 리플로우로 전환을 건너뛴다
+    $("#board").classList.remove("noanim");
+  }
   const rk = flipped ? [1,2,3,4,5,6,7,8] : [8,7,6,5,4,3,2,1];
   const fl = flipped ? [..."hgfedcba"] : [..."abcdefgh"];
   $("#ranks").innerHTML = rk.map(v => `<span>${v}</span>`).join("");
   $("#files").innerHTML = fl.map(v => `<span>${v}</span>`).join("");
 }
+
+/* ── 권장 수순 재생 ─────────────────────────────────────── */
+let preview = null;
+function stopPreview(){
+  if (!preview) return;
+  clearTimeout(preview.timer); preview = null;
+  $("#pv").classList.add("hidden");
+  drawBoard(); drawEval();
+}
+function playLine(startFen, sans, label){
+  stopPlay(); stopPreview();
+  const c = new Chess(startFen);
+  const fens = [startFen], marks = [null];
+  for (const san of sans){
+    const m = c.move(san);
+    if (!m) break;
+    fens.push(c.fen());
+    marks.push({from_sq:m.from, to_sq:m.to, check:c.isCheck(),
+                color:m.color, cls:"plain", is_best:true});
+  }
+  if (fens.length < 2) return;
+  preview = {fens, marks, i:0, timer:null, sans, label};
+  $("#pvtxt").textContent = sans.join(" ");
+  $("#pv").classList.remove("hidden");
+  const step = () => {
+    if (!preview) return;
+    if (preview.i < preview.fens.length - 1){
+      preview.i++;
+      drawBoard(); drawEval();
+      preview.timer = setTimeout(step, 620);
+    } else {
+      preview.timer = setTimeout(stopPreview, 1600);
+    }
+  };
+  drawBoard();
+  preview.timer = setTimeout(step, 260);
+}
+function playBest(i){
+  const m = DATA.moves[i];
+  if (!m || !m.best_pv.length) return;
+  if (i !== idx) go(i);
+  playLine(m.fen_before, m.best_pv, "권장 수순");
+}
+
 function drawEval(){
   const m = cur(), cp = Math.max(-1200, Math.min(1200, whiteCp(m)));
   $("#ebar").style.height = (50 + 50*(2/(1+Math.exp(-0.00368208*cp)) - 1)).toFixed(1) + "%";
-  $("#read").textContent = m
-    ? `${m.no}${m.color === "w" ? "." : "…"} ${m.san}   ${evalText(m)}`
-    : "시작 국면   ±0.00";
+  $("#read").textContent = preview
+    ? "권장 수순 재생 중"
+    : (m ? `${m.no}${m.color === "w" ? "." : "…"} ${m.san}   ${evalText(m)}`
+         : "시작 국면   0.00");
 }
 function drawNow(){
   const m = cur(), el = $("#now");
@@ -2818,7 +3021,8 @@ function drawNow(){
   const k = CLS[m.cls];
   let alt = "";
   if (!m.is_best && ["interesting","dubious","mistake","blunder"].indexOf(m.cls) >= 0)
-    alt = `<div class="alt">권장 <b>${m.best_san}</b>`
+    alt = `<div class="alt">대신 <button class="linkmv" data-play="${idx}">`
+        + `${m.best_san} ▶</button>`
         + `${m.best_pv.length > 1 ? " 이후 " + m.best_pv.slice(1).join(" ") : ""}</div>`;
   el.innerHTML = `<span class="m">${m.no}${m.color === "w" ? "." : "…"} ${m.san}`
     + `<span class="s" style="color:${colv(m.cls)}">${k.s}</span></span>`
@@ -2842,7 +3046,8 @@ function drawGame(){
       flush();
       let alt = "";
       if (!m.is_best && ["dubious","mistake","blunder"].indexOf(m.cls) >= 0)
-        alt = `<span class="alt">권장 <b>${m.best_san}</b>`
+        alt = `<span class="alt">대신 <button class="linkmv" data-play="${i}">`
+            + `${m.best_san} ▶</button>`
             + `${m.best_pv.length > 1 ? ' 이후 <span class="pv">'
                  + m.best_pv.slice(1).join(" ") + "</span>" : ""}</span>`;
       html += `<div class="gloss" data-g="${i}"><div class="hd">`
@@ -2879,7 +3084,8 @@ function drawStatic(){
     const nm = s === "w" ? M.white : M.black, el = s === "w" ? M.welo : M.belo;
     const won = (M.result === "1–0") === (s === "w") && /^[10]–[10]$/.test(M.result);
     return `<tr><td><span class="side ${s}"></span><span class="nm">${nm}</span>`
-      + `${won ? '<span class="win">승</span>' : ""}</td>`
+      + `${won ? '<span class="win">승</span>' : ""}`
+      + `<span class="caps" id="cap-${s}"></span></td>`
       + `<td class="num">${el || "—"}</td><td class="num">${DATA.acc[s].toFixed(1)}</td></tr>`;
   }).join("");
   $("#leg").innerHTML = ORDER.map(c => {
@@ -2935,8 +3141,40 @@ function drawPlot(){
     ${mk}<line x1="${x(idx).toFixed(1)}" y1="${P-6}" x2="${x(idx).toFixed(1)}" y2="${H-P+6}"
       stroke="var(--c-mis)" stroke-width="1.2"/>${tk}`;
 }
-function render(){ drawBoard(); drawEval(); drawNow(); syncGame(); drawPlot(); }
-function go(i){ idx = Math.max(-1, Math.min(DATA.moves.length-1, i)); render(); }
+/* 잡은 기물 차이 — 누가 뭘 앞서는지 한눈에 */
+function drawMaterial(){
+  const FULL = {p:8, n:2, b:2, r:2, q:1};
+  const now = {w:{}, b:{}};
+  parseFen(viewFen()).forEach(row => row.forEach(c => {
+    if (c && c[1] !== "k") now[c[0]][c[1]] = (now[c[0]][c[1]] || 0) + 1;
+  }));
+  const taken = {w:"", b:""};
+  for (const side of ["w","b"]){
+    const foe = side === "w" ? "b" : "w";
+    for (const t of ["q","r","b","n","p"]){
+      const gone = Math.max(0, FULL[t] - (now[foe][t] || 0));
+      for (let i = 0; i < gone; i++)
+        taken[side] += `<img class="cap" src="${PIECES[foe + t]}" alt="">`;
+    }
+  }
+  /* 우세는 잡은 기물을 더하지 않고 보드 위에 남은 기물로 센다.
+     승격이 있으면 잡은 기물 합계로는 맞출 수 없다. */
+  let mw = 0, mb = 0;
+  for (const t of ["q","r","b","n","p"]){
+    mw += (now.w[t] || 0) * VAL[t];
+    mb += (now.b[t] || 0) * VAL[t];
+  }
+  const diff = Math.round((mw - mb) / 100);
+  for (const side of ["w","b"]){
+    const el = document.getElementById("cap-" + side);
+    if (!el) continue;
+    const lead = side === "w" ? diff : -diff;
+    el.innerHTML = taken[side]
+      + (lead > 0 ? `<span class="lead">+${lead}</span>` : "");
+  }
+}
+function render(){ drawBoard(); drawEval(); drawNow(); drawMaterial(); syncGame(); drawPlot(); }
+function go(i){ stopPreview(); idx = Math.max(-1, Math.min(DATA.moves.length-1, i)); render(); }
 function stopPlay(){ if (timer){ clearInterval(timer); timer = null;
   $("#play").setAttribute("aria-pressed","false"); $("#play").textContent = "재생"; } }
 </script>
@@ -3033,7 +3271,9 @@ $("#play").onclick  = function(){
   timer = setInterval(() => idx >= DATA.moves.length-1 ? stopPlay() : go(idx+1), 1150);
 };
 $("#flip").onclick  = function(){ flipped = !flipped;
-  this.setAttribute("aria-pressed", String(flipped)); drawBoard(); };
+  this.setAttribute("aria-pressed", String(flipped));
+  noAnimOnce = true;                       /* 뒤집을 때는 전부 미끄러지면 어지럽다 */
+  drawBoard(); };
 $("#arrow").onclick = function(){ showArrow = !showArrow;
   this.setAttribute("aria-pressed", String(showArrow)); drawBoard(); };
 $("#plot").onclick  = e => { stopPlay();
@@ -3049,10 +3289,17 @@ function setTheme(t){
 const toggle = () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
 $("#thm").onclick = toggle; $("#thm2").onclick = toggle;
 
+document.addEventListener("click", e => {
+  const t = e.target.closest && e.target.closest(".linkmv");
+  if (t){ e.preventDefault(); playBest(+t.dataset.play); }
+});
+$("#pvstop").onclick = stopPreview;
+
 document.addEventListener("keydown", e => {
   if (!DATA || document.getElementById("s-rev").classList.contains("hidden")) return;
   if (/^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
   const k = e.key;
+  if (k === "Escape"){ stopPreview(); stopPlay(); return; }
   if (k === "ArrowRight"){ stopPlay(); go(idx+1); }
   else if (k === "ArrowLeft"){ stopPlay(); go(idx-1); }
   else if (k === "Home"){ stopPlay(); go(-1); }
