@@ -3916,5 +3916,65 @@
     "uploaded_at": "2026-09-18T17:02:21+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "36UpM5wMC30",
+    "channel": "웃짬",
+    "category": "혈관혈압",
+    "title": "자고 일어나자마자 이 행동은 자살行為입니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-19T16:30:34+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "YfaIfIHRkzU",
+    "channel": "도개",
+    "category": "수면건강",
+    "title": "이 시간에 물 마시면 수면이 붕괴됩니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-19T17:09:45+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "5B6_F2YxcDo",
+    "channel": "웃짬",
+    "category": "혈관혈압",
+    "title": "자고 일어나자마자 이 행동은 자살行為입니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-19T17:22:46+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "npkAXOp_PDI",
+    "channel": "도개",
+    "category": "수면건강",
+    "title": "이 시간에 물 마시면 수면이 붕괴됩니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-19T17:26:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "6mtlmnyt_O4",
+    "channel": "웃짬",
+    "category": "위험식품",
+    "title": "이것 드시면 뇌졸중 옵니다, 당신 지금 당장 멈춰야",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-19T17:38:58+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "fw2TpWbts-Y",
+    "channel": "도개",
+    "category": "위험식품",
+    "title": "\"이 음식 드시면 뇌가 썩습니다\"",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-19T17:43:06+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
