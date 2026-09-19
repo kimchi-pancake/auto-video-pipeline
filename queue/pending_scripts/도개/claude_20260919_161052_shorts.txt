@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20260919_161052_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+위험식품  
+
+BGM:  
+ambient_piano.mp3  
+
+THUMBNAIL_LONG:  
+"이 음식 드시면 뇌가 썩습니다"  
+
+THUMBNAIL_SHORTS:  
+"이거 드시면 뇌가 썩습니다"  
+
+[SCENE:Korean senior woman holding white rice bowl with chopsticks, close-up on food, 1080x1920]  
+나레이터: 밥을 먹으면 머리가 점점 어두워질 수 있습니다.&이제 돌이킬 수 없습니다.  
+
+[SCENE:Korean man in his 60s forgetting keys on table, looking confused, indoor lighting, 1080x1920]  
+나레이터: 이름이 자꾸 생각나지 않으신다구요?&약이 아니라 식탁이 문제일 수 있습니다.  
+
+[SCENE:animation of blood sugar spike and brain inflammation, red arrows rising, 1080x1920]  
+나레이터: 흰밥은 혈당을 급격히 올려 염증을 뇌에 퍼지게 합니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]  
+나레이터: 더 자세한 대안 식단이 궁금하신 분은 화면을 두 번 눌러주세요.  
+
+[SCENE:split screen – left side white rice, right side brown rice and vegetables, 1080x1920]  
+나레이터: 오늘부터 밥은 반만 드리고 나머지는 현미 또는 고구마로 채우세요.&하루 세끼 중 하루만이라도 이렇게 바꾸세요.  
+
+[SCENE:Korean senior couple eating together at home, smiling, with mixed grain rice, 1080x1920]  
+나레이터: 이 습관 하나면 뇌 퇴화를 늦출 수 있습니다.&정확한 진단과 치료는 전문의와 상담하세요.&이거 오늘 처음 알았다고 하시는 분, 댓글에 '몰랐다'만 적어주세요.

@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260919_161038_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+수면건강  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+sad.mp3  
+
+THUMBNAIL_LONG:
+이 시간에 물 마시면 수면이 붕괴됩니다
+
+THUMBNAIL_SHORTS:
+이 시간에 물 마시면 수면이 붕괴됩니다
+
+[SCENE:Korean elderly woman waking up at night, checking clock showing 2:45 AM, 1080x1920]  
+나레이터: 이것 모르면 "수면" "회복 불가"합니다.&자다가 3번 이상 깬다면,&이 습관이 문제입니다.  
+
+[SCENE:Korean elderly man drinking water from glass before bed, 1080x1920]  
+나레이터: 자기 직전 물 한 잔, 건강하다고 마셨죠?&그 한 잔이 밤새 깨게 만든다는 걸 아셨나요?&성인 3명 중 1명은 밤에 깨는 이유를 잘못 알고 있습니다.  
+
+[SCENE:animation of bladder filling, time-lapse from 9 PM to 2 AM, 1080x1920]  
+나레이터: 밤 9시 이후 마신 물은,&자는 동안 방광을 70% 이상 채웁니다.&뇌는 이걸 위험 신호로 인식하고,&당신을 깨워 소변을 보게 합니다.&근데 사실 제일 중요한 건 지금부터입니다.  
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]  
+나레이터: 더 자세한 해결법이 궁금하신 분은,&화면을 두 번 눌러주세요.  
+
+[SCENE:Korean elderly woman setting phone alarm for 8 PM, 1080x1920]  
+나레이터: 해결법은 간단합니다.&매일 밤 8시에 알람을 맞추세요.&그 이후로는 물 마시는 걸 완전히 멈춥니다.&필요하면 한 모금만 허용하세요.  
+
+[SCENE:Korean elderly man placing water bottle away from bed, 1080x1920]  
+나레이터: 침대 옆에 물병 두지 마세요.&보이기만 해도 마시고 싶은 충동이 옵니다.&대신 가습기로 목을 촉촉하게 하세요.  
+
+[SCENE:Korean elderly couple smiling, waking up together, morning light, 1080x1920]  
+나레이터: 이 습관을 3일만 지켜보세요.&자고 일어난 피로가 확 줄어듭니다.&오늘부터 밤 8시 이후 물 마시는 걸 멈출 건가요?&댓글에 ‘멈출게요’라고만 적어주세요.
