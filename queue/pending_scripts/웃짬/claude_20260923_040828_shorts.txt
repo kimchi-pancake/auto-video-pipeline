@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260923_040828_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+혈관혈압
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+높은 베개, 뇌혈관 터집니다 당신도?
+
+THUMBNAIL_SHORTS:
+높은 베개, 뇌혈관 터집니다
+
+[SCENE:Korean senior woman sleeping on high pillow side view, 1080x1920]
+나레이터: 편해서 높은 베개 쓰신다구요? 지금 뇌 혈관이 밤새 눌려 터지기 직전입니다.
+
+[SCENE:Korean senior man waking up rubbing stiff neck headache, 1080x1920]
+나레이터: 아침에 개운하지 않고 머리가 띵하다면 이미 뇌 혈류가 차단된 겁니다.&이 다음 내용이 사실 가장 중요합니다 잠시만 더 함께해 주세요.
+
+[SCENE:medical animation neck arteries compressed by high pillow, 1080x1920]
+나레이터: 경동맥이 꺾이면 뇌 산소 공급 끊기고 독소 배출 길도 막힙니다.&근데 진짜 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 내게 맞는 베개 높이 화면을 두 번 눌러 지금 확인하세요.
+
+[SCENE:Korean senior woman adjusting low memory foam pillow comfortable sleep, 1080x1920]
+나레이터: 베개는 주먹 하나 반 높이 목 C자 곡선 살려주는 것만 쓰세요.&정확한 진단과 치료는 전문의와 상담하세요.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
+
+[SCENE:close up hand measuring pillow height with fist Korean senior background, 1080x1920]
+나레이터: 지금 베개 높이 주먹으로 재서 몇 센티인지 댓글에 숫자만 남겨주세요.&오늘 정보가 도움이 되셨다면 구독으로 다음 건강 정보도 놓치지 마세요.

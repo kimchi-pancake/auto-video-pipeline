@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260923_041649_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+치매인지
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+이 습관 모르면 뇌 회복 불가
+
+THUMBNAIL_SHORTS:
+이 시간에 깨신다면 뇌 망칩니다
+
+[SCENE:Korean senior man looking confused holding a smartphone in dark living room, 1080x1920]
+나레이터: 새벽에 깨서 혼자 스마트폰만 보신다면, 당장 멈추셔야 합니다.&이것 모르면 "뇌" 이제 "회복 불가"합니다.
+
+[SCENE:Korean senior woman sitting on bed rubbing her forehead looking exhausted, 1080x1920]
+나레이터: 새벽에 잠이 깨서 다시 못 잔다면, 뇌가 쉴 시간을 빼앗아 치매 위험이 커지고 있는 겁니다.
+
+[SCENE:animation showing human brain with shrinking cells and dark circles, blue tones, 1080x1920]
+나레이터: 밤사이 뇌가 독소를 청소해야 하는데 깨어 있으면 청소가 멈춰 뇌가 망가집니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:Korean senior man closing curtains tightly and drinking warm milk, cozy bedroom, 1080x1920]
+나레이터: 새벽에 깼을 땐 폰 대신 어두운 방에서 눈만 감고 계세요.&정확한 진단과 치료는 전문의와 상담하세요.
+
+[SCENE:Korean senior woman looking directly at camera with friendly expression, bright lighting, 1080x1920]
+나레이터: 오늘 정보가 도움이 되셨다면, 구독으로 다음 정보에도 함께해 주세요.&새벽에 폰 보시는 분, 댓글에 '고친다'라고 남겨주세요.
