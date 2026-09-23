@@ -22,6 +22,9 @@ qwen/qwen3-235b-a22b-2507(Qwen3 235B A22B Instruct 2507)로 다시 교체함 —
 넉넉히(16000) 줍니다. 응답이 길 수 있어 스트리밍 호출은 유지합니다(NVIDIA
 게이트웨이의 논스트리밍 연결 끊김 문제가 OpenRouter에도 있는지는 확인 안 됐지만,
 안전하게 유지).
+2026-09-23: OpenRouter 무료 체험 크레딧이 소진돼 9/20~22 사흘간 대본이 0개
+생성되고 업로드도 0건이 된 사고가 있었음 — 잔액이 없을 때(402) 무료 모델로
+자동 폴백하도록 FALLBACK_MODELS를 추가함. 크레딧을 채우면 다시 MODEL이 쓰임.
 
 전체 생성 파이프라인(generate_and_save):
   주제 선정(또는 custom_topic 그대로 사용)
@@ -67,6 +70,34 @@ _ENV_PATH = Path(__file__).parent.parent / ".env"
 # BASE_URL도 함께 바뀝니다(아래 _call_claude 참고).
 BASE_URL = "https://openrouter.ai/api/v1"
 MODEL = "qwen/qwen3-235b-a22b-2507"
+
+# 크레딧이 떨어졌을 때(HTTP 402) 대신 쓸 무료 모델. 2026-09-20~22 사흘 내내
+# daily.yml이 402("You requested up to 16000 tokens, but can only afford 9274")로
+# 죽어서 대본이 한 개도 안 나왔고, 큐가 비니 조립·업로드까지 통째로 0건이 됐음 —
+# 유료 모델 하나에만 매달려 있으면 잔액이 0이 되는 순간 파이프라인 전체가 멈춘다.
+# 후보를 실제 shorts_script_prompt로 돌려본 결과(2026-09-23):
+#   z-ai/glm-5.2:free              40초/1087자, 형식 준수, 근거 구체적   ← 채택
+#   nvidia/nemotron-3-ultra-550b   35초/1118자, 프롬프트 예시 문구를 그대로 베낌
+#   qwen/qwen3.8-27b:free          272초 — 너무 느려서 배치 시간 초과 위험
+# 402가 아닌 오류(인증/네트워크/그 외 상태코드)는 폴백하지 않고 그대로 올립니다 —
+# 진짜 고장을 무료 모델로 덮어버리면 원인 파악이 늦어지니까.
+# nemotron을 2차로 남겨둔 건 무료 모델이 공용 풀을 쓰다 보니 한도와 무관하게
+# 순간 포화로 429를 뱉는 일이 잦기 때문(2026-09-23 실측, 일일 한도 50회 중 5회만
+# 쓴 상태에서 429). 예시 문구를 베끼는 약점이 있어도 영상이 0건 나가는 것보다는 낫다.
+FALLBACK_MODELS = ["z-ai/glm-5.2:free", "nvidia/nemotron-3-ultra-550b-a55b:free"]
+
+# 429(요청 한도)는 대개 몇십 초 뒤면 풀리는 일시적 상태라, 모델을 바로 갈아타기
+# 전에 같은 모델로 몇 번 더 두드려 봅니다. 대기는 20초 → 40초로 늘려 잡습니다.
+MAX_RATE_LIMIT_RETRIES = 3
+RATE_LIMIT_BACKOFF_SEC = 20
+
+# 모델별로 덧붙일 요청 파라미터. GLM-5.2는 하이브리드 추론 모델이라 기본값으로
+# 두면 응답 토큰 예산을 추론에 태워버립니다 — 롱폼 확장 호출 실측(2026-09-23)에서
+# 16000 토큰 중 9151이 추론으로 나가고 본문이 중간에 잘렸음(finish_reason=length).
+# 추론을 끄면 같은 호출이 7128 토큰에 깔끔히 끝나고 본문도 10343자로 늘어남.
+MODEL_EXTRA_BODY = {
+    "z-ai/glm-5.2:free": {"reasoning": {"enabled": False}},
+}
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
 # 대본을 살린 채 부족한 만큼만 늘려 쓰기(extend)"를 시도할 최대 횟수.
@@ -115,59 +146,93 @@ def _get_api_key() -> str:
     return key
 
 
-def _call_claude(prompt: str) -> str:
-    """OpenRouter API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
-    함수들의 공통 경로 — 함수 이름은 예전 그대로 남겨뒀습니다(호출부 5곳을
-    다 바꾸는 것보다 안전).
+def _stream_once(client, model: str, prompt: str) -> tuple[str, str | None]:
+    """모델 하나로 스트리밍 호출을 한 번 끝내고 (응답 원문, finish_reason)을 돌려줍니다.
 
     스트리밍(stream=True)으로 호출합니다 — NVIDIA 게이트웨이는 논스트리밍
     호출에서 응답이 긴 경우 도중에 연결을 끊는 문제가 있었는데(2026-08-24
     실측), OpenRouter도 같은 문제가 있는지 확인 안 된 상태라 안전하게
     스트리밍을 유지합니다."""
+    stream = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.9,
+        top_p=0.95,
+        max_tokens=16000,
+        stream=True,
+        extra_body=MODEL_EXTRA_BODY.get(model) or None,
+    )
+    chunks: list[str] = []
+    finish_reason = None
+    for event in stream:
+        if not event.choices:
+            continue
+        delta = event.choices[0].delta
+        if delta and delta.content:
+            chunks.append(delta.content)
+        if event.choices[0].finish_reason:
+            finish_reason = event.choices[0].finish_reason
+    return "".join(chunks).strip(), finish_reason
+
+
+def _call_claude(prompt: str) -> str:
+    """OpenRouter API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
+    함수들의 공통 경로 — 함수 이름은 예전 그대로 남겨뒀습니다(호출부 5곳을
+    다 바꾸는 것보다 안전).
+
+    MODEL이 크레딧 부족(402)으로 거절하면 FALLBACK_MODELS를 차례로 시도하고,
+    429(요청 한도)는 같은 모델로 몇 번 재시도한 뒤에야 다음 모델로 넘어갑니다."""
     import openai  # 지연 임포트: API 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
+    import time
 
     key = _get_api_key()
     client = openai.OpenAI(base_url=BASE_URL, api_key=key, timeout=600.0)
 
-    try:
-        stream = client.chat.completions.create(
-            model=MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.9,
-            top_p=0.95,
-            max_tokens=16000,
-            stream=True,
-        )
-        chunks: list[str] = []
-        finish_reason = None
-        for event in stream:
-            if not event.choices:
-                continue
-            delta = event.choices[0].delta
-            if delta and delta.content:
-                chunks.append(delta.content)
-            if event.choices[0].finish_reason:
-                finish_reason = event.choices[0].finish_reason
-    except openai.AuthenticationError as e:
-        raise ScriptGenerationError("API 키가 유효하지 않습니다. .env 파일의 키를 다시 확인하세요.") from e
-    except openai.RateLimitError as e:
-        raise ScriptGenerationError("요청 한도를 초과했습니다. 잠시 후 다시 시도하세요.") from e
-    except openai.APIConnectionError as e:
-        raise ScriptGenerationError("네트워크 연결에 실패했습니다. 인터넷 연결을 확인하세요.") from e
-    except openai.APIStatusError as e:
-        raise ScriptGenerationError(f"API 오류 (상태코드 {e.status_code}): {e.message}") from e
+    models = [MODEL, *FALLBACK_MODELS]
+    for idx, model in enumerate(models):
+        next_model = models[idx + 1] if idx + 1 < len(models) else None
 
-    if finish_reason == "length":
-        raise ScriptGenerationError(
-            "모델 응답이 토큰 한도에 걸려 끝까지 안 끝났습니다. 다시 시도해보세요."
-        )
+        for attempt in range(1, MAX_RATE_LIMIT_RETRIES + 1):
+            try:
+                text, finish_reason = _stream_once(client, model, prompt)
+            except openai.AuthenticationError as e:
+                raise ScriptGenerationError("API 키가 유효하지 않습니다. .env 파일의 키를 다시 확인하세요.") from e
+            except openai.APIConnectionError as e:
+                raise ScriptGenerationError("네트워크 연결에 실패했습니다. 인터넷 연결을 확인하세요.") from e
+            except openai.RateLimitError as e:
+                if attempt < MAX_RATE_LIMIT_RETRIES:
+                    wait = RATE_LIMIT_BACKOFF_SEC * attempt
+                    logger.warning(
+                        "%s 요청 한도(429) — %s초 뒤 재시도합니다 (%s/%s).",
+                        model, wait, attempt, MAX_RATE_LIMIT_RETRIES,
+                    )
+                    time.sleep(wait)
+                    continue
+                if next_model:
+                    logger.warning("%s가 계속 429 — 다음 모델 %s로 넘어갑니다.", model, next_model)
+                    break
+                raise ScriptGenerationError("요청 한도를 초과했습니다. 잠시 후 다시 시도하세요.") from e
+            except openai.APIStatusError as e:
+                if e.status_code == 402 and next_model:
+                    logger.warning(
+                        "OpenRouter 크레딧이 부족합니다(402) — %s 대신 무료 모델 %s로 넘어갑니다. "
+                        "openrouter.ai에서 크레딧을 충전하면 자동으로 %s로 되돌아갑니다.",
+                        model, next_model, MODEL,
+                    )
+                    break
+                raise ScriptGenerationError(f"API 오류 (상태코드 {e.status_code}): {e.message}") from e
 
-    text = "".join(chunks).strip()
-    if not text:
-        raise ScriptGenerationError("빈 응답을 받았습니다. 다시 시도해주세요.")
+            if finish_reason == "length":
+                raise ScriptGenerationError(
+                    "모델 응답이 토큰 한도에 걸려 끝까지 안 끝났습니다. 다시 시도해보세요."
+                )
+            if not text:
+                raise ScriptGenerationError("빈 응답을 받았습니다. 다시 시도해주세요.")
 
-    logger.info("OpenRouter API 호출 완료 (model=%s, output=%s자)", MODEL, len(text))
-    return text
+            logger.info("OpenRouter API 호출 완료 (model=%s, output=%s자)", model, len(text))
+            return text
+
+    raise ScriptGenerationError("호출할 모델이 없습니다.")  # models가 빈 경우 방어용
 
 
 def _parse_json_response(text: str):
