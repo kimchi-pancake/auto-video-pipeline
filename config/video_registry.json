@@ -3976,5 +3976,65 @@
     "uploaded_at": "2026-09-19T17:43:06+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "ktW-vtIzQak",
+    "channel": "웃짬",
+    "category": "약물주의",
+    "title": "이 과일즙, 약 독성 5배로 키웁니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-23T04:34:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "RSu6fF2Yi_k",
+    "channel": "도개",
+    "category": "눈건강",
+    "title": "50대 이후 방 밝게 자면, 실명 위험 커집니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-23T05:02:32+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ZaczpH-ZMKs",
+    "channel": "웃짬",
+    "category": "약물주의",
+    "title": "이 과일즙, 약 독성 5배로 키웁니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-23T05:17:49+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "cThn6lmJXUo",
+    "channel": "도개",
+    "category": "눈건강",
+    "title": "50대 이후 방 밝게 자면, 실명 위험 커집니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-23T05:18:38+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "hzl2vKtU6jg",
+    "channel": "도개",
+    "category": "치매인지",
+    "title": "이 습관 모르면 뇌 회복 불가",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-23T05:19:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ApPNKLeLlg0",
+    "channel": "웃짬",
+    "category": "혈관혈압",
+    "title": "높은 베개, 뇌혈관 터집니다 당신도?",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-23T05:33:59+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
