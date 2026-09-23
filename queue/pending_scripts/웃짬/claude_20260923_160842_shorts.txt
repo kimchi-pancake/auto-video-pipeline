@@ -1,0 +1,44 @@
+RUN_ID:
+claude_20260923_160842_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+위험식품
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+매일 이렇게 드시는 분, 암 유발합니다
+
+THUMBNAIL_SHORTS:
+매일 이렇게 드시는 분, 암 유발합니다
+
+[SCENE:close up of red pepper powder being poured into a violently boiling soup pot, steam and smoke rising, 1080x1920]
+나레이터: 국 끓일 때 고춧가루 부으시는 그 거, 사실 암 유발하는 맹독 아니었습니다.
+
+[SCENE:Korean elderly woman coughing while leaning over a steaming pot on the stove, 1080x1920]
+나레이터: 팔팔 끓는 국에 고춧가루 확 부으면 그 매캐한 연기, 이미 호흡기로 발암물질 쏟아집니다.
+
+[SCENE:stop motion animation of red pepper powder particles flying upwards into the air, 1080x1920]
+나레이터: 끓는 물에 고춧가루가 직접 닿는 순간 휘발성 독소가 기화되어 우리 몸으로 직행합니다.
+
+[SCENE:close up of a hand turning off the gas stove knob, flame disappearing, 1080x1920]
+나레이터: 근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 해결법이 궁금하시다면 화면을 두 번 눌러주세요.
+
+[SCENE:hand stirring red pepper powder into a pot of warm but not boiling soup, 1080x1920]
+나레이터: 국물이 팔팔 끓을 때 절대 고춧가루를 넣지 마십시오. 반드시 불을 끄고 1분 뒤에 풀어야 합니다.
+
+[SCENE:Korean elderly man happily eating a bowl of soup, safe and healthy, 1080x1920]
+나레이터: 이 간단한 순서만 지켜도 발암 독소를 완벽하게 막을 수 있습니다.
+
+[SCENE:split screen showing boiling soup on left and calm warm soup on right, 1080x1920]
+나레이터: 오늘부터 끓는 국에 고춧가루 안 부으실 분, 댓글에 '안 부음'이라고 남겨주세요.
