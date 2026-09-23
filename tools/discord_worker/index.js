@@ -97,7 +97,7 @@
  * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
-const WORKER_BUILD = "2026-09-17-concurrency8"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
+const WORKER_BUILD = "2026-09-23-image-chaining"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
@@ -136,7 +136,9 @@ export default {
       if (!payload.run_id || !Array.isArray(payload.scenes)) {
         return new Response("missing run_id/scenes", { status: 400 });
       }
-      ctx.waitUntil(generateSceneImages(env, payload.run_id, payload.scenes));
+      ctx.waitUntil(
+        generateSceneImages(env, payload.run_id, payload.scenes, url.origin, payload._depth || 0)
+      );
       return json({ accepted: true, scene_count: payload.scenes.length });
     }
 
@@ -665,36 +667,19 @@ function encodeBase64(str) {
   return btoa(binary);
 }
 
-/** ghPutFile/encodeBase64는 JSON 텍스트 전용이라 이미지 원본 바이트에는 못 씁니다.
- *  raw ArrayBuffer를 그대로 base64로 인코딩하는 바이너리 전용 버전. */
-function encodeBase64Bytes(buffer) {
-  const bytes = new Uint8Array(buffer);
-  let binary = "";
-  const chunk = 0x8000;
-  for (let i = 0; i < bytes.length; i += chunk) {
-    binary += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
-  }
-  return btoa(binary);
-}
-
-/** encodeBase64Bytes의 반대 — base64 문자열을 raw 바이트(Uint8Array)로 되돌립니다.
- * decodeBase64()는 UTF-8 텍스트 전용이라 이미지처럼 임의 바이너리에는 못 씁니다. */
-function decodeBase64Bytes(b64) {
-  const binary = atob(b64);
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-  return bytes.buffer;
-}
-
-/** JSON.stringify를 거치지 않고 raw 바이너리(ArrayBuffer)를 그대로 커밋합니다. */
-async function ghPutBinaryFile(env, path, buffer, message) {
+/** 이미 base64인 내용(예: NVIDIA가 준 이미지)을 그대로 커밋합니다.
+ *  GitHub contents API가 요구하는 형식이 곧 base64라, 중간에 바이트로 풀었다가
+ *  다시 base64로 만드는 왕복은 순전히 낭비입니다 — 그 왕복이 400KB 문자열을
+ *  JS 루프로 두 번 훑는 CPU 작업이라 동시 8장이면 워커 CPU 예산을 그대로
+ *  태워먹습니다(2026-09-23, 아래 generateSceneImages 주석 참고). */
+async function ghPutBinaryFileBase64(env, path, contentB64, message) {
   const apiUrl = `https://api.github.com/repos/${env.GITHUB_REPO}/contents/${path}`;
   const resp = await fetch(apiUrl, {
     method: "PUT",
     headers: { ...ghHeaders(env), "Content-Type": "application/json" },
     body: JSON.stringify({
       message: `${message} [skip ci]`,
-      content: encodeBase64Bytes(buffer),
+      content: contentB64,
       branch: BRANCH,
     }),
   });
@@ -758,6 +743,16 @@ const _IMAGE_CONCURRENCY = 8;
 const _IMAGE_MAX_RETRIES = 3;
 const _IMAGE_RETRY_BASE_MS = 5000; // 5s, 10s, 20s
 
+// 한 번의 워커 호출이 맡을 씬 개수. 실측(2026-09-23)으로 한 호출이 첫 8개 배치를
+// 끝내기도 전에 죽었으니(32씬 중 3장만 커밋) 여유를 크게 두고 8 = 배치 하나로
+// 잡습니다. 남은 씬은 자기 자신을 다시 호출해 새 예산으로 이어갑니다.
+const _IMAGE_SCENES_PER_INVOCATION = 8;
+
+// 체인이 무한히 이어지지 않도록 하는 상한. 8씬 × 12 = 96씬까지 커버되는데,
+// 실제로 가장 많은 롱폼이 32씬이라 한참 여유가 있습니다. 이 상한에 걸리면
+// 남은 씬은 그냥 포기(Pixabay 폴백)하고 로그를 남깁니다.
+const _IMAGE_MAX_CHAIN_DEPTH = 12;
+
 async function _fetchNvidiaImage(env, prompt, seed) {
   for (let attempt = 0; attempt <= _IMAGE_MAX_RETRIES; attempt++) {
     const resp = await fetch(`https://ai.api.nvidia.com/v1/genai/${_NVIDIA_IMAGE_MODEL}`, {
@@ -780,6 +775,30 @@ async function _fetchNvidiaImage(env, prompt, seed) {
     const wait = _IMAGE_RETRY_BASE_MS * Math.pow(2, attempt);
     console.log(`[image-gen] ${resp.status} 응답 — ${Math.round(wait / 1000)}초 뒤 재시도 (${attempt + 1}/${_IMAGE_MAX_RETRIES})`);
     await new Promise((r) => setTimeout(r, wait));
+  }
+}
+
+/** 남은 씬들을 워커 자신에게 다시 POST해서 새 실행 예산으로 이어 그리게 합니다.
+ *  selfOrigin이 없으면(예: cron에서 부른 경우) 이어갈 주소를 모르니 그냥 멈춥니다. */
+async function _chainRemainingScenes(env, runId, rest, selfOrigin, depth) {
+  const next = (depth || 0) + 1;
+  if (!selfOrigin) {
+    console.log(`[image-gen] ${runId}: 이어갈 주소를 몰라 남은 ${rest.length}씬을 포기합니다`);
+    return;
+  }
+  if (next > _IMAGE_MAX_CHAIN_DEPTH) {
+    console.log(`[image-gen] ${runId}: 체인 상한(${_IMAGE_MAX_CHAIN_DEPTH})에 걸려 남은 ${rest.length}씬을 포기합니다`);
+    return;
+  }
+  try {
+    const resp = await fetch(`${selfOrigin}/generate-images-x9k3m2`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Secret": env.IMAGE_GEN_SECRET },
+      body: JSON.stringify({ run_id: runId, scenes: rest, _depth: next }),
+    });
+    console.log(`[image-gen] ${runId}: 남은 ${rest.length}씬을 다음 호출로 넘김 (depth=${next}, status=${resp.status})`);
+  } catch (e) {
+    console.log(`[image-gen] ${runId}: 체인 호출 실패 — ${e.message}`);
   }
 }
 
@@ -808,9 +827,12 @@ async function _generateOneScene(env, runId, scene) {
       console.log(`[image-gen] scene ${scene.index} 필터링됨 (${artifact.finishReason}) — 건너뜀`);
       return;
     }
-    const buffer = decodeBase64Bytes(b64);
+    // NVIDIA가 준 base64를 그대로 GitHub에 넘깁니다 — 바이트로 풀었다 다시
+    // base64로 만드는 왕복은 결과가 똑같은데 CPU만 먹습니다. 혹시 data URI
+    // 형태로 오는 경우만 앞부분을 떼어냅니다.
+    const contentB64 = b64.includes(",") ? b64.slice(b64.indexOf(",") + 1) : b64;
     const path = `assets/pending_images/${runId}/scene_${String(scene.index).padStart(4, "0")}.jpg`;
-    await ghPutBinaryFile(env, path, buffer, `AI image scene ${scene.index} (${runId})`);
+    await ghPutBinaryFileBase64(env, path, contentB64, `AI image scene ${scene.index} (${runId})`);
     console.log(`[image-gen] scene ${scene.index} 완료`);
   } catch (e) {
     console.log(`[image-gen] scene ${scene.index} 에러: ${e.message}`);
@@ -823,11 +845,27 @@ async function _generateOneScene(env, runId, scene) {
  * ctx.waitUntil()로 호출되므로 GitHub Actions 잡 시간과는 무관하게 돕니다.
  * _IMAGE_CONCURRENCY개씩 배치로 병렬 처리합니다(순차 처리했던 Pollinations
  * 시절과 달리 NVIDIA는 동시요청을 잘 버팀 — 2026-08-19).
+ *
+ * 2026-09-23: 한 번의 호출로 28~32씬을 다 그리려 하면 워커가 시작 20초쯤 만에
+ * 첫 배치 도중에 조용히 죽는 게 실측으로 확인됐습니다 — 32씬 중 3장, 28씬 중
+ * 4장만 커밋되고 그 뒤로 아무 것도 안 올라왔고, 커밋 시각이 전부 킥오프 직후
+ * 몇 초 안에 몰려 있었습니다(동시처리를 4→8로 올려도 그대로). 즉 "느려서 못
+ * 끝낸" 게 아니라 호출 하나에 걸린 실행 예산(CPU·서브리퀘스트)을 넘긴 것이라,
+ * 대기 시간을 늘리는 것으로는 절대 안 고쳐집니다. 그래서 한 호출이 맡는 양을
+ * _IMAGE_SCENES_PER_INVOCATION으로 잘라두고, 남은 씬은 워커가 자기 자신을 다시
+ * 호출해서(_chainRemainingScenes) 새 예산으로 이어 그리게 했습니다.
  */
-async function generateSceneImages(env, runId, scenes) {
-  for (let i = 0; i < scenes.length; i += _IMAGE_CONCURRENCY) {
-    const batch = scenes.slice(i, i + _IMAGE_CONCURRENCY);
+async function generateSceneImages(env, runId, scenes, selfOrigin, depth) {
+  const chunk = scenes.slice(0, _IMAGE_SCENES_PER_INVOCATION);
+  const rest = scenes.slice(_IMAGE_SCENES_PER_INVOCATION);
+
+  for (let i = 0; i < chunk.length; i += _IMAGE_CONCURRENCY) {
+    const batch = chunk.slice(i, i + _IMAGE_CONCURRENCY);
     await Promise.all(batch.map((scene) => _generateOneScene(env, runId, scene)));
+  }
+
+  if (rest.length) {
+    await _chainRemainingScenes(env, runId, rest, selfOrigin, depth);
   }
   // 2026-08-26: 예전엔 여기서 이미지 다 끝날 때마다 조립을 바로 트리거했는데,
   // NVIDIA로 이미지 생성이 훨씬 빨라진 뒤로 채널당 대본 3개 중 첫 번째 것의

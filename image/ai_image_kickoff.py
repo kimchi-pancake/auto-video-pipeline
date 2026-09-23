@@ -25,9 +25,19 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+# 한 번의 Worker 호출에 넘길 씬 개수. 씬 목록을 통째로 한 번에 넘기면 Worker가
+# 호출 하나의 실행 예산(CPU·서브리퀘스트) 안에서 그걸 다 그리려다 초반에 죽습니다 —
+# 2026-09-23 실측으로 32씬 요청에 3장, 28씬 요청에 4장만 커밋되고 나머지는 아무리
+# 기다려도(대기 900초) 올라오지 않았고, 커밋 시각이 전부 킥오프 직후 몇 초 안에
+# 몰려 있었습니다(Worker 동시처리를 4→8로 올려도 동일). 요청을 쪼개면 호출마다
+# 예산이 새로 생기므로, 여기서 나눠 보냅니다. Worker 쪽에도 같은 크기의 안전망
+# (자기 자신 재호출)이 있지만, 이 분할이 정상 경로입니다.
+_SCENES_PER_REQUEST = 8
+
 
 def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
     """Worker에 생성 요청만 던지고 응답을 기다리지 않고 바로 리턴합니다.
+    씬이 많으면 _SCENES_PER_REQUEST개씩 나눠 여러 번 POST합니다.
     실패해도 예외를 삼키고 조용히 넘어갑니다 — Pixabay 폴백이 항상 있으므로
     이 호출이 파이프라인을 막으면 안 됩니다."""
     worker_url = os.environ.get("DISCORD_WORKER_URL", "").strip()
@@ -38,20 +48,42 @@ def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
     scene_payload = [{"index": s.index, "prompt": s.prompt} for s in scenes if s.prompt]
     if not scene_payload:
         return
+
+    endpoint = f"{worker_url.rstrip('/')}/generate-images-x9k3m2"
+    chunks = [
+        scene_payload[i:i + _SCENES_PER_REQUEST]
+        for i in range(0, len(scene_payload), _SCENES_PER_REQUEST)
+    ]
+    sent = 0
     try:
         import requests
-        resp = requests.post(
-            f"{worker_url.rstrip('/')}/generate-images-x9k3m2",
-            json={"run_id": run_id, "scenes": scene_payload},
-            headers={"X-Secret": secret},
-            timeout=10,
+    except Exception as e:  # requests 자체가 없으면 조용히 포기
+        logger.warning("[AIImage] requests 임포트 실패(무시하고 계속 진행): %s", e)
+        return
+
+    for n, chunk in enumerate(chunks, 1):
+        try:
+            resp = requests.post(
+                endpoint,
+                json={"run_id": run_id, "scenes": chunk},
+                headers={"X-Secret": secret},
+                timeout=10,
+            )
+            if resp.status_code == 200:
+                sent += len(chunk)
+            else:
+                logger.warning(
+                    "[AIImage] Worker 요청 실패 (%d/%d, %d): %s",
+                    n, len(chunks), resp.status_code, resp.text[:200],
+                )
+        except Exception as e:
+            logger.warning("[AIImage] Worker 요청 중 에러 (%d/%d, 무시하고 계속 진행): %s", n, len(chunks), e)
+
+    if sent:
+        logger.info(
+            "[AIImage] Worker에 %d개 씬 생성 요청 완료 (요청 %d번으로 분할, run_id=%s)",
+            sent, len(chunks), run_id,
         )
-        if resp.status_code == 200:
-            logger.info("[AIImage] Worker에 %d개 씬 생성 요청 완료 (run_id=%s)", len(scene_payload), run_id)
-        else:
-            logger.warning("[AIImage] Worker 요청 실패 (%d): %s", resp.status_code, resp.text[:200])
-    except Exception as e:
-        logger.warning("[AIImage] Worker 요청 중 에러(무시하고 계속 진행): %s", e)
 
 
 def pull_pending_images(repo_root: Path) -> None:
