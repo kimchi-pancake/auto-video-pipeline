@@ -1,0 +1,47 @@
+RUN_ID:
+claude_20260924_160825_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+눈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+외국에서도 난리난 밤 11시 스마트폰, 당신 각막 녹습니다
+
+THUMBNAIL_SHORTS:
+외국에서도 난리난 밤 11시 스마트폰, 당신 각막 녹습니다
+
+[SCENE:elderly Korean woman lying in dark bedroom looking at bright smartphone screen, 1080x1920]
+나레이터: 밤에 불 끄고 스마트폰 보시는 분들, 당신 "각막" 지금 이 순간 "회복 불가"하게 마르고 있습니다.
+
+[SCENE:close up of human eye with dry red veins and irritated sclera, 1080x1920]
+나레이터: 아침에 눈을 뜰 때 뻑뻑하고 모래가 들어간 것처럼 아프신 적 있으십니까?&그게 바로 각막 표면이 갈라지고 있다는 비명입니다.
+
+[SCENE:anatomy illustration of human eye showing cornea and tear film layers, 1080x1920]
+나레이터: 어두운 방에서 폰을 보면 눈 깜빡임이 절반으로 뚝 떨어지고, 각막은 눈물이 말라 숨을 못 쉬어 죽어갑니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 각막이 완전히 뚫리는 걸 막을 비상 대책, 더 자세한 방법이 궁금하시다면 화면을 두 번 눌러주세요.
+
+[SCENE:elderly Korean woman sitting up in bed turning off smartphone and putting it on nightstand, 1080x1920]
+나레이터: 오늘 밤 당장 침실에 폰을 두지 마십시오.&침대 머리맡에 폰이 있으면 무조건 다시 보게 되어 각막이 손 쓸 수 없게 파괴됩니다.
+
+[SCENE:Korean senior woman doing warm compress with towel over her closed eyes, 1080x1920]
+나레이터: 자기 전 5분간 따뜻한 수건으로 눈에 온찜질을 하십시오.&마비된 눈물샘이 녹아 눈물이 다시 나와 마른 각막을 살려냅니다.
+
+[SCENE:senior person setting alarm clock and placing smartphone in another room drawer, 1080x1920]
+나레이터: 알람은 천 원짜리 시계를 사서 머리맡에 두고, 폰은 무조건 거실 충전기에 꽂아두십시오.
+
+[SCENE:Korean senior man doing eye blinking exercise consciously, sitting on couch, 1080x1920]
+나레이터: 폰을 쓸 수밖에 없다면, 10분마다 눈을 세 번 꽉 닫았다 뜨는 강제 깜빡임으로 눈물을 펴발라 각막을 보호하십시오.
+
+[SCENE:senior person looking directly into camera with serious expression, dark background, 1080x1920]
+나레이터: 오늘 밤 침실에 폰 두지 않고 거실에다 놓기로 결심하신 분, 댓글에 '오늘부터'라고 남겨주세요.

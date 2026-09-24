@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260924_161825_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+약물주의
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+매일 드시는 그 약, 간 신장 다 망가뜨립니다
+
+THUMBNAIL_SHORTS:
+매일 드시는 그 약, 간 신장 다 망가뜨립니다
+
+[SCENE:Korean elderly man swallowing a handful of pills with just a sip of water, 1080x1920]
+나레이터: 매일 아침 한 입에 몰아 먹는 그 약,&지금 이 순간에도 여러분의 "간"과 "신장"을 "회복 불가" 상태로 만들고 있습니다.
+
+[SCENE:Korean senior woman taking pills with grapefruit juice on dining table, 1080x1920]
+나레이터: 약을 쓴맛 없애려고 귤 주스나 차와 함께 삼키시거나,&물 한 모금만 마시고 바로 눕지는 않으십니까?
+
+[SCENE:close up of liver anatomy filtering toxic red substances, dark red lighting, 1080x1920]
+나레이터: 주스 속 특정 성분이 간 해독 효소를 마비시켜 약을 치명적인 독으로 바꿉니다.&물 없이 먹은 약은 위벽을 긁어 식도와 위장에 구멍을 뚫어버립니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 많은 정보와 정확한 복용법을 알아보려면,&화면을 두 번 눌러주세요.
+
+[SCENE:Korean elderly woman drinking a full glass of warm water with one pill, sitting upright, 1080x1920]
+나레이터: 약은 반드시 미지근한 물 한 컵과 함께 드시고,&먹고 나서 최소 30분은 앉아 계셔야 합니다.
+
+[SCENE:Korean senior man putting all pill bottles in a clear plastic bag to show doctor, 1080x1920]
+나레이터: 다른 병원에서 받은 약을 함께 드실 때는 반드시 의사에게 모든 약통을 보여주고 중복 성분을 확인받으셔야 합니다.
+
+[SCENE:Korean elderly woman looking directly at camera, pointing at pill bottle, 1080x1920]
+나레이터: 오늘 말씀드린 복용 실수 중, 본인은 방금 말한 위험 습관 중 몇 가지나 해당되셨나요?&댓글에 정확한 개수만 적어주세요.

@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260924_161058_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+장건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+장 회복 불가? 이 습관 때문
+
+THUMBNAIL_SHORTS:
+장 회복 불가? 이 습관 때문
+
+[SCENE:close up of Korean senior woman looking worried at toilet, 1080x1920]
+나레이터: 이것 모르면 "장" "회복 불가"합니다.
+
+[SCENE:Korean senior man sitting on toilet looking uncomfortable, 1080x1920]
+나레이터: 아침마다 화장실 가도 시원하지 않으신가요?
+
+[SCENE:animation of sluggish intestine with low fiber diet, 1080x1920]
+나레이터: 물과 식이섬유가 부족하면 장 운동이 느려져 변비가 고착됩니다.&근데 진짜 중요한 건 지금부터입니다.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 더 자세한 방법이 궁금하시면 화면을 두 번 눌러주세요.
+
+[SCENE:Korean senior woman drinking water in morning, 1080x1920]
+나레이터: 아침 공복 물 200ml 마시고, 매끼 채소 반찬 한 가지 추가하세요.&저녁 9시 이후엔 금식으로 장을 쉬게 하세요.&정확한 진단과 치료는 전문의와 상담하세요.
+
+[SCENE:Korean senior couple smiling while walking, 1080x1920]
+나레이터: 오늘부터 물 200ml와 채소 한 가지, 실천하실 분 댓글에 "실천" 적어주세요.&오늘 정보가 도움이 되셨다면 좋아요와 구독으로 응원해 주세요.
