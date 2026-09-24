@@ -4056,5 +4056,55 @@
     "uploaded_at": "2026-09-23T16:51:36+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "_tlRfVuPMB4",
+    "channel": "웃짬",
+    "category": "눈건강",
+    "title": "외국에서도 난리난 밤 11시 스마트폰, 당신 각막 녹습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-24T16:36:38+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "Cy62kOj0ASU",
+    "channel": "웃짬",
+    "category": "장건강",
+    "title": "장 회복 불가? 이 습관 때문",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-24T16:52:29+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "YRdp95XYFSk",
+    "channel": "도개",
+    "category": "약물주의",
+    "title": "매일 드시는 그 약, 간 신장 다 망가뜨립니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-24T17:02:48+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "UgIuZLPeuy8",
+    "channel": "웃짬",
+    "category": "눈건강",
+    "title": "외국에서도 난리난 밤 11시 스마트폰, 당신 각막 녹습니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-09-24T17:17:33+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "pDsmKKlAPzs",
+    "channel": "도개",
+    "category": "치매인지",
+    "title": "이 습관 모르면 뇌 못 돌립니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-09-24T17:18:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
