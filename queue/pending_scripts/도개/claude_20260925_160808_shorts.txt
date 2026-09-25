@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260925_160808_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+뼈건강
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+뼈 텅 비게 만드는 아침 습관
+
+THUMBNAIL_SHORTS:
+이것 모르면 뼈 회복 불가
+
+[SCENE:close up of Korean senior woman drinking milk with painful expression, 1080x1920]
+나레이터: 빈속에 드시는 그 우유, 뼈를 튼튼하게 한다고 믿으셨죠?&사실 뼈를 부수는 주범일 수 있습니다.
+
+[SCENE:Korean senior man holding lower back painfully while getting out of bed, 1080x1920]
+나레이터: 자고 일어나서 허리가 뻐근하고 시큰거리신다면, 이미 뼈속이 텅 비어가고 있다는 경고입니다.
+
+[SCENE:3D animation of bone structure showing calcium leaking out and dissolving, 1080x1920]
+나레이터: 빈속에 단백질이 높은 우유가 들어가면 위산이 과다 분비되어 칼슘을 몸밖으로 쫙 빼버립니다.&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 뼈를 살리는 진짜 해결책이 궁금하시다면, 지금 화면을 두 번 눌러주세요.
+
+[SCENE:Korean senior woman eating cheese and almonds with sunlight coming through window, 1080x1920]
+나레이터: 우유는 식사 후 드시고, 햇빛 쬐며 치즈나 멸치를 드세요.&정확한 진단과 치료는 전문의와 상담하세요.
+
+[SCENE:Korean senior man looking thoughtful looking at glass of milk, 1080x1920]
+나레이터: 오늘부터 우유 드시는 시간 바꾸실 분, 댓글에 '바꾼다'라고 남겨주세요.
