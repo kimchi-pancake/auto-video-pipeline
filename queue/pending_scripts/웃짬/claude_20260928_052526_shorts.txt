@@ -1,0 +1,41 @@
+RUN_ID:
+claude_20260928_052526_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+관절근육
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+관절이 아프신 분, 아침 10초 이거 안 하면 오히려 더 심해집니다
+
+THUMBNAIL_SHORTS:
+관절이 아프신 분, 아침 10초 이거 안 하면 오히려 더 심해집니다
+
+[SCENE:elderly Korean woman waking up, hand on stiff knee, grimacing in pain, 1080x1920]
+나레이터: 아침에 관절이 쑤시는 거, 나이 탓이라고 생각하셨다면 지금 당장 이 영상을 멈추세요.
+
+[SCENE:elderly woman sitting on edge of bed, looking at her painful joints, 1080x1920]
+나레이터: 사실 아침 관절 통증의 진짜 원인은 노화가 아니라, 잠자는 동안 굳은 관절을 갑자기 움직이기 때문입니다.
+
+[SCENE:elderly woman slowly doing ankle pumps in bed, 1080x1920]
+나레이터: 이 사실을 모르면 "무릎" "회복 불가"합니다. 왜냐하면 굳은 관절을 무리하게 움직이면 미세한 손상이 쌓여 결국 염증으로 이어지기 때문입니다.
+
+[SCENE:elderly woman doing gentle ankle circles, 1080x1920]
+나레이터: 해결법은 간단합니다. 침대 위에 앉아서 발끝을 천천히 뻗고 모으는 발목 펴기 운동을 10번 해주세요.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:elderly woman doing heel raises while holding bed frame, 1080x1920]
+나레이터:それと 발끝으로 천천히 올라갔다 내려오는 발끝 sollev esercizio를 15번 해주고, 즉시 물 한 잔을 드세요.
+
+[SCENE:elderly woman smiling, doing the routine smoothly, 1080x1920]
+나레이터: 이 루틴을 아침에 3분만 하면 관절 경직감이 nettement 줄어요. 오늘부터 이 루틴 하실 분, 댓글에 숫자 '3' 남겨주세요.

@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20260928_052723_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+혈관혈압
+
+BGM:
+sad.mp3
+
+THUMBNAIL_LONG:
+아침 첫 물 한 잔, 혈압, 혈관에 독이 됩니다
+
+THUMBNAIL_SHORTS:
+아침 첫 물 한압, 혈관에 독이 됩니다
+
+[SCENE:Korean senior man drinking water from glass in kitchen morning light, 1080x1920]
+나레이터: 아침에 공복으로 물 한 잔 마시는 습관, 혈관을 늙게 만들고 있었습니다.
+
+[SCENE:close up of water glass on wooden table morning light, 1080x1920]
+나레이터: 물은 몸에 좋다고만 알았는데, 빈 속에 마시면 혈당이 급격히 떨어져 교감신경이 과도하게 자극됩니다.
+
+[SCENE:medical illustration of blood vessels constricting due to sympathetic activation, 1080x1920]
+나레이터: 혈관이 갑자기 수축하면서 혈압이 치솟고, 이 상태가 반복되면 혈관 벽에 손상이 쌓입니다&근데 사실 제일 중요한 건 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 더 자세한 방법이 궁금하신 분은 화면을 두 번 눌러주세요.
+
+[SCENE:Korean senior woman drinking warm water slowly after light breakfast, 1080x1920]
+나레이터: 해결법은 간단합니다. 아침 식사 후 30분 지난 뒤에, 체온과 가까운 미지근한 물을 한 잔씩 세 번 나누어 마시세요.
+
+[SCENE:Korean senior couple walking gently in park morning, 1080x1920]
+나레이터: 이렇게 하면 혈당 급변동을 막고 혈관 수축을 예방할 수 있습니다&정확한 진단과 치료는 전문의와 상담하세요.
+
+[SCENE:Korean senior man holding glass of water smiling at camera, 1080x1920]
+나레이터: 오늘부터 아침 식사 후에 물 마시기 시작하셨다면, 댓글에 '시작'이라고만 남겨주세요.
