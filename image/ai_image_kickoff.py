@@ -47,6 +47,16 @@ def _character_seed(run_id: str, speaker_key: str) -> int:
 # (자기 자신 재호출)이 있지만, 이 분할이 정상 경로입니다.
 _SCENES_PER_REQUEST = 8
 
+# 청크 사이에 둘 간격(초). 쪼개서 보낸 각 청크가 Cloudflare에서 별개의 Worker
+# 실행으로 뜨고, 그 안에서 다시 _IMAGE_CONCURRENCY(8)개씩 NVIDIA로 동시 요청을
+# 날립니다 — 롱폼 하나(예: 54씬)만 해도 청크 7개가 거의 동시에 날아가 NVIDIA
+# 쪽에 56개 요청이 한꺼번에 몰리고, 그 직후에 오는 다른 대본(쇼츠 등)의 요청은
+# 이미 몰린 상태에서 도착해 거의 다 실패하는 정황이 실측으로 확인됨(2026-09-28:
+# 롱폼 2개는 7~8장씩 건졌는데 쇼츠 4개 중 3개는 0장). 청크 사이에 짧게 쉬어서
+# 한 번에 몰리는 양을 줄인다 — 롱폼 7청크 기준 총 30초 정도만 늘어나니 손해는
+# 작고, 이후에 오는 다른 대본의 요청이 완전히 새까맣게 막히는 것보다는 낫다.
+_CHUNK_DELAY_SEC = 5
+
 
 def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
     """Worker에 생성 요청만 던지고 응답을 기다리지 않고 바로 리턴합니다.
@@ -89,6 +99,8 @@ def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
         return
 
     for n, chunk in enumerate(chunks, 1):
+        if n > 1:
+            time.sleep(_CHUNK_DELAY_SEC)
         try:
             resp = requests.post(
                 endpoint,

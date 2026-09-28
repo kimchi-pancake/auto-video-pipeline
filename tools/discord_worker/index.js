@@ -97,7 +97,7 @@
  * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
-const WORKER_BUILD = "2026-09-28-character-seed"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
+const WORKER_BUILD = "2026-09-28-retry-patience"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
@@ -740,8 +740,16 @@ const _NVIDIA_IMAGE_MODEL = "black-forest-labs/flux.1-dev";
 // 못 끝나는 씬이 실측으로 급증(29씬 중 4개만 성공 등). 8개로 늘려 배치 수를
 // 절반으로 줄임 — 원래 실측한 "8개 동시 7개 성공" 그 수치 그대로 씀.
 const _IMAGE_CONCURRENCY = 8;
-const _IMAGE_MAX_RETRIES = 3;
-const _IMAGE_RETRY_BASE_MS = 5000; // 5s, 10s, 20s
+// 2026-09-28: 채널 2개가 같은 배치에서 대본을 여러 개(롱폼+쇼츠+추가쇼츠) 만들면
+// Python 쪽(ai_image_kickoff.py)이 청크마다 별도 POST를 쏘고, 그 각각이 Cloudflare
+// 에서 독립된 Worker 실행으로 떠서 전부 NVIDIA에 동시에 요청을 몰아넣습니다 —
+// 실측으로 롱폼 2개는 7~8장씩 건졌는데 그 직후 도착한 쇼츠 4개 중 3개는 0장이었음
+// (먼저 도착한 롱폼들이 순간 처리량을 다 써버려 뒤에 온 요청이 계속 429를 맞고
+// 기존 재시도 한도(3회, 최대 35초) 안에 못 뚫은 것으로 추정). 재시도 횟수와
+// 대기시간을 늘려서 뒤늦게 도착한 요청도 버틸 여유를 더 줌 — Python 쪽 청크
+// 간격(_CHUNK_DELAY_SEC)도 같이 늘렸으니(ai_image_kickoff.py) 두 조치를 같이 봄.
+const _IMAGE_MAX_RETRIES = 4;
+const _IMAGE_RETRY_BASE_MS = 8000; // 8s, 16s, 32s, 64s
 
 // 한 번의 워커 호출이 맡을 씬 개수. 실측(2026-09-23)으로 한 호출이 첫 8개 배치를
 // 끝내기도 전에 죽었으니(32씬 중 3장만 커밋) 여유를 크게 두고 8 = 배치 하나로
