@@ -97,7 +97,7 @@
  * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
-const WORKER_BUILD = "2026-09-23-image-chaining"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
+const WORKER_BUILD = "2026-09-28-character-seed"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
@@ -806,7 +806,11 @@ async function _generateOneScene(env, runId, scene) {
   try {
     const faceBoost = _PERSON_KEYWORDS.test(scene.prompt) ? _FACE_QUALITY_BOOST : "";
     const prompt = `${scene.prompt}${faceBoost}${_IMAGE_STYLE_SUFFIX}`;
-    const seed = Math.floor(Math.random() * 1e9);
+    // Python 쪽(ai_image_kickoff.py)이 "이 영상에서 이 화자는 항상 같은 seed"로
+    // 계산해서 넘겨주면 그걸 그대로 씁니다 — 같은 인물이 여러 씬에 걸쳐 조금이라도
+    // 더 비슷하게 그려지게 하려는 것(2026-09-28, "AI사진으로 화자 구별" 요구사항).
+    // 안 넘어온 씬(나레이터 단독 장면 등)은 예전처럼 완전 무작위.
+    const seed = typeof scene.seed === "number" ? scene.seed : Math.floor(Math.random() * 1e9);
     const resp = await _fetchNvidiaImage(env, prompt, seed);
     if (!resp.ok) {
       console.log(`[image-gen] scene ${scene.index} 최종 실패 (${resp.status})`);

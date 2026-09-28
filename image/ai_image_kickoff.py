@@ -17,6 +17,7 @@ from __future__ import annotations
 import os
 import subprocess
 import time
+import zlib
 from pathlib import Path
 from typing import List
 
@@ -24,6 +25,18 @@ from parser.story_parser import Scene
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
+
+
+def _character_seed(run_id: str, speaker_key: str) -> int:
+    """이 영상(run_id) 안에서 같은 화자(speaker_key, 예: "여자1")가 나오는 모든
+    씬에 같은 seed를 줘서, FLUX가 매번 완전히 다른 얼굴/옷차림을 그리지 않고
+    어느 정도 일관된 외모로 수렴하게 유도합니다(2026-09-28, "AI사진으로 화자
+    구별" 요구사항 — 프롬프트에 고정 외모 태그를 반복해서 넣는 것과 같이 써야
+    효과가 있고, seed만으로 완전한 동일 인물 재현은 안 되지만 안 쓰는 것보다는
+    낫습니다). run_id를 같이 해시에 넣는 이유는 "여자1" 같은 화자 키가 영상마다
+    완전히 다른 인물이기 때문 — run_id 없이 화자 키만 해시하면 서로 다른 영상의
+    "여자1"들이 전부 같은 seed를 써버려 의미가 없어집니다."""
+    return zlib.crc32(f"{run_id}:{speaker_key}".encode("utf-8")) % 1_000_000_000
 
 # 한 번의 Worker 호출에 넘길 씬 개수. 씬 목록을 통째로 한 번에 넘기면 Worker가
 # 호출 하나의 실행 예산(CPU·서브리퀘스트) 안에서 그걸 다 그리려다 초반에 죽습니다 —
@@ -45,7 +58,21 @@ def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
     if not worker_url or not secret:
         logger.info("[AIImage] DISCORD_WORKER_URL/IMAGE_GEN_SECRET 미설정 — AI 이미지 생성 건너뜀 (Pixabay만 사용)")
         return
-    scene_payload = [{"index": s.index, "prompt": s.prompt} for s in scenes if s.prompt]
+    scene_payload = []
+    for s in scenes:
+        if not s.prompt:
+            continue
+        entry = {"index": s.index, "prompt": s.prompt}
+        # 그 씬에서 실제로 대사를 치는 인물(나레이터 제외 우선) 기준으로 seed를
+        # 고정 — 나레이터만 있거나 대사가 아예 없는(배경 설명용) 씬은 굳이 고정할
+        # 대상이 없으니 예전처럼 Worker가 무작위 seed를 쓰게 둡니다.
+        primary_speaker = next(
+            (d.speaker for d in s.dialogues if d.speaker != "나레이터"),
+            s.dialogues[0].speaker if s.dialogues else None,
+        )
+        if primary_speaker:
+            entry["seed"] = _character_seed(run_id, primary_speaker)
+        scene_payload.append(entry)
     if not scene_payload:
         return
 
