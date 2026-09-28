@@ -79,24 +79,41 @@ MODEL = "qwen/qwen3-235b-a22b-2507"
 #   z-ai/glm-5.2:free              40초/1087자, 형식 준수, 근거 구체적   ← 채택
 #   nvidia/nemotron-3-ultra-550b   35초/1118자, 프롬프트 예시 문구를 그대로 베낌
 #   qwen/qwen3.8-27b:free          272초 — 너무 느려서 배치 시간 초과 위험
-# 402가 아닌 오류(인증/네트워크/그 외 상태코드)는 폴백하지 않고 그대로 올립니다 —
+# 402/404가 아닌 오류(인증/네트워크/그 외 상태코드)는 폴백하지 않고 그대로 올립니다 —
 # 진짜 고장을 무료 모델로 덮어버리면 원인 파악이 늦어지니까.
 # nemotron을 2차로 남겨둔 건 무료 모델이 공용 풀을 쓰다 보니 한도와 무관하게
 # 순간 포화로 429를 뱉는 일이 잦기 때문(2026-09-23 실측, 일일 한도 50회 중 5회만
 # 쓴 상태에서 429). 예시 문구를 베끼는 약점이 있어도 영상이 0건 나가는 것보다는 낫다.
-FALLBACK_MODELS = ["z-ai/glm-5.2:free", "nvidia/nemotron-3-ultra-550b-a55b:free"]
+# 2026-09-26: z-ai/glm-5.2:free가 OpenRouter 무료 카탈로그에서 예고 없이 내려가
+# 404가 됨(유료 슬러그 z-ai/glm-5.2로 옮기라는 메시지) — 무료 모델은 언제든
+# 이렇게 사라질 수 있다는 뜻이라, 리스트 순서 바꾸는 것보다 404도 402와 똑같이
+# "다음 모델로 넘어가라" 신호로 다루는 게 근본 대책(_call_claude 참고).
+# 대체 후보 재실측(2026-09-28, shorts_script_prompt):
+#   nemotron-3-super-120b-a12b:free   85초, 형식 준수, 텍스트 깨끗함        ← 1순위
+#   nemotron-3-ultra-550b-a55b:free   180초, 형식 준수, 텍스트 깨끗함       ← 2순위(보험)
+#   google/gemma-4-31b-it:free        4번 연속 429 — 지금 당장은 못 믿을 상태라 제외
+#   dots-studio/dots-3-note-preview   20초로 빠르지만 한글 중간에 깨진 토큰
+#                                     ("당SCREENoots") 섞여 나와 탈락
+# 둘 다 프롬프트 예시 문구("근데 사실 제일 중요한 건 지금부터입니다" 등)를 토씨
+# 그대로 베끼는 고질적 약점이 있음(예전에 이 이유로 카탈로그에서 뺐던 모델들) —
+# 그래도 이건 유료 모델이 막혔을 때만 쓰는 안전망이라, 영상이 0건 나가는 것보다는 낫다.
+FALLBACK_MODELS = ["nvidia/nemotron-3-super-120b-a12b:free", "nvidia/nemotron-3-ultra-550b-a55b:free"]
 
 # 429(요청 한도)는 대개 몇십 초 뒤면 풀리는 일시적 상태라, 모델을 바로 갈아타기
 # 전에 같은 모델로 몇 번 더 두드려 봅니다. 대기는 20초 → 40초로 늘려 잡습니다.
 MAX_RATE_LIMIT_RETRIES = 3
 RATE_LIMIT_BACKOFF_SEC = 20
 
-# 모델별로 덧붙일 요청 파라미터. GLM-5.2는 하이브리드 추론 모델이라 기본값으로
-# 두면 응답 토큰 예산을 추론에 태워버립니다 — 롱폼 확장 호출 실측(2026-09-23)에서
-# 16000 토큰 중 9151이 추론으로 나가고 본문이 중간에 잘렸음(finish_reason=length).
-# 추론을 끄면 같은 호출이 7128 토큰에 깔끔히 끝나고 본문도 10343자로 늘어남.
-MODEL_EXTRA_BODY = {
-    "z-ai/glm-5.2:free": {"reasoning": {"enabled": False}},
+# 모델별로 덧붙일 요청 파라미터. 한때 폴백 1순위였던 z-ai/glm-5.2:free가 하이브리드
+# 추론 모델이라 여기서 reasoning을 꺼야 했는데(2026-09-26 그 모델 자체는 무료
+# 카탈로그에서 내려감), 지금 쓰는 nemotron 계열도 똑같이 기본으로 추론을 켜고
+# 나옵니다 — 콤보(롱폼+쇼츠) 프롬프트로 실측(2026-09-28)해보니 16000 토큰 중
+# reasoning_tokens=16354(!)를 추론에 다 쓰고 본문 2752자에서 잘림(finish_reason=
+# length, extend 기회도 없이 그대로 실패). reasoning.enabled=false를 주면 같은
+# 호출이 4064 토큰에 깔끔히 끝나고 본문도 8134자로 늘어남.
+MODEL_EXTRA_BODY: dict[str, dict] = {
+    "nvidia/nemotron-3-super-120b-a12b:free": {"reasoning": {"enabled": False}},
+    "nvidia/nemotron-3-ultra-550b-a55b:free": {"reasoning": {"enabled": False}},
 }
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
@@ -213,14 +230,38 @@ def _call_claude(prompt: str) -> str:
                     break
                 raise ScriptGenerationError("요청 한도를 초과했습니다. 잠시 후 다시 시도하세요.") from e
             except openai.APIStatusError as e:
-                if e.status_code == 402 and next_model:
+                # 402=크레딧 부족, 404=그 모델이 카탈로그에서 내려감(무료 모델은
+                # 제공사가 예고 없이 뺄 수 있음 — 2026-09-26 z-ai/glm-5.2:free가
+                # 이걸로 내려가서 404가 그대로 안 잡히고 3일간 전체 실패했음).
+                # 둘 다 "이 모델을 못 쓴다"는 뜻이므로 동일하게 다음 모델로 넘어감.
+                if e.status_code in (402, 404) and next_model:
+                    reason = "크레딧이 부족합니다" if e.status_code == 402 else "이 모델을 더 이상 쓸 수 없습니다"
                     logger.warning(
-                        "OpenRouter 크레딧이 부족합니다(402) — %s 대신 무료 모델 %s로 넘어갑니다. "
-                        "openrouter.ai에서 크레딧을 충전하면 자동으로 %s로 되돌아갑니다.",
-                        model, next_model, MODEL,
+                        "OpenRouter에서 %s(%s) — %s 대신 %s로 넘어갑니다. "
+                        "크레딧 문제라면 openrouter.ai에서 충전하면 자동으로 %s로 되돌아갑니다.",
+                        reason, e.status_code, model, next_model, MODEL,
                     )
                     break
                 raise ScriptGenerationError(f"API 오류 (상태코드 {e.status_code}): {e.message}") from e
+            except openai.APIError as e:
+                # 위의 APIStatusError보다 상위 클래스라 여기엔 "HTTP 상태코드가 없는"
+                # 오류만 걸러집니다 — 스트리밍 도중 서버가 SSE로 보내는 일시적 오류가
+                # 이 케이스입니다(2026-09-28 실측: nemotron 폴백 호출 중
+                # "Upstream error from Nvidia: Service temporarily overloaded"가 이
+                # 형태로 왔고, 이걸 안 잡으면 그대로 튕겨서 배치 전체가 죽음).
+                # 429와 동일하게 같은 모델 재시도 → 그래도 안 되면 다음 모델로.
+                if attempt < MAX_RATE_LIMIT_RETRIES:
+                    wait = RATE_LIMIT_BACKOFF_SEC * attempt
+                    logger.warning(
+                        "%s 일시적 오류(%s) — %s초 뒤 재시도합니다 (%s/%s).",
+                        model, e, wait, attempt, MAX_RATE_LIMIT_RETRIES,
+                    )
+                    time.sleep(wait)
+                    continue
+                if next_model:
+                    logger.warning("%s가 계속 일시적 오류 — 다음 모델 %s로 넘어갑니다.", model, next_model)
+                    break
+                raise ScriptGenerationError(f"API 오류: {e}") from e
 
             if finish_reason == "length":
                 raise ScriptGenerationError(
