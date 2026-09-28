@@ -94,9 +94,12 @@ class SubtitleBuilder:
         self._outline_w    = config.get("outline_width", 4)
         self._shadow_d     = config.get("shadow_depth", 2)
         # 쇼츠(세로)는 화면 하단에 유튜브 자체 UI(설명/좋아요/댓글 버튼 등)가
-        # 고정 픽셀 높이로 깔려서, 롱폼과 같은 하단 배치를 쓰면 그 UI에 가려
-        # 자막이 안 보입니다 — 세로 영상은 화면 위쪽(alignment=8, 상단 중앙)에
-        # 자막을 놓습니다.
+        # 고정 픽셀 높이로 깔리기 때문에, 롱폼과 같은 작은 여백(margin_v=60)을
+        # 그대로 쓰면 그 UI에 가려 자막이 안 보입니다 — 그래서 margin_v_shorts를
+        # 훨씬 크게(220) 잡아서 하단 중앙(alignment=2)에 두되 UI보다 위에 뜨게
+        # 합니다. (2026-07-21에 한 번 더 나아가 아예 화면 위쪽(alignment=8)으로
+        # 옮긴 적이 있었는데, 2026-09-28 사용자 피드백으로 다시 하단으로
+        # 되돌림 — margin_v_shorts는 그대로 두고 alignment만 하단으로.)
         self._margin_v     = config.get("margin_v_shorts", 220) if is_portrait else config.get("margin_v", 60)
         self._margin_h     = config.get("margin_h", 40)
         self._alignment    = config.get("alignment_shorts", 8) if is_portrait else config.get("alignment", 2)
