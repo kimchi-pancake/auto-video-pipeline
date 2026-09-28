@@ -5,7 +5,8 @@ Claude API를 직접 호출해서 대본을 생성하고 story.txt로 저장합�
 gui/claude_panel.py의 수동(웹뷰에 붙여넣고 복사해오는) 플로우와 완전히 별개의,
 API 키 기반 자동 생성 경로입니다.
 
-API 키는 프로젝트 루트의 .env 파일(OPENROUTER_API_KEY=...)에서 읽습니다.
+API 키는 프로젝트 루트의 .env 파일(ANTHROPIC_API_KEY=..., OPENROUTER_API_KEY=...)에서
+읽습니다.
 2026-08-19: 대본 생성 전체를 Claude에서 NVIDIA(build.nvidia.com, OpenAI 호환
 API)의 nvidia/nemotron-3-super-120b-a12b로 옮겼습니다.
 2026-08-24: 위 nemotron 모델로 실제 하루치 물량을 뽑아보니 프롬프트 안 예시
@@ -25,6 +26,12 @@ qwen/qwen3-235b-a22b-2507(Qwen3 235B A22B Instruct 2507)로 다시 교체함 —
 2026-09-23: OpenRouter 무료 체험 크레딧이 소진돼 9/20~22 사흘간 대본이 0개
 생성되고 업로드도 0건이 된 사고가 있었음 — 잔액이 없을 때(402) 무료 모델로
 자동 폴백하도록 FALLBACK_MODELS를 추가함. 크레딧을 채우면 다시 MODEL이 쓰임.
+2026-09-28: 그 무료 폴백 모델들이 형식 붕괴(CAST에 없는 화자를 즉석으로 만듦),
+예시 문구 베끼기 등 품질 문제를 계속 일으켜서(OpenRouter 크레딧이 여전히 0원이라
+매번 폴백만 타고 있었음), .env에 남아있던 ANTHROPIC_API_KEY(이 프로젝트가 원래
+Claude API로 시작했을 때 쓰던 키, 크레딧 확인됨)로 1순위를 되돌림 — 이제
+_call_claude()가 먼저 진짜 Anthropic API(claude-sonnet-5)를 부르고, 그게 어떤
+이유로든 실패할 때만 기존 OpenRouter 체인(_call_openrouter)으로 넘어감.
 
 전체 생성 파이프라인(generate_and_save):
   주제 선정(또는 custom_topic 그대로 사용)
@@ -70,6 +77,16 @@ _ENV_PATH = Path(__file__).parent.parent / ".env"
 # BASE_URL도 함께 바뀝니다(아래 _call_claude 참고).
 BASE_URL = "https://openrouter.ai/api/v1"
 MODEL = "qwen/qwen3-235b-a22b-2507"
+
+# 2026-09-28: 대본 품질 불만(형식 붕괴, 문장이 이상하게 끊김, 예시 문구를 그대로
+# 베끼는 등)이 계속돼서 원인을 보니 OpenRouter 크레딧이 9/20부터 계속 0원이라
+# 매번 무료 폴백 모델(위 FALLBACK_MODELS)로만 돌아가고 있었음 — 무료 모델은
+# 안전망일 뿐 원래 품질을 못 낸다. .env에 이미 크레딧이 남아있는
+# ANTHROPIC_API_KEY가 있는 걸 확인해서(이 프로젝트가 2026-07월에 Claude API로
+# 시작했던 그 키), 대본 생성 1순위를 다시 Claude API로 되돌림 — OpenRouter는
+# Anthropic 호출이 어떤 이유로든(키 만료, 크레딧 소진, 장애) 실패할 때만
+# 자동으로 넘어가는 백업으로 남겨둠(_call_claude 참고).
+ANTHROPIC_MODEL = "claude-sonnet-5"
 
 # 크레딧이 떨어졌을 때(HTTP 402) 대신 쓸 무료 모델. 2026-09-20~22 사흘 내내
 # daily.yml이 402("You requested up to 16000 tokens, but can only afford 9274")로
@@ -192,10 +209,70 @@ def _stream_once(client, model: str, prompt: str) -> tuple[str, str | None]:
     return "".join(chunks).strip(), finish_reason
 
 
+def _call_anthropic(prompt: str) -> str:
+    """Anthropic API(claude-sonnet-5)를 한 번 호출해서 응답 원문을 반환합니다.
+    실패하면(키 없음/인증/한도/네트워크/그 외 오류 전부) ScriptGenerationError를
+    던져서, 호출부(_call_claude)가 OpenRouter로 넘어가게 합니다.
+
+    스트리밍으로 호출합니다 — 다른 제공사(NVIDIA/OpenRouter)에서 긴 응답이
+    논스트리밍 호출 도중 끊기는 문제를 겪었던 전례가 있어(위 주석 참고),
+    안전하게 스트리밍을 씁니다."""
+    import anthropic  # 지연 임포트: 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
+
+    load_dotenv(_ENV_PATH)
+    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not key:
+        raise ScriptGenerationError("ANTHROPIC_API_KEY가 .env에 없습니다.")
+
+    client = anthropic.Anthropic(api_key=key, timeout=600.0)
+    try:
+        with client.messages.stream(
+            model=ANTHROPIC_MODEL,
+            # extend_long_script_prompt는 이미 12000자 넘는 기존 대본 전체를 그대로
+            # 재출력하면서 씬을 더 붙여야 해서, 16000으로는 부족해 실측으로
+            # max_tokens 잘림(finish_reason=length)이 났음(2026-09-28) — 32000으로
+            # 올림(사전 확인: claude-sonnet-5가 이 값을 그대로 받아들이는 것 확인).
+            max_tokens=32000,
+            messages=[{"role": "user", "content": prompt}],
+        ) as stream:
+            text = "".join(stream.text_stream)
+            finish_reason = stream.get_final_message().stop_reason
+    except anthropic.AuthenticationError as e:
+        raise ScriptGenerationError(f"Anthropic API 키가 유효하지 않습니다: {e}") from e
+    except anthropic.APIError as e:
+        # RateLimitError/APIConnectionError/APIStatusError 등 anthropic의 모든
+        # 오류가 APIError를 상속하므로 여기 하나로 다 잡습니다 — OpenRouter처럼
+        # 오류 종류별로 재시도·모델전환을 세분화할 필요가 없습니다(여기서 실패하면
+        # 바로 OpenRouter 체인 전체로 넘어가니까).
+        raise ScriptGenerationError(f"Anthropic API 오류: {e}") from e
+
+    if finish_reason == "max_tokens":
+        raise ScriptGenerationError("Anthropic 응답이 토큰 한도에 걸려 끝까지 안 끝났습니다.")
+    text = text.strip()
+    if not text:
+        raise ScriptGenerationError("Anthropic에서 빈 응답을 받았습니다.")
+
+    logger.info("Anthropic API 호출 완료 (model=%s, output=%s자)", ANTHROPIC_MODEL, len(text))
+    return text
+
+
 def _call_claude(prompt: str) -> str:
-    """OpenRouter API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다. 생성
-    함수들의 공통 경로 — 함수 이름은 예전 그대로 남겨뒀습니다(호출부 5곳을
-    다 바꾸는 것보다 안전).
+    """대본 생성 함수들의 공통 진입점 — 함수 이름은 예전 그대로 남겨뒀습니다
+    (호출부 여러 곳을 다 바꾸는 것보다 안전).
+
+    1순위로 Anthropic API(claude-sonnet-5)를 쓰고, 어떤 이유로든 실패하면
+    (키 없음/한도 초과/네트워크 오류/기타) OpenRouter 체인(_call_openrouter,
+    자체적으로 qwen3-235b → 무료 폴백 모델까지 시도함)으로 넘어갑니다."""
+    try:
+        return _call_anthropic(prompt)
+    except ScriptGenerationError as e:
+        logger.warning("Anthropic 호출 실패 — OpenRouter로 넘어갑니다: %s", e)
+        return _call_openrouter(prompt)
+
+
+def _call_openrouter(prompt: str) -> str:
+    """OpenRouter API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다.
+    _call_claude가 Anthropic 실패 시 넘어오는 백업 경로입니다.
 
     MODEL이 크레딧 부족(402)으로 거절하면 FALLBACK_MODELS를 차례로 시도하고,
     429(요청 한도)는 같은 모델로 몇 번 재시도한 뒤에야 다음 모델로 넘어갑니다."""
