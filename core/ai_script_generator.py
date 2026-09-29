@@ -61,6 +61,7 @@ from core.script_prompts import (
     combo_script_prompt,
     shorts_script_prompt,
     extend_long_script_prompt,
+    clean_foreign_words_prompt,
     title_candidates_prompt,
     topic_idea_prompt,
 )
@@ -130,6 +131,13 @@ MODEL_EXTRA_BODY: dict[str, dict] = {
 # 확장은 이미 써둔 3000자쯤을 기반으로 몇 씬만 더 붙이면 되니 목표를 한 번에
 # 채울 확률이 훨씬 높고, 쇼츠는 다시 안 받으니 토큰도 덜 듦.
 MAX_EXTEND_ATTEMPTS = 2
+
+# 외국어 혼입(_foreign_word_violations)이 감지됐을 때 "그 줄만 고쳐 써라"를
+# 재시도할 최대 횟수. 완전히 못 잡을 수도 있는 모델 자체의 한계라(위 주석
+# 참고) 무한정 재시도하지 않고, 한 번 더 고쳐본 뒤에도 남아있으면 그냥 진행
+# 합니다 — 영상이 아예 안 나가는 것보다는 약간의 흠이 있어도 나가는 게 낫다는
+# 이 프로젝트의 기존 원칙과 동일.
+MAX_LANGUAGE_CLEANUP_ATTEMPTS = 2
 
 # (과거엔 hook/emotion/ending을 Claude로 채점하는 자동 검수(score_script)가 있었지만,
 #  실제로 판단에 쓰이는 값은 hook/ending 2개뿐이고 그마저 재생성이 거의 안 걸렸던 반면
@@ -435,6 +443,13 @@ def extend_long_script(current_long: str, reason: str) -> str:
     return _call_claude(extend_long_script_prompt(current_long, reason))
 
 
+def clean_foreign_words(current_long: str, violation_lines: list[str]) -> str:
+    """대사에 외국어가 섞인 줄만 한국어로 고쳐서 다시 받아옵니다(그 외 내용은
+    그대로 유지하도록 프롬프트에서 요구함)."""
+    logger.info("Claude API 외국어 혼입 수정 요청 (%d줄)", len(violation_lines))
+    return _call_claude(clean_foreign_words_prompt(current_long, violation_lines))
+
+
 _RE_THUMBNAIL_LINE = re.compile(
     r"(?im)^(THUMBNAIL_LONG|THUMBNAIL_SHORTS):[ \t]*\r?\n[^\r\n]*"
 )
@@ -487,6 +502,64 @@ def _dialogue_char_count(long_part: str) -> int:
         elif have_dialogue:
             total += len(line)
     return total
+
+
+# 2026-09-29: nemotron 계열 무료 모델이 롱폼처럼 긴 대사를 쓸 때 한국어 문장
+# 중간에 뜬금없이 외국어 단어를 섞어 쓰는 것을 실측으로 확인함(예: "손은 già
+# 떨리고", "silenziosamente 받아들였습니다", "이제는それに 사로잡히지 않습니다",
+# "우연히 встре쳤습니다") — 프롬프트에 "섞지 마라" 규칙을 넣어도 쇼츠(짧은 생성)
+# 에는 먹히는데 롱폼(긴 생성)에는 잘 안 먹힘. 완전히 못 막으니, 생성 후 스캔해서
+# 걸리면 한 번 더 "이 단어들만 한국어로 고쳐써라" 요청을 넣는 안전망을 둠(사용자
+# 확인: 완벽한 해결책이 아니어도, 확률을 낮추는 정도면 시간이 더 걸려도 된다).
+# "USB", "CCTV" 같은 대문자 약어는 실제 한국 방송에서도 흔히 그대로 쓰니 허용.
+_ALLOWED_ACRONYM_RE = re.compile(r"^[A-Z0-9]{1,8}$")
+_RE_LATIN_TOKEN = re.compile(r"[A-Za-z]+")
+# 히라가나/가타카나, CJK 한자, 키릴 문자, 라틴 확장(억양부호 달린 유럽어 문자,
+# 예: à, ü, ß)까지 — 한글도 영어 약어도 아닌 문자는 전부 의심 대상으로 봄.
+_RE_OTHER_SCRIPT = re.compile(r"[぀-ヿ一-鿿Ѐ-ӿÀ-ɏ]")
+
+
+def _foreign_word_violations(long_part: str) -> list[str]:
+    """롱폼 대사(나레이터·등장인물 대사, [SCENE] 영어 묘사는 제외)에서 외국어가
+    섞인 줄을 찾아 그대로 반환합니다(중복 제거, 최대 15개). 비어 있으면 문제
+    없는 것."""
+    violations: list[str] = []
+    seen: set[str] = set()
+    in_scene = False
+    have_dialogue = False
+    dialogue_lines: list[str] = []
+    for line in long_part.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            continue
+        if stripped.startswith("[SCENE"):
+            in_scene = True
+            have_dialogue = False
+            continue
+        if not in_scene:
+            continue
+        m = _RE_DIALOGUE_LINE.match(stripped)
+        if m:
+            dialogue_lines.append(stripped)
+            have_dialogue = True
+        elif have_dialogue:
+            dialogue_lines[-1] = f"{dialogue_lines[-1]} {stripped}"
+
+    for line in dialogue_lines:
+        if line in seen:
+            continue
+        is_bad = _RE_OTHER_SCRIPT.search(line) is not None
+        if not is_bad:
+            for tok in _RE_LATIN_TOKEN.findall(line):
+                if not _ALLOWED_ACRONYM_RE.match(tok):
+                    is_bad = True
+                    break
+        if is_bad:
+            seen.add(line)
+            violations.append(line)
+            if len(violations) >= 15:
+                break
+    return violations
 
 
 def _split_long_part(text: str) -> str:
@@ -615,7 +688,7 @@ def generate_optimized_script(
     # 분량을 채웁니다(extend). 쇼츠 부분은 건드리지 않고 롱폼만 확장.
     # (품질 채점(score_script)은 토큰 대비 실효성이 없어 제거 — 대본 품질은
     #  프롬프트와 이 분량 검사로 담보하고, Claude 추가 호출은 하지 않습니다.)
-    text, long_part, length_ok, length_reason, extends = _extend_to_length(
+    text, long_part, length_ok, length_reason, extends, language_cleanups = _extend_to_length(
         generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta),
         best_title,
     )
@@ -626,15 +699,18 @@ def generate_optimized_script(
         "title": best_title,
         "title_candidates": candidates,
         "extends": extends,
+        "language_cleanups": language_cleanups,
         "length_ok": length_ok,
     }
     return text, meta
 
 
-def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, int]:
+def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, int, int]:
     """콤보 응답을 받아 제목을 강제 교정하고, 롱폼이 분량 미달이면 목표를
-    채울 때까지(또는 MAX_EXTEND_ATTEMPTS 도달까지) 롱폼만 확장한 뒤,
-    (재조립된 콤보 텍스트, 롱폼 부분, 분량통과여부, 미달사유, 확장횟수)를 반환합니다."""
+    채울 때까지(또는 MAX_EXTEND_ATTEMPTS 도달까지) 롱폼만 확장한 뒤, 외국어
+    혼입이 있으면 그것도 고쳐봅니다(MAX_LANGUAGE_CLEANUP_ATTEMPTS까지).
+    (재조립된 콤보 텍스트, 롱폼 부분, 분량통과여부, 미달사유, 확장횟수,
+    외국어수정횟수)를 반환합니다."""
     text = _force_thumbnail_titles(text, best_title)
     long_part, shorts_tail = _split_combo(text)
     length_ok, reason = _long_form_length_ok(long_part)
@@ -644,7 +720,24 @@ def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, 
         long_part = _force_thumbnail_titles(extend_long_script(long_part, reason), best_title)
         length_ok, reason = _long_form_length_ok(long_part)
         extends += 1
-    return _stitch_combo(long_part, shorts_tail), long_part, length_ok, reason, extends
+
+    cleanups = 0
+    violations = _foreign_word_violations(long_part)
+    while violations and cleanups < MAX_LANGUAGE_CLEANUP_ATTEMPTS:
+        logger.warning(
+            "롱폼 대사에 외국어 혼입 감지(%d줄) — 수정 %d/%d",
+            len(violations), cleanups + 1, MAX_LANGUAGE_CLEANUP_ATTEMPTS,
+        )
+        long_part = _force_thumbnail_titles(clean_foreign_words(long_part, violations), best_title)
+        violations = _foreign_word_violations(long_part)
+        cleanups += 1
+    if violations:
+        logger.warning(
+            "외국어 혼입이 %d번 시도 후에도 %d줄 남아있습니다 — 그대로 진행합니다.",
+            cleanups, len(violations),
+        )
+
+    return _stitch_combo(long_part, shorts_tail), long_part, length_ok, reason, extends, cleanups
 
 
 def generate_and_save(

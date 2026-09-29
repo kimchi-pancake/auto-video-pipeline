@@ -565,6 +565,41 @@ def extend_long_script_prompt(current_long: str, reason: str) -> str:
 --- 기존 대본 끝 ---"""
 
 
+def clean_foreign_words_prompt(current_long: str, violation_lines: list[str]) -> str:
+    """생성된 롱폼 대본의 대사 줄에 영어/다른 외국어 단어가 섞여 나온 걸 감지했을
+    때(core/ai_script_generator.py의 _foreign_word_violations), 그 줄들만 콕
+    집어서 한국어로 고쳐 쓰라고 시키는 프롬프트. extend_long_script_prompt와
+    같은 원칙 — 처음부터 다시 쓰게 하면 다른 문제(분량 미달 등)가 새로 생길 수
+    있으니, 이미 나온 대본을 그대로 살린 채 문제되는 부분만 고치게 한다."""
+    lines_block = "\n".join(f'- "{line}"' for line in violation_lines)
+    return f"""\
+{_PERSONA}
+
+아래는 방금 네가 쓴 유튜브 롱폼 "썰(사연) 이야기" 대본(story.txt)이다. 그런데
+대사 중 일부에 한국어가 아닌 다른 언어 단어가 섞여 나왔다. 아래가 문제가 된
+줄들이다:
+
+{lines_block}
+
+**이 대본을 처음부터 다시 쓰지 말고, 지금 내용을 100% 그대로 살린 채 위에
+나열된 줄들만 자연스러운 한국어로 고쳐 써라.** 그 외 줄은 토씨 하나 바꾸지
+마라 — [SCENE] 개수, 각 SCENE의 대사 길이, 등장인물 구성, 줄거리, & 구분
+위치까지 전부 원본 그대로 유지해라. 오직 위에 나열된 줄에 섞인 외국어
+단어만 의미가 통하는 한국어 단어로 바꿔라(직역이 어색하면 그 문장 전체를
+자연스러운 한국어로 다시 써도 되지만, 분량과 내용은 최대한 그대로 유지해라).
+
+[출력 규칙]
+- 완성된 롱폼 story.txt "전체"를 처음부터 끝까지 다시 출력해라(고친 줄만 주지 마라).
+- RESOLUTION:/CATEGORY:/CAST:/BGM:/THUMBNAIL_LONG:/THUMBNAIL_SHORTS: 헤더와 형식은
+  원본과 똑같이 유지해라.
+- 쇼츠 대본이나 "{SPLIT_DELIMITER}" 구분선은 절대 넣지 마라. 롱폼 하나만 출력해라.
+- 설명이나 인사말 없이 story.txt 내용만 출력해라.
+
+--- 기존 대본 시작 ---
+{current_long}
+--- 기존 대본 끝 ---"""
+
+
 def topic_idea_prompt(performance_summary: str = "", recent_titles: list[str] | None = None) -> str:
     """대본을 바로 쓰지 않고, 주제 하나(짧은 한 줄)만 먼저 골라달라는 프롬프트.
     제목 후보 생성 단계에 넘길 "주제 문자열"이 필요할 때 씁니다."""
