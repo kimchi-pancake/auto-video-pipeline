@@ -1,0 +1,58 @@
+RUN_ID:
+claude_20260929_001631_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+직장생활
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+남자1: 민수
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+신입 대신 야근한 대가, 사장님이 다 보고 있었습니다
+
+THUMBNAIL_SHORTS:
+신입 대신 야근한 대가, 사장님이 다 보고 있었습니다
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, sitting at a cluttered office desk late at night, 1080x1920]
+나레이터: 오늘도 칼퇴는 물 건너갔습니다. 신입 대신 야근을 자처한 지연 씨, 벌써 세 시간째입니다.
+
+[SCENE:a Korean man in his early 30s with short black hair and glasses, wearing a light blue dress shirt, standing behind the woman with long straight black hair in the office, 1080x1920]
+남자1: 지연 씨, 이거 다 끝내면 내일 아침 보고서 저 대신 써 줄 수 있어요?&신입이라서 아직 서툴러서요.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, sitting at a cluttered office desk late at night, 1080x1920]
+여자1: 알겠어요…&민수 씨가 다 끝내면 저도 빨리 갈게요.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 그런데 이게 끝이 아니었습니다.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, sitting at a cluttered office desk late at night, 1080x1920]
+나레이터: 다음 날, 민수 씨는 그 보고서로 칭찬을 받았고, 지연 씨는 공로를 가로채긴커녕, 오히려 야근 안 한 거로 경고까지 받았습니다.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, standing in front of a small meeting room with a laptop showing email history, 1080x1920]
+여자1: 아니, 제가 쓴 거를 어떻게…&민수 씨는 왜 그걸 자기가 했다고 한 거죠?
+
+[SCENE:a Korean man in his early 30s with short black hair and glasses, wearing a light blue dress shirt, sitting at a desk with a smug expression, 1080x1920]
+남자1: 아, 그거요? 저도 밤새 했거든요.&지연 씨가 먼저 간 줄 알았어요.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, looking at a forwarded email chain on her laptop, 1080x1920]
+나레이터: 하지만 지연 씨가 복구한 이메일 기록엔, 민수 씨가 야근 대신 회식 간 게 고스란히 남아 있었습니다.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, standing in front of her desk with a determined expression, 1080x1920]
+여자1: 팀장님, 이거 확인해 보시겠어요?&민수 씨가 제 작업을 자기 거라고 속였어요.
+
+[SCENE:a Korean man in his 40s with short gray hair, wearing a navy suit, standing with arms crossed, looking serious, 1080x1920]
+나레이터: 팀장은 메일을 확인하고, 민수 씨를 불러 stern하게 경고했습니다.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, smiling slightly while packing her bag, 1080x1920]
+나레이터: 그날 저녁, 민수 씨는 자진해서 야근을 했고, 지연 씨는 finalmente 정시에 퇴근했습니다.
+
+[SCENE:a Korean woman in her mid-20s with long straight black hair, wearing a white blouse and black skirt, standing outside the office building at sunset, 1080x1920]
+여자1: 여러분, 만약 내 일이 도둑맞았다면, 증거를 잡고 조용히 맞서는 거 어때요?&댓글로 경험 나눠주세요.
