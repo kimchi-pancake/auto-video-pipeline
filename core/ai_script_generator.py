@@ -431,9 +431,14 @@ def generate_combo_script(
 
 
 def generate_shorts_only(cta_settings: dict | None = None) -> str:
-    """Claude API를 호출해서 쇼츠 단독 대본 원문 하나만 반환합니다."""
+    """Claude API를 호출해서 쇼츠 단독 대본 원문 하나만 반환하고, 외국어 혼입도
+    검사해서 고칩니다(2026-09-29 — 이 검사가 원래 콤보의 롱폼 부분에만 걸려
+    있어서 standalone shorts에서 "lotte카드" 같은 혼입이 그냥 나가는 걸
+    실측으로 확인한 뒤 추가함)."""
     logger.info("Claude API 쇼츠 단독 대본 생성 요청 시작")
-    return _call_claude(shorts_script_prompt(cta_settings))
+    text = _call_claude(shorts_script_prompt(cta_settings))
+    text, _ = _clean_language_if_needed(text, is_shorts=True)
+    return text
 
 
 def extend_long_script(current_long: str, reason: str) -> str:
@@ -443,11 +448,35 @@ def extend_long_script(current_long: str, reason: str) -> str:
     return _call_claude(extend_long_script_prompt(current_long, reason))
 
 
-def clean_foreign_words(current_long: str, violation_lines: list[str]) -> str:
+def clean_foreign_words(current_long: str, violation_lines: list[str], is_shorts: bool = False) -> str:
     """대사에 외국어가 섞인 줄만 한국어로 고쳐서 다시 받아옵니다(그 외 내용은
     그대로 유지하도록 프롬프트에서 요구함)."""
     logger.info("Claude API 외국어 혼입 수정 요청 (%d줄)", len(violation_lines))
-    return _call_claude(clean_foreign_words_prompt(current_long, violation_lines))
+    return _call_claude(clean_foreign_words_prompt(current_long, violation_lines, is_shorts=is_shorts))
+
+
+def _clean_language_if_needed(text: str, is_shorts: bool = False) -> tuple[str, int]:
+    """text(쇼츠 단독 대본, 또는 롱폼처럼 이미 분리된 한 편)를 스캔해서 외국어
+    혼입이 있으면 최대 MAX_LANGUAGE_CLEANUP_ATTEMPTS번 고쳐 쓰게 요청합니다.
+    (고친 텍스트, 시도횟수)를 반환합니다 — 다 고쳐지지 않아도 마지막 결과를
+    그대로 돌려줍니다(안전망일 뿐이라 완벽을 보장하지 않음, _extend_to_length
+    참고)."""
+    cleanups = 0
+    violations = _foreign_word_violations(text)
+    while violations and cleanups < MAX_LANGUAGE_CLEANUP_ATTEMPTS:
+        logger.warning(
+            "대사에 외국어 혼입 감지(%d줄) — 수정 %d/%d",
+            len(violations), cleanups + 1, MAX_LANGUAGE_CLEANUP_ATTEMPTS,
+        )
+        text = clean_foreign_words(text, violations, is_shorts=is_shorts)
+        violations = _foreign_word_violations(text)
+        cleanups += 1
+    if violations:
+        logger.warning(
+            "외국어 혼입이 %d번 시도 후에도 %d줄 남아있습니다 — 그대로 진행합니다.",
+            cleanups, len(violations),
+        )
+    return text, cleanups
 
 
 _RE_THUMBNAIL_LINE = re.compile(

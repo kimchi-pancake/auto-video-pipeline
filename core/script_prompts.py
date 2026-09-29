@@ -565,17 +565,26 @@ def extend_long_script_prompt(current_long: str, reason: str) -> str:
 --- 기존 대본 끝 ---"""
 
 
-def clean_foreign_words_prompt(current_long: str, violation_lines: list[str]) -> str:
-    """생성된 롱폼 대본의 대사 줄에 영어/다른 외국어 단어가 섞여 나온 걸 감지했을
-    때(core/ai_script_generator.py의 _foreign_word_violations), 그 줄들만 콕
-    집어서 한국어로 고쳐 쓰라고 시키는 프롬프트. extend_long_script_prompt와
-    같은 원칙 — 처음부터 다시 쓰게 하면 다른 문제(분량 미달 등)가 새로 생길 수
-    있으니, 이미 나온 대본을 그대로 살린 채 문제되는 부분만 고치게 한다."""
+def clean_foreign_words_prompt(
+    current_long: str, violation_lines: list[str], is_shorts: bool = False,
+) -> str:
+    """생성된 대본(롱폼 또는 쇼츠 단독)의 대사 줄에 영어/다른 외국어 단어가
+    섞여 나온 걸 감지했을 때(core/ai_script_generator.py의
+    _foreign_word_violations), 그 줄들만 콕 집어서 한국어로 고쳐 쓰라고
+    시키는 프롬프트. extend_long_script_prompt와 같은 원칙 — 처음부터 다시
+    쓰게 하면 다른 문제(분량 미달 등)가 새로 생길 수 있으니, 이미 나온 대본을
+    그대로 살린 채 문제되는 부분만 고치게 한다.
+
+    is_shorts=True면 "롱폼"이 아니라 "쇼츠" 대본이라고 정확히 알려준다 —
+    standalone shorts(generate_shorts_only)에도 이 검사를 적용하면서 추가
+    (2026-09-29, 실측으로 standalone shorts에서도 "lotte카드" 같은 혼입이
+    나오는 걸 확인해서 이 검사가 롱폼에만 걸려있던 걸 넓힘)."""
     lines_block = "\n".join(f'- "{line}"' for line in violation_lines)
+    kind = "쇼츠" if is_shorts else "롱폼"
     return f"""\
 {_PERSONA}
 
-아래는 방금 네가 쓴 유튜브 롱폼 "썰(사연) 이야기" 대본(story.txt)이다. 그런데
+아래는 방금 네가 쓴 유튜브 {kind} "썰(사연) 이야기" 대본(story.txt)이다. 그런데
 대사 중 일부에 한국어가 아닌 다른 언어 단어가 섞여 나왔다. 아래가 문제가 된
 줄들이다:
 
@@ -589,10 +598,10 @@ def clean_foreign_words_prompt(current_long: str, violation_lines: list[str]) ->
 자연스러운 한국어로 다시 써도 되지만, 분량과 내용은 최대한 그대로 유지해라).
 
 [출력 규칙]
-- 완성된 롱폼 story.txt "전체"를 처음부터 끝까지 다시 출력해라(고친 줄만 주지 마라).
+- 완성된 {kind} story.txt "전체"를 처음부터 끝까지 다시 출력해라(고친 줄만 주지 마라).
 - RESOLUTION:/CATEGORY:/CAST:/BGM:/THUMBNAIL_LONG:/THUMBNAIL_SHORTS: 헤더와 형식은
   원본과 똑같이 유지해라.
-- 쇼츠 대본이나 "{SPLIT_DELIMITER}" 구분선은 절대 넣지 마라. 롱폼 하나만 출력해라.
+- {"롱폼 대본이나" if is_shorts else "쇼츠 대본이나"} "{SPLIT_DELIMITER}" 구분선은 절대 넣지 마라. {kind} 하나만 출력해라.
 - 설명이나 인사말 없이 story.txt 내용만 출력해라.
 
 --- 기존 대본 시작 ---
