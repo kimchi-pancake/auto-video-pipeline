@@ -88,33 +88,22 @@ MODEL = "qwen/qwen3-235b-a22b-2507"
 # 자동으로 넘어가는 백업으로 남겨둠(_call_claude 참고).
 ANTHROPIC_MODEL = "claude-sonnet-5"
 
-# 크레딧이 떨어졌을 때(HTTP 402) 대신 쓸 무료 모델. 2026-09-20~22 사흘 내내
-# daily.yml이 402("You requested up to 16000 tokens, but can only afford 9274")로
-# 죽어서 대본이 한 개도 안 나왔고, 큐가 비니 조립·업로드까지 통째로 0건이 됐음 —
-# 유료 모델 하나에만 매달려 있으면 잔액이 0이 되는 순간 파이프라인 전체가 멈춘다.
-# 후보를 실제 shorts_script_prompt로 돌려본 결과(2026-09-23):
-#   z-ai/glm-5.2:free              40초/1087자, 형식 준수, 근거 구체적   ← 채택
-#   nvidia/nemotron-3-ultra-550b   35초/1118자, 프롬프트 예시 문구를 그대로 베낌
-#   qwen/qwen3.8-27b:free          272초 — 너무 느려서 배치 시간 초과 위험
-# 402/404가 아닌 오류(인증/네트워크/그 외 상태코드)는 폴백하지 않고 그대로 올립니다 —
-# 진짜 고장을 무료 모델로 덮어버리면 원인 파악이 늦어지니까.
-# nemotron을 2차로 남겨둔 건 무료 모델이 공용 풀을 쓰다 보니 한도와 무관하게
-# 순간 포화로 429를 뱉는 일이 잦기 때문(2026-09-23 실측, 일일 한도 50회 중 5회만
-# 쓴 상태에서 429). 예시 문구를 베끼는 약점이 있어도 영상이 0건 나가는 것보다는 낫다.
-# 2026-09-26: z-ai/glm-5.2:free가 OpenRouter 무료 카탈로그에서 예고 없이 내려가
-# 404가 됨(유료 슬러그 z-ai/glm-5.2로 옮기라는 메시지) — 무료 모델은 언제든
-# 이렇게 사라질 수 있다는 뜻이라, 리스트 순서 바꾸는 것보다 404도 402와 똑같이
-# "다음 모델로 넘어가라" 신호로 다루는 게 근본 대책(_call_claude 참고).
-# 대체 후보 재실측(2026-09-28, shorts_script_prompt):
-#   nemotron-3-super-120b-a12b:free   85초, 형식 준수, 텍스트 깨끗함        ← 1순위
-#   nemotron-3-ultra-550b-a55b:free   180초, 형식 준수, 텍스트 깨끗함       ← 2순위(보험)
-#   google/gemma-4-31b-it:free        4번 연속 429 — 지금 당장은 못 믿을 상태라 제외
-#   dots-studio/dots-3-note-preview   20초로 빠르지만 한글 중간에 깨진 토큰
-#                                     ("당SCREENoots") 섞여 나와 탈락
-# 둘 다 프롬프트 예시 문구("근데 사실 제일 중요한 건 지금부터입니다" 등)를 토씨
-# 그대로 베끼는 고질적 약점이 있음(예전에 이 이유로 카탈로그에서 뺐던 모델들) —
-# 그래도 이건 유료 모델이 막혔을 때만 쓰는 안전망이라, 영상이 0건 나가는 것보다는 낫다.
-FALLBACK_MODELS = ["nvidia/nemotron-3-super-120b-a12b:free", "nvidia/nemotron-3-ultra-550b-a55b:free"]
+# 2026-09-29: OpenRouter 계정도 Anthropic 계정도 둘 다 잔액이 0이 됨(전자는
+# 9/20부터 계속, 후자는 이 파일의 Anthropic 우선 전환 이후 며칠 만에 테스트
+# 호출들로 소진) — 사용자가 "무료 모델 쓰고 Claude는 쓰지 마"라고 명시적으로
+# 지시함. OpenRouter의 무료 모델 풀은 공용 풀이라 순간 포화로 429가 잦고
+# (2026-09-23 실측), 한 번 검증했던 z-ai/glm-5.2:free도 예고 없이 카탈로그에서
+# 내려간 전례가 있어(2026-09-26, 404) 안정성이 떨어짐. 그래서 폴백 모델은
+# OpenRouter가 아니라 NVIDIA API(build.nvidia.com, NVIDIA_API_KEY — AI 이미지
+# 생성에 쓰는 것과 같은 계정)에 직접 붙임. 같은 모델을 OpenRouter 경유로 부를
+# 때보다 훨씬 안정적으로 성공함(직접 호출 실측: nemotron-3-super 49초 만에
+# 깨끗하게 성공, OpenRouter 경유는 429/추론토큰낭비 등으로 훨씬 불안정했음).
+# NVIDIA 카탈로그의 다른 후보들(2026-09-29 실측)은 이 계정에 아예 권한이 없거나
+# (kimi-k3, glm-5.3, palmyra-creative-122b, llama-3.1-nemotron-70b,
+# mistral-large-2 전부 404 "not found for account") 너무 느려서(deepseek-v4.1
+# -flash — 쇼츠 344초, 롱폼 콤보는 19분 스트리밍해도 토큰 0개, 완전 탈락) 못 씀.
+NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
+NVIDIA_MODELS = ["nvidia/nemotron-3-super-120b-a12b", "nvidia/nemotron-3-ultra-550b-a55b"]
 
 # 429(요청 한도)는 대개 몇십 초 뒤면 풀리는 일시적 상태라, 모델을 바로 갈아타기
 # 전에 같은 모델로 몇 번 더 두드려 봅니다. 대기는 20초 → 40초로 늘려 잡습니다.
@@ -129,8 +118,8 @@ RATE_LIMIT_BACKOFF_SEC = 20
 # length, extend 기회도 없이 그대로 실패). reasoning.enabled=false를 주면 같은
 # 호출이 4064 토큰에 깔끔히 끝나고 본문도 8134자로 늘어남.
 MODEL_EXTRA_BODY: dict[str, dict] = {
-    "nvidia/nemotron-3-super-120b-a12b:free": {"reasoning": {"enabled": False}},
-    "nvidia/nemotron-3-ultra-550b-a55b:free": {"reasoning": {"enabled": False}},
+    "nvidia/nemotron-3-super-120b-a12b": {"reasoning": {"enabled": False}},
+    "nvidia/nemotron-3-ultra-550b-a55b": {"reasoning": {"enabled": False}},
 }
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
@@ -167,17 +156,6 @@ ProgressCallback = Callable[[int, int], None]
 
 class ScriptGenerationError(Exception):
     """API 키 누락, 네트워크 오류, 거부 응답 등 생성 실패 시 던집니다."""
-
-
-def _get_api_key() -> str:
-    load_dotenv(_ENV_PATH)
-    key = os.environ.get("OPENROUTER_API_KEY", "").strip()
-    if not key:
-        raise ScriptGenerationError(
-            f".env 파일에 API 키가 없습니다.\n{_ENV_PATH}\n"
-            "파일을 열어서 OPENROUTER_API_KEY= 뒤에 openrouter.ai에서 발급받은 키를 붙여넣으세요."
-        )
-    return key
 
 
 def _stream_once(client, model: str, prompt: str) -> tuple[str, str | None]:
@@ -258,33 +236,51 @@ def _call_anthropic(prompt: str) -> str:
 
 def _call_claude(prompt: str) -> str:
     """대본 생성 함수들의 공통 진입점 — 함수 이름은 예전 그대로 남겨뒀습니다
-    (호출부 여러 곳을 다 바꾸는 것보다 안전).
+    (호출부 여러 곳을 다 바꾸는 것보다 안전, 원래 Claude API 직접 호출이었던
+    시절 이름).
 
-    1순위로 Anthropic API(claude-sonnet-5)를 쓰고, 어떤 이유로든 실패하면
-    (키 없음/한도 초과/네트워크 오류/기타) OpenRouter 체인(_call_openrouter,
-    자체적으로 qwen3-235b → 무료 폴백 모델까지 시도함)으로 넘어갑니다."""
-    try:
-        return _call_anthropic(prompt)
-    except ScriptGenerationError as e:
-        logger.warning("Anthropic 호출 실패 — OpenRouter로 넘어갑니다: %s", e)
-        return _call_openrouter(prompt)
+    2026-09-29: 사용자가 "무료 모델 쓰고 Claude는 쓰지 마"라고 명시적으로
+    지시해서, 기본 경로에서 Anthropic 호출을 뺐습니다 — _call_anthropic()
+    함수 자체는 남겨뒀으니(나중에 Anthropic 크레딧을 다시 채우고 싶다고 하면)
+    여기서 다시 한 줄만 바꾸면 됩니다. 지금은 곧장 _call_openrouter()로 갑니다
+    (qwen3-235b(유료, 지금은 잔액 0이라 바로 실패) → NVIDIA 직접 호출 무료
+    모델까지 자체적으로 폴백함)."""
+    return _call_openrouter(prompt)
 
 
 def _call_openrouter(prompt: str) -> str:
-    """OpenRouter API(OpenAI 호환)를 한 번 호출해서 응답 원문을 반환합니다.
-    _call_claude가 Anthropic 실패 시 넘어오는 백업 경로입니다.
+    """1차로 OpenRouter API(qwen3-235b)를 시도하고, 크레딧 부족(402)이나 그
+    모델이 내려간 경우(404)는 NVIDIA API(NVIDIA_MODELS, NVIDIA_API_KEY로 직접
+    호출 — OpenRouter를 거치지 않음)로 넘어갑니다. 429(요청 한도)는 같은
+    모델로 몇 번 재시도한 뒤에야 다음으로 넘어갑니다.
 
-    MODEL이 크레딧 부족(402)으로 거절하면 FALLBACK_MODELS를 차례로 시도하고,
-    429(요청 한도)는 같은 모델로 몇 번 재시도한 뒤에야 다음 모델로 넘어갑니다."""
+    2026-09-29: 폴백 대상을 OpenRouter 경유 무료 모델에서 NVIDIA 직접 호출로
+    바꿨습니다 — 위 NVIDIA_MODELS 주석 참고."""
     import openai  # 지연 임포트: API 키 미설정 상태에서도 이 모듈 자체는 import 가능하게
     import time
 
-    key = _get_api_key()
-    client = openai.OpenAI(base_url=BASE_URL, api_key=key, timeout=600.0)
+    load_dotenv(_ENV_PATH)
+    openrouter_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+    nvidia_key = os.environ.get("NVIDIA_API_KEY", "").strip()
+    if not openrouter_key and not nvidia_key:
+        raise ScriptGenerationError(
+            f".env 파일에 API 키가 없습니다.\n{_ENV_PATH}\n"
+            "OPENROUTER_API_KEY 또는 NVIDIA_API_KEY 중 하나는 있어야 합니다."
+        )
 
-    models = [MODEL, *FALLBACK_MODELS]
-    for idx, model in enumerate(models):
-        next_model = models[idx + 1] if idx + 1 < len(models) else None
+    # (label, client, model) 튜플 목록 — 앞에서부터 순서대로 시도합니다.
+    # OpenRouter 키가 없으면 qwen3-235b 단계를 통째로 건너뛰고 바로 NVIDIA로,
+    # NVIDIA 키가 없으면 그 반대로 건너뜁니다(둘 중 하나만 있어도 동작하게).
+    attempts: list[tuple[str, "openai.OpenAI", str]] = []
+    if openrouter_key:
+        openrouter_client = openai.OpenAI(base_url=BASE_URL, api_key=openrouter_key, timeout=600.0)
+        attempts.append(("OpenRouter", openrouter_client, MODEL))
+    if nvidia_key:
+        nvidia_client = openai.OpenAI(base_url=NVIDIA_BASE_URL, api_key=nvidia_key, timeout=600.0)
+        attempts.extend(("NVIDIA", nvidia_client, m) for m in NVIDIA_MODELS)
+
+    for idx, (label, client, model) in enumerate(attempts):
+        next_model = attempts[idx + 1][2] if idx + 1 < len(attempts) else None
 
         for attempt in range(1, MAX_RATE_LIMIT_RETRIES + 1):
             try:
@@ -314,9 +310,9 @@ def _call_openrouter(prompt: str) -> str:
                 if e.status_code in (402, 404) and next_model:
                     reason = "크레딧이 부족합니다" if e.status_code == 402 else "이 모델을 더 이상 쓸 수 없습니다"
                     logger.warning(
-                        "OpenRouter에서 %s(%s) — %s 대신 %s로 넘어갑니다. "
+                        "%s에서 %s(%s) — %s 대신 %s로 넘어갑니다. "
                         "크레딧 문제라면 openrouter.ai에서 충전하면 자동으로 %s로 되돌아갑니다.",
-                        reason, e.status_code, model, next_model, MODEL,
+                        label, reason, e.status_code, model, next_model, MODEL,
                     )
                     break
                 raise ScriptGenerationError(f"API 오류 (상태코드 {e.status_code}): {e.message}") from e
@@ -347,10 +343,10 @@ def _call_openrouter(prompt: str) -> str:
             if not text:
                 raise ScriptGenerationError("빈 응답을 받았습니다. 다시 시도해주세요.")
 
-            logger.info("OpenRouter API 호출 완료 (model=%s, output=%s자)", model, len(text))
+            logger.info("%s API 호출 완료 (model=%s, output=%s자)", label, model, len(text))
             return text
 
-    raise ScriptGenerationError("호출할 모델이 없습니다.")  # models가 빈 경우 방어용
+    raise ScriptGenerationError("호출할 모델이 없습니다.")  # attempts가 빈 경우 방어용
 
 
 def _parse_json_response(text: str):
