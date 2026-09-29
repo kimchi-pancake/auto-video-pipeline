@@ -44,6 +44,7 @@ jobs:
           CLIENT_SECRETS_JSON: ${{ secrets.CLIENT_SECRETS_JSON }}
           YT_CHANNEL_UJJJAM_CREDENTIALS: ${{ secrets.YT_CHANNEL_UJJJAM_CREDENTIALS }}
           YT_CHANNEL_DOGAE_CREDENTIALS: ${{ secrets.YT_CHANNEL_DOGAE_CREDENTIALS }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
           mkdir -p config/channels
@@ -51,7 +52,8 @@ jobs:
           printf '%s' "$CLIENT_SECRETS_JSON" > config/client_secrets.json
           printf '%s' "$YT_CHANNEL_UJJJAM_CREDENTIALS" > "config/channels/웃짬_credentials.json"
           printf '%s' "$YT_CHANNEL_DOGAE_CREDENTIALS" > "config/channels/도개_credentials.json"
-          printf 'OPENROUTER_API_KEY=%s\n' "$OPENROUTER_API_KEY" > .env
+          printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
+          printf 'OPENROUTER_API_KEY=%s\n' "$OPENROUTER_API_KEY" >> .env
           for f in config/config.json config/client_secrets.json "config/channels/웃짬_credentials.json" "config/channels/도개_credentials.json"; do
             sed -i '1s/^\xEF\xBB\xBF//' "$f"
           done
