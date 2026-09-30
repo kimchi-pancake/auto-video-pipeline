@@ -549,17 +549,30 @@ _RE_OTHER_SCRIPT = re.compile(r"[぀-ヿ一-鿿Ѐ-ӿÀ-ɏ]")
 
 
 def _foreign_word_violations(long_part: str) -> list[str]:
-    """롱폼 대사(나레이터·등장인물 대사, [SCENE] 영어 묘사는 제외)에서 외국어가
-    섞인 줄을 찾아 그대로 반환합니다(중복 제거, 최대 15개). 비어 있으면 문제
-    없는 것."""
+    """롱폼 대사(나레이터·등장인물 대사, [SCENE] 영어 묘사는 제외)와
+    THUMBNAIL_LONG/THUMBNAIL_SHORTS 제목 줄에서 외국어가 섞인 줄을 찾아 그대로
+    반환합니다(중복 제거, 최대 15개). 비어 있으면 문제 없는 것.
+
+    2026-09-30: 이 검사가 대사만 보고 있어서, 실제 업로드된 제목에 "그날 밤
+    들린 knock는…"처럼 영어가 섞여 나온 걸 못 잡았던 사고가 있었음 — 제목도
+    같이 스캔하게 넓힘(썸네일에 그대로 노출되는 텍스트라 대사보다도 눈에 잘
+    띄는 문제)."""
     violations: list[str] = []
     seen: set[str] = set()
     in_scene = False
     have_dialogue = False
     dialogue_lines: list[str] = []
+    expect_title = False
     for line in long_part.splitlines():
         stripped = line.strip()
         if not stripped:
+            continue
+        if stripped.upper() in ("THUMBNAIL_LONG:", "THUMBNAIL_SHORTS:"):
+            expect_title = True
+            continue
+        if expect_title:
+            dialogue_lines.append(stripped)
+            expect_title = False
             continue
         if stripped.startswith("[SCENE"):
             in_scene = True
