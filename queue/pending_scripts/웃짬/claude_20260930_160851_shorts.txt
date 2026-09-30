@@ -1,0 +1,61 @@
+RUN_ID:
+claude_20260930_160851_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+반전인생
+
+CAST:
+나레이터: 나레이터
+여자1: 지남
+남자1: 민수
+여자2: 수진
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+편지 속 날짜가 내 생일이었고, 보낸 사람은 죽은 친구였다
+
+THUMBNAIL_SHORTS:
+편지 속 날짜가 내 생일이었고, 보낸 사람은 죽은 친구였다
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1080x1920]
+나레이터: 지연 씨는 오늘도 사무실에 혼자 남아 있었습니다.&벌써 세 달째 반복되는 야근이었지만, 이번엔 뭔가 다른 느낌이 들었습니다.&책상 위에 쌓인 서류를 보며, 그녀는 문득 이 회사에 처음 들어왔던 날을 떠올렸습니다.
+여자1: 이걸 오늘 안에 다 끝내라고?&말도 안 돼.
+민수 씨는 벌써 세 시간째 저러고 있네.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1080x1920]
+나레이터: 지연은 책상 구석에서 오래된 상자를 발견했습니다.&안에는 낡은 노트와 사진들, 그리고 하나의 봉투가 들어있었습니다.&봉투에는 익숙한 글씨체로 그녀의 이름이 쓰여 있었고, 우표는 20년 전에 사용된 것이었습니다.
+여자1: 이게 뭐지?&오래된 상자네.
+나레이터: 그녀는 trembling한 손으로 봉투를 otev 열었습니다.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1080x1920]
+여자1: (읽으며) "지연아, 오늘은 네 생일이야.&20년 전 오늘, 우리는 약속했지.&언제든 힘들면 이 편지를 열어보라고.&나는 항상 네 편이야."&
+나레이터: 지연은 눈을 크게 떴습니다.&편지의 내용은 그녀가 어릴 적 쓴 편지였고, 보낸 사람은 죽은 친굔 친구 민희였습니다.&그녀는 민희와의 마지막 대화를 떠올렸습니다.
+여자1: 민희야… 너 죽기 전에 이걸 썼던 거야?
+나레이터: 눈물이 볼을 따라 흘렀습니다.&그녀는 이 편지가 단순히 과거의 추억이 아니라는 것을 직감했습니다.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1080x1920]
+여자1: (다시 읽으며) "P.S. 네가 지금 힘들어하는 그 일, 내가 알아봤어.&그 사람의 이름은 민수야.&그는 네가 생각하는 사람이 아니야."&
+나레이터: 지연은 숨을 죽였습니다.&편지에 적힌 민수라는 이름은 바로 맞은편에 앉아 있는 동료의 이름이었습니다.&그녀의 머리가 하얗게 되면서, 과거의 기억들이 하나둘 떠올라왔습니다.
+여자1: 이게 무슨… 말도 안 돼.
+나레이터: 그런데 이게 끝이 아니었습니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1080x1920]
+여자1: 민희가 말했었지.&"민수 씨 겉보기와 달라.&조심해."라고.&나 그땐 그게 무슨 말인지 몰랐어.
+나레이터: 지연은 눈물을 흘리며 말했습니다.&민수의 고백은 그녀의 마음을 복잡하게 만들었습니다.&하지만 동시에, 편지에 적힌 내용이 진실이었다는 것이 증명되는 순간이었습니다.&민희는 그녀가 힘들 때 늘 편지로 답을 주었습니다.
+여자1: 이 도장… 민희의 거야.&정말 네가 쓴 거야?
+나레이터: 그녀의 목소리는 떨렸지만, 거기에 확신이 있었습니다.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1080x1920]
+여자1: 그래서… 그 편지의 내용이 진짜였네.&민희가 나를 위해 준비한 거였구나.
+나레이터: 지연은 미소를 지었습니다.&민희의 편지는 단순히 과거의 유물이 아니었고, 그녀가 지금의 어려움을 극복하도록 도와주는 메시지였습니다.&그녀는 민수의 진심을 듣고, 그의 행동에 대한 오해를 풀었습니다.&그리고 두 사람은 앞으로의 계획을 이야기하기 시작했습니다.
+여자1: 민희야… 고마워.&그리고 민수 씨, 오해해서 미안해.
+나레이터: 오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 다음 이야기에도 함께해 주세요.
+여자1: 여러분은 혹시 오래된 편지나 메시지를 통해 과거의 누군가가 현재를 도와준 경험이 있나요?&댓글로 여러분의 이야기를 들려주세요.

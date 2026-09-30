@@ -1,0 +1,51 @@
+RUN_ID:
+claude_20260930_161807_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 민지
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아랫집에서 새벽 3시 쿵쿵 소리, 정체는?
+
+THUMBNAIL_SHORTS:
+아랫집에서 새벽 3시 쿵쿵, 정체는?
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, sitting on the edge of her bed staring at the ceiling, 1080x1920]
+나레이터: 새벽 3시, 아랫집에서 쿵쿵 진동이 시작되었습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, sitting on the edge of her bed staring at the ceiling, 1080x1920]
+여자1: 또야...&이번엔 정확히 3분 간격이야.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, sitting on the edge of her bed staring at the ceiling, 1080x1920]
+나레이터: 참으려 했지만, 이틀째 잠을 못 자고 출근길에 졸음 운전을 할 뻔했습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, sitting on the edge of her bed staring at the ceiling, 1080x1920]
+여자1: 진짜 미치겠다...&근데 이게 끝이 아니었습니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 진실이 무엇인지 확인하세요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing at the apartment intercom looking determined, 1080x1920]
+나레이터: 다음 날, 인터컨을 눌러봤습니다. 아랫집 문이 열리고, 누워있는 할아버지가 보였습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing at the apartment intercom looking determined, 1080x1920]
+여자1: 할아버지...&왜 새벽마다 바닥을 치시는 거예요?
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing at the apartment intercom looking determined, 1080x1920]
+나레이터: 할아버지는 천천히 일어나며 손바닥을 보였습니다. 진동은 보청기 테스트 소리였고, 청력이 나빠 바닥을 쳐서 진동을 느끼신 거라고 했습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing at the apartment intercom looking determined, 1080x1920]
+나레이터: 그날 이후, 저는 아랫집에 진동 알림 기기를 선물했고, 할아버지는 웃으며 인사하셨습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing at the apartment intercom looking determined, 1080x1920]
+여자1: 여러분은 그럼, 혹시 오해로 생긴 이웃 갈등 겪어보셨나요? 댓글로 경험 나눠주세요.
