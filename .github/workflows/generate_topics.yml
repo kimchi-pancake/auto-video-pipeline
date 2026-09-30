@@ -37,9 +37,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: |
           printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
           printf 'OPENROUTER_API_KEY=%s\n' "$OPENROUTER_API_KEY" >> .env
+          printf 'NVIDIA_API_KEY=%s\n' "$NVIDIA_API_KEY" >> .env
 
       - name: Generate topics
         env:

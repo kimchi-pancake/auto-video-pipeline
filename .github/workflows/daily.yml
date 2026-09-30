@@ -43,14 +43,21 @@ jobs:
           CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: |
           printf '%s' "$CONFIG_JSON" > config/config.json
           # 2026-09-28에 대본 생성 1순위를 Anthropic(claude-sonnet-5)으로 되돌렸는데
           # 이 파일이 .env에 ANTHROPIC_API_KEY를 안 써주고 있어서 매번 "키 없음"으로
           # 조용히 OpenRouter 무료 폴백으로 떨어지는 사고가 있었음(2026-09-29 발견) —
           # 그날 밤 배치 대본 품질이 그대로 떨어진 원인이었음.
+          # 2026-09-29에 또: OpenRouter 폴백 대상을 NVIDIA 직접 호출로 바꿨는데(578c87a)
+          # 이 파일이 NVIDIA_API_KEY를 안 써주고 있어서, OpenRouter가 402(크레딧 부족)로
+          # 실패하면 넘어갈 곳이 없어 대본 생성 자체가 통째로 실패했음(같은 실수 반복 —
+          # 로컬 .env엔 이미 있어서 로컬 테스트에서는 안 걸렸던 문제). NVIDIA_API_KEY는
+          # AI 이미지 생성(Worker)에도 쓰는 같은 GitHub 시크릿이라 여기 추가만 하면 됨.
           printf 'ANTHROPIC_API_KEY=%s\n' "$ANTHROPIC_API_KEY" > .env
           printf 'OPENROUTER_API_KEY=%s\n' "$OPENROUTER_API_KEY" >> .env
+          printf 'NVIDIA_API_KEY=%s\n' "$NVIDIA_API_KEY" >> .env
           # Windows PowerShell로 등록한 시크릿에 UTF-8 BOM이 섞여 들어올 수 있어 제거
           sed -i '1s/^\xEF\xBB\xBF//' config/config.json
 
