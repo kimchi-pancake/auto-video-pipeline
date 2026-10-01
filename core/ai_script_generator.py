@@ -781,6 +781,13 @@ def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, 
         length_ok, reason = _long_form_length_ok(long_part)
         extends += 1
 
+    # 외국어 정리는 "있으면 좋은" 보정일 뿐이라, 이 호출이 실패해도(모델 오류,
+    # 드물게 또 토큰 한도 등) 이미 분량 검사를 통과한 멀쩡한 대본을 통째로
+    # 버리면 안 됩니다 — 실패하면 정리를 포기하고 직전 결과를 그대로 씁니다
+    # (2026-10-01: clean_foreign_words도 extend_long_script와 똑같이 기존
+    # 대본 전체를 재출력해야 해서 한때 16000 토큰 한도에 걸릴 수 있었고, 이
+    # try/except가 없으면 그 실패가 그대로 위로 튕겨서 "콤보 전체 실패"로
+    # 처리돼 길이 통과한 롱폼까지 같이 버려지고 있었음).
     cleanups = 0
     violations = _foreign_word_violations(long_part)
     while violations and cleanups < MAX_LANGUAGE_CLEANUP_ATTEMPTS:
@@ -788,7 +795,12 @@ def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, 
             "롱폼 대사에 외국어 혼입 감지(%d줄) — 수정 %d/%d",
             len(violations), cleanups + 1, MAX_LANGUAGE_CLEANUP_ATTEMPTS,
         )
-        long_part = _force_thumbnail_titles(clean_foreign_words(long_part, violations), best_title)
+        try:
+            cleaned = _force_thumbnail_titles(clean_foreign_words(long_part, violations), best_title)
+        except ScriptGenerationError as e:
+            logger.warning("외국어 수정 호출 실패(%s) — 정리를 포기하고 직전 결과를 그대로 씁니다.", e)
+            break
+        long_part = cleaned
         violations = _foreign_word_violations(long_part)
         cleanups += 1
     if violations:
