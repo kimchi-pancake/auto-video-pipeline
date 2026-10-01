@@ -97,7 +97,7 @@
  * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
-const WORKER_BUILD = "2026-09-28-retry-patience"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
+const WORKER_BUILD = "2026-10-01-version-endpoint"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
@@ -106,6 +106,14 @@ const CTA_PATH = "config/cta_settings.json";
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+
+    // 인증 없이 배포 버전만 확인하는 용도(2026-10-01 추가) — Worker 코드를
+    // 대시보드에 붙여넣고 "Save and Deploy"를 눌렀는지, 어느 버전이 떠 있는지
+    // 매번 긴 작업을 돌려본 뒤에야(또는 Cloudflare 로그를 직접 봐야만) 알 수
+    // 있었던 게 불편해서 추가함. 비밀 정보는 전혀 없음.
+    if (url.pathname === "/" || url.pathname === "/version") {
+      return json({ build: WORKER_BUILD });
+    }
 
     if (url.pathname === "/register-command-x7k2m9") {
       if (!env.DISCORD_BOT_TOKEN || !env.DISCORD_APP_ID) {
