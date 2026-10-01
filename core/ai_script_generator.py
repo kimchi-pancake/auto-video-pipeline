@@ -166,19 +166,27 @@ class ScriptGenerationError(Exception):
     """API 키 누락, 네트워크 오류, 거부 응답 등 생성 실패 시 던집니다."""
 
 
-def _stream_once(client, model: str, prompt: str) -> tuple[str, str | None]:
+def _stream_once(client, model: str, prompt: str, max_tokens: int = 16000) -> tuple[str, str | None]:
     """모델 하나로 스트리밍 호출을 한 번 끝내고 (응답 원문, finish_reason)을 돌려줍니다.
 
     스트리밍(stream=True)으로 호출합니다 — NVIDIA 게이트웨이는 논스트리밍
     호출에서 응답이 긴 경우 도중에 연결을 끊는 문제가 있었는데(2026-08-24
     실측), OpenRouter도 같은 문제가 있는지 확인 안 된 상태라 안전하게
-    스트리밍을 유지합니다."""
+    스트리밍을 유지합니다.
+
+    max_tokens 기본값 16000은 보통 생성에는 충분하지만, extend_long_script_prompt/
+    clean_foreign_words_prompt처럼 이미 1만자 안팎인 기존 대본 전체를 그대로
+    재출력해야 하는 호출에는 부족합니다 — 2026-09-30 실측으로 NVIDIA 폴백
+    경로에서 이 한도에 걸려 확장이 매번 실패하고 롱폼이 통째로 빠진 채 쇼츠만
+    저장되는 사고가 있었음(Anthropic 쪽은 9/28에 이미 32000으로 올려뒀었는데
+    NVIDIA 폴백 쪽엔 안 옮겨놨던 것). 그런 호출은 _call_claude에 더 큰
+    max_tokens를 넘겨서 씁니다."""
     stream = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.9,
         top_p=0.95,
-        max_tokens=16000,
+        max_tokens=max_tokens,
         stream=True,
         extra_body=MODEL_EXTRA_BODY.get(model) or None,
     )
@@ -195,7 +203,7 @@ def _stream_once(client, model: str, prompt: str) -> tuple[str, str | None]:
     return "".join(chunks).strip(), finish_reason
 
 
-def _call_anthropic(prompt: str) -> str:
+def _call_anthropic(prompt: str, max_tokens: int = 32000) -> str:
     """Anthropic API(claude-sonnet-5)를 한 번 호출해서 응답 원문을 반환합니다.
     실패하면(키 없음/인증/한도/네트워크/그 외 오류 전부) ScriptGenerationError를
     던져서, 호출부(_call_claude)가 OpenRouter로 넘어가게 합니다.
@@ -216,9 +224,10 @@ def _call_anthropic(prompt: str) -> str:
             model=ANTHROPIC_MODEL,
             # extend_long_script_prompt는 이미 12000자 넘는 기존 대본 전체를 그대로
             # 재출력하면서 씬을 더 붙여야 해서, 16000으로는 부족해 실측으로
-            # max_tokens 잘림(finish_reason=length)이 났음(2026-09-28) — 32000으로
-            # 올림(사전 확인: claude-sonnet-5가 이 값을 그대로 받아들이는 것 확인).
-            max_tokens=32000,
+            # max_tokens 잘림(finish_reason=length)이 났음(2026-09-28) — 기본값을
+            # 32000으로 올림(사전 확인: claude-sonnet-5가 이 값을 그대로 받아들이는
+            # 것 확인). _call_claude가 호출부별로 다른 값을 넘기면 그걸 씀.
+            max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
         ) as stream:
             text = "".join(stream.text_stream)
@@ -242,7 +251,7 @@ def _call_anthropic(prompt: str) -> str:
     return text
 
 
-def _call_claude(prompt: str) -> str:
+def _call_claude(prompt: str, max_tokens: int = 16000) -> str:
     """대본 생성 함수들의 공통 진입점 — 함수 이름은 예전 그대로 남겨뒀습니다
     (호출부 여러 곳을 다 바꾸는 것보다 안전, 원래 Claude API 직접 호출이었던
     시절 이름).
@@ -253,10 +262,10 @@ def _call_claude(prompt: str) -> str:
     여기서 다시 한 줄만 바꾸면 됩니다. 지금은 곧장 _call_openrouter()로 갑니다
     (qwen3-235b(유료, 지금은 잔액 0이라 바로 실패) → NVIDIA 직접 호출 무료
     모델까지 자체적으로 폴백함)."""
-    return _call_openrouter(prompt)
+    return _call_openrouter(prompt, max_tokens=max_tokens)
 
 
-def _call_openrouter(prompt: str) -> str:
+def _call_openrouter(prompt: str, max_tokens: int = 16000) -> str:
     """1차로 OpenRouter API(qwen3-235b)를 시도하고, 크레딧 부족(402)이나 그
     모델이 내려간 경우(404)는 NVIDIA API(NVIDIA_MODELS, NVIDIA_API_KEY로 직접
     호출 — OpenRouter를 거치지 않음)로 넘어갑니다. 429(요청 한도)는 같은
@@ -292,7 +301,7 @@ def _call_openrouter(prompt: str) -> str:
 
         for attempt in range(1, MAX_RATE_LIMIT_RETRIES + 1):
             try:
-                text, finish_reason = _stream_once(client, model, prompt)
+                text, finish_reason = _stream_once(client, model, prompt, max_tokens=max_tokens)
             except openai.AuthenticationError as e:
                 raise ScriptGenerationError("API 키가 유효하지 않습니다. .env 파일의 키를 다시 확인하세요.") from e
             except openai.APIConnectionError as e:
@@ -443,16 +452,25 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
 
 def extend_long_script(current_long: str, reason: str) -> str:
     """분량 미달인 롱폼 대본을 처음부터 다시 쓰지 않고, 지금 내용을 살린 채
-    부족한 만큼만 늘려서 다시 받아옵니다(쇼츠는 건드리지 않음)."""
+    부족한 만큼만 늘려서 다시 받아옵니다(쇼츠는 건드리지 않음).
+
+    기존 대본 전체(1만자 안팎)를 그대로 재출력하면서 씬을 더 붙여야 해서
+    기본 16000 토큰으로는 부족합니다 — 2026-09-30 실측(NVIDIA 폴백 경로)으로
+    토큰 한도에 걸려 매번 실패하고 롱폼이 통째로 빠지는 사고가 있었음.
+    32000으로 올림(_stream_once 주석 참고)."""
     logger.info("Claude API 롱폼 대본 확장 요청 (사유=%s)", reason)
-    return _call_claude(extend_long_script_prompt(current_long, reason))
+    return _call_claude(extend_long_script_prompt(current_long, reason), max_tokens=32000)
 
 
 def clean_foreign_words(current_long: str, violation_lines: list[str], is_shorts: bool = False) -> str:
     """대사에 외국어가 섞인 줄만 한국어로 고쳐서 다시 받아옵니다(그 외 내용은
-    그대로 유지하도록 프롬프트에서 요구함)."""
+    그대로 유지하도록 프롬프트에서 요구함). extend_long_script와 같은 이유로
+    max_tokens=32000을 씀 — 이것도 기존 대본 전체를 재출력합니다."""
     logger.info("Claude API 외국어 혼입 수정 요청 (%d줄)", len(violation_lines))
-    return _call_claude(clean_foreign_words_prompt(current_long, violation_lines, is_shorts=is_shorts))
+    return _call_claude(
+        clean_foreign_words_prompt(current_long, violation_lines, is_shorts=is_shorts),
+        max_tokens=32000,
+    )
 
 
 def _clean_language_if_needed(text: str, is_shorts: bool = False) -> tuple[str, int]:
