@@ -10,6 +10,7 @@ Pillow를 사용해 썸네일(LONG 1280x720, SHORTS 1080x1920)을 생성합니�
 from __future__ import annotations
 
 import re
+import zlib
 from pathlib import Path
 from typing import Optional
 
@@ -20,14 +21,18 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-# 제목에서 "충격 키워드"를 찾아 항상 text_colors[0](기본 빨강)으로 강조합니다.
-# 나머지 단어는 text_colors[1:](기본 노랑/파랑)을 순환시킵니다 — 무작위로 3색을
-# 돌리면 정작 중요한 단어가 파랑으로 묻히는 경우가 많아서(2026-09-17 사용자
-# 피드백), 이 채널에서 실제로 반복 등장하는 위협 어휘를 기준으로 고정합니다.
+# 제목에서 "충격 키워드"를 찾아 항상 text_colors[0](빨강)으로 강조합니다.
+# 나머지 단어는 기본 text_colors[-1](하양)로 쓰고, text_colors[1](파랑)은
+# 거의 안 쓰고 아주 가끔 포인트로만 섞습니다(2026-10-01 사용자 지시: "빨강은
+# 강조에만, 파랑은 거의 쓰지 말고") — 아래 _draw_text의 색 배정 로직 참고.
+# 2026-09-17엔 이 목록이 건강 정보 채널의 위협 어휘였는데, 2026-09-28에
+# 채널을 썰(사연) 이야기로 바꾼 뒤로는 이 단어들이 제목에 거의 안 나와서
+# has_keyword가 항상 False로 떨어져 강조 자체가 작동을 안 하고 있었음
+# (2026-10-01 발견) — 썰 제목에 실제로 반복 등장하는 충격·반전 어휘로 교체.
 _KEYWORD_PATTERNS = [
-    "위험", "폭발", "썩", "녹습", "녹는", "망가", "독", "마비", "죽", "괴사",
-    "손상", "충격", "경고", "치명", "돌연사", "뇌졸중", "심장마비", "불가",
-    "최악", "심각", "악화", "터지", "터집", "무너", "막히", "터짐",
+    "들통", "들켰", "들킨", "배신", "복수", "사이다", "충격", "몰래", "훔친",
+    "훔쳐", "협박", "징계", "잠수", "무너", "폭로", "반전", "거짓말", "사기",
+    "갑질", "분노", "억울", "비밀", "진실", "소름", "경악",
 ]
 _KEYWORD_RE = re.compile("|".join(re.escape(p) for p in _KEYWORD_PATTERNS))
 
@@ -35,9 +40,10 @@ _KEYWORD_RE = re.compile("|".join(re.escape(p) for p in _KEYWORD_PATTERNS))
 class ThumbnailGenerator:
     """
     장면 이미지를 배경으로 깔고(없으면 단색 배경) 제목 텍스트를 큼직하게
-    얹는 썸네일을 생성합니다. 줄마다 색상(기본: 빨강 → 파랑 → 하양 순환)을
-    바꿔가며 그리고, 두꺼운 외곽선 + 텍스트 뒤 반투명 밴드로 어떤 배경 위에서도
-    가독성을 확보합니다.
+    얹는 썸네일을 생성합니다. 기본은 하양이고, 충격 키워드만 빨강으로
+    강조하며, 파랑은 제목 하나당 한 단어 정도만 포인트로 섞습니다
+    (2026-10-01, 아래 _draw_text 참고). 두꺼운 외곽선 + 텍스트 뒤 반투명
+    밴드로 어떤 배경 위에서도 가독성을 확보합니다.
 
     사용 예:
         gen = ThumbnailGenerator(config["thumbnail"], assets_dir)
@@ -168,23 +174,35 @@ class ThumbnailGenerator:
         # 2026-09-14: 줄 단위가 아니라 "단어" 단위로 색을 바꿔가며 그립니다 —
         # 제목이 짧아서 줄이 1~2개뿐이면 줄 단위 순환으로는 거의 항상 단색으로
         # 보였는데(알록달록한 느낌이 안 남), 단어마다 바꾸면 짧은 제목에서도
-        # 빨/노/파가 확실히 섞여 보입니다.
+        # 색이 확실히 섞여 보입니다.
         # 2026-09-17: 단순 순환이면 정작 중요한 단어가 파랑/노랑으로 묻히는
-        # 경우가 많다는 피드백 — "위험", "썩는다" 같은 충격 키워드는 항상
-        # text_colors[0](빨강)으로 고정하고, 나머지 단어만 text_colors[1:]을
-        # 순환시킵니다. 키워드가 하나도 없는 제목이면(드묾) 기존처럼 전체
-        # 순환으로 대체해 그래도 알록달록하게 나오게 합니다.
+        # 경우가 많다는 피드백 — 충격 키워드는 항상 text_colors[0](빨강)으로
+        # 고정.
+        # 2026-10-01: "빨강은 강조에만, 파랑은 거의 쓰지 말고"로 다시 조정 —
+        # 나머지 단어는 전부 text_colors[-1](하양)이 기본이고, text_colors[1]
+        # (파랑)은 제목 하나당 딱 한 단어에만 포인트로 씀(그마저 키워드가 아닌
+        # 단어가 2개 이상 있을 때만 — 안 그러면 "강조 아닌 단어"가 아예 없어서
+        # 포인트를 줄 자리가 없음). 어느 단어에 파랑을 줄지는 제목 글자를 해시해
+        # 정해서, 매번 같은 제목이면 같은 자리에 포인트가 가고(재현 가능), 제목이
+        # 바뀌면 자리도 자연스럽게 바뀝니다.
         stroke_w = max(2, size // 22)
         space_bbox = draw.textbbox((0, 0), " ", font=font)
         space_w = space_bbox[2] - space_bbox[0]
 
         all_words = [w for line in lines for w in (line.split(" ") if " " in line else [line])]
-        has_keyword = any(_KEYWORD_RE.search(w) for w in all_words)
         keyword_color = self._text_colors[0]
-        cycle_colors = self._text_colors[1:] or self._text_colors
+        default_color = self._text_colors[-1]
+        accent_color = self._text_colors[1] if len(self._text_colors) > 2 else None
+
+        non_keyword_idx = [i for i, w in enumerate(all_words) if not _KEYWORD_RE.search(w)]
+        accent_word_i = None
+        if accent_color is not None and len(non_keyword_idx) >= 2:
+            # 파이썬 내장 hash()는 보안상 문자열마다 프로세스별로 다른 솔트를
+            # 쓰기 때문에(PYTHONHASHSEED 랜덤화) 같은 제목이어도 실행할 때마다
+            # 결과가 달라집니다 — zlib.crc32로 고정 해시를 씁니다.
+            accent_word_i = non_keyword_idx[zlib.crc32(text.encode("utf-8")) % len(non_keyword_idx)]
 
         word_i = 0
-        cycle_i = 0
         for line in lines:
             words = line.split(" ") if " " in line else [line]
             word_widths = [draw.textbbox((0, 0), w, font=font)[2] for w in words]
@@ -194,13 +212,12 @@ class ThumbnailGenerator:
             # 캔버스 밖으로 삐져나가지 않게 합니다.
             x = max(0, (width - total_w) // 2)
             for w, ww in zip(words, word_widths):
-                if not has_keyword:
-                    color = self._text_colors[word_i % len(self._text_colors)]
-                elif _KEYWORD_RE.search(w):
+                if _KEYWORD_RE.search(w):
                     color = keyword_color
+                elif word_i == accent_word_i:
+                    color = accent_color
                 else:
-                    color = cycle_colors[cycle_i % len(cycle_colors)]
-                    cycle_i += 1
+                    color = default_color
                 draw.text(
                     (x, y), w, font=font, fill=color,
                     stroke_width=stroke_w, stroke_fill=(0, 0, 0, 255),
