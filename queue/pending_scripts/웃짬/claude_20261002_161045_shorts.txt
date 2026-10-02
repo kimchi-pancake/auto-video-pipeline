@@ -1,0 +1,84 @@
+RUN_ID:
+claude_20261002_161045_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+복수사이다
+
+CAST:
+나레이터: 나레이터
+여자1: 민지
+남자1: 태호
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+결혼식 당일, 신랑이 다른 여자와 키스했습니다
+
+THUMBNAIL_SHORTS:
+결혼식 당일, 신랑이 다른 여자와 키스했습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a wedding dress, standing alone backstage looking shocked, 1080x1920]
+나레이터: 결혼식 시작 10분 전, 신부가 신랑이 다른 여자와 키스하는 장면을 봤습니다.
+
+[SCENE:a Korean man in his early 30s with short black hair, wearing a light gray suit, standing close to a woman in a pastel dress, laughing and leaning in for a kiss, 1080x1920]
+여자1: 태호 씨… 이게 뭐예요?&누구예요, 그 여자는?
+
+[SCENE:a Korean woman in her early 30s with shoulder-length wavy hair, wearing a pastel dress, eyes wide and frozen mid-laugh, 1080x1920]
+남자1: 지…지연 씨가 오기 전에 잠깐 나눈 인사였어요&오해하지 마세요, 진짜라니까요!
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 그런데 이게 끝이 아니었습니다&화면을 두 번 눌러서 결말을 확인하세요
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, holding her phone with a determined expression, wedding dress slightly disheveled, 1080x1920]
+여자1: 아까 그 여자, 신랑의 전 애인이었어요&그리고 오늘 아침까지 연락하고 있었더라구요
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, smiling faintly while showing a screenshot on her phone to the groom, 1080x1920]
+나레이터: 신부는 전 애인이 보낸 ‘오늘 꼭 잡아야 한다’는 메시지를 보여줬습니다&결혼은 취소했고, 두 사람은 서로에게 사과했습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, standing calmly outside the wedding venue, looking relieved, 1080x1920]
+여자1: 여러분이 신부였다면, 그 자리에서 바로 뒤집어엎으셨을까요?&아니면 먼저 확인부터 하셨겠어요? 댓글로 알려주세요
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+복수사이다
+
+CAST:
+나레이터: 나레이터
+여자1: 민지
+남자1: 태호
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+결혼식 당일, 신랑이 다른 여자와 키스했습니다
+
+THUMBNAIL_SHORTS:
+결혼식 당일, 신랑이 다른 여자와 키스했습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a wedding dress, standing alone backstage looking shocked, 1080x1920]
+나레이터: 결혼식 시작 10분 전, 신부가 신랑이 다른 여자와 키스하는 장면을 봤습니다.
+
+[SCENE:a Korean man in his early 30s with short black hair, wearing a light gray suit, standing close to a woman in a pastel dress, laughing and leaning in for a kiss, 1080x1920]
+여자1: 태호 씨… 이게 뭐예요?&누구예요, 그 여자는?
+
+[SCENE:a Korean woman in her early 30s with shoulder-length wavy hair, wearing a pastel dress, eyes wide and frozen mid-laugh, 1080x1920]
+남자1: 지…지연 씨가 오기 전에 잠깐 나눈 인사였어요&오해하지 마세요, 진짜라니까요!
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 그런데 이게 끝이 아니었습니다&화면을 두 번 눌러서 결말을 확인하세요
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, holding her phone with a determined expression, wedding dress slightly disheveled, 1080x1920]
+여자1: 아까 그 여자, 신랑의 전 애인이었어요&그리고 오늘 아침까지 연락하고 있었더라구요
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, smiling faintly while showing a screenshot on her phone to the groom, 1080x1920]
+나레이터: 신부는 전 애인이 보낸 ‘오늘 꼭 잡아야 한다’는 메시지를 보여줬습니다&결혼은 취소했고, 두 사람은 서로에게 사과했습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, standing calmly outside the wedding venue, looking relieved, 1080x1920]
+여자1: 여러분이 신부였다면, 그 자리에서 바로 뒤집어엎으셨을까요?&아니면 먼저 확인부터 하셨겠어요? 댓글로 알려주세요
