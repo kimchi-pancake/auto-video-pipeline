@@ -1,0 +1,48 @@
+RUN_ID:
+claude_20261004_161552_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+소음 참던 주인공, 드릴 소리 끊긴 순간 들은 목소리에 결국 문을 두드렸다
+
+THUMBNAIL_SHORTS:
+소음 참던 주인공, 드릴 소리 끊긴 순간 들은 목소리에 결국 문을 두드렸다
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, pressing her ear against the wall in a dimly lit bedroom, 1080x1920]
+나레이터: 지연 씨는 밤마다 이어지는 드릴 소음에 지쳐 있었지만, 그날 밤 소음이 갑자기 멈췄습니다.&그러자 벽 저편에서 뭔가 속삭이는 소리가 들리기 시작했습니다.
+여자1: …누가 ahí서 말하고 있어?&이게 뭐야, 진짜로?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, shining a flashlight on the wall, revealing a hidden cavity, 1080x1920]
+나레이터: 지연 씨는 귀를 벽에 대고 소리를 따라갔습니다.&손전등으로 벽지를 뜯어보니, dietro에 금속 상자가 보였고, 안에 낡은 테이프 레코더와 메모가 있었습니다.
+여자1: 이게 뭐야… 오래된 녹음기라고?&누가 여기에 숨겨놓은 거야?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, holding a tape recorder to her ear, 1080x1920]
+나레이터: 지연 씨는 테이프를 재생했습니다.&낡은 소리 속에서 절박한 여성의 목소리가 나왔습니다.&"도와주세요… 저는 여기 갇혀 있어요… 제발…"&그녀는 등이 오싹해지는 것을 느꼈습니다.
+여자1: 이거… 누가 남긴 메시지야?&이게 진심이야, 농담이야?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, knocking on the upstairs apartment door, 1080x1920]
+나레이터: 지연 씨는 벽 안의 소리가 정확히 위층에서 난다는 걸 깨달았습니다.&그녀는 마음을 먹고 402호 문을 두드리기 시작했습니다.&그런데 이게 끝이 아니었습니다.
+여자1: 여보세요?&누구 계세요?&저… 저 wall에서 목소리 들었어요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 진실은 곧 밝혀집니다.&화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, looking into a wall cavity where an elderly man is sitting weakly, 1080x1920]
+나레이터: 관리실과 함께 벽을 뚫자, 안에서는 쓰러진 노인이 보였습니다.&그는 며칠 동안 물과 빵 조각만으로 버티며 생존해왔고, 벽 속에서 속삭였던 건 그의 간절한 호소였습니다.
+여자1: …진짜로 사람이 там에 있었어?&이게 무슨 일이야?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, looking out her window at the night sky, 1080x1920]
+나레이터: 노인은 무사히 구조되었고, 지연 씨는 그날 밤 들린 속삭임이 환청이 아니었음을 깨달았습니다.&우리 주변에는 말하지 못한 어려움을 겪는 이들이 있을 수 있습니다.
+여자1: 만약 당신이 지연 씨였다면, 벽 속에서 들린 속삭임을 무시하고 잠들 수 있었을까요?&댓글로 당신의 생각을 들려주세요.

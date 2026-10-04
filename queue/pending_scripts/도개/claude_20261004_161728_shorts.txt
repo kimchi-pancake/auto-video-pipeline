@@ -1,0 +1,46 @@
+RUN_ID:
+claude_20261004_161728_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+남자1: 민수
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+윗집 소음으로 잠 못 이루던 날, 진실이 드러났습니다
+
+THUMBNAIL_SHORTS:
+윗집 소음으로 잠 못 이루던 날, 진실이 드러났습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, sitting on the edge of a bed at 2 a.m., staring at the ceiling in a small apartment, 1080x1920]
+나레이터: 새벽 2시, 윗집에서 쿵쿵거리는 소음이 또 시작되었습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, sitting on the edge of a bed at 2 a.m., staring at the ceiling in a small apartment, 1080x1920]
+여자1: 또야…&세 달째 이러는데, 도대체 뭐 하는 거지?
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, sitting on the edge of a bed at 2 a.m., staring at the ceiling in a small apartment, 1080x1920]
+나레이터: 참을 수 없어서 인터폰을 눌렀지만, 아무도 답이 없었고, 관리실에 전화해도 "아이가 뛰어놀아서 그렇다"는 말만 돌아왔습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, sitting on the edge of a bed at 2 a.m., staring at the ceiling in a small apartment, 1080x1920]
+여자1: 아이라면 왜 새벽에…&누가 봐도 이상해요.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 진실을 확인하려면 화면을 두 번 눌러 주세요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, standing in front of a neighbor's door holding a printed screenshot, 1080x1920]
+여자1: CCTV에 찍힌 게…&아이가 아니라 노인 분이 발로 바닥에 막대기를 쳐요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, standing in front of a neighbor's door holding a printed screenshot, 1080x1920]
+나레이터: 층간소음이 아니라, 독거노인 분이 외로워서 바닥을 두드리며 존재를 알리셨던 거예요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a white cardigan and jeans, sitting on the edge of a bed at 2 a.m., staring at the ceiling in a small apartment, 1080x1920]
+여자1: 그 자리서 뭐라고 했을 것 같나요?&댓글로 알려주세요.
