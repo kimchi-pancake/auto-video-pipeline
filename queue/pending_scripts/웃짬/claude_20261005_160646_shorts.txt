@@ -1,0 +1,46 @@
+RUN_ID:
+claude_20261005_160646_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+가족관계
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+남자1: 현우
+여자2: 미숙
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+장례식장에서 발견한 편지 한 장, 그 순간 모든 게 달라졌다
+
+THUMBNAIL_SHORTS:
+장례식장에서 발견한 편지 한 장, 그 순간 모든 게 달라졌다
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, kneeling beside an open wooden coffin in a dimly lit funeral hall, 1080x1920]
+나레이터: 아버지의 장례식 날, 유품 속에서 편지 한 장이 우리 가족의 모든 비밀을 뒤집어 놓았다.
+여자1: 이건… 아버지 필체야.&누구한테 보낸 거지?
+
+[SCENE:a Korean woman in her late 50s with permed gray hair, wearing a dark floral blouse, reading a letter with trembling hands in the funeral hall, 1080x1920]
+나레이터: 미숙 숙모가 편지를 읽고 충격에 빠졌다.
+여자2: 흐윽… 아버님…&왜 이런 걸 이제야 telling me…
+
+[SCENE:a Korean woman in her late 50s with permed gray hair, wearing a dark floral blouse, holding the letter and looking at her niece with sorrowful eyes, 1080x1920]
+나레이터: 그런데 이게 끝이 아니었습니다.
+여자2: 이 편지는 네 아버지의 것이 아니야.&이건 네 친아버지한테서 온 거야.
+
+[SCENE:a red heart icon animation pulsing and growing, like button, white background]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, covering her mouth with her hands in the funeral hall, 1080x1920]
+나레이터: 지연 씨는 충격에 앉아버렸다.
+여자1: 그럼… 지금 아버지가…&내가 아는 아버지는 계부라는 말씀이세요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, smiling gently at the camera in a sunlit room, 1080x1920]
+나레이터: 진실은 아팠지만, 가족의 의미를 새롭게 깨닫게 했다.
+여자1: 여러분이 지연 씨였다면 그 자리에서 뭐라고 했을 것 같나요? 댓글로 남겨주세요.
