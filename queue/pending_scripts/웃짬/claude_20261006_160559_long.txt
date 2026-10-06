@@ -1,0 +1,163 @@
+RUN_ID:
+claude_20261006_160559_long
+
+RESOLUTION:
+1920x1080
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+남자1: 민수
+여자2: 현아
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+윗집 층간소음 항의했더니, 다음날 문 앞에 놓인 편지가 내 아버지의 숨겨진 과거를 드러냈다
+
+THUMBNAIL_SHORTS:
+윗집 층간소음 항의했더니, 다음날 문 앞에 놓인 편지가 내 아버지의 숨겨진 과거를 드러냈다
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1920x1080]
+나레이터: 지연 씨는 오늘도 사무실에 혼자 남아 있었습니다.&벌써 세 달째 반복되는 야근이었지만, 이번엔 뭔가 다른 느낌이 들었습니다.&책상 위에 쌓인 서류를 보며, 그녀는 문득 이 회사에 처음 들어왔던 날을 떠올렸습니다.&신입사원으로서 갖은 고생을 했지만, 그때는 지금처럼 벽 속에서 울려 퍼지는 진동 소리에 귀를 기울일 여유조차 없었죠.&지금은 그 소음이 마치 과거의 메아리처럼 들려오기 시작했습니다.&그녀는 자신도 모르게 손을 들어 귀를 막았고, 그 순간 눈물이 핏도르 떨어졌습니다.
+여자1: 이걸 오늘 안에 다 끝내라고?&말도 안 돼.
+
+[SCENE:a Korean man in his early 30s with short black hair and glasses, wearing a light blue dress shirt, standing next to the woman with the bob haircut in the office, 1920x1080]
+나레이터: 민수 씨는 지연 옆 자리에 앉아 있었지만, 오늘은 어쩐지 말이 없었습니다.&보통이라면 농담을 던지며 분위기를 풀어주던 그였는데, 오늘은 키보드 소리만 끊이지 않았습니다.&그는 지연의 얼굴을 흘끔거리며, 무언가를 말하려다가 입을 다물었습니다.&그 눈동자에는 걱정과 죄책감이 섞여 있었고, 마치 자신이 무언가를 숨기고 있는 듯 보였습니다.&지연은 그 시선을 느끼고 더욱 가슴이 답답해졌습니다.
+남자1: 지연 씨, 이것 좀 도와줄 수 있어요?&제가 먼저 끝내서 넘겨드릴게요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1920x1080]
+나레이터: 지연은 민수의 제안을 거절하며 다시 일에 집중했습니다.&하지만 머리 속은 복잡했습니다.&오늘 밤도 지하철 마지막 차를 타야 하는데, 그 소리는 마치 윗집에서 이어지는 진동처럼 느껴졌습니다.&민수의 손길이 닿은 서류더미를 보면서, 그녀는 문득 그가 왜 그렇게 조용히 도와주려 하는지 궁금해졌습니다.&과거의 어떤 인연이 있는 건 아닐까, 혹은 자신과 같은 아픔을 겪은 사람이 아닐까 하는 생각이 그녀의 마음을 더욱 무겁게 만들었습니다.
+여자1: 아니, 진짜 집중이 안 돼.&네가 도와준다고 해도 이 양은 너무 많아.
+
+[SCENE:a Korean man in his early 30s with short black hair and glasses, wearing a light blue dress shirt, standing next to the woman with the bob haircut in the office, 1920x1080]
+나레이터: 민수는 조용히 그녀의 어깨를 넘어 시선을 돌렸습니다.&그의 표정은 진지했지만, 눈엔 무언가를 숨기려는 듯한 기색이 있었습니다.&그는 지연의 손을 brevemente 스쳐 지나가며, 조용히 속삭이듯 말했습니다.&그 목소리는 마치 과거의 비밀을 털어놓으려는 듯 떨렸고, 지연은 그 소리에 심장이 뛰어올랐습니다.&하지만 그녀는 그의 손길을 뿌리치고, 일에 집중하려 애썼습니다.&그러나 그 손길의 온기는しばらく 동안 그녀의 피부에 남아 있었습니다.
+남자1: 알겠어요.&그럼 저는 이쪽부터 처리할게요.&힘들면 말해요, 괜찮아요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting alone at an office desk looking exhausted, 1920x1080]
+나레이터: 드디어 퇴근 시간이 되었고, 지연은 무거운 몸을 일으켜 사무실을 나섰습니다.&엘리베이터 안에서 그녀는 오늘도 반복되는 생각을 했습니다.&윗집 소음 때문에 잠을 이루지 못한 밤들이 계속되자, 이제는 참을 수가 없었습니다.&문득 엘리베이터 거울에 비친 자신의 얼굴을 보고, 그녀는 피곤함에 흔들리는 눈빛을 보면서 속으로 중얼거렸습니다.&'이걸 참아야 하는 걸까, 아니면 뭔가 밝혀야 하는 걸까' 하는 질문이 그녀의 가슴을 뜨겁게 만들었습니다.
+여자1: 또 오늘도 진동 때문에 잠을 설쳤어.&내일도 이렇게 살면 진짜 미쳐 버릴 것 같아.
+
+[SCENE:a Korean building exterior at night, dim lights in some windows, 1920x1080]
+나레이터: 지연은 자신의 아파트 단지에 도착했습니다.&건물 사이로 흐르는 저녁 바람은 선선했지만, 그녀의 마음은 무거웠습니다.&집에 들어가자마자 그녀는 윗집을 향해 작정하고 말을 하기로 마음먹었습니다.&문 앞에서 그녀는 몇 번이나 심호흡을 하며 용기를 내었습니다.&그리고 드디어 손을 들어 문을 두드렸습니다.&그 소리는 마치 과거의 두드림 소리처럼 들려왔고, 그녀는 자신도 모르게 눈을 감았습니다.
+여자1: 오늘은 꼭 얘기해야겠다.&더는 참지 않을 거야.
+
+[SCENE:a Korean apartment hallway, wooden door with a small gap underneath, 1920x1080]
+나레이터: 지연은 위층 문을 두드리기 직전, 잠시 망설였습니다.&하지만 소리는 점점 커져만 갔고, 이제는 참을 수 없는 지경에 이르렀습니다.&그녀는 깊은 숨을 들이마시고 노크를 했습니다.&그 순간, 문 뒤에서 무언가가 움직이는 소리와 함께, 먼지 띤 공기가 흘러나오는 듯한 느낌이 들었습니다.&그녀는 그 소리에 귀를 기울이며, 무언가가 벽 안에서 움직이고 있다는 확신을 갖게 되었습니다.
+여자1: 안녕하세요, 아래층에 사는 지연이라고 해요.&조금만 조용히 해주실 수 있을까요?&진동 때문에 잠을 이루지 못하고 있어요.
+
+[SCENE:a Korean apartment hallway, wooden door with a small gap underneath, 1920x1080]
+나레이터: 문 안에서는 처음에는 아무런 반응이 없었습니다.&그러자 지연은 목소리를 조금 더 높였습니다.&하지만这一次, 문 뒤에서 움직임이 느껴졌고, 천천히 문이 열렸습니다.&문 틈으로 흘러나오는 빛은 희미했지만, 그 안에 누군가가 숨을 죽이고 있는 듯한 느낌이 들었습니다.&지연은 그 빛을 보면서, 마치 과거의 그림자를 보는 듯한 착각에 빠졌습니다.
+여자2: 누구세요?&무슨 일로 오셨나요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in an apartment hallway facing another woman with long black hair tied in a ponytail, wearing a white t-shirt and jeans, 1920x1080]
+나레이터: 문 앞에 서 있던 사람은 지연과 같은 건물에 사는 현아였습니다.&그녀의 표정은 당황과 경계가 섞여 있었고, 손을 약간 뒤로 숨긴 채 서 있었습니다.&그녀는 무언가를 감추려는 듯 발끝을 살며시 움직였고, 그 움직임은 마치 벽 안에서 무언가를 감지하려는 듯 보였습니다.&지연은 그 모습을 보면서, 현아도 어쩌면 자신과 같은 비밀을 알고 있는 게 아닐까 하는 생각을 했습니다.
+여자1: 아, 안녕하세요.&저는 아래층에 사는 지연이라고 해요.&밤마다 진동이 심해서 잠을 못 자고 있어요.&조금만 신경 써 주실 수 있나요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in an apartment hallway facing another woman with long black hair tied in a ponytail, wearing a white t-shirt and jeans, 1920x1080]
+나레이터: 현아는 잠시 침묵한 후, 방어적인 태도로 대답했습니다.&그녀의 목소리는 낮았지만, 어딘가 긴장된 기색이 역력했습니다.&그녀는 눈을 피하며 발끝을 꼼지락거렸고, 그 손끝에는 뭔가 작은 물체가 닿아 있는 듯한 느낌이었습니다.&지연은 그 모습을 보면서, 현아도 무언가를 숨기고 있다는 직감을 느끼게 되었습니다.
+여자2: 진동이라고요?&저는 별로 그런 거 하지 않는데요.&아무것도 안 하고 있는데 왜 저한테 오세요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in an apartment hallway facing another woman with long black hair tied in a ponytail, wearing a white t-shirt and jeans, 1920x1080]
+나레이터: 지연은 현아의 대답에 놀랐지만, 점점 화가 나기 시작했습니다.&그녀는 자신이 들은 소리는 분명히 진동이고, 그게 밤마다 반복된다고 강조했습니다.&벽이 trembling하는 느낌과 함께, 선풍기가 거의 떨어질 뻔했던 생생한 기억을 떠올리며声を 높였습니다.&그녀의 눈에는 좌절감과 함께 절박함이 서려 있었고, 현아의 반응에 점점 더 서운함을 느꼈습니다.
+여자1: 아니, 진동이 오고 있어요.&벽이 흔들리고 선풍기도 떨어질 뻔했어요.&제가 미쳤다고 생각하시는 건가요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in an apartment hallway facing another woman with long black hair tied in a ponytail, wearing a white t-shirt and jeans, 1920x1080]
+나레이터: 현아의 얼굴이 순간적으로 굳었습니다.&그녀의 눈동자가 흔들렸고, 손에 쥐고 있던 무언가를 rasch하게 뒤로 숨겼습니다.&그녀는 더 이상 대화를 이어가기 싫은 듯 문 쪽으로 몸을 돌렸습니다.&그 손에는 종이 조각 하나가 살짝 드러나 있었고, 그 위에는 흐릿한 글씨가 적혀 있는 듯 보였습니다.&지연은 그 종이를 보면서, 무언가 중요한 단서가 숨겨져 있다는 직감을 갖게 되었습니다.
+여자2: 알겠습니다.&조심해 볼게요.&더는 얘기하고 싶지 않아요.&안녕히 가세요.
+
+[SCENE:a Korean apartment hallway, wooden door closing slowly, 1920x1080]
+나레이터: 문이 닫히고 나서, 지연은 복도 한 편에 서서 허무함을 느꼈습니다.&그녀는 자신이 과민반응한 건 아닐까 하는 의심도 들었지만, 동시에 뭔가 수상한 느낌이 사라지지 않았습니다.&문 뒤에서 여전히 미세한 진동이 느껴졌고, 그녀는 그 소리에 귀를 기울이며 벽을 살며시 두드려보았습니다.&그때, 벽 안에서 무언가가 반응처럼 울려 퍼지는 듯한 느낌을 받았고, 그녀는 가슴이 두근두근 뛰기 시작했습니다.
+여자1: ...뭐라고 했지?&그 손엔 뭐가 있었지?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, sitting on the edge of her bed in a small bedroom, looking at her phone, 1920x1080]
+나레이터: 그날 밤, 지연은 잠들지 못하고 천장을 stare했습니다.&머릿속에는 현아의 표정으로부터 떠오르는 의문만이 가득했습니다.&그녀는 문득 휴대폰을 켜서 과거의 메시지들을 훑어보기 시작했습니다.&메시지 목록을 보면서, 그녀는 예전에 아버지가 보낸 듯한 오래된 메시지 조각들을 떠올렸고, 그 내용이 마치 퍼즐 조각처럼 맞춰지기 시작했습니다.&그녀는 손가락으로 화면을 쓸며, 마치 과거의 목소리를 찾는 듯 애썼습니다.
+여자1: 진짜로 뭐하는 걸까?&진동 소리는 어디서 나는 걸까?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting on the edge of her bed in a small bedroom, looking at her phone, 1920x1080]
+나레이터: 다음 날 아침, 지연은 출근 준비를 하며 다시 한번 윗집을 생각했습니다.&하지만 오늘은 무언가 다른 느낌이었습니다.&집을 나서자마자 현관문 앞에 놓인 흰색 봉투 하나가 그녀의 시선을 잡았습니다.&봉투의 표면에는 미세한 먼지가 쌓여 있었고, 마치 오래 전에 놓여 있었던 듯이 보였습니다.&그녀는 그 봉투를 들어 올리며,まるで 과거의 algun 선물처럼 느껴지는 무게를 느꼈습니다.
+여자1: 뭐야 이건?&아무도 안 보냈는데...
+
+[SCENE:a Korean apartment entrance, white envelope on the floor near the door, 1920x1080]
+나레이터: 지연은 봉투를 집어들며 조심스럽게 봉인을 끊었습니다.&안에 들어 있던 것은 장황한 손편지 한 장이었습니다.&그녀는 그 내용을 읽기 시작했고, 점점 얼어붙는 듯한 느낌을 받았습니다.&편지의 종이는 약간 거칠었고, 잉크가 번진 듯한 자국이 보이면서,まるで 과거の algun 편지처럼 느껴졌습니다.&彼女は 그 종이를 손가락으로 조심스럽게 만지며,まるで過去の algun 손길을感じているように思いました。
+여자1: (읽으며) "지연 씨에게.&당신의 아버지는 과거 우리 건물의 관리소장이셨습니다.&15년 전에 사고로 인해 사라지셨지만, 그분께서 남기신 유품 중 하나가 지금도 본관 벽 안에 숨겨져 있습니다.&그 진동은 그 유품을 찾으려는 사람의 소행입니다.&더는 묻지 마세요.&이 일은 그만두세요."
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in her apartment entrance holding a letter, face pale and shocked, 1920x1080]
+나레이터: 지연은 편지를 다 읽고 나서 바닥에 주저앉았습니다.&머릿속이 하얗게なるほど, 과거에 대한 기억들이 조각조각 맞춰지기 시작했습니다.&그녀는 아버지가 관리소장이셨다는 사실을 전혀 알지 못했다는 사실에 충격을 받았습니다.&그 순간, 어릴 적 아버지가 건물을 점검하던 모습을 떠올렸고, 그의 손길이 벽을 만지던 소리가 지금 들리는 듯한 착각에 빠졌습니다.&그녀의 눈에서는 뜨거운 눈물이 흘러내렸고, 그녀는 마치 과거의 유령을 보는 듯 했습니다.
+여자1: 아버지...?&관리소장이셨다고?&그 분이 왜 갑자기...?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting on the floor of her apartment entrance, holding a letter, tears in her eyes, 1920x1080]
+나레이터: 편지에는 계속해서 아버지의 과거와 관련된 내용이 적혀 있었습니다.&15년 전, 건물 리노베이션 중에 일어난 사고로 인해 아버지가 실종되었고, 그 이후로 아무도 그 사건에 대해 말하지 않았다는 것이었습니다.&그리고 지금, 누군가가 그 숨겨진 유품을 찾으려고 walls를 두드리고 있었다는 것이었습니다.&편지의 마지막 줄에는 흐릿한 손가락 자국이 있었고, 마치 누군가가 lágrimas로 적었던 듯한 느낌이 들었습니다.&그녀는 그 종이를 꼭 끌어안으며,過去の algum secreto를 풀어가려는 듯 했습니다.
+여자1: 이렇게 오래 숨겨져 있었던 거야?&아무도 말하지 않았던 거야?
+
+[SCENE:a Korean apartment building interior, maintenance room with old tools and a half-open wall panel, 1920x1080]
+나레이터: 지연은 편지를 바탕으로 건물을 탐색하기 시작했습니다.&그녀는 관리실 쪽을 걸어갔고,そこには 오래된 도구들과 함께 반쯤 열려 있는 벽 패널이 있었습니다.&안쪽에서 희미한 빛이 새어 나오고 있었고, 그 빛はまるで過去의 algun 불꽃처럼 흔들리고 있었습니다.&彼女はその光を 보면서, 가슴이 두근두근 뛰기 시작했고, 마치 과거의 algun 유령을 부르는 듯 했습니다.
+여자1: 여기서 진동이 나는 건가?&벽 안에 뭔가 있는 거야?
+
+[SCENE:a Korean apartment building interior, maintenance room with old tools and a half-open wall panel, 1920x1080]
+나레이터: 지연은 조심스럽게 벽 패널을 더 당겼습니다.&안에서는 빛이 더 밝게 새어 나왔고, 그 안에는 작은 금속 상자가 보였습니다.&彼女はそれを 꺼내고, 내용물을 확인하기 시작했습니다.&상자의 표면에는 세월의 흔적이 가득했고,まるで過去의 algun 유물처럼 느껴졌습니다.&그녀는 그 상자를 손으로 만지며,まるで過去の algun 손길이 남아 있는 듯한 느낌을 받았습니다.
+여자1: 여기가 그 곳이야?&진짜로 여기 있었네...
+
+[SCENE:a Korean apartment building interior, maintenance room, woman holding a small metal box, light shining from inside the wall, 1920x1080]
+나레이터: 지연은 금속 상자를 열어 보았습니다.&안에는 오래된 사진들, 손편지 몇 장, 그리고 작은 유골함이 들어 있었습니다.&彼女は 사진 속의 남자를 보고 숨을 멈췄습니다.&그 분은 바로 그녀의父亲이셨습니다.&사진의 모서리에는 흐릿한 글씨가 적혀 있었고,まるで過去の algun 메시지처럼 느껴졌습니다.&彼女は 그 사진を指で慎重に触れながら,まるで過去の alcun 손길이残っているかのように感じました。
+여자1: 아버지...?&이 분이 아버지라고?&이 사진은 언제 찍은 거야?
+
+[SCENE:a Korean apartment building interior, maintenance room, woman holding an old photograph of a man in a maintenance uniform, smiling, 1920x1080]
+나레이터: 지연은 사진을 보며 눈물을 흘렸습니다.&그녀는 아버지가 평생을 이 건물에서 일하셨고, 마지막 순간까지도 이곳을守っていた 것임을 깨달았습니다.&그리고 그 유골함은 가족에게 알리지 않으신 아버지의 마지막 배려였던 것입니다.&사진 속의 아버지는 미소를 지으며 무언가를 가리키고 있었고,그 손길은まるで過去の algun 축복처럼 느껴졌습니다.&彼女はその写真を胸に抱きながら,父の温かさを感じようとしました。
+여자1: 아빠... 여기서 이렇게 계셨던 거야?&왜 말하지 않으셨어요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting on the floor of the maintenance room, holding a photograph and letter, looking up with teary eyes, 1920x1080]
+나레이터: 그날 밤, 지연은 집으로 돌아와 현아의 문을 다시 두드렸습니다.&彼女は 더 이상怒りではなく、悲しみ와 함께 sprechen zu wollen였습니다.&문을 열었을 때, 현아의 눈에서는 무언가가 반짝였습니다.&그 반짝임은まるで 과거의 algun 눈물처럼 보였고,그녀는 현아도たぶん 자신과 같은 아픔을 겪고 있었을 거라 생각했습니다.&지연은 그 순간, walls 안에서 들리던 진동이 점점 잦아드는 것을 느꼈습니다.
+여자1: 현아 씨, 제가 아는 전부 말씀드릴게요.&그리고... 부탁드릴 게 하나 있어요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in an apartment hallway facing another woman with long black hair tied in a ponytail, wearing a white t-shirt and jeans, 1920x1080]
+나레이터: 지연은 현아에게 아버지의 이야기와 유골함의 존재를 말했습니다.&현아는 놀라움을 금치 못했고, 그녀의 눈에서는 진심 어린 죄책감이 드러났습니다.&그녀는 자신이 했던 행동을 후회하며, 사과를 건넸습니다.&현아의 손에서는 종이 조각 하나가 미끄러져 떨어졌고,그 위에는 흐릿한 글씨가 적혀 있는 듯 보였습니다.&지연은 그 종이를 주워들며,まるで過去의 algun 단서처럼 느껴졌습니다.
+여자2: 내가 그렇게 오해해서 정말 죄송해요.&아버지께서 이렇게 계셨던 줄은 꿈에도 몰랐어요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, standing in an apartment hallway facing another woman with long black hair tied in a ponytail, wearing a white t-shirt and jeans, 1920x1080]
+나레이터: 두 사람은 벽 앞에 서서 silenziosamente 기도를 올렸습니다.&지연은 더 이상 진동에 화를 내지 않았고, 대신 아버지의 뜻을 기리며 조용한 추모를 시작했습니다.&그리고 그 다음 날부터, 윗집에서는 더 이상 이상한 소리가 나지 않았습니다.&벽 안에서는 더 이상 어떠한 움직임도 느껴지지 않았고, 마치 과거의 alguma 평가가 내려진 듯한 평화로움이 찾아왔습니다.
+여자1: 아빠, 이제 안식하세요.&우리는 여기서 잘 지낼게요.
+
+[SCENE:a Korean apartment hallway, morning light coming through windows, two women standing silently beside a half-open wall panel with a small memorial, 1920x1080]
+나레이터: 시간이 지나고, 건물 관리소에서는 작은 추모 공간을 마련했습니다.&지연은 그곳에 아버지의 사진과 편지를 놓았습니다.&그리고 매번 지날 때마다 silenziosamente 인사합니다.&지금은 그場所이 과거의 아픔을 치유하는場所가 되었습니다.&추모 공간 주변에는 작은 꽃들이 놓여 있었고,그 향기는 마치 과거의 algum 축복처럼 공기 중에 퍼져 있었습니다.&지연은 그 꽃을 바라보며,아버지의 silenzioso한 존재를 느낄 수 있었습니다.
+여자1: 아버지, 항상 감사해요.&이제 우리는 juntos 앞으로 나가요.
+
+[SCENE:a Korean apartment building exterior, sunny day, small memorial plaque on the wall with a photo and flowers, 1920x1080]
+나레이터: 이 이야기는 실제로 있었던 일을 바탕으로 재구성한 것입니다.&특정한 인물이나 장소를 지칭하지 않으며, 모든 이름은 가상입니다.&하지만 인간의 감정과 기억, 그리고 우리를 이어주는 보이지 않는 연결은 언제나 진실합니다.
+나레이터: 여러분은 만약 지연 씨의 상황이라면, 벽 속에 숨겨진 과거를 알게 되었을 때 어떻게 대응하실 것 같아요?&댓글로 여러분의 생각과 경험을 들려주세요.
+
+[SCENE:a Korean apartment building interior, maintenance room, woman holding the letter and photograph, soft light from the wall panel, 1920x1080]
+나레이터: 지연은 편지와 사진을 꼭 끌어안고 quietly 앉았습니다.&벽 안에서 여전히 미세한 따뜻함이 느껴졌고, 그것은 마치 아버지의 숨결처럼 부드럽게 그녀에게 다가왔습니다.&彼女はその warmthを感じながら,父がいつもそばにいたということを新たに悟りました.&눈물이 다시금 볼을 타고 흘렀지만, 이번엔 슬픔이 아니라 감사의 눈물이었습니다.&彼女は 조용히 입을 열었습니다.
+여자1: 아빠… 여기서 기다리고 있었구나.&이제 내가 당신을 기억할게요.
+
+[SCENE:a Korean apartment entrance, morning light, woman standing with closed eyes, hand on the wall where the memorial plaque is, 1920x1080]
+나레이터: 몇 주 후, 지연은 출근길에 아파트 입구에 멈춰 섰습니다.&아직도 아침 햇살이 벽에 비추고 있었고,彼女は 그 빛 속에서 아버지의 존재를 느낄 수 있었습니다.&그녀는 눈을 감고 손을 벽에 대었습니다.&벽 안에서는何も響かない 平온함이 흘렀고, 그 silencioso함은まるで 과거의 algun 축복처럼 느껴졌습니다.&그녀는 깊은숨을 내쉬며, 마음속으로 약속했습니다.
+여자1: 아빠… 우리가 여기서 잘 살아갈게요.&잊지 않을게요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting on a bench in the apartment courtyard, watching children play, 1920x1080]
+나레이터: 어느 오후, 지연은 아파트 단지 중앙의 벤치에 앉아 아이들이 노는 모습을 바라보았습니다.&아이들의 laughter는 마치 과거의 algun 축복처럼 경쾌하게 들려왔고,彼女は 그 소리에 마음이 편안해지는 것을 느꼈습니다.&바람이 불면서 기념비에 달린 종이가 살랑거렸고,그 소리는 마치 아버지의 silencioso한 인사처럼 들렸습니다.&彼女は 미소를 지며,지금 이 순간이 아버지의 뜻이었다고 생각했습니다.
+여자1: 아빠… 여기서 웃음소리가 들리면, 그게 당신의 축복이라고 생각해요.
+
+[SCENE:a Korean apartment building interior, maintenance room, woman placing a small flower on the memorial shelf, 1920x1080]
+나레이터: 지연은 매달 첫째 주에 유지보수실을 찾아 작은 꽃 하나를 놓습니다.&彼女は 꽃을 조심스럽게 올려놓고, silenciosamente 손을 모읍니다.&벽 안에서는何も 움직이지 않지만,彼女は 아버지의 존재를 느낍니다.&그 존재는 sonido도, 빛도 아니지만,彼女の胸の奥から暖かく響きます.&彼女はその気持ちを抱きしめ、一日を始めます.
+여자1: 아빠… 항상 여기 계신 걸 느껴요.&감사합니다.
+
+[SCENE:a Korean apartment building exterior, twilight, woman standing alone facing the memorial plaque, soft golden light, 1920x1080]
+나레이터: 해가 지는 저녁, 지연은 기념비 앞에 혼자 섰습니다.&노을빛이 벽을 따라 흘러내렸고, 그 빛은まるで 과거의 algun 축복처럼 따뜻하게 그녀를 감쌌습니다.&彼女は 눈을 감고 깊게 숨을 들이마셨습니다.&壁の中では어떤 소리도 나지 않았지만,彼女は父親의存在を確かに感じました.&그 존재는 말하지 않아도, 그녀의 마음 속에서 조용히 말을 걸었습니다.&彼女は 조용히 중얼거렸습니다.
+여자1: 아빠… 오늘도 잘 지냈어요.&내일도 이렇게 살게요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, sitting on the floor of her living room, holding an old photo album, 1920x1080]
+나레이터: 어느 주말, 지연은 거실 바닥에 앉아 오래된 사진 앨범을 펼쳤습니다.&앨범 속에는 어릴 적 아버지의 모습이 있었고,그 사진들 사이로 그녀가 알지 못했던 또 다른 이야기가 숨어 있었습니다.&彼女は 사진 하나를 천천히 넘기며, 아버지의 손을 따라 눈을 이동시켰습니다.&그 손길은 언제나 그녀를 향했고,지금도 그렇게 느껴졌습니다.&彼女はアルバム을閉じながら,微笑みを浮かべました.
+여자1: 아빠… 당신의 삶은 언제나 저와 함께였어요.&이제야 제대로 알 수 있게 됐네요.
+
+[SCENE:a Korean apartment building interior, maintenance room, woman sitting quietly with eyes closed, hand on the wall, 1920x1080]
+나레이터: 지금은 지연이 유지보수실에 와서 눈을 감고 벽에 손을 대는 것이 일과처럼 되었습니다.&彼女は何も言わないけれど,壁の中ではsilenziosamente何かが流れています.&その流れは音でも光でもなく,彼女の魂を温かく包み込みます.&彼女はその状態を保ちながら,深く息を吸います.&その瞬間,彼女は父がいつも自分と共にいたということを全身で感じます.
+여자1: 아빠… 여기서 당신의 숨결을 느껴요.&그게 suficientes 로 위로가 됩니다.
+
+[SCENE:a Korean apartment building exterior, night, memorial plaque softly glowing, 1920x1080]
+나레이터: 밤이 깊어가도, 기념비는 약한 빛을 내며 어둠을 밝히고 있습니다.&그 빛은 전기도, 배터리도 아닌, 무언가의 silencioso한 힘으로부터 나오고 있습니다.&지연은 가끔 밤에 와서 그 빛을 바라봅니다.&그 빛を見ていると,彼女は父가 여전히 여기 계시다는 것을 느낍니다.&그 존재는 말하지 않아도, 그녀의 마음 속에서 조용히 울려 퍼집니다.&彼女はその光を眺めながら,静かに言います.
+여자1: 아빠… 여기서 빛나고 있어 줘서 고마워요.&이제 나도 여기서 빛나게 살아갈게요.
