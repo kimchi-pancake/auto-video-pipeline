@@ -4696,5 +4696,65 @@
     "uploaded_at": "2026-10-07T17:49:38+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "q0yCX2PVQ8s",
+    "channel": "웃짬",
+    "category": "사기폭로",
+    "title": "후원금 영수증에 찍힌 내 계좌, 그게 시작이었다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-08T16:33:10+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "i1mk_Ww7nbE",
+    "channel": "도개",
+    "category": "이웃분쟁",
+    "title": "새벽 3시 발소리만 들었는데… 오늘 문 앞에 놓인 쪽지가 내 인생을 뒤집었다",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-08T16:41:55+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "nlveR7MM5Xs",
+    "channel": "웃짬",
+    "category": "사기폭로",
+    "title": "후원금 영수증에 찍힌 내 계좌, 그게 시작이었다",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-08T16:55:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "GMSlpKsnlTw",
+    "channel": "도개",
+    "category": "갑질사건",
+    "title": "신입 대신 야근한 대가, 사장님이 다 보고 있었습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-08T16:57:52+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "QLZ9XCBU_Nk",
+    "channel": "웃짬",
+    "category": "직장생활",
+    "title": "신입 대신 야근한 대가, 사장님이 다 보고 있었습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-08T17:11:48+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "4lhIF5PdxVg",
+    "channel": "도개",
+    "category": "이웃분쟁",
+    "title": "새벽 3시 발소리만 들었는데… 오늘 문 앞에 놓인 쪽지가 내 인생을 뒤집었다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-08T17:13:44+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
