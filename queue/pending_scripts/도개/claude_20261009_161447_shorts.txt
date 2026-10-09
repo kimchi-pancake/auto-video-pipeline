@@ -1,0 +1,45 @@
+RUN_ID:
+claude_20261009_161447_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+복수사이다
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+며느리 몰래 경조사비 가로챈 시누이, 결혼식 날 들통났습니다
+
+THUMBNAIL_SHORTS:
+며느리 몰래 경조사비 가로챈 시누이, 결혼식 날 들통났습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a wedding dress, standing alone backstage looking shocked, 1080x1920]
+나레이터: 결혼식 시작 10분 전, 축의금 봉투가 통째로 사라졌습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a beige cardigan, standing near the bride backstage looking confused, 1080x1920]
+여자1: 분명 여기 뒀는데...&누가 가져간 거지?
+
+[SCENE:a Korean man in his early 40s with short black hair and glasses, wearing a navy suit, standing near the reception desk checking a clipboard, 1080x1920]
+나레이터: 예식장 직원이 CCTV를 확인했고, 시누이가 봉투를 주머니에 넣는 장면이 포착되었습니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 그런데 이게 끝이 아니었습니다.
+
+[SCENE:a Korean woman in her late 30s with short bob haircut and sharp expression, wearing a black blazer, standing face-to-face with the bride in the hallway, 1080x1920]
+여자1: 시누이 씨, 혹시 아세요? 그 봉투 안에 500만 원이 들어 있었다는 거요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a wedding dress, standing firmly with arms crossed, 1080x1920]
+여자1: 돌려주세요. 지금 당장. 안 그러면 경찰에 신고합니다.
+
+[SCENE:a Korean woman in her late 30s with short bob haircut and sharp expression, wearing a black blazer, looking down guiltily while returning an envelope, 1080x1920]
+나레이터: 시누이는 결국 봉투를 돌려주었고, 지연은 그 자리에서 사과를 받았습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a wedding dress, smiling gently while holding the returned envelope, 1080x1920]
+여자1: 여러분 생각은요? 만약 당신이었다면, 바로 경찰에 신고하셨을까요? 아니면 조용히 해결하셨을까요? 댓글로 알려주세요.

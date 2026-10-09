@@ -1,0 +1,52 @@
+RUN_ID:
+claude_20261009_161340_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+3년 간 참은 청소기 소음, 오늘 문을 두드리니...
+
+THUMBNAIL_SHORTS:
+3년 간 참은 청소기 소음, 오늘 문을 두드리니...
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, pounding on an upstairs apartment door with a frustrated expression, 1080x1920]
+나레이터: 3년째 이어진 윗집 소음 때문에 오늘 finally 참을 수 없어 문을 두드리었습니다.
+여자1:누구 계세요?&조금만 조용히 해주실 수 있나요?
+
+[SCENE:a Korean man in his 80s with white hair and a cane, wearing a gray sweater, opening the door slowly with a confused expression, 1080x1920]
+나레이터: 문이 열리면서 나타난 사람은 예상과 전혀 다른 80대 grandfather이셨습니다.
+남자1:(할아버지 voice)아이고, jungen lady...&무서워하지 마세요.
+
+[SCENE:a Korean man in his 80s with white hair and a cane, wearing a gray sweater, demonstrating slow leg movements with a walker inside the apartment, 1080x1920]
+나레이터: 할아버지는 최근 허리 수술을 받고 재활 운동 중이셨고, 그 소리가 바로 보행기 바퀴가 마루를 긁는 소리였습니다.
+남자1:(할아버지 voice)의사 선생님이 매일 이렇게 걸으라고 하셨어요&그래야 걸을 수 있게 된다고요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, covering her mouth with her hand in realization, 1080x1920]
+나레이터: 지연은 자신의 오해를 깨닫고 깊은 죄책감에 빠졌습니다.
+여자1:아... 죄송해요&할아버지, 제가 너무 오해했네요.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 그런데 이게 끝이 아니었습니다.
+
+[SCENE:a Korean man in his 80s with white hair and a cane, wearing a gray sweater, showing a rehabilitation logbook with clear progress marks, 1080x1920]
+나레이터: 며칠 뒤, 지연은 할아버지의 재활 노트를 보았고, 오늘의 걸음이 엄청난 진전이었음을 알았습니다.
+여자1:할아버지...&그렇게 hard하게 노력하셨단 말이에요?
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, kneeling to tie the grandfather's shoelaces with a gentle smile, 1080x1920]
+나레이터: 지연은 이제 그의 걸음을 응원하기로 마음먹었고, 먼저 다가가서 신발끈을 묶어주었습니다.
+여자1:여기서 멈추지 마세요&할아버지, 제가 도와드릴게요.
+
+[SCENE:a Korean woman in her late 20s with a short bob haircut, wearing a beige cardigan, turning to face the camera with a hopeful expression, 1080x1920]
+나레이터: 이 이야기를 끝내며, 여러분께 묻고 싶습니다.
+여자1:여러분이 지연 씨였다면 그 자리에서 뭐라고 했을 것 같나요?&할아버지의 진심을 알았다면, 어떻게 행동하셨을까요?
