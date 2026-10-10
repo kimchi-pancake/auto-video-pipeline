@@ -1,0 +1,45 @@
+RUN_ID:
+claude_20261010_160913_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+아랫집 청소기 소리, 참았는데 오늘 터졌습니다
+
+THUMBNAIL_SHORTS:
+아랫집 청소기 소리, 참았는데 오늘 터졌습니다
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing in her living room holding her ears, 1080x1920]
+나레이터: 새벽 3시, 아랫집 청소기 소리에 잠이 또 깼습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, sitting on the sofa looking exhausted, 1080x1920]
+여자1: 세 달째야…&매일 이 시간에 진동이 올라와.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, standing at the apartment intercom pressing the button angrily, 1080x1920]
+여자1: 몇 번을 말해요!&새벽엔 조용히 좀 써 주세요!
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 그런데 오늘은 뭔가 달랐습니다, 잠시만 더 함께해 주세요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, peeking through the blinds seeing a young man carrying a medicine box into the basement, 1080x1920]
+여자1: 그쪽이…&아빠 병원 가시는 길이었나 봐요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, knocking gently on the basement door holding a warm drink, 1080x1920]
+여자1: 죄송했어요…&혹시 드릴 거 있으면 말해 주세요.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, smiling softly as the basement door opens and a tired man nods gratefully, 1080x1920]
+나레이터: 오해가 풀린 순간, 서로의 사정을 알게 됐습니다.
+
+[SCENE:a Korean woman in her mid-30s with long straight hair, wearing a light gray sweater and jeans, sitting on the sofa smiling at her phone, 1080x1920]
+여자1: 여러분은요, 소음 문제 생겼을 때 먼저 대화해 보셨나요?&경험 있으시면 댓글로 알려주세요.
