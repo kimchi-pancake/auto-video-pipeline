@@ -1,0 +1,46 @@
+RUN_ID:
+claude_20261011_160633_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+윗집에서 매일 밤 2시, 발소리가 시작되었습니다
+
+THUMBNAIL_SHORTS:
+윗집에서 매일 밤 2시, 발소리가 시작되었습니다
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, sitting upright in bed with wide eyes, listening intently to the ceiling, 1080x1920]
+나레이터: 윗집에서 매일 밤 2시 정확히, 무거운 발소리가 시작되었습니다.
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, sitting on the edge of the bed holding a pillow over her ears, dark circles under eyes, 1080x1920]
+여자1: 낮에는 아무도 없다고 말하면서...&밤이면 꼭 발로 걷는 소리예요.
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, standing nervously in front of a closed apartment door, holding a printed noise log, 1080x1920]
+나레이터: 관리실에 세 번 말했지만, "들리지 않는다"는 답변만 돌아왔습니다.
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, pressing ear against the wall at 2:00 AM, face pale with shock, 1080x1920]
+여자1: 이건 사람이 걷는 소리가 아니에요...&목소리가 들려요.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 진짜 진실은 이제부터입니다, 화면을 두 번 눌러서 확인하세요.
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, standing in the hallway confronting a surprised elderly man in pajamas, holding a smartphone showing a recording, 1080x1920]
+나레이터: 녹음 파일을 틀자, 윗집 할아버지는 잠결에 보청기를 빼고 중얼거리고 계셨습니다.
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, sitting on the stairs with the elderly man, sharing warm tea, both smiling gently, 1080x1920]
+여자1: 조용해...&할아버지, 이제 같이 삐소리 맞춰볼까요?
+
+[SCENE:a Korean woman in her early 30s with long straight black hair, wearing a beige cardigan and jeans, giving a thumbs-up to the camera, soft morning light coming through window, 1080x1920]
+나레이터: 오해가 풀린 그날부터, 우리는 아침 인사를 나눕니다.
+여러분은 혹시, 오해로 인한 이웃 갈등을 풀어본 경험이 있나요? 댓글로 알려주세요.
