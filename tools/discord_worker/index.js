@@ -97,7 +97,7 @@
  * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
-const WORKER_BUILD = "2026-10-01-version-endpoint"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
+const WORKER_BUILD = "2026-10-13-commit-retry"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
@@ -680,21 +680,51 @@ function encodeBase64(str) {
  *  다시 base64로 만드는 왕복은 순전히 낭비입니다 — 그 왕복이 400KB 문자열을
  *  JS 루프로 두 번 훑는 CPU 작업이라 동시 8장이면 워커 CPU 예산을 그대로
  *  태워먹습니다(2026-09-23, 아래 generateSceneImages 주석 참고). */
+// 2026-10-13: 이미지는 NVIDIA에서 멀쩡히 만들어지는데 레포에는 10~15%만 올라오던
+// 진짜 원인 — 여기엔 재시도가 전혀 없었습니다. GitHub Contents API는 같은 브랜치에
+// 동시에 여러 PUT을 보내면 대부분 409(브랜치 head가 바뀜)나 422로 거절하는데,
+// 씬 8장을 Promise.all로 한꺼번에 커밋하니 첫 한두 장만 붙고 나머지는 실패 →
+// 실패하면 console.log 한 줄 남기고 버려져서 파이프라인엔 "이미지 없음"(Pixabay
+// 폴백)으로 보였습니다(실측: 롱폼 43씬 중 6장, 27씬 중 3장). NVIDIA 429만
+// 의심하고 이 커밋 단계를 안 봤던 게 원인 파악이 늦은 이유.
+// 해결: (1) 같은 isolate 안의 커밋은 순서대로 한 번에 하나씩(_commitChain),
+// (2) 409/422/403/429/5xx는 지터를 섞어 최대 6번 재시도.
+let _commitChain = Promise.resolve();
+
 async function ghPutBinaryFileBase64(env, path, contentB64, message) {
+  const run = _commitChain.then(() => _ghPutWithRetry(env, path, contentB64, message));
+  // 앞 커밋이 실패해도 다음 커밋은 계속 진행되게 체인은 에러를 삼킵니다.
+  _commitChain = run.catch(() => {});
+  return run;
+}
+
+async function _ghPutWithRetry(env, path, contentB64, message) {
   const apiUrl = `https://api.github.com/repos/${env.GITHUB_REPO}/contents/${path}`;
-  const resp = await fetch(apiUrl, {
-    method: "PUT",
-    headers: { ...ghHeaders(env), "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message: `${message} [skip ci]`,
-      content: contentB64,
-      branch: BRANCH,
-    }),
-  });
-  if (!resp.ok) {
+  const maxAttempts = 6;
+  let lastErr = "";
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const resp = await fetch(apiUrl, {
+      method: "PUT",
+      headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `${message} [skip ci]`,
+        content: contentB64,
+        branch: BRANCH,
+      }),
+    });
+    if (resp.ok) return;
     const errText = await resp.text();
-    throw new Error(`이미지 커밋 실패 (${resp.status}): ${errText.slice(0, 200)}`);
+    lastErr = `(${resp.status}): ${errText.slice(0, 200)}`;
+    // 직전 시도가 사실은 성공했는데 응답만 놓친 경우 — 이미 있는 파일이라 sha를
+    // 요구하는 422가 오면 커밋은 끝난 것으로 봅니다.
+    if (resp.status === 422 && errText.includes("sha")) return;
+    const retryable = [409, 422, 403, 429].includes(resp.status) || resp.status >= 500;
+    if (!retryable || attempt === maxAttempts) break;
+    const wait = 1200 * attempt + Math.floor(Math.random() * 800);
+    console.log(`[image-gen] 커밋 ${resp.status} — ${wait}ms 뒤 재시도 (${attempt}/${maxAttempts}) ${path}`);
+    await new Promise((r) => setTimeout(r, wait));
   }
+  throw new Error(`이미지 커밋 실패 ${lastErr}`);
 }
 
 // ─────────────────────────────────────────
