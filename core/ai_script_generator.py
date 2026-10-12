@@ -61,7 +61,7 @@ from core.script_prompts import (
     combo_script_prompt,
     shorts_script_prompt,
     extend_long_script_prompt,
-    clean_foreign_words_prompt,
+    fix_foreign_lines_prompt,
     title_candidates_prompt,
     topic_idea_prompt,
     random_topic_seed,
@@ -140,6 +140,12 @@ MAX_EXTEND_ATTEMPTS = 2
 # 합니다 — 영상이 아예 안 나가는 것보다는 약간의 흠이 있어도 나가는 게 낫다는
 # 이 프로젝트의 기존 원칙과 동일.
 MAX_LANGUAGE_CLEANUP_ATTEMPTS = 2
+
+# 롱폼이 "쓸 만한 응답"인지 보는 최소 씬 수와, 그게 안 될 때 처음부터 다시 생성할 최대
+# 횟수(generate_optimized_script 주석 참고). 길이 목표(MIN_LONG_SCENES)와 달리 이건
+# "확장으로 고칠 수 있는 대본인가"를 가르는 하한이라 훨씬 낮게 잡는다.
+MIN_VALID_LONG_SCENES = 8
+MAX_COMBO_REGEN_ATTEMPTS = 3
 
 # (과거엔 hook/emotion/ending을 Claude로 채점하는 자동 검수(score_script)가 있었지만,
 #  실제로 판단에 쓰이는 값은 hook/ending 2개뿐이고 그마저 재생성이 거의 안 걸렸던 반면
@@ -400,6 +406,13 @@ def _call_openrouter(prompt: str, max_tokens: int = 16000) -> str:
                 # 이 케이스입니다(2026-09-28 실측: nemotron 폴백 호출 중
                 # "Upstream error from Nvidia: Service temporarily overloaded"가 이
                 # 형태로 왔고, 이걸 안 잡으면 그대로 튕겨서 배치 전체가 죽음).
+                # 단, 크레딧 부족("requires more credits ... can only afford")은 기다려도
+                # 안 풀리는데 max_tokens가 작은 호출에서는 402가 상태코드 없이 이 경로로
+                # 들어와서(2026-10-13 실측) 20초+40초를 헛기다린 뒤에야 폴백됐다 — 바로
+                # 다음 모델로 넘어간다.
+                if next_model and "credits" in str(e).lower():
+                    logger.warning("%s 크레딧 부족 — 바로 %s로 넘어갑니다.", model, next_model)
+                    break
                 # 429와 동일하게 같은 모델 재시도 → 그래도 안 되면 다음 모델로.
                 if attempt < MAX_RATE_LIMIT_RETRIES:
                     wait = RATE_LIMIT_BACKOFF_SEC * attempt
@@ -519,9 +532,8 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
         f"아래 소재는 최근 너무 많이 써서 이번엔 절대 쓰지 마라: {BANNED_TOPICS}.",
     ])
     text = _call_claude(prompt)
-    text = _normalize_speaker_tags(text)
     text, _ = _clean_language_if_needed(text, is_shorts=True)
-    return _normalize_speaker_tags(text)
+    return _postprocess_script(text)
 
 
 def extend_long_script(current_long: str, reason: str) -> str:
@@ -536,39 +548,168 @@ def extend_long_script(current_long: str, reason: str) -> str:
     return _call_claude(extend_long_script_prompt(current_long, reason), max_tokens=32000)
 
 
-def clean_foreign_words(current_long: str, violation_lines: list[str], is_shorts: bool = False) -> str:
-    """대사에 외국어가 섞인 줄만 한국어로 고쳐서 다시 받아옵니다(그 외 내용은
-    그대로 유지하도록 프롬프트에서 요구함). extend_long_script와 같은 이유로
-    max_tokens=32000을 씀 — 이것도 기존 대본 전체를 재출력합니다."""
-    logger.info("Claude API 외국어 혼입 수정 요청 (%d줄)", len(violation_lines))
-    return _call_claude(
-        clean_foreign_words_prompt(current_long, violation_lines, is_shorts=is_shorts),
-        max_tokens=32000,
-    )
-
-
 def _clean_language_if_needed(text: str, is_shorts: bool = False) -> tuple[str, int]:
-    """text(쇼츠 단독 대본, 또는 롱폼처럼 이미 분리된 한 편)를 스캔해서 외국어
-    혼입이 있으면 최대 MAX_LANGUAGE_CLEANUP_ATTEMPTS번 고쳐 쓰게 요청합니다.
-    (고친 텍스트, 시도횟수)를 반환합니다 — 다 고쳐지지 않아도 마지막 결과를
-    그대로 돌려줍니다(안전망일 뿐이라 완벽을 보장하지 않음, _extend_to_length
-    참고)."""
-    cleanups = 0
-    violations = _foreign_word_violations(text)
-    while violations and cleanups < MAX_LANGUAGE_CLEANUP_ATTEMPTS:
-        logger.warning(
-            "대사에 외국어 혼입 감지(%d줄) — 수정 %d/%d",
-            len(violations), cleanups + 1, MAX_LANGUAGE_CLEANUP_ATTEMPTS,
-        )
-        text = clean_foreign_words(text, violations, is_shorts=is_shorts)
-        violations = _foreign_word_violations(text)
-        cleanups += 1
-    if violations:
-        logger.warning(
-            "외국어 혼입이 %d번 시도 후에도 %d줄 남아있습니다 — 그대로 진행합니다.",
-            cleanups, len(violations),
-        )
-    return text, cleanups
+    """text(쇼츠 단독 대본, 또는 롱폼처럼 이미 분리된 한 편)의 외국어 혼입을
+    제거합니다. (고친 텍스트, LLM 수정 라운드 수)를 반환합니다. 구현은
+    _purge_foreign_words 참고."""
+    return _purge_foreign_words(text)
+
+
+# ─────────────────────────────────────────────
+# 외국어 혼입 제거 (줄 단위 수정 + 결정적 제거)
+# ─────────────────────────────────────────────
+# 2026-10-13: 예전 방식(대본 전체를 다시 쓰게 해서 오염된 줄을 고치게 함)은 실측에서
+# 2번을 시도해도 15줄이 남았다 — 전체를 다시 쓰는 동안 다른 줄에 새 외국어가 또
+# 생겨서 두더지잡기가 됐다. 그래서 (1) 오염된 줄"만" 번호 붙여 보내 그 줄만
+# 한국어로 고쳐 받고(출력이 짧아 표류도 적음, 코드가 해당 줄만 교체), (2) 그래도
+# 남은 줄은 코드가 외국어 토큰을 직접 지워서 TTS가 이탈리아어를 읽는 일이 아예
+# 없게 보장한다(문장에 구멍이 생길 수는 있어도 외국어 낭독보다는 낫다).
+_RE_FOREIGN_RUN = re.compile(
+    r"[A-Za-zÀ-ɏ぀-ヿ一-鿿Ѐ-ӿ]+"
+)
+
+
+def _line_has_foreign(s: str) -> bool:
+    if _RE_OTHER_SCRIPT.search(s):
+        return True
+    return any(not _ALLOWED_ACRONYM_RE.match(t) for t in _RE_LATIN_TOKEN.findall(s))
+
+
+def _foreign_line_indices(text: str) -> list[int]:
+    """외국어가 섞인 "물리적 줄" 번호 목록. 검사 대상은 [SCENE] 뒤의 대사/이어쓰기
+    줄과 THUMBNAIL_LONG/SHORTS 제목 줄이고, [SCENE: ...] 장면 묘사(영어가 정상)와
+    헤더는 건너뜁니다(장면 묘사가 여러 줄로 줄바꿈된 경우도 ']'까지 건너뜀)."""
+    idx: list[int] = []
+    in_scene = False
+    in_header = False
+    expect_title = False
+    for i, raw in enumerate(text.splitlines()):
+        s = raw.strip()
+        if not s:
+            continue
+        if in_header:
+            if "]" in s:
+                in_header = False
+            continue
+        if s.upper() in ("THUMBNAIL_LONG:", "THUMBNAIL_SHORTS:"):
+            expect_title = True
+            continue
+        if expect_title:
+            expect_title = False
+            if _line_has_foreign(s):
+                idx.append(i)
+            continue
+        if s.startswith("[SCENE"):
+            in_scene = True
+            in_header = "]" not in s
+            continue
+        if in_scene and _line_has_foreign(s):
+            idx.append(i)
+    return idx
+
+
+def _strip_foreign_tokens(line: str) -> str:
+    """외국어 토큰(소문자 섞인 라틴 단어, 억양부호 문자, 일본어/한자/키릴 문자열)을
+    지웁니다. 대문자 약어(USB, CCTV 등)는 남깁니다."""
+    out = _RE_FOREIGN_RUN.sub(
+        lambda m: m.group(0) if _ALLOWED_ACRONYM_RE.match(m.group(0)) else "", line
+    )
+    out = re.sub(r"[ \t]{2,}", " ", out)
+    out = re.sub(r"\s+([,.!?…&])", r"\1", out)
+    return out.strip()
+
+
+def _same_speaker_prefix(old: str, new: str) -> bool:
+    m = re.match(r"^\s*([^\s:：\[]+)\s*[:：]", old)
+    if m:
+        return new.lstrip().startswith(m.group(1))
+    return bool(new.strip()) and not new.lstrip().startswith("[")
+
+
+def _fix_lines_via_llm(lines: list[str]) -> dict[int, str]:
+    """오염된 줄들만 보내 {입력 인덱스: 고친 줄}을 받아옵니다."""
+    logger.info("외국어 혼입 줄 %d개만 골라 수정 요청", len(lines))
+    reply = _call_claude(fix_foreign_lines_prompt([ln.strip() for ln in lines]), max_tokens=8000)
+    fixed: dict[int, str] = {}
+    for ln in reply.splitlines():
+        m = re.match(r"^\s*(\d+)\s*[|]\s*(.+)$", ln)
+        if m:
+            n = int(m.group(1)) - 1
+            if 0 <= n < len(lines):
+                fixed[n] = m.group(2).strip()
+    return fixed
+
+
+def _purge_foreign_words(text: str, max_rounds: int | None = None) -> tuple[str, int]:
+    """외국어가 섞인 줄을 LLM으로 줄 단위 수정(최대 max_rounds번)한 뒤, 그래도 남은
+    줄은 외국어 토큰을 코드로 직접 지웁니다. (결과 텍스트, LLM 수정 라운드 수)."""
+    if max_rounds is None:
+        max_rounds = MAX_LANGUAGE_CLEANUP_ATTEMPTS
+    trailing = text[len(text.rstrip()):]
+    lines = text.splitlines()
+    rounds = 0
+    while rounds < max_rounds:
+        idxs = _foreign_line_indices(chr(10).join(lines))
+        if not idxs:
+            break
+        batch = idxs[:25]
+        logger.warning("외국어 혼입 %d줄 감지 — 줄 단위 수정 %d/%d", len(idxs), rounds + 1, max_rounds)
+        try:
+            fixed = _fix_lines_via_llm([lines[i] for i in batch])
+        except ScriptGenerationError as e:
+            logger.warning("외국어 줄 수정 호출 실패(%s) — 코드로 직접 지우는 단계로 넘어갑니다.", e)
+            break
+        for n, i in enumerate(batch):
+            new = fixed.get(n)
+            if new and _same_speaker_prefix(lines[i], new):
+                lines[i] = new
+        rounds += 1
+
+    leftover = _foreign_line_indices(chr(10).join(lines))
+    if leftover:
+        logger.warning("LLM 수정 후에도 외국어가 남은 %d줄은 코드로 직접 지웁니다.", len(leftover))
+        for i in leftover:
+            lines[i] = _strip_foreign_tokens(lines[i])
+    return chr(10).join(lines) + trailing, rounds
+
+
+_RE_SPEAKER_LINE = re.compile(r"^(나레이터|여자1|여자2|남자1|남자2)\s*:\s*(.*)$")
+
+
+def _ensure_sentence_breaks(text: str) -> str:
+    """대사 줄에서 문장이 끝나는 곳(. ? ! … 뒤 공백)에 & 를 넣어 자막/TTS가 문장
+    단위로 끊기게 합니다. 모델이 & 대신 마침표만 쓰면(2026-10-12 실측: 자리표시자
+    형식으로 바꾼 직후 & 가 사라짐) story_parser의 글자수 기준 줄바꿈이 문장
+    중간을 뚝뚝 자르기 때문. 이미 & 로 끊긴 줄은 그 안에서 한 번 더 확인만 합니다."""
+    out: list[str] = []
+    in_scene = False
+    in_header = False
+    for raw in text.splitlines():
+        s = raw.strip()
+        if in_header:
+            in_header = "]" not in s
+            out.append(raw)
+            continue
+        if s.startswith("[SCENE"):
+            in_scene = True
+            in_header = "]" not in s
+            out.append(raw)
+            continue
+        m = _RE_SPEAKER_LINE.match(s) if in_scene else None
+        if m:
+            pieces = [
+                re.sub(r"(?<=[.?!…])\s+(?=[^\s&])", "&", p.strip())
+                for p in m.group(2).split("&")
+            ]
+            raw = f"{m.group(1)}: " + "&".join(p for p in pieces if p)
+        out.append(raw)
+    return chr(10).join(out) + text[len(text.rstrip()):]
+
+
+def _postprocess_script(text: str) -> str:
+    """생성된 대본의 형식을 코드로 바로잡는 마지막 단계(화자 태그 → 역할 키,
+    문장 단위 & 구분)."""
+    return _ensure_sentence_breaks(_normalize_speaker_tags(text))
 
 
 _RE_THUMBNAIL_LINE = re.compile(
@@ -822,8 +963,28 @@ def generate_optimized_script(
     # 분량을 채웁니다(extend). 쇼츠 부분은 건드리지 않고 롱폼만 확장.
     # (품질 채점(score_script)은 토큰 대비 실효성이 없어 제거 — 대본 품질은
     #  프롬프트와 이 분량 검사로 담보하고, Claude 추가 호출은 하지 않습니다.)
+    # 무료 모델은 가끔 롱폼이 비어 있거나 형식이 깨진 응답을 냅니다(2026-10-13 실측:
+    # 롱폼 씬 0개 → 그 빈 대본을 확장 프롬프트에 넣었더니 "원본이 없어서 못 합니다"라는
+    # 거절 문구가 대본으로 나옴). 확장은 "있는 대본을 늘리는" 작업이라 빈 입력으로는
+    # 못 고치므로, 첫 응답이 쓸 만한지(롱폼 씬 MIN_VALID_LONG_SCENES개 이상) 먼저
+    # 확인하고 아니면 처음부터 다시 생성합니다.
+    combo = ""
+    for attempt in range(1, MAX_COMBO_REGEN_ATTEMPTS + 1):
+        combo = generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta)
+        scenes = _split_long_part(combo).count("[SCENE")
+        if scenes >= MIN_VALID_LONG_SCENES:
+            break
+        logger.warning(
+            "콤보 응답의 롱폼이 비정상입니다(씬 %d개) — 처음부터 재생성 %d/%d",
+            scenes, attempt, MAX_COMBO_REGEN_ATTEMPTS,
+        )
+    else:
+        raise ScriptGenerationError(
+            f"롱폼이 비어 있거나 깨진 응답이 {MAX_COMBO_REGEN_ATTEMPTS}번 연속 나왔습니다."
+        )
+
     text, long_part, length_ok, length_reason, extends, language_cleanups = _extend_to_length(
-        generate_combo_script(custom_topic=topic, forced_title=best_title, cta_settings=cta),
+        combo,
         best_title,
     )
 
@@ -836,8 +997,17 @@ def generate_optimized_script(
         "language_cleanups": language_cleanups,
         "length_ok": length_ok,
     }
-    text = _normalize_speaker_tags(text)
+    text = _postprocess_script(text)
     return text, meta
+
+
+def _first_long_title(text: str) -> str:
+    """THUMBNAIL_LONG: 바로 다음 줄(제목)을 돌려줍니다. 없으면 빈 문자열."""
+    lines = text.splitlines()
+    for i, ln in enumerate(lines[:-1]):
+        if ln.strip().upper() == "THUMBNAIL_LONG:":
+            return lines[i + 1].strip()
+    return ""
 
 
 def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, int, int]:
@@ -852,39 +1022,32 @@ def _extend_to_length(text: str, best_title: str) -> tuple[str, str, bool, str, 
     extends = 0
     while not length_ok and extends < MAX_EXTEND_ATTEMPTS:
         logger.warning("롱폼 분량 미달(%s) — 확장 %d/%d", reason, extends + 1, MAX_EXTEND_ATTEMPTS)
-        long_part = _force_thumbnail_titles(extend_long_script(long_part, reason), best_title)
+        extended = _force_thumbnail_titles(extend_long_script(long_part, reason), best_title)
+        # 확장 응답이 거절 문구·잘린 응답이라 오히려 씬이 줄었으면 버리고 직전 대본을 유지한다
+        # (2026-10-13: 빈 입력에 "원본이 없어서 못 합니다"가 대본으로 저장될 뻔했음).
+        if extended.count("[SCENE") < long_part.count("[SCENE") * 0.8:
+            logger.warning(
+                "확장 응답이 비정상입니다(씬 %d → %d개) — 버리고 직전 대본을 유지합니다.",
+                long_part.count("[SCENE"), extended.count("[SCENE"),
+            )
+            extends += 1
+            continue
+        long_part = extended
         length_ok, reason = _long_form_length_ok(long_part)
         extends += 1
 
-    # 외국어 정리는 "있으면 좋은" 보정일 뿐이라, 이 호출이 실패해도(모델 오류,
-    # 드물게 또 토큰 한도 등) 이미 분량 검사를 통과한 멀쩡한 대본을 통째로
-    # 버리면 안 됩니다 — 실패하면 정리를 포기하고 직전 결과를 그대로 씁니다
-    # (2026-10-01: clean_foreign_words도 extend_long_script와 똑같이 기존
-    # 대본 전체를 재출력해야 해서 한때 16000 토큰 한도에 걸릴 수 있었고, 이
-    # try/except가 없으면 그 실패가 그대로 위로 튕겨서 "콤보 전체 실패"로
-    # 처리돼 길이 통과한 롱폼까지 같이 버려지고 있었음).
-    cleanups = 0
-    violations = _foreign_word_violations(long_part)
-    while violations and cleanups < MAX_LANGUAGE_CLEANUP_ATTEMPTS:
-        logger.warning(
-            "롱폼 대사에 외국어 혼입 감지(%d줄) — 수정 %d/%d",
-            len(violations), cleanups + 1, MAX_LANGUAGE_CLEANUP_ATTEMPTS,
-        )
-        try:
-            cleaned = _force_thumbnail_titles(clean_foreign_words(long_part, violations), best_title)
-        except ScriptGenerationError as e:
-            logger.warning("외국어 수정 호출 실패(%s) — 정리를 포기하고 직전 결과를 그대로 씁니다.", e)
-            break
-        long_part = cleaned
-        violations = _foreign_word_violations(long_part)
-        cleanups += 1
-    if violations:
-        logger.warning(
-            "외국어 혼입이 %d번 시도 후에도 %d줄 남아있습니다 — 그대로 진행합니다.",
-            cleanups, len(violations),
-        )
+    # 외국어 혼입 제거(줄 단위 LLM 수정 → 남으면 코드로 직접 제거). 롱폼과 쇼츠
+    # 꼬리를 합친 전체 텍스트에 한 번에 적용한다 — 제목(THUMBNAIL_*)과 쇼츠 대사에도
+    # 같은 오염이 생기기 때문(2026-10-13, "그날 밤 들린 knock는…" 제목 사례).
+    # LLM 호출이 실패해도 이미 분량을 통과한 대본을 버리지 않는다(_purge_foreign_words가
+    # 실패를 삼키고 코드 제거 단계로 넘어감).
+    combined, cleanups = _purge_foreign_words(_stitch_combo(long_part, shorts_tail))
+    long_part, shorts_tail = _split_combo(combined)
+    final_title = _first_long_title(long_part) or best_title
+    combined = _force_thumbnail_titles(combined, final_title)
+    long_part, _ = _split_combo(combined)
 
-    return _stitch_combo(long_part, shorts_tail), long_part, length_ok, reason, extends, cleanups
+    return combined, long_part, length_ok, reason, extends, cleanups
 
 
 def generate_and_save(
