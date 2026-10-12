@@ -64,6 +64,7 @@ from core.script_prompts import (
     clean_foreign_words_prompt,
     title_candidates_prompt,
     topic_idea_prompt,
+    random_topic_seed,
 )
 from utils.logger import get_logger
 
@@ -164,6 +165,65 @@ ProgressCallback = Callable[[int, int], None]
 
 class ScriptGenerationError(Exception):
     """API 키 누락, 네트워크 오류, 거부 응답 등 생성 실패 시 던집니다."""
+
+
+_ROLE_KEYS = ("나레이터", "남자1", "여자1", "남자2", "여자2")
+
+
+def _normalize_speaker_tags(text: str) -> str:
+    """대본의 화자 태그를 CAST의 역할 키(나레이터/남자1/여자1/남자2/여자2)로 교정합니다.
+
+    2026-10-12: 프롬프트로 "역할 키만 써라"라고 못박았는데도 무료 모델이 가끔
+    CAST에 등록된 *이름*("수진:")이나 "남자1: 지훈: 대사"처럼 이름을 한 번 더 붙여
+    써서, story_parser가 그 줄을 화자 없는 이어쓰기 줄로 취급하거나(CAST에 없는
+    키라) 이름까지 TTS가 그대로 읽는 문제가 실측으로 확인됨(9~10월 업로드분).
+    콤보(롱폼 + 쇼츠)면 각 편마다 CAST가 따로 있으니 편별로 처리합니다."""
+    parts = text.split(SPLIT_DELIMITER)
+    fixed_parts = [_normalize_one_script(p) for p in parts]
+    return SPLIT_DELIMITER.join(fixed_parts)
+
+
+def _normalize_one_script(script: str) -> str:
+    lines = script.splitlines()
+    name_to_key: dict[str, str] = {}
+    in_cast = False
+    for ln in lines:
+        s = ln.strip()
+        if s.upper() == "CAST:":
+            in_cast = True
+            continue
+        if in_cast:
+            if not s or s.endswith(":") or s.startswith("[SCENE"):
+                break
+            m = re.match(r"^([^\s:：]+)\s*[:：]\s*(.+)$", s)
+            if m and m.group(1) in _ROLE_KEYS:
+                name = re.split(r"[\s(（]", m.group(2).strip())[0]
+                if name and name != m.group(1):
+                    name_to_key[name] = m.group(1)
+    if not name_to_key:
+        return script
+
+    out: list[str] = []
+    in_scene = False
+    for ln in lines:
+        s = ln.strip()
+        if s.startswith("[SCENE"):
+            in_scene = True
+        if in_scene:
+            m = re.match(r"^([^\s:：\[]+)\s*[:：]\s*(.*)$", s)
+            if m:
+                speaker, rest = m.group(1), m.group(2)
+                if speaker in name_to_key:
+                    # 이름을 화자로 쓴 줄 → 역할 키로 교체
+                    ln = f"{name_to_key[speaker]}: {rest}"
+                elif speaker in _ROLE_KEYS:
+                    # "남자1: 지훈: 대사" 처럼 이름을 한 번 더 붙인 경우 → 중복 이름 제거
+                    m2 = re.match(r"^([^\s:：]+)\s*[:：]\s*(.*)$", rest)
+                    if m2 and m2.group(1) in name_to_key:
+                        ln = f"{speaker}: {m2.group(2)}"
+        out.append(ln)
+    # splitlines/join이 문서 끝의 빈 줄을 줄이므로 원래 끝 공백을 그대로 복원
+    return chr(10).join(out) + script[len(script.rstrip()):]
 
 
 def _stream_once(client, model: str, prompt: str, max_tokens: int = 16000) -> tuple[str, str | None]:
@@ -382,8 +442,9 @@ def _parse_json_response(text: str):
 
 def generate_topic_idea(performance_summary: str = "", recent_titles: list[str] | None = None) -> tuple[str, str]:
     """주제 하나(topic)와 카테고리를 골라 (topic, category)로 반환합니다."""
-    logger.info("Claude API 주제 선정 요청")
-    text = _call_claude(topic_idea_prompt(performance_summary, recent_titles))
+    seed_hint = random_topic_seed()
+    logger.info("Claude API 주제 선정 요청 (강제 조건: %s)", seed_hint)
+    text = _call_claude(topic_idea_prompt(performance_summary, recent_titles, seed_hint=seed_hint))
     category = ""
     topic = ""
     for line in text.splitlines():
@@ -446,8 +507,9 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
     실측으로 확인한 뒤 추가함)."""
     logger.info("Claude API 쇼츠 단독 대본 생성 요청 시작")
     text = _call_claude(shorts_script_prompt(cta_settings))
+    text = _normalize_speaker_tags(text)
     text, _ = _clean_language_if_needed(text, is_shorts=True)
-    return text
+    return _normalize_speaker_tags(text)
 
 
 def extend_long_script(current_long: str, reason: str) -> str:
@@ -762,6 +824,7 @@ def generate_optimized_script(
         "language_cleanups": language_cleanups,
         "length_ok": length_ok,
     }
+    text = _normalize_speaker_tags(text)
     return text, meta
 
 
