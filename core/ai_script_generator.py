@@ -65,6 +65,7 @@ from core.script_prompts import (
     title_candidates_prompt,
     topic_idea_prompt,
     random_topic_seed,
+    BANNED_TOPICS,
 )
 from utils.logger import get_logger
 
@@ -506,7 +507,18 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
     있어서 standalone shorts에서 "lotte카드" 같은 혼입이 그냥 나가는 걸
     실측으로 확인한 뒤 추가함)."""
     logger.info("Claude API 쇼츠 단독 대본 생성 요청 시작")
-    text = _call_claude(shorts_script_prompt(cta_settings))
+    # 쇼츠 단독 호출은 주제 선정 단계(generate_topic_idea)를 안 거치므로, 여기서도
+    # 같은 방식으로 무작위 소재 조건을 프롬프트 끝에 붙여 소재가 한쪽으로
+    # 수렴하지 않게 한다(2026-10-12, random_topic_seed 주석 참고).
+    seed_hint = random_topic_seed()
+    prompt = chr(10).join([
+        shorts_script_prompt(cta_settings),
+        "",
+        "[이번 소재 필수 조건 — 반드시 따라라]",
+        f"{seed_hint}.",
+        f"아래 소재는 최근 너무 많이 써서 이번엔 절대 쓰지 마라: {BANNED_TOPICS}.",
+    ])
+    text = _call_claude(prompt)
     text = _normalize_speaker_tags(text)
     text, _ = _clean_language_if_needed(text, is_shorts=True)
     return _normalize_speaker_tags(text)
