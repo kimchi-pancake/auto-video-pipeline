@@ -1,0 +1,45 @@
+RUN_ID:
+claude_20261014_160828_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+층간소음
+
+CAST:
+나레이터: 나레이터
+여자1: 민지
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+돌잔치 계약서에 숨겨진 층간소음 조항
+
+THUMBNAIL_SHORTS:
+돌잔치 계약서에 숨겨진 층간소음 조항
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+나레이터: 돌잔치 당일, 계약서에 싸인한 조항을 뒤늦게 봤습니다
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+여자1: 이게 뭐예요?&10층 이상이면 층간소음 보증금 50만 원이라고요?
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+나레이터: 아이 첫 돌잔치라 정신없이 계약서만 봤는데, 작은 글씨에 숨겨진 조항이 있었습니다
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+여자1: 계약서엔 10층 이상이면 추가 보증금 내야 한다는데…&우리는 11층이에요
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background]
+나레이터: 근데 진짜 반전은 지금부터입니다
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+여자1: 관리사무소에 갔더니, 계약서에 서명한 건 제가 아니라 남편이었더라고요
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+나레이터: 남편이 몰래 서명하고, 제가 떠안은 보증금을 돌려받기 위해 증거를 모았습니다
+
+[SCENE:a Korean female in her 30s with long black hair tied in a ponytail, wearing a beige cardigan and holding a clipboard, standing in a bright event hall decorated for a doljanchi, 1080x1920]
+여자1: 여러분, 만약 여러분이 저였다면 남편의 몰래 서명을 어떻게 했을까요?

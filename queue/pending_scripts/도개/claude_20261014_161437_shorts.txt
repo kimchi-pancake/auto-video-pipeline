@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261014_161437_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+갑질사건
+
+CAST:
+나레이터: 나레이터
+여자1: 민지
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+반려견 산책 중 발견한 비밀 일기장, 진실이 터졌습니다
+
+THUMBNAIL_SHORTS:
+반려견 산책 중 발견한 비밀 일기장, 진실이 터졌습니다
+
+[SCENE:a Korean woman in her 30s with long black hair tied in a ponytail, wearing a beige trench coat and white sneakers, standing on a forest trail holding a leash attached to a small dog, 1080x1920]
+나레이터: 반려견 산책 중에 떨어진 노란 공을 주우려다 땅에 떨어진 일기장을 봤습니다&표지는 낡았고, 누군가의 이름 대신 '비밀'이라고 적혀 있었습니다
+
+[SCENE:a Korean woman in her 30s with long black hair tied in a ponytail, wearing a beige trench coat and white sneakers, sitting on a park bench reading a diary, 1080x1920]
+여자1: 처음엔 호기심에 읽기 시작했는데, 글마다 제 이름이 나왔습니다&팀 프로젝트에서 제가 한 실수를 팀장이 모두 뒤집어썼다고 쓰여 있었죠
+
+[SCENE:a Korean woman in her 30s with long black hair tied in a ponytail, wearing a beige trench coat and white sneakers, sitting on a park bench reading a diary, 1080x1920]
+여자1: 더 읽으니, 팀장이 제 아이디어를 훔쳐 승진용 보고서에 썼고, 저는 조용히 참았다고 적혀 있었습니다&근데 진짜 반전은 지금부터입니다
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요
+
+[SCENE:a Korean woman in her 30s with long black hair tied in a ponytail, wearing a beige trench coat and white sneakers, standing outside an office building confronting a man in a suit, 1080x1920]
+여자1: 다음 날, 팀장에게 일기장을 보여주며 말했습니다&"이거 다 사실이에요.&이제 더 이상 조용히 참지 않을 거예요" 라고 했는데, 그는 고개를 숙이며 사과했습니다
+
+[SCENE:a Korean woman in her 30s with long black hair tied in a ponytail, wearing a beige trench coat and white sneakers, walking away from the office building with her dog, 1080x1920]
+나레이터: 그날 이후, 팀장은 제 의견을 먼저 묻고 공로를 정확히 나눴습니다&여러분이 민지였다면, 비밀 일기장을 발견했을 때 어떻게 하셨나요?&'일기장을 읽고 팀장에게 바로 맞서겠다'고 생각하셨다면 '있다'만 남겨주세요.

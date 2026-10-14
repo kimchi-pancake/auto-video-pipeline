@@ -1,0 +1,48 @@
+RUN_ID:
+claude_20261014_160718_shorts
+
+:
+10801920
+
+CATEGORY:
+가족관계
+
+CAST:
+나레이터: 나레이터
+여자1: 지연
+남자1: 민수
+여자2: 순자
+
+BGM:
+.3
+
+THUMBNAIL_LONG:
+편지 한 장에서 발견한 아이 이름, 발신자는 친정 엄마였습니다
+
+THUMBNAIL_SHORTS:
+편지 한 장에서 발견한 아이 이름, 발신자는 친정 엄마였습니다
+
+[SCENE:a Korean woman in her late 30s with shoulder-length black hair and glasses, wearing a beige cardigan, sitting at a cluttered desk in a shared office, holding an old letter, 1080x1920]
+나레이터: 공유 오피스에서 낡은 편지 한 장을 찾은 지연은 손이 떨려 봉투를 열었고, 안엔 십 년 전 버리고 온 아이의 그림과 메시지가 있었다.&받는 칸엔 어릴 적 이름이, 발신자 주소는 보호시설이었다.&그녀는 마치 과거의 자신이 눈앞에 나타난 듯 숨을 쉬지 못했다.
+여자1: "...이건 내 딸의 그림이야.&여기서 어떻게 나와?"
+
+[SCENE:a Korean woman in her late 30s with shoulder-length black hair and glasses, wearing a beige cardigan, talking on mobile phone in shared office hallway, 1080x1920]
+나레이터: 지연은 즉시 친정엄마에게 전화를 걸어 소리쳤다.&"왜 그때 나를 도와주지 않으셨어요?&왜 연락도 안 하셨어요?"&엄마는 침묵 끝에 흐느끼며 말하기 시작했다.&"지연아, 그때 내가 문 앞으로 갔었어.&초인종을 눐러도 답이 없었지..."
+여자1: "엄마!&왜 그때 전화도 안 받고 도와주지도 않으셨어요!"
+
+[SCENE:a Korean woman in her 60s with short permed gray hair, wearing a floral blouse, standing in a modest kitchen looking at old photo album, 1080x1920]
+나레이터: 엄마는 계속했다.&"다음 날, 나는 보호시설에 가서 아이 이름을 물었어.&시설 직원이 말하길, 이미 외국인 부부가 입양 절차를 밟고 갔다고 하더라.&나는 아무것도 할 수 없었어."&지연은 오해가 녹아내리는 것을 느끼며 눈물을 흘렸다.&모든 죄책감의 뿌리가 여기서 시작됐다는 걸 알았다.
+여자2: "...외국인 부부가 입양을 갔대요.&나는 아무것도 막을 수 없었어."
+
+[SCENE:a Korean woman in her late 30s with shoulder-length black hair and glasses, wearing a beige cardigan, covering face with hands in shared office, 1080x1920]
+나레이터: 그런데 그게 끝이 아니었습니다.&지연은 편지봉투 뒤쪽의 우편 소인을 다시 확인했다.&보낸 곳은 보호시설이었고, 보낸 날짜는 엄마가 시설에 간 다음 날이었다.&엄마는 아이를 찾는 편지를 여기서 써서 보낸 거였다.&오해는 전부 그녀의 착각에서 비롯된 것이었다.
+여자1: "...이건 보호시설에서 보낸 거야.&엄마는 여기서 편지를 써서 보냈단 말이야..."
+
+[SCENE:a Korean woman in her late 30s with shoulder-length black hair and glasses, wearing a beige cardigan, video calling mother on laptop in shared office with tearful smile, 1080x1920]
+나레이터: 지연은 엄마와 화상 통화를 했고, 오해를 풀며 서로의 죄책감을 내려놓았다.&두 사람은 이제 앞으로 어떻게 관계를 이어갈지 이야기하기 시작했다.&과거의 침묵은 깨지고, 새로운 대화의 문이 열렸다.
+여자1: "엄마, 그때 오해해서 정말 미안해요.&이제라도 같이 알아가요."
+여자2: "지연아...&나도 미웠지만, 그게 다 내 잘못이라 생각해.&같이 시작하자."
+
+[SCENE:a Korean woman in her late 30s with shoulder-length black hair and glasses, wearing a beige cardigan, sitting in shared office smiling at desk with photo of child, 1080x1920]
+나레이터: 이제 지연은 과거에 얽매이지 않고, 아이를 찾을 수 있는 길을 찾으며 엄마와의 관계도 천천히 회복해 나가고 있다.&그녀는 오늘의 경험을 통해 생각한다: 진실이 밝혀졌을 때, 우리는 과거의 잘못을 어떻게 풀어가야 할까?
+여자1: "...만약 제가 지연이었다면, 그 편지를 보자마자 엄마를 먼저 찾아갔을 거예요.&오해하기 전에 진실부터 확인했을 테니까요.&여러분이 지연의 자리에 있었다면, 그때 뭐라고 했을까요?"
