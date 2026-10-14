@@ -4946,5 +4946,65 @@
     "uploaded_at": "2026-10-12T17:09:27+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "_1nuqGKmnU8",
+    "channel": "웃짬",
+    "category": "층간소음",
+    "title": "돌잔치 계약서에 숨겨진 층간소음 조항",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-14T16:31:50+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "496-oL3qAFs",
+    "channel": "도개",
+    "category": "갑질사건",
+    "title": "반려견 산책 중 발견한 비밀 일기장, 진실이 터졌습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-14T16:32:06+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "q9r6-b3FBPw",
+    "channel": "도개",
+    "category": "우정배신",
+    "title": "발표 전날 밤, 친구의 배신이 녹화되었다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-14T16:48:14+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KlIHqKbRACg",
+    "channel": "웃짬",
+    "category": "가족관계",
+    "title": "편지 한 장에서 발견한 아이 이름, 발신자는 친정 엄마였습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-14T16:48:48+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ggQOSsbeEvc",
+    "channel": "웃짬",
+    "category": "가족관계",
+    "title": "편지 한 장에서 발견한 아이 이름, 발신자는 친정 엄마였습니다",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-14T17:25:21+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "B3YFCWgqcE0",
+    "channel": "도개",
+    "category": "우정배신",
+    "title": "발표 전날 밤, 친구의 배신이 녹화되었다",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-14T17:28:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
