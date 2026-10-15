@@ -1,0 +1,46 @@
+RUN_ID:
+claude_20261015_163136_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+고부갈등
+
+CAST:
+나레이터: 나레이터
+여자1: 지은 (주인공 학부모)
+여자2: 현주 (시어머니)
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+학부모 단톡방서 퇴직금 관련 메시지 보냈는데
+
+THUMBNAIL_SHORTS:
+학부모 단톡방서 퇴직금 관련 메시지 보냈는데
+
+[SCENE:a Korean woman in 40s with shoulder-length straight black hair, wearing a beige cardigan and holding a smartphone, standing in a school hallway during pickup time, 1080x1920]
+나레이터: 학부모 단톡방에 퇴직금 정산 관련 공지 메시지를 보냈는데, 갑자기 시어머니께서 화를 내시며 전화를 걸었습니다.
+
+[SCENE:a Korean woman in 60s with short permed gray hair, wearing a floral blouse and holding a landline phone, standing in a kitchen, 1080x1920]
+여자2: 이거 뭐예요?&아들 월급도 아닌데 왜 학부모 단톡방에 퇴직금 얘기를 꺼내서 창피를 주려고 해요?
+
+[SCENE:a Korean woman in 40s with shoulder-length straight black hair, wearing a beige cardigan and holding a smartphone, standing in a school hallway during pickup time, 1080x1920]
+여자1: 어머님, 제가 퇴직금을 받은 게 아니라, 남편이 회사에서 권고사직을 당해서 정산을 받는 건데요…
+
+[SCENE:a Korean woman in 40s with shoulder-length straight black hair, wearing a beige cardigan and holding a smartphone, standing in a school hallway during pickup time, 1080x1920]
+나레이터: 그런데 이게 끝이 아니었습니다.
+
+[SCENE:[SCENE: red heart icon animation pulsing and growing, like button, white background], 1080x1920]
+나레이터: 진실을 확인하려면 화면을 두 번 눌러주세요.
+
+[SCENE:a Korean woman in 40s with shoulder-length straight black hair, wearing a beige cardigan and holding a smartphone, standing in a school hallway during pickup time, 1080x1920]
+여자1: 사실 남편은 3개월 전부터 출근을 못하고 있었어요.&회사에서 권고사직을 권유했고, 저는 그 과정을 혼자 감당하고 있었죠.
+
+[SCENE:a Korean woman in 60s with short permed gray hair, wearing a floral blouse and standing in a living room with a worried expression, 1080x1920]
+여자2: …그랬다면 왜 바로 말씀하지 않으셨어요?&내가 아들을 더 잘 챙겨줄 수 있었을 텐데…
+
+[SCENE:a Korean woman in 40s with shoulder-length straight black hair, wearing a beige cardigan and holding a smartphone, standing in a school hallway during pickup time, 1080x1920]
+여자1: 여러분은요?&시어머니께서 오해로 화를 내셨는데, 제가 먼저 설명했더라면 이런 오해는 없었을까요?&"있다"고 생각해보셨다면 댓글로 남겨주세요.

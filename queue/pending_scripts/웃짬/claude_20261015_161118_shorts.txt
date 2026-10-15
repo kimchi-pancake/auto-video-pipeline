@@ -1,0 +1,48 @@
+RUN_ID:
+claude_20261015_161118_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+사기폭로
+
+CAST:
+나레이터: 나레이터
+여자1: 지은
+
+BGM:
+simple.mp3
+
+THUMBNAIL_LONG:
+이웃이 SNS에 올린 한 줄이 전부였습니다
+
+THUMBNAIL_SHORTS:
+이웃이 SNS에 올린 한 줄이 전부였습니다
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing in front of an apartment building holding a phone, 1080x1920]
+나레이터: 재개동네 새 아파트 입주 첫날, 옆집 여자가 갑자기 경비실을 불러 세웠습니다
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing at the security office counter, 1080x1920]
+여자1: 이 집 주인이 불법 전대라면서 계약서 보여주라고 하더라구요&제가 처음 보는 사람인데 왜 그러죠
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing at the security office counter, 1080x1920]
+나레이터: 계약서를 내미니, 그 여자는 갑자기 미소를 지으며 말했습니다
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing at the security office counter, 1080x1920]
+여자1: 아 죄송해요 진짜 주인님 인줄 몰랐어요&제가 SNS에 글 올린 거 보셨죠?&전대 의심 간다니까요
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing at the security office counter, 1080x1920]
+나레이터: 순간 저는 그 여자의 인스타를 봤고, 거기에는 충격적인 글 하나가 있었습니다
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing at the security office counter, 1080x1920]
+여자1: 그 글엔 '이번 주말 집주인 아닌 사람 물건 다 내놓으라'고 써 있었어요&그게 제 이름이었어요
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing at the security office counter, 1080x1920]
+나레이터: 저는 바로 그 게시물을 캡처해서 관리사무소에 제출했고, 그 여자는 다음 날 강제 퇴거 조치를 받았습니다
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing in front of the apartment building, 1080x1920]
+여자1: 제가 괜한 오해 샀다 생각했는데&알고 보니 그 여자가 전세 사기 전과가 있었어요
+
+[SCENE:a Korean woman in her 30s with long black hair wearing a white blouse, standing in front of the apartment building, 1080x1920]
+나레이터: 여러분은요?&내 물건을 내놓으라 한 줄 글로 오해받은 적 있나요?&'있다'만 남겨주세요.
