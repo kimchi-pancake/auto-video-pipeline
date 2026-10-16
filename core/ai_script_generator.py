@@ -706,10 +706,24 @@ def _ensure_sentence_breaks(text: str) -> str:
     return chr(10).join(out) + text[len(text.rstrip()):]
 
 
+def _clean_scene_headers(text: str) -> str:
+    """[SCENE: ...] 머리글에 템플릿 괄호가 남아 나오는 것을 지운다.
+    2026-10-16 실측: 프롬프트의 "(장면 묘사)" 자리표시자 괄호를 모델이 그대로 복사해
+    "[SCENE:(a Korean ...), (she sits ...), 1920x1080]" 처럼 나왔다. 이미지 검색/생성
+    프롬프트에 괄호가 섞이는 것을 막는다."""
+    out: list[str] = []
+    for raw in text.splitlines():
+        if raw.strip().startswith("[SCENE:") and raw.strip().endswith("]"):
+            raw = raw.replace("(", "").replace(")", "")
+            raw = re.sub(r"\s+,", ",", raw)
+        out.append(raw)
+    return chr(10).join(out) + text[len(text.rstrip()):]
+
+
 def _postprocess_script(text: str) -> str:
     """생성된 대본의 형식을 코드로 바로잡는 마지막 단계(화자 태그 → 역할 키,
-    문장 단위 & 구분)."""
-    return _ensure_sentence_breaks(_normalize_speaker_tags(text))
+    문장 단위 & 구분, 장면 머리글 괄호 제거)."""
+    return _clean_scene_headers(_ensure_sentence_breaks(_normalize_speaker_tags(text)))
 
 
 _RE_THUMBNAIL_LINE = re.compile(
