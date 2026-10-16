@@ -1,0 +1,36 @@
+name: Probe Worker Image Generation
+
+# 쇼츠 씬 이미지가 0장 나오는 원인을 Worker 응답으로 직접 확인하는 수동 진단용 워크플로우.
+# 실제 run_id를 건드리지 않게 probe_ 접두사 run_id로 씬 1개만 보내고, Worker가 실제로
+# 파일을 커밋했는지(GitHub Contents API 조회)까지 확인한다. 수동 실행 전용.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Post one scene and verify the commit lands
+        env:
+          DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
+          IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RUN_ID="probe_$(date +%s)"
+          echo "run_id=$RUN_ID"
+          curl -sS --max-time 30 -w "\nHTTP %{http_code}\n" -X POST "${DISCORD_WORKER_URL%/}/generate-images-x9k3m2" \
+            -H "X-Secret: $IMAGE_GEN_SECRET" -H "Content-Type: application/json" \
+            -d "{\"run_id\":\"$RUN_ID\",\"scenes\":[{\"index\":0,\"prompt\":\"a Korean woman in her late 20s sitting at a desk in a small office, soft daylight\"}]}"
+          P="assets/pending_images/$RUN_ID/scene_0000.jpg"
+          for i in $(seq 1 30); do
+            sleep 10
+            if gh api "repos/${GITHUB_REPOSITORY}/contents/$P" >/dev/null 2>&1; then
+              echo "COMMITTED after $((i*10))s: $P"; exit 0
+            fi
+          done
+          echo "NOT COMMITTED after 300s — Worker did not land the image"
+          exit 1
