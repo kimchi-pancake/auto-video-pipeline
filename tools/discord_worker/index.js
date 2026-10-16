@@ -97,7 +97,7 @@
  * 간격) 추가, 위 OCI_* 환경변수 5개 등록(PEM/SSH 키는 Secret으로), 재배포.
  */
 
-const WORKER_BUILD = "2026-10-13-commit-retry"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
+const WORKER_BUILD = "2026-10-16-workers-ai-fallback"; // 배포 확인용 버전 마커 — 대시보드에 이 줄이 안 보이면 옛날 파일을 붙여넣은 것
 const BRANCH = "master";
 const QUEUE_PATH = "config/topic_queue.json";
 const REGISTRY_PATH = "config/video_registry.json";
@@ -848,6 +848,25 @@ async function _chainRemainingScenes(env, runId, rest, selfOrigin, depth) {
   }
 }
 
+// 2026-10-16: Cloudflare Workers AI 폴백. env.AI(Workers AI 바인딩)가 있을 때만 동작.
+// 반환값은 base64 문자열(ghPutBinaryFileBase64에 그대로 넘김) 또는 null.
+// 응답 형태는 모델 문서 기준 { image: "<base64>" } — 형태가 다르면 null을 돌려 안전하게 포기.
+async function _fetchWorkersAiImage(env, prompt, seed) {
+  if (!env.AI) return null;
+  try {
+    const out = await env.AI.run("@cf/black-forest-labs/flux-1-schnell", {
+      prompt,
+      steps: 4,
+      seed,
+    });
+    const b64 = out && (out.image || (typeof out === "string" ? out : null));
+    return typeof b64 === "string" && b64.length > 1000 ? b64 : null;
+  } catch (e) {
+    console.log(`[image-gen] Workers AI 에러: ${e.message}`);
+    return null;
+  }
+}
+
 async function _generateOneScene(env, runId, scene) {
   try {
     const faceBoost = _PERSON_KEYWORDS.test(scene.prompt) ? _FACE_QUALITY_BOOST : "";
@@ -859,7 +878,19 @@ async function _generateOneScene(env, runId, scene) {
     const seed = typeof scene.seed === "number" ? scene.seed : Math.floor(Math.random() * 1e9);
     const resp = await _fetchNvidiaImage(env, prompt, seed);
     if (!resp.ok) {
-      console.log(`[image-gen] scene ${scene.index} 최종 실패 (${resp.status})`);
+      // 2026-10-16: NVIDIA FLUX가 500으로 몇 시간째 죽어 있어서(프로브 + 로컬 재현),
+      // 이미지가 전부 Pixabay로 떨어졌다. NVIDIA가 실패하면 Cloudflare Workers AI의
+      // FLUX.1 schnell로 한 번 더 시도한다(같은 계정 안이라 무료 할당량 안에서 쓰임).
+      // env.AI 바인딩이 없으면(대시보드에서 아직 안 붙였으면) 그냥 예전처럼 포기한다.
+      console.log(`[image-gen] scene ${scene.index} NVIDIA 실패 (${resp.status}) — Workers AI로 재시도`);
+      const b64 = await _fetchWorkersAiImage(env, prompt, seed);
+      if (!b64) {
+        console.log(`[image-gen] scene ${scene.index} 최종 실패 (NVIDIA ${resp.status}, Workers AI 없음/실패)`);
+        return;
+      }
+      const path = `assets/pending_images/${runId}/scene_${String(scene.index).padStart(4, "0")}.jpg`;
+      await ghPutBinaryFileBase64(env, path, b64, `AI image scene ${scene.index} (${runId})`);
+      console.log(`[image-gen] scene ${scene.index} 완료 (Workers AI)`);
       return;
     }
     const body = await resp.json();
