@@ -106,7 +106,14 @@ ANTHROPIC_MODEL = "claude-sonnet-5"
 # mistral-large-2 전부 404 "not found for account") 너무 느려서(deepseek-v4.1
 # -flash — 쇼츠 344초, 롱폼 콤보는 19분 스트리밍해도 토큰 0개, 완전 탈락) 못 씀.
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
-NVIDIA_MODELS = ["nvidia/nemotron-3-super-120b-a12b", "nvidia/nemotron-3-ultra-550b-a55b"]
+# 2026-10-16 재선정: 무료 후보 벤치(같은 롱폼 프롬프트, 실측)에서 openai/gpt-oss-20b가
+# 씬 28개·외국어 0줄·형식 정상으로 가장 나았다(235초). nemotron-3.5-super-vl은 빠르지만
+# (17초) 씬 21개·대사 1860자로 짧고 외국어 1줄. nemotron-3-super/ultra는 추론을 끄면
+# 본문이 나오지만 외국어가 잦았다. 그래서 gpt-oss를 1순위, super-vl(추론 끔)을 백업으로 둔다.
+NVIDIA_MODELS = [
+    "openai/gpt-oss-20b",
+    "nvidia/nemotron-3.5-super-vl-120b-a12b",
+]
 
 # 429(요청 한도)는 대개 몇십 초 뒤면 풀리는 일시적 상태라, 모델을 바로 갈아타기
 # 전에 같은 모델로 몇 번 더 두드려 봅니다. 대기는 20초 → 40초로 늘려 잡습니다.
@@ -123,6 +130,7 @@ RATE_LIMIT_BACKOFF_SEC = 20
 MODEL_EXTRA_BODY: dict[str, dict] = {
     "nvidia/nemotron-3-super-120b-a12b": {"reasoning": {"enabled": False}},
     "nvidia/nemotron-3-ultra-550b-a55b": {"reasoning": {"enabled": False}},
+    "nvidia/nemotron-3.5-super-vl-120b-a12b": {"reasoning": {"enabled": False}},
 }
 
 # 롱폼 분량이 목표에 못 미칠 때 "처음부터 다시 굴리기(full regen)" 대신 "지금
