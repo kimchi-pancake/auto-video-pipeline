@@ -1,0 +1,40 @@
+RUN_ID:
+claude_20261017_160815_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+연애감정
+
+CAST:
+나레이터: 나레이터
+남자1: 지훈
+여자1: 지연
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+렌터카 사고, 소문 폭발!
+
+THUMBNAIL_SHORTS:
+렌터카 사고, 소문 폭발!
+
+[SCENE:a Korean male in his early 30s with short black hair, wearing a black suit, driving a rental car on a busy highway at dusk, suddenly colliding, 1080x1920]
+남자1: 지훈이 렌터카를 타고 가던 중, 차가 급작스레 충돌했다.
+
+[SCENE:a Korean female in her late 20s with long dark hair, wearing a denim jacket, seated beside him in the rental car, hugging his arm, 1080x1920]
+여자1: 지훈은 데이트 상대인 지연과 함께 차를 탔다.
+
+[SCENE:a Korean male in his early 30s with short black hair, wearing a black suit, standing by the wrecked car, talking to a passerby on a city street, 1080x1920]
+남자1: 사고 후, 사람들은 지연이 차를 심하게 잘못 몰아 지훈을 부상시켰다고 소문을 퍼뜨렸습니다&근데 진짜 반전은 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+
+[SCENE:a Korean male in his early 30s with short black hair, wearing a black suit, sitting at a desk, showing CCTV footage on a laptop, 1080x1920]
+남자1: 지훈은 사고 현장의 CCTV를 찾아 트럭 과실을 증명했고, 소문이 거짓임을 밝혀냈습니다.
+
+[SCENE:a quiet city street at dusk, 1080x1920]
+나레이터: 오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 응원해 주세요&여러분, 사고 직후 가짜 소문이 퍼질 때 어떻게 행동하시나요?

@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261017_161531_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+층간소음
+
+CAST:
+나레이터: 나레이터
+여자1: 지수
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+돌잔치 소문 폭발
+
+THUMBNAIL_SHORTS:
+돌잔치 소문 폭발
+
+[SCENE:Korean female in 30s with short hair, wearing a bright dress, standing in living room, 1080x1920]
+나레이터: 돌잔치가 끝나려던 순간, 옆집 이웃이 무서운 소문을 퍼뜨렸습니다.
+
+[SCENE:Korean female in 30s with short hair, wearing a bright dress, holding a cake in kitchen, 1080x1920]
+여자1: 그 소문은 '집 안에 금고가 있다'라고 했는데, 사실은 전혀 없었어요.
+
+[SCENE:Korean female in 30s with short hair, wearing a bright dress, sitting on sofa, 1080x1920]
+나레이터: 소문은 금방 퍼져서 집주인도 경찰을 부르며, 우리 가족이 이사를 강요받았죠.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+
+[SCENE:Korean female in 30s with short hair, wearing a bright dress, pointing at a candy box, 1080x1920]
+여자1: 사실은 이웃이 우리 집에 있던 사탕통을 금고처럼 오해하고, 그걸 바탕으로 소문을 퍼뜨렸습니다.
+
+[SCENE:Korean female in 30s with short hair, wearing a bright dress, standing outside apartment, 1080x1920]
+나레이터: 결국 소문은 무고했고, 이웃은 사과했습니다.&여러분은 이웃이 소문을 퍼뜨리면 어떻게 대응하시겠습니까?

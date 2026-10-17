@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261017_161311_shorts
+
+:
+10801920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지은
+
+BGM:
+주변피아노.3
+
+THUMBNAIL_LONG:
+주차장 사진 한 장이, 20명 단지의 신뢰를 무너뜨렸다
+
+THUMBNAIL_SHORTS:
+주차장 사진 한 장이, 20명 단지의 신뢰를 무너뜨렸다
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a blue jacket, 지은 is standing in the communal lobby, holding a phone, 1080x1920]
+나레이터: 단톡방 캡처를 보자마자, 지은은 이웃들을 향해 소란을 일으켰다.
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a blue jacket, 지은 is whispering to a neighbor, 1080x1920]
+여자1: "이게 무슨 소문이야?&왜 갑자기 모임이?"
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a blue jacket, 지은 is in the hallway, shouting, 1080x1920]
+나레이터: 그러나 이웃들은 그 캡처를 듣고 단지의 평온을 깨뜨리는 큰 사건이 되었다.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE:SCENE: red heart icon animation pulsing and growing, like button, white background, red heart animation, 1080x1920]
+나레이터: 화면을 두 번 눌러 결말을 확인하세요.
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a blue jacket, 지은 is standing in front of the landlord, 1080x1920]
+나레이터: 결국 진실이 밝혀졌다.&캡처는 단순한 모임 계획이 아니라, 단지 정원비에 관한 미스해석이었음이 드러났다.
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a blue jacket, 지은 is looking at the camera, 1080x1920]
+나레이터: 이제 여러분은 지은이 아니라면, 같은 상황에서 어떻게 행동하겠나요?&지금 이야기를 댓글로 남겨 주세요.
