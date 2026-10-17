@@ -5076,5 +5076,45 @@
     "uploaded_at": "2026-10-16T16:56:17+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "riuPtIbmKII",
+    "channel": "웃짬",
+    "category": "연애감정",
+    "title": "렌터카 사고, 소문 폭발!",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-17T16:32:32+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "t1chKU6qQlI",
+    "channel": "도개",
+    "category": "이웃분쟁",
+    "title": "주차장 사진 한 장이, 20명 단지의 신뢰를 무너뜨렸다",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-17T16:42:57+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "US-_2XeC2Qw",
+    "channel": "도개",
+    "category": "이웃분쟁",
+    "title": "주차장 사진 한 장이, 20명 단지의 신뢰를 무너뜨렸다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-17T16:58:36+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "DSjh4H8WuIQ",
+    "channel": "도개",
+    "category": "층간소음",
+    "title": "돌잔치 소문 폭발",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-17T17:14:22+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
