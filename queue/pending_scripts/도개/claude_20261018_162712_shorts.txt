@@ -1,0 +1,43 @@
+RUN_ID:
+claude_20261018_162712_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 수현
+남자1: 태훈
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+공유계좌 급감! 남자1 뺴
+
+THUMBNAIL_SHORTS:
+공유계좌 급감! 남자1 뺴
+
+[SCENE: shared office lobby, camera pans to a bank notice board, 1080x1920]
+나레이터: "공유오피스 공동 계좌 잔액이 10만 원 이하로 떨어졌다!"
+
+[SCENE: Korean woman in her 30s with short black hair, wearing a blue blazer, standing in shared office kitchen, holding a coffee mug, 1080x1920]
+여자1: "남자1이 내 돈을 뺴버렸어!&어떻게 된 거야?"
+
+[SCENE: Korean man in his 40s with a beard, wearing a gray hoodie, standing in shared office kitchen, 1080x1920]
+남자1: "아, 그건 내가 비상금이라니까."
+나레이터: "근데 진짜 반전은 지금부터입니다."
+나레이터: "오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 응원해 주세요."
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: "화면을 두 번 눌러서 결말을 확인하세요"
+
+[SCENE: Korean woman in her 30s with short black hair, wearing a blue blazer, Korean man in his 40s with a beard, wearing a gray hoodie, standing in shared office kitchen with laptop on counter, 1080x1920]
+여자1: "이거?&사무실 노트북이었는데, 왜 내가 생각 못했지?"
+남자1: "공동 계좌를 빌린 거예요.&사과합니다."
+
+[SCENE: shared office lobby, narrator standing by a whiteboard, 1080x1920]
+나레이터: "여러분이 공동 계좌를 쓰는 사무실에서 이런 상황 겪어본 적 있나요?&'있다'만 남겨주세요."

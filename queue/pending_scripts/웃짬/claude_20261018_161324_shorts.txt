@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261018_161324_shorts
+
+:
+10801920
+
+CATEGORY:
+층간소음
+
+CAST:
+나레이터: 나레이터
+여자1: 이지은
+
+BGM:
+피아노.3
+
+THUMBNAIL_LONG:
+택시기사최동원,가짜영수증뒤에숨은사연은?
+
+THUMBNAIL_SHORTS:
+택시기사최동원,가짜영수증뒤에숨은사연은?
+
+[SCENE:남자1: a Korean man in his 50s with short gray hair, wearing a blue jacket, holding a taxi driver badge, the driver sits behind the wheel, city night, 1080x1920]
+나레이터: 소음으로 울리는 밤, 택시 기사 최동원이 한 가짜 영수증으로 소음 갈등을 해결하려 한다.&그 서류가 사실 숨은 비밀을 드러내었다.&이 이야기는 지금 시작된다.
+[SCENE:여자1: a Korean woman in her 30s with long black hair, wearing a yellow dress, holding a cup of tea, neighbor opens her apartment door, 1080x1920]
+여자1: 최동원, 이 영수증이야?&당신이 내 소음 문제를 해결해 줄 것이라 했지?
+[SCENE:남자1: a Korean man in his 50s with short gray hair, wearing a blue jacket, holding a taxi driver badge, the driver shows the fake receipt, 1080x1920]
+남자1: 이 서류는 소음 구제 서비스 결제 기록이야.&정해진 금액을 한 번 지불하면 소음이 사라진다.
+[SCENE:여자1: a Korean woman in her 30s with long black hair, wearing a yellow dress, holding a cup of tea, the neighbor sighs, 1080x1920]
+여자1: 하지만 그 돈을 지불해도 소음이 안 사라진다면?&그게 내가 숨기는 것이 아니라, 내가 알게 된 비밀이야.
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 이 이야기는 계속됩니다.&구독과 좋아요로 그 여정을 함께해 주세요.
+[SCENE:남자1: a Korean man in his 50s with short gray hair, wearing a blue jacket, holding a taxi driver badge, the driver confronts the building manager, 1080x1920]
+남자1: 그 가짜 영수증은 내가 과거에 접한 부정거래를 숨기는 것이다.&이제 그 비밀을 세상에 알릴 것이다.
+[SCENE:여자1: a Korean woman in her 30s with long black hair, wearing a yellow dress, holding a cup of tea, the neighbor looks shocked, 1080x1920]
+여자1: 이게 다 내가 알게 된 것이야?&그동안 숨겨진 비밀이 지금 드러난 거야.
+[SCENE:나레이터: 나레이터, the screen fades to black, 1080x1920]
+나레이터: 이웃 소음 사연이 숨은 비밀과 연결된다.&여러분은 이 이야기에 대해 어떻게 생각하나요?&여러분이 같은 상황이라면 어떤 결정을 내리실 건가요?
