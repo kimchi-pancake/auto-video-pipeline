@@ -5156,5 +5156,45 @@
     "uploaded_at": "2026-10-18T17:28:02+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "HMTiEEQDLIU",
+    "channel": "웃짬",
+    "category": "연애감정",
+    "title": "일상 산책, 비밀 일기장을 발견했다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-19T16:40:32+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "UmL9Jp-CBz0",
+    "channel": "도개",
+    "category": "갑질사건",
+    "title": "응급실 간호사가 상사 폭행에 시달리다, 환자 편지에 비밀이…",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-19T16:50:59+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "ea62cWjcDeM",
+    "channel": "도개",
+    "category": "갑질사건",
+    "title": "응급실 간호사가 상사 폭행에 시달리다, 환자 편지에 비밀이…",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-19T17:06:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "La61B_0kRQs",
+    "channel": "도개",
+    "category": "사기폭로",
+    "title": "동창회, 회계담당 사기",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-19T17:08:03+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
