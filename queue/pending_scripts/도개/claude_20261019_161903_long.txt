@@ -1,0 +1,226 @@
+RUN_ID:
+claude_20261019_161903_long
+
+RESOLUTION:
+1920x1080
+
+CATEGORY:
+갑질사건
+
+CAST:
+나레이터: 나레이터
+여자1: 서진
+남자1: 정형
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+응급실 간호사가 상사 폭행에 시달리다, 환자 편지에 비밀이…
+
+THUMBNAIL_SHORTS:
+응급실 간호사가 상사 폭행에 시달리다, 환자 편지에 비밀이…
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,arrives at ER shift, night shift, dim fluorescent lights,1920x1080]
+나레이터: 오늘 밤도 바쁜 응급실에서 서진은 새로운 환자를 맞이하고 있다.&서진은 이미 지친 눈을 푼다.&바쁜 시선 속에서 누구도 그를 떠올리지 못한다.
+여자1: "다음 환자, 준비됐어요?"
+나레이터: 그녀의 손끝이 기계음에 반응하며, 부드러운 클립이 부딪히는 소리가 소리 내어 울려 퍼진다.
+나레이터: 환자의 심장 박동이 무거운 심호흡과 동시에 울려, 기절한 듯한 반응을 보이며, 무성한 기계음이 그 순간을 압축한다.
+나레이터: 서진은 숨을 고르며, 재빠른 움직임으로 혈압계를 조정하고, 병상에 깔린 순한 빛이 희미해지도록 조정한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,a patient lies on the bed, screaming, ER waiting room,1920x1080]
+나레이터: 환자는 무거운 상처와 두려움으로 소리를 지른다.&서진은 진료 도구를 준비하며 침착함을 유지한다.&그러나 환자는 서진을 의심스러운 눈으로 바라본다.
+여자1: "괜찮으세요, 조금만 버텨 주세요."
+나레이터: 서진의 손은 긴장 속에서도 조심스레 움직이며, 항구적인 체온을 모니터링한다.
+나레이터: 무거운 목소리와 함께 환자는 비명과 고요함 사이에서 저절로 눈을 감으며, 치료의 순간을 체감한다.
+나레이터: 손에 들린 체온계가 환자의 체온을 측정하면서, 서진은 다시 한 번 사고에 빠져들게 된다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,boss walks into ER, doors open, staff look up,1920x1080]
+나레이터: 정형이 방을 들어선다.&그의 눈빛은 냉정함을 반영한다.&그는 한 사람씩 살펴보며 조용히 속삭인다.
+남자1: "서진아, 오늘 밤은 내가 못 나가면 안 돼.&너 한 명으로 시프트를 돌려줘."
+나레이터: 정형의 목소리는 거친 바람처럼 부드럽게 전달되며, 서진은 조심스럽게 책임을 받아들인다.
+나레이터: 그는 수상한 눈빛으로 주변을 살펴보며, 서진이 실수를 할지라도 무언가를 숨길 수 있다는 희망을 품는다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,boss speaks to 서진, ER corridor,1920x1080]
+나레이터: 정형은 서진에게 급히 요청한다.&"네가 서툴면 내가 직접 다룰 거야."&서진은 고개를 끄덕이며 부담을 느낀다.
+남자1: "네, 알겠습니다."
+나레이터: 정형의 눈은 서진의 눈을 스며들며, 서진은 부담과 동시에 책임감을 동시에 품는다.
+나레이터: 그는 서진이 빠르게 상황을 파악하도록 돕기 위해 필요한 모든 정보를 제공한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,boss in ER, leaning against wall,1920x1080]
+나레이터: 정형은 잠시 숨을 돌리며, 서진에게 멍청이라며 비웃는다.&"네가 서툴면 내가 직접 다룰 거야."&서진은 숨을 가다듬으며 매너를 유지한다.
+남자1: "네, 실망시키지 않겠습니다."
+나레이터: 정형은 그 말에 속상해하며, 자신의 진심이 서진에게 전달되도록 다시 한 번 말한다.
+나레이터: 그는 서진의 심장을 두드리며, 부조리한 책임이 아닌 지식과 경험을 바탕으로 도와주려는 의도를 전한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,boss hands 서진 a clipboard, ER office,1920x1080]
+나레이터: 정형은 서진에게 오래된 환자 기록을 찾아달라고 명령한다.&"이 파일에는 중요한 내용이 있어.&빨리 찾아줘."&서진은 책상을 스캔하며 혼란스러워한다.
+남자1: "네, 바로 찾아보겠습니다."
+나레이터: 정형은 서진의 동공을 관찰하며, 그녀가 기록을 열심히 찾는 모습을 평가한다.
+나레이터: 서진은 조용히 책상 위에 놓인 오래된 파일을 살펴보며, 숨겨진 비밀을 깨닫게 될 준비를 한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 in ER office, looking through files,1920x1080]
+나레이터: 서진은 오래된 파일들을 하나하나 살펴본다.&그녀는 속으로 "이게 무슨 내용이죠?"라고 생각한다.&결국 오래된 환자 편지를 발견한다.
+여자1: "이게 무슨 내용이었을까?"
+나레이터: 서진의 눈이 넓게 뜨이며, 그녀는 그 편지를 조심스럽게 펼친다.
+나레이터: 페이지를 넘기며, 그녀는 지난 한 순간 동안 숨겨진 이야기를 듣는다.
+나레이터: 그녀는 그 감정과 사실을 동시에 느끼며, 현재 상황에 대한 조각들을 모아간다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 opens a yellowed letter, ER conference room,1920x1080]
+나레이터: 편지는 선명한 손글씨로 적혀 있다.&"저는 오래 전부터 무언가를 숨기고 있었어요."&서진은 놀라움과 궁금증을 동시에 느낀다.
+여자1: "이게 누구의 편지일까?"
+나레이터: 서진은 그 글자를 읽으며, 숨겨진 비밀이 그들을 둘러싸고 있다는 점을 직감한다.
+나레이터: 그녀는 어두운 조명 아래에서, 문자를 새롭게 해석하며, 그 편지의 진실을 파악한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 reads the letter, ER hallway,1920x1080]
+나레이터: 편지에는 정형이 환자 정보를 조작해 수익을 얻었다는 내용이 적혀 있다.&서진은 눈을 크게 뜨며 더 읽어본다.&그녀는 깨달음의 충격을 느낀다.
+여자1: "이게 진짜야..."
+나레이터: 그녀는 손에 들린 편지를 움켜쥐고, 차가운 벽을 향해 길을 안내받으며, 숨겨진 실체를 해석한다.
+나레이터: 그녀는 이 상황을 이해하며, 정형의 행위가 환자와 병원에 끼칠 파장을 예측한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형 walking past, ER hallway,1920x1080]
+나레이터: 정형이 서진의 뒤에서 서면, 그는 그녀가 무엇을 보고 있는지 직감한다.&"왜 그저 서있어?"
+서진은 비밀을 숨기려 애쓴다.& 나레이터: 이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.&
+남자1: "조용히 해 주세요."
+나레이터: 정형의 눈은 서진이 숨길 수 없는 진실을 보려는 듯, 그녀를 끊임없이 관찰한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 hides the letter in her bag, ER corridor,1920x1080]
+나레이터: 서진은 급히 문자를 메모장에 복사하고 편지를 가방에 넣는다.&그녀는 손을 빠르게 움직여 기억을 떠올린다.&정형이 가까이 오자 숨을 죽인다.
+여자1: "필요 없겠지…"
+나레이터: 그녀는 가방에 숨겨진 편지를 보호하며, 정형이 그것을 주시하고 있음을 눈치챘다.
+나레이터: 서진은 마음속으로, 이 순간이 모든 것을 바꿀 것임을 직감한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형 watches 서진 from a distance, ER entrance,1920x1080]
+나레이터: 정형은 서진의 움직임을 의심하며 주변을 살핀다.&그는 서진이 무언가를 숨기는 듯한 기색을 감지한다.&서진은 무심코 포켓을 확인한다.
+남자1: "조용히 해 주세요."
+나레이터: 정형은 서진이 숨길 것이라 생각되는 것을 파악하고, 앞으로의 대처를 준비한다.
+나레이터: 그는 서진의 행동을 메모하며, 자신의 계획이 무너지지 않도록 경계한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 in ER office, thinking, night,1920x1080]
+나레이터: 그런데 며칠 뒤, 뜻밖의 일이 벌어졌다.&서진은 우연히 병원 안에서 정형이 다른 환자에게 비밀을 털어놓는 모습을 목격한다.&그녀는 그 순간의 충격을 견디며 생각한다.
+여자1: "정말이야?"
+나레이터: 서진은 그 장면을 기억하며, 정형의 행위가 환자와 자신에게 미칠 위험을 판단한다.
+나레이터: 그녀는 자신의 선택이 병원 전체를 흔들 수 있는 결정이 될 것임을 깨닫는다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 talking to a colleague, ER kitchen,1920x1080]
+나레이터: 서진은 동료에게 그 사실을 털어놓는다.&동료는 급히 병원 보안에 연락한다.&서진은 용기를 낸다.
+여자1: "우리가 바로 행동해야 해."
+나레이터: 동료는 차분히 상황을 정리하며, 서진과 함께 행동 계획을 세운다.
+나레이터: 그들은 증거를 수집하고, 정형의 행위를 폭로하기 위한 단계를 준비한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형 and 서진 in ER office,1920x1080]
+나레이터: 서진은 정형을 부둥켜 세워서 말한다.&"당신의 범죄가 드러났습니다."&정형은 놀라며 방을 가득 물러간다.
+여자1: "이제 끝났어."
+나레이터: 정형은 자신의 얼굴이 빛에 비쳐 흔들리는 것을 느끼며, 절망과 반성의 눈빛을 짓는다.
+나레이터: 그는 과거의 악행을 반성하며, 오늘의 결정에 대한 책임을 지려 한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형 at desk, ER office,1920x1080]
+나레이터: 정형은 거짓말로 반박하려 한다.&"나는 그럴 리가 없지!"&서진은 기록을 보여준다.
+남자1: "진실을 직시해 봐."
+나레이터: 정형은 서진의 목소리에 감정이 번지며, 자신이 숨기려 했던 진실을 직면한다.
+나레이터: 그는 과거의 모순과 불법을 인정하며, 새로운 시작을 고민한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 at computer, ER office,1920x1080]
+나레이터: 서진은 정형이 조작한 데이터를 복사해 외부 의료기관에 전달한다.&그녀는 정형의 행동을 세부적으로 기록한다.
+여자1: "이것이 증거야."
+나레이터: 그녀는 컴퓨터 화면에 기록을 남기며, 정형의 비밀을 세상에 드러낸다.
+나레이터: 그녀는 그 과정에서 발생하는 감정과 책임을 동시에 체험한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,병원 행정실, ER office,1920x1080]
+나레이터: 행정실에서 정형의 은밀한 거래가 밝혀진다.&정형의 은행 계좌가 확인된다.&병원은 즉시 조치를 취한다.
+남자1: "위험한 행동이었어요."
+나레이터: 병원은 정형의 행위에 대해 내부 감사를 실시하며, 정형은 그 결말을 수용한다.
+나레이터: 서진은 그 과정에서 정의를 지키며, 새로운 직업적 책임을 수용한다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형 in police car, ER hallway,1920x1080]
+나레이터: 경찰이 정형을 체포한다.&그는 병원에서 실직한다.&정형은 무릎을 꿇으며 사과한다.
+남자1: "미안합니다."
+나레이터: 정형은 경찰차 내에서 자신의 과거를 되돌아보며, 새로운 시작을 준비한다.
+나레이터: 경찰은 그를 통해 병원 내부의 부정 행위를 조사하며, 정형의 미래를 판단한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 surrounded by staff, ER corridor,1920x1080]
+나레이터: 동료들은 서진을 격려한다.&그녀는 외로움과 감사를 동시에 느낀다.&서진은 앞으로도 정의를 지키겠다고 다짐한다.
+여자1: "함께라면 이길 수 있어요."
+나레이터: 그녀는 동료들의 손길 속에서, 희망과 용기를 찾으며, 앞으로의 도전을 준비한다.
+나레이터: 동료들은 그를 지지하며, 함께 앞으로 나아갈 결심을 다진다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 looking at the ER window, night,1920x1080]
+나레이터: 서진은 자신의 행동이 의미하는 것을 곰곰이 생각한다.&그녀는 늘 기억한다, 바로 지금이 큰 변화를 가져온 순간임을.
+여자1: "이제 나아갈 길이 보인다."
+나레이터: 그녀는 창 밖으로 보이는 화려한 도시의 불빛을 바라보며, 미래에 대한 기대를 품는다.
+나레이터: 그 순간 그녀는 새로운 시작을 결심하며, 어려운 상황에서도 희망을 찾아낸다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 in ER office, dusk,1920x1080]
+나레이터: 오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 응원해 주세요.
+여자1: "다음엔 더 큰 이야기가 기다려요."
+나레이터: 그녀는 부드러운 음악에 몸을 맡기며, 오늘의 사건을 마무리한다.
+나레이터: 그리고 새로운 도전이 다가올 것을 예상하며, 감사의 인사를 전한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진, ER office, light,1920x1080]
+나레이터: 여러분은 비슷한 상황에 처했다면 어떻게 행동하시겠습니까?
+여자1: "혹시 당신도 그 상황에 있었나요?"
+나레이터: 그녀는 시청자에게 생각할 거리를 제공하며, 상호작용을 유도한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 writing a report, ER office,1920x1080]
+나레이터: 서진은 사건 보고서를 작성한다.&그 문서는 내부 감사에 제출된다.&문서에는 정형이 부당 수익을 얻었다는 세부사항이 기록된다.
+여자1: "이제 끝났어요."
+나레이터: 서진은 마지막 페이지를 감싸며, 그동안의 노력과 헌신을 되돌아본다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형 in press conference, hospital lobby,1920x1080]
+나레이터: 언론이 정형의 부당 행위를 보도한다.&정형은 자신의 부끄러움을 자백한다.&사회는 경찰 조사를 지지한다.
+남자1: "죄송합니다."
+나레이터: 그는 언론 앞에서 자신의 과오를 인정하며, 재생과 회복의 길을 모색한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,ER staff meeting, conference room,1920x1080]
+나레이터: 병원은 새로운 감시 시스템을 도입한다.&모든 직원은 정직에 대한 교육을 받는다.&서진은 이 변화에 기여한 인물로 인정된다.
+여자1: "우리 모두 함께 할게요."
+나레이터: 그들은 앞으로의 방향성을 정하고, 함께 새로운 문화와 규율을 만들어간다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 walking through ER at dawn,1920x1080]
+나레이터: 새벽이 밝아오면 서진은 조용히 한숨을 쉰다.&그녀는 길을 따라 감정이 정리된다.
+여자1: "다음 도전이 기다려지네."
+나레이터: 그녀는 출발점으로 돌아가, 새로운 목표를 설정하며, 내일을 맞이한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진 on rooftop, city skyline,1920x1080]
+나레이터: 서진은 오늘의 사건을 다시 떠올린다.&그녀는 안심한다.&그녀의 눈빛은 앞으로 나아갈 결의를 담는다.
+여자1: "끝이 아니라 시작이야."
+나레이터: 그 순간, 그녀는 새로운 희망을 품으며, 미래를 향해 힘차게 나아간다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진, ER office, night,1920x1080]
+나레이터: 서진은 환자와 함께 밤을 보내며, 새로운 결심을 다진다.&그녀는 그동안의 사건을 뒤로하고, 앞으로의 길을 찾는다.
+나레이터: 서진은 벽에 걸린 시계가 매시간마다 울리는 소리 속에서, 내일을 향한 용기와 희망을 느낀다.
+여자1: "더 나은 내일을 위해, 오늘을 다짐한다."
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형의 과거를 추적하는 부서, ER corridor,1920x1080]
+나레이터: 부서는 정형의 과거를 추적하며, 그의 숨겨진 거래를 찾아낸다.
+남자1: "이거에요, 이게 바로 그 거래죠?"
+나레이터: 정형은 과거와 현재를 연결하며, 이번 사건이 그에게 끼친 영향을 깨닫는다.
+나레이터: 그는 과거의 잘못을 고백하며, 앞으로의 변화와 회복을 약속한다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진과 동료가 환자에게 치료를 제공하는 장면, ER 병상,1920x1080]
+나레이터: 서진과 동료들은 환자에게 최선의 치료를 제공하며, 그들의 전문성과 팀워크를 보여준다.
+여자1: "우리는 함께 더 나은 결과를 만들어내요."
+나레이터: 그들은 서로를 지지하며, 환자에게 희망과 회복의 길을 열어준다.
+여자1: "끝이 아닌 시작, 계속 이어가요."
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진이 평소보다 밝은 표정으로, ER 내부를 회고하며, 밤,1920x1080]
+나레이터: 서진은 평소보다 밝은 표정으로, 환자와 함께한 밤을 회고한다.
+여자1: "이 순간이 나를 이끌었어요."
+나레이터: 그녀는 그 순간을 통해, 자신의 성장을 반영하며, 앞으로의 삶에 대한 새로운 의지를 다진다.
+나레이터: 그리고 새로운 도약을 향한 준비를 마친다.
+
+[SCENE:a Korean man in his forties with gray hair, wearing a white coat,정형이 회복을 위한 상담을 받는 장면, 병원 라운지,1920x1080]
+나레이터: 정형은 회복을 위한 상담을 받으며, 자신의 행동을 반성한다.
+남자1: "다시 일어날 수 있을까요?"
+나레이터: 상담사는 정형에게 직업적 재활과 정신적 회복을 안내하며, 그는 앞으로의 길을 다시 설계한다.
+나레이터: 정형은 그 시간을 통해, 다시 회복과 변화를 위한 길을 찾아간다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진이 병원 밖에서 바라보는 새벽, 땅과 하늘이 만나는 곳,1920x1080]
+나레이터: 새벽이 밝아오면, 서진은 병원 밖에서 별과 구름을 바라보며, 그날 밤의 사건을 회상한다.
+여자1: "이제는 더 큰 것을 할 수 있어요."
+나레이터: 그녀는 그 순간을 통해, 앞으로의 여정이 보다 명확해지는 것을 느낀다.
+
+[SCENE:a Korean woman in her early thirties with short black hair, wearing a blue scrub top,서진이 병원 정문 앞에서, 새벽의 이른 빛을 맞으며, 다짐을 새긴다,1920x1080]
+나레이터: 서진은 병원 정문 앞에서, 새벽의 이른 빛을 맞으며, 그동안의 행동과 결단을 되새긴다.
+여자1: "다음은 내가 더 나은 존재가 될 기회야."
+나레이터: 그녀는 다시 한 번, 그 결심을 다지며, 새로운 삶의 문을 열어간다.

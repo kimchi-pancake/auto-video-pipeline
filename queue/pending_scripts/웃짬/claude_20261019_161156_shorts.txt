@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261019_161156_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+연애감정
+
+CAST:
+나레이터: 나레이터
+남자1: 지훈
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+일상 산책, 비밀 일기장을 발견했다
+
+THUMBNAIL_SHORTS:
+일상 산책, 비밀 일기장을 발견했다
+
+[SCENE:a Korean man in his 30s with short black hair, wearing a gray hoodie, in a city park walking a small dog, holding a notebook, 1080x1920]
+나레이터: "우리가 반려견과 산책하던 그날, 옷 주머니에서 비밀 일기장을 발견했습니다."
+
+[SCENE:a Korean man in his 30s with short black hair, wearing a gray hoodie, in a city park, walking a brown dog, holding a cup of coffee, 1080x1920]
+나레이터: "저는 매일 이곳에서 강아지와 산책을 합니다."
+
+[SCENE:a Korean man in his 30s with short black hair, wearing a gray hoodie, in a city park, holding an old diary, dog at his feet, 1080x1920]
+나레이터: "일기장 속엔 '그녀는 나의 인생의 답'이라는 문구와 강아지 사진이 있었어요."&"근데 진짜 반전은 지금부터입니다."
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: "화면을 두 번 눌러서 결말을 확인하세요."
+
+[SCENE:a Korean man in his 30s with short black hair, wearing a gray hoodie, a Korean man in his 30s with medium-length brown hair, wearing a white T-shirt, in a cafe, two men talking, dog on a bench, 1080x1920]
+나레이터: "저는 그 남자를 찾아 그가 사장님이었고, 강아지와 함께 있었습니다."&"그는 저에게, '이게 내가 당신을 찾기 위해 남긴 편지야'라고 말했어요."
+
+[SCENE:a Korean man in his 30s with short black hair, wearing a gray hoodie, in a city park, dog by his side, reflecting, 1080x1920]
+나레이터: "여러분이 이런 상황이라면, 이 일기를 읽고 직접 만나러 가시겠어요?"
