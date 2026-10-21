@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261021_161251_shorts
+
+:
+10801920
+
+CATEGORY:
+복수사이다
+
+CAST:
+나레이터: 나레이터
+여자1: 소영
+
+BGM:
+배경피아노.3
+
+THUMBNAIL_LONG:
+시골집 지갑 사라진 뒤, 이웃 남편이 숨긴 현금이 폭로되다
+
+THUMBNAIL_SHORTS:
+시골집 지갑 사라진 뒤, 이웃 남편이 숨긴 현금이 폭로되다
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a rural back alley, she finds a hidden compartment, 1080x1920]
+나레이터: 소영이 이웃 남편의 은닉 현금을 찾았다!&그 순간 복수의 기회가 열렸다!
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in front of the neighbor's house, she confronts him, 1080x1920]
+여자1: 이 돈은 왜 숨겨두었니?
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a dim hallway, she considers using it, 1080x1920]
+나레이터: 소영은 돈을 복수에 쓰려 했지만, 마음이 갈라졌다.&그러나 이게 끝이 아니었다!
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, on screen, 1080x1920]
+나레이터: 이 반전을 보고 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, on a farm field, she plants seedlings, 1080x1920]
+나레이터: 결국 소영은 돈을 자신의 농장을 키우는 데 쓰고, 이웃에게도 빚을 갚았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a quiet garden, she reflects, 1080x1920]
+나레이터: 여러분이 소영이었다면, 이웃 남편의 돈을 어떻게 활용했을까요?

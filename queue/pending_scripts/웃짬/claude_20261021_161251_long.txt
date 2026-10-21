@@ -1,0 +1,162 @@
+RUN_ID:
+claude_20261021_161251_long
+
+RESOLUTION:
+1920x1080
+
+CATEGORY:
+복수사이다
+
+CAST:
+나레이터: 나레이터
+여자1: 소영
+남자1: 형준
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+시골집 지갑 사라진 뒤, 이웃 남편이 숨긴 현금이 폭로되다
+
+THUMBNAIL_SHORTS:
+시골집 지갑 사라진 뒤, 이웃 남편이 숨긴 현금이 폭로되다
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in the rustic kitchen of the parents' rural house, she steps inside after a long drive, 1920x1080]
+나레이터: 새벽의 고요한 시골집에 도착했다.&소영은 부모님 댁의 문을 두드렸다.&그 순간, 가족의 따뜻함이 흐르는 장면이 펼쳐졌다.&밤의 차가운 바람이 집 안으로 스며들면서도, 방 안에는 따스한 향이 가득했다.&소영의 발걸음은 조용한 선율처럼 움직이며, 동네에서 들리는 새벽새의 울음소리와 교차했다.
+여자1: 아빠, 엄마, 오늘도 도착했어요.
+나레이터: 문을 열고 들어서니, 부엌에서 따뜻한 차 향이 퍼져 나왔다.&가볍게 웃으며 부엌에 앉은 부모님의 모습이 눈에 띈다.&소영은 카페트 위를 조심스레 밟으며, 오래된 가구가 남긴 시골의 풍경을 한눈에 담아냈다.&작은 손에 잡은 신문지의 목소리가 조용히 흐르며, 그날의 이야기 흐름이 담긴 듯했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in the kitchen, she leans to pick up a notebook, her hand slips and the wallet falls, 1920x1080]
+나레이터: 소영이 책상에 엎드려 노트북을 정리하던 중, 지갑이 미끄러져 떨어졌다.&손이 길게 뻗은 순간, 낡은 목재 위에서 반짝이는 금속의 소리를 들으며, 그녀는 불안한 눈길을 주머니를 향했다.&그 순간, 사라진 물건의 실루엣이 등장했다.&빛이 반사되는 지갑은 주황빛으로 반짝이며, 그 안에 들어 있는 것은 자주 쓰는 지폐와 카드들이었다.
+여자1: 뭐야, 내 지갑이 어디에?&ㅠㅠ
+나레이터: 지갑이 바닥에 떨어지는 소리와 함께 작은 물결이 칠해졌다.&책상 위에 놓인 수첩과 커피컵이 흔들리며, 그녀는 여전히 손이 가만히 움직이지 않는다.&소영은 손에 쥔 휴대폰 화면을 껐다가 다시 켜면서, 구석에 빛이 반사되는 불길한 기운을 깨달았다.&주머니를 다시 한 번 바라보며, 마음이 떨리기 시작했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, she searches the counter, the wooden table glints under flickering light, 1920x1080]
+나레이터: 소영은 주방 카운터를 뒤지며 눈을 떼지 못했다.&먼지 낀 물체가 눈에 띠지 않았다.&그녀의 심장은 다시 한 번 두근거렸다.&주변에 놓인 서류들과 주방용품 사이를 파고들며, 소영은 손에 냉색을 가져다대며 물건을 찾으려 했다.&소음이 작은 집 안에서, 그녀의 심장이 곧 울려 퍼지는 것 같은 느낌이었다.
+여자1: 어디?&여기 있을 수밖에 없잖아
+나레이터: 소영은 조용히 손을 꺼내며, 사각사각한 청소 도구들을 살피며, 잠시 눈을 감아 숨을 들이쉬었다.&주변의 냄새, 오렌지 향, 그리고 오래된 마른 풀 냄새가 교차하면서, 그녀는 어제의 긴장을 잊으려 했다.&그녀는 주방 선반 아래에 놓인 오래된 책을 천천히 뒤집으며, 혹시 모를 흔적을 찾으려 애썼다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a dining area, the old parents appear with a cup of tea, 1920x1080]
+나레이터: 어머니는 차 한 잔을 손에 들고 문틈에서 모습을 드러냈다.&아버지는 그윽한 눈빛으로 소영을 바라보았다.&그들의 목소리에는 걱정이 담겨 있었다.&따뜻한 향이 돌고, 아버지는 조용히 웃으며 손을 내밀었다.&소영은 두 손으로 차를 들며, 부엌에서 온 따스한 기운이 한층 더 실감났다.
+여자1: 아빠, 엄마, 지갑이 안 보여요.&어디가?
+나레이터: 부엌에는 소리가 가득했다.&부엌 냉장고가 가동 중인 소리, 커피 기계가 바스락거리는 소리, 그리고 서로에게 부드럽게 말하는 목소리가 마치 교향곡처럼 퍼졌다.&소영은 한숨을 쉬며, 바닥에 떨어진 작은 사과 조각을 부드럽게 감싸며, 눈을 감았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in the bathroom, she pulls out a cabinet, but emptiness greets her, 1920x1080]
+나레이터: 소영은 욕실로 달려가 싱크대 아래를 뒤졌다.&새벽 공기가 차가웠다.&하지만, 공간은 여전히 빈자리를 유지했다.&작은 물건들이 깔끔히 정돈된 곳에서, 소영은 다시 한 번 지갑을 찾으려 손을 뻗었다.&그러나 물건이 없다는 사실은 그녀를 더욱 절망적으로 만들었다.&눈에 가득 찬 배경에서, 소영은 손에 물건이 없음을 확인했다.
+여자1: 왜 안 돼?&저기 아직도 닫아져 있을 텐데
+나레이터: 욕실의 거울에 비친 그녀의 얼굴은 희미한 빛을 받으며, 작은 물결이 흐른다.&물이 흐르는 소리와 함께, 그녀는 차가운 수건을 물에 담그며, 감각을 기울였다.&그러나 두 팔이 가만히 서 있었고, 부엌과 욕실 사이에 놓인 작은 문이 새벽의 차가운 바람을 받아왔다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, outside the neighbor's house, 형준 is trimming hedges, 1920x1080]
+나레이터: 소영이 벽돌 담을 넘어 이웃집 앞까지 나가자, 형준이 정원에서 가지를 다듬고 있었다.&그의 눈은 깔끔한 하늘빛을 반영했다.&그 순간, 따뜻한 정원이 변했다.&그녀는 꽃잎이 떨어지는 소리를 들으며, 형준이 미소를 띠는 모습을 보았다.&그는 평소와 달리 부드러운 목소리로 소영을 맞이했다.
+남자1: 아, 소영 씨!&여기서 무슨 일 있어?
+나레이터: 정원에서 들려오는 새싹이 부딪히는 소리, 멀리서 들리는 동네 아이들의 웃음소리, 그리고 차분한 바람이 물결을 만들어내며, 소영은 심장이 고요한 순간을 느꼈다.&형준은 머리 위에 무거운 비누방울을 끼며, 푸른 나무 사이에서 빛을 받아 웃었다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, in front of a stone wall, they chat, 1920x1080]
+나레이터: 소영은 고개를 끄덕이며 친근하게 인사했다.&형준은 미소를 지으며 손을 흔들었다.&두 사람은 한때 같은 길을 걸었던 기억을 떠올렸다.&그 동안 이웃으로서 서로를 아끼며 살아왔던 순간들을 상기시켰다.&대화가 흐르는 동안, 가벼운 웃음소리와 함께 이웃의 조용한 평화가 번졌다.
+여자1: 형준 씨, 그저 인사하려고 왔어요.&아까 지갑이 안 보여서요.
+나레이터: 소영은 한숨을 고르고, 형준의 손에서 들려오는 약간의 새벽 소리를 듣고, 집을 떠나며 눈을 감았다.&그녀는 형준의 목소리와 함께 차가운 바람을 느끼며, 그 순간을 기억에 남겼다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, in a quiet courtyard, 형준 looks puzzled, 1920x1080]
+나레이터: 형준은 눈을 가늘게 뜬 채 미소를 지었다.&소영이 설명을 이어가자 그는 손을 가볍게 닫았다.&그의 표정은 진실을 숨기고 있었다.&그는 눈을 감고 깊이 숨을 들이쉬며, 과거의 기억을 떠올리며 상황을 재정리했다.
+남자1: 뭐, 소영?&제가 알던 건 뭐가 그게?
+나레이터: 형준은 상처를 뒤집어 늘어지며, 거울에 비친 그림자와 함께 부드러운 소리를 내며, 과거의 기억을 떠올렸다.&소영은 그 순간을 진지하게 바라보며, 형준이 숨긴 비밀을 엿볼 수 있었다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, back in the kitchen, she looks despondent, 1920x1080]
+나레이터: 소영은 다시 부엌으로 돌아와 기분이 무거웠다.&그녀의 눈빛은 숨겨진 비밀을 품고 있었다.&한 순간, 새로운 결심이 서리처럼 내려앉았다.&그녀는 손을 가볍게 흔들며, 어떤 길을 떠나야 할지 고민했다.&결국, 배려와 용기에 관한 새 결심을 품고 마음을 다잡았다.
+여자1: 이게 정말 끝이 아니겠지, 안 보여도 찾아낼게
+나레이터: 소영은 부엌의 창문을 열어 새벽의 푸른 하늘을 바라보며, 심장이 다시 뛰기 시작했다.&차가운 바람이 그녀의 머리카락을 살짝 흔들며, 그녀는 마음속에 새로운 목표를 세우기 시작했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a dim hallway, she looks determined, 1920x1080]
+나레이터: 이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.&소영은 결심을 굳히며 문을 열었다.&이 순간, 긴장감이 최고조에 이르렀다.&그녀의 숨결은 멈추듯 속삭이며, 검은 밤이 밝게 빛나는 방을 바라보았다.
+여자1: 숨겨진 곳이 있을 거야, 믿어봐
+나레이터: 비밀스러운 골목을 따라, 소영은 손에 낸 작은 종이 조각을 펴며, 그 속에 적힌 숫자와 단서를 하나하나 읽었다.&그녀는 조용히 불을 켜며, 은밀한 흔적을 찾는 것에 집중했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, in the neighbor's back wall, a loose board swings open, 1920x1080]
+나레이터: 소영은 형준의 집 뒷벽을 조심스레 밀었다.&공중에서 작은 금속 문이 열렸다.&그 안은 반짝이는 현금의 향기와 함께 서늘함을 품고 있었다.&방 안의 빛이 번개처럼 번쩍이며, 사라진 물건의 흔적이 새로 발견된 듯했다.
+남자1: 뭐, 그게 뭐야?
+나레이터: 금속이 반짝이는 박스 안에서, 소영은 숨을 죽이고, 두 손으로 은폐된 돈을 조심스레 꺼냈다.&그 순간, 그녀는 과거의 그림자를 다시 한 번 마주했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a memory flash, a newspaper headline reads 'Local Couple in Debt', 1920x1080]
+나레이터: 그런데 며칠 뒤, 뜻밖의 일이 벌어졌습니다.&형준의 과거가 한 줄기 빛으로 드러났다.&소영은 숨을 가다듬으며 그 비밀을 엿보다 시작했다.&과거의 상처가 다시 떠오르며, 지금의 선택을 재고하게 했다.
+여자1: 그…&그게 왜 보였어?
+나레이터: 기사 속 사진은 형준과 그의 부인, 그리고 그들이 맞이한 재정적 고난을 담고 있었다.&소영은 그 순간을 진지하게 바라보며, 자신이 할 수 있는 길을 찾아냈다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, in the hidden compartment, a crumpled note lies, 1920x1080]
+나레이터: 소영은 현금 옆에 작은 노트 한 장을 발견했다.&그 메모는 형준이 어쩔 수 없이 숨긴 이유를 기록했다.&그녀의 눈은 감정이 복합했다.&노트에 적힌 글씨는 작고 낡은 종이 위에 흐릿하게 묻어 있었다.
+여자1: 왜 당신이 이 모든 걸 숨겼어?
+나레이터: 소영은 노트를 꺼내어, 그 잔잔한 조각을 읽으며, 그날의 기억을 다시 한 번 꺼내어 확인했다.&그녀는 형준의 숨겨진 내면을 이해하려 했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, the neighbor's front yard, 형준 speaks with agitation, 1920x1080]
+나레이터: 형준은 화난 표정으로 소영에게 이야기했다.&그는 과거에 부인과의 갈등을 끌어냈다.&그 순간, 폭풍이 폭발했다.&그의 눈에는 불안과 분노가 뒤섞여 있었다.&그는 숨결을 가다듬으며, 과거의 눈물과 함께 현재의 정서를 풀었.
+남자1: 그 돈은 내가 남기지 못한 거야.&내가 용서받지 못해
+나레이터: 소영은 그 말에 마음이 찢어지는 듯했다.&그러나 그녀는 형준이 과거를 숨긴 이유를 이해하며, 그와의 대화를 계속했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, they stand in the backyard, tension thick, 1920x1080]
+나레이터: 소영은 형준과 마주 서서 진실을 요구했다.&그의 눈빛은 변함없었고, 답은 무게를 더했다.&그 대화는 순간을 비틀었다.&소영은 눈물과 혼란스러운 마음을 숨기며, 한 줄의 문장으로 물었다.
+여자1: 이 돈은 네가 미워했어?&그게 다야?
+나레이터: 형준은 눈을 가다듬으며, 그동안 감추었던 진실을 한 번 더 말했다.&그녀는 그 속에서 새로운 가능성을 찾아내었다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a silent living room, 형준 is sorrowful, 1920x1080]
+나레이터: 형준은 한숨을 쉬며 고백했다.&그는 부인과의 이혼으로 소득이 급감했다.&그 돈은 생존을 위한 계획이었다.&소영은 눈물과 이웃의 비밀을 동시에 떠올렸다.&그는 눈을 가다듬으며, 과거의 실수와 현재의 상황을 연결했다.
+남자1: 나는 그 돈으로 내 집을 지키려 했어
+나레이터: 소영은 형준의 눈을 바라보며, 그가 겪은 고통과 고민을 이해했다.&그녀는 그 순간을 통해, 서로를 위로하고, 앞으로 나아갈 길을 찾았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a moonlit porch, she ponders alone, 1920x1080]
+나레이터: 소영은 거울 앞에 앉아 그의 눈을 바라보았다.&믿음과 배신이 서로 뒤섞여 있었다.&그녀는 결정을 내리려 했다.&밤의 그림자가 길게 드리워진 채, 소영은 조용히 숨을 들이쉬며 앞으로 나아갈 길을 정했다.
+여자1: 당신이 내게 이렇게 숨기다니...
+나레이터: 그녀는 달빛 아래, 자신의 마음이 울려 퍼지는 소리를 듣고, 자신이 할 수 있는 일을 다시 한 번 생각했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a storage shed, she calculates numbers, 1920x1080]
+나레이터: 소영은 옛날 사진을 꺼내어 금액을 세어 보았다.&그녀는 이 돈으로 농장을 살 수 있을 것이라 생각했다.&그녀의 눈빛은 계산된 희망으로 반짝였다.&계산이 끝난 뒤, 그녀는 호기심을 더해 물었다.
+여자1: 이제 이 돈으로 내일을 바꾸면 어떨까
+나레이터: 그녀는 종이 위에 흐르는 숫자들을 한 줄씩 읽으며, 앞으로의 미래를 상상했다.&그리고 그 숫자 속에서 새로운 가능성을 찾았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in the kitchen, she writes a plan on paper, 1920x1080]
+나레이터: 소영은 지갑을 없앤 대신, 이웃의 돈을 농업 창업에 투자하기로 했다.&그녀의 손가락은 붉은 선을 그렸다.&그 계획은 현실과 꿈 사이를 잇는 다리였다.&새벽의 고요함 속에, 그녀는 미래를 설계하며, 작은 종이 조각에 꿈을 적었다.
+여자1: 이 돈이 우리를 웃게 만들게 해
+나레이터: 소영은 종이 위에 적힌 글씨를 천천히 읽으며, 그 속에서 도전과 희망을 찾아냈다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, in a quiet hallway, they talk, 1920x1080]
+나레이터: 소영은 형준에게 다시 접근했다.&그녀는 그가 잃어버린 것을 다시 주었다.&그의 얼굴은 충격과 감사가 뒤섞였다.&그 순간은 감정의 터널이었다.&그는 말없이, 눈물을 닦으며, 말없이 고마움을 표현했다.
+남자1: 고마워, 소영.&네가 없었다면...
+나레이터: 형준은 눈물을 닦으며 감사의 말을 전했다.&그는 그동안 숨긴 비밀이 해방된 기분이었다.&소영은 작은 웃음이 일었다.&그들의 관계는 다시 시작되며, 새로운 이해가 스며들었다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in the living room, 형준 looks grateful, 1920x1080]
+나레이터: 형준은 눈물을 닦으며 감사의 말을 전했다.&그는 그동안 숨긴 비밀이 해방된 기분이었다.&소영은 작은 웃음이 일었다.&그들의 관계는 다시 시작되며, 새로운 이해가 스며들었다.
+여자1: 다행이야, 이제 나도 힘이 생겼어
+나레이터: 두 사람은 서로를 바라보며, 손을 맞잡고, 그동안의 고통과 분노를 내려놓았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, on a field, she plants seedlings, 1920x1080]
+나레이터: 소영은 새로운 농장을 시작했다.&비료를 뿌리고 싹을 심으며 소리도 울렸다.&그곳은 새로운 시작을 약속했다.&그녀는 땅을 다듬으며, 미래를 향한 꿈을 키웠다.
+여자1: 이 땅이 내가 만드는 꿈이 될 거야
+나레이터: 그녀는 작은 물을 뿌리며, 땅이 바람에 흔들리던 소리와 함께, 새로운 희망을 느꼈다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, in a cozy living room, they share a meal, 1920x1080]
+나레이터: 소영은 부모님에게 농업 계획을 털어놓았다.&아버지는 고개를 끄덕였고, 어머니는 눈물을 닦았다.&그들의 반응은 기대와 부러움이었다.&가족의 따뜻함이 그들의 결심을 더욱 단단히 했다.
+여자1: 이제 우리도 함께 할 수 있을 거야
+나레이터: 식탁 위에 놓인 따뜻한 음료와 함께, 소영은 가족과 함께 새로운 시작을 기뻐했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in the kitchen, mother smiles, 1920x1080]
+나레이터: 어머니는 고개를 끄덕이며 미소를 지었다.&그녀의 손에 물이 닿는 순간, 소중함이 흐른다.&소영은 안심의 숨을 내쉬었다.&가정의 축복이 그녀를 감싸며, 다시 한 번 가족의 힘을 느꼈다.
+여자1: 엄마, 제가 할 수 있었던 것이 다 감사해요
+나레이터: 소영은 가족의 따뜻한 말에 마음을 놓았다.
+
+[SCENE:a Korean man in his early 50s with gray hair, wearing a blue work jacket, glasses, he sits by the fireplace, reflecting, 1920x1080]
+나레이터: 형준은 벽난로 옆에 앉아 생각에 잠겼다.&그는 자신이 숨긴 돈이 결국 도움이 되었음을 깨달았다.&그 순간, 안도감이 흐르며 마음이 가라앉았다.&그의 눈은 회복과 감사로 가득했다.
+남자1: 이 모든 게 내게 배워야 할 수업이었어
+나레이터: 그는 다시 한 번, 과거의 실수와 현재의 상황을 연결하며, 앞으로 나아갈 길을 정했다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, she looks at the horizon, sunrise in background, 1920x1080]
+나레이터: 소영은 새벽 빛을 바라보며 깨달았다.&복수보다 사랑이 더 깊다는 것을.&그녀의 눈에는 새로운 도약이 반짝였다.&새로 태어나는 태양이 그녀의 미래를 비추며, 마음에 새로운 희망이 깃들었다.
+여자1: 이제 모든 것이 바뀌었어
+나레이터: 그녀는 하루를 새롭게 시작하며, 그 속에서 새로운 가능성을 찾았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, on the porch, she smiles into the camera, 1920x1080]
+나레이터: 오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 응원해 주세요.&당신의 댓글이 우리의 힘이 됩니다.&그 순간, 소영은 무거운 마법 같은 미소를 지었다.&그녀는 카메라를 바라보며, 관객에게 다가갔다.
+여자1: 함께해 주세요!
+나레이터: 그녀는 마이크를 잡으며, 새로운 이야기를 기대한다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray sweater, in a quiet garden, she reflects, 1920x1080]
+나레이터: 소영은 마주한 이웃과 자신의 선택을 다시 한 번 생각했다.&그녀는 시청자에게 다가갔다.&그리고 물었다.&그녀의 눈에는 의문이 가득했고, 다가오는 대답이 기대된다.
+여자1: 여러분이 소영이었다면, 이웃 남편의 돈을 어떻게 활용했을까요?
+나레이터: 시청자들은 질문에 대해 댓글로 대답하며, 서로 다른 관점을 공유했다.&소영은 그들의 반응을 듣고, 더 깊은 생각을 시작했다.

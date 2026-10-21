@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261021_163542_shorts
+
+:
+10801920
+
+CATEGORY:
+우정배신
+
+CAST:
+나레이터: 나레이터
+여자1: 배희린
+
+BGM:
+배경 피아노.3
+
+THUMBNAIL_LONG:
+5분 뒤 계약서가 폭파, 대표를 속이던 팀원
+
+THUMBNAIL_SHORTS:
+5분 뒤 계약서가 폭파, 대표를 속이던 팀원
+
+[SCENE:a Korean woman in her late 20s with short bob hair, wearing a navy blazer, in a shared office, she is typing, 1080x1920]
+나레이터: 한 순간, 배희린이 사과한 문서를 확인했다.&나레이터: 하지만 이 순간, 그녀가 서명을 대신해 버렸다.&나레이터: 그때 정준호의 심장이 멈췄다.
+
+[SCENE:a Korean woman in her late 20s with short bob hair, wearing a navy blazer, 정준호가 문서에 서명을 준비하며, 배희린이 뒤에서 확인한다, 1080x1920]
+나레이터: 정준호는 서명하기 전에 배희린에게 물었다.&나레이터: "네가 그때 왜 서명했어?"&나레이터: 배희린은 "급했어" 라고 속삭였다.&나레이터: 정준호는 눈을 감으며 "믿었는데…" 라고 말했다.
+
+[SCENE:a Korean woman in her late 20s with short bob hair, wearing a navy blazer, 두 사람 사이에 긴장감이 흐르는 회의실, 문서가 열려 있다, 1080x1920]
+나레이터: 팀 매니저가 문을 두드리며 들어왔다.&나레이터: "왜 서명?" 라고 물었다.&나레이터: 배희린은 겁에 떨며 사과했다.&나레이터: 정준호는 진심을 비추며 눈물을 흘렸다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean woman in her late 20s with short bob hair, wearing a navy blazer, 배희린과 정준호가 화해하며 서로를 바라본다, 1080x1920]
+나레이터: 둘은 서로의 눈을 마주하고 "다시 믿어도 돼?" 라고 물었다.&나레이터: 정준호는 "네, 이번엔 꼭" 라고 말하며 고개를 끄덕였다.&나레이터: 그들은 새로 시작한 희망을 품고 웃었다.
+
+[SCENE:a Korean woman in her late 20s with short bob hair, wearing a navy blazer, 배희린이 카메라 앞에서 마무리 인사를 한다, 1080x1920]
+나레이터: 배희린은 "이 상황에서 당신이라면 어떻게 행동했을까요?" 라고 물었다.&나레이터: "여러분 생각은요?" 라고 마무리하며 질문했다.&나레이터: 그리고 "댓글에 남겨주세요." 라고 덧붙였다.

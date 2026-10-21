@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261021_164003_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+연애감정
+
+CAST:
+나레이터: 나레이터
+여자1: 가린
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+남친이 서명했어요
+
+THUMBNAIL_SHORTS:
+남친이 서명했어요
+
+[SCENE: a Korean office interior with a desk and a calendar, 1080x1920]
+나레이터: 그때, 가린이 서명해야 할 순간, 남자친구가 서명을 했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, standing at a desk and looking at a contract, 1080x1920]
+여자1: 나는 27살, 수민과 2년째 사귀는 여자다.
+
+[SCENE: a Korean office interior with a desk and a calendar, 1080x1920]
+나레이터: 가린은 서명하기가 두려웠다&근데 진짜 반전은 지금부터입니다&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE: a Korean office interior with a desk and a calendar, 1080x1920]
+나레이터: 수민이 서명한 이유는, 유산에 숨겨진 부채를 밝혀서 가린이 큰 손해를 입지 않게 하기 위함이었다.
+
+[SCENE: a Korean office interior with a desk and a calendar, 1080x1920]
+나레이터: 여러분이 가린이었다면, 남자친구가 서명한 이유를 믿었을까요?&오늘 이야기가 재밌으셨다면, 구독과 공유로 다음 이야기에도 함께해 주세요.
