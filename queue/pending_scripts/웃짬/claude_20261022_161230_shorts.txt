@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261022_161230_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+고부갈등
+
+CAST:
+나레이터: 나레이터
+여자1: 수빈
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+알바 중 어머니, 대리서명!
+
+THUMBNAIL_SHORTS:
+알바 중 어머니, 대리서명!
+
+[SCENE: a Korean night convenience store, dim lights, cashier counter, a Korean female in 20s with short black hair, wearing a green uniform, standing at the counter, 1080x1920]
+나레이터: 편의점 야간 알바 중, 어머니가 대리 서명을 요구했다.
+
+[SCENE: a Korean night convenience store, cashier counter, a Korean older woman in 60s with white hair, wearing a blue cardigan, standing by the register, a Korean female in 20s with short black hair, wearing a green uniform, standing at the counter, 1080x1920]
+나레이터: 나는 24세 알바생 수빈이며, 매일 밤이 내 일상이었어.
+
+[SCENE: a Korean night convenience store, cashier counter, a Korean older woman in 60s with white hair, wearing a blue cardigan, standing by the register, a Korean female in 20s with short black hair, wearing a green uniform, standing at the counter, 1080x1920]
+나레이터: 어머니는 내 서명을 빌려 은행 대출을 승인하려 했다.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE: a Korean night convenience store, cashier counter, a Korean female in 20s with short black hair, wearing a green uniform, standing at the counter, 1080x1920]
+나레이터: 나는 은행에 전화를 걸어 어머니의 대출을 취소했고, 나는 상환계획을 정리했다.&오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 다음 이야기에도 함께해 주세요.
+
+[SCENE: a Korean night convenience store, cashier counter, a Korean female in 20s with short black hair, wearing a green uniform, standing at the counter, 1080x1920]
+나레이터: 당신이라면 어머니에게 서명을 부탁받았을 때 어떻게 했겠어요?
