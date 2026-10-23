@@ -1,0 +1,152 @@
+RUN_ID:
+claude_20261023_162235_long
+
+RESOLUTION:
+1920x1080
+
+CATEGORY:
+직장생활
+
+CAST:
+나레이터: 나레이터
+여자1: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor
+남자1: a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+회식 자리에서 퍼진 거짓말, 주인공은 스타트업 CEO가 된다
+
+THUMBNAIL_SHORTS:
+회식 자리에서 퍼진 거짓말, 주인공은 스타트업 CEO가 된다
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression, seated at a round table in a dimly lit upscale restaurant, late evening, 1920x1080]
+나레이터: 회식 자리에서 직원들이 술잔을 기울이며 웃고 있다.&술잔이 반짝이며 대화가 흐르며 분위기가 가볍다.&어느 순간, 한 남자가 조용히 입을 열었다.&소문이 퍼지기 시작했다.&주변이 긴장으로 가득 찼다.
+여자1: 무슨 소문이야?&서연은 놀라며 물었다.
+
+[SCENE: a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression, standing near the bar, watching the conversation, 1920x1080]
+나레이터: 남성은 회식 중에 조용히 주위를 관찰했다.&그의 눈은 서연을 주시하고 있었다.&어느 순간 그는 손에 무언가를 올려 놓았다.&소문은 커다란 파동이 되었다.&직원들은 그를 눈여겨본다.
+남자1: 서연, 네가 퇴사했다고 들었어?&조용히 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing near the hallway exit, looking surprised, 1920x1080]
+나레이터: 회식이 끝나갈 무렵, 서연은 주위를 돌아보며 문을 향했다.&한 순간, 남자는 무언가를 고백했다.&소문은 큰 파동이 되었다.&직원들은 방어심을 내고 있다.
+여자1: 왜 그렇게 말한 거야?&서연은 궁금해하며 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, sitting alone in a quiet office hallway, midmorning, 1920x1080]
+나레이터: 다음 날 아침, 서연은 사무실 복도를 거닐며 머리를 감싸 안았다.&그녀는 불안한 숨을 내쉬며 조용히 주변을 살폈다.&지금까지 듣고 있던 소문은 머리 속에서 자꾸 떠올랐다.&그녀는 전화를 끊고 나서도 불안이 가시지 않았다.&차가운 조명이 그녀를 비추었다.
+여자1: 이게 사실이야?&서연은 몰랐던 감정으로 물었다.
+
+[SCENE: a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression, holding a coffee mug, standing in the lobby of the company, 1920x1080]
+나레이터: 남성은 사무실 로비에서 커피를 마시며 서연의 전화를 기다렸다.&그는 서연이 소문을 듣고 퇴사할 것이라 믿었다.&그는 마음속으로 서연을 혼자 두고 싶었다.&그러나 그가 알지 못한 사실이 있었다.&소문은 전혀 다른 방향으로 향했다.
+남자1: 알겠어, 그럼 다음 주에 만나자.&그는 말하며 어깨를 으쓱했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, sitting at a desk with a laptop, late afternoon, 1920x1080]
+나레이터: 서연은 데스크 앞에 앉아 노트북을 켰다.&HR 부서로부터 받은 이메일을 열어보았다.&그 안에는 그녀의 퇴사 사유가 명시되어 있었다.&서연은 눈을 가늘게 뜨며 읽었다.&이메일은 단순했다.
+여자1: 왜 내가 퇴사했어?&서연은 가벼운 목소리로 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing in front of a window, looking out at the city skyline, evening, 1920x1080]
+나레이터: 밤이 깊어지면서 서연은 창문 앞에 서 있었다.&외부의 불빛이 그녀의 고민을 반영했다.&그녀는 자신이 직장을 떠나야 할지 고민했다.&손에 쥔 전화기는 여전히 꺼져 있었다.&새로운 시작이 기다리고 있었다.
+여자1: 내 인생은 어디로 가야 할까?&서연은 속으로 끓어올랐다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, sitting on a sofa in a cozy apartment, chatting on her phone, night, 1920x1080]
+나레이터: 친구인 유진이 전화를 걸어왔다.&서연은 전화기를 끼며 눈을 반짝였다.&유진은 서연에게 격려의 말을 전했다.&그는 서연에게 스스로의 역량을 믿으라고 했다.&이 순간은 서연에게 힘이 되었다.
+여자1: 고마워.&너도 알지?&서연은 미소를 지으며 대답했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, walking down a busy street, carrying a backpack, daytime, 1920x1080]
+나레이터: 서연은 가벼운 가방을 메고 거리로 나섰다.&도심의 사람들은 그녀를 바라보며 이질감을 느꼈다.&그녀는 새로운 계획을 머릿속에서 재구성했다.&밤의 숨소리 속에서 그녀는 결정했다.&외부 소음은 그녀를 혼란스럽게 했다.
+여자1: 이게 바로 내 길이야.&서연은 의지있게 중얼거렸다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a rooftop overlooking the city at dusk, 1920x1080]
+나레이터: 낮은 빛이 도시를 물들였다.&서연은 고개를 숙여서 생각에 잠겼다.&그때, 그녀의 눈에 작은 전화기 반짝였다.&그 기기에는 한 문구가 있었다.&"이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요."
+여자1: 이게 무슨 말이야?&서연은 궁금해하며 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, sketching on a notebook in a quiet co-working space, 1920x1080]
+나레이터: 서연은 공동 작업 공간에서 아이디어를 스케치했다.&그녀의 손이 펜을 떠나지 않았다.&그 그림은 혁신적인 앱 구상을 담고 있었다.&그녀는 자신이 만든 무언가가 세상을 바꿀 것이라 믿었다.&추측과 현실이 엇갈렸다.
+여자1: 이거 한 번 시도해 볼까?&서연은 자신감 가득하게 말했다.
+
+[SCENE: a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression, sitting across from 서연 at a sleek conference table, 1920x1080]
+나레이터: 남성은 서연 앞에 앉아 눈을 마주했다.&그는 서연의 제안을 경청했다.&서연은 얼굴에 긴장감을 감추지 못했다.&그는 말문을 열었다.&비즈니스는 감정과 전략이 결합된다.
+남자1: 네 아이디어는 흥미롭다.&하지만 현실적인 수익 모델은?
+여자1: 수익은 사용자 기반이 늘어나면 자연스럽게 발생할 거야.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing in the hallway, looking at a notification on her phone, 1920x1080]
+나레이터: 그날 밤, 서연은 사무실 복도에서 휴대폰을 확인했다.&알림은 그녀에게 소식 한 줄을 전했다.&그것은 예상치 못한 이메일이었다.&서연은 눈을 크게 뜰 수밖에 없었다.&지금까지의 모든 것이 바뀌었다.
+여자1: 이게 무슨 뜻이야?&서연은 떨리는 목소리로 물었다.
+
+[SCENE: a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression, standing in a small room with a laptop, 1920x1080]
+나레이터: 남성은 작은 방에서 노트북을 열었다.&그는 서연에게 보낸 메일을 열었다.&그 안에는 그녀가 직장을 떠난 이유가 명시되어 있었다.&그러나 그 이유는 전혀 다른 것이었다.&이것이 결국 전환점이었다.
+남자1: 사실은 네가 나에게 방해가 되었어.
+여자1: 왜?&서연은 충격을 받은 듯 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, seated at a small table in a quiet cafe, writing a letter, 1920x1080]
+나레이터: 서연은 카페에 앉아 편지를 쓰기 시작했다.&그녀는 자신의 감정을 정리했다.&그 편지는 그녀가 겪은 모든 과정을 담았다.&이 과정에서 그녀는 사과를 하지 않았지만, 자신을 재정의했다.&그녀는 새로운 길을 선택했다.
+여자1: 이 소문이 내 인생을 바꿨다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, presenting in a bright investor meeting room, 1920x1080]
+나레이터: 서연은 투자자들을 앞에 서 있었다.&그녀는 열정과 비전을 전했다.&그들은 눈을 크게 뜨며 그녀의 이야기를 들었다.&서연은 자신이 만든 앱이 사회적 가치를 제공한다는 것을 강조했다.&그러나, 투자는 아직 이뤄지지 않았다.
+여자1: 이 프로젝트에 투자해 주실 수 있나요?&서연은 설득력 있게 말했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, crying quietly in a dark corner of a small office, 1920x1080]
+나레이터: 밤이 깊어질수록 서연은 한적한 사무실에서 눈물을 닦았다.&그녀는 실패를 이겨내려 했다.&마지막 투자 제안이 거절되었고, 그녀는 심리적 충격을 받았다.&그러나 그 순간은 새로운 시작의 시작이 되었다.&하늘은 비가 오듯 흐리게 빛났다.
+여자1: 난 아직 끝나지 않았어.&서연은 결연한 눈빛으로 말했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, working late night on her laptop in a shared workspace, 1920x1080]
+나레이터: 서연은 밤새 열심히 코딩했다.&그녀는 마음속에 꺼진 불꽃을 다시 찾았다.&새로운 아이디어가 서서히 형성되었다.&그녀는 이 앱이 사람들의 삶을 편리하게 만들 것이라 믿었다.&그 꿈이 실제가 되었고, 그녀는 앞으로 나아갔다.
+여자1: 오늘도 코드를 마무리했어.&서연은 자신감 있게 말했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing in front of a whiteboard with a big diagram, 1920x1080]
+나레이터: 수개월이 지난 뒤, 서연은 회의실 앞에 서 있었다.&그녀의 설계는 이제 구체적이었다.&그녀는 투자자들을 다시 만나게 되었다.&그들은 서연의 비전을 확인하고 흥분했다.&그날 밤, 서연은 자부심을 느꼈다.
+여자1: 우리는 이 프로젝트를 진행할 준비가 돼 있어.&서연은 결심했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, unveiling her product at a bustling tech expo, 1920x1080]
+나레이터: 서연은 기술 박람회에서 제품을 공개했다.&관객들은 박람회 장면에서 그녀의 아이디어에 감탄했다.&그녀는 사람들에게 실제로 도움이 되는 소프트웨어를 소개했다.&그 순간, 소문은 긍정적인 이야기가 되었다.&관객의 박수를 받으며 전진했다.
+여자1: 이거 너도 써봐!&서연은 환하게 웃었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a balcony with city lights below, 1920x1080]
+나레이터: 서연은 밤하늘을 바라보며 고요한 시간을 보냈다.&이제는 소문이 불멸의 브랜드로 변했다.&그녀는 조용히 자신의 성취를 느꼈다.&과거의 소문은 이제 다섯억 원의 가치를 품었다.&그녀는 스스로를 감탄했다.
+여자1: 한때의 소문이 내 인생을 바꾸었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, signing a contract in a sleek office, 1920x1080]
+나레이터: 서연은 정식 계약서를 손에 들고 서명했다.&그 계약은 그녀의 회사가 성장할 수 있는 기반을 제공했다.&그녀는 눈을 감고 인생을 반성했다.&그때, 옛날의 소문이 사라졌다.&이제는 새로운 시작이 시작되었다.
+여자1: 이제 나는 CEO야.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, walking into her new office building, 1920x1080]
+나레이터: 서연은 새로운 사무실 건물에 발을 들여보았다.&그곳은 진정한 성공의 상징이었다.&그녀는 사무실을 둘러보며 미소를 지었다.&그곳에서 그녀는 팀을 모았다.&그것은 진정한 시작이었다.
+여자1: 이곳이 우리 팀의 새로운 본거지야.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, sitting at a conference table with her team, 1920x1080]
+나레이터: 서연은 팀원들과 회의를 진행했다.&그녀는 프로젝트의 방향을 제시했다.&그들은 모두 고개를 끄덕이며 동의했다.&그녀는 자신이 만든 비전을 실현했다.&그것은 매우 보람있었다.
+여자1: 여러분의 노력이 우리를 이끌고 있어.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, watching a video call with her former boss, 1920x1080]
+나레이터: 서연은 과거의 상사를 영상 통화에서 만났다.&그는 이제 회사를 떠난 이유를 이해했다.&그는 그녀에게 격려를 전했다.&서연은 감사의 말을 전했다.&그때, 그녀는 과거를 인정했다.
+여자1: 감사합니다, 오빠.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a stage at a startup pitch event, 1920x1080]
+나레이터: 서연은 스타트업 피치 이벤트에서 무대에 올랐다.&그녀는 청중에게 열정을 전달했다.&그녀는 그녀의 비전을 보여주었다.&그녀는 스스로의 실력에 자부심을 느꼈다.&관객은 열광했다.
+여자1: 다음 단계는 우리가 나아갈 길이야.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, alone in her office, staring at a wall of product screenshots, 1920x1080]
+나레이터: 서연은 혼자 사무실에서 제품 화면을 바라봤다.&그녀는 스스로를 평가했다.&그가 세월을 뒤돌아보며 깨달았다.&이제 그녀가 만든 소프트웨어는 사람들을 도와주고 있다.&이것이 그녀의 여정이다.
+여자1: 나는 내 인생을 바꾸는 데 성공했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing at a podium in a large conference hall, 1920x1080]
+나레이터: 서연은 대형 회의실에서 연설을 하고 있었다.&그녀는 회사를 세운 길을 공유했다.&과거의 소문을 바라보며 웃었다.&그녀는 행복을 찾았다.&이제 그녀는 자신이 만든 브랜드가 세상에 닿을 것이라 믿었다.
+여자1: 오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 다음 이야기에도 함께해 주세요.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a balcony with city lights below, 1920x1080]
+나레이터: 창밖의 도시가 반짝이고, 저녁 안개가 부드럽게 퍼져 있다.&서연은 발코니에서 눈을 감으며 지난 밤의 파란빛을 마주했다.&그녀의 내면에 묻어 있는 질문은 아직도 답을 찾지 못했다.&그때, 작은 알림음이 휴대폰에서 울리며 조용한 순간을 깨웠다.&전화 화면에는 한 줄의 메시지가 떴다: “오늘의 결정은 내일을 바꾼다.” 그녀는 숨을 한 번 멈추며 화면을 바라봤다.&그 단어 하나가 모든 것을 바꿔 놓을 것 같았다.&사람들은 오히려 그 도시의 거리에 실린 야경을 보며 그녀를 바라보았다.&서연은 그 풍경 속에서 한 가지 결심을 했다: 이제는 두려움을 버리고 새로운 길을 걸을 것이라고 스스로 다짐했다.
+여자1: 그 말이 무슨 의미야?&서연은 조심스레 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a balcony with city lights below, 1920x1080]
+나레이터: 그날 새벽, 서연은 다시 발코니로 올랐다.&바람이 차가운 공기를 휙휙 불리며 도시를 뒤덮었다.&그녀는 늘여 무시했던 작은 메일을 꺼내어 살펴보았다.&'과거와의 연결'이라는 제목이 담긴 메일이 그때 나타났다.&서연은 차분히 읽으며 마음속에 끔찍한 충격과 동시에 새로운 기회를 느꼈다.&그 메시지는 곧 그녀가 내일의 결정을 재검토하도록 이끌었다.
+여자1: 이게 사실이라면, 지금 내가 어떤 길을 가야 할까?&서연은 깊은 한숨을 내쉬며 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a balcony with city lights below, 1920x1080]
+나레이터: 밤이 다시 깊어 가는 순간, 서연은 한 줄의 문자를 읽었다.&"우리가 만든 아이디어가 세상을 바꿀 수 있다면, 너에게 영원히 기다리는 자가 있다." 그 말에 눈이 반짝였다.&그녀는 하늘을 바라보며 팀원들의 열정과 잠재력을 상상했다.&이 순간, 서연은 더욱 강렬한 결단을 하게 되었고, 그 결심은 새로운 팀과 함께 공유되었다.
+여자1: 우리 모두가 함께 이 여정을 걸어가야 해.&서연은 고개를 끄덕이며 말했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing on a balcony with city lights below, 1920x1080]
+나레이터: 서연은 작은 사각형 안에서 그동안의 흐름을 다시 한 번 되짚어 보았다.&밤이 깊어갈수록 모든 것이 더 맑아졌다.&그 순간 그녀는 과거의 소문이 결국 자신을 이끌어 주었다는 사실을 깨달았다.&그 빛나는 도시에 그녀는 마지막으로 마음을 놓고, 눈을 감았다.
+여자1: 이제 내가 할 일은 무엇인가?&서연은 차분히 물었다.

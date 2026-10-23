@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261023_161058_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+사기폭로
+
+CAST:
+나레이터: 나레이터
+여자1: 수지
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+가짜 영수증 폭로
+
+THUMBNAIL_SHORTS:
+가짜 영수증 폭로
+
+[SCENE: night shift in a small convenience store, fluorescent lights flickering, 1080x1920]
+나레이터: 편의점 야간 근무 중, 가짜 영수증이 내 손에 들어왔다.
+
+[SCENE: a Korean woman in her twenties with short black hair, wearing a blue uniform, night shift in a convenience store, sorting receipts, 1080x1920]
+나레이터: 나는 편의점 야간 알바를 하는 수지, 바쁜 밤에 영수증을 정리한다.
+
+[SCENE: a Korean woman in her twenties with short black hair, wearing a blue uniform, night shift in a convenience store, looking at a suspicious receipt, 1080x1920]
+나레이터: 나는 가짜 영수증을 발견했고, 동료가 그걸 숨겼다고 추측했다.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 두 번 눌러서 결말을 확인하세요.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: a Korean woman in her twenties with short black hair, wearing a blue uniform, handing receipt to police officer outside convenience store, 1080x1920]
+나레이터: 나는 영수증을 경찰에 전달했고, 사장님이 잡혔다.
+
+[SCENE: a Korean woman in her twenties with short black hair, wearing a blue uniform, looking thoughtful, 1080x1920]
+나레이터: 여러분이 가짜 영수증을 발견했다면, 바로 신고하겠어요?

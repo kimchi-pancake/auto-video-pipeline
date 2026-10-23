@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261023_162235_shorts
+
+:
+10801920
+
+CATEGORY:
+직장생활
+
+CAST:
+나레이터: 나레이터
+여자1: 한국인 여성으로 20대 후반, 짧은 검은 머리를 하고, 해군 블레이저를 입고 자신감 있는 태도를 보인다.
+
+BGM:
+행복.3
+
+THUMBNAIL_LONG:
+회식 자리에서 퍼진 거짓말, 주인공은 스타트업 CEO가 된다
+
+THUMBNAIL_SHORTS:
+회식 자리에서 퍼진 거짓말, 주인공은 스타트업 CEO가 된다
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, a Korean man in his early thirties with messy dark hair, wearing a gray suit, stoic expression, standing at a table in a dimly lit restaurant, late evening, 1080x1920]
+나레이터: 회식이 끝나자 소문이 퍼졌다.&"서연이 사임했다"는 얘기가 회의실을 가득 채웠다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing at a window seat, looking startled, 1080x1920]
+여자1: 무슨 소문이야?&서연은 혼란스러운 표정으로 물었다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing in the hallway, scrolling her phone, 1080x1920]
+나레이터: 소문은 회사 전체로 번졌다.&동료들은 서연을 비난하며 화를 냈다.&서연은 고개를 끄덕이며 내키지 않는 결정을 내렸다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 이 감정은 빨간 하트로 묘사된다.&감정이 폭발하기 직전, 화면은 불꽃처럼 커진다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing at a small table in a quiet cafe, holding a notebook, 1080x1920]
+나레이터: 마지막에 남자1이 나와 함께 진실을 털어놓았다.&그는 서연에게 "난 네가 내게 방해가 되어서"라고 고백했다.&서연은 충격 속에서도 새로운 결심을 했다.
+
+[SCENE: a Korean woman in her late twenties with short black hair, wearing a navy blazer, confident demeanor, standing at a podium in a large conference hall, 1080x1920]
+여자1: 오늘이 끝이 아니야.&서연은 CEO가 되었다.&여러분 생각은요?&서연이 당신이라면 이 소문에 어떻게 대처했을까요?
