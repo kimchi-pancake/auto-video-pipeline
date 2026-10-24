@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261024_163423_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+층간소음
+
+CAST:
+나레이터: 나레이터
+여자1: 은지
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+회비 모으는 중 비밀 일기장
+
+THUMBNAIL_SHORTS:
+회비 모으는 중 비밀 일기장
+
+[SCENE: a Korean woman in her late twenties with short brown hair, wearing a light blue sweater, a woman looking at a hidden diary on a wooden table in a shared kitchen, 1080x1920]
+여자1: 동호회 회비 모으는 중, 비밀 일기장이 깜짝 등장했다.
+
+[SCENE: a shared kitchen with a wooden table, sunlight streaming through the window, 1080x1920]
+여자1: 이 동호회는 매달 회비를 모아 부엌 기기를 사는 데 쓰는데, 한 주인은 숨겨진 비밀을 발견했다.&이 다음 내용이 사실 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: a Korean woman in her late twenties with short brown hair, wearing a light blue sweater, a woman whispering to a group of fellow club members in the kitchen, 1080x1920]
+여자1: 그러던 중, 회비 모금 과정에서 누군가가 금전적 혜택을 무단으로 가져갔다는 소문이 돌기 시작했다.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE: a rooftop balcony overlooking the building at dusk, 1080x1920]
+나레이터: 비밀 일기장에는 건물주가 부동산 개발 계획을 세우고 있다는 내용이 적혀 있었고, 우리는 그 정보를 이용해 임대 계약을 재협상했다.&오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: a shared kitchen with a wooden table, evening lighting, 1080x1920]
+나레이터: 이제 우리 동호회는 안심하고 회비를 모을 수 있게 됐다.&여러분이 이 동호회 회원이었다면, 비밀 일기장을 발견했을 때 어떻게 행동했을까요?
