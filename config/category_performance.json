@@ -1,7 +1,13 @@
 {
   "웃짬": {
-    "computed_at": "2026-10-19T00:02:31+00:00",
+    "computed_at": "2026-10-25T23:59:44+00:00",
     "long": [
+      {
+        "category": "고부갈등",
+        "count": 1,
+        "avg_views": 1.0,
+        "avg_retention": 28.660000000000004
+      },
       {
         "category": "관절근육",
         "count": 1,
@@ -11,7 +17,7 @@
       {
         "category": "갑질사건",
         "count": 2,
-        "avg_views": 1.5,
+        "avg_views": 2.0,
         "avg_retention": 0.1
       },
       {
@@ -21,15 +27,9 @@
         "avg_retention": 0.0
       },
       {
-        "category": "수면건강",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 0.0
-      },
-      {
         "category": "위험식품",
         "count": 1,
-        "avg_views": 2.0,
+        "avg_views": 1.0,
         "avg_retention": 0.0
       },
       {
@@ -59,46 +59,58 @@
     ],
     "shorts": [
       {
+        "category": "고부갈등",
+        "count": 1,
+        "avg_views": 131.0,
+        "avg_retention": 77.68
+      },
+      {
         "category": "관절근육",
         "count": 3,
         "avg_views": 95.66666666666667,
         "avg_retention": 63.88
       },
       {
-        "category": "사기폭로",
+        "category": "혈관혈압",
         "count": 2,
-        "avg_views": 14.0,
-        "avg_retention": 59.31
+        "avg_views": 2.0,
+        "avg_retention": 54.115
       },
       {
         "category": "층간소음",
-        "count": 1,
-        "avg_views": 45.0,
-        "avg_retention": 55.7
+        "count": 4,
+        "avg_views": 25.75,
+        "avg_retention": 52.905
       },
       {
         "category": "가족관계",
         "count": 2,
-        "avg_views": 59.0,
-        "avg_retention": 52.875
+        "avg_views": 60.0,
+        "avg_retention": 52.83
+      },
+      {
+        "category": "사기폭로",
+        "count": 2,
+        "avg_views": 23.0,
+        "avg_retention": 52.489999999999995
+      },
+      {
+        "category": "복수사이다",
+        "count": 5,
+        "avg_views": 25.0,
+        "avg_retention": 48.638
       },
       {
         "category": "뼈건강",
         "count": 4,
-        "avg_views": 2.25,
-        "avg_retention": 47.144999999999996
+        "avg_views": 2.5,
+        "avg_retention": 45.585
       },
       {
-        "category": "혈관혈압",
+        "category": "이웃분쟁",
         "count": 3,
-        "avg_views": 3.0,
-        "avg_retention": 47.01666666666667
-      },
-      {
-        "category": "복수사이다",
-        "count": 3,
-        "avg_views": 10.0,
-        "avg_retention": 32.41
+        "avg_views": 36.333333333333336,
+        "avg_retention": 35.690000000000005
       },
       {
         "category": "부부갈등",
@@ -107,22 +119,10 @@
         "avg_retention": 31.123333333333335
       },
       {
-        "category": "이웃분쟁",
-        "count": 3,
-        "avg_views": 33.0,
-        "avg_retention": 30.790000000000003
-      },
-      {
         "category": "갑질사건",
         "count": 4,
         "avg_views": 10.0,
         "avg_retention": 25.935
-      },
-      {
-        "category": "수면건강",
-        "count": 1,
-        "avg_views": 170.0,
-        "avg_retention": 25.47
       },
       {
         "category": "직장생활",
@@ -131,44 +131,62 @@
         "avg_retention": 24.28142857142857
       },
       {
-        "category": "위험식품",
-        "count": 4,
-        "avg_views": 1.0,
-        "avg_retention": 20.1
+        "category": "연애감정",
+        "count": 2,
+        "avg_views": 61.0,
+        "avg_retention": 19.615000000000002
       },
       {
         "category": "장건강",
-        "count": 1,
-        "avg_views": 49.0,
-        "avg_retention": 16.48
+        "count": 3,
+        "avg_views": 17.333333333333332,
+        "avg_retention": 17.35666666666667
       },
       {
         "category": "반전인생",
         "count": 1,
         "avg_views": 1.0,
         "avg_retention": 5.75
+      },
+      {
+        "category": "수면건강",
+        "count": 1,
+        "avg_views": 4.0,
+        "avg_retention": 0.0
+      },
+      {
+        "category": "위험식품",
+        "count": 1,
+        "avg_views": 1.0,
+        "avg_retention": 0.0
       }
     ]
   },
   "도개": {
-    "computed_at": "2026-10-19T00:02:32+00:00",
+    "computed_at": "2026-10-25T23:59:44+00:00",
     "long": [
+      {
+        "category": "갑질사건",
+        "count": 1,
+        "avg_views": 1.0,
+        "avg_retention": 2.77
+      },
       {
         "category": "수면건강",
         "count": 1,
-        "avg_views": 29.0,
+        "avg_views": 31.0,
         "avg_retention": 0.22
+      },
+      {
+        "category": "이웃분쟁",
+        "count": 2,
+        "avg_views": 6.5,
+        "avg_retention": 0.19
       },
       {
         "category": "부모자식갈등",
         "count": 1,
         "avg_views": 2.0,
-        "avg_retention": 0.0
-      },
-      {
-        "category": "눈건강",
-        "count": 1,
-        "avg_views": 1.0,
         "avg_retention": 0.0
       },
       {
@@ -178,18 +196,18 @@
         "avg_retention": 0.0
       },
       {
-        "category": "이웃분쟁",
+        "category": "직장생활",
         "count": 2,
-        "avg_views": 4.5,
+        "avg_views": 2.0,
         "avg_retention": 0.0
       }
     ],
     "shorts": [
       {
         "category": "층간소음",
-        "count": 1,
-        "avg_views": 33.0,
-        "avg_retention": 327.07
+        "count": 3,
+        "avg_views": 98.66666666666667,
+        "avg_retention": 152.19333333333333
       },
       {
         "category": "체중대사",
@@ -198,10 +216,16 @@
         "avg_retention": 145.52
       },
       {
+        "category": "반전인생",
+        "count": 1,
+        "avg_views": 15.0,
+        "avg_retention": 52.25
+      },
+      {
         "category": "고부갈등",
         "count": 1,
-        "avg_views": 261.0,
-        "avg_retention": 48.93
+        "avg_views": 245.0,
+        "avg_retention": 51.65
       },
       {
         "category": "뼈건강",
@@ -217,21 +241,21 @@
       },
       {
         "category": "갑질사건",
-        "count": 4,
-        "avg_views": 81.75,
-        "avg_retention": 40.397499999999994
+        "count": 5,
+        "avg_views": 66.4,
+        "avg_retention": 42.098
+      },
+      {
+        "category": "치매인지",
+        "count": 1,
+        "avg_views": 106.0,
+        "avg_retention": 35.12
       },
       {
         "category": "우정배신",
         "count": 1,
-        "avg_views": 286.0,
+        "avg_views": 281.0,
         "avg_retention": 27.6
-      },
-      {
-        "category": "치매인지",
-        "count": 2,
-        "avg_views": 54.5,
-        "avg_retention": 27.56
       },
       {
         "category": "직장생활",
@@ -240,51 +264,39 @@
         "avg_retention": 27.38
       },
       {
+        "category": "복수사이다",
+        "count": 3,
+        "avg_views": 187.0,
+        "avg_retention": 26.213333333333335
+      },
+      {
         "category": "이웃분쟁",
-        "count": 11,
-        "avg_views": 67.9090909090909,
-        "avg_retention": 24.570909090909087
-      },
-      {
-        "category": "수면건강",
-        "count": 1,
-        "avg_views": 122.0,
-        "avg_retention": 24.08
-      },
-      {
-        "category": "혈관혈압",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 22.71
+        "count": 13,
+        "avg_views": 62.61538461538461,
+        "avg_retention": 19.954615384615387
       },
       {
         "category": "연애감정",
-        "count": 1,
-        "avg_views": 20.0,
-        "avg_retention": 22.62
-      },
-      {
-        "category": "복수사이다",
         "count": 2,
-        "avg_views": 233.5,
-        "avg_retention": 22.075000000000003
-      },
-      {
-        "category": "눈건강",
-        "count": 1,
-        "avg_views": 33.0,
-        "avg_retention": 7.66
+        "avg_views": 29.0,
+        "avg_retention": 19.01
       },
       {
         "category": "위험식품",
-        "count": 5,
-        "avg_views": 1.2,
-        "avg_retention": 7.2620000000000005
+        "count": 2,
+        "avg_views": 1.0,
+        "avg_retention": 0.9450000000000001
       },
       {
         "category": "스트레스",
         "count": 1,
         "avg_views": 4.0,
+        "avg_retention": 0.0
+      },
+      {
+        "category": "눈건강",
+        "count": 1,
+        "avg_views": 1.0,
         "avg_retention": 0.0
       }
     ]
