@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261025_161334_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지영
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+퇴직금이 이웃을 물었다
+
+THUMBNAIL_SHORTS:
+퇴직금이 이웃을 물었다
+
+[SCENE: Korean female in late 30s with short black hair, wearing a blue jacket, walking a dog on a city street at dusk, 1080x1920]
+나레이터: 퇴직금 정산을 위해 길을 걷던 어느 날, 이웃 아저씨 강아지가 내 개를 물었어요.
+
+[SCENE: Korean female in late 30s with short black hair, wearing a blue jacket, holding a purse near a bank entrance, 1080x1920]
+여자1: 퇴직금을 받으러 은행에 가야 해서 강아지를 데리고 걸었어요.
+
+[SCENE: Korean female in late 30s with short black hair, wearing a blue jacket, looking frustrated as neighbor's dog bites her dog, 1080x1920]
+나레이터: 이웃은 강아지가 다친 것에 대해 소송을 요구했고, 나는 퇴직금이 있다는 걸 보여줄 수밖에 없었죠.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+
+[SCENE: Korean female in late 30s with short black hair, wearing a blue jacket, standing with a bank officer in a bank lobby, 1080x1920]
+나레이터: 그때, 이웃은 내가 사라진 동료의 퇴직금이 아니라 그가 놓친 계좌라며 돈을 돌려달라고 했어요.&결국 나는 그 돈을 사용해 수의료비를 지불했고, 이웃은 사과하며 내 돈을 돌려줬죠.&오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 응원해 주세요.
+
+[SCENE: Korean female in late 30s with short black hair, wearing a blue jacket, walking her dog back home, 1080x1920]
+나레이터: 퇴직금이 예상치 못한 사이다가 될 수 있다는 사실, 여러분은 같은 상황이라면 퇴직금으로 이웃의 소송을 해결하겠어요?
