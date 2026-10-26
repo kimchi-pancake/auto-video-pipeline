@@ -5416,5 +5416,25 @@
     "uploaded_at": "2026-10-25T17:25:05+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "VW1Ia6cBf5A",
+    "channel": "웃짬",
+    "category": "사기폭로",
+    "title": "비밀 일기장 폭로",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-26T16:25:53+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "PcdVnHVH9FA",
+    "channel": "도개",
+    "category": "직장생활",
+    "title": "교실 안에서 5,000,000원 알림이 울렸다!",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-26T16:26:04+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
