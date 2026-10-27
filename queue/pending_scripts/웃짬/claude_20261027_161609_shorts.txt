@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261027_161609_shorts
+
+:
+10801920
+
+CATEGORY:
+갑질사건
+
+CAST:
+나레이터: 나레이터
+여자1: 선아
+
+BGM:
+배경_피아노.3
+
+THUMBNAIL_LONG:
+평범한 배달일이었는데, 사장이 블랙박스를 찍었다
+
+THUMBNAIL_SHORTS:
+평범한 배달일이었는데, 사장이 블랙박스를 찍었다
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a yellow hoodie, inside a small office, looking surprised, 1080x1920]
+나레이터: 배달을 끝낸 뒤, 사장이 갑자기 블랙박스를 꺼냈다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a yellow hoodie, office, 선아가 사장 옆에 서 있다, 1080x1920]
+여자1: "지금 그 녹화는 왜 필요해요?"
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a yellow hoodie, 사장 사무실, 화면에 블랙박스 영상이 나와 있다, 1080x1920]
+나레이터: 그 영상은 단순한 물건이 아니라, 사장이 자신을 이용한 폭력이 담겨 있었다.&그런데 며칠 뒤, 뜻밖의 일이 벌어졌다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a yellow hoodie, office, 선아가 비디오를 보여준다, 1080x1920]
+나레이터: 그리고 결국, 선아는 블랙박스의 진실을 폭로했다.&사장은 사무실에서 해고되었으며, 직원들은 다시 평화를 찾았다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a yellow hoodie, 카메라가 가까워지며, 선아가 질문을 던진다, 1080x1920]
+나레이터: 여러분, 이런 상황에서 당신은 어떻게 행동하시겠습니까?&여러분의 생각을 댓글로 알려주세요.

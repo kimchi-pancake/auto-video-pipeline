@@ -1,0 +1,40 @@
+RUN_ID:
+claude_20261027_163949_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 수민
+남자1: 현우
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+스터디실 책 사라짐
+
+THUMBNAIL_SHORTS:
+스터디실 책 사라짐
+
+[SCENE:inside a basement study room, dim lighting, 1080x1920]
+나레이터: 지하 2층 스터디실, 바로 이 순간, 한 친구가 빌린 노트북이 사라졌습니다.
+
+[SCENE:a Korean woman in her twenties with short black hair, wearing a blue hoodie, standing in the basement study room, looking at a missing laptop case, 1080x1920]
+여자1: 저 노트북 어디 갔어요?
+
+[SCENE:a Korean man in his thirties with short gray hair, wearing a gray suit, standing by a storage door in the basement study room, pointing, 1080x1920]
+남자1: 내가 그거 없다고 말했어?&그거 내 세대에 있어.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요
+
+[SCENE:standing at the mailbox, looking at a phone, 1080x1920]
+나레이터: 그때 현우가 우편함에 노트북을 넣어 두었더니, 관리인에게서 연락이 왔다.
+
+[SCENE:standing in the basement study room, looking at the camera, 1080x1920]
+나레이터: 이렇게 빌려준 물건이 사라질 때, 여러분은 어떻게 대처하시나요?&오늘 이야기가 재밌으셨다면, 좋아요와 구독으로 다음 이야기에도 함께해 주세요.
