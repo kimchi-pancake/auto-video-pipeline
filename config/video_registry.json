@@ -5496,5 +5496,45 @@
     "uploaded_at": "2026-10-27T17:37:02+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "IKa_f80Mwrw",
+    "channel": "도개",
+    "category": "갑질사건",
+    "title": "상속이었는데 삼촌이 숨은?",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-28T16:48:38+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "J0KGFsME6yA",
+    "channel": "웃짬",
+    "category": "층간소음",
+    "title": "스터디 끝, 아래층에서 '숫자 8' 소리, CCTV가 증거를 보여주다",
+    "is_shorts": false,
+    "uploaded_at": "2026-10-28T16:59:15+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "RbJUw8GEBpU",
+    "channel": "웃짬",
+    "category": "층간소음",
+    "title": "스터디 끝, 아래층에서 '숫자 8' 소리, CCTV가 증거를 보여주다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-28T17:14:54+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "9aAmnki5w9Y",
+    "channel": "웃짬",
+    "category": "갑질사건",
+    "title": "회식자리에서사장님이폭언했습니다",
+    "is_shorts": true,
+    "uploaded_at": "2026-10-28T17:30:32+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
