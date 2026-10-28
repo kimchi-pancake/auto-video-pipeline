@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261028_163049_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+갑질사건
+
+CAST:
+나레이터: 나레이터
+여자1: 수연
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+상속이었는데 삼촌이 숨은?
+
+THUMBNAIL_SHORTS:
+상속이었는데 삼촌이 숨은?
+
+[SCENE: the living room of a modest inherited house, afternoon light filtering through dusty windows, a stack of legal papers on the table, 1080x1920]
+나레이터: 삼촌이 상속 서류를 변조했습니다.
+
+[SCENE: a Korean woman in her late 20s with short black hair, wearing a gray sweater, standing in the living room, reviewing papers, 1080x1920]
+여자1: 수연은 상속받은 작은 집을 관리하려고 했습니다.
+
+[SCENE: a Korean woman in her late 20s with short black hair, wearing a gray sweater, holding a phone, watching a video on a laptop, 1080x1920]
+여자1: 수연은 블랙박스 영상을 통해 삼촌이 부당한 거래를 하고 있음을 확인했고, 그때 진짜 반전이 시작되었다&이 다음 내용이 가장 중요합니다, 잠시만 더 함께해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background]
+나레이터: 오늘 이야기가 재밌으셨다면, 구독과 멤버십으로 응원해 주세요.
+
+[SCENE: a Korean woman in her late 20s with short black hair, wearing a gray sweater, standing at a courthouse, holding a folder, 1080x1920]
+나레이터: 수연은 그 영상을 공개해 삼촌을 폭로했고, 법원은 삼촌에게 재산을 반환하게 했다.
+
+[SCENE: a Korean woman in her late 20s with short black hair, wearing a gray sweater, standing by a window looking out, 1080x1920]
+나레이터: 여러분이 수연이었다면, 삼촌이 비밀을 숨겼을 때 어떻게 대처했을까요?
