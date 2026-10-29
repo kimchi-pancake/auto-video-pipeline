@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261029_161500_shorts
+
+:
+10801920
+
+CATEGORY:
+이웃분쟁
+
+CAST:
+나레이터: 나레이터
+여자1: 지은
+
+BGM:
+아늑한_피아노.3
+
+THUMBNAIL_LONG:
+3명 캠퍼, 이웃의 SNS가 불안을 폭발시켰다
+
+THUMBNAIL_SHORTS:
+3명 캠퍼, 이웃의 SNS가 불안을 폭발시켰다
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a green hoodie, a dimly lit campsite, fire pit, night, 1080x1920]
+나레이터: "숲 속 캠프장에 이웃집 소리를 듣고 난 뒤, 사람들의 불안이 폭발했다."&"이웃이 올린 소셜 미디어 포스트가 사건을 촉발시켰다."
+
+[SCENE:a Korean man in his thirties with short brown hair, wearing a blue jacket, campers around the fire, whispering, 1080x1920]
+나레이터: "한 캠퍼는 '정말 이상해'라며 두려움을 드러냈고, 다른 한 사람은 '그냥 장난일 거야'라며 논쟁을 일으켰다."&"불안은 밤을 짙게 감쌌다."
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a green hoodie, the forest, the sound echoing, 1080x1920]
+나레이터: "하지만 사실 그 소리는 실종된 야생 동물 감시원의 야간 경보음이었고, 그는 밤마다 울부짖었다."&"놀라운 진실이 밝혀졌다."
+
+[SCENE:a Korean man in his thirties with short brown hair, wearing a blue jacket, campers relieved, the forest calm, 1080x1920]
+나레이터: "캠퍼들은 안도의 숨을 내쉬며 서로를 다독였다."&"이웃은 미소를 띠며 이야기를 마무리했다."
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: "화면을 두 번 눌러 결말을 확인하세요."&"이제 여러분이 생각하는 것은?"
+
+[SCENE:a Korean woman in her late twenties with short black hair, wearing a green hoodie, the forest dawn, the fire gone, 1080x1920]
+나레이터: "이와 같은 밤에 겪은 미스터리가 있나요?"&"그때 여러분은 어떻게 행동했나요?"&"좋아요와 구독으로 다음 이야기도 함께해 주세요."
