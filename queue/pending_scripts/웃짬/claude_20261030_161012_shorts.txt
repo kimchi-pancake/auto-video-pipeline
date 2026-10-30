@@ -1,0 +1,32 @@
+RUN_ID:
+claude_20261030_161012_shorts
+
+:
+10801920
+
+CATEGORY: 이웃분쟁  
+
+CAST:  
+나레이터: 나레이터
+여자1: 소영
+
+BGM: _.3
+
+_LONG: "무심한 한 장면이 이웃을 다치게 했다"
+
+_SHORTS: "무심한 한 장면이 이웃을 다치게 했다"
+
+[SCENE:a Korean woman in her 30s with short dark hair, wearing a blue scrubs, home kitchen, late night, 1080x1920]  
+나레이터: 밤샘 근무를 마친 간호사 소영이 집에 들어가자, 이웃집 CCTV에 보인 그녀의 모습이 논란이 되었습니다.
+
+[SCENE:a Korean man in his 50s with short gray hair, wearing a white lab coat, neighbor's office, late night, 1080x1920]  
+남자1: 정우는 그 영상을 소셜 미디어에 올리며, 반응을 기대했습니다.&그는 무심코 다가간 순간이 큰 거대한 논란으로 번질 수 있다는 걸 몰랐습니다.
+
+[SCENE:a Korean woman in her 30s with short dark hair, wearing a blue scrubs, home hallway, dim light, 1080x1920]  
+여자1: 소영은 "이게...&왜?" 라고 감탄하며, 친구에게 전화를 걸었습니다.&그녀는 이웃의 사생활이 침해됐다고 느꼈습니다.&근데 진짜 반전은 지금부터입니다.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]  
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean woman in her 30s with short dark hair, wearing a blue scrubs, home living room, twilight, 1080x1920]  
+나레이터: 결국 소영은 정우와 직접 만나 사과를 받았고, 두 사람은 서로를 존중하는 관계를 다시 구축했습니다.&여러분은 이 상황에서 이웃이 사생활을 침해된 것으로 느꼈다면 어떻게 대처하실까요?&감사합니다.

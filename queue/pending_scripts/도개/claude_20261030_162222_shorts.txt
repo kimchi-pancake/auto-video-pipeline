@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261030_162222_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+직장생활
+
+CAST:
+나레이터: 나레이터
+여자1: 수지
+남자1: 태영
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+사내 송금 실수, 내가 사기?
+THUMBNAIL_SHORTS:
+사내 송금 실수, 내가 사기?
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray business jacket, standing beside a rental car in a parking lot, night, 1080x1920]
+나레이터: 렌터카 사고 직후, 사내 계좌에 잘못 들어온 3천만 원이 나타났습니다.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray business jacket, in a conference room, looking at a computer screen, 1080x1920]
+여자1: 그 돈이 왜 들어왔는지 알아야 해요.
+
+[SCENE:a Korean man in his early 30s with buzz cut, wearing a blue polo shirt, in the same conference room, pointing to screen, 1080x1920]
+남자1: 실수로 고객이 보낸 거예요&사내에 바로 환불 처리할게요.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray business jacket, outside break room, holding coffee, 1080x1920]
+여자1: 하지만 이미 사내에 입금돼 있어서, 내가 뭘 해야 할까요?
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 이 결말을 확인하려면 화면을 두 번 눌러주세요.
+
+[SCENE:a Korean woman in her late 20s with short black hair, wearing a gray business jacket, standing in a conference room with the manager, smiling, 1080x1920]
+여자1: 결국 사내가 바로 환불해 주었고, 나는 돈을 돌려받았어요&여러분이 이런 상황에 처한다면, 어떻게 대처할까요?

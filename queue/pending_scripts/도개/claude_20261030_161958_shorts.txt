@@ -1,0 +1,42 @@
+RUN_ID:
+claude_20261030_161958_shorts
+
+:
+10801920
+
+CATEGORY:
+고부갈등
+
+CAST:
+나레이터: 나레이터
+여자1: 지은
+
+BGM:
+_.3
+
+THUMBNAIL_LONG:
+평범한 동창회였는데, 할머니가 유언장으로 폭발시켰다
+
+THUMBNAIL_SHORTS:
+평범한 동창회였는데, 할머니가 유언장으로 폭발시켰다
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1080x1920]
+나레이터: 동창회 도중, 지은이 갑자기 손에 쥔 서류를 내밀며, "이건 할머니가 남겨준 유언장이에요!" 라고 외쳤다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1080x1920]
+여자1: (지은) "정말이죠?&이 문서가 우리를 어떻게 바꿀까요?"
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1080x1920]
+나레이터: 수호가 문서를 펼치며, "이거...&내가 아빠에게 맡겼던 거 아니야?" 라는 반응을 보였다.&그는 깜짝 놀란 표정이었다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1080x1920]
+나레이터: 갈등이 격해지며, "우리 아버지가 이 문서를 숨겼다고?" 라는 소리가 울렸다.&그때 문서에 숨겨진 비밀이 드러났다.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 이제 끝을 보려면, 화면을 두 번 눌러 주시고, 흥미로운 결말을 확인해 보세요.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1080x1920]
+여자1: (지은) "이 문서가 우리 가족을 나누거나, 하나로 만들지는 않을까요?"
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1080x1920]
+나레이터: 이 이야기의 마지막에, 당신은 어떤 선택을 하시겠습니까?&당신이 지은이었다면, 할머니의 유언장을 어떻게 처리하셨을까요?

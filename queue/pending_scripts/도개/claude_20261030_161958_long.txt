@@ -1,0 +1,207 @@
+RUN_ID:
+claude_20261030_161958_long
+
+RESOLUTION:
+1920x1080
+
+CATEGORY:
+고부갈등
+
+CAST:
+나레이터: 나레이터
+여자1: 지은
+남자1: 수호
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+평범한 동창회였는데, 할머니가 유언장으로 폭발시켰다
+
+THUMBNAIL_SHORTS:
+평범한 동창회였는데, 할머니가 유언장으로 폭발시켰다
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 오늘, 졸업 20년 만에 동창회가 열렸다.&참석자들은 서로를 바라보며 웃었고,&밤이 깊어가며 불안감이 흐르기 시작했다.
+여자1: (지은) "아, 수호 씨!&오늘도 잘 지내셨나요?"&"지금이야말로 추억을 나누기에 좋은 시간이죠."
+나레이터: 그 순간, 한 줄기 가벼운 바람이 방 안을 휩쓸며, 옛날의 한 장면을 떠올리게 했다.&그리고 서로의 얼굴에 숨겨진 감정이 드러났다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 그의 옆에 앉은 친구들과 한잔하며 과거를 회상했다.&그는 평소보다 부드러운 목소리로 얘기를 이어갔다.&그러던 중에 작은 종이 한 장이 테이블에 떨어졌다.
+남자1: (수호) "이게 뭐지?&무슨 서류인가?"&"아마도 지난 세월 동안 잊혀진 서류일지도 몰라."
+나레이터: 차분히 눈을 깜빡이던 수호는, 자신에게 닥친 새로운 책임감을 느꼈다.&어깨에 무거운 시계를 두드리며 그는 잠시 머뭇거렸다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은이 서류를 건네며, "이건 할머니가 남겨두신 유언장이에요." 라며 놀라운 소식을 전했다.&그녀의 목소리는 갑자기 떨렸다.&동료들은 숨을 죽이며 귀를 기울였다.
+여자1: (지은) "할머니가 남긴 말이죠.&지금 이 유언장은 왜 여기 있었는지 모르겠어요."
+나레이터: 그녀가 서류를 건네며 목소리를 떨리게 한 것은, 그가 보지 못한 비밀을 품고 있었기 때문이었지.&방 안의 정적이 한 층 더 깊어졌다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 손에 쥔 서류를 살펴보며 침묵을 지켰다.&그가 눈을 뜨자, 무거운 숨결이 방 안에 퍼졌다.&이 순간이 다시 되돌릴 수 없다는 것을 깨달았다.
+남자1: (수호) "이런…&할머니가…&누가 남긴 거죠?"&"우리 가족이…&이 서류를 받아야 할 건가?"
+나레이터: 수호의 눈빛이 바뀌면서, 거울처럼 반사되는 실체가 그를 휩싸였다.&그는 생각의 깊이에 빠져 또다시 말문을 열었다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 눈을 가득 채우며, "저는 할머니가 이 유언장을 주셨다고 생각했어요." 라고 말했다.&그녀의 목소리는 바닥을 울렸다.&동창들은 다가가 눈을 비비며 서로를 바라봤다.
+여자1: (지은) "그런데 왜 이걸 숨겼어?&저는 알지 못했어요."
+나레이터: 눈물 대신에 울적한 숨결이 방 안을 흔들었고, 그 순간 누구도 눈에 띄지 않은 이야기가 시작되었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 조심스레 서류를 펼쳤다.&한 장 한 장을 읽으며 그의 눈빛은 눈물로 변했다.&그는 동료들에게 납득이 가지 않는 상황을 설명했다.
+남자1: (수호) "이런 문구가…&제 조카에게 속해 있지 않나요?"&"무엇을 남길지 모른 거예요."
+나레이터: 문서가 손끝에 닿으면서, 과거와 현재가 교차하는 듯한 기분이 밀려왔다.&그때마다 기억의 조각이 잔잔히 끌려왔다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 그 순간, 방 안에 한 조용한 소란이 일었다.&동창들은 서로를 바라보며 심각한 표정을 짓기 시작했다.&대화는 금세 격렬한 논쟁으로 변했다.
+여자1: (지은) "조카가 아니라, 우리 아버지와...&그 당시의 보증서가었어요."
+나레이터: 조용한 소란이 퍼지면서, 서로를 바라보는 눈빛이 더욱 심각해졌다.&무거운 기분이 방 안을 가득 채웠다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 손가락으로 문서를 가리켰다.&그가 말한 순간, 불안과 분노가 교차했다.&동창회는 갈등의 물결 속으로 빠져들었다.
+남자1: (수호) "이 문서가 우리 아버지의 재산을 차지한다면, 우리 가족은 모두 위험에 빠질 수 있어요."&"왜 누군가 숨겨두었죠?"
+나레이터: 수호의 손가락이 문서를 가리키며, 그의 숨이 점점 빠졌다.&그 순간, 가슴 속에서 갈등의 파도가 일었다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 수호의 말을 경청했다.&그녀는 실수한 듯 미안함을 표현하며, "저는 그저 할머니가 맡긴 거라고 믿었어요." 라고 말했다.&모두는 그 말을 반복하며 격려했다.
+여자1: (지은) "제 손으로 그 문서를 넘겼을 때, 제가 뭘 할까 고민했었죠."
+나레이터: 지은의 말에 담긴 진심이 점점 더 깊어졌고, 그녀의 눈빛은 울적했다.&그녀는 내면의 고통을 외쳤다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 카메라처럼 주변을 둘러보았다.&그는 한 번 더 문서를 들여다보며, "이 문서가 우리의 미래를 결정할 수 있습니다." 라고 선언했다.&감정이 끓어올랐다.
+남자1: (수호) "우리가 해야 할 일은 바로 이 문서의 의미를 모두 확인하는 것입니다."
+나레이터: 수호가 빛나는 눈으로 미래를 바라보며, 그 순간을 한 번 더 덧붙였다.&그는 문서의 의미를 새롭게 해석했다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 그때, 한 동창이 손을 내밀었다.&그는 긴장을 풀며, "우리가 할 수 있는 것은 분명히 있습니다." 라며 다가왔다.&서로가 서로를 바라보며 사과를 교환했다.
+여자1: (지은) "죄송합니다.&제가 잘못했어요."
+나레이터: 지은이 손을 내밀며, 서로를 바라보며 과거와 미래를 연결했다.&그 순간, 오랜 시간동안 잠겨 있던 감정이 풀렸다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 동료의 말에 속상함을 숨기지 않았다.&그는 빛나는 눈으로 미래를 생각했다.&그 순간, 그의 시선은 문서에서 벗어나 가족을 향했다.
+남자1: (수호) "우리 모두가 가족이라면, 이 문서가 우리를 나누는 이유가 아니라…"
+나레이터: 수호는 한 번 더 문서를 확인하며, 그 순간을 새롭게 받아들였다.&그들은 앞으로 나아갈 길을 찾았다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 이내 손을 뻗어, "우리의 기억을 서로 지키는 걸로 다시 모자랬으면 좋겠어요." 라고 말했다.&그는 그 말에 고개를 끄덕였다.&분위기는 잠시만큼 부드러워졌다.
+여자1: (지은) "이렇게 함께 할 수 있다면, 다시 기억을 다듬어 볼 수 있겠죠?"
+나레이터: 지은의 말에 담긴 진심이 점점 더 깊어졌고, 그녀의 눈빛은 울적했다.&그녀는 내면의 고통을 외쳤다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 서류를 다시 한 번 확인했다.&그가 말한 순간, 과거와 현재가 교차했다.&그는 오늘의 결정이 모든 것을 바꿀 수 있다는 것을 깨달았다.
+남자1: (수호) "우리가 이 문서를 어떻게 활용해야 할까요?&이 문서는 우리 가족의 미래를 결정합니다."
+나레이터: 수호가 마지막으로 문서를 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띄었다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 그 순간, 방 안에 마치 빛이 번쩍이는 듯한 경악이 흘러갔다.&모두는 작은 기적을 믿으며, 동창회가 낡은 추억과 새로운 갈등으로 바뀌는 것을 느꼈다.&지은이 말했다.
+여자1: (지은) "우리의 기억은 마치 더 이상 바꾸기 어려운 종이처럼 보이지만, 다시 재구성할 수 있어요."
+나레이터: 방 안에 빛이 번쩍이는 듯한 경악이 흘러갔다.&그들은 앞으로의 일들을 새롭게 다짐했다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 눈을 감고 숨을 쉬었다.&그가 눈을 뜨자, 문서의 한 페이지가 빛을 받았다.&그 순간, 그는 현실과 미래를 동시에 바라보며, 또 다른 갈등을 마주했다.
+남자1: (수호) "이 문서가 우리를 나눌지도 모르지만, 가족이 함께라면 이겨낼 수 있어요."
+나레이터: 수호가 숨을 들이쉬며, 문서가 또 다른 미래를 열어줄 것임을 깨달았다.&그의 눈빛은 희망과 두려움이 뒤섞였다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 동창회는 마지막으로 한 자리에 모였다.&그들은 문서를 다시 읽으며, 서로를 향해 말없이 눈을 마주쳤다.&이때, 각자의 마음이 함께했다.
+여자1: (지은) "함께라면 어떤 어려움도 이겨낼 수 있을 거예요."
+나레이터: 동창회가 모여 문서를 다시 읽으며, 서로를 향해 말없이 눈을 마주쳤다.&그 순간, 마음이 하나로 연결되었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 문서에 표시된 날짜를 확인했다.&그는 문서가 언제 작성되었는지에 대해 궁금해했다.&그는 이 정보를 통해 과거를 다시 찾으려 했다.
+남자1: (수호) "이 문서가 언제 쓰였나요?&그때가 왜 중요한지요?"
+나레이터: 수호는 문서가 언제 작성되었는지에 대해 궁금해했다.&그는 이 정보를 통해 과거를 다시 찾으려 했다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 수호의 질문에 미소를 지었다.&그녀는 문서를 가볍게 흔들며, "이 문서는 2003년에 작성된 거 같아요." 라고 말했다.&모두는 흥미를 느꼈다.
+여자1: (지은) "2003년이었군요.&그때는 우리 가족이 큰 변화를 겪었죠."
+나레이터: 지은은 문서를 가볍게 흔들며, "이 문서는 2003년에 작성된 거 같아요." 라고 말했다.&그들은 그 시대를 되돌아보며 새로운 의미를 찾았다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 과거의 기억을 떠올렸다.&그는 눈에 비친 그때의 풍경을 떠올리며, "그때 우리 가족은 새 집을 사야 했어요." 라고 말했다.&그 감정이 복잡해졌다.
+남자1: (수호) "그때 우리 집이 어떻게 변화했나요?&그리고 그 문서는 어떤 역할을 했나요?"
+나레이터: 수호는 과거의 기억을 떠올리며, "그때 우리 집이 어떻게 변화했나요?" 라고 물었다.&그는 과거의 이야기를 다시 꺼냈다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 그 시절의 기억을 재구성했다.&그녀는 "그때 할머니는 그 문서를 숨겼던 이유가 있었습니다." 라고 설명했다.&그 말은 새로운 퍼즐이 되었다.
+여자1: (지은) "그때 할머니는 그 문서가 우리에게 큰 부담이 될까 두려웠어요."
+나레이터: 지은은 그 시절의 기억을 재구성하며, "그때 할머니는 그 문서를 숨겼던 이유가 있었습니다." 라고 설명했다.&그 말은 새로운 퍼즐이 되었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 지은의 말을 듣고, 새로운 의미를 발견했다.&그는 문서를 다시 읽으며, "이게 우리 가족의 과거를 이어주는 연결고리인가?" 라고 물었다.&모두는 미묘한 안도감을 느꼈다.
+남자1: (수호) "이 문서는 우리가 과거를 연결해 주는 다리일까요?"
+나레이터: 수호는 문서를 다시 읽으며, "이게 우리 가족의 과거를 이어주는 연결고리인가?" 라고 물었다.&그는 새로운 희망을 품었다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 수호의 질문에 대답했다.&그녀는 "그래, 이 문서는 우리 과거를 연결해 주는 선물 같아요." 라며 웃었다.&동창은 다시 한 번 웃음을 터뜨렸다.
+여자1: (지은) "그럼 이 문서를 어떻게 활용하면 좋을까요?"
+나레이터: 지은이 웃으며 답했다.&그들은 서로를 믿으며 앞으로 나아갈 수 있었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 다시 한 번 문서를 펼쳤다.&그는 이번에는 가족의 미래를 생각하며, "이 문서가 우리의 미래를 함께 정할 수 있도록 하자." 라고 선언했다.&모두가 고개를 끄덕였다.
+남자1: (수호) "우리 모두가 이 문서를 확인하고, 함께 결정합시다."
+나레이터: 수호는 마지막으로 문서를 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띄었다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 그때, 새벽이 다가온다.&동창회는 마침내 문서를 두고 서로를 바라보며, 미래를 향한 발걸음을 내딛었다.&비밀이 아니라, 새로운 시작을 환영했다.
+여자1: (지은) "이제 우리 가족은 더 강해졌어요."
+나레이터: 그들은 새벽의 차가운 공기 속에서 서로를 바라보며, 새로운 희망을 품었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 마지막으로 문서를 확인했다.&그는 그 날이 지나면서, 모든 문제가 해결되었다는 것을 느꼈다.&그가 마지막으로 말한 말은 강렬했다.
+남자1: (수호) "이제 우리 사이에 더 이상 갈등은 없겠어요."
+나레이터: 수호는 마지막으로 문서를 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띈다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 눈을 감고, "함께라면, 우리는 언제든지 새로운 이야기를 만들 수 있어요." 라고 속삭였다.&그 순간, 동창회는 평온한 분위기로 가득 찼다.&그는 그 말에 고개를 끄덕였다.
+여자1: (지은) "우리 모두의 기억이 서로 연결되어 있군요."
+나레이터: 지은은 눈을 감으며, 그들의 미래를 향한 다짐을 속삭였다.&그 순간, 평온이 자리 잡았다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 다시 한 번 문서를 꺼냈다.&그는 그것을 앞으로 펼쳐, "이 문서는 우리 가족을 하나로 묶는 끈이 될 것입니다." 라고 선언했다.&모두가 감동했다.
+남자1: (수호) "이제 우리는 함께 이 문서를 통해 미래를 만들어갑니다."
+나레이터: 수호는 문서를 다시 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띈다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 말없이 문서를 바라보며, "우리의 과거는 지금 이 순간에 새롭게 태어났어요." 라고 생각했다.&그녀는 미소를 지으며 손을 내밀었다.&그는 그 손을 잡았다.
+여자1: (지은) "우리에게 주어진 것은 바로 지금이야."
+나레이터: 지은이 눈을 감으며, 그들의 미래를 향한 다짐을 속삭였다.&그 순간, 평온이 자리 잡았다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 그 순간에 눈을 감았다.&그는 내면의 평화를 찾으며, 마지막으로 한 마디를 외쳤다.&그 말은 모든 이의 가슴을 울렸다.
+남자1: (수호) "언제나 우리 가족이 함께라면, 무엇이든 이겨낼 수 있을 거야."
+나레이터: 수호는 마지막으로 문서를 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띈다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 결국, 동창회는 평온한 밤을 맞이했다.&그들은 앞으로 다가올 일들에 대해 서로를 격려했다.&그 밤은 마치 새로운 이야기가 시작되는 듯했다.
+여자1: (지은) "우리 함께라면, 어떤 어려움도 충분히 이겨낼 수 있어요."
+나레이터: 그들은 새벽의 차가운 공기 속에서 서로를 바라보며, 새로운 희망을 품었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 손을 들어, 그 순간을 기념했다.&그는 동창들에게 감사의 인사를 전했다.&그들은 서로를 바라보며, 미래를 향해 나아갔다.
+남자1: (수호) "다음에 또 만나면, 이 이야기보다 더 좋은 이야기를 나눠보자."
+나레이터: 수호는 마지막으로 문서를 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띈다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 마지막으로 한 마디를 외쳤다.&그녀는 "이 문서가 우리 사이의 다리를 놓아 줄 거예요." 라고 말하며, 모두를 격려했다.&그 말은 모두의 가슴 속에 깊이 새겨졌다.
+여자1: (지은) "우리의 미래는 바로 우리 손에 달려 있어요."
+나레이터: 지은이 눈을 감으며, 그들의 미래를 향한 다짐을 속삭였다.&그 순간, 평온이 자리 잡았다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 밤이 깊어지며, 두 사람 사이의 거리가 서서히 사라졌다.&그들은 서로의 이야기를 공유하며, 새로운 연결 고리를 찾았다.
+여자1: (지은) "수호, 그때 기억은 아직도 생생해?&그리고 우리 가족이 힘든 시기를 어떻게 헤쳐나갔는지 알려줘."
+나레이터: 그들은 서로를 바라보며, 새로운 희망을 품었다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 방 안을 다시 한 번 돌아보며, 그날의 기억을 돌려보았다.&그는 과거의 사람들에 대한 존경심을 새롭게 불러일으켰다.
+남자1: (수호) "지은, 그 문서를 보며 과거를 되돌아보면, 우리는 얼마나 성장했는지 알 수 있어."
+나레이터: 수호는 다시 문서를 꺼내며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띈다.
+
+[SCENE: a Korean woman in her 50s with short gray hair, wearing a navy blue blouse, standing near a table, 1920x1080]
+나레이터: 지은은 방 안에 남은 빛을 바라보며, 서로에게 다시 한 번 감사를 전했다.&그 순간, 두 사람은 서로를 믿으며 앞으로 나아갈 수 있었다.
+여자1: (지은) "우리 함께라면, 앞으로도 그 누구도 우리를 막을 수 없을 거야."
+나레이터: 지은은 눈을 감으며, 그들의 미래를 향한 다짐을 속삭였다.&그 순간, 평온이 자리 잡았다.
+
+[SCENE: a Korean man in his 50s with short black hair, wearing a charcoal suit, seated at a corner, 1920x1080]
+나레이터: 수호는 마지막으로 손을 모으며, 그 순간을 영원히 기억하기로 결심했다.&그들은 서로를 바라보며, 새로운 역사를 만들어 나가기로 다짐했다.
+남자1: (수호) "지은, 이 문서가 우리를 하나로 묶어 주었지.&앞으로도 함께 걸어가자."
+나레이터: 수호는 마지막으로 문서를 확인하며, 그날이 지나면서 모든 문제가 해결되었다는 것을 느꼈다.&그 감정은 눈에 띈다.
