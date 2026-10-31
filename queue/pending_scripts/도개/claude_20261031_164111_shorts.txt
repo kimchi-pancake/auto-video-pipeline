@@ -1,0 +1,39 @@
+RUN_ID:
+claude_20261031_164111_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+복수사이다
+
+CAST:
+나레이터: 나레이터
+남자1: 정호
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+SNS 한 줄에 카페 사장 복수
+
+THUMBNAIL_SHORTS:
+SNS 한 줄에 카페 사장 복수
+
+[SCENE:a Korean male in his 40s with short black hair, wearing a white apron, standing behind the counter, 1080x1920]
+나레이터: 이곳 동네 카페에서 오늘, 정호 사장에게 SNS 한 줄이 폭탄이 되었다.
+
+[SCENE:a Korean male in his 40s with short black hair, wearing a white apron, standing behind the counter, 1080x1920]
+남자1: "어떤 사람이 '이 카페 무례해요'라고 적었네…&믿고 싶지 않아."
+
+[SCENE:a Korean male in his 40s with short black hair, wearing a white apron, standing behind the counter, 1080x1920]
+남자1: "고객이 다 떠나니 매출이 떨어지고, 저를 깎아내려는 건 분명 누군가의 계획이야."
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요.
+
+[SCENE:a Korean male in his 40s with short black hair, wearing a white apron, standing behind the counter, 1080x1920]
+남자1: "그 게시글의 해시태그를 추적해봤더니, 경쟁 카페 '루미'의 매니저가 자극적 키워드를 넣어 업로드했다는 증거가 나왔어."
+
+[SCENE:a Korean male in his 40s with short black hair, wearing a white apron, standing behind the counter, 1080x1920]
+남자1: "정오에 경영진 회의에서 그 증거를 보여주자마자, 루미 매니저는 머리를 숙이고 사과했어.&내 카페는 평온을 되찾았고, 그 게시글은 삭제됐지.&여러분이 정호였다면, SNS 한 줄에 어떻게 대응했을까요?"

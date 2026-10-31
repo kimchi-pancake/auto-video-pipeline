@@ -1,0 +1,43 @@
+RUN_ID:
+claude_20261031_161115_shorts
+
+:
+10801920
+
+CATEGORY:
+가족관계
+
+CAST:
+나레이터: 나레이터
+여자1: 소라
+
+BGM:
+배경_피아노.3
+
+THUMBNAIL_LONG:
+비밀 일기장을 발견한 날, 형제 관계가 무너졌습니다
+
+THUMBNAIL_SHORTS:
+비밀 일기장을 발견한 날, 형제 관계가 무너졌습니다
+
+[SCENE:a Korean woman in her 30s with short black hair, wearing a navy blazer, the discovery of the diary in the office, 1080x1920]
+나레이터: 사무실에서 잊혀진 서랍을 열자, 비밀 일기장이 나타났다.
+
+[SCENE:a Korean woman in her 30s with short black hair, wearing a navy blazer, she shows it to her brother, they argue, 1080x1920]
+여자1: 이게 내 형이 남겨준 것?&말이야.
+남자1: 그거 사실이야?&이게 왜 숨겨졌지?
+
+[SCENE:a Korean woman in her 30s with short black hair, wearing a navy blazer, the brother admits a hidden plan, 1080x1920]
+남자1: 나는 외부 투자자와 계약을 했고, 그때부터 우리 사이에 비밀이 생겼어.
+
+[SCENE:red heart icon animation pulsing and growing, like button, white background 1080x1920]
+나레이터: 화면을 두 번 눌러서 결말을 확인하세요!
+
+[SCENE:a Korean woman in her 30s with short black hair, wearing a navy blazer, the diary reveals a betrayal, 1080x1920]
+나레이터: 일기장은 우리의 거짓말과 배신을 밝혀냈다.
+
+[SCENE:a Korean woman in her 30s with short black hair, wearing a navy blazer, the family business is shaken, they decide to split, 1080x1920]
+나레이터: 비밀이 밝혀진 뒤, 우리는 사업을 나누고 서로를 배워야 했다.
+
+[SCENE:a Korean woman in her 30s, wearing a navy blazer, the story ends, asking viewers a question, 1080x1920]
+나레이터: 여러분, 비밀을 숨기고 일상에서 가장 작은 거짓말이라도 큰 결과를 가져올 수 있다고 생각하시나요?
