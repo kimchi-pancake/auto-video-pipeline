@@ -122,8 +122,17 @@ def summarize_for_prompt(channel: str | None = None, top_n: int = 3) -> str:
     보게 되는 소재"가 "일단 클릭은 되는 소재"(조회수)보다 다음 소재
     고르는 기준으로 더 직접적입니다. 아직 주간 분석이 안 돌았으면
     기존처럼 조회수 기준으로 폴백합니다."""
+    # 2026-11-01: 채널 방향이 국뽕으로 바뀌어 예전 사연/건강 시절 카테고리(갑질사건, 층간소음,
+    # 관절근육 등)는 지금 카테고리 목록에 없다 — 그 통계를 프롬프트에 넣으면 모델이 엉뚱한
+    # 소재로 끌려가서, 현재 CATEGORIES에 있는 카테고리만 참고한다.
+    from core.script_prompts import CATEGORIES
+    _keep = set(CATEGORIES)
     retention_ranking = _load_retention_ranking(channel) if channel else None
     if retention_ranking:
+        retention_ranking = {
+            k: [r for r in (v or []) if r.get("category") in _keep]
+            for k, v in retention_ranking.items()
+        }
         lines = ["[참고: 최근 소재별 시청 지속률 — 끝까지 보게 되는 소재를 우선 고려해라]"]
         # 쇼츠는 반복재생 때문에 지속률이 100%를 넘을 수 있어 롱폼과 척도가
         # 다르므로(core.performance_analysis.category_retention_stats 참고)
@@ -149,7 +158,7 @@ def summarize_for_prompt(channel: str | None = None, top_n: int = 3) -> str:
         if len(lines) > 1:
             return "\n".join(lines)
 
-    stats = category_stats(channel)
+    stats = [s for s in category_stats(channel) if s.get("category") in _keep]
     if not stats:
         return ""
     good = stats[:top_n]

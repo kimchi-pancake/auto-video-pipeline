@@ -340,6 +340,23 @@ def _call_claude(prompt: str, max_tokens: int = 16000) -> str:
     return _call_openrouter(prompt, max_tokens=max_tokens)
 
 
+# 한 번 402/404/5xx/시간초과로 실패한 모델은 일정 시간 건너뜁니다(2026-11-01: gpt-oss-20b가
+# 긴 출력에서 매번 504로 끝나, 대본 한 편을 만드는 동안 호출마다 7~10분씩 헛기다려서
+# 총 87분이 걸렸음 — 배치 제한 60분을 넘음). 프로세스 단위라 다음 배치에는 다시 시도한다.
+_MODEL_COOLDOWN_SEC = 45 * 60
+_model_cooldown_until: dict[str, float] = {}
+
+
+def _cooling_down(model: str) -> bool:
+    import time
+    return _model_cooldown_until.get(model, 0.0) > time.time()
+
+
+def _start_cooldown(model: str) -> None:
+    import time
+    _model_cooldown_until[model] = time.time() + _MODEL_COOLDOWN_SEC
+
+
 def _call_openrouter(prompt: str, max_tokens: int = 16000) -> str:
     """1차로 OpenRouter API(qwen3-235b)를 시도하고, 크레딧 부족(402)이나 그
     모델이 내려간 경우(404)는 NVIDIA API(NVIDIA_MODELS, NVIDIA_API_KEY로 직접
@@ -368,17 +385,28 @@ def _call_openrouter(prompt: str, max_tokens: int = 16000) -> str:
         openrouter_client = openai.OpenAI(base_url=BASE_URL, api_key=openrouter_key, timeout=600.0)
         attempts.append(("OpenRouter", openrouter_client, MODEL))
     if nvidia_key:
-        nvidia_client = openai.OpenAI(base_url=NVIDIA_BASE_URL, api_key=nvidia_key, timeout=600.0)
+        nvidia_client = openai.OpenAI(base_url=NVIDIA_BASE_URL, api_key=nvidia_key, timeout=420.0)
         attempts.extend(("NVIDIA", nvidia_client, m) for m in NVIDIA_MODELS)
 
     for idx, (label, client, model) in enumerate(attempts):
         next_model = attempts[idx + 1][2] if idx + 1 < len(attempts) else None
+        if next_model and _cooling_down(model):
+            logger.info("%s는 최근 실패해서 건너뜁니다.", model)
+            continue
 
         for attempt in range(1, MAX_RATE_LIMIT_RETRIES + 1):
             try:
                 text, finish_reason = _stream_once(client, model, prompt, max_tokens=max_tokens)
             except openai.AuthenticationError as e:
                 raise ScriptGenerationError("API 키가 유효하지 않습니다. .env 파일의 키를 다시 확인하세요.") from e
+            except openai.APITimeoutError as e:
+                # 응답이 제한 시간 안에 안 옴(NVIDIA 무료 엔드포인트가 긴 출력에서 멈추는 경우) —
+                # 같은 모델을 또 기다리지 말고 다음 모델로 넘어간다. 마지막 모델이면 실패.
+                if next_model:
+                    logger.warning("%s 응답 시간 초과 — 다음 모델 %s로 넘어갑니다.", model, next_model)
+                    _start_cooldown(model)
+                    break
+                raise ScriptGenerationError("응답 시간이 초과됐습니다. 잠시 후 다시 시도하세요.") from e
             except openai.APIConnectionError as e:
                 raise ScriptGenerationError("네트워크 연결에 실패했습니다. 인터넷 연결을 확인하세요.") from e
             except openai.RateLimitError as e:
@@ -399,8 +427,15 @@ def _call_openrouter(prompt: str, max_tokens: int = 16000) -> str:
                 # 제공사가 예고 없이 뺄 수 있음 — 2026-09-26 z-ai/glm-5.2:free가
                 # 이걸로 내려가서 404가 그대로 안 잡히고 3일간 전체 실패했음).
                 # 둘 다 "이 모델을 못 쓴다"는 뜻이므로 동일하게 다음 모델로 넘어감.
-                if e.status_code in (402, 404) and next_model:
-                    reason = "크레딧이 부족합니다" if e.status_code == 402 else "이 모델을 더 이상 쓸 수 없습니다"
+                # 5xx(예: 504 게이트웨이 타임아웃 — 2026-11-01 gpt-oss-20b가 긴 출력에서
+                # 10분 뒤 504로 끊겨 다음 모델로 안 넘어가고 전체가 실패함)도 같은 취급.
+                if (e.status_code in (402, 404) or e.status_code >= 500) and next_model:
+                    reason = (
+                        "크레딧이 부족합니다" if e.status_code == 402
+                        else "이 모델을 더 이상 쓸 수 없습니다" if e.status_code == 404
+                        else "서버 오류가 났습니다"
+                    )
+                    _start_cooldown(model)
                     logger.warning(
                         "%s에서 %s(%s) — %s 대신 %s로 넘어갑니다. "
                         "크레딧 문제라면 openrouter.ai에서 충전하면 자동으로 %s로 되돌아갑니다.",

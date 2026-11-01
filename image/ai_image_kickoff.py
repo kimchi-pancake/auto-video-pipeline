@@ -83,7 +83,7 @@ def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
         # 대상이 없으니 예전처럼 Worker가 무작위 seed를 쓰게 둡니다.
         primary_speaker = next(
             (d.speaker for d in s.dialogues if d.speaker != "나레이터"),
-            s.dialogues[0].speaker if s.dialogues else None,
+            None,
         )
         if primary_speaker:
             entry["seed"] = _character_seed(run_id, primary_speaker)
