@@ -94,9 +94,14 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             logger.warning("prepare_daily: '%s' 디스코드로 예약된 주제(%s)가 있지만, 자동 생성에는 아직 반영되지 않습니다.", name, topic)
         try:
             meta_list: list[dict] = []
-            # 2026-09-14: 사용자 지시로 롱폼(10분 이상) 위주로 복귀 — 채널당
-            # 롱폼 1개 + 쇼츠 2개(콤보 호출의 쇼츠 1개 + 단독 쇼츠 1개).
-            saved = generate_daily_batch(queue_dir, channel=name, meta_out=meta_list, long_count=1, extra_shorts_count=1)
+            # 2026-09-14: 롱폼 1개 + 쇼츠 2개였는데, 2026-11-01 사용자 지시로 롱폼을
+            # 없애고 쇼츠만 하루 7개로 바꿨다(config의 daily.long_count/shorts_count로 조절).
+            long_count = int(cfg.get("daily.long_count", 0))
+            shorts_count = int(cfg.get("daily.shorts_count", 7))
+            saved = generate_daily_batch(
+                queue_dir, channel=name, meta_out=meta_list,
+                long_count=long_count, extra_shorts_count=shorts_count,
+            )
             logger.info("prepare_daily: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             for meta in meta_list:
                 logger.info(

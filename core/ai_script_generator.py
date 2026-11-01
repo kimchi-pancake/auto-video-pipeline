@@ -256,26 +256,55 @@ def _stream_once(client, model: str, prompt: str, max_tokens: int = 16000) -> tu
     저장되는 사고가 있었음(Anthropic 쪽은 9/28에 이미 32000으로 올려뒀었는데
     NVIDIA 폴백 쪽엔 안 옮겨놨던 것). 그런 호출은 _call_claude에 더 큰
     max_tokens를 넘겨서 씁니다."""
-    stream = client.chat.completions.create(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.9,
-        top_p=0.95,
-        max_tokens=max_tokens,
-        stream=True,
-        extra_body=MODEL_EXTRA_BODY.get(model) or None,
-    )
-    chunks: list[str] = []
-    finish_reason = None
-    for event in stream:
-        if not event.choices:
-            continue
-        delta = event.choices[0].delta
-        if delta and delta.content:
-            chunks.append(delta.content)
-        if event.choices[0].finish_reason:
-            finish_reason = event.choices[0].finish_reason
-    return "".join(chunks).strip(), finish_reason
+    # 총 경과 시간 상한(2026-11-01): httpx의 read 타임아웃은 "바이트가 올 때마다" 초기화돼서,
+    # NVIDIA 무료 엔드포인트가 keepalive만 보내며 멈춘 경우 15분 넘게 기다린 끝에 504가
+    # 나왔다(대본 한 편에 87분). 토큰 한도에 비례한 총 시간(16000토큰=5분)을 넘기면 끊는다.
+    import threading
+    import httpx
+    import openai
+
+    deadline = max(240.0, 300.0 * max_tokens / 16000)
+    box: dict = {}
+
+    def _run() -> None:
+        try:
+            stream = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.9,
+                top_p=0.95,
+                max_tokens=max_tokens,
+                stream=True,
+                extra_body=MODEL_EXTRA_BODY.get(model) or None,
+            )
+            box["stream"] = stream
+            chunks: list[str] = []
+            finish_reason = None
+            for event in stream:
+                if not event.choices:
+                    continue
+                delta = event.choices[0].delta
+                if delta and delta.content:
+                    chunks.append(delta.content)
+                if event.choices[0].finish_reason:
+                    finish_reason = event.choices[0].finish_reason
+            box["result"] = ("".join(chunks).strip(), finish_reason)
+        except BaseException as e:  # noqa: BLE001 — 호출한 스레드로 그대로 전달
+            box["error"] = e
+
+    worker = threading.Thread(target=_run, daemon=True)
+    worker.start()
+    worker.join(timeout=deadline)
+    if worker.is_alive():
+        try:
+            if box.get("stream") is not None:
+                box["stream"].close()
+        except Exception:  # noqa: BLE001
+            pass
+        raise openai.APITimeoutError(request=httpx.Request("POST", "https://stream-deadline.invalid"))
+    if "error" in box:
+        raise box["error"]
+    return box["result"]
 
 
 def _call_anthropic(prompt: str, max_tokens: int = 32000) -> str:
@@ -557,7 +586,7 @@ def generate_combo_script(
     return _call_claude(combo_script_prompt(custom_topic, forced_title, cta_settings))
 
 
-def generate_shorts_only(cta_settings: dict | None = None) -> str:
+def generate_shorts_only(cta_settings: dict | None = None, avoid_titles: list[str] | None = None) -> str:
     """Claude API를 호출해서 쇼츠 단독 대본 원문 하나만 반환하고, 외국어 혼입도
     검사해서 고칩니다(2026-09-29 — 이 검사가 원래 콤보의 롱폼 부분에만 걸려
     있어서 standalone shorts에서 "lotte카드" 같은 혼입이 그냥 나가는 걸
@@ -572,8 +601,14 @@ def generate_shorts_only(cta_settings: dict | None = None) -> str:
         "",
         "[이번 소재 필수 조건 — 반드시 따라라]",
         f"{seed_hint}.",
-        f"아래 소재는 최근 너무 많이 써서 이번엔 절대 쓰지 마라: {BANNED_TOPICS}.",
+        f"아래 소재는 다루지 마라: {BANNED_TOPICS}.",
     ])
+    if avoid_titles:
+        # 하루에 쇼츠를 여러 편 만들 때(2026-11-01부터 7편) 같은 날 만든 것끼리 겹치지 않게.
+        prompt += chr(10) + chr(10).join(
+            ["", "[오늘 이미 만든 쇼츠 제목 — 아래와 같거나 비슷한 소재는 절대 쓰지 마라]"]
+            + [f"- {t}" for t in avoid_titles]
+        )
     text = _call_claude(prompt)
     text, _ = _clean_language_if_needed(text, is_shorts=True)
     return _postprocess_script(text)
@@ -766,6 +801,8 @@ def _clean_scene_headers(text: str) -> str:
 def _postprocess_script(text: str) -> str:
     """생성된 대본의 형식을 코드로 바로잡는 마지막 단계(화자 태그 → 역할 키,
     문장 단위 & 구분, 장면 머리글 괄호 제거)."""
+    # 무료 모델이 헤더를 THUMBNAIL_SHORT:(S 빠짐) 로 쓰는 일이 있어(2026-11-01 실측) 바로잡는다.
+    text = re.sub(r"(?im)^THUMBNAIL_SHORT:", "THUMBNAIL_SHORTS:", text)
     return _clean_scene_headers(_ensure_sentence_breaks(_normalize_speaker_tags(text)))
 
 
@@ -1161,11 +1198,15 @@ def generate_daily_batch(
             progress_cb(done, total)
 
     cta = get_cta_settings(channel) if channel else None
+    made_titles: list[str] = []
     for i in range(extra_shorts_count):
         try:
-            text = generate_shorts_only(cta_settings=cta)
+            text = generate_shorts_only(cta_settings=cta, avoid_titles=made_titles)
+            m = re.search(r"THUMBNAIL_SHORTS:[ \t]*\r?\n[ \t]*(.+)", text)
+            if m:
+                made_titles.append(m.group(1).strip())
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-            saved.append(save_story(input_dir, f"claude_{ts}_shorts.txt", text))
+            saved.append(save_story(input_dir, f"claude_{ts}_{i + 1:02d}_shorts.txt", text))
         except ScriptGenerationError as e:
             logger.warning("일괄 생성 중 쇼츠 %d/%d 실패: %s", i + 1, extra_shorts_count, e)
             errors.append(str(e))
