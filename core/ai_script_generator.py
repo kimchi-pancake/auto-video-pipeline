@@ -50,6 +50,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Callable, Optional
@@ -170,6 +171,7 @@ MAX_COMBO_REGEN_ATTEMPTS = 3
 # 격이 다르게 충분한 분량임. 대사 글자수는 [SCENE:...] 영어 묘사를 뺀 실제 낭독
 # 텍스트만 셉니다(전체 4200자인데 실제 대사는 2100자뿐이라 99초밖에 안 나온
 # 사례가 있어서 이렇게 셈).
+_SHORTS_BATCH_BUDGET_SEC = 45 * 60
 MIN_LONG_SCENES = 25
 MIN_LONG_DIALOGUE_CHARS = 5000
 
@@ -1199,7 +1201,13 @@ def generate_daily_batch(
 
     cta = get_cta_settings(channel) if channel else None
     made_titles: list[str] = []
+    # 모델이 줄줄이 멈추는 최악의 날에도 워크플로우 시간 제한(daily.yml 90분)에 걸려
+    # 이미 만든 대본까지 못 커밋하는 일이 없도록, 쇼츠 생성에 예산을 두고 넘으면 남은 건 포기한다.
+    batch_start = time.monotonic()
     for i in range(extra_shorts_count):
+        if saved and time.monotonic() - batch_start > _SHORTS_BATCH_BUDGET_SEC:
+            logger.warning("쇼츠 생성 시간 예산(%d초) 초과 — 남은 %d개는 건너뜀", _SHORTS_BATCH_BUDGET_SEC, extra_shorts_count - i)
+            break
         try:
             text = generate_shorts_only(cta_settings=cta, avoid_titles=made_titles)
             m = re.search(r"THUMBNAIL_SHORTS:[ \t]*\r?\n[ \t]*(.+)", text)

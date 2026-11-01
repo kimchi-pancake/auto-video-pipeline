@@ -95,9 +95,9 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
         try:
             meta_list: list[dict] = []
             # 2026-09-14: 롱폼 1개 + 쇼츠 2개였는데, 2026-11-01 사용자 지시로 롱폼을
-            # 없애고 쇼츠만 하루 7개로 바꿨다(config의 daily.long_count/shorts_count로 조절).
+            # 없애고 쇼츠만 하루 5개로 바꿨다(유튜브 업로드 할당량 때문에 7→5)(config의 daily.long_count/shorts_count로 조절).
             long_count = int(cfg.get("daily.long_count", 0))
-            shorts_count = int(cfg.get("daily.shorts_count", 7))
+            shorts_count = int(cfg.get("daily.shorts_count", 5))
             saved = generate_daily_batch(
                 queue_dir, channel=name, meta_out=meta_list,
                 long_count=long_count, extra_shorts_count=shorts_count,

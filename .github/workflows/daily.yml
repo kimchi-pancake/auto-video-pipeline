@@ -27,7 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     # 2026-09-14: 롱폼(10분 이상) 재도입으로 채널당 LLM 호출이 늘어남(콤보+분량
     # 미달 시 extend 재시도 최대 2회+단독 쇼츠) — 30분으로는 빠듯해서 60분으로 늘림.
-    timeout-minutes: 60
+    # 2026-11-01: 쇼츠만 하루 5개로 바뀌었고 생성 예산(45분)을 코드에서 따로 걸어둠 — 여유분 포함 90분.
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
