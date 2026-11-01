@@ -125,6 +125,11 @@ def main() -> int:
     logger = get_logger(__name__)
 
     channels = list(cfg.get("youtube.channels", []) or [])
+    # 채널 설정에 "paused": true 가 있으면 업로드/대본 생성에서 제외 (통계 수집 등은 계속 돈다).
+    paused = [c.get("name", "?") for c in channels if c.get("paused")]
+    if paused:
+        logger.info("prepare_daily: 일시중지 채널 제외: %s", ", ".join(paused))
+    channels = [c for c in channels if not c.get("paused")]
     if not channels:
         logger.warning("prepare_daily: 등록된 채널이 없습니다 (설정 > 채널 관리에서 추가하세요).")
         return 1
