@@ -68,6 +68,8 @@ jobs:
           DISCORD_WORKER_URL: ${{ secrets.DISCORD_WORKER_URL }}
           IMAGE_GEN_SECRET: ${{ secrets.IMAGE_GEN_SECRET }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # Worker가 못 그린 씬을 러너가 NVIDIA로 직접 채운다(image/nvidia_direct.py)
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
         run: python scripts/daily_generate.py
 
       # 렌더링은 성공했는데 유튜브 업로드만 실패하는 경우(자격증명 만료 등)가

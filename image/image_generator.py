@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, List, Optional
 
+from image import nvidia_direct
 from image.ai_image_kickoff import pending_image_path, wait_for_pending_images
 from image.pixabay_client import PixabayClient
 from parser.story_parser import Scene
@@ -105,13 +106,24 @@ class ImageGenerator:
             # 타임아웃 한도 내에서) 기다립니다. 이 대기는 stage_tts와 같은
             # 스레드풀에서 동시에 돌기 때문에 TTS 시간만큼은 겹쳐지지만,
             # 그 이상 걸리면 GH Actions 시간이 실제로 늘어납니다(2026-08-04).
-            logger.info("[Image] AI 이미지 준비 대기 중... (run_id=%s, 최대 %d초)", self._run_id, self._ai_wait_timeout)
+            # 러너가 직접 그릴 수 있으면(NVIDIA_API_KEY 있음) Worker를 오래 기다릴 이유가 없다 —
+            # Worker 이미지는 보통 킥오프 직후 몇 초~몇 분 안에 올라오고, 그 뒤로 안 오는 건
+            # Worker가 실행 한도에 잘린 것이라(2026-11-08) 15분 기다려도 안 온다.
+            wait_sec = min(self._ai_wait_timeout, 300) if nvidia_direct.available() else self._ai_wait_timeout
+            logger.info("[Image] AI 이미지 준비 대기 중... (run_id=%s, 최대 %d초)", self._run_id, wait_sec)
             wait_for_pending_images(
                 self._repo_root, self._run_id,
                 [s.index for s in scenes],
-                timeout_sec=self._ai_wait_timeout,
+                timeout_sec=wait_sec,
                 poll_interval_sec=self._ai_poll_interval,
             )
+            missing = [
+                s for s in scenes
+                if s.prompt and not pending_image_path(self._repo_root, self._run_id, s.index).exists()
+            ]
+            direct_paths = nvidia_direct.fill_missing(self._run_id, missing, self._temp_dir) if missing else {}
+        else:
+            direct_paths = {}
 
         for idx, scene in enumerate(scenes):
             logger.info("[Image] Scene %d/%d: %s", idx + 1, total, scene.prompt[:60])
@@ -146,6 +158,17 @@ class ImageGenerator:
                         success=True,
                         source="ai",
                     )
+
+            # 2-b) Worker가 못 그린 씬을 러너가 NVIDIA로 직접 그린 결과
+            if result is None and scene.index in direct_paths:
+                logger.info("[Image] Scene %d: 러너 직접 생성 이미지 사용 → %s", scene.index, direct_paths[scene.index])
+                result = ImageResult(
+                    scene_index=scene.index,
+                    image_path=str(direct_paths[scene.index]),
+                    prompt=scene.prompt,
+                    success=True,
+                    source="ai",
+                )
 
             # 3) Pixabay 비디오 (활성화 시 사진보다 우선 시도 — 검색 결과가 사진보다
             #    훨씬 적어서, 없으면 자연스럽게 아래 3) 사진 검색으로 폴백됨)
