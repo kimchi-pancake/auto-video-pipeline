@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261108_160614_02_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+제조산업
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+K9 자주포 수출, 세계가 주목하는 이유
+
+THUMBNAIL_SHORTS:
+K9 자주포 수출, 세계가 주목하는 이유
+
+[SCENE:K9 self-propelled howitzer firing on a military training ground, artillery barrel raised, bright muzzle flash at night, low angle, dramatic lighting, action shot, highly detailed, 1080x1920]
+나레이터: K9 자주포는 방산 수출에서 이례적으로 북대서양 조약 기구 회원국에 납품된 한국산 무기입니다&한국의 독자 기술로 개발된 자주포가 서방 방산 시장에 본격적으로 진출한 것은 드문 일입니다
+
+[SCENE:K9 self-propelled howitzer driving on a paved road through a green field, tracked vehicle moving, soldiers in uniform nearby, side tracking shot, daylight, cinematic, vibrant colors, 1080x1920]
+나레이터: 이 자주포는 자동 장전 시스템을 탑재해 분당 최대 6발까지 연속 사격이 가능합니다&인명 피해를 줄이면서도 강력한 화력을 낼 수 있는 구조입니다
+
+[SCENE:modern artillery production factory interior, robotic arms assembling metal parts, Korean engineers in white cleanroom suits monitoring screens, wide shot, cleanroom lighting, highly detailed, industrial atmosphere, 1080x1920]
+나레이터: 대한민국 방위산업청과 한화에어로스페이스가 공동으로 개발해 실전 배치를 마쳤습니다&국산 부품 비중이 높아 해외 의존도를 낮춘 점이 특징입니다
+
+[SCENE:K9 self-propelled howitzer positioned on a snowy training field, snow falling, soldiers operating the vehicle, long shot, winter atmosphere, dramatic lighting, cinematic, 1080x1920]
+나레이터: 폴란드에 수출된 K9 자주포는 현지 생산을 거쳐 북대서양 조약 기구 표준 탄약을 사용합니다&이는 한국산 무기가 서방 군대의 표준 체계에 편입된 사례입니다
+
+[SCENE:K9 self-propelled howitzer parked in a row at a military base, sunset sky in background, rows of identical vehicles, aerial shot, golden hour, wide view, vibrant, 1080x1920]
+나레이터: 국산 자주포가 세계 방산 시장에서 인정받고 있다는 것은 우리 기술력의 증거입니다&여러분은 이 이야기를 어떻게 생각하시나요

@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261108_160617_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+대중문화
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+lovely.mp3
+
+THUMBNAIL_LONG:
+기생충, 황금종려상을 처음 받은 한국 영화
+
+THUMBNAIL_SHORTS:
+기생충, 황금종려상을 처음 받은 한국 영화
+
+[SCENE:red carpet at Cannes Film Festival, golden palm statue glowing, low angle wide shot, dramatic lighting, cinematic, 1080x1920]
+나레이터: 대한민국 영화 기생충이 칸 국제영화제에서 황금종려상을 받은 첫 한국 영화가 되었습니다&수상은 2019년, 봉준호 감독의 작품이었습니다
+
+[SCENE:Cannes festival palace grand staircase, crowd of photographers and fans, wide shot, night city lights, vibrant, highly detailed, 1080x1920]
+나레이터: 황금종려상은 세계에서 가장 권위 있는 영화상 중 하나로 꼽힙니다&한국 영화가 이 상을 받은 것은 기생충이 처음이었습니다
+
+[SCENE:movie theater interior, audience watching screen intently, close up, warm lighting, cinematic, 1080x1920]
+나레이터: 이 영화는 부자와 가난한 두 가족의 이야기를 통해 한국 사회의 계층 문제를 날카롭게 보여주었습니다
+
+[SCENE:Academy Awards stage, golden Oscar statuette, medium shot, dramatic spotlight, cinematic, 1080x1920]
+나레이터: 이후 미국 아카데미 시상식에서도 작품상과 감독상을 포함해 네 개의 상을 받았습니다&비영어권 영화가 아카데미 작품상을 받은 것도 기생충이 처음이었습니다
+
+[SCENE:modern Korean cityscape at dusk, traditional hanok beside skyscrapers, aerial shot, golden hour, vibrant, highly detailed, 1080x1920]
+나레이터: 한국의 일상을 세계 무대에 알린 이 영화는, 한국 영화의 새로운 역사를 썼습니다

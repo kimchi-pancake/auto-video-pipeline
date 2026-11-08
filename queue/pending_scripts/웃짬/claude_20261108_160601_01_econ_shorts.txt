@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261108_160601_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+국가부채
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+신흥국 부채 함정, 왜 한국 가계가 비용을 치르나
+
+THUMBNAIL_SHORTS:
+신흥국 부채 함정, 왜 한국 가계가 비용을 치르나
+
+[SCENE:a silhouette of a businessman looking at a city skyline at dusk, cinematic, dramatic lighting, muted colors, documentary photograph, no text, no logo, no numbers]
+나레이터: 개발도상국이 외채를 갚지 못해 몰락하는 부채 함정은 먼 나라 이야기가 아닙니다&그 위기가 한국 가계의 지갑에 직접 닿을 수 있습니다
+
+[SCENE:container cranes at a shipping port with stacks of colorful containers, wide shot, overcast sky, industrial atmosphere, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 부채 상환 유예는 일시적 구제일 뿐입니다&신흥국이 수입을 줄여 채무를 갚으면 그 나라에서 파는 한국 제품 수출이 줄어듭니다
+
+[SCENE:a closed factory assembly line with idle machinery and conveyor belts, low angle, moody lighting, empty industrial interior, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 수출이 줄면 국내 제조 공장 가동률이 떨어지고 근로 시간과 임금이 감소합니다&월급이 줄어든 가계는 소비와 대출 상환에 더 큰 부담을 지게 됩니다
+
+[SCENE:a trading room filled with monitors and financial data, high angle, cinematic lighting, serious atmosphere, muted colors, documentary photograph, no text, no logo, no numbers]
+나레이터: 1997년 아시아 외환위기 때 태국과 인도네시아의 통화 가치 폭락은 한국 수출 기업의 매출 급감으로 이어졌습니다&당시 수많은 근로자가 일자리를 잃었습니다
+
+[SCENE:a silhouette of a family sitting at a dining table with empty plates, warm but somber lighting, close-up, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 부채 함정은 결국 무역 축소와 고용 위축을 통해 일반 가계의 생활비와 소득을 압박합니다&멀리 떨어진 나라의 채무 문제가 왜 우리 가계의 지출 계획까지 흔드는지 생각해볼 필요가 있습니다

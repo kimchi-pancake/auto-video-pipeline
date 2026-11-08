@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261108_160605_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+국가부채
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+국가 부채, 왜 청년만 비용을 치르나
+
+THUMBNAIL_SHORTS:
+국가 부채, 왜 청년만 비용을 치르나
+
+[SCENE:A wide shot of towering government bonds stacked like skyscrapers, cinematic, moody, dramatic lighting, muted colors, no text, no logo, no numbers]
+나레이터: 국가 부채가 늘어날 때, 당장 혜택을 누리는 쪽은 누구입니까
+
+[SCENE:A low-angle shot of a modern parliament building under an overcast sky, documentary photograph, highly detailed, no text, no logo, no numbers]
+나레이터: 정부는 채권을 발행해 재정을 늘리고, 현재 유권자에게 지출을 확대합니다
+
+[SCENE:A wide shot of a construction site with tower cranes and idle workers in hard hats, cinematic, moody, muted colors, no text, no logo, no numbers]
+나레이터: 발행된 채권을 사들인 금융기관은 이자 수익을 얻고, 발행 정부는 오늘의 표를 얻습니다
+
+[SCENE:A close-up of an empty classroom desk and a single chair, overcast lighting, documentary style, muted colors, no text, no logo, no numbers]
+나레이터: 하지만 이 부채는 미래 세대가 갚아야 할 빚이 됩니다
+
+[SCENE:A wide shot of a distant city skyline with construction cranes frozen against a grey sky, cinematic, moody, dramatic lighting, no text, no logo, no numbers]
+나레이터: 현재는 지출을 늘려 이득을 보고, 미래는 세금과 공공 서비스 축소로 비용을 치르는 구조입니다
+
+[SCENE:A low-angle shot of a young commuter walking away toward a modern financial district, cinematic, muted colors, documentary photograph, no text, no logo, no numbers]
+나레이터: 오늘의 지출이 내일의 세금이 될 때, 누가 정말 비용을 치르는지 묻지 않을 수 없습니다
