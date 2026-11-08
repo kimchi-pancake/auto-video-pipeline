@@ -262,7 +262,6 @@ def _stream_once(client, model: str, prompt: str, max_tokens: int = 16000) -> tu
     # NVIDIA 무료 엔드포인트가 keepalive만 보내며 멈춘 경우 15분 넘게 기다린 끝에 504가
     # 나왔다(대본 한 편에 87분). 토큰 한도에 비례한 총 시간(16000토큰=5분)을 넘기면 끊는다.
     import threading
-    import httpx
     import openai
 
     deadline = max(240.0, 300.0 * max_tokens / 16000)
@@ -303,7 +302,11 @@ def _stream_once(client, model: str, prompt: str, max_tokens: int = 16000) -> tu
                 box["stream"].close()
         except Exception:  # noqa: BLE001
             pass
-        raise openai.APITimeoutError(request=httpx.Request("POST", "https://stream-deadline.invalid"))
+        # 최신 openai/anthropic은 httpx 대신 httpx2를 깔아서 `import httpx`가 러너에서 터진다
+        # (2026-11-03부터 대본 생성 전부 실패). 어느 쪽이든 SDK가 쓰는 클라이언트에서 request를 만든다.
+        raise openai.APITimeoutError(
+            request=client._client.build_request("POST", "https://stream-deadline.invalid")
+        )
     if "error" in box:
         raise box["error"]
     return box["result"]
