@@ -169,8 +169,14 @@ class FFmpegWrapper:
         fps: int = 30,
         zoom_effect: bool = True,
         zoom_scale: float = 1.05,
+        motion: Optional[str] = None,
     ) -> None:
-        """정지 이미지를 지정 길이의 영상으로 변환합니다. pan&zoom 옵션 포함."""
+        """정지 이미지를 지정 길이의 영상으로 변환합니다. pan&zoom 옵션 포함.
+        motion을 주면(zoom_in/zoom_out/pan_left/pan_right/pan_up/pan_down) 씬마다 다른
+        카메라 무빙을 부드럽게(ease-in-out) 겁니다 — 편집 스타일용."""
+        if zoom_effect and motion:
+            self._image_to_video_motion(image_path, output, duration, width, height, fps, motion, zoom_scale)
+            return
         if zoom_effect:
             # Ken Burns 효과 (천천히 줌인).
             # scale 뒤에 force_original_aspect_ratio=increase + crop 을 거치는 이유:
@@ -204,6 +210,51 @@ class FFmpegWrapper:
             "-t", str(duration),
             "-r", str(fps),
             "-pix_fmt", "yuv420p",
+            "-c:v", "libx264",
+            "-preset", "ultrafast",
+            "-crf", "23",
+            output,
+        ])
+
+    MOTIONS = ("zoom_in", "pan_right", "zoom_out", "pan_up", "pan_left", "pan_down")
+
+    def _image_to_video_motion(
+        self, image_path: str, output: str, duration: float,
+        width: int, height: int, fps: int, motion: str, zoom_scale: float,
+    ) -> None:
+        # zoompan은 crop 좌표를 정수 픽셀로 반올림해서, 원본 크기 그대로 쓰면 느린 줌·팬이
+        # 덜덜 떨려 보입니다. 2배로 키운 뒤 zoompan → 출력 크기로 줄이면 떨림이 1/2픽셀
+        # 이하로 줄어 매끈해집니다. 입력은 이미지 1장(-loop 없음)이라 확대는 한 번만 일어나고
+        # zoompan이 그 한 장에서 d 프레임을 뽑습니다.
+        frames = max(int(round(duration * fps)), 2)
+        up_w, up_h = width * 2, height * 2
+        strength = max(zoom_scale - 1.0, 0.04)
+        ease = f"(0.5-0.5*cos(PI*on/{frames - 1}))"
+        cx, cy = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+        pan_z = f"{1 + strength:.4f}"
+        if motion == "zoom_out":
+            z, x, y = f"{1 + strength:.4f}-{strength:.4f}*{ease}", cx, cy
+        elif motion == "pan_right":
+            z, x, y = pan_z, f"(iw-iw/zoom)*{ease}", cy
+        elif motion == "pan_left":
+            z, x, y = pan_z, f"(iw-iw/zoom)*(1-{ease})", cy
+        elif motion == "pan_up":
+            z, x, y = pan_z, cx, f"(ih-ih/zoom)*(1-{ease})"
+        elif motion == "pan_down":
+            z, x, y = pan_z, cx, f"(ih-ih/zoom)*{ease}"
+        else:  # zoom_in
+            z, x, y = f"1+{strength:.4f}*{ease}", cx, cy
+        vf = (
+            f"scale={up_w}:{up_h}:force_original_aspect_ratio=increase,"
+            f"crop={up_w}:{up_h},"
+            f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={width}x{height}:fps={fps},"
+            f"format=yuv420p"
+        )
+        self.run([
+            "-i", image_path,
+            "-vf", vf,
+            "-frames:v", str(frames),
+            "-r", str(fps),
             "-c:v", "libx264",
             "-preset", "ultrafast",
             "-crf", "23",
@@ -247,8 +298,12 @@ class FFmpegWrapper:
             output,
         ])
 
-    def concat_videos(self, inputs: List[str], output: str, crossfade: float = 0.8) -> None:
-        """여러 영상을 크로스페이드로 연결합니다."""
+    def concat_videos(
+        self, inputs: List[str], output: str, crossfade: float = 0.8,
+        transitions: Optional[List[str]] = None,
+    ) -> None:
+        """여러 영상을 크로스페이드로 연결합니다. transitions를 주면 전환마다
+        xfade 효과를 순서대로 돌려 씁니다(없으면 전부 fade)."""
         if not inputs:
             raise FFmpegError("concat_videos: 이어붙일 입력 영상이 하나도 없습니다 (씬이 0개인 대본일 수 있습니다).")
         if len(inputs) == 1:
@@ -274,8 +329,9 @@ class FFmpegWrapper:
         for i in range(1, n):
             offset = max(cumulative - crossfade, 0)
             out_v = f"[v{i}]" if i < n - 1 else "[vout]"
+            trans = transitions[(i - 1) % len(transitions)] if transitions else "fade"
             filter_parts.append(
-                f"{last_v}[{i}:v]xfade=transition=fade:duration={crossfade}:offset={offset:.3f}{out_v}"
+                f"{last_v}[{i}:v]xfade=transition={trans}:duration={crossfade}:offset={offset:.3f}{out_v}"
             )
             last_v = out_v
             cumulative = offset + durations[i]

@@ -35,7 +35,10 @@ class SegmentAudio:
         audio_path: str,
         duration: float,
         success: bool,
+        words: Optional[List[Tuple[float, float, str]]] = None,
     ):
+        # 세그먼트 오디오 시작 기준 어절별 (시작초, 끝초, 어절) — 자막 끊어 띄우기용
+        self.words = list(words or [])
         self.scene_idx = scene_idx
         self.dialogue_idx = dialogue_idx
         self.segment_idx = segment_idx
@@ -219,6 +222,7 @@ class TTSBuilder:
                     audio_path=result.output_path,
                     duration=result.duration,
                     success=result.success,
+                    words=result.words,
                 )
 
             scene_audio_map[scene_idx].segments.append(seg_audio)

@@ -262,8 +262,13 @@ class Pipeline:
             def stage_subtitles():
                 self._emit(3, 0, 1, "SRT / ASS 자막 생성 중...")
                 t0 = time.time()
+                # 세로 영상이면 화면 위쪽에 고정으로 띄울 제목 — 쇼츠 썸네일 문구가 더 짧고 세서 우선.
+                top_title = (
+                    (story.thumbnail_shorts.title_text if story.thumbnail_shorts else "")
+                    or story.raw_title or ""
+                ).strip()
                 ctx["srt_path"], ctx["ass_path"] = self._run_subtitles(
-                    ctx["scene_audios"], temp / "video"
+                    ctx["scene_audios"], temp / "video", title=top_title or None,
                 )
                 stage_times["subtitles"] = time.time() - t0
 
@@ -500,7 +505,7 @@ class Pipeline:
             return None
 
     def _run_subtitles(
-        self, scene_audios: List[SceneAudio], temp: Path
+        self, scene_audios: List[SceneAudio], temp: Path, title: Optional[str] = None,
     ):
         builder = SubtitleBuilder(
             config=self._cfg.section("subtitle"),
@@ -509,7 +514,7 @@ class Pipeline:
             video_width=self._cfg.get("video.width", 1920),
             video_height=self._cfg.get("video.height", 1080),
         )
-        return builder.build(scene_audios)
+        return builder.build(scene_audios, title=title)
 
     def _resolve_story_bgm(self, story: StoryData) -> List[str]:
         """BGM: 에 파일을 딱 하나만 적었으면 그대로 쓰고, 여러 개(후보 목록)를 적었거나

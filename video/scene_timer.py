@@ -8,7 +8,7 @@ video/scene_timer.py
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Tuple
 
 from tts.tts_builder import SceneAudio, SegmentAudio
 
@@ -27,6 +27,8 @@ class SegmentTiming:
     # 씬 내 상대 시각
     rel_start: float
     rel_end: float
+    # 세그먼트 시작 기준 어절별 (시작초, 끝초, 어절) — TTS가 알려준 경우만 채워짐
+    words: List[Tuple[float, float, str]] = field(default_factory=list)
 
     @property
     def duration(self) -> float:
@@ -102,6 +104,7 @@ class SceneTimer:
                     abs_end=cursor + dur,
                     rel_start=seg_cursor,
                     rel_end=seg_cursor + dur,
+                    words=list(getattr(seg, "words", None) or []),
                 )
                 seg_timings.append(st)
                 all_segments.append(st)

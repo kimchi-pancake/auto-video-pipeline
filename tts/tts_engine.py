@@ -18,7 +18,7 @@ import os
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Dict, List, Optional, Tuple
 
 import edge_tts
 from dotenv import load_dotenv
@@ -57,6 +57,10 @@ class TTSResult:
     success: bool
     error: Optional[str] = None
     elapsed: float = 0.0     # 생성 소요 시간 (초)
+    # 단어(어절)별 타이밍 [(시작초, 끝초, 단어)] — 자막을 말하는 속도에 맞춰
+    # 2~3어절씩 끊어 띄우는 데 씁니다. Edge-TTS만 제공하고, OpenAI TTS면 빈 리스트
+    # (자막 쪽이 글자 수 비례로 추정).
+    words: Optional[List[Tuple[float, float, str]]] = None
 
 
 # ─────────────────────────────────────────────
@@ -183,7 +187,7 @@ class TTSEngine:
         for attempt in range(1, self._retry_count + 1):
             try:
                 start = time.time()
-                await self._generate_once(req)
+                words = await self._generate_once(req)
                 elapsed = time.time() - start
 
                 duration = self._get_audio_duration(req.output_path)
@@ -196,6 +200,7 @@ class TTSEngine:
                     duration=duration,
                     success=True,
                     elapsed=elapsed,
+                    words=words or [],
                 )
             except Exception as e:
                 last_error = str(e)
@@ -215,23 +220,35 @@ class TTSEngine:
             error=last_error,
         )
 
-    async def _generate_once(self, req: TTSRequest) -> None:
-        """설정된 provider로 한 번 생성합니다."""
+    async def _generate_once(self, req: TTSRequest) -> List[Tuple[float, float, str]]:
+        """설정된 provider로 한 번 생성하고, 알 수 있으면 단어 타이밍을 반환합니다."""
         if self._provider == "openai":
             await self._generate_once_openai(req)
-        else:
-            await self._generate_once_edge(req)
+            return []
+        return await self._generate_once_edge(req)
 
-    async def _generate_once_edge(self, req: TTSRequest) -> None:
-        """Edge-TTS로 한 번 생성합니다."""
-        communicate = edge_tts.Communicate(
-            text=req.text,
-            voice=req.voice,
-            rate=req.rate,
-            pitch=req.pitch,
-            volume=req.volume,
-        )
-        await communicate.save(req.output_path)
+    async def _generate_once_edge(self, req: TTSRequest) -> List[Tuple[float, float, str]]:
+        """Edge-TTS로 한 번 생성하면서 WordBoundary(어절별 타이밍)도 받아옵니다.
+        edge-tts 7.x는 기본이 SentenceBoundary라 boundary 인자를 명시해야 하고,
+        6.x는 인자가 없지만 기본이 WordBoundary입니다."""
+        kwargs = dict(text=req.text, voice=req.voice, rate=req.rate, pitch=req.pitch, volume=req.volume)
+        try:
+            communicate = edge_tts.Communicate(boundary="WordBoundary", **kwargs)
+        except TypeError:
+            communicate = edge_tts.Communicate(**kwargs)
+        words: List[Tuple[float, float, str]] = []
+        got_audio = False
+        with open(req.output_path, "wb") as f:
+            async for chunk in communicate.stream():
+                if chunk["type"] == "audio":
+                    f.write(chunk["data"])
+                    got_audio = True
+                elif chunk["type"] == "WordBoundary":
+                    st = chunk["offset"] / 1e7
+                    words.append((st, st + chunk["duration"] / 1e7, chunk["text"]))
+        if not got_audio:
+            raise RuntimeError("Edge-TTS가 오디오를 하나도 보내지 않았습니다.")
+        return words
 
     async def _generate_once_openai(self, req: TTSRequest) -> None:
         """OpenAI TTS API로 한 번 생성합니다. pitch/volume은 이 API에 없어서

@@ -65,6 +65,17 @@ class VideoComposer:
         self._min_dur     = config.get("min_scene_duration", 3.0)
         self._outro_hold  = config.get("outro_hold", 0.5)
 
+        # 2026-11-08 "편집족 스타일": 모든 씬이 똑같이 천천히 줌인 + 0.8초 페이드로 이어지던
+        # 걸, 씬마다 다른 카메라 무빙(줌인/줌아웃/좌우·상하 팬)과 짧고 다양한 전환(0.3초)으로
+        # 바꿨다. dynamic_edit=false면 예전 방식 그대로.
+        self._dynamic = bool(config.get("dynamic_edit", True))
+        if self._dynamic:
+            self._crossfade = float(config.get("dynamic_crossfade", 0.3))
+            self._zoom_scale = float(config.get("dynamic_zoom_scale", 1.12))
+        self._transitions = list(config.get("dynamic_transitions") or [
+            "smoothleft", "fade", "zoomin", "smoothup", "slideleft", "fadeblack", "smoothright", "fade",
+        ])
+
         # inter_scene_gap=0: 실제 오디오(concat_audio)/영상(crossfade) 합성
         # 어디에도 씬 사이 무음 간격을 실제로 끼워 넣지 않습니다. 0이 아닌
         # 값을 쓰면 자막 타이밍만 그 간격만큼 밀려서 계산되고 실제 렌더링에는
@@ -123,7 +134,10 @@ class VideoComposer:
 
         # 3) 씬 크로스페이드 연결 (무음 영상)
         silent_video = str(self._temp / "silent_video.mp4")
-        self._ff.concat_videos(scene_clip_paths, silent_video, crossfade=self._crossfade)
+        self._ff.concat_videos(
+            scene_clip_paths, silent_video, crossfade=self._crossfade,
+            transitions=self._transitions if self._dynamic else None,
+        )
 
         self._report(3, 6, "전체 TTS 오디오 병합 중...")
 
@@ -275,11 +289,21 @@ class VideoComposer:
                 fps=self._fps,
                 zoom_effect=self._zoom,
                 zoom_scale=self._zoom_scale,
+                motion=self._motion_for(clip_index) if self._dynamic else None,
             )
 
         # 오디오 합치기
         self._ff.add_audio_to_video(silent_clip, voice_path, out, shortest=False)
         return out
+
+    @staticmethod
+    def _motion_for(clip_index: int) -> str:
+        # 첫 씬은 꽉 당겨진 데서 빠지는 줌아웃(훅에서 화면이 열리는 느낌), 그 뒤로는
+        # 같은 움직임이 연달아 나오지 않게 순서를 돌린다.
+        if clip_index == 0:
+            return "zoom_out"
+        order = ("zoom_in", "pan_right", "pan_up", "zoom_out", "pan_left", "zoom_in", "pan_down")
+        return order[(clip_index - 1) % len(order)]
 
     def _black_image(self) -> str:
         path = str(self._temp / "black_frame.png")
