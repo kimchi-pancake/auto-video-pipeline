@@ -110,6 +110,8 @@ class ImageGenerator:
             # Worker 이미지는 보통 킥오프 직후 몇 초~몇 분 안에 올라오고, 그 뒤로 안 오는 건
             # Worker가 실행 한도에 잘린 것이라(2026-11-08) 15분 기다려도 안 온다.
             wait_sec = min(self._ai_wait_timeout, 300) if nvidia_direct.available() else self._ai_wait_timeout
+            if nvidia_direct.runner_only(self._run_id):
+                wait_sec = 0  # Worker에 요청 자체를 안 보낸 run_id라 기다릴 이유가 없다
             logger.info("[Image] AI 이미지 준비 대기 중... (run_id=%s, 최대 %d초)", self._run_id, wait_sec)
             wait_for_pending_images(
                 self._repo_root, self._run_id,

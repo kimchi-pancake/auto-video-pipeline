@@ -66,6 +66,7 @@ from core.script_prompts import (
     title_candidates_prompt,
     topic_idea_prompt,
     random_topic_seed,
+    banned_topics,
     BANNED_TOPICS,
 )
 from utils.logger import get_logger
@@ -591,7 +592,11 @@ def generate_combo_script(
     return _call_claude(combo_script_prompt(custom_topic, forced_title, cta_settings))
 
 
-def generate_shorts_only(cta_settings: dict | None = None, avoid_titles: list[str] | None = None) -> str:
+def generate_shorts_only(
+    cta_settings: dict | None = None,
+    avoid_titles: list[str] | None = None,
+    profile: str | None = None,
+) -> str:
     """Claude API를 호출해서 쇼츠 단독 대본 원문 하나만 반환하고, 외국어 혼입도
     검사해서 고칩니다(2026-09-29 — 이 검사가 원래 콤보의 롱폼 부분에만 걸려
     있어서 standalone shorts에서 "lotte카드" 같은 혼입이 그냥 나가는 걸
@@ -600,13 +605,13 @@ def generate_shorts_only(cta_settings: dict | None = None, avoid_titles: list[st
     # 쇼츠 단독 호출은 주제 선정 단계(generate_topic_idea)를 안 거치므로, 여기서도
     # 같은 방식으로 무작위 소재 조건을 프롬프트 끝에 붙여 소재가 한쪽으로
     # 수렴하지 않게 한다(2026-10-12, random_topic_seed 주석 참고).
-    seed_hint = random_topic_seed()
+    seed_hint = random_topic_seed(profile=profile)
     prompt = chr(10).join([
-        shorts_script_prompt(cta_settings),
+        shorts_script_prompt(cta_settings, profile=profile),
         "",
         "[이번 소재 필수 조건 — 반드시 따라라]",
         f"{seed_hint}.",
-        f"아래 소재는 다루지 마라: {BANNED_TOPICS}.",
+        f"아래 소재는 다루지 마라: {banned_topics(profile)}.",
     ])
     if avoid_titles:
         # 하루에 쇼츠를 여러 편 만들 때(2026-11-01부터 7편) 같은 날 만든 것끼리 겹치지 않게.
@@ -1171,9 +1176,11 @@ def generate_daily_batch(
     custom_topic: str | None = None,
     channel: str | None = None,
     meta_out: Optional[list[dict]] = None,
+    profile: str | None = None,
 ) -> list[Path]:
     """
-    채널 하루치 물량을 생성합니다. 기본값(long_count=1, extra_shorts_count=1)이면
+    채널 하루치 물량을 생성합니다. profile은 채널의 content_profile(예: "world_econ") —
+    쇼츠 단독 생성에만 적용되고, 롱폼 콤보는 아직 국뽕 프롬프트 하나뿐이다. 기본값(long_count=1, extra_shorts_count=1)이면
     전체 파이프라인(주제→제목→대본→검수) 1번(롱폼 1개 + 쇼츠 1개) + 쇼츠 단독
     호출 1번(비용 절감을 위해 제목 최적화 생략) = 롱폼 1개 + 쇼츠 2개 (하루 3개).
     custom_topic이 있으면 메인 콤보에만 그 주제를 강제로 씁니다 — 디스코드로
@@ -1212,12 +1219,14 @@ def generate_daily_batch(
             logger.warning("쇼츠 생성 시간 예산(%d초) 초과 — 남은 %d개는 건너뜀", _SHORTS_BATCH_BUDGET_SEC, extra_shorts_count - i)
             break
         try:
-            text = generate_shorts_only(cta_settings=cta, avoid_titles=made_titles)
+            text = generate_shorts_only(cta_settings=cta, avoid_titles=made_titles, profile=profile)
             m = re.search(r"THUMBNAIL_SHORTS:[ \t]*\r?\n[ \t]*(.+)", text)
             if m:
                 made_titles.append(m.group(1).strip())
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-            saved.append(save_story(input_dir, f"claude_{ts}_{i + 1:02d}_shorts.txt", text))
+            # 파일명이 곧 run_id가 된다 — "_econ"은 image/nvidia_direct.py가 화풍을 고르는 표식.
+            tag = "_econ" if profile == "world_econ" else ""
+            saved.append(save_story(input_dir, f"claude_{ts}_{i + 1:02d}{tag}_shorts.txt", text))
         except ScriptGenerationError as e:
             logger.warning("일괄 생성 중 쇼츠 %d/%d 실패: %s", i + 1, extra_shorts_count, e)
             errors.append(str(e))

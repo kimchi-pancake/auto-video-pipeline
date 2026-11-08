@@ -125,8 +125,8 @@ def summarize_for_prompt(channel: str | None = None, top_n: int = 3) -> str:
     # 2026-11-01: 채널 방향이 국뽕으로 바뀌어 예전 사연/건강 시절 카테고리(갑질사건, 층간소음,
     # 관절근육 등)는 지금 카테고리 목록에 없다 — 그 통계를 프롬프트에 넣으면 모델이 엉뚱한
     # 소재로 끌려가서, 현재 CATEGORIES에 있는 카테고리만 참고한다.
-    from core.script_prompts import CATEGORIES
-    _keep = set(CATEGORIES)
+    from core.script_prompts import ALL_CATEGORIES
+    _keep = set(ALL_CATEGORIES)
     retention_ranking = _load_retention_ranking(channel) if channel else None
     if retention_ranking:
         retention_ranking = {

@@ -68,6 +68,10 @@ def kickoff_ai_images(run_id: str, scenes: List[Scene]) -> None:
     씬이 많으면 _SCENES_PER_REQUEST개씩 나눠 여러 번 POST합니다.
     실패해도 예외를 삼키고 조용히 넘어갑니다 — Pixabay 폴백이 항상 있으므로
     이 호출이 파이프라인을 막으면 안 됩니다."""
+    from image.nvidia_direct import runner_only
+    if runner_only(run_id):
+        logger.info("[AIImage] %s: 러너에서 직접 생성하는 채널 — Worker 요청 건너뜀", run_id)
+        return
     worker_url = os.environ.get("DISCORD_WORKER_URL", "").strip()
     secret = os.environ.get("IMAGE_GEN_SECRET", "").strip()
     if not worker_url or not secret:

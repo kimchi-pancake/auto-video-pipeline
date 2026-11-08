@@ -37,6 +37,21 @@ _MODEL = "black-forest-labs/flux.1-dev"
 _URL = f"https://ai.api.nvidia.com/v1/genai/{_MODEL}"
 _WIDTH, _HEIGHT = 768, 1344
 
+# 세계 정세·경제 채널(world_econ)은 Worker의 "따뜻한 수채화"가 분위기에 안 맞아서
+# (Worker 스타일은 대시보드 수동 배포라 못 바꿈) Worker를 아예 건너뛰고 러너에서 이
+# 화풍으로 전부 직접 그린다. 대본 파일명에 _econ이 들어 있으면 그 채널(ai_script_generator).
+_DOCUMENTARY_SUFFIX = (
+    ", cinematic documentary photograph, photorealistic, muted desaturated color grading, "
+    "moody overcast lighting, high contrast, sharp focus, 35mm film grain, serious atmosphere, "
+    "no text, no letters, no numbers, no logo, no watermark"
+)
+
+
+def runner_only(run_id: str) -> bool:
+    """이 run_id는 Worker를 쓰지 않고 러너가 NVIDIA로 전부 직접 그린다."""
+    return "_econ" in (run_id or "")
+
+
 # index.js의 _IMAGE_STYLE_SUFFIX / _FACE_QUALITY_BOOST / _PERSON_KEYWORDS와 동일해야 함.
 _STYLE_SUFFIX = (
     ", warm watercolor illustration, soft muted color palette, gentle golden hour lighting, "
@@ -77,9 +92,12 @@ def available() -> bool:
     return bool(_key())
 
 
-def _generate_one(scene: Scene, seed: int, dest: Path, key: str) -> bool:
-    boost = _FACE_BOOST if _PERSON_RE.search(scene.prompt) else ""
-    prompt = f"{scene.prompt}{boost}{_STYLE_SUFFIX}"
+def _generate_one(scene: Scene, seed: int, dest: Path, key: str, documentary: bool = False) -> bool:
+    if documentary:
+        prompt = f"{scene.prompt}{_DOCUMENTARY_SUFFIX}"
+    else:
+        boost = _FACE_BOOST if _PERSON_RE.search(scene.prompt) else ""
+        prompt = f"{scene.prompt}{boost}{_STYLE_SUFFIX}"
     for attempt in range(1, _ATTEMPTS + 1):
         try:
             resp = requests.post(
@@ -119,7 +137,7 @@ def fill_missing(run_id: str, scenes: List[Scene], dest_dir: Path) -> Dict[int, 
     def _job(scene: Scene):
         seed = zlib.crc32(f"{run_id}:{scene.index}".encode("utf-8")) % 1_000_000_000
         dest = dest_dir / f"scene_{scene.index:04d}_direct.jpg"
-        return scene.index, dest, _generate_one(scene, seed, dest, key)
+        return scene.index, dest, _generate_one(scene, seed, dest, key, documentary=runner_only(run_id))
 
     out: Dict[int, Path] = {}
     with ThreadPoolExecutor(max_workers=_CONCURRENCY) as pool:

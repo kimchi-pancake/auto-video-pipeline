@@ -97,10 +97,14 @@ def _generate_scripts(cfg, channels, logger) -> tuple[int, int]:
             # 2026-09-14: 롱폼 1개 + 쇼츠 2개였는데, 2026-11-01 사용자 지시로 롱폼을
             # 없애고 쇼츠만 하루 5개로 바꿨다(유튜브 업로드 할당량 때문에 7→5)(config의 daily.long_count/shorts_count로 조절).
             long_count = int(cfg.get("daily.long_count", 0))
-            shorts_count = int(cfg.get("daily.shorts_count", 5))
+            # 두 채널이 같은 유튜브 API 프로젝트의 하루 할당량(업로드 약 5~6편)을 나눠 쓰므로
+            # 채널 설정의 daily_shorts_count가 있으면 그게 daily.shorts_count보다 우선한다.
+            shorts_count = int(chan.get("daily_shorts_count", cfg.get("daily.shorts_count", 5)))
+            profile = chan.get("content_profile")
             saved = generate_daily_batch(
                 queue_dir, channel=name, meta_out=meta_list,
                 long_count=long_count, extra_shorts_count=shorts_count,
+                profile=profile,
             )
             logger.info("prepare_daily: '%s' 대본 생성 완료 — %d개 저장", name, len(saved))
             for meta in meta_list:
