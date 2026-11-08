@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261108_065614_03_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+역사유산
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+세계 최초 반도체 유산
+
+THUMBNAIL_SHORTS:
+세계 최초 반도체 유산
+
+[SCENE: heritage museum building in Seoul, South Korea, showcasing semiconductor history, cinematic, vibrant, no text, no logo, 1080x1920]
+나레이터: 한국은 세계 최초로 반도체 산업을 ‘문화유산’으로 등재했다.
+
+[SCENE: museum interior, display case with old semiconductor chip, dramatic lighting, highly detailed, no text, no logo, 1080x1920]
+나레이터: 서울 시내 한 구석에 ‘한국 반도체 산업 유산 박물관’이 열려, 1975년 한국 최초의 반도체 ‘KIC’를 전시하고 있다.
+
+[SCENE: 3D model of the KIC chip rotating, cinematic, vibrant, no text, no logo, 1080x1920]
+나레이터: 그런데 진짜 놀라운 건 지금부터입니다, 이 영상이 자랑스러우셨다면 구독으로 응원해 주세요.
+
+[SCENE: red heart icon animation pulsing and growing, like button, white background, 1080x1920]
+나레이터: 화면을 두 번 눌러서 확인하세요.
+
+[SCENE: KIC chip on a small digital device, cinematic, vibrant, no text, no logo, 1080x1920]
+나레이터: 이 ‘KIC’는 당시 8비트 전자레인지에 사용된 최초의 집적회로로, 오늘날 스마트폰의 핵심 부품이 될 기술의 토대가 되었습니다.
+
+[SCENE: generic visitor walking through museum, cinematic, vibrant, no text, no logo, 1080x1920]
+나레이터: 이 역사적인 반도체를 직접 보러 가본 적 있나요?

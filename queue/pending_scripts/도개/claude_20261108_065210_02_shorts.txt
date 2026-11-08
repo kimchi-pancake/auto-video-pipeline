@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261108_065210_02_shorts
+
+RESOLUTION:  
+1080x1920  
+
+CATEGORY:  
+의료복지  
+
+CAST:  
+나레이터: 나레이터  
+
+BGM:  
+happy.mp3  
+
+THUMBNAIL_LONG:  
+한옥 연구자 끌어오른 비밀 세상  
+
+THUMBNAIL_SHORTS:  
+한옥 연구자 끌어오른 비밀 세상  
+
+[SCENE: A traditional Korean hanok courtyard, morning light streaming through eaves, cinematic, vibrant lighting, 1080x1920]  
+나레이터: 한국에서는 당연한 한옥의 설계 원리가 해외에서는 학계의 큰 관심을 불러일으켰습니다
+
+[SCENE: An international conference room with Korean scholars presenting, world map backdrop, cinematic, vibrant, 1080x1920]  
+나레이터: 전 세계 연구자들이 한국의 한옥을 연구하러 찾아오는 이유는 지붕 경사, 자연 통풍 설계, 그리고 수백년간 지속된 친환경 건축 기술 덕분입니다
+
+[SCENE: A close-up of a research paper on traditional Korean architecture, hand flipping pages, dramatic lighting, cinematic, 1080x1920]  
+나레이터: 그런데 진짜 놀라운 건 지금부터입니다
+
+[SCENE: Red heart icon animation pulsing and growing, like button, white background, 1080x1920]  
+나레이터: 화면을 두 번 눌러서 확인하세요
+
+[SCENE: Animated graph of citations for Korean traditional architecture, Korean temple silhouette, cinematic, vibrant, 1080x1920]  
+나레이터: 한옥의 단순한 목조 구조가 현대 친환경 건축의 모범 사례로 떠오르고 있습니다&오늘 영상이 자랑스러우셨다면, 좋아요와 구독으로 응원해 주세요
+
+[SCENE: Silhouette of a Korean traditional house at sunrise, question mark overlay, cinematic, vibrant, 1080x1920]  
+나레이터: 여러분은 전통 건축이 현대 건축에 미치는 영향을 어떻게 생각하시나요?
