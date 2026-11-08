@@ -5686,5 +5686,55 @@
     "uploaded_at": "2026-10-31T17:38:45+00:00",
     "stats": null,
     "stats_collected_at": null
+  },
+  {
+    "video_id": "t8lWC9DH0AY",
+    "channel": "도개",
+    "category": "방위산업",
+    "title": "방산 수출, 한국의 글로벌 표준",
+    "is_shorts": true,
+    "uploaded_at": "2026-11-08T07:27:27+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "KbmS8Qd6rkU",
+    "channel": "도개",
+    "category": "역사유산",
+    "title": "세계 최초 반도체 유산",
+    "is_shorts": true,
+    "uploaded_at": "2026-11-08T07:43:41+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "_JZ1UWl8tZ8",
+    "channel": "도개",
+    "category": "생활편의",
+    "title": "김치, 작은 회사가 세계를 정복한 이유",
+    "is_shorts": true,
+    "uploaded_at": "2026-11-08T07:44:58+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "vgTq-CNx7Gs",
+    "channel": "도개",
+    "category": "첨단기술",
+    "title": "전자스포츠 무인경매 한국",
+    "is_shorts": true,
+    "uploaded_at": "2026-11-08T07:46:23+00:00",
+    "stats": null,
+    "stats_collected_at": null
+  },
+  {
+    "video_id": "DaQZcwcPZ5o",
+    "channel": "도개",
+    "category": "의료복지",
+    "title": "한옥 연구자 끌어오른 비밀 세상",
+    "is_shorts": true,
+    "uploaded_at": "2026-11-08T08:02:38+00:00",
+    "stats": null,
+    "stats_collected_at": null
   }
 ]
