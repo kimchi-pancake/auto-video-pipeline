@@ -323,7 +323,9 @@ class Pipeline:
                 shutil.copy2(ctx["ass_path"], run_out / "subtitles.ass")
 
             tts_job = jm.add("TTS 생성",    stage_tts,        max_retries=max_retries, retry_delay=3.0)
-            img_job = jm.add("이미지 생성", stage_images,     max_retries=max_retries, retry_delay=5.0)
+            # 이미지 단계가 실패하는 건 거의 NVIDIA 일시 장애(500/타임아웃)라서, 5초 뒤 바로 다시
+            # 두드리기보다 2분 쉬고 재시도해야 살아날 확률이 높다(2026-11-08 실측: 10분 넘게 전부 500).
+            img_job = jm.add("이미지 생성", stage_images,     max_retries=max_retries, retry_delay=120.0)
             jm.add("자막 생성",   stage_subtitles,  max_retries=max_retries, retry_delay=2.0)
             jm.add("영상 합성",   stage_video,      max_retries=max_retries, retry_delay=5.0)
             if also_make_shorts:
