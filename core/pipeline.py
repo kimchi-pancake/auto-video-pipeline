@@ -246,6 +246,9 @@ class Pipeline:
                 t0 = time.time()
                 real_scenes = story.scenes[1:] if has_intro else story.scenes
                 real_images = self._run_images(real_scenes, story.photo_files, temp / "images", run_id=ts)
+                # 그림이 한 장도 없으면 검은 화면 영상이 그대로 업로드되므로 차라리 실패시킨다.
+                if real_scenes and not any(r.success for r in real_images):
+                    raise RuntimeError("씬 이미지를 한 장도 못 구했습니다(NVIDIA·Worker·Pixabay 모두 실패)")
                 if has_intro:
                     title_card = self._build_title_card(intro_title, temp / "images")
                     intro_image = ImageResult(

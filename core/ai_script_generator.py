@@ -606,8 +606,11 @@ def generate_shorts_only(
     # 같은 방식으로 무작위 소재 조건을 프롬프트 끝에 붙여 소재가 한쪽으로
     # 수렴하지 않게 한다(2026-10-12, random_topic_seed 주석 참고).
     seed_hint = random_topic_seed(profile=profile)
+    logger.info("쇼츠 소재 조건: %s", seed_hint)
+    # 2026-11-08: 쇼츠에는 구독/좋아요 유도 지시(cta_settings)를 더 이상 붙이지 않는다 —
+    # 30초짜리에서 유도 멘트가 절반을 먹는다는 사용자 지적. 인자는 호환용으로만 남김.
     prompt = chr(10).join([
-        shorts_script_prompt(cta_settings, profile=profile),
+        shorts_script_prompt(None, profile=profile),
         "",
         "[이번 소재 필수 조건 — 반드시 따라라]",
         f"{seed_hint}.",
@@ -619,9 +622,19 @@ def generate_shorts_only(
             ["", "[오늘 이미 만든 쇼츠 제목 — 아래와 같거나 비슷한 소재는 절대 쓰지 마라]"]
             + [f"- {t}" for t in avoid_titles]
         )
-    text = _call_claude(prompt)
-    text, _ = _clean_language_if_needed(text, is_shorts=True)
-    return _postprocess_script(text)
+    last_reason = ""
+    for attempt in range(1, 3):
+        text = _call_claude(prompt)
+        text, _ = _clean_language_if_needed(text, is_shorts=True)
+        text = _postprocess_script(text)
+        text, removed = _strip_filler(text)
+        if removed:
+            logger.info("쇼츠 유도 멘트/하트 씬 %d개 제거", removed)
+        last_reason = _shorts_too_thin(text) or ""
+        if not last_reason:
+            return text
+        logger.warning("쇼츠 대본이 빈약함(%s) — 다시 생성 (%d/2)", last_reason, attempt)
+    raise ScriptGenerationError(f"쇼츠 대본이 두 번 다 빈약함: {last_reason}")
 
 
 def extend_long_script(current_long: str, reason: str) -> str:
@@ -814,6 +827,75 @@ def _postprocess_script(text: str) -> str:
     # 무료 모델이 헤더를 THUMBNAIL_SHORT:(S 빠짐) 로 쓰는 일이 있어(2026-11-01 실측) 바로잡는다.
     text = re.sub(r"(?im)^THUMBNAIL_SHORT:", "THUMBNAIL_SHORTS:", text)
     return _clean_scene_headers(_ensure_sentence_breaks(_normalize_speaker_tags(text)))
+
+
+# ─────────────────────────────────────────────
+# 쇼츠 유도 멘트 제거 + 최소 분량 검사 (2026-11-08)
+# ─────────────────────────────────────────────
+# 프롬프트로 금지해도 무료 모델이 습관적으로 "구독과 좋아요", "두 번 눌러 확인하세요",
+# "그런데 진짜 놀라운 건 지금부터입니다"를 넣는다. 사용자가 "유도 멘트가 영상의 반"이라고
+# 지적해서, 그런 문장은 코드가 문장 단위로 지우고 하트/좋아요 버튼 씬은 통째로 지운다.
+_FILLER_SENTENCE_RE = re.compile(
+    r"구독|좋아요|알림\s*설정|두\s*번\s*(눌|탭|터치|톡)|화면을\s*(두|톡|눌)|더블\s*탭|"
+    r"응원(해|부탁|을\s*부탁)|도움이\s*되셨|끝까지\s*(보|시청|함께)|"
+    r"지금부터(입니다|가\s*진짜|가\s*핵심)|놀라운\s*(건|것은|점은)\s*(이제|지금|바로\s*이\s*다음|다음)|"
+    r"다음\s*(영상|이야기|편)에서|댓글로\s*(남겨|알려)|공유해\s*주세요"
+)
+_FILLER_SCENE_RE = re.compile(r"heart\s*icon|like\s*button|thumbs?\s*up|subscribe|bell\s*icon", re.IGNORECASE)
+_SHORTS_MIN_SCENES = 4
+_SHORTS_MIN_CHARS = 170  # 대사 합계가 이보다 짧으면(약 25초 미만) 내용이 빈약한 것으로 보고 다시 만든다
+
+
+def _strip_filler(text: str) -> tuple[str, int]:
+    """쇼츠 대본에서 유도 멘트 문장과 하트 씬을 지웁니다. (고친 대본, 지운 문장/씬 수)."""
+    lines = text.splitlines()
+    head: list[str] = []
+    blocks: list[list[str]] = []
+    for line in lines:
+        if line.lstrip().startswith("[SCENE"):
+            blocks.append([line])
+        elif blocks:
+            blocks[-1].append(line)
+        else:
+            head.append(line)
+
+    removed = 0
+    kept_blocks: list[list[str]] = []
+    for block in blocks:
+        if _FILLER_SCENE_RE.search(block[0]):
+            removed += 1
+            continue
+        new_block = [block[0]]
+        has_dialogue = False
+        for line in block[1:]:
+            m = re.match(r"^(\s*[^\s:：\[]+[:：]\s*)(.*)$", line)
+            if not m:
+                new_block.append(line)
+                continue
+            sentences = [s for s in m.group(2).split("&")]
+            kept = [s for s in sentences if s.strip() and not _FILLER_SENTENCE_RE.search(s)]
+            removed += len([s for s in sentences if s.strip()]) - len(kept)
+            if kept:
+                new_block.append(m.group(1) + "&".join(s.strip() for s in kept))
+                has_dialogue = True
+        if has_dialogue:
+            kept_blocks.append(new_block)
+        else:
+            removed += 1
+
+    out = head + [l for b in kept_blocks for l in b]
+    return "\n".join(out), removed
+
+
+def _shorts_too_thin(text: str) -> str | None:
+    """유도 멘트를 지운 뒤 남은 쇼츠가 너무 빈약하면 사유를, 괜찮으면 None을 반환."""
+    scenes = len(re.findall(r"(?m)^\s*\[SCENE", text))
+    if scenes < _SHORTS_MIN_SCENES:
+        return f"씬 {scenes}개(최소 {_SHORTS_MIN_SCENES})"
+    chars = _dialogue_char_count(text)
+    if chars < _SHORTS_MIN_CHARS:
+        return f"대사 {chars}자(최소 {_SHORTS_MIN_CHARS})"
+    return None
 
 
 _RE_THUMBNAIL_LINE = re.compile(
@@ -1219,13 +1301,14 @@ def generate_daily_batch(
             logger.warning("쇼츠 생성 시간 예산(%d초) 초과 — 남은 %d개는 건너뜀", _SHORTS_BATCH_BUDGET_SEC, extra_shorts_count - i)
             break
         try:
-            text = generate_shorts_only(cta_settings=cta, avoid_titles=made_titles, profile=profile)
+            text = generate_shorts_only(avoid_titles=made_titles, profile=profile)
             m = re.search(r"THUMBNAIL_SHORTS:[ \t]*\r?\n[ \t]*(.+)", text)
             if m:
                 made_titles.append(m.group(1).strip())
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-            # 파일명이 곧 run_id가 된다 — "_econ"은 image/nvidia_direct.py가 화풍을 고르는 표식.
-            tag = "_econ" if profile == "world_econ" else ""
+            # 파일명이 곧 run_id가 된다 — "_econ"(다큐 사진)/"_photo"(실사 시네마틱)는
+            # image/nvidia_direct.py가 Worker를 건너뛰고 화풍을 고르는 표식.
+            tag = "_econ" if profile == "world_econ" else "_photo"
             saved.append(save_story(input_dir, f"claude_{ts}_{i + 1:02d}{tag}_shorts.txt", text))
         except ScriptGenerationError as e:
             logger.warning("일괄 생성 중 쇼츠 %d/%d 실패: %s", i + 1, extra_shorts_count, e)

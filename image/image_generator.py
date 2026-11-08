@@ -240,6 +240,24 @@ class ImageGenerator:
 
         success = sum(1 for r in results if r.success)
         logger.info("Image generation complete: %d/%d succeeded", success, total)
+
+        # 2026-11-08: 이미지를 못 구한 씬은 검은 화면이 나가던 걸, 가장 가까운(앞쪽 우선) 성공
+        # 씬의 이미지를 빌려 쓴다 — 씬마다 카메라 무빙이 달라서 같은 그림이 이어져도 덜 어색하다.
+        # NVIDIA가 몇 장만 500을 내는 날이 흔하고 Pixabay 폴백은 403으로 막혀 있다.
+        ok_idx = [i for i, r in enumerate(results) if r.success and r.image_path and not r.is_video]
+        if ok_idx and success < total:
+            for i, r in enumerate(results):
+                if r.success:
+                    continue
+                donor = min(ok_idx, key=lambda j: (abs(j - i), j > i))
+                results[i] = ImageResult(
+                    scene_index=r.scene_index,
+                    image_path=results[donor].image_path,
+                    prompt=r.prompt,
+                    success=True,
+                    source=results[donor].source,
+                )
+                logger.warning("[Image] Scene %d: 이미지 없음 → 씬 %d 이미지 재사용", r.scene_index, results[donor].scene_index)
         return results
 
     def _resolve_photo_fallback(

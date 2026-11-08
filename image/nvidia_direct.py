@@ -47,9 +47,28 @@ _DOCUMENTARY_SUFFIX = (
 )
 
 
+# 2026-11-08: 국뽕 쇼츠도 "따뜻한 수채화 동화" 그림이 사실 전달 영상과 안 어울리고 그럴싸해
+# 보이지 않는다는 지적으로, 실사 시네마틱 사진풍으로 러너에서 직접 그린다(파일명 _photo).
+_PHOTO_SUFFIX = (
+    ", cinematic photograph, photorealistic, natural vivid colors, dramatic natural lighting, "
+    "shallow depth of field, sharp focus, highly detailed, shot on full-frame camera, "
+    "no text, no letters, no numbers, no logo, no watermark"
+)
+
+
 def runner_only(run_id: str) -> bool:
     """이 run_id는 Worker를 쓰지 않고 러너가 NVIDIA로 전부 직접 그린다."""
-    return "_econ" in (run_id or "")
+    rid = run_id or ""
+    return "_econ" in rid or "_photo" in rid
+
+
+def _style_for(run_id: str) -> str:
+    rid = run_id or ""
+    if "_econ" in rid:
+        return "documentary"
+    if "_photo" in rid:
+        return "photo"
+    return "watercolor"
 
 
 # index.js의 _IMAGE_STYLE_SUFFIX / _FACE_QUALITY_BOOST / _PERSON_KEYWORDS와 동일해야 함.
@@ -92,9 +111,11 @@ def available() -> bool:
     return bool(_key())
 
 
-def _generate_one(scene: Scene, seed: int, dest: Path, key: str, documentary: bool = False) -> bool:
-    if documentary:
+def _generate_one(scene: Scene, seed: int, dest: Path, key: str, style: str = "watercolor") -> bool:
+    if style == "documentary":
         prompt = f"{scene.prompt}{_DOCUMENTARY_SUFFIX}"
+    elif style == "photo":
+        prompt = f"{scene.prompt}{_PHOTO_SUFFIX}"
     else:
         boost = _FACE_BOOST if _PERSON_RE.search(scene.prompt) else ""
         prompt = f"{scene.prompt}{boost}{_STYLE_SUFFIX}"
@@ -137,7 +158,7 @@ def fill_missing(run_id: str, scenes: List[Scene], dest_dir: Path) -> Dict[int, 
     def _job(scene: Scene):
         seed = zlib.crc32(f"{run_id}:{scene.index}".encode("utf-8")) % 1_000_000_000
         dest = dest_dir / f"scene_{scene.index:04d}_direct.jpg"
-        return scene.index, dest, _generate_one(scene, seed, dest, key, documentary=runner_only(run_id))
+        return scene.index, dest, _generate_one(scene, seed, dest, key, style=_style_for(run_id))
 
     out: Dict[int, Path] = {}
     with ThreadPoolExecutor(max_workers=_CONCURRENCY) as pool:
