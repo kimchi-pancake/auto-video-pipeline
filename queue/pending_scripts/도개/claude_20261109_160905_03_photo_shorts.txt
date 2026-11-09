@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261109_160905_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+첨단기술
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+삼성전자 메모리 반도체의 숨은 기술
+
+THUMBNAIL_SHORTS:
+삼성전자 메모리 반도체의 숨은 기술
+
+[SCENE:silicon wafer floating in a cleanroom factory, microscopic circuit patterns glowing blue, close-up shot, bright cool lighting, cinematic, highly detailed, 1080x1920]
+나레이터: 삼성전자 메모리 반도체는 정보가 전기로 저장되는 초미세 회로입니다
+
+[SCENE:Korean engineers in white cleanroom suits inspecting large manufacturing machines, medium shot, clean white environment, dramatic lighting, professional atmosphere, 1080x1920]
+나레이터: 세계에서 가장 미세한 선폭으로 데이터를 촘촘하게 채우는 기술이 핵심입니다
+
+[SCENE:rows of tall server racks in a massive data center, blinking indicator lights, wide shot, rows of equipment, night city lights visible through windows, cinematic, 1080x1920]
+나레이터: 전원이 꺼져도 저장된 정보가 사라지지 않는 낸드플래시 메모리를 대량 생산합니다
+
+[SCENE:robotic arms moving semiconductor wafers between processing chambers, low angle, mechanical movement, golden hour lighting filtering through cleanroom windows, vibrant, 1080x1920]
+나레이터: 수 나노미터 단위의 회로를 수만 개 칩에 동일하게 찍어내는 공정이 가능합니다
+
+[SCENE:aerial view of a vast semiconductor industrial complex at dusk, glowing facility lights, drone shot, expansive cityscape, dramatic sky, highly detailed, 1080x1920]
+나레이터: 이 보이지 않는 기술이 전 세계 스마트폰과 데이터센터의 기억을 책임지고 있습니다

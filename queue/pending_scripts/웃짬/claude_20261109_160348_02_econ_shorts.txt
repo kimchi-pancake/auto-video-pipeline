@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261109_160348_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+국가부채
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+연금 고갈, 한국 가계 비용?
+
+THUMBNAIL_SHORTS:
+연금 고갈, 한국 가계 비용?
+
+[SCENE:a silhouette of an elderly couple in a dim living room, a stack of unpaid bills on a table, low light, moody, low angle, dramatic lighting, documentary style, 1080x1920]
+나레이터: 연금 고갈, 한국 가계는 무슨 부담을 안고 있는가
+
+[SCENE:an abstract line graph showing declining pension payments, a city skyline in the background, cinematic lighting, wide shot, muted colors, dramatic lighting, 1080x1920]
+나레이터: 연금 지급액이 2025년부터 25% 감소하면 은퇴자 급여가 급감한다
+
+[SCENE:a family of three at a kitchen table, an empty pantry, two hands holding a credit card, low angle, dramatic lighting, moody, overcast lighting, 1080x1920]
+나레이터: 급감한 급여는 가계의 월별 현금 유입을 줄이며 소비를 억제한다
+
+[SCENE:a close‑up of a bank loan document, a bank seal, ink drying, overcast lighting, moody, tight shot, dramatic lighting, 1080x1920]
+나레이터: 소비 억제는 가계가 대출에 의존하도록 만들며 이자 부담이 증가한다
+
+[SCENE:a stressed silhouette of a family in front of a house, sun setting behind, muted colors, documentary style, wide shot, cinematic lighting, 1080x1920]
+나레이터: 결국 한국 가계는 연금 고갈로 인한 현금 흐름 부족과 이자 부채 증가를 동시에 감당해야 한다
