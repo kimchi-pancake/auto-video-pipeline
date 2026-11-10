@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261110_160556_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+빈부격차
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+청년 일자리, 비용을 치르는 세대는?
+
+THUMBNAIL_SHORTS:
+청년 일자리, 비용을 치르는 세대는?
+
+[SCENE:empty city streets at night with closed shop shutters and streetlights, wide shot, cinematic lighting, moody overcast, documentary photograph, muted colors, highly detailed, no text, no logo, no numbers]
+나레이터: 일자리가 줄어들 때 청년 세대가 가장 먼저 비용을 치르는 구조가 있습니다&첫 일자리를 놓친 청년은 이후에도 임금이 낮게 형성되는 경향이 있습니다
+
+[SCENE:closed factory assembly line with idle robotic arms and conveyor belts, low angle shot, dramatic lighting, muted industrial tones, documentary style, no text, no logo, no numbers]
+나레이터: 기업은 고용을 유연하게 유지해 비용을 절감하려 합니다&하지만 청년은 정규직 진입 기회를 잃고 비정규직에 머무르게 됩니다
+
+[SCENE:old residential apartment complex with laundry hanging outside and children playing on the street, aerial shot, soft daylight, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 고령 세대는 연금과 재산으로 완충할 수 있지만&청년은 소득 기반이 약해 주거와 생활비 부담을 온전히 떠안습니다
+
+[SCENE:modern glass office building lobby with commuters walking from behind, low angle shot, cinematic lighting, documentary style, muted colors, no text, no logo, no numbers]
+나레이터: 일본은 1990년대 초 버블 붕괴 후 고용 빙하기를 겪었고&그때 취업한 청년들은 평생 임금이 낮게 형성되는 결과를 맞이했습니다
+
+[SCENE:empty train station platform at dusk with a lone silhouette of a commuter with a backpack, wide shot, cinematic lighting, moody overcast, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 일자리 부족은 개인의 노력이 아니라 경제 구조의 문제입니다&누가 이득을 보고 누가 비용을 치르는지 함께 생각해봐야 합니다

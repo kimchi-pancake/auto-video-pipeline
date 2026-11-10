@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261110_160619_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+첨단기술
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+한국 배터리 3사 해외에선 왜 신기할까
+
+THUMBNAIL_SHORTS:
+한국 배터리 3사 해외에선 왜 신기할까
+
+[SCENE:LG Energy Solution, Samsung SDI, SK On headquarters buildings standing side by side in a modern city district, wide shot of three sleek corporate towers with glass facades under bright daylight, cinematic, vibrant, highly detailed, no text, no logo, 1080x1920]
+나레이터: LG에너지솔루션, 삼성SDI, SK온, 이 세 회사는 전 세계 배터리 시장을 이끄는 한국 배터리 3사입니다
+
+[SCENE:massive EV battery cell production line inside a cleanroom factory, close-up of automated robotic arms assembling rectangular battery cells, cinematic lighting, golden hour, highly detailed, Korean engineers in white cleanroom suits, no text, no logo, 1080x1920]
+나레이터: 이 회사들은 삼성전자, SK하이닉스 같은 반도체 기업의 계열사에서 시작해 배터리 전문 회사로 성장했습니다
+
+[SCENE:huge battery pack assembly warehouse with rows of finished electric vehicle battery packs, medium shot of neatly stacked battery modules under industrial lighting, dramatic lighting, vibrant, highly detailed, no text, no logo, 1080x1920]
+나레이터: 유럽과 미국, 헝가리, 폴란드 등에 대규모 생산 공장을 세워 글로벌 완성차 업체에 배터리를 공급하고 있습니다
+
+[SCENE:electric vehicle charging station at a busy urban parking lot, low angle shot of several EVs plugged into fast chargers, night city lights, cinematic, vibrant, highly detailed, no text, no logo, 1080x1920]
+나레이터: 한국에서는 전기차 배터리를 교체하고 재활용하는 시스템이 이미 상용화돼 있지만, 해외에서는 아직도 생소한 일입니다
+
+[SCENE:modern recycling facility conveyor belt with battery cells moving through sorting machines, aerial shot of an industrial recycling plant with workers in safety gear, cinematic lighting, highly detailed, no text, no logo, 1080x1920]
+나레이터: 한국 배터리 3사는 제조부터 리사이클링까지 전 과정을 혼자 해결할 수 있는 세계 몇 안 되는 나라의 회사들입니다
