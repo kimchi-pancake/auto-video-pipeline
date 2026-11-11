@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261111_161100_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+국제기구
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+무역 분쟁, 왜 약소국만 손해 볼까
+
+THUMBNAIL_SHORTS:
+무역 분쟁, 왜 약소국만 손해 볼까
+
+[SCENE:empty courtroom with an overturned scale of justice, wide shot, overcast lighting, documentary photograph, muted colors, no text, no logo, no numbers, 1080x1920]
+나레이터: 세계무역기구는 모든 회원국이 평등하게 분쟁을 해결할 수 있다고 주장합니다&하지만 작은 나라가 거대 경제국에 제소하면 현실은 다릅니다
+
+[SCENE:a small wooden table facing a massive conference table, low angle shot, dramatic lighting, cinematic, muted colors, no text, no logo, no numbers, 1080x1920]
+나레이터: 공식 명분은 분쟁 해결 기구의 중립성입니다&하지만 상소 기구 기능이 마비되면서 판결을 강제할 수단이 사라졌습니다
+
+[SCENE:a silhouette of a businessman looking at a stack of thick legal documents, close-up shot, moody lighting, highly detailed, documentary style, no text, no logo, no numbers, 1080x1920]
+나레이터: 거대 국가는 비용을 들여 장기 소송을 버틸 수 있습니다&작은 나라는 소송 비용과 시간 때문에 항의를 포기하게 됩니다
+
+[SCENE:a customs office with empty cargo containers, aerial shot, overcast lighting, cinematic, muted colors, no text, no logo, no numbers, 1080x1920]
+나러터: 2019년 세계무역기구 상소 기구가 기능 정지된 이후, 강대국의 일방적 관세 부과에 대응할 실질적 수단이 약화되었습니다
+
+[SCENE:a silhouetted worker watching a large cargo ship depart from a port, wide shot, dramatic lighting, moody atmosphere, no text, no logo, no numbers, 1080x1920]
+나레이터: 결국 무역 규칙을 정하는 쪽은 강대국이고, 그 비용을 치르는 쪽은 약소국입니다&이 구조에서 작은 나라는 무엇을 얻어야 할까요

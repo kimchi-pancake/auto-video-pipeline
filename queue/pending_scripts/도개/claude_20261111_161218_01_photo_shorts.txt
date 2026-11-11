@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261111_161218_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+음식문화
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+simple.mp3
+
+THUMBNAIL_LONG:
+바나나맛우유, 왜 50년째 맛이 똑같지?
+
+THUMBNAIL_SHORTS:
+바나나맛우유, 왜 50년째 맛이 똑같지?
+
+[SCENE:A banana milk bottle in a retro glass container on a wooden table, sunlight streaming through a window, cinematic, vibrant, golden hour, highly detailed, no text, no logo]
+나레이터: 1974년 빙그레가 선보인 바나나맛우유는 반세기 동안 한국인들이 사랑하는 대표 우유 음료입니다&그 맛이 50년째 그대로인 이유에는 독자 기술이 숨어 있습니다
+
+[SCENE:A wide shot of a modern food production factory interior with stainless steel tanks and pipes, workers in white cleanroom suits monitoring control panels, dramatic lighting, highly detailed, no text, no logo]
+나레이터: 빙그레는 실제 바나나 과즙이 아닌 천연향료와 우유를 최적 비율로 배합해 일정한 풍미를 구현했습니다&공장에서는 온도와 혼합 속도를 정밀하게 제어해 매번 같은 맛을 냅니다
+
+[SCENE:A close-up of the banana milk bottle cap being sealed on a conveyor belt in a bottling line, soft focus background, bright clean lighting, vibrant colors, no text, no logo]
+나레이터: 병 속 우유가 산패하지 않도록 무균 충전과 냉장 유통 시스템을 갖추고 전국으로 배송합니다&소비자가 언제 어디서나 같은 맛을 느낄 수 있게 한 콜드체인 유통망이 핵심입니다
+
+[SCENE:A retro-style Korean street scene with people holding banana milk bottles, vintage shop signs in the background, warm nostalgic atmosphere, cinematic, highly detailed, no text, no logo]
+나레이터: 독특한 병 모양과 노란색 라벨은 시간이 지나도 변함없이 소비자에게 기억됩니다&맛과 디자인, 유통 기술이 삼위일체가 된 결과입니다
+
+[SCENE:A hand holding a banana milk bottle against a clear blue sky, low angle shot, bright daylight, vibrant, clean, no text, no logo]
+나레이터: 바나나맛우유는 단순한 음료가 아니라, 한국 식품 기술이 일상 속에 스며든 증거입니다&여러분은 이 우유를 언제 처음 맛보셨나요
