@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261112_161717_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+생활편의
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+외국인이 놀란 한국 전기밥솥의 비밀
+
+THUMBNAIL_SHORTS:
+외국인이 놀란 한국 전기밥솥의 비밀
+
+[SCENE:A modern rice cooker sitting on a clean white kitchen counter, steam rising from the rice cooker, close-up shot], cinematic, vibrant lighting, kitchen interior, highly detailed, no text, no logo, 1080x1920
+나레이터: 한국 집집마다 꼭 있는 전기밥솥은 한국인이 가장 사랑하는 가전제품입니다
+
+[SCENE:A busy subway station interior with crowds of people, wide shot of commuters walking through gates], cinematic, dramatic lighting, bustling urban atmosphere, highly detailed, no text, no logo, 1080x1920
+나레이터: 대한민국 전기밥솥은 압력과 온도를 정밀하게 조절해 밥을 한 알 한 알 윤기 있게 짓습니다
+
+[SCENE:A Korean engineer in a white cleanroom suit examining a rice cooker circuit board, medium shot], cinematic, bright laboratory lighting, technology setting, highly detailed, no text, no logo, 1080x1920
+나레이터: 내솥에 코팅된 세라믹과 구리 소재는 열을 고르게 전달해 밥맛을 살립니다
+
+[SCENE:A close-up of freshly cooked white rice in a ceramic bowl, steam rising, macro shot], cinematic, warm lighting, food photography style, highly detailed, no text, no logo, 1080x1920
+나레이터: 예약 취사 기능으로 밥을 미리 맞춰두면 아침에 바로 따뜻한 밥을 먹을 수 있습니다
+
+[SCENE:An airport terminal with foreign tourists looking at a rice cooker display, wide shot], cinematic, night city lights, travel atmosphere, highly detailed, no text, no logo, 1080x1920
+나레이터: 해외에선 전기밥솥을 본 외국인이 왜 필요한지 묻지만 한국에선 일상 속 필수품입니다

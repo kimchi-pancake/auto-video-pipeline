@@ -1,0 +1,63 @@
+RUN_ID:
+claude_20261112_161712_02_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+스포츠
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+한국이 리그 오브 레전드 세계 챔피언십을 연 이유
+
+THUMBNAIL_SHORTS:
+한국이 리그 오브 레전드 세계 챔피언십을 연 이유
+
+[SCENE:League of Legends World Championship opening ceremony stage with cheering crowd, vibrant stage lighting, wide shot, cinematic, highly detailed]
+나레이터: 리그 오브 레전드 월드 챔피언십은 2011년 스웨덴에서 열린 첫 대회로 시작되었습니다&한국은 2014년 서울에서 대회를 처음 개최하며 전자 스포츠 본고장의 면모를 보여주었습니다
+
+[SCENE:Korean e-sports athletes in white jerseys sitting on stage, large arena with audience, dramatic lighting, cinematic]
+나라이터:서울 올림픽공원 체조경기장에서 열린 2014년 대회는 전 세계 팬들이 한국의 전자 스포츠 문화를 직접 경험한 무대였습니다
+
+[SCENE:League of Legends grand finals trophy on stage, golden confetti falling, crowd cheering, low angle, dramatic lighting]
+나레이터: 한국 팀들은 2013년부터 2016년까지 네 년 연속 월드 챔피언십 우승을 차지하며 최강팀의 명성을 쌓았습니다
+
+[SCENE:Korean esports fans waving light sticks in stadium, energetic crowd, vibrant atmosphere, aerial shot]
+나레이터: 2023년 부산에서 열린 대회 결승전에는 SK텔레콤 T1과 JD게이밍이 맞붙어 한국 팬들에게 뜨거운 감동을 선사했습니다
+
+[SCENE:Modern Korean gaming PC bang with rows of computers, neon signs, night city lights outside windows, wide shot]
+나레이터: 오늘날 한국은 전 세계 전자 스포츠 대회 개최의 중심지로 자리 잡았습니다
+
+:
+10801920
+
+스포츠
+
+나레이터: 나레이터
+
+행복.3
+
+한국이 리그 오브 레전드 세계 챔피언십을 연 이유
+
+한국이 리그 오브 레전드 세계 챔피언십을 연 이유
+
+[SCENE:League of Legends World Championship opening ceremony stage with cheering crowd, vibrant stage lighting, wide shot, cinematic, highly detailed]
+나레이터: 리그 오브 레전드 월드 챔피언십은 2011년 스웨덴에서 열린 첫 대회로 시작되었습니다&한국은 2014년 서울에서 대회를 처음 개최하며 전자 스포츠 본고장의 면모를 보여주었습니다
+
+[SCENE:Korean e-sports athletes in white jerseys sitting on stage, large arena with audience, dramatic lighting, cinematic]
+나레이터: 서울 올림픽공원 체조경기장에서 열린 2014년 대회는 전 세계 팬들이 한국의 전자 스포츠 문화를 직접 경험한 무대였습니다
+
+[SCENE:League of Legends grand finals trophy on stage, golden confetti falling, crowd cheering, low angle, dramatic lighting]
+나레이터: 한국 팀들은 2013년부터 2016년까지 네 년 연속 월드 챔피언십 우승을 차지하며 최강팀의 명성을 쌓았습니다
+
+[SCENE:Korean esports fans waving light sticks in stadium, energetic crowd, vibrant atmosphere, aerial shot]
+나레이터: 2023년 부산에서 열린 대회 결승전에는 SK텔레콤 T1과 JD게이밍이 맞붙어 한국 팬들에게 뜨거운 감동을 선사했습니다
+
+[SCENE:Modern Korean gaming PC bang with rows of computers, neon signs, night city lights outside windows, wide shot]
+나레이터: 오늘날 한국은 전 세계 전자 스포츠 대회 개최의 중심지로 자리 잡았습니다

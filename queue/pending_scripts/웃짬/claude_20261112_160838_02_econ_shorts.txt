@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261112_160838_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+공급망
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+글로벌 공급망, 이득과 비용 누가?
+
+THUMBNAIL_SHORTS:
+글로벌 공급망, 이득과 비용 누가?
+
+[SCENE: Massive container ship at a port, cranes lifting containers, early morning light, cinematic lighting, 1080x1920]
+나레이터: 컨테이너 운임이 2018년 이후 최고치를 기록했고, 급등은 이득과 비용을 분리한다.
+
+[SCENE: Warehouse with empty shelves, workers looking at a clock, dusk, moody lighting, 1080x1920]
+나레이터: 세계 무역 확대가 이익을 약속했지만, 부품 공급 지연으로 생산이 멈췄다.
+
+[SCENE: Congested harbor with multiple ships piled, traffic lights, dramatic lighting, 1080x1920]
+나레이터: 포트 혼잡이 운송 시간을 늘리고, 운임을 올려 대형 운송사는 이익을 챙겼다.
+
+[SCENE: Electronics store with price tags glowing, customers in line, low lighting, cinematic, 1080x1920]
+나레이터: 소비자와 중소기업은 전자제품 가격이 오르며 비용을 부담한다.
+
+[SCENE: Split screen showing shipping company logo on one side and shoppers on the other, balanced lighting, 1080x1920]
+나레이터: 이 구조는 해운사와 물류기업이 수익을, 일반 소비자와 중소기업이 비용을 지는 체계다.

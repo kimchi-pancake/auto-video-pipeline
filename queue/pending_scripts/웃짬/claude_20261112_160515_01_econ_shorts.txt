@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261112_160515_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+물가금리
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+원자재 가격, 왜 무너지일까
+
+THUMBNAIL_SHORTS:
+원자재 가격, 왜 무너지일까
+
+[SCENE: Oil rig on a stormy sea, dramatic lighting, cinematic, 1080x1920, no text, no logo, no numbers]
+나레이터: 1973년 석유수출국가기구가 석유 금수조선을 선언했고, 그로 인해 전 세계 석유 가격이 400% 급등했다&전 세계 에너지 소비가 급증하며, 수요가 공급을 초과하면서 물가가 치솟았다.
+
+[SCENE: African mining town with workers loading metal ore, low angle, overcast, 1080x1920, no text, no logo, no numbers]
+나레이터: 아프리카 국가들은 금속 수출세를 인상하며 가격을 끌어올렸고, 이로 인해 전 세계 전자 부품 가격이 상승했다&수요가 제한되어 공급망이 긴장했다.
+
+[SCENE: Factory assembly line producing electronic components, close-up, muted colors, 1080x1920, no text, no logo, no numbers]
+나레이터: 전자 산업은 희토류 가격 상승으로 부품 수급이 악화되고 있으며, 이로 인해 생산 비용이 늘었다&기술 기업들은 수익성을 유지하기 위해 대체 원재료를 찾아야 했다.
+
+[SCENE: Container yard at dusk with stalled ships, medium shot, moody lighting, 1080x1920, no text, no logo, no numbers]
+나레이터: 자원 국수주의는 물류망을 지연시켜 글로벌 공급을 불안정하게 만들고, 운송 비용이 급증했다&항만 운영이 느려져 수출입이 지연됐다.
+
+[SCENE: Digital screen displaying rising commodity price graph, low angle, dramatic lighting, 1080x1920, no text, no logo, no numbers]
+나레이터: 이 구조는 원자재 수출국이 이익을 극대화하고 수입국이 비용을 증가시켜 경제적 불균형을 심화시킨다&국가 간 무역 균형이 흔들린다.
+
+[SCENE: International trade negotiation room with officials arguing, aerial shot, dramatic lighting, 1080x1920, no text, no logo, no numbers]
+나레이터: 결국 자원 독점은 국제 무역 규칙을 무력화시키며 전 세계가 손해를 보게 되고, 부의 집중이 가속화된다&국제 협력은 더욱 어려워진다.

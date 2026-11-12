@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261112_161153_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+역사유산
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+팔만대장경, 실패 딛고 성공
+
+THUMBNAIL_SHORTS:
+팔만대장경, 실패 딛고 성공
+
+[SCENE:A grand temple hall at dusk, a monk holding a massive leather-bound manuscript, flickering incense smoke, candlelight illuminating the page, wide shot, warm lighting, dramatic ambiance, 1080x1920]
+나레이터: 팔만대장경, 실패를 딛고 성공한 그 순간을 알 수 있다
+
+[SCENE:A royal court chamber, King U issuing a decree on a gilt-draped scroll, scholars and monks listening attentively, medium close-up, golden hour lighting, authoritative atmosphere, 1080x1920]
+나레이터: 1377년, 왕우가 불경대전 완성을 명령하며 종사자들에게 지원을 약속했다
+
+[SCENE:A cramped monk's room with rough, dark paper, scribes struggling to copy, ink bleeding, a stack of damaged pages, tight shot, dim lighting, tense atmosphere, 1080x1920]
+나레이터: 초기 시도는 저급 종이와 부족한 인력 때문에 수많은 손상된 장을 낳으며 실패했다
+
+[SCENE:A newly constructed pavilion of scriptures, polished wooden beams, pristine paper scrolls lined up, monks in white robes preparing to copy, wide shot, bright lighting, hopeful ambiance, 1080x1920]
+나레이터: 장경판전이 세워져 신선한 종이와 안정된 환경이 마련되자, 복사는 순조롭게 진행되었다
+
+[SCENE:A celebratory scene of monks cheering as the last volume is sealed, a statue of Buddha in the background, a banner indicating completion, medium shot, joyous lighting, triumphant atmosphere, 1080x1920]
+나레이터: 결국 1379년, 팔만대장경이 완성되며 13,000권의 불경이 한 줄기 빛으로 태동했다
