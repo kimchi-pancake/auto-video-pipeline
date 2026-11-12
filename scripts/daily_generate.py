@@ -40,7 +40,7 @@ from utils.logger import setup_logging, get_logger
 from utils.config_manager import get_config
 from utils.notify import notify, notify_discord, notify_discord_create_thread
 from core.batch_runner import BatchRunner
-from core.daily_queue import pull_queue_into_input_dir
+from core.daily_queue import pull_queue_into_input_dir, queue_dir_for_channel
 from core.video_registry import record_upload
 from utils.soft_approval import publish_video, schedule_publish
 
@@ -229,6 +229,7 @@ def _process_channel(cfg, chan, logger) -> tuple[int, int]:
         archive_subdir=name,
         discord_status=True,
         discord_thread_id=thread_id,
+        requeue_dir=queue_dir_for_channel(name),
         on_file_done=lambda story_path, result: _on_file_done(story_path, result, thread_id),
     )
     pending = runner.get_pending_files()

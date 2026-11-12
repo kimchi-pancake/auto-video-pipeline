@@ -90,6 +90,7 @@ _PERSON_RE = re.compile(
     re.IGNORECASE,
 )
 
+_outage = False        # 이번 프로세스에서 한 영상이 전 씬 실패하면 True(장애 판정)
 _ATTEMPTS = 4          # 씬당 최대 시도 횟수
 _REQUEST_TIMEOUT = 100  # 느린 500이 60초쯤 걸려서 그보다 넉넉히
 _CONCURRENCY = 4        # NVIDIA는 동시 16개부터 429가 늘어서 여유 있게
@@ -149,8 +150,14 @@ def _generate_one(scene: Scene, seed: int, dest: Path, key: str, style: str = "w
 def fill_missing(run_id: str, scenes: List[Scene], dest_dir: Path) -> Dict[int, Path]:
     """scenes를 NVIDIA로 직접 그려 dest_dir에 저장하고 {scene.index: 파일경로}를 돌려줍니다.
     그리지 못한 씬은 결과에서 빠집니다(호출부가 Pixabay로 폴백)."""
+    global _outage
     key = _key()
     if not key or not scenes:
+        return {}
+    if _outage:
+        # 같은 프로세스에서 이미 한 번 전부 실패했으면(2026-11-08부터 NVIDIA 이미지 API 장애) 영상마다
+        # 씬당 4번×100초를 또 태우지 않는다 — 한 편당 8분 넘게 헛돌았다.
+        logger.warning("[NvidiaDirect] 이번 실행에서 이미 전부 실패해서 장애로 보고 건너뜁니다")
         return {}
     dest_dir.mkdir(parents=True, exist_ok=True)
     logger.info("[NvidiaDirect] Worker가 못 그린 %d개 씬을 러너에서 직접 생성합니다", len(scenes))
@@ -166,4 +173,6 @@ def fill_missing(run_id: str, scenes: List[Scene], dest_dir: Path) -> Dict[int, 
             if ok:
                 out[idx] = dest
     logger.info("[NvidiaDirect] %d/%d개 생성 성공", len(out), len(scenes))
+    if not out and len(scenes) >= 3:
+        _outage = True
     return out

@@ -7,6 +7,9 @@ input/ 폴더에 쌓인 story.txt 파일들을 순서대로 Pipeline 에 넘겨
 
 from __future__ import annotations
 
+import re
+import shutil
+from datetime import datetime
 from pathlib import Path
 from typing import Callable, List, Optional
 
@@ -30,7 +33,9 @@ class BatchRunner:
         archive_subdir: str = "",
         discord_status: bool = False,
         discord_thread_id: Optional[str] = None,
+        requeue_dir: Optional[str | Path] = None,
     ):
+        self._requeue_dir = Path(requeue_dir) if requeue_dir else None
         self._cfg = config
         self._input_dir = Path(input_dir)
         self._progress_cb = progress_callback
@@ -118,6 +123,7 @@ class BatchRunner:
                 also_make_shorts=also_make_shorts,
             )
             results.append(result)
+            self._maybe_requeue(story_path, result)
             self._archive_input(story_path, result.success)
 
             if reporter:
@@ -134,6 +140,34 @@ class BatchRunner:
                     logger.exception("on_file_done callback 오류")
 
         return results
+
+    # 2026-11-12: NVIDIA 이미지 API가 나흘째 죽어 있어서(11-08~) 그림을 한 장도 못 구한 대본이
+    # 실패 처리 → 큐에서 삭제로 커밋돼 매일 5편씩 통째로 사라졌다. 그림 때문에 실패한 대본은
+    # 외부 장애일 뿐 대본 잘못이 아니므로 큐로 되돌려서 다음 조립 때(Worker 크론·안전망 크론)
+    # 다시 시도한다. 영구 실패가 쌓이지 않게 대본 날짜가 3일 지난 건 포기한다.
+    _IMAGE_OUTAGE_MARK = "한 장도 못 구했습니다"
+    _REQUEUE_MAX_AGE_DAYS = 3
+
+    def _maybe_requeue(self, story_path: Path, result: PipelineResult) -> None:
+        if result.success or not self._requeue_dir:
+            return
+        if self._IMAGE_OUTAGE_MARK not in (result.error or ""):
+            return
+        m = re.search(r"claude_(\d{8})_", story_path.name)
+        if m:
+            try:
+                age = (datetime.now().date() - datetime.strptime(m.group(1), "%Y%m%d").date()).days
+                if age > self._REQUEUE_MAX_AGE_DAYS:
+                    logger.warning("이미지 장애로 실패했지만 대본이 %d일 지나 큐로 되돌리지 않고 버립니다: %s", age, story_path.name)
+                    return
+            except ValueError:
+                pass
+        try:
+            self._requeue_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(story_path, self._requeue_dir / story_path.name)
+            logger.warning("이미지 장애로 실패 — 대본을 큐로 되돌려 다음 조립 때 다시 시도합니다: %s", story_path.name)
+        except Exception:
+            logger.exception("대본 큐 복귀 실패: %s", story_path)
 
     def _archive_input(self, story_path: Path, success: bool) -> None:
         sub = "input_processed" if success else "input_failed"
