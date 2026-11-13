@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261113_161053_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+생활편의
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+한국 휴게소 외국인놀람
+
+THUMBNAIL_SHORTS:
+한국 휴게소 외국인놀람
+
+[SCENE:Korean highway rest stop interior, indoor restaurant area bustling with diners, wide angle, bright lighting, vibrant atmosphere, no text, no logo, 1080x1920]
+나레이터: 한국 고속도로 휴게소, 100% 실내형 식당이 있어 비가 와도 바로 식사할 수 있다
+
+[SCENE:Korean highway rest stop, Wi‑Fi hotspot and fast charging station visible, mid shot, dramatic lighting, energetic vibe, no text, no logo, 1080x1920]
+나레이터: 휴게소에는 24시간 무료 와이파이와 고속 충전 포트가 있어 전 세계에서 가장 편리하다
+
+[SCENE:Korean highway rest stop, electric vehicle charging stalls beside bicycle parking area, wide shot, futuristic lighting, clean environment, no text, no logo, 1080x1920]
+나레이터: 또한 전기차 충전소와 자전거 전용 주차장이 동시에 설치돼 차량과 자전거 이용자 모두를 만족시킨다
+
+[SCENE:Korean highway rest stop, Korean fast food counter next to international cuisine stall, close‑up, colorful lighting, lively ambiance, no text, no logo, 1080x1920]
+나레이터: 휴게소 내부에는 K‑FOOD 전문점과 국제식당이 함께 있어 국내외 여행자 모두 한 번에 즐길 수 있다
+
+[SCENE:Korean highway rest stop, panoramic view showing indoor restaurant, Wi‑Fi, EV charging, bicycle parking, wide angle, golden hour lighting, inviting vibe, no text, no logo, 1080x1920]
+나레이터: 이처럼 한국 고속도로 휴게소는 비가 와도 실내식당, 24시간 와이파이, 전기차 충전, 자전거 주차 등 모든 편의를 한 곳에서 제공해 외국인들이 가장 놀라워한다

@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261113_160406_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+국가부채
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+연금의 비용은 누가 내나
+
+THUMBNAIL_SHORTS:
+연금의 비용은 누가 내나
+
+[SCENE:Deserted pension office building at dusk, empty desks, faint glow, low angle, moody lighting, cinematic, 1080x1920]
+나레이터: 고령화가 급속히 진행돼 연금이 급증하고, 젊은 세대가 비용을 짊어진다
+
+[SCENE:A conference room with a long table, a podium, muted colors, overcast lighting, cinematic, 1080x1920]
+나레이터: 정부는 ‘노인부양’이라며 연금 확대를 정당화한다
+
+[SCENE:A senior citizen receiving a pension check, close‑up of hand, warm lighting, documentary style, 1080x1920]
+나레이터: 연금 수령자는 과거보다 높은 금액을 받으며, 세대 차별적 혜택을 누린다
+
+[SCENE:A line of young workers at a tax office, tapping a queue, tall buildings in background, overcast lighting, documentary, 1080x1920]
+나레이터: 젊은 세대는 더 높은 세금·보험료를 내고, 실업률 상승으로 노동시장에 압박을 받는다
+
+[SCENE:A towering stack of coins and banknotes on a desk, slowly tilting, dramatic lighting, cinematic, 1080x1920]
+나레이터: 국가 재정은 부채를 늘려 연금 고갈을 가속화하고, 물가와 경기 둔화를 초래한다
+
+[SCENE:A balance scale with one side heavy with elderly icons, the other side young workers, tilted, dramatic lighting, moody, 1080x1920]
+나레이터: 결과적으로 고령화는 젊은 세대가 비용을 지불하고, 연금 고갈은 부정적 구조를 드러낸다

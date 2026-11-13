@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261113_160711_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+경제사
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+인공지능 거품, 작은 나라가 손해
+
+THUMBNAIL_SHORTS:
+인공지능 거품, 작은 나라가 손해
+
+[SCENE: small island nation harbor, lone fishing boat, satellite dish, twilight, low angle, moody lighting, cinematic, no text, no logo, no numbers, 1080x1920]
+나레이터: 인공지능 투자 거품이 세계 금융 시장을 흔들고, 작은 나라들은 왜 그로 인해 큰 타격을 받는가입니다
+
+[SCENE: corporate boardroom, executives pointing at glowing digital screen with AI icons, modern conference table, low angle, dramatic lighting, cinematic, no text, no logo, no numbers, 1080x1920]
+나레이터: 정부들은 AI 투자를 경제 성장의 엔진이라고 홍보하지만, 실제로는 수요를 급증시켜 자산 가격을 비정상적으로 끌어올린다입니다
+
+[SCENE: massive data center, rows of blinking servers, a close-up of a server rack, high angle, cool lighting, documentary, no text, no logo, no numbers, 1080x1920]
+나레이터: 첫째, 글로벌 대형 IT 기업이 AI 스타트업에 대규모 자본을 투입하면, 그 기업의 가치는 급등한다입니다
+
+[SCENE: busy stock exchange floor, traders with screens, high-tech displays, overhead shot, overcast lighting, documentary, no text, no logo, no numbers, 1080x1920]
+나레이터: 둘째, 작은 나라의 증권시장은 이러한 고수익 기업의 주식을 매입하려는 외국인 투자자들의 자금 유입으로 과열된다입니다
+
+[SCENE: currency exchange counter, red downward arrow on screen, worried customers, low angle, moody lighting, cinematic, no text, no logo, no numbers, 1080x1920]
+나레이터: 셋째, 거품이 붕괴하면 주가 급락과 동시에 외국인 자본이 급히 회수돼, 그 나라의 통화가 급격히 약세를 보인다입니다
+
+[SCENE: small island nation flag beside a falling bar graph, citizens in distress, wide shot, dramatic lighting, cinematic, no text, no logo, no numbers, 1080x1920]
+나레이터: 결국 AI 투자 거품은 부채가 많은 작은 나라의 재정안정성을 무너뜨리고, 국민의 생활비를 상승시킨다

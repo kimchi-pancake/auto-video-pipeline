@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261113_162132_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+제조산업
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+세계가 놀란 한국 LNG
+
+THUMBNAIL_SHORTS:
+세계가 놀란 한국 LNG
+
+[SCENE:a gleaming LNG carrier docked at sunrise, cinematic lighting, wide shot, 1080x1920]
+나레이터: 한국 조선소가 만든 최초의 LNG 운반선이 세계 해상 연료 운송을 바꿨다.
+
+[SCENE:engineers at a 1999 shipyard drafting the first Korean LNG vessel, close up on blueprints, dramatic lighting, 1080x1920]
+나레이터: 1999년 대우조선해양이 제작한 이 선박은 세계 최초로 LNG를 연료로 사용한 운반선이었다.
+
+[SCENE:modern Korean shipyard with 30 LNG carriers under construction, wide aerial view, bright daylight, 1080x1920]
+나레이터: 한국 조선소는 연간 30여 척의 LNG 운반선을 생산하며, 전 세계 LNG 선박의 70% 이상을 차지한다.
+
+[SCENE:LNG carrier cruising at sea with fuel consumption data overlay, cinematic, slightly low angle, 1080x1920]
+나레이터: 한국 선박이 적용한 고효율 해양 설계는 연료 소비를 7% 낮추어 연간 수백만 톤의 이산화탄소 배출을 절감한다.
+
+[SCENE:LNG carrier sailing into sunset, horizon, peaceful, dramatic lighting, wide shot, 1080x1920]
+나레이터: 이 혁신 덕분에 한국은 해상 에너지 운송의 미래를 주도하고 전 세계적으로 신뢰받는 파트너가 되었다.
