@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261114_161326_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+우주과학
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+다누리, 달 궤도 최초 한국
+
+THUMBNAIL_SHORTS:
+다누리, 달 궤도 최초 한국
+
+[SCENE: Small Korean spacecraft orbiting the Moon, outline against lunar surface, orbit trajectory visible, dramatic lighting, cinematic, no text, no logo, 1080x1920]
+나레이터: 다누리 달 궤도선이 한국 최초로 달 궤도에 진입했다.
+
+[SCENE: KSLV-II launch vehicle on a launch pad at night, rocket lit, launch pad scene, dramatic lighting, cinematic, no text, no logo, 1080x1920]
+나레이터: 이 미션은 KSLV-II 로켓에 탑재돼 발사돼, 한국 최초로 우주에 선박을 띄운 사건이었다.
+
+[SCENE: Close‑up of the orbiter’s propulsion system, detailed engineering view, glowing LEDs, cinematic, no text, no logo, 1080x1920]
+나레이터: 다누리는 완전 한국산 추진시스템을 사용해 달로 진입, 세계에서 최초로 자국 제작 엔진으로 달 궤도에 도달했다.
+
+[SCENE: Scientific instrument panel with hyperspectral imaging device, sensors array, bright lights, cinematic, no text, no logo, 1080x1920]
+나레이터: 카리 연구팀이 만든 초분광 이미징 장치를 탑재해 달 표면을 스캔, 한국 최초로 달 표면 데이터를 수집했다.
+
+[SCENE: Lunar surface at night with faint glow of orbiting satellite overhead, cinematic, dramatic lighting, no text, no logo, 1080x1920]
+나레이터: 다누리는 한국이 우주에서 새로운 장을 열었다는 자부심을 전한다.

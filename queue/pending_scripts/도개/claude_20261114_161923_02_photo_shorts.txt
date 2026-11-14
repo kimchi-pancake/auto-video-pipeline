@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261114_161923_02_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+생활편의
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+한국 편의점 24시간 무인 혁신
+
+THUMBNAIL_SHORTS:
+한국 편의점 24시간 무인 혁신
+
+[SCENE: Korean convenience store front at night, 24-hour sign illuminated, cinematic lighting, 1080x1920]
+나레이터: 한국 편의점은 24시간 무인 자동화를 최초로 구현한 곳이다.
+
+[SCENE: Interior of convenience store, RFID tags on shelves, overhead view, dramatic lighting, 1080x1920]
+나레이터: 이 무인 시스템은 RFID 태그를 활용해 재고를 실시간으로 파악한다.
+
+[SCENE: Server room with monitors displaying AI prediction graphs, low-angle shot, neon lighting, 1080x1920]
+나레이터: AI 분석을 통해 하루에도 수백 건의 판매 데이터를 실시간 예측해 재고를 조정한다.
+
+[SCENE: Smart vending machine with sensors, product being dispensed, close-up, vibrant lighting, 1080x1920]
+나레이터: 사물인터넷 센서가 장착된 지능형 자판기는 제품이 떨어지면 즉시 재고 알림을 보낸다.
+
+[SCENE: Self-checkout kiosk with touch screen and barcode scanner, side view, clean lighting, 1080x1920]
+나레이터: 자체 결제 키오스크는 터치스크린과 바코드 스캐너를 결합해 1초 이내에 결제를 완료한다.
+
+[SCENE: Customer using smartphone to scan QR code at checkout, close-up, bright lighting, 1080x1920]
+나레이터: 모든 매장은 QR 코드 결제 지원으로 고객이 스마트폰으로 한 번에 지불할 수 있다.

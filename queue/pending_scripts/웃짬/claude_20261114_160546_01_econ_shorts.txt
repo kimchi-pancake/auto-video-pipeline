@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261114_160546_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+산업패권
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+반도체 패권의 숨은 비용
+
+THUMBNAIL_SHORTS:
+패권의 숨은 비용
+
+[SCENE:world map silhouette with a few highlighted countries, wide shot, muted colors, documentary style, 1080x1920]
+나레이터: 반도체 시장이 수십억 달러 규모로 성장하지만, 이익은 몇몇 국가에 집중돼 전 세계가 공동의 이익을 놓치고 있다.
+
+[SCENE:two industrial factories on opposite sides of a blurred ocean, medium shot, moody lighting, documentary, 1080x1920]
+나레이터: 미국은 반도체 기술을 보호해 자국 기업이 이익을 보며, 중국은 수입 제한으로 비용을 치른다.
+
+[SCENE:two large semiconductor fabs, one in Taiwan, one in South Korea, wide shot, high angle, cinematic, 1080x1920]
+나레이터: 생산은 대만의 TSMC와 한국 삼성전자가 주도해 공급 차질 시 전 세계 산업이 멈춘다.
+
+[SCENE:water reservoir and a plant with workers in hard hats, low angle, dramatic lighting, documentary, 1080x1920]
+나레이터: 칩 제조는 수백만 톤 물을 쓰고, 열악한 노동 환경으로 지역 주민이 피해를 본다.
+
+[SCENE:world map silhouette with arrows pointing to different regions, mid shot, dramatic lighting, documentary, 1080x1920]
+나레이터: 결국, 반도체 패권은 성장처럼 보이지만, 실은 지역마다 비용을 재분배하며 글로벌 경제를 불안정하게 만든다
