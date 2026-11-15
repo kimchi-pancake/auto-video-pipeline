@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261115_161209_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+스포츠
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+한국 양궁 선발, 세계 최초!
+
+THUMBNAIL_SHORTS:
+한국 양궁 선발!
+
+[SCENE:National Archery Championship arena, wide shot, bright lights, archers lined up, 1080x1920]
+나레이터: 한국 양궁 대표팀 선발은 세계 최초로 단 1회 대회만으로 정해진다
+
+[SCENE:Seoul Olympic Archery Field, mid-shot of archers shooting, golden hour light, 1080x1920]
+나레이터: 이 대회는 서울 올림픽 양궁장에 매년 개최되며, 남자 2명과 여자 2명이 대표팀에 자동 선발된다
+
+[SCENE:Archery range, 72-arrow ranking round, top-down view, arrows falling in target, 1080x1920]
+나레이터: 경기 진행은 72발 사격 랭킹 라운드와 단일 탈락 토너먼트로, 올림픽과 동일한 점수 체계를 사용한다
+
+[SCENE:Olympic archery podium, Korean athletes holding gold medals, night scene with flag, 1080x1920]
+나레이터: 이 방식 덕분에 한국은 1988년부터 2020년까지 10회 올림픽 금메달을 획득했다
+
+[SCENE:archery target with Korean flag, close-up, vibrant colors, 1080x1920]
+나레이터: 한국 양궁은 이 독특한 선발 방식을 통해 세계 최고를 유지하고 있다

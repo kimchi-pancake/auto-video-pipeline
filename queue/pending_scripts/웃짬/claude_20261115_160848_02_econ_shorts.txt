@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261115_160848_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+빈부격차
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+조세회피, 비용은?
+
+THUMBNAIL_SHORTS:
+조세회피, 비용은?
+
+[SCENE: a corporate logo on a tropical island, dramatic lighting, cinematic, 1080x1920]
+나레이터: 조세회피처가 부를 집중시키는 진짜 계산이다.
+
+[SCENE: a city skyline at dusk, soft light, moody, 1080x1920]
+나레이터: 정부는 조세회피처를 통한 외국인 투자 유치가 경제 성장이라고 주장한다.
+
+[SCENE: a stylized flowchart of money moving from a multinational company to a low‑tax jurisdiction, arrow, 1080x1920]
+나레이터: 다국적 기업은 이익을 바하마와 같은 낮은 세율 조세회피처로 옮겨, 세금을 최소화한다.
+
+[SCENE: an abandoned municipal office, dim lighting, cinematic, 1080x1920]
+나레이터: 이전국은 세수 손실을 겪고, 지방 정부는 복지·공공서비스 예산이 급감한다.
+
+[SCENE: a darkened bank building, ominous atmosphere, subtle smoke, 1080x1920]
+나레이터: 2008년 금융위기 당시 은행들이 조세회피처에 자본을 이동해 규제 회피를 시도했다.
+
+[SCENE: a pyramid of gold over a crumbling city hall, dramatic lighting, cinematic, 1080x1920]
+나레이터: 이 구조는 부의 집중을 가능하게 하고, 공공 재원은 소멸하며 부의 불균형은 계속된다.

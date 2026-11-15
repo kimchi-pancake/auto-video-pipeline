@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261115_160517_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+물가금리
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+미국 금리, 한국 가계에 숨은 비용
+
+THUMBNAIL_SHORTS:
+미국 금리, 한국 가계에 숨은 비용
+
+[SCENE:Federal Reserve building in Washington DC, wide shot, morning light, cinematic, 1080x1920]
+나레이터: 미국 연방준비제도 금리 인상은 한국 가계 대출 이자 부담을 급등시킨다&가계 대출이 10% 이상 금리 상승으로 부채 상환액이 늘어난다.
+
+[SCENE:Banking conference room in Washington DC, interior, dim light, moody, 1080x1920]
+나레이터: 연방준비제도는 인플레이션 억제를 위해 금리를 올린다&결과적으로 연간 2%의 인플레이션 목표를 유지하려 한다.
+
+[SCENE:Foreign exchange market in Seoul, crowded, low angle, dynamic, 1080x1920]
+나레이터: 금리 인상은 달러를 강세시켜 원화를 약세로 만들고 수입품 가격을 올린다&원가 상승은 소비자 물가를 끌어올리고 실질 구매력을 떨어뜨린다.
+
+[SCENE:Korean apartment building interior, family at kitchen table, overcast light, intimate, 1080x1920]
+나레이터: 원화 약세로 가계가 달러계좌 대출을 늘리며 부채 부담이 증가한다&이로 인해 가계는 월세·주택담보대출 이자에 더 큰 부담을 겪는다.
+
+[SCENE:Historic image of 1997 Asian financial crisis, Seoul, blurry, documentary style, 1080x1920]
+나레이터: 1997년 아시아 위기에서 원화는 2배 급락했고 가계 부채가 50% 상승했다&이후 한국은 부채비율을 200%로 끌어올렸다.
+
+[SCENE:Financial district skyline at dusk, glass towers, dramatic lighting, cinematic, 1080x1920]
+나레이터: 이 구조는 미국 통화정책이 한국 가계에 불공정한 비용을 부과한다&결국 한국 가계는 미국의 금리 정책에 의해 무리하게 부채를 늘리게 된다.

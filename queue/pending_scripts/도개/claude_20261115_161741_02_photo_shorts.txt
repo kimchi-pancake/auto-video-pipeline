@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261115_161741_02_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+첨단기술
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+happy.mp3
+
+THUMBNAIL_LONG:
+배터리 3사, 30% 차지!
+
+THUMBNAIL_SHORTS:
+배터리 3사, 30% 차지!
+
+[SCENE:a map of the world with a glowing Korean peninsula highlighted, battery icons over major cities, cinematic lighting, high detail, 1080x1920]
+나레이터: 한국 배터리 3사는 2023년 전 세계 전기차 배터리 생산량의 30%를 차지했다.
+
+[SCENE:an industrial warehouse of Samsung SDI with rows of battery cells labeled 4680, bright overhead lights, close-up of cell, cinematic lighting, 1080x1920]
+나레이터: 삼성SDI는 2020년부터 4680 셀을 도입해 셀당 에너지 밀도를 10% 높였다.
+
+[SCENE:an expansive LG Energy Solution plant with solar panels and battery modules, drone view from above, vibrant lighting, high detail, 1080x1920]
+나레이터: LG에너지솔루션은 2023년, 세계 최초로 상용 4.2기가와트시 연간 생산 공장을 세운 바 있다.
+
+[SCENE:a production line inside SK Innovation with robotic arms assembling 4,500 cells per batch, dynamic lighting, detailed, 1080x1920]
+나레이터: SK 혁신은 2022년, 전기차용 배터리 셀을 한 번에 4,500개 생산하는 라인을 구축했다.
+
+[SCENE:a stylized globe with arrows pointing toward South Korea, neon lines connecting to battery icons, cinematic lighting, 1080x1920]
+나레이터: 이처럼 한국은 전 세계 배터리 시장을 주도하며, 해외 투자자와 기술자들의 주목을 끌고 있다

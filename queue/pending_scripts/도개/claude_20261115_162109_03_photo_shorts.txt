@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261115_162109_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+역사유산
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+lovely.mp3
+
+THUMBNAIL_LONG:
+제주 해녀, 세계시장도전
+
+THUMBNAIL_SHORTS:
+제주 해녀, 세계시장도전
+
+[SCENE:Jeju Island, traditional female diver in the sea, midday shot, vibrant, high detail, 1080x1920]
+나레이터: 제주 해녀는 17세기부터 물고기를 직접 잡으며 생계를 이어왔다
+
+[SCENE:Jeju Island, paved road with fishing boats and female divers in the background, afternoon, dramatic lighting, cinematic, 1080x1920]
+나레이터: 1963년 도로가 개통돼 물고기를 물류로 옮길 수 있게 되자, 해녀의 전통은 위협받았다
+
+[SCENE:Jeju Island, cooperative meeting of divers with whiteboard and documents, intimate, warm lighting, cinematic, 1080x1920]
+나레이터: 1990년 해녀회가 조직되어 공동 구매와 직거래 체계를 마련해 외부 시장과 연결했다
+
+[SCENE:Jeju Island, export container with dried seafood leaving the port, night, neon lights, vibrant, 1080x1920]
+나레이터: 2013년부터 해녀 가공품이 유럽·미국 등으로 수출되기 시작했다
+
+[SCENE:Jeju Island, female diver with modern equipment, ocean backdrop, golden hour, serene, cinematic, 1080x1920]
+나레이터: 이처럼 제주 해녀는 도전과 실패를 딛고 세계 시장에 발을 들여놓으며 전통의 가치를 지켜나가고 있다
