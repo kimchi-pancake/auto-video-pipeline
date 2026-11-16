@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261116_161429_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+첨단기술
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+FA-50의 숨은 기술
+
+THUMBNAIL_SHORTS:
+FA-50의 숨은 기술
+
+[SCENE:FA-50 fighter jet on a hangar floor, low angle shot, cinematic lighting, 1080x1920]
+나레이터: FA-50 경공격기는 눈에 보이는 것보다 훨씬 똑똑한 숨은 기술을 지녔다.
+
+[SCENE:Internal view of FA-50 cockpit with digital flight controls, close‑up, high detail, 1080x1920]
+나레이터: 그 핵심은 최신 전자식 비행장치인 플라이바이와이어 시스템으로 무게를 줄이고 반응 속도를 높였다.
+
+[SCENE:FA-50 radar array on the nose, angled view, futuristic atmosphere, 1080x1920]
+나레이터: 또한 차세대 AESA 레이더가 장착되어, 거리와 목표를 동시에 탐지할 수 있다.
+
+[SCENE:Composite wing surface of FA-50 under a bright sun, close‑up, dramatic lighting, 1080x1920]
+나레이터: 복합재를 사용해 레이더 반사율을 30% 감소시켜 스텔스 효과를 강화했다.
+
+[SCENE:FA-50 engine bay with F404 engines, wide angle, industrial lighting, 1080x1920]
+나레이터: 마지막으로 한국산 F404 엔진이 탑재되어, 연료 효율과 고성능을 동시에 달성했다.

@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261116_160931_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+에너지자원
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+유럽 에너지 이득·비용
+
+THUMBNAIL_SHORTS:
+유럽 에너지 이득·비용
+
+[SCENE: A dark silhouette of a coal power plant at sunset, long shot, dramatic lighting, cinematic, no text, no logo, no numbers] 1080x1920  
+나레이터: 유럽의 에너지 위기, 지금 바로는 비용을 지불하는 나라와 이득을 보는 나라가 분명히 구분됩니다.
+
+[SCENE: A map of Europe and Russia with a gas pipeline highlighted, aerial view, dramatic lighting, cinematic, no text, no logo, no numbers] 1080x1920  
+나레이터: 러시아는 가스 수출을 통해 수익을 올렸고, 유럽은 비싼 가격을 지불했습니다.
+
+[SCENE: A wind farm in the Netherlands with turbines spinning, close-up, bright sunlight, documentary style, no text, no logo, no numbers] 1080x1920  
+나레이터: 유럽 연합은 재생에너지 확충을 위해 대규모 투자와 보조금을 제공했습니다.
+
+[SCENE: A crowded European parliament building with a silhouette of people, wide shot, overcast, moody, no text, no logo, no numbers] 1080x1920  
+나레이터: 이 보조금은 결국 세금으로 전환되어 일반 국민의 재정 부담으로 이어졌습니다.
+
+[SCENE: A European household kitchen with a family looking at a high electricity bill, medium shot, muted colors, documentary style, no text, no logo, no numbers] 1080x1920  
+나레이터: 이 구조는 부의 집중을 허용하면서, 결국 에너지 비용은 소비자에게 물려집니다.

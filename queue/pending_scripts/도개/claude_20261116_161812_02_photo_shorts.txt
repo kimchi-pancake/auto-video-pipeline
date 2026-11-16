@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261116_161812_02_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+음식문화
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+바나나우유 숨은 과학
+
+THUMBNAIL_SHORTS:
+바나나우유 숨은 과학
+
+[SCENE:A 1970s factory laboratory with researchers sampling banana milk, a vintage glass in hand, warm lighting, cinematic, 1080x1920]
+나레이터: 1975년, ‘바나나맛 우유’는 단순 과일 우유가 아니라 과학이 숨겨진 음료였다
+
+[SCENE:A freeze dryer with banana slices inside, producing powder, close-up, cool lighting, 1080x1920]
+나레이터: 첫 제조는 CJ제일제당 연구팀이 냉동건조 바나나 파우더를 추출해 만들었다
+
+[SCENE:Microscopic view of encapsulated flavor particles within a milk container, bright light, 1080x1920]
+나레이터: 두 번째 비밀은 미세 캡슐 기술로 바나나 향을 수개월 동안 안정적으로 보존한다
+
+[SCENE:Close-up of a milk bottle with vitamin B6 and potassium symbols subtly incorporated, soft lighting, 1080x1920]
+나레이터: 이 과정에서 바나나에 풍부한 비타민 B6와 칼륨을 그대로 보존해 건강에 이롭다
+
+[SCENE:Comparison of a sugar cube and a banana slice, bright contrast, 1080x1920]
+나레이터: 또한 바나나의 천연 과당을 이용해 설탕을 30% 감소시켜 단맛을 유지했다
+
+[SCENE:A family of Koreans enjoying banana milk at a park, smiling, golden hour, 1080x1920]
+나레이터: 그 결과 ‘바나나맛 우유’는 50년 이상 사랑받아 한국을 대표하는 아이스크림 대용 음료가 되었다

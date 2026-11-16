@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261116_162356_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+첨단기술
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+5G에서 한국이 딛고 성공한 이유
+
+THUMBNAIL_SHORTS:
+5G에서 한국이 딛고 성공한 이유
+
+[SCENE:Korea's first 5G tower in Seoul, close-up of glowing LED lights at night, dramatic lighting, cinematic, 1080x1920]
+나레이터: 한국이 최초로 5G를 상용화했다는 사실은, 기대를 뛰어넘는 놀라움이다.
+
+[SCENE:KT's 5G base station in Gangnam, Seoul, mid-shot of technician activating the network, warm lighting, dynamic, 1080x1920]
+나레이터: 2018년 10월, KT가 서울 강남구에서 5G 무선망을 상용화 테스트했다.
+
+[SCENE:Network engineers in a lab with tangled cables, wide shot, muted lighting, tense atmosphere, 1080x1920]
+나레이터: 초기 5G 연구는 주파수 대역 확보와 라우팅 프로토콜 미완성으로 수차례 실패했다.
+
+[SCENE:Government officials at a briefing with a large screen of 5G infrastructure, medium shot, bright lighting, optimistic, 1080x1920]
+나레이터: 정부는 5G 인프라를 위해 40조 원을 지원하고, 통신사는 5G 전용 장비를 자체 개발해 재시도했다.
+
+[SCENE:Aerial view of Seoul's 5G coverage with connected devices, bird's-eye shot, vibrant lighting, futuristic, 1080x1920]
+나레이터: 이제 한국 5G 네트워크는 초고속 데이터 전송과 사물인터넷 연결을 선도하며, 전 세계 5G 상용화 표준을 제시한다.

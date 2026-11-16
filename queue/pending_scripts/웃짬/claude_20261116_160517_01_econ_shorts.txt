@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261116_160517_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+무역제재
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+제재 부작용
+
+THUMBNAIL_SHORTS:
+제재 부작용
+
+[SCENE:a silhouette of a businessman holding a passport, with a blurred backdrop of a stock exchange, low angle, dramatic lighting, tense atmosphere, 1080x1920]
+나레이터: 경제 제재는 겉으로는 목표를 달성한 듯 보이지만, 그 이면에 숨겨진 경제적 부작용은 심각하다.
+
+[SCENE:a cargo ship with a red STOP sign, no cargo moving, docked at sea, high angle, muted colors, documentary style, 1080x1920]
+나레이터: 첫 단계는 정치적 압박을 목적으로 해외 무역을 제한하고, 해당 국가의 수출 포트폴리오를 급격히 축소한다.
+
+[SCENE:an empty conveyor belt in a factory, a worker silhouette, low light, wide shot, overcast, moody, 1080x1920]
+나레이터: 수출이 줄어들면서 해당 산업의 수익이 급락하고, 기업은 생산을 축소해 노동자들을 해고하는 악순환이 시작된다.
+
+[SCENE:an empty market shelf, people holding ration cards, low angle, dull lighting, documentary, 1080x1920]
+나레이터: 2001년 미국이 이란에 대해 경제 제재를 가했을 때, 이란 국민은 필수 의약품과 식량이 부족해 생계가 위협받았다.
+
+[SCENE:city skyline at sunrise, a silhouette of a child looking up, warm lighting, hopeful yet cautious, 1080x1920]
+나레이터: 이처럼 제재는 정치적 목표를 달성하려 하지만, 결국 가장 큰 피해자는 해당 국가의 일상 생활과 경제 안정을 잃는 민간인이다.
