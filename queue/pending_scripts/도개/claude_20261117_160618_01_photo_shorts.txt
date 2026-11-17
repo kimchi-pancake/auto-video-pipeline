@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261117_160618_01_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+생활편의
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+청계천 복원 숨은 기술
+
+THUMBNAIL_SHORTS:
+청계천 복원 숨은 기술
+
+[SCENE:a river flowing through a modern city center with concrete embankments and pedestrians walking along the banks, wide shot, bright daylight, vibrant urban atmosphere, cinematic, highly detailed, no text, no logo]
+나레이터: 서울 도심을 흐르는 청계천이 단순히 복원된 하천이 아닙니다&도심 열섬 현상을 낮추는 자연 냉각 시스템으로 다시 태어났습니다
+
+[SCENE:a close-up of water flowing over stepped stone weirs and small waterfalls in an urban stream, macro shot, sunlight sparkling on water, dynamic flow, vivid colors, no text, no logo]
+나레이터: 하천 바닥에 설치된 계단식 보가 물의 흐름을 인위적으로 조절해 산소를 공급합니다&물속에 산소가 더 많이 녹아들면서 수질이 자연스럽게 정화됩니다
+
+[SCENE:a diver or maintenance worker inspecting underwater pipes and sensors beneath a stream surface, medium shot, underwater lighting, professional equipment, clear water visibility, no text, no logo]
+나레이터: 하천 밑바닥 곳곳에 설치된 센서가 수질과 수위를 실시간으로 측정합니다&수집된 데이터는 통합 관제센터로 전달돼 하천 상태를 24시간 관리합니다
+
+[SCENE:an aerial view of a restored urban river surrounded by skyscrapers and green pedestrian bridges, drone shot, golden hour lighting, expansive cityscape, dramatic lighting, no text, no logo]
+나레이터: 복원 이후 청계천 주변 기온이 인근 지역보다 낮게 측정되는 열섬 완화 효과가 확인되었습니다&도심 속 자연이 시민의 휴식 공간이자 환경 인프라가 되었습니다
+
+[SCENE:people strolling along a tree-lined urban stream with benches and traditional Korean architectural elements in the background, eye-level shot, soft afternoon light, peaceful community atmosphere, vibrant, no text, no logo]
+나레이터: 공학과 자연이 만나 도심의 숨통을 트이게 만든 청계천&당신도 이 도심 하천의 숨은 기술을 알고 계셨나요

@@ -1,0 +1,35 @@
+RUN_ID:
+claude_20261117_160631_03_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+역사유산
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+lovely.mp3
+
+THUMBNAIL_LONG:
+조선왕조실록, 불 속에서도 남았습니다
+
+THUMBNAIL_SHORTS:
+조선왕조실록, 불 속에서도 남았습니다
+
+[SCENE:a large royal archive building in deep red flames at night, traditional Korean palace architecture engulfed by fire, dramatic lighting, low angle, cinematic, embers floating in dark sky, no text, no logo, 1080x1920]
+나레이터: 임진왜란 때 서울과 전주에 있던 조선왕조실록이 모두 불에 타 사라졌습니다
+
+[SCENE:several royal messengers on horseback galloping through a mountain pass carrying wooden book chests, motion blur, golden hour, vibrant, action shot, no text, no logo, 1080x1920]
+나레이터: 하지만 의주로 피난 중이던 실록 한 부만은 불길을 피해 무사히 전해졌습니다
+
+[SCENE:traditional Korean hanji paper sheets stacked and pressed inside a wooden archive room, close-up, soft natural light, highly detailed, calm atmosphere, no text, no logo, 1080x1920]
+나레이터: 이 한 부를 바탕으로 조선은 사라진 실록을 다시 썼고, 이것이 바로 중수본입니다
+
+[SCENE:rows of tall wooden bookshelves filled with ancient Korean books in a quiet national library, wide shot, symmetrical composition, warm lighting, cinematic depth, no text, no logo, 1080x1920]
+나레이터: 조선왕조실록은 유네스코 세계기록유산에 등록되어, 한국의 역사를 전 세계가 함께 기억하고 있습니다
+
+[SCENE:a single old book opened on a stone pedestal, morning light streaming through a traditional window, low angle, dramatic lighting, peaceful, symbolic, no text, no logo, 1080x1920]
+나레이터: 실패와 좌절 속에서도 기록을 포기하지 않았던 선조들의 지혜가, 오늘까지 살아 숨 쉰다면 여러분은 어떻게 생각하시나요

@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261117_160626_02_photo_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+첨단기술
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+외국인이 놀란 메모리 반도체 기술
+
+THUMBNAIL_SHORTS:
+외국인이 놀란 메모리 반도체 기술
+
+[SCENE:Samsung Semiconductor memory chip production line, cleanroom environment, engineers in white protective suits, cinematic lighting, 1080x1920]
+나레이터: 삼성전자 메모리 반도체가 세계 시장에서 압도적인 점유율을 차지하는 가장 의외는 비결은 단 하나의 공장에 있습니다
+
+[SCENE:massive semiconductor fabrication plant exterior, wide shot, golden hour, dramatic sky, cinematic, 1080x1920]
+나레이터: 경기도 평택에 위치한 삼성전자 반도체 공장은 축구장 약 4백 개 규모로 세계 최대 규모를 자랑합니다
+
+[SCENE:semiconductor wafer inside manufacturing equipment, close-up, glowing silicon wafer, high-tech atmosphere, 1080x1920]
+나레이터: 이 공장에서 삼성전자는 세계 최첨단 극자외선 노광 장비를 도입해 반도체 회로를 극도로 정교하게 새겨넣습니다
+
+[SCENE:stacked memory chip cross-section, 3D cutaway view, layered memory cells, vibrant colors, 1080x1920]
+나레이터: 삼성전자의 V낸드 플래시 메모리는 수백 층의 셀을 수직으로 쌓아 올린 세계적인 기술력을 보여줍니다
+
+[SCENE:global server room racks with blinking lights, low angle, server halls, dim blue lighting, dramatic, 1080x1920]
+나레이터: 그 결과 전 세계 데이터센터와 스마트폰에 삼성전자 메모리 반도체가 탑재되며 디지털 세상을 지탱하고 있습니다
+
+[SCENE:Korean traditional architecture fused with futuristic digital chip, aerial shot, hanok rooftop, holographic circuit overlay, vibrant, 1080x1920]
+나레이터: 한국의 첨단 기술력이 우리 일상 속 스마트 기기 안에서도 여전히 굳건히 자리 잡고 있습니다

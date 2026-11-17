@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261117_160613_02_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+무역제재
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+ambient_piano.mp3
+
+THUMBNAIL_LONG:
+제재의 비용, 누가 내나
+
+THUMBNAIL_SHORTS:
+제재의 비용, 누가 내나
+
+[SCENE:a cargo ship blocked by naval vessels in a foggy strait, shipping containers stacked on deck, wide shot, overcast sky, cinematic, moody, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 경제 제재는 상대국을 압박하는 수단입니다.&그러나 비용은 예상치 못한 곳에서 나옵니다.&한국 가계도 그 비용을 나눠 집니다.
+
+[SCENE:a gasoline pump at a gas station on a rainy evening, neon signs reflected on wet asphalt, low angle, dramatic lighting, cinematic, muted colors, no text, no logo, no numbers]
+나레이터: 공식 명분은 외교적 목표 달성을 위한 압박입니다.&하지만 원자재 공급망이 꼬이면 수입 가격이 오릅니다.&기름과 곡물 가격이 상승하면 결국 소비자가 더 지불합니다.
+
+[SCENE:a modern assembly line in a semiconductor factory, robotic arms moving wafers, workers in clean suits seen from behind, bright cool lighting, high detail, documentary style, no text, no logo, no numbers]
+나레이터: 수출 규제로 핵심 부품 공급이 막히면 한국 기업은 대체재를 찾아야 합니다.&생산 비용이 늘어나면 제품 가격에 전가됩니다.&반도체와 배터리 업계의 타격이 가전과 차량 가격으로 이어집니다.
+
+[SCENE:a quiet supermarket aisle with partially empty shelves, a lone shopper pushing a cart, soft natural light from windows, documentary photograph, muted colors, no text, no logo, no numbers]
+나레이터: 2022년 러시아의 우크라이나 침공 이후 서방의 제재로 글로벌 에너지와 곡물 공급이 위축되었습니다.&한국은 에너지 수입 의존도가 높아 전기요금과 식료품 가격이 직접 올랐습니다.&제재 대상국이 아닌 한국 소비자도 물가 부담을 떠안았습니다.
+
+[SCENE:a silhouette of a businessman looking at multiple monitors in a dark trading room, city skyline visible through large windows, back view, cinematic, overcast, documentary style, no text, no logo, no numbers]
+나레이터: 제재를 지지하는 쪽은 국가 안보와 국제 질서가 우선이라고 말합니다.&하지만 그 대가를 치르는 것은 늘 평범한 가계와 중소기업입니다.&누가 이득을 보고 누가 비용을 치르는지 묻지 않을 수 없습니다.
+
+[SCENE:a residential apartment complex at dusk, lights turning on in windows, silhouette of a commuter walking from behind, moody lighting, cinematic, muted colors, no text, no logo, no numbers]
+나레이터: 경제 제재는 정치적 도구지만, 그 비용은 결국 지갑이 얇은 이들이 나눕니다.&제재가 정말 약한 자를 겨냥하는지, 아니면 무고한 소비자만 아프게 하는지 생각해 봐야 합니다.

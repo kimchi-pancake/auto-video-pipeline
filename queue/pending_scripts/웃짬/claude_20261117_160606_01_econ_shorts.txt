@@ -1,0 +1,38 @@
+RUN_ID:
+claude_20261117_160606_01_econ_shorts
+
+RESOLUTION:
+1080x1920
+
+CATEGORY:
+국가부채
+
+CAST:
+나레이터: 나레이터
+
+BGM:
+piano.mp3
+
+THUMBNAIL_LONG:
+작은 나라 부채, 왜 대국이 결정하나
+
+THUMBNAIL_SHORTS:
+작은 나라 부채, 왜 대국이 결정하나
+
+[SCENE:a government building with massive columns under gray sky, wide shot, overcast lighting, muted colors, cinematic documentary style, no text, no logo, no numbers]
+나레이터: 작은 나라가 돈을 빌리면, 이자율은 대국이 정합니다&그래서 대출 비용은 대국의 금리 정책에 따라 뒤흔들립니다
+
+[SCENE:a stack of government bond certificates on a wooden desk, close-up, dramatic side lighting, moody atmosphere, highly detailed, no text, no logo, no numbers]
+나레이터: 공식 명분은 재정 건전성 확보입니다&하지만 실제 메커니즘은 채권 시장에서 결정됩니다
+
+[SCENE:a trading room with multiple monitors showing fluctuating graphs, medium shot from behind, dim lighting, cinematic muted tones, no text, no logo, no numbers]
+나레이터: 신용등급이 떨어지면 이자율이 오르고&정부는 더 많은 세금으로 이자를 갚아야 합니다
+
+[SCENE:a silhouette of a commuter walking past shuttered storefronts on a city street, low angle, overcast weather, documentary photograph style, no text, no logo, no numbers]
+나레이터: 1990년대 말 아시아 여러 나라가 외채 상환 압력으로 복지 지출을 대폭 줄였고&그 비용은 서민이 떠안았습니다
+
+[SCENE:a group of finance ministers in dark suits shaking hands at a long conference table, wide shot, sterile institutional lighting, moody muted colors, no text, no logo, no numbers]
+나레이터: 대국들은 자국 통화로 발행해 이자 부담을 줄이지만&작은 나라는 외화로 빌려 환율 위험까지 짊어집니다
+
+[SCENE:an empty public school hallway with peeling paint and dim fluorescent light, low angle, cinematic melancholy, muted colors, no text, no logo, no numbers]
+나레이터: 부채 상환이 우선이면 교육과 복지 예산이 먼저 줄어듭니다&작은 나라의 재정은 누가 정말로 주인이 됩니까
