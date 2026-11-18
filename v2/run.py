@@ -123,7 +123,8 @@ def stage_produce(store: JobStore, profiles: List[ChannelProfile], workroot: Pat
         if not prof or (only and prof.name != only):
             continue
         s = job["status"]
-        due = s in ("SCRIPT_READY", "ASSETS_READY", "RENDERING", "QUALITY_CHECK") or (s == "RETRY_WAIT" and _stage_of_retry(job) in PRODUCE_STAGES)
+        lost = s in ("READY_TO_UPLOAD", "UPLOADING") and not (job.get("files", {}).get("video") and Path(job["files"]["video"]).exists())
+        due = s in ("SCRIPT_READY", "ASSETS_READY", "RENDERING", "QUALITY_CHECK") or lost or (s == "RETRY_WAIT" and _stage_of_retry(job) in PRODUCE_STAGES)
         if not due:
             continue
         if not job.get("script"):
@@ -147,10 +148,7 @@ def stage_publish(store: JobStore, profiles: List[ChannelProfile], only: Optiona
         s = job["status"]
         due = s in ("READY_TO_UPLOAD", "UPLOADING") or (s == "RETRY_WAIT" and _stage_of_retry(job) in PUBLISH_STAGES)
         if not due or not job.get("files", {}).get("video") or not Path(job["files"]["video"]).exists():
-            if due:
-                # 렌더 산출물이 사라졌다면(다른 러너) 다시 합성하도록 되돌린다.
-                store.transition(job, "SCRIPT_READY", "산출물 없음 — 재합성", )
-            continue
+            continue  # 산출물이 다른 러너에 있었다면 produce 단계가 다시 합성한다(결정적 렌더)
         res = publish.upload_job(store, job, prof)
         out.append(res)
         _notify_uploaded(res)
