@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261119-01-aee4b",
   "channel": "웃짬",
-  "status": "SCRIPT_READY",
+  "status": "NEEDS_REVIEW",
   "created_at": "2026-11-18T16:03:12Z",
   "topic": {
     "title": "브레턴우즈 체제",
@@ -53,6 +53,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-18T16:03:59Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-18T16:05:12Z",
+      "note": "장면 자료 6개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-18T16:05:12Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-18T16:05:43Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-18T16:05:46Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-18T16:06:17Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-18T16:06:53Z",
+      "note": "비공개 업로드 완료 — 사람 승인 대기(publish_mode=review)"
     }
   ],
   "attempts": {},
@@ -719,20 +749,147 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Image-Mount Washington Hotel.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Image-Mount_Washington_Hotel.jpg",
+          "license": "Public domain",
+          "artist": "",
+          "caption": "Image-Mount Washington Hotel"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Price of gold.webp",
+          "page": "https://commons.wikimedia.org/wiki/File:Price_of_gold.webp",
+          "license": "CC0",
+          "artist": "Wikideas1",
+          "caption": "Price of gold"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/ch9ede5c-20261119-01-aee4b/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/ch9ede5c-20261119-01-aee4b/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/ch9ede5c-20261119-01-aee4b/out/subtitles.ass",
+    "bgm": "ambient_piano.mp3",
+    "voice": "ko-KR-InJoonNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "12개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 2장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.33"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "40.0s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "40.0s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 82/편차 70; 밝기 82/편차 71"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 28/편차 24"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -18.5dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 20개, 마지막 39.0s / 영상 40.0s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
+    "video_id": "KAFxZ3bTg8g",
     "scheduled_at": null,
-    "privacy": null
+    "privacy": "private"
   },
   "experiment": {
     "id": "웃짬-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-18T16:03:59Z",
+  "updated_at": "2026-11-18T16:06:53Z",
   "pack": {
     "topic": {
       "title": "브레턴우즈 체제",

@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261119-01-0c846",
   "channel": "도개",
-  "status": "SCRIPT_READY",
+  "status": "RETRY_WAIT",
   "created_at": "2026-11-18T16:01:28Z",
   "topic": {
     "title": "측우기",
@@ -53,12 +53,34 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-18T16:02:46Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-18T16:05:57Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-18T16:05:57Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "RETRY_WAIT",
+      "at": "2026-11-18T16:06:17Z",
+      "note": "render 실패(bug) 1/4"
     }
   ],
-  "attempts": {},
-  "error": null,
+  "attempts": {
+    "render": 1
+  },
+  "error": {
+    "stage": "render",
+    "class": "bug",
+    "message": "RuntimeError: TTS 실패 세그먼트 1개",
+    "at": "2026-11-18T16:06:17Z"
+  },
   "lease": null,
-  "retry_after": null,
+  "retry_after": "2026-11-18T17:06:17Z",
   "hook": {
     "chosen": {
       "type": "surprising_fact",
@@ -468,7 +490,45 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:공주 충청감영 측우기.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%EA%B3%B5%EC%A3%BC_%EC%B6%A9%EC%B2%AD%EA%B0%90%EC%98%81_%EC%B8%A1%EC%9A%B0%EA%B8%B0.jpg",
+          "license": "KOGL Type 1",
+          "artist": "문화재청",
+          "caption": "국보 제329호, 공주 충청감영 측우기 (公州 忠淸監營 測雨器)"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    }
+  ],
   "files": {},
   "qc": null,
   "youtube": {
@@ -481,7 +541,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-18T16:02:46Z",
+  "updated_at": "2026-11-18T16:06:17Z",
   "pack": {
     "topic": {
       "title": "측우기",
