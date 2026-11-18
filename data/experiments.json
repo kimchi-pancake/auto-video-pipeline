@@ -10,12 +10,31 @@
    "desc": "대본 길이(짧게 vs 중간)",
    "min_n": 6,
    "started_at": "2026-11-18"
+  },
+  "도개": {
+   "id": "도개-length_bucket-20261118",
+   "variable": "length_bucket",
+   "arms": [
+    "short",
+    "medium"
+   ],
+   "desc": "대본 길이(짧게 vs 중간)",
+   "min_n": 6,
+   "started_at": "2026-11-18"
   }
  },
  "assignments": {
   "ch9ede5c-20261118-02-f3bd6": {
    "exp_id": "웃짬-length_bucket-20261118",
    "arm": "short"
+  },
+  "chcafc50-20261119-01-0c846": {
+   "exp_id": "도개-length_bucket-20261118",
+   "arm": "short"
+  },
+  "ch9ede5c-20261119-01-aee4b": {
+   "exp_id": "웃짬-length_bucket-20261118",
+   "arm": "medium"
   }
  },
  "history": []

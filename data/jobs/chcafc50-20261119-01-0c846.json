@@ -1,0 +1,568 @@
+{
+  "id": "chcafc50-20261119-01-0c846",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-18T16:01:28Z",
+  "topic": {
+    "title": "측우기",
+    "wiki_title": "측우기",
+    "category": "역사유산",
+    "source": "seed",
+    "angle": "",
+    "score": 0.6983,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "explore": 0.291
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29",
+    "evidence": 0.608,
+    "rescored": {
+      "score": 0.6996,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.608,
+        "performance": 0.5,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.61 · 성과prior 0.50(n=0) · 탐색 0.29"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-18T16:01:28Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-18T16:01:28Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-18T16:01:49Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-18T16:02:46Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "surprising_fact",
+      "first_line": "측우기, 장영실 혼자 만든 게 아닙니다",
+      "screen_text": "공동 발명품",
+      "title": "세자·장영실·관료가 만든 세계 최초 규격품",
+      "promise": "세종실록에 남은 '누가, 왜, 어떻게' 만들었는지 확인합니다",
+      "evidence_quote": "측우기는 문종,장영실,세종대왕, 호조(戶曹)의 관료 등이 뜻을 모아 세계 최초로 제작한 규격품임을 잘 알 수 있다.",
+      "eval": {
+        "score": 1.0,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "surprising_fact",
+        "first_line": "측우기, 장영실 혼자 만든 게 아닙니다",
+        "screen_text": "공동 발명품",
+        "title": "세자·장영실·관료가 만든 세계 최초 규격품",
+        "promise": "세종실록에 남은 '누가, 왜, 어떻게' 만들었는지 확인합니다",
+        "evidence_quote": "측우기는 문종,장영실,세종대왕, 호조(戶曹)의 관료 등이 뜻을 모아 세계 최초로 제작한 규격품임을 잘 알 수 있다.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "이탈리아보다 200년 앞선 조선의 강우계",
+        "screen_text": "200년 앞선 기록",
+        "title": "가스텔리보다 200년 빨랐던 표준화 강우량계",
+        "promise": "유럽 최초 기록과 조선 측우기 제도화 시점을 비교해 드립니다",
+        "evidence_quote": "이는 이탈리아의 가스텔리보다 약 200년 앞선 것이다.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "측우기 아래 돌기둥 '측우대'의 숨은 기능",
+        "screen_text": "튀는 빗물 차단",
+        "title": "46cm 높이 돌받침이 빗물 튀김을 막는 원리",
+        "promise": "경상감영 측우대 실측 치수로 안정성과 정확성 설계를 분석합니다",
+        "evidence_quote": "적절한 높이의 대는 주변의 빗물이 튀어 측우기에 유입되는 것을 방지하고 측우기를 고정하는 안정 효과 등이 있다.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "자 1척 5촌, 지름 7촌... 전국이 같은 자로 쟀다",
+        "screen_text": "전국 통일 규격",
+        "title": "32cm×15cm 쇠통 하나로 만든 전국 단위 관측망",
+        "promise": "1442년 제도화된 규격과 주척·분 단위 기록 체계를 보여드립니다",
+        "evidence_quote": "쇠로 제작된 측우기는 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)이며, 비가 그친 후 주척(周尺)을 써서 분(分) 단위까지 재고",
+        "eval": {
+          "score": 0.97,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "1837년 공주 감영 측우기, 일본 갔다 56년 만에 돌아왔습니다",
+        "screen_text": "일제 반출·반환",
+        "title": "금영측우기 반출 1915년→반환 1971년 행방",
+        "promise": "현존 유일 실물 금영측우기의 수난과 국보 승격 과정을 정리합니다",
+        "evidence_quote": "1837년 공주 충청감영에 설치되었던 금영측우기(錦營測雨器, 보물 561호)는 1915년 일본의 기상학자 와다 유지에 의해 일본으로 반출되었다가 1971년 반환되었다.",
+        "eval": {
+          "score": 0.96,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "땅 파서 젖은 깊이 재던 시절이 있었습니다",
+        "screen_text": "원시적 측정법",
+        "title": "웅덩이 깊이가 아닌 표준 용기로 바꾼 이유",
+        "promise": "흙마다 스며드는 양이 달라 측우기를 만든 배경을 설명합니다",
+        "evidence_quote": "흙에 스며드는 정도가 서로 달라 1441년(세종 23년) 음력 8월 장영실을 시켜 서운관(書雲觀)에서 빗물을 측정할 수 있는 그릇을 처음 제작하게 하였고",
+        "eval": {
+          "score": 0.904,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 0.4,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "측우기, 장영실 혼자 만든 게 아닙니다",
+    "target_seconds": 25,
+    "category": "역사유산",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "측우기, 장영실 혼자 만든 게 아닙니다. 세종실록에 남은 공동 발명의 기록을 확인합니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "현존하는 유일한 조선 측우기는 1837년 제작된 공주 충청감영 측우기이다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "존재하는 유일한 측우기는 1837년 만들어져 공주 충청감영에 설치되었던 금영측우기"
+          }
+        ]
+      },
+      {
+        "narration": "1441년, 문종이 가뭄을 근심해 궁중에 구리 원통을 두고 빗물을 재기 시작했습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "1441년",
+          "small": "문종 아이디어로 시작"
+        },
+        "claims": [
+          {
+            "text": "1441년 세자(문종)가 구리 원통형 기구를 궁중에 설치해 빗물을 측정했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "세자(훗날 문종)가 가뭄을 근심하여 비가 올 때마다 구리로 만든 원통형 기구를 궁중에 설치하고"
+          }
+        ]
+      },
+      {
+        "narration": "세종은 장영실을 시켜 서운관에서 규격화된 쇠 측우기를 제작하게 했습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "제작 과정",
+          "items": [
+            "문종 아이디어",
+            "장영실 제작",
+            "세종 명으로 규격화"
+          ]
+        },
+        "claims": [
+          {
+            "text": "세종이 장영실을 시켜 서운관에서 빗물 측정 그릇을 처음 제작하게 했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "하지만, 흙에 스며드는 정도가 서로 달라 1441년(세종 23년) 음력 8월 장영실을 시켜 서운관(書雲觀)에서 빗물을 측정할 수 있는 그릇을 처음 제작하게 하였고, 한양을 중심으로 관측에 활용하였다.",
+            "quote_found_by": "code"
+          }
+        ]
+      },
+      {
+        "narration": "1442년, 길이 32센티 지름 15센티 규격으로 전국 관아에 보급해 제도화했습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "규격화된 측우기 크기",
+          "a": {
+            "label": "길이",
+            "value": 32
+          },
+          "b": {
+            "label": "지름",
+            "value": 15
+          },
+          "unit": "센티미터"
+        },
+        "claims": [
+          {
+            "text": "1442년 측우기 규격이 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)으로 정해졌다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "쇠로 제작된 측우기는 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)"
+          }
+        ]
+      },
+      {
+        "narration": "측우대 높이 46센티로 빗물 튀김을 막고, 유럽보다 200년 앞선 세계 최초 통일 강우계가 됐습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "200년",
+          "small": "유럽보다 앞선 기록"
+        },
+        "claims": [
+          {
+            "text": "측우대는 높이 46cm로 빗물 튀김을 방지했고, 유럽보다 약 200년 앞서 통일된 강우 측정 제도를 시행했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "측우대 높이는 46cm이다. 측우기는 유럽보다 약 200년 앞서서 만들어졌으며"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "현존하는 유일한 조선 측우기는 1837년 제작된 공주 충청감영 측우기이다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 측우기",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "존재하는 유일한 측우기는 1837년 만들어져 공주 충청감영에 설치되었던 금영측우기",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "1441년 세자(문종)가 구리 원통형 기구를 궁중에 설치해 빗물을 측정했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 측우기",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "세자(훗날 문종)가 가뭄을 근심하여 비가 올 때마다 구리로 만든 원통형 기구를 궁중에 설치하고",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "세종이 장영실을 시켜 서운관에서 빗물 측정 그릇을 처음 제작하게 했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 측우기",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "하지만, 흙에 스며드는 정도가 서로 달라 1441년(세종 23년) 음력 8월 장영실을 시켜 서운관(書雲觀)에서 빗물을 측정할 수 있는 그릇을 처음 제작하게 하였고, 한양을 중심으로 관측에 활용하였다.",
+        "verified": true,
+        "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "1442년 측우기 규격이 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)으로 정해졌다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 측우기",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "쇠로 제작된 측우기는 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "측우대는 높이 46cm로 빗물 튀김을 방지했고, 유럽보다 약 200년 앞서 통일된 강우 측정 제도를 시행했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 측우기",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "측우대 높이는 46cm이다. 측우기는 유럽보다 약 200년 앞서서 만들어졌으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 239,
+      "est_seconds": 37.3,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 11.2,
+      "max_scene_similarity": 0.12,
+      "visual_mix": {
+        "compare": 1,
+        "stat": 2,
+        "photo": 1,
+        "steps": 1
+      },
+      "target_seconds_declared": 25
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "현존하는 유일한 조선 측우기는 1837년 제작된 공주 충청감영 측우기이다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 측우기",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "존재하는 유일한 측우기는 1837년 만들어져 공주 충청감영에 설치되었던 금영측우기",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "1441년 세자(문종)가 구리 원통형 기구를 궁중에 설치해 빗물을 측정했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 측우기",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "세자(훗날 문종)가 가뭄을 근심하여 비가 올 때마다 구리로 만든 원통형 기구를 궁중에 설치하고",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "세종이 장영실을 시켜 서운관에서 빗물 측정 그릇을 처음 제작하게 했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 측우기",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "하지만, 흙에 스며드는 정도가 서로 달라 1441년(세종 23년) 음력 8월 장영실을 시켜 서운관(書雲觀)에서 빗물을 측정할 수 있는 그릇을 처음 제작하게 하였고, 한양을 중심으로 관측에 활용하였다.",
+      "verified": true,
+      "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "1442년 측우기 규격이 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)으로 정해졌다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 측우기",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "쇠로 제작된 측우기는 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "측우대는 높이 46cm로 빗물 튀김을 방지했고, 유럽보다 약 200년 앞서 통일된 강우 측정 제도를 시행했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 측우기",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "측우대 높이는 46cm이다. 측우기는 유럽보다 약 200년 앞서서 만들어졌으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-18T16:02:46Z",
+  "pack": {
+    "topic": {
+      "title": "측우기",
+      "wiki_title": "측우기",
+      "category": "역사유산",
+      "source": "seed",
+      "angle": "",
+      "score": 0.6983,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29",
+      "evidence": 0.608,
+      "rescored": {
+        "score": 0.6996,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.608,
+          "performance": 0.5,
+          "explore": 0.291
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.61 · 성과prior 0.50(n=0) · 탐색 0.29"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 측우기",
+        "url": "https://ko.wikipedia.org/wiki/%EC%B8%A1%EC%9A%B0%EA%B8%B0",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-18",
+        "text": "측우기(測雨器)는 조선 시대에 강우량 분포를 측정하기 위해 제작된 세계 최초의 통일된 강우량을 재는 기구다. 조선 세종 때 처음 만들어 전국에 보급·시행하였으며 조선시대 전반에 걸쳐 활용되었다. 현재까지 존재하는 유일한 측우기는 1837년 만들어져 공주 충청감영에 설치되었던 금영측우기(錦營測雨器, 보물 561호, 국보 승격예정)이며 정조 때부터 고종 때까지의 관측 기록이 보존되어 있다.\n측우기는 유럽보다 약 200년 앞서서 만들어졌으며, 당대 조선의 과학기술력을 짐작할 수 있는 증거이다.\n\n제작 및 제도의 시행\n\n제작\n조선 초기에는 농업 등에 참조하기 위해 각 지방의 강우량을 측정하여 보고하는 제도가 있었는데, 이는 비온 후에 고여 있는 빗물의 깊이를 측정하는 것이었다. 하지만, 흙에 스며드는 정도가 서로 달라 1441년(세종 23년) 음력 8월 장영실을 시켜 서운관(書雲觀)에서 빗물을 측정할 수 있는 그릇을 처음 제작하게 하였고, 한양을 중심으로 관측에 활용하였다. 1442년(세종 24년)에는 측우에 관한 제도를 정하여 서운관에서 빗물의 깊이를 측량·기록하게 했으며, 지방에서는 각 관가의 뜰에 설치하여 수령 자신이 측량·기록하게 했다. 처음에는 쇠로 만들었으나 뒤에는 구리로 만들기도 하였고, 이외에 자기·도기로 대용하기도 하였다. 이는 이탈리아의 가스텔리보다 약 200년 앞선 것이다.\n측우기는 흔히 장영실이 만들었다고 알려졌는데, 세종실록 23년 4월 을미(양력 1441년 5월 19일) '근년 이래로 세자(훗날 문종)가 가뭄을 근심하여 비가 올 때마다 비가 온 뒤에 땅을 파서 젖어 들어간 깊이를 재었으나 정확하게 푼수를 알 수 없었으므로 구리로 만든 원통형 기구를 궁중에 설치하고, 여기에 고인 빗물의 푼수를 조사했다'는 기록은 문종이 발명한 사실을 뒷받침하고 있다.  따라서 측우기는 문종,장영실,세종대왕, 호조(戶曹)의 관료 등이 뜻을 모아 세계 최초로 제작한 규격품임을 잘 알 수 있다.\n\n제도의 시행\n측우기가 규격화되고 제도화된 것은 호조에서 우량을 측정하는 일에 관해 보고한 1442년(세종 24년) 6월 15일(음력 5월 8일) 이전으로 여겨진다. 이때부터 《삼국사기우산국》에서 측우기라는 단어가 등장한다. 쇠로 제작된 측우기는 길이 1척 5촌(약 32cm), 지름 7촌(약 15cm)이며, 비가 그친 후 주척(周尺)을 써서 분(分) 단위까지 재고, 비가 내리기 시작한 시간과 그친 시간을 기록하게 하였으며, 전국적으로 강우량을 측정하도록 했다.\n\n측우대\n\n측우기는 대(臺) 위에 올려놓고 측정하게 하였는데, 적절한 높이의 대는 주변의 빗물이 튀어 측우기에 유입되는 것을 방지하고 측우기를 고정하는 안정 효과 등이 있다. 경상감영측우대 기준으로는 윗면 길이가 36.7cm, 폭은 37cm이며, 가운데 구멍 지름은 15.5cm이고 측우대 높이는 46cm이다.\n현전하는 조선 시대의 측우대는 다음과 같다.\n\n관상감 측우대 (보물 제843호)\n대구 선화당 측우대 (보물 제842호) - 대구 경상감영 측우대\n창덕궁 측우대 (보물 제844호)\n통영 측우대 (보물 제1652호)\n연경당 측우대\n\n사진\n\n기타\n비의 양을 재기 위해 청계천 마전교에는 수표가 세워졌다.\n1837년 공주 충청감영에 설치되었던 금영측우기(錦營測雨器, 보물 561호)는 1915년 일본의 기상학자 와다 유지에 의해 일본으로 반출되었다가 1971년 반환되었다. 이 측우기는 보물 제 561호로 지정되어 있다. 문화재청은 2019년 12월 30일 보도자료를 통해 금영측우기의 명칭을 공주감영 측우기로 바꾸고 국보로 승격할 예정이라고 밝혔다. 또한 측우기를 놓는 받침인 측우대 2점도 함께 국보로 승격될 예정이라고 밝혔다. 대상은 대구 선화당 측우대(보물 제 842호, 기상청 소장)와 창덕궁 측우대(보물 제 844호, 국립고궁박물관 소장)이다.\n\n각주\n\n참고 자료",
+        "lang": "ko",
+        "wiki_title": "측우기",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Ch'ŭgugi",
+        "url": "https://en.wikipedia.org/wiki/Ch%27%C5%ADgugi",
+        "published": "2026-11-10",
+        "fetched_at": "2026-11-18",
+        "text": "Ch'ŭgugi (Korean: 측우기; Hanja: 測雨器; RR: cheugugi) were rain gauges invented and used during the Joseon dynasty of Korea. They were invented and supplied to each provincial office during the reign of King Sejong the Great. As of 2010, only one ch'ŭgugi remains, known as the Geumyeong Cheugugi (금영측우기; 錦營測雨器), which literally means \"ch'ŭgugi installed on the provincial office's yard.\" It is designated as National Treasure #561 of Korea and was installed in the provincial office of Gongju city, 1837 by King Yeongjo. In addition, the official measure of rainfall by ch'ŭgugi from King Jeongjo's reign to Emperor Gojong's reign is preserved.\n\nIntention\nEarly in the Joseon dynasty, a system was introduced to measure and report regional rainfall for the sake of agriculture. However, the method to measure rainfall in those days was primitive, recording the depth of rain water in puddles.\nThis method could not tell the exact rainfall, because rainwater is absorbed differently into the ground according to the local soil. To prevent errors of this kind, King Sejong the Great ordered the Gwansanggam (Hangul: 관상감, Hanja: 觀象監) (the Joseon kingdom's research institute of astronomy, geography, calendar and weather) to build a rainwater container, the ch'ŭgugi, made of iron in August 1441 (according to the lunar calendar) based on the idea of his Crown Prince, who later became Munjong of Joseon. Initially, it was mainly used in the capital area.\nIn 1442, the king ordered the Gwansanggam again to design a standardized system to measure and record the rainfall. He also ordered his provincial governors, appointed by the king, to install an identical ch'ŭgugi in the courtyard of each provincial office, where the governors would measure and record the rainfall.\nIt is estimated that measuring rainfalls by the standardized ch'ŭgugi was institutionalized from the 8th day, 5th month of 1442 (lunar calendar). From that day, the word \"ch'ŭgugi\" was inscribed on the official records of the Veritable Records of the Joseon Dynasty.\nIt was originally made of iron, but copper and ceramic ones were used later.\n\nExterior features\nAs it is described above, the ch'ŭgugi was mainly made of iron. By observing the preserved one, it is generally characterized by its oil-drum shape which is fixed on the hexahedral stone support, ch'ŭgudae (측우대). The reasonable height of the ch'ŭgudae means that splashed water cannot enter the ch'ŭgugi. \nThe depth of the preserved ch'ŭgugi is about 32 cm and the diameter is about 15 cm.\n\nOperation\nThe rainfall is measured by dipping a ruler and recorded by the unit of length pun (푼; 分; approximately 0.303 cm (0.120 inch)). The time when the rain began and stopped is recorded for each storm.\n\nExamples\nSome ch'ŭgudae survive:\n\nGwansanggam Cheugudae\nDaegu Sunhwadang Cheugudae (established at Daegu)\nChangdeokgung Palace's Cheugudae (moved to the National Palace Museum of Korea)\nTongyeong Cheugudae\nYeon-gyeong-dang (the royal residence in forbidden garden of Changdeokgung Palace) Cheugudae\nMajeongyo is a bridge generally known as Supyogyo across the Cheonggyecheon (stream flows center of Joseon era's Seoul city (inside area of the Seoul wall), near the palace Gyeongbokgung). The name originated from the supyoseok attached on the pier of the bridge. The Supyo-seok's meaning and function is \"the water level gauge\" of Cheonggyecheon, telling how much the stream's water level rises from rain. It was established in King Sejong the Great's reign (second year of his reign). In 1958 when the Cheonggyecheon was covered as a road by the Korean government, it was moved to Jang-chung park where it remains. \n\nReferences",
+        "lang": "en",
+        "wiki_title": "Ch'ŭgugi",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:공주 충청감영 측우기.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/%EA%B3%B5%EC%A3%BC_%EC%B6%A9%EC%B2%AD%EA%B0%90%EC%98%81_%EC%B8%A1%EC%9A%B0%EA%B8%B0.jpg/1920px-%EA%B3%B5%EC%A3%BC_%EC%B6%A9%EC%B2%AD%EA%B0%90%EC%98%81_%EC%B8%A1%EC%9A%B0%EA%B8%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/%EA%B3%B5%EC%A3%BC_%EC%B6%A9%EC%B2%AD%EA%B0%90%EC%98%81_%EC%B8%A1%EC%9A%B0%EA%B8%B0.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EA%B3%B5%EC%A3%BC_%EC%B6%A9%EC%B2%AD%EA%B0%90%EC%98%81_%EC%B8%A1%EC%9A%B0%EA%B8%B0.jpg",
+        "width": 5206,
+        "height": 6896,
+        "license": "KOGL Type 1",
+        "artist": "문화재청",
+        "caption": "국보 제329호, 공주 충청감영 측우기 (公州 忠淸監營 測雨器)",
+        "id": "P1"
+      },
+      {
+        "file": "File:이왕가박물관 본관.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/%EC%9D%B4%EC%99%95%EA%B0%80%EB%B0%95%EB%AC%BC%EA%B4%80_%EB%B3%B8%EA%B4%80.jpg/1920px-%EC%9D%B4%EC%99%95%EA%B0%80%EB%B0%95%EB%AC%BC%EA%B4%80_%EB%B3%B8%EA%B4%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/%EC%9D%B4%EC%99%95%EA%B0%80%EB%B0%95%EB%AC%BC%EA%B4%80_%EB%B3%B8%EA%B4%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B4%EC%99%95%EA%B0%80%EB%B0%95%EB%AC%BC%EA%B4%80_%EB%B3%B8%EA%B4%80.jpg",
+        "width": 1961,
+        "height": 1480,
+        "license": "Public domain",
+        "artist": "unknown",
+        "caption": "명칭이왕가박물관 본관 아카이브번호75926 유물번호서11477 시기1915 자료출처『京城繁昌記』(博文社, 1915) 내용창경궁안 이왕가박물관(李王家博物館) 본관 건물이다. 1909년 창경원 개설 당시에는 명정전(明政殿)이 박물본관으로 사용되었으나 1911년에 일본풍 건물을 세워 박물관 ",
+        "id": "P2"
+      }
+    ],
+    "evidence": 0.608,
+    "ok": true,
+    "built_at": "2026-11-18T16:01:28Z"
+  }
+}

@@ -1,0 +1,843 @@
+{
+  "id": "ch9ede5c-20261119-01-aee4b",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-18T16:03:12Z",
+  "topic": {
+    "title": "브레턴우즈 체제",
+    "wiki_title": "브레턴우즈 체제",
+    "category": "환율달러",
+    "source": "seed",
+    "angle": "",
+    "score": 0.7043,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "explore": 0.367
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.37",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7683,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "explore": 0.367
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.37"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-18T16:03:12Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-18T16:03:12Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-18T16:03:36Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-18T16:03:59Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "고정환율로 세계가 30년 고도성장했는데 미국만 적자였습니다",
+      "screen_text": "고도성장 속 美적자",
+      "title": "세계가 성장할수록 미국은 가난해진 역설",
+      "promise": "자유무역 확대가 미국 국제수지 적자를 키운 구조적 모순을 설명합니다",
+      "evidence_quote": "서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+      "eval": {
+        "score": 0.9516,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 0.5,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.93,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "고정환율로 세계가 30년 고도성장했는데 미국만 적자였습니다",
+        "screen_text": "고도성장 속 美적자",
+        "title": "세계가 성장할수록 미국은 가난해진 역설",
+        "promise": "자유무역 확대가 미국 국제수지 적자를 키운 구조적 모순을 설명합니다",
+        "evidence_quote": "서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+        "eval": {
+          "score": 0.9516,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "미국은 금 안 주고 달러만 찍어 세계 무역을 지배했습니다",
+        "screen_text": "금태환 정지 선언",
+        "title": "닉슨 쇼크, 미국만 이득 본 '금태환 정지'의 진실",
+        "promise": "달러 위기 타개를 위해 금태환을 멈춘 순간 누가 이익을 보고 누가 손해 봤는지 정리합니다",
+        "evidence_quote": "결국 금태환 정지선언인 1971년의 8·15 닉슨 조치는 이런 달러위기의 타개를 꾀하는 것으로 받아들여지나",
+        "eval": {
+          "score": 0.9508,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.92,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "달러가 금 대신 기축통화가 된 건 소련 때문이었습니다",
+        "screen_text": "달러=금? 안보동맹!",
+        "title": "브레턴우즈, 소련 막으려 달러를 금으로 만들었다",
+        "promise": "미국이 달러를 금에 묶은 진짜 이유가 안보동맹 구축이었음을 1분 만에 이해합니다",
+        "evidence_quote": "브레튼 우즈 체제의 본질은 미국이 소련에 대항하기 위한 안보동맹 차원에서 이해해야 한다고 주장한다",
+        "eval": {
+          "score": 0.9378,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "1944년 금 3분의 2를 가진 미국 vs 금 없는 유럽, 승자는 달러였습니다",
+        "screen_text": "금 3분의 2 독점",
+        "title": "금 독점국 미국이 달러를 금 대리로 만든 과정",
+        "promise": "금 보유량 차이가 달러 기축통화 지위를 결정한 메커니즘을 확인합니다",
+        "evidence_quote": "The United States, which controlled two-thirds of the world's gold, insisted that the Bretton Woods system rest on both gold and the US dollar",
+        "eval": {
+          "score": 0.9151,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.96,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "트리핀은 '이 체제는 필연적으로 망한다'고 이미 예언했습니다",
+        "screen_text": "트리핀의 딜레마",
+        "title": "유동성 vs 신뢰, 달러가 풀린 순간 붕괴는 예정된 수순",
+        "promise": "달러 공급 늘리면 신뢰 떨어지는 '트리핀 딜레마'가 붕괴를 예고한 이유를 파악합니다",
+        "evidence_quote": "유동성 문제란 세계 경제의 발전과 함께 달러의 수요는 많아지나, 금의 생산량은 제한적이므로 발생하는 문제이다",
+        "eval": {
+          "score": 0.8685,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "IMF·세계은행 창설, 실은 1차대전 배상금 악순환 막으려던 장치였습니다",
+        "screen_text": "베르사유 교훈 반영",
+        "title": "브레턴우즈 회의, 1931년 은행위기 반복 않기 위한 설계도",
+        "promise": "전후 배상금 문제로 터진 대공황 교훈이 IMF·IBRD 설립에 어떻게 녹아들었는지 봅니다",
+        "evidence_quote": "The planners at Bretton Woods hoped to avoid a repetition of the Treaty of Versailles after World War I, which had created enough economic and political tension to lead to WWII",
+        "eval": {
+          "score": 0.85,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.92,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "브레턴우즈 체제: 고도성장과 美적자의 모순",
+    "target_seconds": 35,
+    "category": "환율달러",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "고정환율로 세계가 30년 고도성장했는데 미국만 적자였습니다",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "브레턴우즈 체제 기간 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "이 체제가 지속되는 동안 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다."
+          },
+          {
+            "text": "미국은 국제수지 만성적 대폭적 적자를 누적시켰다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜 금 준비와 대외 단기달러채무 잔고의 비율이 악화되기 시작했다."
+          }
+        ]
+      },
+      {
+        "narration": "1944년 44개국 합의로 달러를 기축통화 삼아 금 1온스 35달러로 고정했습니다",
+        "visual": {
+          "type": "stat",
+          "big": "금 1온스 35달러",
+          "small": "달러 기축 금환본위제"
+        },
+        "claims": [
+          {
+            "text": "1944년 44개국이 참가한 회의에서 브레턴우즈 체제가 출범했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1944년 미국 뉴햄프셔주 브레턴우즈에서 열린 44개국이 참가한 연합국 통화 금융 회의에서 탄생되었다."
+          },
+          {
+            "text": "금 1온스를 35달러로 고정하고 각국 통화는 달러에 고정하는 금환본위제도를 실시했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "금 1온스를 35달러로 고정시키고, 그 외에 다른 나라의 통화는 달러에 고정."
+          }
+        ]
+      },
+      {
+        "narration": "자유무역 확대가 미국 국제수지 적자를 키운 구조적 모순이었습니다",
+        "visual": {
+          "type": "steps",
+          "title": "구조적 모순",
+          "items": [
+            "유럽·일본 고도성장",
+            "미국 무역적자 누적",
+            "달러 공급 과잉",
+            "금 태환 신뢰 하락"
+          ]
+        },
+        "claims": [
+          {
+            "text": "자유무역 확대가 미국 국제수지 적자를 키운 구조적 모순이 있었다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          },
+          {
+            "text": "트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자 딜레마 속에 무너질 수밖에 없었다고 지적했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "로베르 트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자의 딜레마속에서 무너질 수밖에 없는 체제였다고 지적한 바 있다.",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "1950년대 말부터 달러 위기 표면화, 1960년 가을 본격화되었습니다",
+        "visual": {
+          "type": "compare",
+          "title": "달러 위기 진행",
+          "a": {
+            "label": "1950년대 말",
+            "value": 1950
+          },
+          "b": {
+            "label": "1960년 가을",
+            "value": 1960
+          },
+          "unit": "년"
+        },
+        "claims": [
+          {
+            "text": "1950년대 말부터 서구 성장 대비 미국 경제 정체로 달러 지위 동요가 시작됐다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "그러나 1950년대 말부터 서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜"
+          },
+          {
+            "text": "1960년 가을 달러 위기가 표면화되어 만성화되고 심각화됐다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "이렇게 비롯된 달러의 지위 동요는 1960년 가을에 표면화되어 그 후 이런 경향은 만성화되고 심각화되어"
+          }
+        ]
+      },
+      {
+        "narration": "베트남 전쟁과 인플레로 달러 가치 급락, 1971년 8월 15일 닉슨이 금태환 정지 선언했습니다",
+        "visual": {
+          "type": "photo",
+          "id": "P3"
+        },
+        "claims": [
+          {
+            "text": "베트남 전쟁 등으로 미국 국제수지 적자가 발생하고 전비 조달 통화량 증가로 인플레이션이 일어나 달러 가치가 급락했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "베트남 전쟁 등으로 인한 미국의 국제수지 적자가 발생하고, 전비조달을 위한 통화량 증가에 의한 인플레이션으로 인해 달러 가치가 급락하자"
+          },
+          {
+            "text": "1971년 8월 15일 닉슨이 금태환 정지를 선언했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "결국 금태환 정지선언인 1971년의 8·15 닉슨 조치는 이런 달러위기의 타개를 꾀하는 것으로 받아들여지나"
+          }
+        ]
+      },
+      {
+        "narration": "1973년 주요국 환율 유동화로 체제 붕괴, 자유무역 기반 성장 시대는 끝났습니다",
+        "visual": {
+          "type": "text",
+          "headline": "체제 붕괴와 전환",
+          "sub": "1973년 변동환율제로 이행"
+        },
+        "claims": [
+          {
+            "text": "1973년 초 주요국이 환율을 유동화시킴으로써 브레턴우즈 체제가 붕괴했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1973년 초 주요국이 환율을 유동화시킴으로써 IMF 체제는 브레튼 우즈 체제가 갖추었던 금환본위제라는 양대기본개념이 크게 변질된 새로운 국제통화제도로 모습을 바꾸었다."
+          },
+          {
+            "text": "고정환율제와 금태환을 기반으로 한 자유무역 확대와 고도성장 시대는 막을 내렸다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "세계무역은 축소화의 경향을 지지게 되며 한편 후진국에는 악영향을 주었다.",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "브레턴우즈 체제 기간 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "이 체제가 지속되는 동안 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 0,
+        "text": "미국은 국제수지 만성적 대폭적 적자를 누적시켰다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜 금 준비와 대외 단기달러채무 잔고의 비율이 악화되기 시작했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 1,
+        "text": "1944년 44개국이 참가한 회의에서 브레턴우즈 체제가 출범했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "1944년 미국 뉴햄프셔주 브레턴우즈에서 열린 44개국이 참가한 연합국 통화 금융 회의에서 탄생되었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 1,
+        "text": "금 1온스를 35달러로 고정하고 각국 통화는 달러에 고정하는 금환본위제도를 실시했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "금 1온스를 35달러로 고정시키고, 그 외에 다른 나라의 통화는 달러에 고정.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 2,
+        "text": "자유무역 확대가 미국 국제수지 적자를 키운 구조적 모순이 있었다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 2,
+        "text": "트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자 딜레마 속에 무너질 수밖에 없었다고 지적했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "로베르 트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자의 딜레마속에서 무너질 수밖에 없는 체제였다고 지적한 바 있다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 3,
+        "text": "1950년대 말부터 서구 성장 대비 미국 경제 정체로 달러 지위 동요가 시작됐다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "그러나 1950년대 말부터 서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C8",
+        "scene": 3,
+        "text": "1960년 가을 달러 위기가 표면화되어 만성화되고 심각화됐다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "이렇게 비롯된 달러의 지위 동요는 1960년 가을에 표면화되어 그 후 이런 경향은 만성화되고 심각화되어",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C9",
+        "scene": 4,
+        "text": "베트남 전쟁 등으로 미국 국제수지 적자가 발생하고 전비 조달 통화량 증가로 인플레이션이 일어나 달러 가치가 급락했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "베트남 전쟁 등으로 인한 미국의 국제수지 적자가 발생하고, 전비조달을 위한 통화량 증가에 의한 인플레이션으로 인해 달러 가치가 급락하자",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C10",
+        "scene": 4,
+        "text": "1971년 8월 15일 닉슨이 금태환 정지를 선언했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "결국 금태환 정지선언인 1971년의 8·15 닉슨 조치는 이런 달러위기의 타개를 꾀하는 것으로 받아들여지나",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C11",
+        "scene": 5,
+        "text": "1973년 초 주요국이 환율을 유동화시킴으로써 브레턴우즈 체제가 붕괴했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "1973년 초 주요국이 환율을 유동화시킴으로써 IMF 체제는 브레튼 우즈 체제가 갖추었던 금환본위제라는 양대기본개념이 크게 변질된 새로운 국제통화제도로 모습을 바꾸었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C12",
+        "scene": 5,
+        "text": "고정환율제와 금태환을 기반으로 한 자유무역 확대와 고도성장 시대는 막을 내렸다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "세계무역은 축소화의 경향을 지지게 되며 한편 후진국에는 악영향을 주었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 249,
+      "est_seconds": 38.9,
+      "scenes": 6,
+      "avg_new_tokens_per_scene": 9.8,
+      "max_scene_similarity": 0.09,
+      "visual_mix": {
+        "stat": 1,
+        "compare": 1,
+        "photo": 2,
+        "text": 1,
+        "steps": 1
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "브레턴우즈 체제 기간 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "이 체제가 지속되는 동안 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 0,
+      "text": "미국은 국제수지 만성적 대폭적 적자를 누적시켰다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜 금 준비와 대외 단기달러채무 잔고의 비율이 악화되기 시작했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 1,
+      "text": "1944년 44개국이 참가한 회의에서 브레턴우즈 체제가 출범했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "1944년 미국 뉴햄프셔주 브레턴우즈에서 열린 44개국이 참가한 연합국 통화 금융 회의에서 탄생되었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 1,
+      "text": "금 1온스를 35달러로 고정하고 각국 통화는 달러에 고정하는 금환본위제도를 실시했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "금 1온스를 35달러로 고정시키고, 그 외에 다른 나라의 통화는 달러에 고정.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 2,
+      "text": "자유무역 확대가 미국 국제수지 적자를 키운 구조적 모순이 있었다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 2,
+      "text": "트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자 딜레마 속에 무너질 수밖에 없었다고 지적했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "로베르 트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자의 딜레마속에서 무너질 수밖에 없는 체제였다고 지적한 바 있다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 3,
+      "text": "1950년대 말부터 서구 성장 대비 미국 경제 정체로 달러 지위 동요가 시작됐다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "그러나 1950년대 말부터 서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C8",
+      "scene": 3,
+      "text": "1960년 가을 달러 위기가 표면화되어 만성화되고 심각화됐다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "이렇게 비롯된 달러의 지위 동요는 1960년 가을에 표면화되어 그 후 이런 경향은 만성화되고 심각화되어",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C9",
+      "scene": 4,
+      "text": "베트남 전쟁 등으로 미국 국제수지 적자가 발생하고 전비 조달 통화량 증가로 인플레이션이 일어나 달러 가치가 급락했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "베트남 전쟁 등으로 인한 미국의 국제수지 적자가 발생하고, 전비조달을 위한 통화량 증가에 의한 인플레이션으로 인해 달러 가치가 급락하자",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C10",
+      "scene": 4,
+      "text": "1971년 8월 15일 닉슨이 금태환 정지를 선언했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "결국 금태환 정지선언인 1971년의 8·15 닉슨 조치는 이런 달러위기의 타개를 꾀하는 것으로 받아들여지나",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C11",
+      "scene": 5,
+      "text": "1973년 초 주요국이 환율을 유동화시킴으로써 브레턴우즈 체제가 붕괴했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "1973년 초 주요국이 환율을 유동화시킴으로써 IMF 체제는 브레튼 우즈 체제가 갖추었던 금환본위제라는 양대기본개념이 크게 변질된 새로운 국제통화제도로 모습을 바꾸었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C12",
+      "scene": 5,
+      "text": "고정환율제와 금태환을 기반으로 한 자유무역 확대와 고도성장 시대는 막을 내렸다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 브레턴우즈 체제",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "세계무역은 축소화의 경향을 지지게 되며 한편 후진국에는 악영향을 주었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-18T16:03:59Z",
+  "pack": {
+    "topic": {
+      "title": "브레턴우즈 체제",
+      "wiki_title": "브레턴우즈 체제",
+      "category": "환율달러",
+      "source": "seed",
+      "angle": "",
+      "score": 0.7043,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "explore": 0.367
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.37",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7683,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "explore": 0.367
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.37"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 브레턴우즈 체제",
+        "url": "https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A0%88%ED%84%B4%EC%9A%B0%EC%A6%88_%EC%B2%B4%EC%A0%9C",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-18",
+        "text": "브레턴우즈 체제( - 體制, 영어: Bretton Woods system, BWS)는 브레턴우즈 회의에 따라 구축된 국제 통화 체제이다. 2차 세계대전 종전 직전인 1944년 미국 뉴햄프셔주 브레턴우즈에서 열린 44개국이 참가한 연합국 통화 금융 회의에서 탄생되었다.\n\n주요 내용\n협정에 따라 국제통화기금(IMF)과 국제부흥개발은행(IBRD)이 설립되었다. 통화 가치 안정, 무역 진흥, 개발 도상국 지원을 목적으로 하며 환율을 안정시키는 것이 주요한 목표였다.\n\n미국 달러화를 기축 통화로 하는 금환본위제도의 실시 : 금 1온스를 35달러로 고정시키고, 그 외에 다른 나라의 통화는 달러에 고정.\n조정가능한 고정환율 제도의 실시 : 원칙적으로는 상하 1% 범위 내에서 조정이 가능하며, 국제수지의 근본적인 불균형(fundamental disequilibrium)이 있는 경우에만 예외적으로 그 이상의 변동을 허용.\n1930년대 이래의 각국통화가치 불안정, 외환관리, 평가절하경쟁, 무역거래제한 등을 시정하여 국제무역의 확대, 고용 및 실질소득증대, 외환의 안정과 자유화, 국제수지 균형등을 달성할 것을 목적으로 체결.\n각국에 필요한 외화를 공급하는 국제통화기금(IMF)과, 전후부흥과 후진국개발을 위한 국제부흥개발은행(IBRD)을 창설.\n이 체제가 지속되는 동안 제1세계 국가들은 자유무역을 기반으로 기록적인 고도성장을 이루었다. 그러나 1971년 8월 닉슨 쇼크 이후 12월 스미소니언 협정으로 이행하여 변질된 형태로나마 이어지던 브레튼 우즈 체제는 1973년 초 주요국이 환율을 유동화시킴으로써 IMF 체제는 브레튼 우즈 체제가 갖추었던 금환본위제라는 양대기본개념이 크게 변질된 새로운 국제통화제도로 모습을 바꾸었다.\n\n달러 위기\n제2차 세계 대전 후 피폐된 서구 각국에 대해 압도적인 금보유를 배경으로 한 미국 달러는 절대적 우위를 차지했고 국제경제상 커다란 지위를 차지하는 한편 IMF 체제 아래서도 달러는 금의 대리(代理)라는 탁월한 지위를 인정받아 왔다. 또한 미국 달러는 전후 유럽, 일본 등의 부흥, 나아가서는 대한민국에 대한 원조 등 자유세계의 번영기금으로 천문학적인 금액이 투하되었다. 그러나 1950년대 말부터 서구의 눈부신 경제성장에 비해 미국경제는 정체하고 국제수지도 만성적이고 대폭적인 적자를 누적시켜 금 준비와 대외 단기달러채무 잔고의 비율이 악화되기 시작했다. 이렇게 비롯된 달러의 지위 동요는 1960년 가을에 표면화되어 그 후 이런 경향은 만성화되고 심각화되어 금융 위기인 달러 위기(dollar 危機)로 이어졌다.\n\n붕괴\n베트남 전쟁 등으로 인한 미국의 국제수지 적자가 발생하고, 전비조달을 위한 통화량 증가에 의한 인플레이션으로 인해 달러 가치가 급락하자 일부 국가들이 금태환을 요구하였고, 결국 금태환 정지선언인 1971년의 8·15 닉슨 조치는 이런 달러위기의 타개를 꾀하는 것으로 받아들여지나 이 조치에 따라 브레튼 우즈 체제가 붕괴, 국제 통화제도는 혼란에 빠지고 세계무역은 축소화의 경향을 지지게 되며 한편 후진국에는 악영향을 주었다.\n로베르 트리핀은 금본위제도가 유동성 문제와 신뢰성 문제라는 양자의 딜레마속에서 무너질 수밖에 없는 체제였다고 지적한 바 있다. 유동성 문제란 세계 경제의 발전과 함께 달러의 수요는 많아지나, 금의 생산량은 제한적이므로 발생하는 문제이다. 만약 유동성 문제를 해결하기 위해 달러의 공급을 증가시킨다면 달러 가치에 대한 신뢰성이 하락하는 문제가 발생하는 딜레마에 봉착한다는 것이다.\n금환본위제는 국제수지 자동조절기능의 약화와 통화팽창 가능성이란 약점때문에 1929년 대공황을 계기로 1931년 붕괴하게 된다. 따라서 이때의 무역정책을 보면 강력한 보호무역조치가 만연하는 경향이 나타났었다. 특히 1930년대의 세계대공황은 국제통화질서를 회복하기 어려운 결정타를 가하였다. 주식시장의 붕괴는 급속히 전 세계로 확대되어 유럽각자의 연쇄적인 파산을 불러일으켰고, 그 후 미국마저 달러화의 평가절하를 단행하여 주요선진국은 일시적인 변동환율을 채택하게 되었다. 여기서 금본위제도는 붕괴되고 말았다.\n\n붕괴 후 세계경제 동향\n금본위제가 붕괴 한 후, 세계경제는 걷잡을 수 없는 혼란에 빠졌다. 우선 각국이 보호주의를 강력히 추구하여 관세장벽을 높여가는 한편, 수입할당제, 수입허가세 등 비관세 수단에 의해 무역규제도 나타나게 되었다. 뿐만 아니라 경쟁적인 평가절하가 만연됐으며, 대영제국, 스칸디나비아, 포르투갈, 일본을 중심으로 하는 파운드 블록, 북중남미국가를 중심으로 한 달러블록과 같은 블록들이 형성되었다. 그 결과 자유무역은 자취를 감추고 자유무역원리와 금본위제에 뒷받침을 받았던 20세기 경제질서는 완전히 붕괴되었다.\n\n신 브레튼 우즈 체제 등장\n신 브레튼 우즈 체제는 아직 실체가 없는 시스템이다. 물론 신 브레튼 우즈 체제에 대한 논의가 유럽연합을 중심으로 진행되고 있고, 그 중심에 당시 유럽연합 순회의장국인 프랑스의 사르코지가 있다. 신체제의 창설을 처음 제안했던 쪽은 영국의 고든 브라운 총리였다. 브라운 총리의 제안은 첫째, 금융위기 정보시스템, 둘째, 세계 30위권 금융기관에 대한 감독강화였다.\n미국 워싱턴에서 'G20' 긴급정상회의가 열렸으나, 규제감독 강화와 경기부양에 관한 원칙에는 합의를 봤으나 초국가적 금융감독기구 창설에 대해서는 합의를 이루지 못했다.\n신 브레튼우즈 체제 대립구조 : 먼저 유럽연합 속에서는 긍정적인 측면에서 활발한 논의가 벌어지지만, 미국 쪽에서는 미국의 세계금융주도권이 약해질 수 있다는 주장 아래 서로간의 이해관계가 충돌하고 있다.\n\n해석\n피터 자이한은 그의 저서 <21세기 미국의 패권과 지정학>에서 브레튼 우즈 체제의 본질은 미국이 소련에 대항하기 위한 안보동맹 차원에서 이해해야 한다고 주장한다. 이 안보동맹으로 미국은 반공산주의 진영을 세워 세계의 보안관 역할을 30년 동안 해왔으며 이 체제의 종식으로 자유무역에서 보호무역으로 미국이 입장을 바꿨다고 주장한다.\n\n같이 보기\n금본위제\n스미소니언 협정\n킹스턴 체제\n국제통화기금\n팍스달러리움\n국제부흥개발은행\n금융 위기\n\n각주",
+        "lang": "ko",
+        "wiki_title": "브레턴우즈 체제",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Bretton Woods system",
+        "url": "https://en.wikipedia.org/wiki/Bretton_Woods_system",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-18",
+        "text": "The Bretton Woods system of monetary management established the rules for commercial relations among 44 countries, including the United Kingdom, United States, Canada, European countries, and Australia, after the 1944 Bretton Woods Agreement until the Jamaica Accords in 1976. The Bretton Woods system was the first example of a fully negotiated monetary order intended to govern monetary relations among independent states. The Bretton Woods system required countries to guarantee convertibility of their currencies into U.S. dollars with the dollar convertible to gold bullion for foreign governments and central banks. It envisioned greater cooperation among countries to prevent future competitive devaluations, and thus established the International Monetary Fund (IMF) to monitor exchange rates and lend reserve currencies to countries with balance of payments deficits. According to Barry Eichengreen, the Bretton Woods system operated successfully due to three factors: \"low international capital mobility, tight financial regulation, and the dominant economic and financial position of the United States and the dollar\".\nPreparing to rebuild the international economic system while World War II was still being fought, delegates from 44 Allied countries gathered at the Mount Washington Hotel in Bretton Woods, New Hampshire, United States, for the United Nations Monetary and Financial Conference, also known as the Bretton Woods Conference. The delegates deliberated from 1 to 22 July 1944, and signed the Bretton Woods agreement on its final day. Setting up a system of rules, institutions, and procedures to regulate the international monetary system, these accords established the IMF and the International Bank for Reconstruction and Development (IBRD), which today is part of the World Bank Group. The United States, which controlled two-thirds of the world's gold, insisted that the Bretton Woods system rest on both gold and the US dollar. Soviet representatives attended the conference but later declined to ratify the final agreements, charging that the institutions they had created were \"branches of Wall Street\". These organizations became operational in 1945 after a sufficient number of countries had ratified the agreement.\n\nEurodollar growth increased capital flows, challenging regulation of capital movements. On 15 August 1971, the United States ended the convertibility of the US dollar to gold, effectively bringing the Bretton Woods system to an end and rendering the dollar a fiat currency. Shortly thereafter, many fixed currencies (such as the pound sterling) also became free-floating, and the subsequent era has been characterized by floating exchange rates. The end of Bretton Woods was formally ratified by the Jamaica Accords in 1976. Critics argue that the system's reliance on the U.S. dollar allowed the United States to operate with fewer constraints than other nations, while fixed exchange rates limited countries such as the major European economies and Japan in their ability to adjust monetary policy in response to rising inflation and shifting trade conditions. They also note that the IMF and World Bank often imposed policy conditions that placed significant strain on developing countries and restricted the flexibility of local economies.\n\nOrigins\nThe planners at Bretton Woods hoped to avoid a repetition of the Treaty of Versailles after World War I, which had created enough economic and political tension to lead to WWII. After World War I, Britain owed the U.S. substantial sums, which Britain could not repay because it had used the funds to support allies such as France during the War; the Allies could not pay back Britain, so Britain could not pay back the U.S. The solution at Versailles for the French, British, and Americans seemed to entail ultimately charging Germany for the debts. If the demands on Germany were unrealistic, then it was unrealistic for France to pay back Britain, and for Britain to pay back the US. Thus, many \"assets\" on bank balance sheets internationally were actually unrecoverable loans, which culminated in the 1931 banking crisis. Intransigence by creditor countries for the repayment of Allied war debts and reparations, combined with an inclination to isolationism, led to a breakdown of the international financial system and a worldwide economic depression.\nThe beggar thy neighbour policies that emerged as the crisis continued saw some trading countries using currency devaluations in an attempt to increase their competitiveness (i.e. raise exports and lower imports), though recent research suggests this de facto inflationary policy probably offset some of the contractionary forces in world price levels.\nIn the 1920s, international flows of speculative financial capital increased, leading to extremes in balance of payments situations in various European countries and the US. In the 1930s, world markets never broke through the barriers and restrictions on international trade and investment volume – barriers haphazardly constructed, nationally motivated and imposed. The various anarchic and often autarkic protectionist and neo-mercantilist national policies – often mutually inconsistent – that emerged over the first half of the decade worked inconsistently and self-defeatingly to promote national import substitution, increase national exports, divert foreign investment and trade flows, and even prevent certain categories of cross-border trade and investment outright. Global central bankers attempted to manage the situation by meeting with each other, but their understanding of the situation as well as difficulties in communicating internationally, hindered their abilities. The lesson was that simply having responsible, hard-working central bankers was not enough.\nBritain in the 1930s had an exclusionary trade bloc with countries and territories of the British Empire known as the Sterling Area. If Britain imported more than it exported to such trading partners, recipients of pounds sterling within these countries tended to put them into London banks. This meant that though Britain was running a trade deficit, it had a financial account surplus, and payments balanced. Increasingly, Britain's positive balance of payments required keeping the wealth from across its Empire in British banks. One incentive for, say, South African holders of rand to park their wealth in London and to keep the money in Sterling, was a strongly valued pound sterling.",
+        "lang": "en",
+        "wiki_title": "Bretton Woods system",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Image-Mount Washington Hotel.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Image-Mount_Washington_Hotel.jpg/1920px-Image-Mount_Washington_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Image-Mount_Washington_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Image-Mount_Washington_Hotel.jpg",
+        "width": 2862,
+        "height": 1492,
+        "license": "Public domain",
+        "artist": "",
+        "caption": "Image-Mount Washington Hotel",
+        "id": "P1"
+      },
+      {
+        "file": "File:Mt. Washington Hotel.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Mt._Washington_Hotel.jpg/1920px-Mt._Washington_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mt._Washington_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Mt._Washington_Hotel.jpg",
+        "width": 4032,
+        "height": 3024,
+        "license": "CC BY 2.0",
+        "artist": "rickpilot_2000 from Hooksett, USA",
+        "caption": "Mt. Washington Hotel",
+        "id": "P2"
+      },
+      {
+        "file": "File:Price of gold.webp",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Price_of_gold.webp/1920px-Price_of_gold.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Price_of_gold.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Price_of_gold.webp",
+        "width": 4495,
+        "height": 2291,
+        "license": "CC0",
+        "artist": "Wikideas1",
+        "caption": "Price of gold",
+        "id": "P3"
+      },
+      {
+        "file": "File:Omni Mount Washington Resort.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Omni_Mount_Washington_Resort.jpg/1920px-Omni_Mount_Washington_Resort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Omni_Mount_Washington_Resort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Omni_Mount_Washington_Resort.jpg",
+        "width": 3769,
+        "height": 1678,
+        "license": "CC BY 4.0",
+        "artist": "Phil8684",
+        "caption": "Landscape view of the Omni Mount Washington Resort in Bretton Woods, New Hampshire, USA",
+        "id": "P4"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-18T16:03:12Z"
+  }
+}
