@@ -107,9 +107,9 @@ def test_quote_support_and_numbers():
 
 
 def test_license_filter():
-    for ok in ("CC BY-SA 4.0", "CC BY 2.0", "Public domain", "CC0", "KOGL Type 1"):
+    for ok in ("CC BY 4.0", "CC BY 2.0", "Public domain", "CC0", "KOGL Type 1"):
         assert license_ok(ok), ok
-    for bad in ("CC BY-NC 4.0", "CC BY-ND 2.0", "Fair use", "", "All rights reserved"):
+    for bad in ("CC BY-SA 4.0", "CC BY-SA 3.0", "CC BY-NC 4.0", "CC BY-ND 2.0", "Fair use", "", "All rights reserved"):
         assert not license_ok(bad), bad
 
 

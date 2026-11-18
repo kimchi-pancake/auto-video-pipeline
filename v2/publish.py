@@ -98,7 +98,7 @@ def build_description(job: Dict) -> str:
             lines.append(f"- {src['title']} ({src['url']}) · 확인일 {src['fetched_at']}")
     photos = [a["meta"]["photo"] for a in (job.get("assets") or []) if a.get("meta", {}).get("photo")]
     if photos:
-        lines += ["", "[사진 출처]"]
+        lines += ["", "[사진 출처] (영상에서 크기 조정·확대·배경 흐림 처리를 했습니다)"]
         for p in photos:
             lines.append(f"- {p.get('artist') or '작성자 미상'}, {p.get('license')}, {p.get('page')}")
     lines += ["", "이 영상은 위 자료를 바탕으로 AI 도구(대본 초안·합성 음성)를 사용해 제작되었습니다."]

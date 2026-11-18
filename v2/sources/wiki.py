@@ -29,6 +29,9 @@ _LICENSE_OK = re.compile(
 _LICENSE_BAD = re.compile(r"(\bnc\b|-nc|\bnd\b|-nd|fair use|non-?free|all rights reserved|copyrighted)", re.IGNORECASE)
 
 
+_PERSON_PHOTO = re.compile(r"(portrait|headshot|selfie|초상|인물 사진|프로필 사진|mr\.|ms\.|president|대통령|배우|가수)", re.IGNORECASE)
+
+
 def _strip_html(s: str) -> str:
     s = re.sub(r"<[^>]+>", "", s or "")
     return re.sub(r"\s+", " ", html.unescape(s)).strip()
@@ -37,6 +40,10 @@ def _strip_html(s: str) -> str:
 def license_ok(short_name: str) -> bool:
     s = (short_name or "").strip()
     if not s or _LICENSE_BAD.search(s):
+        return False
+    # 2026-11-18: CC BY-SA(동일조건변경허락)는 확대·블러 같은 변경물에 같은 조건을 요구해서 영상 전체에 번지는지
+    # 해석이 갈린다 → 쓰지 않는다. 퍼블릭 도메인/CC0/CC BY/공공누리 1유형만.
+    if re.search(r"(^|[\s-])sa([\s\d.]|$)|share\s*-?alike", s, re.IGNORECASE):
         return False
     return bool(_LICENSE_OK.search(s))
 
@@ -124,6 +131,8 @@ def _to_asset(entry: Dict) -> Optional[Dict]:
         return None
     artist = _strip_html((meta.get("Artist", {}) or {}).get("value", "")) or _strip_html((meta.get("Credit", {}) or {}).get("value", ""))
     desc = _strip_html((meta.get("ImageDescription", {}) or {}).get("value", "")) or _strip_html((meta.get("ObjectName", {}) or {}).get("value", ""))
+    if _PERSON_PHOTO.search(f + " " + desc):
+        return None
     return {
         "file": f,
         "url": info.get("thumburl") or info.get("url"),

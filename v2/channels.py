@@ -24,7 +24,7 @@ DEFAULT_V2_CONFIG = {
     "publish_minute_kst": 0,
     "contains_synthetic_media": False,
     "min_article_chars": 1500,
-    "min_free_photos": 3,
+    "min_free_photos": 1,
     "exploration_c": 0.35,
     "metrics_ages_hours": [1, 6, 24, 72, 168, 672],
 }
