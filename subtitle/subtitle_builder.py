@@ -12,6 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Optional, Tuple
 
+from subtitle.phrasing import phrase_groups, two_line_break
 from tts.tts_builder import SceneAudio
 from video.scene_timer import SceneTimer, SegmentTiming, TimelineData
 from utils.logger import get_logger
@@ -131,9 +132,10 @@ class SubtitleBuilder:
             self._shadow_d = config.get("dynamic_shadow_depth", 3)
             # 하단 유튜브 UI(제목·채널명)보다 확실히 위, 화면 3/4 지점쯤.
             if is_portrait:
-                self._margin_v = config.get("dynamic_margin_v_shorts", 500)
+                self._margin_v = config.get("dynamic_margin_v_shorts", 380)
             self._margin_h = config.get("dynamic_margin_h", 60)
-        self._chunk_max_chars = int(config.get("chunk_max_chars", 11))
+        self._chunk_max_chars = int(config.get("chunk_max_chars", 18))
+        self._chunk_target = int(config.get("chunk_target_chars", 12))
         self._chunk_max_words = int(config.get("chunk_max_words", 3))
         self._highlight_color = config.get("highlight_color", "&H00E5FF&")  # BGR → 노랑(#FFE500)
         self._base_color_inline = "&H" + self._font_color.replace("&H", "")[-6:] + "&"
@@ -304,37 +306,7 @@ class SubtitleBuilder:
                 continue
             small = self._DISCLAIMER_KEYWORD in seg.text
             times = self._token_times(seg, tokens)
-            groups: List[List[int]] = []
-            cur: List[int] = []
-            for i, tok in enumerate(tokens):
-                cand = cur + [i]
-                length = sum(len(tokens[j]) for j in cand) + len(cand) - 1
-                if cur and (length > self._chunk_max_chars or len(cand) > self._chunk_max_words):
-                    groups.append(cur)
-                    cur = [i]
-                else:
-                    cur = cand
-                if _BREAK_AFTER_RE.search(tok):
-                    groups.append(cur)
-                    cur = []
-            if cur:
-                groups.append(cur)
-
-            # "그", "이" 같은 한두 글자 어절이 혼자 0.2초 번쩍이고 사라지면 거슬린다 —
-            # 다음 덩어리와 합쳐도 너무 길지 않으면 붙인다.
-            merged: List[List[int]] = []
-            k = 0
-            while k < len(groups):
-                g = groups[k]
-                chars = sum(len(tokens[j]) for j in g)
-                if chars <= 2 and k + 1 < len(groups):
-                    nxt = g + groups[k + 1]
-                    if sum(len(tokens[j]) for j in nxt) + len(nxt) - 1 <= self._chunk_max_chars + 3:
-                        merged.append(nxt)
-                        k += 2
-                        continue
-                merged.append(g)
-                k += 1
+            merged = phrase_groups(tokens, self._chunk_target, self._chunk_max_chars)
 
             for g in merged:
                 st = seg.abs_start + times[g[0]][0]
@@ -374,7 +346,11 @@ class SubtitleBuilder:
             if _HIGHLIGHT_RE.search(shown) or _DIGIT_RE.search(shown):
                 shown = f"{{\\c{self._highlight_color}}}{shown}{{\\c{self._base_color_inline}}}"
             parts.append(shown)
-        text = " ".join(parts)
+        if len(parts) >= 2 and sum(len(re.sub(r"\{[^}]*\}", "", x)) for x in parts) + len(parts) - 1 > 10:
+            k = two_line_break([re.sub(r"\{[^}]*\}", "", x) for x in parts])
+            text = (" ".join(parts[:k]) + "\\N" + " ".join(parts[k:])) if k else " ".join(parts)
+        else:
+            text = " ".join(parts)
         # 살짝 작게 시작해서 톡 튀어나오는 팝인 + 아주 짧은 페이드 — 너무 통통 튀면 유치해서 폭은 작게.
         anim = "{\\fad(60,0)\\fscx86\\fscy86\\t(0,110,\\fscx104\\fscy104)\\t(110,180,\\fscx100\\fscy100)}"
         if small:

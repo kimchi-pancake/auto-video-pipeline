@@ -32,11 +32,9 @@ BGM_BY_MOOD = {"calm": 0, "tense": 1, "bright": 2}
 
 
 def _segments(narration: str) -> List[str]:
-    parts = [p.strip() for p in re.split(r"(?<=[.?!])\s+", narration.strip()) if p.strip()]
-    out: List[str] = []
-    for p in parts:
-        out.extend(StoryParser._wrap_long_segment(p))
-    return out
+    # 문장 하나 = TTS 한 번. 문장을 중간에서 토막 내서 읽히면 억양이 끊기고 어구가 잘려 들린다.
+    # (자막은 TTS 어절 타이밍을 받아 subtitle/phrasing.py 가 의미 단위로 따로 끊는다.)
+    return [p.strip() for p in re.split(r"(?<=[.?!])\s+", narration.strip()) if p.strip()]
 
 
 def build_story(job: Dict) -> StoryData:
