@@ -68,6 +68,10 @@ class VideoComposer:
         # 2026-11-08 "편집족 스타일": 모든 씬이 똑같이 천천히 줌인 + 0.8초 페이드로 이어지던
         # 걸, 씬마다 다른 카메라 무빙(줌인/줌아웃/좌우·상하 팬)과 짧고 다양한 전환(0.3초)으로
         # 바꿨다. dynamic_edit=false면 예전 방식 그대로.
+        self._duck = bool(config.get("duck_bgm", False))
+        self._loudnorm = bool(config.get("loudnorm", False))
+        self._sfx = bool(config.get("sfx", False))
+        self._sfx_volume = float(config.get("sfx_volume", 0.35))
         self._dynamic = bool(config.get("dynamic_edit", True))
         if self._dynamic:
             self._crossfade = float(config.get("dynamic_crossfade", 0.3))
@@ -170,6 +174,16 @@ class VideoComposer:
         # 마지막 문장이 끝나자마자 뚝 끊기는 것처럼 보이게 됩니다.
         if bgm_path and total_dur > 0:
             mixed_audio = str(self._temp / "mixed_audio.mp3")
+            sfx_path = None
+            if self._sfx:
+                try:
+                    from video.sfx import build_sfx_track
+                    sfx_path = build_sfx_track(
+                        self._ff, [s.abs_start for s in timeline.scenes[1:]], total_dur, self._temp,
+                        volume=self._sfx_volume,
+                    )
+                except Exception as e:  # noqa: BLE001 — 효과음 실패가 영상을 막으면 안 됨
+                    logger.warning("효과음 생성 실패(무시): %s", e)
             self._ff.mix_audio(
                 voice_path=full_voice,
                 bgm_path=bgm_path,
@@ -177,6 +191,9 @@ class VideoComposer:
                 voice_vol=self._tts_vol,
                 bgm_vol=self._bgm_vol,
                 duration=total_dur,
+                duck=self._duck,
+                loudnorm=self._loudnorm,
+                sfx_path=sfx_path,
             )
             self._ff.add_audio_to_video(silent_video, mixed_audio, video_with_audio, shortest=False)
         else:
@@ -278,6 +295,7 @@ class VideoComposer:
                 width=self._w,
                 height=self._h,
                 fps=self._fps,
+                freeze_last=(img_result.source == "anim"),
             )
         else:
             self._ff.image_to_video(

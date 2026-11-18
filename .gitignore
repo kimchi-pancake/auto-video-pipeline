@@ -69,3 +69,4 @@ desktop.ini
 # 빌드 산출물
 *.spec
 /dist_win/
+backups/

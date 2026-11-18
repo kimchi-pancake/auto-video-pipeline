@@ -1,0 +1,6 @@
+{
+  "publish_mode": "review",
+  "posts_per_day": {"도개": 1, "웃짬": 1},
+  "publish_hour_kst": 20,
+  "publish_minute_kst": 0
+}

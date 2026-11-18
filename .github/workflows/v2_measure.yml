@@ -1,0 +1,54 @@
+name: V2 Measure
+
+# 성과 스냅샷(1h/6h/24h/72h/7d/28d) 수집 + 분석. 6시간마다. GitHub cron은 지연될 수 있으나 측정은 시각이 정확하지 않아도 된다
+# (스냅샷은 '경과 시간이 도래했는지'로 판단하고, 늦으면 다음 실행에서 보완한다).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: v2-measure
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: pip install -r requirements-headless.txt
+      - name: Write secrets to config files
+        env:
+          CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
+          CLIENT_SECRETS_JSON: ${{ secrets.CLIENT_SECRETS_JSON }}
+          YT_CHANNEL_UJJJAM_CREDENTIALS: ${{ secrets.YT_CHANNEL_UJJJAM_CREDENTIALS }}
+          YT_CHANNEL_DOGAE_CREDENTIALS: ${{ secrets.YT_CHANNEL_DOGAE_CREDENTIALS }}
+        run: |
+          mkdir -p config/channels
+          printf '%s' "$CONFIG_JSON" > config/config.json
+          printf '%s' "$CLIENT_SECRETS_JSON" > config/client_secrets.json
+          printf '%s' "$YT_CHANNEL_UJJJAM_CREDENTIALS" > "config/channels/웃짬_credentials.json"
+          printf '%s' "$YT_CHANNEL_DOGAE_CREDENTIALS" > "config/channels/도개_credentials.json"
+          for f in config/config.json config/client_secrets.json "config/channels/웃짬_credentials.json" "config/channels/도개_credentials.json"; do
+            sed -i '1s/^ï»¿//' "$f"
+          done
+      - name: Collect metrics and refresh insights
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python -m v2.run measure
+      - name: Commit job state and metrics (never deletes)
+        if: always()
+        run: |
+          git config user.name "auto-video-pipeline-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A -- data
+          git diff --staged --quiet || git commit -m "v2 state: measure [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && break
+            sleep $((attempt * 3))
+          done

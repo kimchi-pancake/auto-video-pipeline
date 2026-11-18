@@ -70,7 +70,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           # Worker가 못 그린 씬을 러너가 NVIDIA로 직접 채운다(image/nvidia_direct.py)
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
-        run: python scripts/daily_generate.py
+        run: python -m v2.run assemble
 
       # 렌더링은 성공했는데 유튜브 업로드만 실패하는 경우(자격증명 만료 등)가
       # 있었는데, 이 러너는 job이 끝나면 파일시스템이 통째로 사라져서 archive/
@@ -93,6 +93,7 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           # daily_generate.py가 queue/pending_scripts/에서 input_dir로 옮겨간
           # 대본(더 이상 큐에 없음)을 삭제로 반영합니다.
+          git add -A -- data
           git add -A -- queue/pending_scripts
           [ -f config/video_registry.json ] && git add config/video_registry.json
           # Worker가 백그라운드로 커밋해둔 AI 이미지는 합성이 끝나면 더 필요

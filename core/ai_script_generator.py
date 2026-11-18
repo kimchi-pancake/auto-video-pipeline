@@ -112,9 +112,13 @@ NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 # 씬 28개·외국어 0줄·형식 정상으로 가장 나았다(235초). nemotron-3.5-super-vl은 빠르지만
 # (17초) 씬 21개·대사 1860자로 짧고 외국어 1줄. nemotron-3-super/ultra는 추론을 끄면
 # 본문이 나오지만 외국어가 잦았다. 그래서 gpt-oss를 1순위, super-vl(추론 끔)을 백업으로 둔다.
+# 2026-11-18: openai/gpt-oss-20b가 서비스 종료(410 Gone)돼서 목록에서 뺐다. 같은 날 이 키로 실측:
+# nemotron-3-ultra(9초)·nemotron-3.5-super-vl(1초)·gemma-4-31b-it(17초) 정상 응답, kimi-k3.1-pro/
+# mistral-large-4/minimax는 본문이 비어 있었고 glm-5.3-flash는 타임아웃이라 제외.
 NVIDIA_MODELS = [
-    "openai/gpt-oss-20b",
+    "nvidia/nemotron-3-ultra-550b-a55b",
     "nvidia/nemotron-3.5-super-vl-120b-a12b",
+    "google/gemma-4-31b-it",
 ]
 
 # 429(요청 한도)는 대개 몇십 초 뒤면 풀리는 일시적 상태라, 모델을 바로 갈아타기
@@ -464,10 +468,12 @@ def _call_openrouter(prompt: str, max_tokens: int = 16000) -> str:
                 # 둘 다 "이 모델을 못 쓴다"는 뜻이므로 동일하게 다음 모델로 넘어감.
                 # 5xx(예: 504 게이트웨이 타임아웃 — 2026-11-01 gpt-oss-20b가 긴 출력에서
                 # 10분 뒤 504로 끊겨 다음 모델로 안 넘어가고 전체가 실패함)도 같은 취급.
-                if (e.status_code in (402, 404) or e.status_code >= 500) and next_model:
+                # 410=Gone: 2026-11-18 openai/gpt-oss-20b가 서비스 종료되면서 이 코드로 응답했는데
+                # 위 목록에 없어서 다음 모델로 안 넘어가고 전체가 죽을 뻔했다. 404와 같은 취급.
+                if (e.status_code in (402, 404, 410) or e.status_code >= 500) and next_model:
                     reason = (
                         "크레딧이 부족합니다" if e.status_code == 402
-                        else "이 모델을 더 이상 쓸 수 없습니다" if e.status_code == 404
+                        else "이 모델을 더 이상 쓸 수 없습니다" if e.status_code in (404, 410)
                         else "서버 오류가 났습니다"
                     )
                     _start_cooldown(model)

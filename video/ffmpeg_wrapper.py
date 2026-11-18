@@ -129,16 +129,40 @@ class FFmpegWrapper:
         voice_vol: float = 1.0,
         bgm_vol: float = 0.15,
         duration: Optional[float] = None,
+        duck: bool = False,
+        loudnorm: bool = False,
+        sfx_path: Optional[str] = None,
     ) -> None:
-        """TTS 보이스와 BGM을 믹싱합니다."""
-        filter_chain = (
-            f"[0:a]volume={voice_vol}[v];"
-            f"[1:a]volume={bgm_vol},aloop=loop=-1:size=2e+09[b];"
-            f"[v][b]amix=inputs=2:duration=first[out]"
-        )
+        """TTS 보이스와 BGM을 믹싱합니다.
+        duck=True: 목소리가 나올 때만 BGM을 자동으로 낮춘다(sidechaincompress) — 음성과 음악 사이 음량 자동 조정.
+        loudnorm=True: 최종 믹스를 -15 LUFS 부근으로 맞춰 영상마다 소리 크기가 들쭉날쭉하지 않게 한다.
+        sfx_path: 전환 효과음 트랙(무음 + 효과음이 시간에 맞게 배치된 파일)."""
+        if not (duck or loudnorm or sfx_path):
+            filter_chain = (
+                f"[0:a]volume={voice_vol}[v];"
+                f"[1:a]volume={bgm_vol},aloop=loop=-1:size=2e+09[b];"
+                f"[v][b]amix=inputs=2:duration=first[out]"
+            )
+            inputs = ["-i", voice_path, "-i", bgm_path]
+        else:
+            parts = [f"[0:a]volume={voice_vol},asplit=2[v][vsc]",
+                     f"[1:a]volume={bgm_vol},aloop=loop=-1:size=2e+09[b0]"]
+            if duck:
+                parts.append("[b0][vsc]sidechaincompress=threshold=0.04:ratio=9:attack=15:release=350[b]")
+            else:
+                parts.append("[b0]anull[b]")
+                parts.append("[vsc]anullsink")
+            inputs = ["-i", voice_path, "-i", bgm_path]
+            mix_in, n_in = "[v][b]", 2
+            if sfx_path:
+                inputs += ["-i", sfx_path]
+                parts.append("[2:a]volume=1.0[s]")
+                mix_in, n_in = "[v][b][s]", 3
+            parts.append(f"{mix_in}amix=inputs={n_in}:duration=first:dropout_transition=0:normalize=0[mix]")
+            parts.append("[mix]loudnorm=I=-15:TP=-1.5:LRA=9[out]" if loudnorm else "[mix]anull[out]")
+            filter_chain = ";".join(parts)
         args = [
-            "-i", voice_path,
-            "-i", bgm_path,
+            *inputs,
             "-filter_complex", filter_chain,
             "-map", "[out]",
             "-ac", "2", "-ar", "44100",
@@ -269,21 +293,26 @@ class FFmpegWrapper:
         width: int,
         height: int,
         fps: int = 30,
+        freeze_last: bool = False,
     ) -> None:
         """Pixabay 등에서 받은 비디오 클립을 씬 길이(duration)에 맞춰 정규화합니다.
+        freeze_last=True(v2 그래프/카드 애니메이션): 소스가 짧으면 반복하지 않고 마지막 프레임을 유지합니다.
+        (예전 설명) Pixabay 등에서 받은 비디오 클립을 씬 길이(duration)에 맞춰 정규화합니다.
         image_to_video()와 같은 자리에 쓰이는 함수라 화면비 처리(꽉 채우게 확대 후
         중앙 크롭)와 출력 인코딩 설정(ultrafast/crf23, 폐기될 중간 산출물)도 동일하게
         맞췄습니다. 소스가 목표 길이보다 짧으면 반복 재생(loop)해서 채웁니다."""
         src_duration = self.get_duration(video_path)
         # -stream_loop는 입력 옵션이라 -i 앞에 와야 합니다. 소스 길이를 몰라서
         # (probe 실패 등) 0으로 나오면 안전하게 루프를 걸어 최소한 잘리지 않게 합니다.
-        needs_loop = src_duration <= 0 or src_duration < duration
+        needs_loop = (src_duration <= 0 or src_duration < duration) and not freeze_last
         input_args = ["-stream_loop", "-1"] if needs_loop else []
 
         vf = (
             f"scale={width}:{height}:force_original_aspect_ratio=increase,"
             f"crop={width}:{height},fps={fps}"
         )
+        if freeze_last:
+            vf += f",tpad=stop_mode=clone:stop_duration={max(duration, 1):.2f}"
 
         self.run([
             *input_args,
