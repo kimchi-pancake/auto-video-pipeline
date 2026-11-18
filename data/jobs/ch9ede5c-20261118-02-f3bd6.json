@@ -1,0 +1,636 @@
+{
+  "id": "ch9ede5c-20261118-02-f3bd6",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-18T09:08:44Z",
+  "topic": {
+    "title": "1997년 아시아 금융 위기",
+    "wiki_title": "1997년 아시아 금융 위기",
+    "category": "금융위기",
+    "source": "seed",
+    "angle": "",
+    "score": 0.6983,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "explore": 0.291
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7623,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.29"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-18T09:08:44Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-18T09:08:44Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-18T09:09:00Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-18T09:09:27Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "result_first",
+      "first_line": "한국이 1,400만 달러만 갚고 IMF 졸업한 이유",
+      "screen_text": "1억 4천만 달러",
+      "title": "구제금융 580억 달러 중 1.4억 달러 상환으로 끝난 3년 8개월의 기록",
+      "promise": "한국이 조기 상환할 수 있었던 수출 주도 회복의 구조를 알 수 있습니다",
+      "evidence_quote": "이후 대한민국은 IMF에서 구제금융을 받은지 3년 8개월이 지난 2001년 8월 23일, 1억 4천만 달러를 상환함으로써 IMF 체제에서 벗어나게 되었다.",
+      "eval": {
+        "score": 0.94,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 0.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "result_first",
+        "first_line": "한국이 1,400만 달러만 갚고 IMF 졸업한 이유",
+        "screen_text": "1억 4천만 달러",
+        "title": "구제금융 580억 달러 중 1.4억 달러 상환으로 끝난 3년 8개월의 기록",
+        "promise": "한국이 조기 상환할 수 있었던 수출 주도 회복의 구조를 알 수 있습니다",
+        "evidence_quote": "이후 대한민국은 IMF에서 구제금융을 받은지 3년 8개월이 지난 2001년 8월 23일, 1억 4천만 달러를 상환함으로써 IMF 체제에서 벗어나게 되었다.",
+        "eval": {
+          "score": 0.94,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "외채비율 13%에서 40%로, 3년 만에 3배 폭증",
+        "screen_text": "한국 외채비율 3배",
+        "title": "한국 외채비율 13%→40% 폭증, 태국·인니는 180% 넘겼다",
+        "promise": "단기 외채 의존도가 위기 때 얼마나 치명적인 부메랑이 되는지 수치로 확인합니다",
+        "evidence_quote": "In South Korea, the ratios rose from 13% to 21% and then as high as 40%... Foreign debt-to-GDP ratios rose from 100% to 167% in the four large ASEAN economies in 1993–1996, then shot up beyond 180% during the worst of the crisis.",
+        "eval": {
+          "score": 0.94,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "같은 위기, 태국은 빈곤율이 절반으로 줄었습니다",
+        "screen_text": "태국의 역설적 지표",
+        "title": "위기 후 태국 빈곤율 21%→11% 감소, 지니계수도 개선된 이유",
+        "promise": "고통스러운 구조조정이 장기적으로 분배 지표를 어떻게 바꿨는지 알 수 있습니다",
+        "evidence_quote": "1997년 아시아 금융 위기 이후 태국에서 가장 가난한 북동부 지방의 수입은 1998년부터 2006년까지 46% 증가했다. 전국적인 빈곤율은 21.3%에서 11.3%로 감소했다.",
+        "eval": {
+          "score": 0.9337,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "IMF 말을 안 들은 나라가 더 빨리 회복했습니다",
+        "screen_text": "말레이시아의 반전",
+        "title": "IMF 거부하고 자본통제한 말레이시아, 한국과 같은 신용등급 회복",
+        "promise": "정책 주권 선택이 가져온 서로 다른 결과의 구조적 이유를 알 수 있습니다",
+        "evidence_quote": "말레이시아 총리 마하티르 빈 모하맛은 외환위기를 투기자본에 의한 일시적 시장교란으로 보고 IMF의 권고사항을 과감하게 거부했다... 1999년 9월 IMF가 '말레이시아의 위기극복 프로그램은 매우 효율적인 정책이었다'는 보고서를 발표했다.",
+        "eval": {
+          "score": 0.9335,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "태국 밧화 붕괴가 시작이 아니었습니다",
+        "screen_text": "위기의 진짜 시작",
+        "title": "한보철강 부도가 터뜨린 한국 IMF의 방아쇠",
+        "promise": "태국보다 앞선 한국 기업 연쇄부도가 위기를 어떻게 키웠는지 알 수 있습니다",
+        "evidence_quote": "1997년 한보철강이 5조 원의 경비가 드는 제철소를 4조 원의 빚으로 건설하려다 부도를 일으켰다. 이를 필두로 기아그룹, 한신공영 등 대기업들이 연쇄부도를 일으켰다.",
+        "eval": {
+          "score": 0.9328,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "달러 빚 내서 버티던 기업들은 누가 살렸나",
+        "screen_text": "달러부채의 덫",
+        "title": "달러 빌린 기업들 폭망, 헷지 못한 리스크의 대가는 누구 몫인가",
+        "promise": "고정환율제 아래 달러 차입이 어떻게 기업·국가 부도로 전이됐는지 알 수 있습니다",
+        "evidence_quote": "인도네시아의 수 많은 회사들이 미국 달러를 빌리고 있었다... 루피아의 가치는 크게 떨어졌다. 회사들의 부채와 루피아의 대량 매도, 달러에 대한 수요 폭증으로 급락을 지속했다.",
+        "eval": {
+          "score": 0.33,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 1.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "한국 국제통화기금 조기 졸업의 구조",
+    "target_seconds": 20,
+    "category": "금융위기",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "한국이 1억 4천만 달러만 갚고 국제통화기금를 졸업한 이유",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "한국은 2001년 8월 23일 1억 4천만 달러를 상환하며 IMF 체제에서 벗어났다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "2001년 8월 23일, 1억 4천만 달러를 상환함으로써 IMF 체제에서 벗어나게 되었으나"
+          }
+        ]
+      },
+      {
+        "narration": "위기 직전 단기 외채 비중이 높아 유동성 위기가 촉발되었습니다",
+        "visual": {
+          "type": "stat",
+          "big": "167%",
+          "small": "아세안 4개국 외채비율 1996년"
+        },
+        "claims": [
+          {
+            "text": "아세안 4개국 외채/GDP 비율이 1996년 167%까지 상승했다",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "Foreign debt-to-GDP ratios rose from 100% to 167% in the four large Association of Southeast Asian Nations (ASEAN) economies in 1993–1996"
+          },
+          {
+            "text": "단기 외채 의존도가 높아 자본 유출 시 유동성 위기로 직결된다는 분석이 있습니다",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "The short-term capital flow was expensive and often highly conditioned for quick profit",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "수출 경쟁력 회복으로 외화를 확보해 3년 8개월 만에 조기 상환했습니다",
+        "visual": {
+          "type": "chart",
+          "indicator": "exports_share",
+          "countries": [
+            "KOR"
+          ],
+          "from": 1997,
+          "to": 2001
+        },
+        "claims": [
+          {
+            "text": "한국은 구제금융 3년 8개월 만인 2001년 8월 조기 상환했다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "IMF에서 구제금융을 받은지 3년 8개월이 지난 2001년 8월 23일"
+          },
+          {
+            "text": "수출 주도 회복이 외화 확보와 조기 상환의 기반이 되었다는 분석이 있습니다",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "By 1999, however, analysts saw signs that the economies of Asia were beginning to recover",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "단기 차입 의존 구조를 바꾸지 않으면 위기는 반복될 수 있습니다",
+        "visual": {
+          "type": "steps",
+          "title": "위기 재발 조건",
+          "items": [
+            "단기 외채 과다",
+            "자본 급유출",
+            "환율 폭등",
+            "국가 부도"
+          ]
+        },
+        "claims": [
+          {
+            "text": "고정환율제와 단기 차입 구조가 위기 원인으로 지목됩니다",
+            "kind": "interpretation",
+            "source": "S2",
+            "quote": "maintenance of fixed exchange rates encouraged external borrowing and led to excessive exposure to foreign exchange risk"
+          },
+          {
+            "text": "단기 외채 비중이 높고 자본 유출입이 자유로우면 위기가 재발할 수 있습니다",
+            "kind": "forecast",
+            "source": "S2",
+            "quote": "short-term capital flow was expensive and often highly conditioned for quick profit"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "한국은 2001년 8월 23일 1억 4천만 달러를 상환하며 IMF 체제에서 벗어났다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1997년 아시아 금융 위기",
+        "source_url": "https://ko.wikipedia.org/wiki/1997%EB%85%84_%EC%95%84%EC%8B%9C%EC%95%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "2001년 8월 23일, 1억 4천만 달러를 상환함으로써 IMF 체제에서 벗어나게 되었으나",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "아세안 4개국 외채/GDP 비율이 1996년 167%까지 상승했다",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+        "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "published": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "quote": "Foreign debt-to-GDP ratios rose from 100% to 167% in the four large Association of Southeast Asian Nations (ASEAN) economies in 1993–1996",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 1,
+        "text": "단기 외채 의존도가 높아 자본 유출 시 유동성 위기로 직결된다는 분석이 있습니다",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+        "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "published": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "quote": "The short-term capital flow was expensive and often highly conditioned for quick profit",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "한국은 구제금융 3년 8개월 만인 2001년 8월 조기 상환했다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1997년 아시아 금융 위기",
+        "source_url": "https://ko.wikipedia.org/wiki/1997%EB%85%84_%EC%95%84%EC%8B%9C%EC%95%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-18",
+        "quote": "IMF에서 구제금융을 받은지 3년 8개월이 지난 2001년 8월 23일",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 2,
+        "text": "수출 주도 회복이 외화 확보와 조기 상환의 기반이 되었다는 분석이 있습니다",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+        "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "published": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "quote": "By 1999, however, analysts saw signs that the economies of Asia were beginning to recover",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 3,
+        "text": "고정환율제와 단기 차입 구조가 위기 원인으로 지목됩니다",
+        "kind": "interpretation",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+        "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "published": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "quote": "maintenance of fixed exchange rates encouraged external borrowing and led to excessive exposure to foreign exchange risk",
+        "verified": true,
+        "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
+      },
+      {
+        "id": "C7",
+        "scene": 3,
+        "text": "단기 외채 비중이 높고 자본 유출입이 자유로우면 위기가 재발할 수 있습니다",
+        "kind": "forecast",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+        "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "published": "2026-11-17",
+        "checked_at": "2026-11-18",
+        "quote": "short-term capital flow was expensive and often highly conditioned for quick profit",
+        "verified": true,
+        "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
+      }
+    ],
+    "eval": {
+      "chars": 140,
+      "est_seconds": 21.9,
+      "scenes": 4,
+      "avg_new_tokens_per_scene": 9.5,
+      "max_scene_similarity": 0.09,
+      "visual_mix": {
+        "stat": 1,
+        "steps": 1,
+        "chart": 1,
+        "photo": 1
+      },
+      "target_seconds_declared": 20
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "한국은 2001년 8월 23일 1억 4천만 달러를 상환하며 IMF 체제에서 벗어났다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1997년 아시아 금융 위기",
+      "source_url": "https://ko.wikipedia.org/wiki/1997%EB%85%84_%EC%95%84%EC%8B%9C%EC%95%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "2001년 8월 23일, 1억 4천만 달러를 상환함으로써 IMF 체제에서 벗어나게 되었으나",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "아세안 4개국 외채/GDP 비율이 1996년 167%까지 상승했다",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+      "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+      "published": "2026-11-17",
+      "checked_at": "2026-11-18",
+      "quote": "Foreign debt-to-GDP ratios rose from 100% to 167% in the four large Association of Southeast Asian Nations (ASEAN) economies in 1993–1996",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 1,
+      "text": "단기 외채 의존도가 높아 자본 유출 시 유동성 위기로 직결된다는 분석이 있습니다",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+      "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+      "published": "2026-11-17",
+      "checked_at": "2026-11-18",
+      "quote": "The short-term capital flow was expensive and often highly conditioned for quick profit",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "한국은 구제금융 3년 8개월 만인 2001년 8월 조기 상환했다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1997년 아시아 금융 위기",
+      "source_url": "https://ko.wikipedia.org/wiki/1997%EB%85%84_%EC%95%84%EC%8B%9C%EC%95%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-18",
+      "quote": "IMF에서 구제금융을 받은지 3년 8개월이 지난 2001년 8월 23일",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 2,
+      "text": "수출 주도 회복이 외화 확보와 조기 상환의 기반이 되었다는 분석이 있습니다",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+      "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+      "published": "2026-11-17",
+      "checked_at": "2026-11-18",
+      "quote": "By 1999, however, analysts saw signs that the economies of Asia were beginning to recover",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 3,
+      "text": "고정환율제와 단기 차입 구조가 위기 원인으로 지목됩니다",
+      "kind": "interpretation",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+      "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+      "published": "2026-11-17",
+      "checked_at": "2026-11-18",
+      "quote": "maintenance of fixed exchange rates encouraged external borrowing and led to excessive exposure to foreign exchange risk",
+      "verified": true,
+      "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
+    },
+    {
+      "id": "C7",
+      "scene": 3,
+      "text": "단기 외채 비중이 높고 자본 유출입이 자유로우면 위기가 재발할 수 있습니다",
+      "kind": "forecast",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — 1997 Asian financial crisis",
+      "source_url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+      "published": "2026-11-17",
+      "checked_at": "2026-11-18",
+      "quote": "short-term capital flow was expensive and often highly conditioned for quick profit",
+      "verified": true,
+      "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-18T09:09:27Z",
+  "pack": {
+    "topic": {
+      "title": "1997년 아시아 금융 위기",
+      "wiki_title": "1997년 아시아 금융 위기",
+      "category": "금융위기",
+      "source": "seed",
+      "angle": "",
+      "score": 0.6983,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7623,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "explore": 0.291
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.29"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 1997년 아시아 금융 위기",
+        "url": "https://ko.wikipedia.org/wiki/1997%EB%85%84_%EC%95%84%EC%8B%9C%EC%95%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-18",
+        "text": "아시아 금융 위기(한국 한자: - 金融危機, 영어: 1997 Asian financial crisis)는 동남아시아와 동아시아 지역에서 1997년 7월부터 시작되어 세계 경제에 불안을 야기한 일련의 금융 위기 사태를 뜻한다. 아시아 금융 위기는 세계 금융 위기로 전개되지 않고 1998년과 1999년을 지나며 진화되었다. 1997년 7월 2일 미 달러화에 대한 태국의 밧 태환 포기가 국제적인 금융 위기를 촉발했다. 대한민국, 인도네시아와 태국이 가장 큰 영향을 받았으며, 홍콩, 라오스, 말레이시아와 필리핀 또한 경기 침체를 겪었다.\n말레이시아 총리 마하티르 빈 모하맛가 1997년 동남아시아 각국의 통화가치 하락으로 이 지역에서 약 2,000억 달러의 손실이 발생했다고 밝혔다.\n\n영향을 받은 국가들\n\n말레이시아\n말레이시아 총리 마하티르 빈 모하맛은 외환위기를 투기자본에 의한 일시적 시장교란으로 보고 IMF의 권고사항을 과감하게 거부했다. 대신 자국에 들어와 있는 외환유출을 통제하고 외국에 나가 있는 자국통화를 회수하면서 고정환율제를 채택하는 등 경제전문가들이 모두 비웃는 대책을 세웠다. 마하티르 총리가 독자노선을 결정하자 국제금융시장은 \"말레이시아는 끝났다\"고 평가했다. 그러나 1년의 세월이 흐른 1999년 9월 IMF가 \"말레이시아의 위기극복 프로그램은 매우 효율적인 정책이었다\"는 보고서를 발표, 평가는 일단락됐다. 무디스나 S&P같은 신용평가기관들은 말레이시아의 국가신용등급을 \"IMF 정책을 잘 따르는\" 한국과 같은 수준으로 가져 갔다.\n\n대한민국\n\n1997년 한보철강이 5조 원의 경비가 드는 제철소를 4조 원의 빚으로 건설하려다 부도를 일으켰다. 이를 필두로 기아그룹, 한신공영 등 대기업들이 연쇄부도를 일으켰다. 급기야 같은 해 12월에는 환율이 1달러 당 2천원으로 폭등하여 대한민국의 국가 파산을 불러일으켰다. 이를 계기로 정치권에 뇌물을 바치고 정치권이 은행대출을 주선하는 이른바 정경유착·관치금융에 대한 문제점이 대두되었다.\n국가경제가 파산에 이르자 당시 대통령이었던 김영삼은 국제통화기금에 구제금융을 신청, 1997년 12월 3일부터 IMF체제가 시작되었다. 구조조정의 여파로 실업자와 문을 닫은 공장이 속출했고 다음해인 1998년에는 대량실업사태가 벌어졌다. 이후 대한민국은 IMF에서 구제금융을 받은지 3년 8개월이 지난 2001년 8월 23일, 1억 4천만 달러를 상환함으로써 IMF 체제에서 벗어나게 되었으나 경제 불황은 지속되었고 2002년부터 2006년까지는 카드대란을 겪는 등 사회적인 문제가 발생 하게 되었다.\n\n인도네시아\n\n1997년 6월, 인도네시아의 상황은 태국과 달리 낮은 인플레이션과 9억 달러가 넘는 경상수지 흑자, 200억 달러가 넘는 외환보유고와 은행분야의 선방을 보이며 위기와는 거리가 멀어보였다. 하지만 사실 인도네시아의 수 많은 회사들이 미국 달러를 빌리고 있었다. 1997년부터 인도네시아 루피아가 달러에 비해 강세를 띄면서 달러를 빌린 회사들에게 부채의 부담을 줄여주는 효과를 주었다.\n1997년 7월, 태국이 태국 밧의 고정환율을 폐지하자 인도네시아의 재정부는 루피아의 변동 제한폭을 8%에서 12%로 확대시켰다. 1997년 8월 루피아는 갑작스러운 공격을 받았다. 1997년 8월 14일 당국에 의해 루피아의 변동 제한폭이 사라지자 루피아의 가치는 크게 떨어졌다. IMF는 230 달러 규모의 긴급구제금융 방안을 가져왔으나 루피아는 회사들의 부채와 루피아의 대량 매도, 달러에 대한 수요 폭증으로 급락을 지속했다. 같은 해 9월, 루피아와 자카르타 증권거래소의 지수는 역사적인 최저점을 찍었다. 무디스는 결과적으로 인도네시아의 장기채권을 \"정크 본드\"로 평가절하했다.\n그 해 인도네시아는 GDP 전체의 13.5%를 상실했다.\n\n태국\n1985년부터 1996년까지 태국의 경제는 매년 평균적으로 9%씩 성장했는데 이는 당시 그 어떤 나라들보다도 높았으며, 인플레이션은 3.4에서 5.7%의 낮은 수준으로 안정적으로 유지되고 있었다. 바트화는 당시 25바트가 1달러로 고정되어 있었다.\n1997년 5월 14일과 15일, 태국 밧은 대규모 투기 공격을 받았다. 1997년 6월 30일, 당시 태국의 장관 차왈릿 용차이윳은 태국 밧을 평가절하하지 않겠다고 말했다. 하지만 태국은 태국 밧-달러의 고정환율제를 유지할 외환보유금이 부족했고, 태국 정부는 결과적으로 태국 밧의 가치 변동을 강제하고, 1997년 7월 2일에는 태국 밧의 가치가 외환시장에 의해 결정되도록 허용했다. 이는 결과적으로 연쇄적으로 여러 사건들의 핵심 연결고리가 되어 지역적 금융위기로 치닫는 원인이 되었다.\n금융, 부동산과 건설 분야에서 대량 해고가 진행되어 태국의 고성장은 중단되었고, 이는 수 많은 노동자들이 지방의 고향으로 돌아가고 60만명의 외국인 노동자들이 본국으로 돌아가게 되는 결과를 초래했다. 태국 밧은 급격하게 평가절하되고 50% 이상의 가치를 잃었다. 1998년 1월 태국 밧은 56밧이 1달러로 환율의 최고점을 찍었다. 태국 주식 시장은 75% 하락했다. 금융면에서는 당시까지 태국의 최대의 금융 회사였던 \"Finance One\"이 도산했다.\n1997년 8월 11일, IMF는 태국에 대한 170억 달러 규모의 금융지원 방안을 공개했는데, 이는 파산절차 관련법(재조직과 구조재편)의 통과와 은행 및 금융기관들에 대한 강력한 규제체제의 신설을 포함했다. 1997년 8월 20일, IMF는 태국에 대한 29억 달러 규모의 또다른 긴급구제 지원 패키지를 승인했다.\n경제 위기로 인하여 근로자의 채용과 임금, 복지가 모두 줄면서 결과적으로 빈곤율과 빈부격차가 증가했다.\n1997년 아시아 금융 위기 이후 태국에서 가장 가난한 북동부 지방의 수입은 1998년부터 2006년까지 46% 증가했다. 전국적인 빈곤율은 21.3%에서 11.3%로 감소했다. 금융위기로 1996년부터 2000년까지 계속 상승했던 태국의 지니계수는 2000년 .525에서 2004년 .499로 낮아졌다.\n\n같이 보기\n1997년 외환 위기\n금모으기 운동\n국제 통화 기구\n1998년 러시아 금융 위기\n\n참고\n북상하는 아시아 금융위기 세계경제 위협LG경제연구원 심재웅, 1997.11.26 (회원가입 필요)\n\n각주",
+        "lang": "ko",
+        "wiki_title": "1997년 아시아 금융 위기",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — 1997 Asian financial crisis",
+        "url": "https://en.wikipedia.org/wiki/1997_Asian_financial_crisis",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-18",
+        "text": "A financial crisis gripped much of East and Southeast Asia during the late 1990s. It began in Thailand in July 1997 before spreading to several other countries with a ripple effect, raising fears of a worldwide economic meltdown due to financial contagion. However, the recovery in 1998–1999 was rapid, and worries of a meltdown quickly subsided.\nOriginating in Thailand on 2 July, where it was known as the Tom Yum Kung crisis (Thai: วิกฤตต้มยำกุ้ง), it followed the financial collapse of the Thai baht after the Thai government was forced to float the baht due to lack of foreign currency to support its currency peg to the U.S. dollar. Capital flight ensued almost immediately, beginning an international chain reaction. At the time, Thailand had acquired a burden of foreign debt. As the crisis spread, other Southeast Asian countries and later Japan and South Korea saw slumping currencies, devalued stock markets and other asset prices, and a precipitous rise in private debt. Foreign debt-to-GDP ratios rose from 100% to 167% in the four large Association of Southeast Asian Nations (ASEAN) economies in 1993–1996, then shot up beyond 180% during the worst of the crisis. In South Korea, the ratios rose from 13% to 21% and then as high as 40%, while the other northern newly industrialized countries fared much better. Only in Thailand and South Korea did debt service-to-exports ratios rise.\nSouth Korea, Indonesia and Thailand were the countries most affected by the crisis. Hong Kong, Laos, Malaysia and the Philippines were also hurt by the slump. Brunei, mainland China, Japan, Singapore, Taiwan, and Vietnam were less affected, although all suffered from a general loss of confidence and subsidence of demand throughout the region. Although most of the governments of Asia had seemingly sound fiscal policies, the International Monetary Fund (IMF) stepped in to initiate a $40 billion program to stabilize the currencies of South Korea, Thailand, and Indonesia, economies particularly hard-hit by the crisis.\nHowever, the efforts to stem a global economic crisis did little to stabilize the domestic situation in Indonesia. After 31 years in power, Indonesian dictator Suharto was forced to step down on 21 May 1998 in the wake of widespread rioting that followed sharp price increases caused by a drastic devaluation of the rupiah. The effects of the crisis lingered through 1998, where many important stocks fell in Wall Street as a result of a dip in the values of the currencies of Russia and Latin American countries, which weakened those countries' demand for U.S. exports. In 1998, growth in the Philippines dropped to virtually zero. Only Singapore proved relatively insulated from the shock, but nevertheless suffered serious hits in passing, mainly due to its status as a major financial hub and its geographical proximity to Malaysia and Indonesia. By 1999, however, analysts saw signs that the economies of Asia were beginning to recover. After the crisis, economies in East and Southeast Asia worked together toward financial stability and better financial supervision.\n\nCredit bubbles and fixed currency exchange rates\n\nThe causes of the debacle are many and disputed. Thailand's economy developed into an economic bubble fueled by hot money. More and more was required as the size of the bubble grew. The same type of situation happened in Malaysia and Indonesia, which had the added complication of what was called \"crony capitalism\". The short-term capital flow was expensive and often highly conditioned for quick profit. Development money went in a largely uncontrolled manner to certain people only – not necessarily the best suited or most efficient, but those closest to the centers of power. Weak corporate governance also led to inefficient investment and declining profitability.\nUntil 1999, Asia attracted almost half of the total capital inflow into developing countries. The economies of Southeast Asia in particular maintained high interest rates attractive to foreign investors looking for a high rate of return. As a result, the region's economies received a large inflow of money and experienced a dramatic run-up in asset prices. At the same time, the regional economies of Thailand, Malaysia, Indonesia, Singapore and South Korea experienced high growth rates, of 8–12% GDP, in the late 1980s and early 1990s. This achievement was widely acclaimed by financial institutions including the IMF and World Bank, and was known as part of the \"Asian economic miracle\".\nIn the mid-1990s, Thailand, Indonesia and South Korea had large private current account deficits, and the maintenance of fixed exchange rates encouraged external borrowing and led to excessive exposure to foreign exchange risk in both the financial and corporate sectors.\nIn the mid-1990s, a series of external shocks began to change the economic environment. The devaluation of the Chinese renminbi and the Japanese yen, subsequent to the latter's strengthening due to the Plaza Accord of 1985, the raising of U.S. interest rates which led to a strong U.S. dollar, and the sharp decline in semiconductor prices, all adversely affected their growth. As the U.S. economy recovered from a recession in the early 1990s, the U.S. Federal Reserve Bank under Alan Greenspan began to raise U.S. interest rates to head off inflation.\nThis made United States bonds a more attractive investment destination relative to Southeast Asia, which had been attracting hot money flows through high short-term interest rates, and raised the value of the U.S. dollar. For the Southeast Asian nations which had currencies pegged to the U.S. dollar, the higher U.S. dollar caused their own exports to become more expensive and less competitive in the global markets. Southeast Asia's export growth slowed dramatically in the spring of 1996, deteriorating their current account position.\nSome economists have advanced the growing exports of China as a factor contributing to ASEAN nations' export growth slowdown, though these economists maintain the main cause of their crises was excessive real estate speculation. China had begun to compete effectively with other Asian exporters particularly in the 1990s after the implementation of a number of export-oriented reforms. Other economists dispute China's impact, noting that both ASEAN and China experienced simultaneous rapid export growth in the early 1990s.\n",
+        "lang": "en",
+        "wiki_title": "1997 Asian financial crisis",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:The Tokyo Stock Exchange - main room 3.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/The_Tokyo_Stock_Exchange_-_main_room_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/The_Tokyo_Stock_Exchange_-_main_room_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:The_Tokyo_Stock_Exchange_-_main_room_3.jpg",
+        "width": 1388,
+        "height": 2000,
+        "license": "CC BY-SA 4.0",
+        "artist": "Kakidai",
+        "caption": "Main room of the Tokyo Stock Exchange.",
+        "id": "P1"
+      },
+      {
+        "file": "File:Sathorn Unique Tower (I).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Sathorn_Unique_Tower_%28I%29.jpg/1920px-Sathorn_Unique_Tower_%28I%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Sathorn_Unique_Tower_%28I%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Sathorn_Unique_Tower_(I).jpg",
+        "width": 3853,
+        "height": 5780,
+        "license": "CC BY 4.0",
+        "artist": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and",
+        "caption": "Sathorn Unique Tower is an unfinished skyscraper in the Thai capital city Bangkok. Planned as a high-rise condominium complex, construction of the building was ",
+        "id": "P2"
+      },
+      {
+        "file": "File:Sathorn Unique Tower (II).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Sathorn_Unique_Tower_%28II%29.jpg/1920px-Sathorn_Unique_Tower_%28II%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Sathorn_Unique_Tower_%28II%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Sathorn_Unique_Tower_(II).jpg",
+        "width": 6712,
+        "height": 4475,
+        "license": "CC BY 4.0",
+        "artist": "This Photo was taken by Supanut Arunoprayote. Feel free to use any of my images, but please mention me as the author and",
+        "caption": "English: Sathorn Unique Tower is an unfinished skyscraper in the Thai capital city Bangkok. Planned as a high-rise condominium complex, construction of the buil",
+        "id": "P3"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-18T09:08:44Z"
+  }
+}

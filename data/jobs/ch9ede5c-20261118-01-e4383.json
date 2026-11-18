@@ -1,0 +1,415 @@
+{
+  "id": "ch9ede5c-20261118-01-e4383",
+  "channel": "웃짬",
+  "status": "NEEDS_REVIEW",
+  "created_at": "2026-11-18T09:06:11Z",
+  "topic": {
+    "title": "리먼 브러더스",
+    "wiki_title": "리먼 브러더스",
+    "category": "금융위기",
+    "source": "seed",
+    "angle": "",
+    "score": 0.6983,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "explore": 0.291
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7623,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.29"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-18T09:06:11Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-18T09:06:11Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-18T09:06:26Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-18T09:08:41Z",
+      "note": "script: LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 4 화면 문구(big)에 한자/알파벳이 있음 — 한글로 써라: $613B"
+    }
+  ],
+  "attempts": {
+    "script": 1
+  },
+  "error": {
+    "stage": "script",
+    "class": "content_quality",
+    "message": "LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 4 화면 문구(big)에 한자/알파벳이 있음 — 한글로 써라: $613B",
+    "at": "2026-11-18T09:08:41Z"
+  },
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "surprising_fact",
+      "first_line": "면화 장사로 시작해 세계 4대 투자은행이 됐습니다",
+      "screen_text": "면화→투자은행",
+      "title": "노예노동 면화로 시작한 리먼의 158년",
+      "promise": "한인 이민자 포목상이 어떻게 월스트리트 거인이 됐는지 흐름을 알 수 있습니다",
+      "evidence_quote": "면화의 높은 시장 가치를 활용하여 리먼 삼형제는 강제 노동 농장에서 생산된 원면을 상품 대금으로 받기 시작했다",
+      "eval": {
+        "score": 1.0,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "surprising_fact",
+        "first_line": "면화 장사로 시작해 세계 4대 투자은행이 됐습니다",
+        "screen_text": "면화→투자은행",
+        "title": "노예노동 면화로 시작한 리먼의 158년",
+        "promise": "한인 이민자 포목상이 어떻게 월스트리트 거인이 됐는지 흐름을 알 수 있습니다",
+        "evidence_quote": "면화의 높은 시장 가치를 활용하여 리먼 삼형제는 강제 노동 농장에서 생산된 원면을 상품 대금으로 받기 시작했다",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "경쟁사 CEO들은 다 사임했는데 풀드만 버텼습니다",
+        "screen_text": "CEO 사임 vs 유임",
+        "title": "베어스턴스·메릴린치 CEO는 나가고 풀드는 남은 이유",
+        "promise": "서브프라임 위기 때 경쟁사 수장들이 물러난 반면 딕 풀드가 이사회 지지로 버틴 지배구조 차이를 비교합니다",
+        "evidence_quote": "서브프라임 모기지 사태 당시, 베어 스턴스, 메릴린치, 시티그룹 등 경쟁사 CEO들이 사임해야 했던 반면, 풀드는 자리를 지켰다",
+        "eval": {
+          "score": 0.97,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "아시아 위기와 LTCM 사태는 견뎠는데 서브프라임엔 무너졌습니다",
+        "screen_text": "위기 극복→파산",
+        "title": "두 번의 위기 넘긴 CEO가 세 번째에 무너진 이유",
+        "promise": "1997년과 1998년 위기를 버틴 리먼이 2008년에 파산한 구조적 차이를 설명합니다",
+        "evidence_quote": "풀드는 1997년 아시아 금융 위기와 1998년 롱텀캐피털매니지먼트(LTCM) 헤지펀드 파산 사태 당시 리먼 브라더스를 성공적으로 위기에서 구해냈다",
+        "eval": {
+          "score": 0.96,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "파산 직전 자산 6390억 달러, 부채 6130억 달러였습니다",
+        "screen_text": "자산 6390억$",
+        "title": "세계 최대 파산, 6천억 달러 부채의 실체",
+        "promise": "미국 역사상 최대 파산 기록을 세운 리먼의 자산·부채 규모가 의미하는 바를 짚어드립니다",
+        "evidence_quote": "2008년 5월, 파산 직전 리먼 브라더스의 자산은 6,390억 달러에 달했다",
+        "eval": {
+          "score": 0.96,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "파산 다음 날 바클레이즈와 노무라가 알짜 사업부를 나눠 가졌습니다",
+        "screen_text": "바클레이즈·노무라 인수",
+        "title": "리먼 파산 뒤 남은 자산, 누가 가져갔을까",
+        "promise": "리먼 붕괴 직후 북미·유럽·아시아 사업부가 어떤 회사에 어떤 조건으로 인수됐는지 정리해 드립니다",
+        "evidence_quote": "major British bank Barclays announced its agreement to purchase... a significant and controlling interest in Lehman's North American investment-banking and trading divisions... Nomura Holdings announced that it would acquire Lehman Brothers' franchise in the Asia–Pacific region",
+        "eval": {
+          "score": 0.96,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "2008년 9월 15일, 158년 역사가 하루아침에 끝났습니다",
+        "screen_text": "158년 역사 종결",
+        "title": "리먼 브라더스 파산, 그날 시장에 무슨 일이",
+        "promise": "파산 신청 당일 주가 폭락·고객 이탈·신용등급 강등이 연쇄적으로 일어난 과정을 시간순으로 보여드립니다",
+        "evidence_quote": "On September 15, 2008, Lehman Brothers filed for Chapter 11 bankruptcy protection following the exodus of most of its clients, drastic declines in its stock price, and the devaluation of assets by credit rating agencies",
+        "eval": {
+          "score": 0.96,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": null,
+  "claims": [],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-18T09:08:41Z",
+  "pack": {
+    "topic": {
+      "title": "리먼 브러더스",
+      "wiki_title": "리먼 브러더스",
+      "category": "금융위기",
+      "source": "seed",
+      "angle": "",
+      "score": 0.6983,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7623,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "explore": 0.291
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.29"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 리먼 브라더스",
+        "url": "https://ko.wikipedia.org/wiki/%EB%A6%AC%EB%A8%BC_%EB%B8%8C%EB%9D%BC%EB%8D%94%EC%8A%A4",
+        "published": "2026-11-04",
+        "fetched_at": "2026-11-18",
+        "text": "리먼 브라더스 홀딩스 주식회사(Lehman Brothers Holdings Inc., IPA: [ˈliːmən])는 1850년에 설립된 다각화된 국제 금융 회사였다. 투자은행, 증권과 채권 판매, 연구 및 거래, 투자관리, 사모투자, 프라이빗 뱅킹(PB;자산관리) 등에 관여하고 있었고 미국 국채 시장의 주 딜러이기도 하다. 주요 자회사로는 Lehman Brothers Inc., Neuberger Berman Inc., Aurora Loan Services, Inc., SIB Mortgage Corporation, Lehman Brothers Bank, FSB, the Crossroads Group. 등이 있었다. 세계본사는 미국 뉴욕 시에 자리 잡고 있고, 런던과 도쿄에는 지역 본사가 있었으며, 세계 곳곳에 지사를 두고 있었다. 대한민국에는 서울특별시 중구 소공동 한화빌딩 12층과 태평로2가 신동아빌딩 17층에 지사가 있었다.\n1850년에 설립된 리먼 브라더스는 미국 동부 시간으로 2008년 9월 15일, 약 6천억 달러($613 billion)에 이르는 부채를 감당하지 못하고 파산 신청을 했다. 회사는 파산 절차가 완료될 때까지 유지된다.\n또한 2008년 9월 16일 오전 서울 소공동에 위치한 리먼 브러더스 한국지사에 대해 대한민국 금융위원회가 긴급조치를 내려 업무가 정지되었다. 노무라 증권과 바클리즈에 분할 인수되면서 해체되었다.\n\n역사\n\n리먼 가문(1850–1969) 하\n1844년 유대계 소상인의 아들인 23살 헨리 리먼이 바이에른 왕국(바바리아) 림파르에서 미국으로 이주한다. 헨리는 앨라배마주 몽고메리에 정착했고 그곳에서 'H.리먼'이라는 포목점을 열었다. 1847년 형제인 엠마뉴엘 리먼이 온 이후 회사는 \"H. 리먼 앤 브라더\"가 되었다. 1850년 형제들 중에서 막내인 메이어 리먼이 왔고, 회사는 다시 이름을 바꿨고 '리먼 브라더스'가 설립이 된다.\n면화는 19세기 중반 미국에서 가장 중요한 작물 중 하나였으며, 앨라배마에서 가장 높은 수익을 올린 현금 작물이었다. 미국 남북전쟁 이전에는 거의 모든 미국 면화가 강제 노예 노동에 의해 생산되었다. 1860년 미국 인구 조사에서 노예는 앨라배마 인구의 거의 45%를 차지했다. 1860년 인구 조사에서는 메이어 리먼이 7명의 노예(남성 3명, 여성 4명, 5세에서 50세 사이)를 소유하고 있었다.\n면화의 높은 시장 가치를 활용하여 리먼 삼형제는 강제 노동 농장에서 생산된 원면을 상품 대금으로 받기 시작했다. 결국 그들은 면화 거래라는 두 번째 사업을 시작했고, 몇 년 만에 사업의 가장 중요한 부분으로 성장했다. 1855년 헨리가 황열병으로 사망한 후, 남은 형제들은 상품 거래 및 중개 사업에 계속 집중했다.\n1858년경, 면화 거래의 중심지는 남부에서 뉴욕시로 옮겨갔고, 면화 중개인과 위탁판매업체들이 이곳에 자리 잡았다. 리먼 브라더스는 리버티 스트리트 119번지에 첫 번째 지점을 열었고, 당시 32세였던 에마누엘은 그곳으로 이주하여 지점을 운영했다. 1862년, 남북전쟁으로 어려움을 겪던 리먼 브라더스는 존 더라는 면화 상인과 합병하여 리먼, 더 앤 컴퍼니(Lehman, Durr & Co.)를 설립했다. 전쟁 후, 회사는 앨라배마주의 재건 자금 지원에 참여했다. 회사의 본사는 결국 뉴욕시로 이전했고, 1870년 뉴욕 면화 거래소 설립을 지원하여 면화를 상품화하는 데 기여했다. 에마누엘은 1884년까지 거래소 이사회 이사로 재직했다. 또한, 회사는 새롭게 부상하는 철도 채권 시장에도 진출했고, 금융 자문 사업에도 뛰어들었다.\n리먼 브라더스는 1883년에 커피 거래소 회원이 되었고, 마침내 1887년에 뉴욕 증권 거래소에 상장되었다. 1899년에는 국제 증기 펌프 회사의 우선주와 보통주를 인수하며 첫 번째 기업 공개를 진행했다.\n인터내셔널 스팀(International Steam)을 제공했음에도 불구하고, 회사가 상품 거래 회사에서 발행 회사로 진정으로 전환하기 시작한 것은 1906년이었다. 그 해, 에마누엘의 아들 필립 레먼의 지휘 아래, 회사는 골드만삭스와 제휴하여 제너럴 시가(General Cigar Co.)를 시장에 내놓았고, 곧이어 시어스 로벅(Sears, Roebuck and Company)도 참여했다. 이들 중에는 F.W. 울워스(F.W. Woolworth Company), 메이 백화점(May Department Stores Company), 김벨 브라더스(Gimbel Brothers, Inc.), R.H. 메이시(R.H. Macy & Company), 스튜드베이커(The Studebaker Corporation), B.F. 굿리치(B.F. Goodrich Co.), 엔디콧 존슨(Endicott Johnson Corporation) 등이 있었다.\n필립 리먼이 1925년에 은퇴한 후, 그의 아들 로버트 \"바비\" 리먼이 회사의 수장이 되었다. 바비의 재임 기간 동안 회사는 대공황의 자본 위기를 극복하기 위해 벤처 캐피털에 집중했고, 이후 주식 시장이 회복되었다.\n1924년 존 M. 핸콕은 가족 구성원이 아닌 사람으로는 처음으로 회사에 합류했으며, 이어서 1927년에는 먼로 C. 구트만과 폴 마주르가 파트너가 되었다. 1928년에는 회사가 윌리엄 스트리트 1번지로 이전했다.\n1930년대에 리먼 브라더스는 최초의 텔레비전 제조업체인 듀몽 연구소(DuMont Laboratories)의 기업공개(IPO)를 주관했고, 라디오 코퍼레이션 오브 아메리카(RCA)의 자금 조달에도 도움을 주었다. 또한 할리버튼(Halliburton)과 커-맥기(Kerr-McGee)를 포함한 급성장하는 석유 산업 기업들의 투자에도 관여했다. 1950년대에는 디지털 이큅먼트 코퍼레이션(Digital Equipment Corporation)의 IPO를 주관했고, 이후 컴팩(Compaq)의 디지털 인수에도 관여했다.\n\n진화하는 파트너십 (1969–1984)\n로버트 리먼은 회사에서 44년 동안 리더십 직책을 맡았던 후 1969년에 사망했으며, 리먼 가족 중 어느 누구도 회사 경영에 적극적으로 참여하지 않았다. 동시에 리먼은 1970년대 초반의 어려운 경제 환경 속에서 강한 역풍에 직면해 있었다. 1972년까지 회사는 어려운 시기를 겪고 있었고, 1973년에는 벨 앤 하웰 코퍼레이션의 회장 겸 최고 경영자인 피트 피터슨이 회사를 구하기 위해 영입되었다.\n피터슨이 회장 겸 CEO로 재임하던 시절, 회사는 1975년 아브라함앤컴퍼니(Abraham & Co.)를 인수했고, 2년 후 쿤, 로브앤컴퍼니(Kuhn, Loeb & Co.)와 합병하여 리먼브라더스, 쿤, 로브(Lehman Brothers, Kuhn, Loeb Inc.)를 설립했다. 이 회사는 살로몬브라더스, 골드만삭스, 퍼스트보스턴에 이어 미국에서 네 번째로 큰 투자은행이 되었다. 피터슨은 회사를 막대한 영업 손실에서 벗어나 5년 연속 사상 최고 수익을 달성하게 했으며, 자기자본이익률(ROE)은 투자은행 업계 최고 수준을 기록했다.\n1980년대 초, 회사 투자은행가와 트레이더 간의 갈등이 심화되자 피터슨은 1983년 5월, 사장 겸 최고운영책임자(COO)이자 전직 트레이더였던 루이스 글럭스만을 공동 최고경영자(CEO)로 승진시켰다. 글럭스만은 여러 가지 변화를 도입했는데, 이는 오히려 긴장을 고조시켰다. 글럭스만의 경영 스타일과 시장 침체가 겹치면서 결국 권력 투쟁으로 이어져 피터슨이 축출되고 글럭스만이 단독 CEO가 되었다.\n권력 다툼에 불만을 품은 은행가들은 회사를 떠났다. 리먼 브라더스의 인수합병 위원회 회장이었던 스티븐 A. 슈워츠만은 2003년 2월 프라이빗 에쿼티 인터내셔널과의 인터뷰에서 \"리먼 브라더스는 극도로 경쟁적인 내부 환경에 처해 있었고, 결국 이는 제 기능을 하지 못하게 되었다\"고 회상했다. 회사는 이러한 붕괴로 어려움을 겪었고, 글룩스만은 회사를 매각하라는 압력을 받았다.\n\n아메리칸 익스프레스와의 합병 (1984년~1994년)\n아메리칸 익스프레스 소유의 증권 회사로 투자 은행업보다는 증권 중개업에 집중했던 시어슨/아메리칸 익스프레스는 1984년 3억 6천만 달러에 리먼 브라더스를 인수했다. 5월 11일, 두 회사가 합병하여 시어슨 리먼/아메리칸 익스프레스가 되었다.\n1983년부터 1990년까지 피터 A. 코헨은 시어슨 리먼 브라더스의 CEO 겸 회장을 역임하며 E.F. 허튼을 10억 달러에 인수하여 시어슨 리먼 허튼을 설립했다. 1989년, 시어슨은 F. 로스 존슨 경영진이 RJR 나비스코를 인수하려는 시도를 지원했지만, 드렉셀 번햄 램버트의 지원을 받는 사모펀드 콜버그 크래비스 로버츠에 의해 최종적으로 인수되었다.\n\n투자 철회 및 독립 (1994~2008)\n1993년, 새로 임명된 하비 골럽 CEO 체제 하에서 아메리칸 익스프레스는 은행 및 증권 중개 사업 부문을 매각하기 시작했다. 소매 증권 중개 및 자산 관리 사업 부문을 프라이머리카에 매각했고, 1994년에는 리먼 브라더스 쿤 로엡을 기업공개(IPO)를 통해 리먼 브라더스 홀딩스로 분사시켰다. 분사 후 딕 풀드가 CEO로 취임했다. 그는 미국과 세계에서 손꼽히는 대형 투자은행 중 하나인 리먼 브라더스를 이끌었다. 풀드는 1997년 아시아 금융 위기와 1998년 롱텀캐피털매니지먼트(LTCM) 헤지펀드 파산 사태 당시 리먼 브라더스를 성공적으로 위기에서 구해냈다.\n2001년, 이 회사는 코웬앤컴퍼니(Cowen & Co.)의 개인 고객 서비스(PCS) 사업부를 인수했고, 이후 2003년에는 1989년 철수했던 자산 운용 사업에 적극적으로 재진출했다. 20억 달러 규모의 운용 자산을 바탕으로 크로스로즈 그룹(Crossroads Group), 링컨 캐피털 매니지먼트(Lincoln Capital Management)의 채권 부문, 그리고 뉴버거 버먼(Neuberger Berman)을 인수했다. 이들 사업부는 PCS 사업부 및 리먼 브라더스의 사모펀드 사업부와 함께 투자 관리 부문을 구성했으며, 약 31억 달러의 순수익을 창출했다.\n서브프라임 모기지 사태 당시, 베어 스턴스, 메릴린치, 시티그룹 등 경쟁사 CEO들이 사임해야 했던 반면, 풀드는 자리를 지켰다. 게다가 보다폰의 크리스토퍼 젠트와 IBM의 존 에이커스 같은 은퇴한 CEO들이 포함된 리먼 브라더스 이사회는 주가가 폭락하는 상황에서도 풀드에게 이의를 제기하는 것을 꺼렸다.\n2008년 5월, 파산 직전 리먼 브라더스의 자산은 6,390억 달러에 달했다.\n\n2001년 9월 11일 테러에 대한 대응\n2001년 9월 11일, 리먼 브라더스는 월드 트레이드 센터 1번지 38~40층 세 곳을 사용하고 있었는데, 이날 테러 공격으로 직원 한 명이 목숨을 잃었다. 월드 파이낸셜 센터 3번지에 위치한 본사 건물 역시 잔해로 심하게 파손되어 사용할 수 없게 되었고, 6,500명이 넘는 직원들이 거처를 옮겨야 했다. 거래 업무는 뉴저지주 저지시티로 이전했다. 2001년 9월 17일 주식 시장이 재개되면서 리먼 브라더스의 영업 및 거래 기능은 다시 가동되었다.\n이후 몇 달 동안 회사는 뉴욕시 전역의 40개 이상의 임시 장소로 사업장을 확장했다. 투자 은행 부문은 쉐라톤 맨해튼 호텔의 1층 라운지, 레스토랑, 그리고 665개의 모든 객실을 사무실 공간으로 개조했다.\n은행은 또한 사이버 공격 이후 사무실 공간 공유를 위한 유연 근무제와 가상 사설망(VPN)을 통한 원격 근무를 시범 운영했다. 2001년 10월, 리먼 브라더스는 7억 달러에 달하는 32층, 9만 8천 제곱미터(105만 평방피트) 규모의 오피스 빌딩을 매입했다. 745 세븐스 애비뉴에 위치한 이 건물은 당시 경쟁사인 모건 스탠리가 완공했지만 아직 입주하지 않은 상태였다. 리먼 브라더스는 2002년 1월부터 새 건물로 이전하기 시작하여 3월에 완료했다. 리먼 브라더스는 쓰리 월드 파이낸셜 센터의 구조적 안전성이 완전히 확보되지 않았기 때문에 그곳으로 복귀하지 않았고, 쓰리 월드 파이낸셜 센터의 보수 공사가 완료될 때까지 기다릴 수 없었다.\n테러 공격 이후, 리먼 브라더스 경영진은 사업 연속성 계획에 더욱 중점을 두었다. 리먼은 쓰리 월드 파이낸셜 센터에 있는 본사 외에도 저지 시티에 운영 및 백오피스 시설을 유지했는데, 이 공간은 9·11 테러 이전에는 회사가 이전을 고려했던 곳이었다. 하지만 결국 이 공간은 유지되었을 뿐만 아니라 확장되었고, 백업 거래 시설도 건설되었다.\n\n2003년 6월 SEC 소송\n2003년 6월, 이 회사는 미국 증권거래위원회(SEC), 뉴욕주 법무장관실 및 기타 여러 증권 규제 기관과 투자 은행 부서의 리서치 애널리스트에 대한 부당한 영향력 행사와 관련하여 동시에 합의한 10개 회사 중 하나였다. 규제 당국은 해당 회사들이 애널리스트 보상을 투자 은행 수익과 부적절하게 연계하고, 인수 기회를 대가로 시장에 영향을 미치는 유리한 리서치 보고서를 약속했다고 주장했다. \"글로벌 합의\"로 알려진 이 합의는 총 14억 달러의 재정적 제재를 규정했으며, 여기에는 리먼 브라더스에 대한 8천만 달러의 제재와 투자 은행 부서와 리서치 부서의 완전한 분리, 투자 은행 수익과 직간접적으로 연계된 애널리스트 보상 금지, 그리고 회사 고객에게 무료로 독립적인 제3자 리서치 자료를 제공하는 등의 구조적 개혁이 포함되었다.\n\n주택담보대출 증가세 (1997~2006)\n",
+        "lang": "ko",
+        "wiki_title": "리먼 브라더스",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Lehman Brothers",
+        "url": "https://en.wikipedia.org/wiki/Lehman_Brothers",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-18",
+        "text": "Lehman Brothers Holdings Inc. ( LEE-mən) was an American global financial services firm founded in 1850. Before filing for bankruptcy in 2008, Lehman was the fourth-largest investment bank in the United States (behind Goldman Sachs, Morgan Stanley, and Merrill Lynch), with about 25,000 employees worldwide. It operated its business in investment banking, equity, fixed-income and derivatives sales and trading (especially U.S. Treasury securities), research, investment management, private equity, and private banking. Lehman was operational for 158 years from its founding in 1850 until 2008.\nOn September 15, 2008, Lehman Brothers filed for Chapter 11 bankruptcy protection following the exodus of most of its clients, drastic declines in its stock price, and the devaluation of assets by credit rating agencies. The collapse was largely due to Lehman's involvement in the subprime mortgage crisis and its exposure to less liquid assets. Lehman's bankruptcy filing is the largest in US history, having beaten the previous record holder Worldcom, Inc., and is thought to have played a major role in the unfolding of the 2008 financial crisis. The market collapse also gave support to the \"too big to fail\" doctrine.\nAfter Lehman Brothers filed for bankruptcy, global markets immediately plummeted. The following day, major British bank Barclays announced its agreement to purchase, subject to regulatory approval, a significant and controlling interest in Lehman's North American investment-banking and trading divisions, along with its New York headquarters building. On September 20, 2008, a revised version of that agreement was approved by U.S. bankruptcy court judge James M. Peck. The next week, Nomura Holdings announced that it would acquire Lehman Brothers' franchise in the Asia–Pacific region, including Japan, Hong Kong and Australia, as well as Lehman Brothers' investment banking and equities businesses in Europe and the Middle East. The deal became effective on October 13, 2008.\n\nHistory\n\nUnder the Lehman family (1850–1969)\n\nIn 1844, 23-year-old Hayum Lehmann, the son of a Jewish cattle merchant, immigrated to the United States from Rimpar, Bavaria. He changed his name to \"Henry Lehman\" and settled in Montgomery, Alabama, where he opened a dry-goods store, \"H. Lehman\". In 1847, following the arrival of his brother Emanuel Lehman, the firm became \"H. Lehman and Bro.\" With the arrival of their youngest brother, Mayer Lehman, in 1850, the firm changed its name again and \"Lehman Brothers\" was founded.\nCotton was one of the most important crops in the United States in the mid-19th century, and it was Alabama's highest-grossing cash crop. Before the American Civil War, nearly all U.S. cotton was produced by forced slave labor. In the 1860 U.S. census, slaves made up nearly 45 percent of Alabama's population. The 1860 census listed Mayer Lehman as the owner of seven enslaved people (\"three males and four females ranging in age from 5 to 50\").\nCapitalizing on cotton's high market value, the three Lehman brothers began to accept raw cotton from forced labor plantations as payment for merchandise. They eventually began a second business trading in cotton. Within a few years, it grew to become the most significant part of their operation. Following Henry's death from yellow fever in 1855, the remaining brothers continued to focus on their commodities-trading/brokerage operations.\nBy 1858, the center of cotton trading had shifted from the South to New York City, where cotton factors and commission houses were based. Lehman opened its first branch office at 119 Liberty Street, and 32-year-old Emanuel relocated there to run the office. In 1862, facing difficulties as a result of the Civil War, the firm teamed up with a cotton merchant named John Durr to form Lehman, Durr & Co. Following the war the company helped finance Alabama's reconstruction. The firm's headquarters was eventually moved to New York City, where it helped found the New York Cotton Exchange in 1870, commodifying the crop; Emanuel sat on the board of governors until 1884. The firm also dealt in the emerging market for railroad bonds and entered the financial-advisory business.\nLehman became a member of the Coffee Exchange as early as 1883 and finally the New York Stock Exchange in 1887. In 1899, it underwrote its first public offering, the preferred and common stock of the International Steam Pump Company.\nDespite the offering of International Steam, the firm's real shift from being a commodities house to a house of issue did not begin until 1906. In that year, under Emanuel's son Philip Lehman, the firm partnered with Goldman, Sachs & Co., to bring the General Cigar Co. to market, followed closely by Sears, Roebuck and Company. Among these were F.W. Woolworth Company, May Department Stores Company, Gimbel Brothers, Inc., R.H. Macy & Company, The Studebaker Corporation, the B.F. Goodrich Co., and Endicott Johnson Corporation.\nFollowing Philip Lehman's retirement in 1925, his son Robert \"Bobbie\" Lehman took over as head of the firm. During Bobbie's tenure, the company weathered the capital crisis of the Great Depression by focusing on venture capital while the equities market recovered.\nIn 1924, John M. Hancock became the first non-family member to join the firm, followed by Monroe C. Gutman and Paul Mazur, who became partners in 1927. By 1928, the firm had moved to its One William Street location.\n\nIn the 1930s, Lehman underwrote the initial public offering of the first television manufacturer, DuMont Laboratories, and helped fund the Radio Corporation of America (RCA). It also helped finance the rapidly growing oil industry, including the companies Halliburton and Kerr-McGee. In the 1950s, Lehman underwrote the IPO of Digital Equipment Corporation. Later, it arranged the acquisition of Digital by Compaq.\n\nAn evolving partnership (1969–1984)\nRobert Lehman died in 1969 after 44 years in a leadership position for the firm, leaving no member of the Lehman family actively involved with the partnership. At the same time, Lehman was facing strong headwinds amidst the difficult economic environment of the early 1970s. By 1972, the firm was facing hard times and in 1973, Pete Peterson, chairman and chief executive officer of the Bell & Howell Corporation, was brought in to save the firm.\nUnder Peterson's leadership as chairman and CEO, the firm acquired Abraham & Co.",
+        "lang": "en",
+        "wiki_title": "Lehman Brothers",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Calyon Building Dewey Ballantine by David Shankbone.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Calyon_Building_Dewey_Ballantine_by_David_Shankbone.jpg/1920px-Calyon_Building_Dewey_Ballantine_by_David_Shankbone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Calyon_Building_Dewey_Ballantine_by_David_Shankbone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Calyon_Building_Dewey_Ballantine_by_David_Shankbone.jpg",
+        "width": 2816,
+        "height": 2112,
+        "license": "CC BY 2.5",
+        "artist": "David Shankbone",
+        "caption": "Calyon Building Dewey Ballantine HQ, 1301 Avenue of Americas, New York by David Shankbone",
+        "id": "P1"
+      },
+      {
+        "file": "File:Lehman Brothers Times Square by David Shankbone.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Lehman_Brothers_Times_Square_by_David_Shankbone.jpg/1920px-Lehman_Brothers_Times_Square_by_David_Shankbone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Lehman_Brothers_Times_Square_by_David_Shankbone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Lehman_Brothers_Times_Square_by_David_Shankbone.jpg",
+        "width": 2448,
+        "height": 3264,
+        "license": "CC BY-SA 3.0",
+        "artist": "David Shankbone",
+        "caption": "Lehman Brothers Rockefeller centre. The Manhattan headquarters of Lehman Brothers before their bankruptcy in 2008.",
+        "id": "P2"
+      },
+      {
+        "file": "File:Lehman Brothers-NYC-20080915.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Lehman_Brothers-NYC-20080915.jpg/1920px-Lehman_Brothers-NYC-20080915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Lehman_Brothers-NYC-20080915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Lehman_Brothers-NYC-20080915.jpg",
+        "width": 4368,
+        "height": 2912,
+        "license": "CC BY 2.0",
+        "artist": "Robert Scoble",
+        "caption": "w:Lehman Brothers headquarters in New York City",
+        "id": "P3"
+      },
+      {
+        "file": "File:Lehman Brothers-20080915.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Lehman_Brothers-20080915.jpg/1920px-Lehman_Brothers-20080915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Lehman_Brothers-20080915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Lehman_Brothers-20080915.jpg",
+        "width": 2666,
+        "height": 4000,
+        "license": "CC BY 2.0",
+        "artist": "Robert Scoble",
+        "caption": "w:Lehman Brothers headquarters in New York CityImage is rotated.",
+        "id": "P4"
+      },
+      {
+        "file": "File:Lehman Brothers Frankfurt.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Lehman_Brothers_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Lehman_Brothers_Frankfurt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Lehman_Brothers_Frankfurt.jpg",
+        "width": 1094,
+        "height": 1258,
+        "license": "Public domain",
+        "artist": "Karsten11",
+        "caption": "Head office of Lehman Brothers in Frankfurt, Germany",
+        "id": "P5"
+      },
+      {
+        "file": "File:NYC Lehman Brothers building.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/NYC_Lehman_Brothers_building.jpg/1920px-NYC_Lehman_Brothers_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/NYC_Lehman_Brothers_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:NYC_Lehman_Brothers_building.jpg",
+        "width": 3264,
+        "height": 2448,
+        "license": "CC BY-SA 3.0",
+        "artist": "Arnoldius",
+        "caption": "Lehman Brothers Building at 7th Avenue and West 49th Street, Manhattan, NYC",
+        "id": "P6"
+      },
+      {
+        "file": "File:HK Central Des Voeux Road Customers' black banner of Lehman Brothers financial products near Hang Seng Bank Nov-2010.JPG",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/HK_Central_Des_Voeux_Road_Customers%27_black_banner_of_Lehman_Brothers_financial_products_near_Hang_Seng_Bank_Nov-2010.JPG/1920px-HK_Central_Des_Voeux_Road_Customers%27_black_banner_of_Lehman_Brothers_financial_products_near_Hang_Seng_Bank_Nov-2010.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/HK_Central_Des_Voeux_Road_Customers%27_black_banner_of_Lehman_Brothers_financial_products_near_Hang_Seng_Bank_Nov-2010.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:HK_Central_Des_Voeux_Road_Customers%27_black_banner_of_Lehman_Brothers_financial_products_near_Hang_Seng_Bank_Nov-2010.JPG",
+        "width": 3648,
+        "height": 2736,
+        "license": "CC BY-SA 3.0",
+        "artist": "Rengeeluo",
+        "caption": "Banners for some customers of Lehman Brothers products",
+        "id": "P7"
+      },
+      {
+        "file": "File:London - Lehman Brothers - 3868.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/London_-_Lehman_Brothers_-_3868.jpg/1920px-London_-_Lehman_Brothers_-_3868.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/London_-_Lehman_Brothers_-_3868.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:London_-_Lehman_Brothers_-_3868.jpg",
+        "width": 4368,
+        "height": 2912,
+        "license": "CC BY-SA 3.0",
+        "artist": "Jorge Royan",
+        "caption": "The Lehman Brothers company sign for Auction after bankruptcy at Christie's. London, UK",
+        "id": "P8"
+      },
+      {
+        "file": "File:July 1 march in Hong Kong-Bankruptcy of Lehman Brothers 2012.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/July_1_march_in_Hong_Kong-Bankruptcy_of_Lehman_Brothers_2012.jpg/1920px-July_1_march_in_Hong_Kong-Bankruptcy_of_Lehman_Brothers_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/July_1_march_in_Hong_Kong-Bankruptcy_of_Lehman_Brothers_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:July_1_march_in_Hong_Kong-Bankruptcy_of_Lehman_Brothers_2012.jpg",
+        "width": 2272,
+        "height": 1704,
+        "license": "CC BY 4.0",
+        "artist": "Wpcpey",
+        "caption": "July 1 march in Hong Kong-Bankruptcy of Lehman Brothers",
+        "id": "P9"
+      },
+      {
+        "file": "File:Lehman Brothers 2006 - panoramio.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Lehman_Brothers_2006_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Lehman_Brothers_2006_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Lehman_Brothers_2006_-_panoramio.jpg",
+        "width": 1600,
+        "height": 1200,
+        "license": "CC BY-SA 3.0",
+        "artist": "Johannes Geiger",
+        "caption": "Lehman Brothers 2006",
+        "id": "P10"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-18T09:06:11Z"
+  }
+}
