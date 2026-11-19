@@ -25,6 +25,26 @@ _LETTERS = dict(zip("ABCDEFGHIJKLMNOPQRSTUVWXYZ", _LETTER_NAMES))
 _FIVEG = re.compile(r"(?<![A-Za-z0-9])5G(?![A-Za-z])")
 
 
+def _batchim(ch: str) -> bool:
+    return "가" <= ch <= "힣" and (ord(ch) - 0xAC00) % 28 != 0
+
+
+_JOSA = [("은", "는"), ("이", "가"), ("을", "를"), ("과", "와")]
+
+
+def fix_josa_after(text: str, word: str) -> str:
+    """약어를 한글 낱말로 바꾼 뒤 조사가 어색해지지 않게(국내총생산를 → 국내총생산을) 받침에 맞춘다."""
+    if not word:
+        return text
+    last = word[-1]
+    has = _batchim(last)
+    for with_b, without_b in _JOSA:
+        want = with_b if has else without_b
+        other = without_b if has else with_b
+        text = re.sub(re.escape(word) + other + r"(?![가-힣])", word + want, text)
+    return text
+
+
 def normalize_narration(text: str) -> str:
     text = _KMH.sub("킬로미터 매시", text)
     for rx, word in _UNIT_RES:
@@ -33,5 +53,9 @@ def normalize_narration(text: str) -> str:
     text = _FIVEG.sub("파이브지", text)
     for k, v in sorted(ACRONYMS.items(), key=lambda kv: -len(kv[0])):
         text = re.sub(r"(?<![A-Za-z])" + re.escape(k) + r"(?![A-Za-z])", v, text)
+    for v in set(ACRONYMS.values()):
+        text = fix_josa_after(text, v)
+    # 기종·모델명(F-35, KF-21, K9, A320): 글자는 한글 이름으로, 숫자는 그대로 둔다
+    text = re.sub(r"(?<![A-Za-z])([A-Z]{1,4})-?(\d+)(?![A-Za-z])", lambda m: "".join(_LETTERS[c] for c in m.group(1)) + m.group(2), text)
     text = re.sub(r"(?<![A-Za-z])([A-Z]{2,6})(?![A-Za-z])", lambda m: "".join(_LETTERS[c] for c in m.group(1)), text)
     return text
