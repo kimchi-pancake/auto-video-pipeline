@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261120-01-21c84",
   "channel": "웃짬",
-  "status": "SCRIPT_READY",
+  "status": "RETRY_WAIT",
   "created_at": "2026-11-19T16:02:38Z",
   "topic": {
     "title": "제1차 석유 파동",
@@ -55,12 +55,34 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-19T16:03:43Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-19T16:04:41Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-19T16:04:41Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "RETRY_WAIT",
+      "at": "2026-11-19T16:04:58Z",
+      "note": "render 실패(bug) 1/4"
     }
   ],
-  "attempts": {},
-  "error": null,
+  "attempts": {
+    "render": 1
+  },
+  "error": {
+    "stage": "render",
+    "class": "bug",
+    "message": "RuntimeError: TTS 실패 세그먼트 3개",
+    "at": "2026-11-19T16:04:58Z"
+  },
   "lease": null,
-  "retry_after": null,
+  "retry_after": "2026-11-19T17:04:58Z",
   "hook": {
     "chosen": {
       "type": "number_gap",
@@ -580,7 +602,45 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
+  "assets": [
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:King Faisal of Saudi Arabia - Flickr - The Central Intelligence Agency.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:King_Faisal_of_Saudi_Arabia_-_Flickr_-_The_Central_Intelligence_Agency.jpg",
+          "license": "Public domain",
+          "artist": "The Central Intelligence Agency",
+          "caption": "King Faisal of Saudi Arabia. From the booklet \"President Nixon and the Role of Intelligence in the 1973 Arab-Israeli War.\" For more information, visit www.cia.g"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    }
+  ],
   "files": {},
   "qc": null,
   "youtube": {
@@ -593,7 +653,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-19T16:03:43Z",
+  "updated_at": "2026-11-19T16:04:58Z",
   "pack": {
     "topic": {
       "title": "제1차 석유 파동",

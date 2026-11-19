@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261120-01-f664a",
   "channel": "도개",
-  "status": "SCRIPT_READY",
+  "status": "RETRY_WAIT",
   "created_at": "2026-11-19T16:01:23Z",
   "topic": {
     "title": "포항제철소",
@@ -55,12 +55,34 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-19T16:02:15Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-19T16:05:12Z",
+      "note": "장면 자료 6개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-19T16:05:12Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "RETRY_WAIT",
+      "at": "2026-11-19T16:05:35Z",
+      "note": "render 실패(bug) 1/4"
     }
   ],
-  "attempts": {},
-  "error": null,
+  "attempts": {
+    "render": 1
+  },
+  "error": {
+    "stage": "render",
+    "class": "bug",
+    "message": "RuntimeError: TTS 실패 세그먼트 4개",
+    "at": "2026-11-19T16:05:35Z"
+  },
   "lease": null,
-  "retry_after": null,
+  "retry_after": "2026-11-19T17:05:35Z",
   "hook": {
     "chosen": {
       "type": "number_gap",
@@ -589,7 +611,51 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
+  "assets": [
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Speaker of the National Assembly Woo Won-shik visits POSCO Gwangyang Steel Mill (20240808) - 3.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_(20240808)_-_3.jpg",
+          "license": "KOGL Type 1",
+          "artist": "대한민국 국회",
+          "caption": "2024년 8월 8일, 우원식 국회의장, 포스코 광양제철소 방문"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    }
+  ],
   "files": {},
   "qc": null,
   "youtube": {
@@ -602,7 +668,7 @@
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-19T16:02:15Z",
+  "updated_at": "2026-11-19T16:05:35Z",
   "pack": {
     "topic": {
       "title": "포항제철소",
