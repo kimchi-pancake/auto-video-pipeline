@@ -1,0 +1,778 @@
+{
+  "id": "ch9ede5c-20261120-01-21c84",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-19T16:02:38Z",
+  "topic": {
+    "title": "제1차 석유 파동",
+    "wiki_title": "제1차 석유 파동",
+    "category": "에너지자원",
+    "source": "seed",
+    "angle": "누가 이득을 보고 누가 손해를 봤나",
+    "score": 0.7067,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.65,
+      "explore": 0.412
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.65",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7627,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.412
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.65"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-19T16:02:38Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-19T16:02:38Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-19T16:03:10Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-19T16:03:43Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "number_gap",
+      "first_line": "유가가 3달러에서 12달러, 300% 폭등했습니다",
+      "screen_text": "유가 300% 폭등",
+      "title": "제1차 석유파동, 유가 4배 뛴 진짜 이유",
+      "promise": "배럴당 3달러 시절이 끝나고 세계 경제가 맞은 충격의 수치를 보여드립니다",
+      "evidence_quote": "유가는 전세계적으로 배럴당 US$3($19/m3)에서 배럴당 거의 $12($75/m3)로 거의 300% 상승했다.",
+      "eval": {
+        "score": 0.9907,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.91,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "number_gap",
+        "first_line": "유가가 3달러에서 12달러, 300% 폭등했습니다",
+        "screen_text": "유가 300% 폭등",
+        "title": "제1차 석유파동, 유가 4배 뛴 진짜 이유",
+        "promise": "배럴당 3달러 시절이 끝나고 세계 경제가 맞은 충격의 수치를 보여드립니다",
+        "evidence_quote": "유가는 전세계적으로 배럴당 US$3($19/m3)에서 배럴당 거의 $12($75/m3)로 거의 300% 상승했다.",
+        "eval": {
+          "score": 0.9907,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "산유국은 떼돈을 벌고 선진국은 스태그플레이션에 빠졌습니다",
+        "screen_text": "누가 이득 봤나",
+        "title": "석유파동, 산유국만 승자였나?",
+        "promise": "금수조치로 인한 손익 계산서와 의외의 승자·패자 구조를 정리해 드립니다",
+        "evidence_quote": "이라크와 시리아는 그 경제를 파괴함으로써 서방을 굴욕시키고 망신을 준 정복한 영웅으로 칭송했다.",
+        "eval": {
+          "score": 0.9652,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "1960년대 배럴당 1.8달러, 인플레 고려하면 더 싸졌습니다",
+        "screen_text": "석유가 물보다 쌌다",
+        "title": "석유가 물보다 싼 시대, 왜 끝났나",
+        "promise": "기름값이 너무 싸서 석탄 산업이 망하고 대량 소비 시대가 열린 배경을 비교합니다",
+        "evidence_quote": "1960년대 내내 석유 1배럴의 가격은 1.80달러에 머물렀고, 이는 실질적으로 유가를 고려한 인플레이션의 영향으로 미국인들이 1959년보다 1969년에 석유에 대한 비용을 덜 지불하면서 10년 동안 점점 더 낮아졌다는 것을 의미한다.",
+        "eval": {
+          "score": 0.964,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "달러가 금에서 떨어지자 산유국 실질 소득이 줄었습니다",
+        "screen_text": "달러 약세 대처법",
+        "title": "닉슨 쇼크가 석유값을 올린 메커니즘",
+        "promise": "브레튼우즈 체제 붕괴와 유가 연동의 끊어진 고리가 파동을 부른 과정을 풉니다",
+        "evidence_quote": "석유가 달러로 가격이 매겨졌기 때문에 달러가 금과의 옛 연결고리에서 벗어나기 시작하자 석유 생산국의 실질 소득은 감소했다.",
+        "eval": {
+          "score": 0.911,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "금수조치는 이스라엘 철수라는 목표를 단 하나도 못 이뤘습니다",
+        "screen_text": "금수조치 실패함",
+        "title": "석유 무기화, 목적은 실패했는데 파장은 컸다",
+        "promise": "석유 금수가 정치적 목표는 놓쳤지만 세계 경제를 어떻게 바꿨는지 설명합니다",
+        "evidence_quote": "이스라엘군이 1949년 휴전선으로 철수하지 않았기 때문에, 대다수의 학자들은 금수조치가 실패한 것이라고 믿고 있다.",
+        "eval": {
+          "score": 0.9093,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "미국은 1973년까지 자국 석유를 아껴 쓰려 수입 쿼터를 짰습니다",
+        "screen_text": "미국 석유 아껴씀",
+        "title": "미국이 '자국 우선' 석유 정책을 쓴 이유",
+        "promise": "자국 유전을 보존하려다 중동 의존도를 키운 미국의 역설적 선택을 짚어드립니다",
+        "evidence_quote": "비평가들은 이를 \"미국 우선주의\" 정책이라고 불렀다. 일부 학자들은 이 정책이 1970년대 초 미국 국내 석유 생산 감소의 원인이 되었다고 생각했다.",
+        "eval": {
+          "score": 0.824,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "제1차 석유 파동, 300% 폭등의 구조",
+    "target_seconds": 28,
+    "category": "에너지자원",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "유가가 3달러에서 12달러, 300% 폭등했습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "300%",
+          "small": "국제 유가 상승률"
+        },
+        "claims": [
+          {
+            "text": "유가는 배럴당 3달러에서 12달러로 거의 300% 상승했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "유가는 전세계적으로 배럴당 US$3($19/m3)에서 배럴당 거의 $12($75/m3)로 거의 300% 상승했다."
+          }
+        ]
+      },
+      {
+        "narration": "1973년 10월 욤키푸르 전쟁 발발 직후 아랍 산유국들이 이스라엘 지지국 대상 금수 조치를 단행했습니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "1973년 10월 사우디아라비아 파이살 국왕이 이끄는 OAPEC 회원국들이 석유 금수조치를 선언했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1973년 석유 파동은 1973년 10월 사우디아라비아의 파이살 국왕이 이끄는 아랍 석유 수출국 기구(OAPEC) 회원국들이 석유 금수조치를 선언하면서 시작되었다."
+          }
+        ]
+      },
+      {
+        "narration": "공시 가격이 3.01달러에서 5.12달러로 70% 오르고, 이후 11.65달러까지 추가 인상됐습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "원유 공시 가격 변화",
+          "a": {
+            "label": "인상 전",
+            "value": 3.01
+          },
+          "b": {
+            "label": "1차 인상",
+            "value": 5.12
+          },
+          "unit": "달러/배럴"
+        },
+        "claims": [
+          {
+            "text": "페르시아만 연안 6개국이 원유 공시 가격을 배럴당 3.01달러에서 5.12달러로 70% 인상한다고 발표했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "원유 공시 가격을 배럴당 3.01 달러에서 5.12 달러로 70% 인상한다고 발표했다."
+          },
+          {
+            "text": "1974년 1월부터 원유 가격을 5.12달러에서 11.65달러로 인상하기로 결정했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1974년 1월부터 원유 가격을 5.12 달러에서 11.65 달러로 인상하기로 결정했다."
+          }
+        ]
+      },
+      {
+        "narration": "미국은 1970년 생산 정점 후 수입 의존도가 83%까지 치솟으며 충격을 정면으로 맞았습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "83%",
+          "small": "미국 석유 수입 중 중동 비중"
+        },
+        "claims": [
+          {
+            "text": "1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었다."
+          },
+          {
+            "text": "1970년 미국 석유 생산이 정점을 찍고 수입 의존도가 급격히 높아졌습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1970년에 미국의 석유 생산은 정점을 찍었고, 미국은 점점 더 많은 석유를 수입하기 시작했다."
+          }
+        ]
+      },
+      {
+        "narration": "금수 조치는 1974년 3월 해제됐으나 고유가 구조는 지속돼 세계 경제에 장기적 충격을 남겼습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "파동의 전개",
+          "items": [
+            "전쟁 발발",
+            "금수·가격 인상",
+            "금수 해제",
+            "고유가 고착"
+          ]
+        },
+        "claims": [
+          {
+            "text": "금수 조치는 1974년 3월 종료되었습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1974년 3월 금수 조치가 끝날 때까지 확대되었다."
+          },
+          {
+            "text": "금수 해제 후에도 높은 유가 수준이 유지되며 세계 경제에 장기적 영향을 미쳤다는 분석이 있습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "금수 조치는 석유 파동을 일으켜 세계 정치와 세계 경제에 장단기적으로 많은 영향을 미쳤다.",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "유가는 배럴당 3달러에서 12달러로 거의 300% 상승했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "유가는 전세계적으로 배럴당 US$3($19/m3)에서 배럴당 거의 $12($75/m3)로 거의 300% 상승했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "1973년 10월 사우디아라비아 파이살 국왕이 이끄는 OAPEC 회원국들이 석유 금수조치를 선언했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1973년 석유 파동은 1973년 10월 사우디아라비아의 파이살 국왕이 이끄는 아랍 석유 수출국 기구(OAPEC) 회원국들이 석유 금수조치를 선언하면서 시작되었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "페르시아만 연안 6개국이 원유 공시 가격을 배럴당 3.01달러에서 5.12달러로 70% 인상한다고 발표했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "원유 공시 가격을 배럴당 3.01 달러에서 5.12 달러로 70% 인상한다고 발표했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "1974년 1월부터 원유 가격을 5.12달러에서 11.65달러로 인상하기로 결정했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1974년 1월부터 원유 가격을 5.12 달러에서 11.65 달러로 인상하기로 결정했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 3,
+        "text": "1970년 미국 석유 생산이 정점을 찍고 수입 의존도가 급격히 높아졌습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1970년에 미국의 석유 생산은 정점을 찍었고, 미국은 점점 더 많은 석유를 수입하기 시작했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 4,
+        "text": "금수 조치는 1974년 3월 종료되었습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1974년 3월 금수 조치가 끝날 때까지 확대되었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C8",
+        "scene": 4,
+        "text": "금수 해제 후에도 높은 유가 수준이 유지되며 세계 경제에 장기적 영향을 미쳤다는 분석이 있습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 1973년 석유 파동",
+        "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "금수 조치는 석유 파동을 일으켜 세계 정치와 세계 경제에 장단기적으로 많은 영향을 미쳤다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 250,
+      "est_seconds": 46.3,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 12.4,
+      "max_scene_similarity": 0.16,
+      "visual_mix": {
+        "steps": 1,
+        "compare": 1,
+        "photo": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 28
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "유가는 배럴당 3달러에서 12달러로 거의 300% 상승했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "유가는 전세계적으로 배럴당 US$3($19/m3)에서 배럴당 거의 $12($75/m3)로 거의 300% 상승했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "1973년 10월 사우디아라비아 파이살 국왕이 이끄는 OAPEC 회원국들이 석유 금수조치를 선언했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1973년 석유 파동은 1973년 10월 사우디아라비아의 파이살 국왕이 이끄는 아랍 석유 수출국 기구(OAPEC) 회원국들이 석유 금수조치를 선언하면서 시작되었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "페르시아만 연안 6개국이 원유 공시 가격을 배럴당 3.01달러에서 5.12달러로 70% 인상한다고 발표했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "원유 공시 가격을 배럴당 3.01 달러에서 5.12 달러로 70% 인상한다고 발표했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "1974년 1월부터 원유 가격을 5.12달러에서 11.65달러로 인상하기로 결정했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1974년 1월부터 원유 가격을 5.12 달러에서 11.65 달러로 인상하기로 결정했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 3,
+      "text": "1970년 미국 석유 생산이 정점을 찍고 수입 의존도가 급격히 높아졌습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1970년에 미국의 석유 생산은 정점을 찍었고, 미국은 점점 더 많은 석유를 수입하기 시작했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 4,
+      "text": "금수 조치는 1974년 3월 종료되었습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1974년 3월 금수 조치가 끝날 때까지 확대되었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C8",
+      "scene": 4,
+      "text": "금수 해제 후에도 높은 유가 수준이 유지되며 세계 경제에 장기적 영향을 미쳤다는 분석이 있습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 1973년 석유 파동",
+      "source_url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "금수 조치는 석유 파동을 일으켜 세계 정치와 세계 경제에 장단기적으로 많은 영향을 미쳤다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-19T16:03:43Z",
+  "pack": {
+    "topic": {
+      "title": "제1차 석유 파동",
+      "wiki_title": "제1차 석유 파동",
+      "category": "에너지자원",
+      "source": "seed",
+      "angle": "누가 이득을 보고 누가 손해를 봤나",
+      "score": 0.7067,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.412
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.65",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7627,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.65,
+          "explore": 0.412
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.65"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 1973년 석유 파동",
+        "url": "https://ko.wikipedia.org/wiki/1973%EB%85%84_%EC%84%9D%EC%9C%A0_%ED%8C%8C%EB%8F%99",
+        "published": "2026-11-14",
+        "fetched_at": "2026-11-19",
+        "text": "1973년 석유 파동은 1973년 10월 사우디아라비아의 파이살 국왕이 이끄는 아랍 석유 수출국 기구(OAPEC) 회원국들이 석유 금수조치를 선언하면서 시작되었다. 금수 조치는 욤키푸르 전쟁 동안 이스라엘을 지원했던 국가들을 대상으로 했다. 초기에는 캐나다, 일본, 네덜란드, 영국 및 미국이었지만 금수 조치는 나중에 포르투갈, 로디지아 및 남아프리카 공화국으로 1974년 3월 금수 조치가 끝날 때까지 확대되었다.유가는 전세계적으로 배럴당 US$3($19/m3)에서 배럴당 거의 $12($75/m3)로 거의 300% 상승했다. 미국 현지의 가격은 훨씬 더 높아졌다. 금수 조치는 석유 파동을 일으켜 세계 정치와 세계 경제에 장단기적으로 많은 영향을 미쳤다.\n\n배경\n\n아랍-이스라엘 분쟁\n1948년 이스라엘이 독립을 선언한 이후 몇몇 전쟁을 포함하여 중동에서 아랍인들과 이스라엘인들 사이에 갈등이 있었다. 2차 아랍-이스라엘 전쟁으로도 알려진 수에즈 위기는 이스라엘의 남부 항구인 에일라트가 이집트에 의해 봉쇄되면서 촉발되었고, 이집트는 프랑스와 영국 투자자들의 소유로 있는 수에즈 운하를 국유화했다. 전쟁의 결과로 수에즈 운하는 1956년에서 1957년 사이에 몇 달 동안 폐쇄되었다.\n\n미국의 원유 생산 감소\n1969년까지 미국의 국내 석유 생산량은 정점에 달했고 증가하는 차량의 수요를 따라잡지 못했다. 미국은 1950년대 후반까지 매년 3억 5천만 배럴(5천 6백만 입방미터)을 수입했는데, 대부분 베네수엘라와 캐나다에서 수입했다. 운송 비용과 관세 때문에 중동에서 석유를 많이 구입한 적이 없었다. 1973년 미국 생산량은 세계 생산량의 16%로 감소했다. 아이젠하워는 1959년과 1973년 사이에 유지되는 외국 석유에 할당량을 부과했다. 비평가들은 이를 \"미국 우선주의\" 정책이라고 불렀다. 일부 학자들은 이 정책이 1970년대 초 미국 국내 석유 생산 감소의 원인이 되었다고 생각했다. 석탄에 비해 석유가 저렴했기 때문에 석탄 산업이 쇠퇴했다. 1951년 미국 에너지의 51%가 석탄에서 발생했고, 1973년까지 미국 산업의 19%만이 석탄을 기반으로 했다.\n1969년 리처드 닉슨이 대통령이 되자 조지 슐츠에게 아이젠하워 시대의 할당제를 검토하는 위원회를 맡겼다. 슐츠 위원회는 할당제를 폐지하고 관세로 대체할 것을 권고했지만, 닉슨은 정치적으로 강력한 반대로 할당제를 유지하기로 결정했다. 1971년 석유 수요가 증가하고 생산량이 감소하면서 닉슨은 석유에 가격 상한선을 두었고, 이로 인해 낮은 가격으로 소비가 촉진되면서 외국 석유 수입에 대한 의존도가 높아졌다. 1973년 닉슨은 할당제 폐지를 발표했다. 1970년부터 1973년 사이 미국의 원유 수입량은 거의 두 배로 증가하여 1973년에는 하루 620만 배럴에 달했다. 1973년까지 풍부한 석유 공급으로 인해 유가는 공시 가격보다 낮게 유지되었다.\n1969년부터 1972년 사이에 석유 수입이 52%나 증가하면서 1970년에 미국의 석유 생산은 정점을 찍었고, 미국은 점점 더 많은 석유를 수입하기 시작했다. 1972년까지 미국의 석유 수입의 83%가 중동에서 수입되었다. 1960년대 내내 석유 1배럴의 가격은 1.80달러에 머물렀고, 이는 실질적으로 유가를 고려한 인플레이션의 영향으로 미국인들이 1959년보다 1969년에 석유에 대한 비용을 덜 지불하면서 10년 동안 점점 더 낮아졌다는 것을 의미한다. 인플레이션에 따라 조정된 1971년에 석유 1배럴의 가격이 2달러까지 오른 후에도 서구 국가의 사람들은 1958년보다 1971년에 석유에 대한 비용을 덜 지불했다. 1945년부터 시작된 번영과 대량 풍요의 \"긴 여름\"은 극도로 낮은 석유 가격 때문이었다.\n\nOPEC\n석유수출국기구(OPEC)는 1960년 9월 14일 바그다드에서 열린 회의에서 5개의 산유국에 의해 설립되었다. OPEC의 설립 멤버는 베네수엘라, 이라크, 사우디아라비아, 이란, 쿠웨이트였다. OPEC은 석유회사들이 유가를 인하한 후 설립되었지만, 1961년과 1972년 사이에 유가는 시장 가격보다 꾸준히 높았다.\n1963년 세븐시스터즈는 OPEC 국가들이 생산하는 석유의 86%를 장악했지만, 1970년에 이르러서는 \"독립 석유 회사\"들의 증가로 그들의 점유율이 77%로 감소했다. 알제리, 리비아, 나이지리아 등 세 곳의 새로운 산유국들의 진출은 1970년까지 81개의 석유 회사들이 중동에서 사업을 하고 있다는 것을 의미했다.\n1960년대 초 리비아, 인도네시아, 카타르가 OPEC에 가입했다. 1970년 리비아와 이라크의 정치적 혼란이 그들의 입지를 강화하기 전까지 OPEC은 일반적으로 효과가 없는 것으로 여겨졌다. 또한 소련의 영향력이 커지면서 산유국들은 시장에 석유를 수송할 수 있는 다른 수단을 갖게 되었다.\n1971년 2월 14일에 체결된 테헤란 가격 협정에 따라 유가가 인상되었고 금에 대한 미국 달러의 가치 하락으로 인해 특정 인플레이션 방지 조치가 제정되었다.\n1971년 8월 15일, 닉슨 대통령은 미국의 금 보유고가 심각하게 고갈되어 인플레이션이 높아지고 달러 강세에 대한 자신감이 떨어지자 행정명령 11615를 발동하여 '금의 창'을 닫았다. 이 조치로 달러는 공개시장을 제외하고는 금으로 직접 바꿀 수 없게 되었고, 곧 '닉슨 쇼크'로 불리게 되어 1976년 브레튼우즈 체제가 붕괴되었다. 석유가 달러로 가격이 매겨졌기 때문에 달러가 금과의 옛 연결고리에서 벗어나기 시작하자 석유 생산국의 실질 소득은 감소했다. 1971년 9월, OPEC은 그때부터 고정된 양의 금으로 가격을 매긴다는 공동 코뮈니케를 발표했다.\n1971년 이후 OPEC은 이러한 가치 하락을 반영하여 가격을 재조정하는 데 더뎠다. 1947년부터 1967년까지 유가는 매년 2% 미만으로 상승했다. 오일 쇼크 이전까지 가격은 다른 통화와 상품에 비해 상당히 안정적이었다. OPEC 장관들은 변화하는 시장 상황에 맞춰 가격을 업데이트할 제도적 장치를 마련하지 않았기 때문에 실질 소득이 뒤떨어졌다. 1973-1974년의 상당한 가격 상승은 금과 같은 상품 측면에서 가격과 그에 상응하는 소득을 이전 수준으로 되돌렸다.\n\n석유 무기화\n1973년 10월 6일 이스라엘과 아랍 세계 국가 간의 제4차 중동 전쟁(욤키푸르 전쟁)이 발발하였다. 이에 따라 석유 수출국 기구(OPEC) 회원국은 이스라엘을 지지하는 캐나다, 일본, 네덜란드, 영국, 미국을 제재하기 위해 가격을 인상하였다. 후에는 포르투갈, 로디지아, 남아프리카 공화국 등으로 제재가 강화되었다.\n10월 16일에는 석유 수출국 기구(OPEC) 회원국 산유국 중 페르시아만 연안 6개국이 원유 공시 가격을 배럴당 3.01 달러에서 5.12 달러로 70% 인상한다고 발표했다. 다음날 10월 17일에는 아랍 석유 수출국 기구(OAPEC)가 원유 생산의 단계적 삭감(석유 전략)을 결정했다. 또한 아랍 석유 수출국 기구(OAPEC) 국가는 10월 20일 이후 이스라엘이 점령지에서 철수할 때까지 이스라엘 지지국에 대한 경제 제재(석유 금수)를 잇따라 결정했다. 또한 12월 23일에는 석유 수출국 기구(OPEC)에 가입한 페르시아만 연안의 산유국 6개국이 1974년 1월부터 원유 가격을 5.12 달러에서 11.65 달러로 인상하기로 결정했다.\n제재 조치는 세계 정치와 세계 경제에 단기 및 장기적으로 많은 영향과 충격을 초래했다. 이 사태는 후에 제1차 석유 파동이라고 불리게 되었으며, 1979년 파동은 제2차 석유 파동으로 불리게 되었다.\n\n금수조치의 실효성\n금수조치는 1973년 10월부터 1974년 3월까지 지속되었다. 11월 6일 카이로에서 열린 정상회담에서 헨리 키신저는 사다트에게 파이살이 어떤 사람인지 물었고 그의 말을 들었다. \"음, 헨리 박사님, 그는 아마도 공산주의와 유대인에 대해 당신과 함께 이야기할 것이다.\" 파이살 왕의 두 가지 큰 증오는 공산주의와 시온주의였는데, 그는 소련과 이스라엘이 함께 이슬람에 반대하는 음모를 꾸미고 있다고 믿었기 때문이다. 파이살 왕이 시온 의정서를 아랍어로 번역한 것을 보았을 때, 그는 즉시 의정서의 진위를 믿었고, 1921년 의정서가 위조로 드러났음에도 불구하고 그가 배운 것에 대해 들을 사람들과 이야기했다.\n1973년 11월 7일, 키신저는 리야드로 날아가 파이살 왕을 만나 아랍-이스라엘 분쟁에 \"공평하게 대처하겠다\"고 약속한 대가로 석유 금수조치를 해제해달라고 요청했다. 그를 태운 비행기가 리야드에 착륙할 준비를 할 때, 키신저는 유대인을 현저하게 싫어했던 단호한 와하브파 파이살과 협상할 가능성에 분명히 긴장했다. 키신저는 파이살 왕이 미국이 이스라엘에 편향돼 있다고 비난하고, 러시아와 이스라엘에서 \"유대인 공산주의자들\"의 악의적인 행동에 대해 장황하게 불평하고, 그를 유혹하려는 키신저의 모든 노력에도 불구하고 석유 금수조치를 종료하기를 거부하면서 고집불통이라는 점을 발견했다. 파이살은 키신저에게 \"미국은 침략에 맞서곤 했다. 당신은 제2차 세계대전과 1956년 수에즈 전쟁에서 그랬다. 1967년 이후에도 미국이 똑같이 했다면, 우리는 이 악화를 보지 못했을 것이다... 유대인 국가가 세워지기 전에는 아랍과 유대인 사이의 좋은 관계를 해칠 것이 없었다. 아랍 국가에는 많은 유대인이 있었다. 스페인에서 유대인들이 박해받았을 때, 아랍인들이 그들을 보호했다. 로마인들이 유대인들을 쫓아냈을 때, 아랍인들이 그들을 보호했다. 얄타에서, 유대인 국가가 있어야 한다고 말한 사람은 스탈린이었다... 이스라엘은 공산주의 목표를 진전시키고 있다... 유대인 신앙을 가진 사람들 중에는 시온주의를 받아들이는 사람들이 있다... 그들은 바로 소련에서 왔다... 그리고 이제, 전 세계적으로, 유대인들은 자신들을 권위 있는 위치에 올려놓고 있다\"라고 말했다. 1974년 2월 22일 파이살 왕은 라호르에서 열린 이슬람 국가들의 두 번째 정상회담을 주재했는데, 그곳에서 그는 1969년 파이살이 주재했던 첫 번째 정상회담과는 달리, 이라크와 시리아는 그 경제를 파괴함으로써 서방을 굴욕시키고 망신을 준 정복한 영웅으로 칭송했다.\n1974년 3월 18일에야 국왕은 자신이 믿었던 사다트가 미국이 더 \"겸손하고 있다\"고 보고하고 키신저가 이전에 이스라엘에 불리하게 사용될 수 있다는 이유로 부인했던 사우디아라비아 무기를 판매하겠다고 약속한 후에야 석유 금수조치를 종료했다. 더 중요한 것은 사우디아라비아가 서방 은행에 수십억 달러를 투자했다는 것이고, 석유 금수조치로 인해 시작된 엄청난 인플레이션은 인플레이션이 그 돈의 가치를 잠식하면서 파이살에게 그 자신이 서방 경제에 입힌 피해를 억제하는 데 도움이 되는 기득권을 주었기 때문이다.\n이스라엘군이 1949년 휴전선으로 철수하지 않았기 때문에, 대다수의 학자들은 금수조치가 실패한 것이라고 믿고 있다. 로이 리클리더는 1988년 저서 \"정치권력과 아랍 석유 무기\"에서 금수조치의 대상이 된 국가들이 아랍과 이스라엘의 분쟁에 대한 정책을 바꾸지 않았기 때문에 금수조치가 실패한 것이라고 결론지었다. 리클리더는 장기적인 변화는 OAPEC 금수조치가 아니라 OPEC의 유가 인상에 의한 것이라고 믿었다. 반면 다니엘 예르긴은 금수조치가 \"국제 경제를 다시 만들었다\"고 말했다. 레이시는 \"파이살 왕의 1973년 10월 20일의 중대한 석유 금수조치는 명시된 목표 중 단 하나도 달성하지 못했다. 미국과 소련이 함께 이스라엘, 시리아, 이집트에 이틀 후에 부과한 휴전은 어떤 경우에도 부과되었을 것이다. 이스라엘은 이전보다 군사적으로 더 나은 장비를 갖춘 미국의 원조 덕분에 10월 전쟁을 끝냈으며, 이스라엘을 1949년 이전 경계 안으로 다시 축소하려는 파이살의 야망은 현재까지도 실현되지 않고 있다. 또한 1973년 첫 10개월 동안 사우디아라비아가 매일 미국에 판매하던 638,500배럴의 석유를 보류하는 것 자체가 미국의 힘을 위태롭게 하거나 정책을 변경하지도 않았다. 사우디아라비아는 미국 하루 원유 소비량 1,700만 배럴의 4% 미만을 차지하고 있었기 때문이다. 파이살의 금수조치가 이를 결정적으로 만든 것은 다른 세력들과의 상호작용이었다. 아랍 정치는 즉각적인 승수효과를 가져왔다.\n이라크와 리비아를 제외한 모든 아랍 국가들이 석유 금수조치에 동참했기 때문에, 중동에서 서방으로의 석유 수출은 1973년 11월까지 60%-70% 감소했다. 일본과 서유럽 국가들은 그들의 석유의 약 75%를 중동으로부터 수입했고, 레이시는 \"절체되는 공급을 위해 필사적으로 경쟁하면서, 소비자들은 그들의 석유를 위해 비할 데 없는 돈을 기꺼이 지불할 의사가 있음을 보여주었다\"고 언급하면서 금수조치는 즉각적이고 급격한 가격 상승으로 이어졌다. 사우디아라비아는 세계 석유 매장량의 25%를 보유하고 있었고, 미국에 부과된 금수조치는 미국의 석유 부족으로 이어졌고, 이는 미국 시장의 새로운 고유가가 금수조치를 적용받지 않는 국가들의 석유 가격을 급등시킴에 따라 인플레이션 소용돌이를 일으켰다. 1973년 12월 16일 이란 국영 석유회사가 경매를 열었을 때, 석유 1배럴당 약 17달러에 대한 입찰이 이루어졌다. 1973년 12월 말, OPEC은 비엔나에서 회의를 개최하여 1배럴의 석유 가격이 1배럴당 5달러에서 11.65달러로 결정되었다고 발표했다.",
+        "lang": "ko",
+        "wiki_title": "1973년 석유 파동",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — 1973 oil crisis",
+        "url": "https://en.wikipedia.org/wiki/1973_oil_crisis",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-19",
+        "text": "In October 1973, the Organization of Arab Petroleum Exporting Countries (OAPEC) announced that it was implementing a total oil embargo against countries that had supported Israel at any point during the 1973 Yom Kippur War, which began after Egypt and Syria launched a large-scale surprise attack in an ultimately unsuccessful attempt to recover the territories that they had lost to Israel during the 1967 Six-Day War.\nIn an effort that was led by Faisal of Saudi Arabia, the initial countries that OAPEC targeted were Canada, Japan, the Netherlands, the United Kingdom, and the United States. This list was later expanded to include Portugal, Rhodesia, and South Africa.\nIn March 1974, OAPEC lifted the embargo, but the price of oil had risen by nearly 300%: from US$3/barrel to nearly US$12/barrel globally. Prices in the United States were significantly higher than the global average. After it was implemented, the embargo caused an oil crisis, or \"shock\", with many short- and long-term effects on the global economy as well as on global politics. The 1973 embargo later came to be referred to as the first oil shock. A second oil shock occurred in 1979 in the aftermath of the Iranian Revolution.\n\nBackground\n\nArab-Israeli conflict\nFollowing the Israeli Declaration of Independence in 1948, there has been conflict between Arabs and Israelis in the Middle East, including several wars. The Suez Crisis, also known as the Second Arab–Israeli war, was sparked by Israel's southern port of Eilat being blocked by Egypt, which also nationalized the Suez Canal belonging to French and British investors. As a result of the war, the Suez Canal was closed for several months between 1956 and 1957.\nThe Six-Day War of 1967 included an Israeli invasion of the Egyptian Sinai Peninsula, which resulted in Egypt closing the Suez Canal for eight years. Following the Yom Kippur War, the canal was cleared in 1974 and opened again in 1975. OAPEC countries cut production of oil and placed an embargo on oil exports to the United States after Richard Nixon requested $2.2 billion to support Israel's war effort. Nevertheless, the embargo lasted only until January 1974, though the price of oil remained high afterwards.\n\nAmerican oil production decline\nBy 1969, American domestic production of oil was peaking and could not keep pace with increasing demand from vehicles. The US was importing 350 million barrels (56 million cubic metres) per year by the late 1950s, mostly from Venezuela and Canada. Because of transportation costs and tariffs, it never purchased much oil from the Middle East. In 1973, US production had declined to 16% of global output. \nEisenhower imposed quotas on foreign oil that would stay in place between 1959 and 1973.\nCritics called it the \"drain America first\" policy. Some scholars believe the policy contributed to the decline of domestic US oil production in the early 1970s. \nThe cheapness of oil compared with coal led to the decline of the coal industry. In 1951, 51% of the United States' energy came from coal, and by 1973, only 19% of American industry was coal-based. The decline in domestic oil production, combined with the country's increasing reliance on oil as a source of power, made the US economy vulnerable to a foreign oil embargo.\nWhen Richard Nixon became US president in 1969, he assigned George Shultz to head a committee to review the Eisenhower-era quota program. Shultz's committee recommended that the quotas be abolished and replaced with tariffs, but Nixon decided to keep the quotas due to vigorous political opposition. \nNixon imposed a price ceiling on oil in August 1971 as demand for oil was increasing and production was declining, which increased dependence on oil imports as consumption was bolstered by low prices. \nIn 1973, Nixon announced the end of the quota system. Between 1970 and 1973 US imports of crude oil had nearly doubled, reaching 6.2 million barrels per day in 1973. Until 1973, an abundance of oil supply had kept the market price of oil lower than the posted price.\nIn 1970, American oil production peaked and the United States began to import more oil. Oil imports rose by 52% between 1969 and 1972. By 1972, 83% of the American oil imports came from the Middle East. Throughout the 1960s, the price for a barrel of oil remained at $1.80, meaning that with the effects of inflation considered the price of oil in real terms got progressively lower throughout the decade, with Americans paying less for oil in 1969 than they had in 1959. Even after a price for a barrel of oil rose to $2.00 in 1971, adjusted for inflation, people in the Western nations were paying less for oil in 1971 than they had in 1958. The extremely low price of oil served as the basis for the \"long summer\" of prosperity and mass affluence that began in 1945.\n\nOPEC\nThe Organization of Petroleum Exporting Countries (OPEC), was founded by five oil producing countries at a Baghdad conference on 14 September 1960. The five founding members of OPEC were Venezuela, Iraq, Saudi Arabia, Iran and Kuwait. OPEC was organized after the oil companies slashed the posted price of oil, but the posted price of oil remained consistently higher than the market price of oil between 1961 and 1972.\nIn 1963, the Seven Sisters controlled 86% of the oil produced by OPEC countries, but by 1970 the rise of \"independent oil companies\" had decreased their share to 77%. The entry of three new oil producers—Algeria, Libya and Nigeria—meant that by 1970, 81 oil companies were doing business in the Middle East.\nIn the early 1960s Libya, Indonesia and Qatar joined OPEC. OPEC was generally regarded as ineffective until political turbulence in Libya and Iraq strengthened their position in 1970. Additionally, increasing Soviet influence provided oil producing countries with alternative means of transporting oil to markets.\nUnder the Tehran Price Agreement of 1971, signed on 14 February, the posted price of oil was increased and, due to a decline in the value of the US dollar relative to gold, certain anti-inflationary measures were enacted.\nA severe drain on US gold reserves lead to higher inflation and lack of confidence in the strength of the dollar, President Nixon issued Executive Order 11615 on August 15, 1971, which closed the gold window. This action made the dollar inconvertible to gold directly, except on the open market, and was soon dubbed the Nixon Shock, leading eventually to the collapse of the Bretton Woods system in 1976.",
+        "lang": "en",
+        "wiki_title": "1973 oil crisis",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:U.S. gas rationing stamps 1974.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/U.S._gas_rationing_stamps_1974.jpg/1920px-U.S._gas_rationing_stamps_1974.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/U.S._gas_rationing_stamps_1974.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:U.S._gas_rationing_stamps_1974.jpg",
+        "width": 4498,
+        "height": 2999,
+        "license": "Public domain",
+        "artist": "Warren K. Leffler, U.S. News & World Report Magazine",
+        "caption": "Gas ration stamps being printed as a result of the 1973 oil crisis, U.S. Bureau of Engraving & Printing.",
+        "id": "P1"
+      },
+      {
+        "file": "File:King Faisal of Saudi Arabia - Flickr - The Central Intelligence Agency.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/King_Faisal_of_Saudi_Arabia_-_Flickr_-_The_Central_Intelligence_Agency.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/King_Faisal_of_Saudi_Arabia_-_Flickr_-_The_Central_Intelligence_Agency.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:King_Faisal_of_Saudi_Arabia_-_Flickr_-_The_Central_Intelligence_Agency.jpg",
+        "width": 1818,
+        "height": 4563,
+        "license": "Public domain",
+        "artist": "The Central Intelligence Agency",
+        "caption": "King Faisal of Saudi Arabia. From the booklet \"President Nixon and the Role of Intelligence in the 1973 Arab-Israeli War.\" For more information, visit www.cia.g",
+        "id": "P2"
+      },
+      {
+        "file": "File:Libyan Oil Facility - Flickr - The Central Intelligence Agency.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Libyan_Oil_Facility_-_Flickr_-_The_Central_Intelligence_Agency.jpg/1920px-Libyan_Oil_Facility_-_Flickr_-_The_Central_Intelligence_Agency.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Libyan_Oil_Facility_-_Flickr_-_The_Central_Intelligence_Agency.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Libyan_Oil_Facility_-_Flickr_-_The_Central_Intelligence_Agency.jpg",
+        "width": 3892,
+        "height": 2780,
+        "license": "Public domain",
+        "artist": "The Central Intelligence Agency",
+        "caption": "A Libyan oil facility. Libya was one of the Organization of Arab Petroleum Exporting Countries (OAPEC) that embargoed the sale of oil to the U.S. from October 1",
+        "id": "P3"
+      },
+      {
+        "file": "File:Huurfietsen worden aangeboden, Bestanddeelnr 926-7971.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Huurfietsen_worden_aangeboden%2C_Bestanddeelnr_926-7971.jpg/1920px-Huurfietsen_worden_aangeboden%2C_Bestanddeelnr_926-7971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Huurfietsen_worden_aangeboden%2C_Bestanddeelnr_926-7971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Huurfietsen_worden_aangeboden,_Bestanddeelnr_926-7971.jpg",
+        "width": 3709,
+        "height": 2442,
+        "license": "CC0",
+        "artist": "Anefo",
+        "caption": "Collectie / Archief : Fotocollectie Anefo Reportage / Serie : Gevolgen van de aanstaande autoloze zondag (op 4 november 1973) Beschrijving : Huurfietsen worden ",
+        "id": "P4"
+      },
+      {
+        "file": "File:Huurfietsen worden aangeboden, Bestanddeelnr 926-7972.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Huurfietsen_worden_aangeboden%2C_Bestanddeelnr_926-7972.jpg/1920px-Huurfietsen_worden_aangeboden%2C_Bestanddeelnr_926-7972.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Huurfietsen_worden_aangeboden%2C_Bestanddeelnr_926-7972.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Huurfietsen_worden_aangeboden,_Bestanddeelnr_926-7972.jpg",
+        "width": 3709,
+        "height": 2442,
+        "license": "CC0",
+        "artist": "Anefo",
+        "caption": "Collectie / Archief : Fotocollectie Anefo Reportage / Serie : Gevolgen van de aanstaande autoloze zondag (op 4 november 1973) Beschrijving : Huurfietsen worden ",
+        "id": "P5"
+      },
+      {
+        "file": "File:Tweedehands fietsen worden te koop aangeboden, Bestanddeelnr 926-7968.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Tweedehands_fietsen_worden_te_koop_aangeboden%2C_Bestanddeelnr_926-7968.jpg/1920px-Tweedehands_fietsen_worden_te_koop_aangeboden%2C_Bestanddeelnr_926-7968.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Tweedehands_fietsen_worden_te_koop_aangeboden%2C_Bestanddeelnr_926-7968.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Tweedehands_fietsen_worden_te_koop_aangeboden,_Bestanddeelnr_926-7968.jpg",
+        "width": 3723,
+        "height": 2479,
+        "license": "CC0",
+        "artist": "Fotograaf Onbekend / Anefo",
+        "caption": "Collectie / Archief : Fotocollectie Anefo Reportage / Serie : Gevolgen van de aanstaande autoloze zondag (op 4 november 1973) Beschrijving : Tweedehands fietsen",
+        "id": "P6"
+      },
+      {
+        "file": "File:Olietanks in de Amsterdamse haven op de voorgrond een binnenvaartschip, Bestanddeelnr 926-7985.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Olietanks_in_de_Amsterdamse_haven_op_de_voorgrond_een_binnenvaartschip%2C_Bestanddeelnr_926-7985.jpg/1920px-Olietanks_in_de_Amsterdamse_haven_op_de_voorgrond_een_binnenvaartschip%2C_Bestanddeelnr_926-7985.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Olietanks_in_de_Amsterdamse_haven_op_de_voorgrond_een_binnenvaartschip%2C_Bestanddeelnr_926-7985.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Olietanks_in_de_Amsterdamse_haven_op_de_voorgrond_een_binnenvaartschip,_Bestanddeelnr_926-7985.jpg",
+        "width": 3709,
+        "height": 2442,
+        "license": "CC0",
+        "artist": "Fotograaf Onbekend / Anefo",
+        "caption": "Collectie / Archief : Fotocollectie Anefo Reportage / Serie : Beelden in samenhang met de oliecrisis Beschrijving : Olietanks in de Amsterdamse haven; op de voo",
+        "id": "P7"
+      },
+      {
+        "file": "File:De borden boven de winkelpaden, Bestanddeelnr 926-8842.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/De_borden_boven_de_winkelpaden%2C_Bestanddeelnr_926-8842.jpg/1920px-De_borden_boven_de_winkelpaden%2C_Bestanddeelnr_926-8842.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/De_borden_boven_de_winkelpaden%2C_Bestanddeelnr_926-8842.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:De_borden_boven_de_winkelpaden,_Bestanddeelnr_926-8842.jpg",
+        "width": 2426,
+        "height": 3665,
+        "license": "CC0",
+        "artist": "Rob Croes for Anefo",
+        "caption": "Collectie / Archief : Fotocollectie Anefo Reportage / Serie : Anti-hamsterborden \"doe gewoon, koop de artikelen en hoeveelheden die u normaal gewend bent\" in ee",
+        "id": "P8"
+      },
+      {
+        "file": "File:Bord met extra treinen, Bestanddeelnr 926-9173.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Bord_met_extra_treinen%2C_Bestanddeelnr_926-9173.jpg/1920px-Bord_met_extra_treinen%2C_Bestanddeelnr_926-9173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Bord_met_extra_treinen%2C_Bestanddeelnr_926-9173.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Bord_met_extra_treinen,_Bestanddeelnr_926-9173.jpg",
+        "width": 3665,
+        "height": 2426,
+        "license": "CC0",
+        "artist": "Fotograaf Onbekend / Anefo",
+        "caption": "Collectie / Archief : Fotocollectie Anefo Reportage / Serie : Centraal Station Amsterdam wordt voorbereid op te verwachten drukte met het oog op de komende benz",
+        "id": "P9"
+      },
+      {
+        "file": "File:1973 Events montage 16-grid version.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/1973_Events_montage_16-grid_version.jpg/1920px-1973_Events_montage_16-grid_version.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/1973_Events_montage_16-grid_version.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:1973_Events_montage_16-grid_version.jpg",
+        "width": 4096,
+        "height": 3701,
+        "license": "CC BY 4.0",
+        "artist": "From a variety of images credited above.",
+        "caption": "16 major events of 1973. From top to bottom, left to right: Skylab Mariner 10 Yom Kippur War Paris Peace Accords Comet Kohoutek Pioneer 10 / Jupiter 1973 oil cr",
+        "id": "P10"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-19T16:02:38Z"
+  }
+}

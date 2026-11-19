@@ -1,0 +1,715 @@
+{
+  "id": "chcafc50-20261120-01-f664a",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-19T16:01:23Z",
+  "topic": {
+    "title": "포항제철소",
+    "wiki_title": "포항제철소",
+    "category": "제조산업",
+    "source": "seed",
+    "angle": "돈으로 환산하면 얼마나 큰 일인가",
+    "score": 0.6635,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.291
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29 · 자극 0.35",
+    "evidence": 0.867,
+    "rescored": {
+      "score": 0.7009,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.867,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.87 · 성과prior 0.50(n=0) · 탐색 0.29 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-19T16:01:23Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-19T16:01:23Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-19T16:01:45Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-19T16:02:15Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "number_gap",
+      "first_line": "세계은행은 포항제철을 경제성 없다고 봤습니다",
+      "screen_text": "세계은행 '불가' 판정",
+      "title": "세계은행이 거부한 사업, 청구권 자금으로 돌파",
+      "promise": "차관단 거절 뒤 대일 청구권 자금 5080만 달러를 제철소에 쓴 내막을 확인하세요",
+      "evidence_quote": "세계은행의 한국 담당자인 영국인 자페가 포철을 경제성이 없다고 판단한 것이 치명적인 약점으로 작용했다",
+      "eval": {
+        "score": 0.997,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.97,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "number_gap",
+        "first_line": "세계은행은 포항제철을 경제성 없다고 봤습니다",
+        "screen_text": "세계은행 '불가' 판정",
+        "title": "세계은행이 거부한 사업, 청구권 자금으로 돌파",
+        "promise": "차관단 거절 뒤 대일 청구권 자금 5080만 달러를 제철소에 쓴 내막을 확인하세요",
+        "evidence_quote": "세계은행의 한국 담당자인 영국인 자페가 포철을 경제성이 없다고 판단한 것이 치명적인 약점으로 작용했다",
+        "eval": {
+          "score": 0.997,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "포스코가 세운 대학이 세계 1위 젊은 대학 됐습니다",
+        "screen_text": "POSTECH 설립 비화",
+        "title": "석탄·기계는 수입해도 인재는 못 산다, 포스텍 탄생",
+        "promise": "박태준이 제철소 이익으로 세운 포스텍이 2012·2013년 THE '100세 미만 대학' 1위 된 배경을 알려드립니다",
+        "evidence_quote": "Park founded the Pohang University of Science and Technology (POSTECH) in 1986... In 2012 and 2013, the Times Higher Education ranked POSTECH 1st in their '100 Under 50 Young Universities' rankings",
+        "eval": {
+          "score": 0.997,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "일본 3대 제철 기업이 기술 다 넘겨줬습니다",
+        "screen_text": "일본 3사 기술 공여",
+        "title": "야하타·후지·일본강관, 왜 기술을 다 줬나",
+        "promise": "일본 최대 철강 3사가 환경문제와 판매처 확보 위해 포항에 기술을 넘긴 이유를 설명합니다",
+        "evidence_quote": "당시 세계 톱클래스의 일본기업 3사, 야하타제철(현. 일본제철)과 후지제철(현. 일본제철), 일본강관(현. JFE홀딩스)의 기술 공여로 급속히 발전했다",
+        "eval": {
+          "score": 0.9968,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "정부 출자 2205억 원이 연산 4200만 톤 만들었습니다",
+        "screen_text": "정부 총출자 2205억",
+        "title": "정부 2205억 투자로 세계 7위 철강 기업 탄생",
+        "promise": "현금 2341억·청구권 5080만 달러·현물 150억, 총 2205억 출자의 수익 규모를 따져봅니다",
+        "evidence_quote": "정부는 이후에도 1968년부터 1992년까지 현금출자 2341억 원, 대일청구권 자금 128억 원(5,080만 달러), 현물출자 150억 원 합계 2,205억 원을 출자하였다",
+        "eval": {
+          "score": 0.9673,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "포항제철 시작 자본금이 4억 원이었습니다",
+        "screen_text": "자본금 4억 원",
+        "title": "자본금 4억으로 시작한 세계 7위 제철소",
+        "promise": "설립 자본금 4억 원이 4200만 톤 제철소로 커진 과정을 숫자로 보여드립니다",
+        "evidence_quote": "대한민국 정부가 3억 원(75%), 대한중석이 1억 원(25%)을 출자하여 1968년 4월 1일에 설립자본금 4억 원으로 설립된",
+        "eval": {
+          "score": 0.9408,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "일본은 청구권 자금으로 설비·인력 10년 분할 제공했습니다",
+        "screen_text": "청구권 10년 분할 제공",
+        "title": "대일 청구권 자금, 현금 대신 '일본산 설비·인력'으로 받았다",
+        "promise": "8000만 달러 청구권 자금이 일본 제품·기술자 10년 분할 공급으로 바뀐 계약 구조를 공개합니다",
+        "evidence_quote": "대일 청구권 자금은 10년간 분할하여 일본의 생산물과 인력을 대신 제공하는 것이었기에 일본 정부와의 사전 합의는 필수적이었다",
+        "eval": {
+          "score": 0.8234,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "세계은행 '불가' 뒤집은 5080만 달러",
+    "target_seconds": 35,
+    "category": "제조산업",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "세계은행은 포항제철을 경제성 없다고 봤습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "불가 판정",
+          "small": "세계은행 자페 평가"
+        },
+        "claims": [
+          {
+            "text": "세계은행 한국 담당자 자페가 포항제철 경제성 없다고 판단함",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "당시 세계은행의 한국 담당자인 영국인 자페가 포철을 경제성이 없다고 판단한 것이 치명적인 약점으로 작용했다"
+          }
+        ]
+      },
+      {
+        "narration": "차관단 케이아이에스에이가 1969년까지 자금을 주지 않자 박태준은 미국으로 갔습니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "KISA 차관 조달 실패 후 박태준이 미국으로 가서 자금 모색",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "결국 KISA로부터 차관을 조달하는 데 실패하였다. 내심 미안했던 포이 측의 배려로 박태준은 하와이의 고급콘도에서 휴식을 보내게 되었다"
+          }
+        ]
+      },
+      {
+        "narration": "남은 대일 청구권 자금 5080만 달러를 제철소에 쓰기로 일본과 합의했습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "5080만 달러",
+          "small": "대일 청구권 자금 투입"
+        },
+        "claims": [
+          {
+            "text": "대일 청구권 자금 128억 원(5080만 달러)을 제철소 건립에 유용 합의",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "대일청구권 자금 128억 원(5,080만 달러), 현물출자 150억 원 합계 2,205억 원을 출자하였다"
+          }
+        ]
+      },
+      {
+        "narration": "일본은 10년간 분할 제공으로 설비와 인력을 지원했고 1973년 조업 시작했습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "자금·기술 확보 과정",
+          "items": [
+            "청구권 자금 합의",
+            "일본 설비·인력 제공",
+            "1973년 조업 개시"
+          ]
+        },
+        "claims": [
+          {
+            "text": "대일 청구권 자금은 10년간 분할하여 일본 생산물과 인력 제공 방식",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "대일 청구권 자금은 10년간 분할하여 일본의 생산물과 인력을 대신 제공하는 것이었기에 일본 정부와의 사전 합의는 필수적이었다"
+          },
+          {
+            "text": "1973년 포항제철 조업 개시",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1973년 포항시에서 조업 개시"
+          }
+        ]
+      },
+      {
+        "narration": "초기 연산 103만 톤에서 1981년 850만 톤으로 8배 늘렸습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "조강 생산능력 확대",
+          "a": {
+            "label": "1973년",
+            "value": 103.2
+          },
+          "b": {
+            "label": "1981년",
+            "value": 850
+          },
+          "unit": "만 톤"
+        },
+        "claims": [
+          {
+            "text": "조강 기준 연산 103.2만 톤 규모로 1973년 준공",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "조강기준 연산 103.2만t 규모의 포항종합제철은 1973년 7월 3일에 준공식을 거행하였다"
+          },
+          {
+            "text": "1981년 2월 제4기 확장 준공으로 연산 850만 톤 달성",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1981년 2월에는 조강기준 연산 850만t 규모의 제4기 설비확장공사를 준공했다"
+          }
+        ]
+      },
+      {
+        "narration": "세계은행의 '불가'를 뒤집고 한국 중화학공업의 기반이 된 포항제철소입니다.",
+        "visual": {
+          "type": "text",
+          "headline": "불가에서 기반으로",
+          "sub": "한국 제조업의 출발점"
+        },
+        "claims": [
+          {
+            "text": "포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재였다"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "세계은행 한국 담당자 자페가 포항제철 경제성 없다고 판단함",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "당시 세계은행의 한국 담당자인 영국인 자페가 포철을 경제성이 없다고 판단한 것이 치명적인 약점으로 작용했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "KISA 차관 조달 실패 후 박태준이 미국으로 가서 자금 모색",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "결국 KISA로부터 차관을 조달하는 데 실패하였다. 내심 미안했던 포이 측의 배려로 박태준은 하와이의 고급콘도에서 휴식을 보내게 되었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "대일 청구권 자금 128억 원(5080만 달러)을 제철소 건립에 유용 합의",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "대일청구권 자금 128억 원(5,080만 달러), 현물출자 150억 원 합계 2,205억 원을 출자하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "대일 청구권 자금은 10년간 분할하여 일본 생산물과 인력 제공 방식",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "대일 청구권 자금은 10년간 분할하여 일본의 생산물과 인력을 대신 제공하는 것이었기에 일본 정부와의 사전 합의는 필수적이었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "1973년 포항제철 조업 개시",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1973년 포항시에서 조업 개시",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 4,
+        "text": "조강 기준 연산 103.2만 톤 규모로 1973년 준공",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "조강기준 연산 103.2만t 규모의 포항종합제철은 1973년 7월 3일에 준공식을 거행하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 4,
+        "text": "1981년 2월 제4기 확장 준공으로 연산 850만 톤 달성",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "1981년 2월에는 조강기준 연산 850만t 규모의 제4기 설비확장공사를 준공했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C8",
+        "scene": 5,
+        "text": "포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 포스코",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "checked_at": "2026-11-19",
+        "quote": "포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 241,
+      "est_seconds": 44.6,
+      "scenes": 6,
+      "avg_new_tokens_per_scene": 8.7,
+      "max_scene_similarity": 0.18,
+      "visual_mix": {
+        "text": 1,
+        "compare": 1,
+        "steps": 1,
+        "photo": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "세계은행 한국 담당자 자페가 포항제철 경제성 없다고 판단함",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "당시 세계은행의 한국 담당자인 영국인 자페가 포철을 경제성이 없다고 판단한 것이 치명적인 약점으로 작용했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "KISA 차관 조달 실패 후 박태준이 미국으로 가서 자금 모색",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "결국 KISA로부터 차관을 조달하는 데 실패하였다. 내심 미안했던 포이 측의 배려로 박태준은 하와이의 고급콘도에서 휴식을 보내게 되었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "대일 청구권 자금 128억 원(5080만 달러)을 제철소 건립에 유용 합의",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "대일청구권 자금 128억 원(5,080만 달러), 현물출자 150억 원 합계 2,205억 원을 출자하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "대일 청구권 자금은 10년간 분할하여 일본 생산물과 인력 제공 방식",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "대일 청구권 자금은 10년간 분할하여 일본의 생산물과 인력을 대신 제공하는 것이었기에 일본 정부와의 사전 합의는 필수적이었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "1973년 포항제철 조업 개시",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1973년 포항시에서 조업 개시",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 4,
+      "text": "조강 기준 연산 103.2만 톤 규모로 1973년 준공",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "조강기준 연산 103.2만t 규모의 포항종합제철은 1973년 7월 3일에 준공식을 거행하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 4,
+      "text": "1981년 2월 제4기 확장 준공으로 연산 850만 톤 달성",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "1981년 2월에는 조강기준 연산 850만t 규모의 제4기 설비확장공사를 준공했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C8",
+      "scene": 5,
+      "text": "포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 포스코",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+      "published": "2026-11-14",
+      "checked_at": "2026-11-19",
+      "quote": "포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-19T16:02:15Z",
+  "pack": {
+    "topic": {
+      "title": "포항제철소",
+      "wiki_title": "포항제철소",
+      "category": "제조산업",
+      "source": "seed",
+      "angle": "돈으로 환산하면 얼마나 큰 일인가",
+      "score": 0.6635,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.291
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.29 · 자극 0.35",
+      "evidence": 0.867,
+      "rescored": {
+        "score": 0.7009,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.867,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.291
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.87 · 성과prior 0.50(n=0) · 탐색 0.29 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 포스코",
+        "url": "https://ko.wikipedia.org/wiki/%ED%8F%AC%EC%8A%A4%EC%BD%94",
+        "published": "2026-11-14",
+        "fetched_at": "2026-11-19",
+        "text": "주식회사 포스코(POSCO, Pohang Iron and Steel Co., Ltd.)는 대한민국의 철강 회사이다. 본사는 경상북도 포항시 남구 동해안로 6261 (괴동동)에 위치에 있으며 1965년 한일기본조약에 따른 일본정부로부터 우리정부에 대한 경제원조자금(ODA) 등을 통한 자본을 바탕으로 박정희 대통령의 주선으로 1968년 설립, 1973년 포항시에서 조업 개시. 당시 세계 톱클래스의 일본기업 3사, 야하타제철(현. 일본제철)과 후지제철(현. 일본제철), 일본강관(현. JFE홀딩스)의 기술 공여로 급속히 발전했다.\n현재 포스코는 포항시와 광양시에 2곳의 일관 제철소가 있으며, 일본의 오사카부의 물류센터와 미국 캘리포니아주 피츠버그시에 US 스틸과 1986년 4월 1일 합작 법인으로 설립한 냉연 단순압연 법인인 UPI(USS-POSCO Industries)가 있다. 이 밖에도 중국 강소성 장가항에 중국 사강그룹(沙钢集团)과 합작으로 1997~2006년, 3단계로 완공한 스테인리스 스틸 일관 제철소인 장가항포항불수강(張家港浦項不銹鋼有限公司) 등이 있다.\n\n명칭\n초창기 한글 공식 회사명은 포항종합제철주식회사 영어 공식 회사명은 Pohang Iron and Steel Co., Ltd였는데 외국에서는 1970년대부터 약칭하여 POSCO로 호칭되었다.\n그 후 2002년 3월 '포항종합제철주식회사'라는 사명에서 '주식회사 포스코(POSCO)'로 변경되었다\n\n역사\n창립기\n대한민국 정부에서는 제2차 경제개발계획 기간(1967년~1971년)에 즈음하여, 철강공업의 다각적인 전략성이 인정되기 시작하면서 장기적인 철강공업 육성계획이 수립되었다. 이에 따라, 1963년에 5개국 8개사의 연합체인 대한국제제철차관단 (Korea International Steel Associates, KISA)이 결성되어 1968년까지 예비협정, 기본협정, 추가협정의 3차례에 걸쳐 협상이 이루어졌다. KISA와의 협상이 진행되면서 1967년 7월에는 포항이 제철소의 입지로 결정되었고 같은 해 9월에는 대한중석이 종합제철사업의 주체로 선정되었다. 이어 1968년 4월 1일에 대한중석을 모태로 하여 포항제철이 창립되었다.\n대한민국 정부가 3억 원(75%), 대한중석이 1억 원(25%)을 출자하여 1968년 4월 1일에 설립자본금 4억 원으로 설립된 포항종합제철 주식회사는 국영으로 운영되었다. 박태준은 대한중석에서의 성공을 바탕으로 창업 인력 39명과 함께 포항종합제철 주식회사의 창업식을 서울 명동 유네스코 회관에서 개최했다. 하지만 당시 포철이 정상화되기까지는 많은 난관들이 가로놓여 있었다. 제철소를 건설하기 위한 자금은 KISA에 기대하고 있었지만 그해가 다 가도록 제대로 된 자금 지원이 이루어지지 않았다. 당시 세계은행의 한국 담당자인 영국인 자페가 포철을 경제성이 없다고 판단한 것이 치명적인 약점으로 작용했다. 결국 견디다 못한 박태준은 1969년 1월 KISA의 모기업인 코퍼스의 포이 회장을 만나기 위해 미국으로 갔다. 밤늦은 시각까지 포이에게 한국의 상황과 제철소의 필요성을 이야기했지만 사업적인 면에서 단호했던 포이 앞에 결국 좌절할 수밖에 없었다. 결국 KISA로부터 차관을 조달하는 데 실패하였다. 내심 미안했던 포이 측의 배려로 박태준은 하와이의 고급콘도에서 휴식을 보내게 되었다. 이 휴식 기간 동안 박태준은 포철 건설에 관한 자금을 동원할 아이디어를 떠올릴 수 있었는데 그것은 대일 청구권 자금이었다. 당시 8천만 달러 정도의 대일 청구권 자금이 남아 있었고, 일본은 자금을 제공하면서 돈의 용처를 명시해뒀으나 그것을 바꿀 수 있다면 문제는 쉽게 해결될 수 있었다. 그 후 박태준은 일본 정부와 합의한 끝에 자금을 제철소 설립에 유용할 수 있게 만들었다.\n당시 일본 정부는 미국 주도의 KISA가 붕괴하면서 본인들이 주도권을 잡을 수 있다고 보았고, 제철소로 인한 환경공해 문제가 사회적인 이슈가 되어 철강공업설비를 판매할 크고 안정적이며 중장기적인 프로젝트가 필요하였다. 또한 꾸준히 기술을 축적해온 한국의 의지가 단호하다고 판단했기에 자금을 제철소 건립에 유용하는 것을 동의하였다. 대일 청구권 자금은 10년간 분할하여 일본의 생산물과 인력을 대신 제공하는 것이었기에 일본 정부와의 사전 합의는 필수적이었다.\n설립 당시 자금을 지원해 주었던 은행이 한일은행이었다. 이러한 인연으로, 현재도 포스코의 주거래 은행은 우리은행이다.\n정부는 이후에도 1968년부터 1992년까지 현금출자 2341억 원, 대일청구권 자금 128억 원(5,080만 달러), 현물출자 150억 원 합계 2,205억 원을 출자하였다. 조강기준 연산 103.2만t 규모의 포항종합제철은 1973년 7월 3일에 준공식을 거행하였다. 포항종합제철은 박정희 정권이 추진한 중화학공업의 상징적 존재였다.\n\n포철의 발전\n철강 일관작업 형태의 포항제철은 1976년 5월 제2기 설비확장공사를 준공, 조강기준 연산 260만t 규모로 확대되었으며 1978년 12월에는 조강기준 연산 550만t 규모의 제3기 설비확장공사를 준공했다. 1981년 2월에는 조강기준 연산 850만t 규모의 제4기 설비확장공사를 준공했는데, 제3기 준공 당시 철강수요의 지속적인 증가추세 전망으로 제2제철공장의 건설계획이 수립·추진되었다. 1987년 5월 조강기준 연산 270만t 규모의 광양 제1기 설비공사가 완공되었고 1988년 10월에는 동일규모의 제2기 설비공사가 준공되었다. 포항종합제철은 포항의 일관제철소에 이은 광양에 제1·2기 설비를 완공·가동시키고 있어 설비능력의 확대에 주도적 역할을 하였다. 포철은 현재 진행하고 있는 조강기준 연산 270만t 규모의 광양 제3기 설비확장사업을 1990년 중에 완공한 후 조강기준 연산 330만t 규모의 광양 제3기 설비확장 사업을 1990년 중에 완공한 후 조강기준 연산 330만t 규모의 제4기 설비확장 사업이 1992년 완공되어 조강자급률을 더욱 증가시켰다.\n포항제철은 1994년 3월에 김만제 전 부총리를 4대 회장으로, 김종진 부사장을 7대 사장으로 선임함으로써 창립 후 처음으로 외부 인사에 의한 최고경영진을 구성하였다. 김만제 회장의 취임을 계기로 포항제철은 경영 전반에 걸쳐 본격적인 체제변환기를 맞이하였다. 김만제는 1994년 4월의 창립 26주년 기념사에서 조직의 유연성, 민주성, 투명성에 입각한 \"녹색경영철학\"을 제창하였다.\n\n민영화, 그 이후의 포스코\n1998년 7월 3일에 정부는 정부 및 산업은행 보유지분 26.7%를 1인당 3% 한도로 내외국인에게 분산 매각하는 방안을 발표하였다. 이후 정부 및 산업은행 보유지분이 여러차례 분할하여 매각되었다. 2000년 10월에 산업은행이 보유하고 있던 지분 36%를 매각하여 완전히 민영화되었다. 2002년에 명칭을 포항종합제철주식회사에서 포스코로 변경하였다. 2003년에 부임한 이구택 회장은 4년간 매출액과 영업이익을 각각 71%, 112% 높이고, 주가도 2003년 3월에 99,000원대에서 2007년 기준으로 30만 원을 훌쩍 넘겨 놓았다. 또한 2006년부터 철광석 산지인 인도에서 유례없는 국외 제철소 건립을 추진 중이었던 그는 포스코를 세계 속의 기업으로 바꿔놓았다는 평을 듣고 있었다.\n뉴욕(1994년 상장), 런던(1995년 상장), 도쿄(2006년 상장) 증권시장에도 포스코 주식이 상장되어 있다. 포스코에 대하여 2007년 아르셀로 미탈 그룹이 적대적 인수합병을 시도하여, 포스코가 경영권의 방어를 위하여 약 1조 원에 달하는 돈을 소비하면서 자사주를 매입하였다. 결국 아르셀로 미탈의 적대적 합병시도는 성공하지 못하였으나, 포스코는 당시 합병 시도가 가능하였던 것은 외국인 지분이 60%를 상회하였기 때문이라고 판단하여, 우호주식을 확보하기 위하여 2006년 10월 신일본제철과 지분 2%를 상호 매입하기로 하는 약정을 체결 하였고, 2008년 국민은행과 3,000억원에 상당하는 주식을 맞교환하였다.\n\n비전 및 슬로건\n포스코는 2018년 7월, 제9대 최정우 회장의 취임과 함께 회사의 새로운 경영비전 'With POSCO'를 선포했다. ‘With POSCO’ 달성을 위한 전략으로는 고객, 공급사, 협력사 등 비즈니스 파트너와 함께 가치를 추구하는 Business With POSCO, 더 나은 사회를 함께 만들어 가는 Society With POSCO, 신뢰와 창의의 기업문화를 함께 만들어가는 People With POSCO를 제시했다. 또한 단순히 이윤을 창출해 내는 경제 단위가 아닌 사회적 책임을 완수해 가야 하는 ‘기업시민’으로써의 역할을 강조했다.[1]\n\n지배구조\n\nCEO\n\n포항제철 (현 포스코)의 초대 회장이었던 박태준은 포철을 창업 25년이란 짧은 기간에 세계적인 철강업체로 키운 철강업계의 거목으로 꼽혀 왔다. 설립 당시부터 정치 외풍으로부터 포스코를 지키는 울타리 역할을 해 온 박태준은 김영삼 정부와 불화로 결국 정권 수립 직전인 1992년 10월 5일 회장직 사퇴서를 제출했다. 박태준은 김영삼 민자당 대통령 후보의 선거대책위원장직을 거절하고 백의종군하겠다고 밝혔다. 같은 날, 포철은 긴급이사회를 소집, 박태준의 사퇴 번의(飜意)를 촉구키로 결의하기도 하였다. 회장직은 황경로 당시 부회장이 넘겨 받았다. 10월 9일 오후, 긴급이사회는 대표이사 회장에 황경로 부회장, 대표이사 부회장에 정명식 사장, 대표이사 사장에 박득표 대표이사 부사장을 각각 선임했다. 1993년 3월 12일 제25회 정기주주총회에서 신임회장에 정명식 현 부회장, 사장에는 조말수 수석 부사장이 승진, 선임되었으며 또한 박태준 명예회장과 황경로 회장 박득표 사장의 사표가 각각 수리되었다. 황경로는 임기 6개월을 간신히 채운 것이다. 이날 박태준의 측근 인사들도 배제되었다. 1993년 말, 박태준은 일본에서 월간지 \"한국논단\"과의 회견에서 한국 정부와 포철을 강도높게 비난했고, 특히 조말수 사장 등 개혁주의세력을 비난했다. 1994년 1월초, 인사 문제 등으로 정명식 회장과 조말수 사장 간의 갈등이 발생하였고, 이어 2명 모두 동반퇴진하는 사태가 발생하였다. 1994년 1월 2명은 사표를 제출하였다. 정명식 회장은 부회장에서 회장으로 승진한 지 1년여 만에 물러난 것이다. 1994년 3월 8일 제26기 정기주주총회에서 이들 2명의 사표가 수리, 퇴임하였다. 이렇게 약 2년간의 과도기를 거쳐 이 주주총회에서 김만제가 새 회장에 선임되었다. 재무장관 출신의 김만제는 사상 첫 외부인사인 회장이었고 유일한 외부인사 발탁 기록을 남겼다. 당시 포스코 지분을 재무부가 20.0%, 산업은행이 14.7% 보유하던 시절이어서 외부인사에 대한 뒷말이 많았다. 그 전까지 포스코 내부에서는 사장-부회장-회장 순으로 단계를 밟아 승진하는 절차를 깼다는 비판이 컸다. 김만제 회장은 김영삼 정부 시절에 4년간 포스코 수장직을 맡았다.\n김대중 정부 때는 이른바 \"DJP 연대\"를 통해 박태준 명예회장(당시 자민련 총재)의 발언력이 다시 강화된 1998년 당시, 포스코는 감사원의 대대적인 감사를 받은 바 있다. 60여 명의 감사 인력이 75일 이상 감사에 매달렸을 정도이다. 당시 정치권에서는 박태준 당시 자민련 총재와 유상부 회장 등 \"TJ 사단\"이 감사원 감사를 손에 피를 묻히지 않고 김만제 전 회장 체제의 흔적을 지울 기회로 여기고 있다는 평가가 지배적이었다. 결국 김만제 회장은 물러났다. 유 전 회장은 김대중 정부 시절인 지난 1998년 3월부터 2003년 3월까지 5년간 포스코를 맡았다. 유 전 회장은 연임에 성공했지만 노무현 정부가 출범하면서 임기를 못 채우고 이구택 회장에게 자리를 내줬다.\n2007년 2월, 이구택의 연임이 결정될 때, 사외이사들로 구성된 CEO후보추천위원회는 포스코가 오너없는 기업인 만큼 CEO 교체 이후 경영 일관성을 유지하기 위해 투명한 승계 프로그램을 만들도록 경영진에게 요구했다. 또 단지 대안이 없다는 이유만으로 기존 CEO가 연임하는 폐단도 사전에 막아야 한다는 지적도 있었다. 2008년 11월, 정준양(생산기술부문장) 대표이사 사장이 포스코건설 사장직무대행으로 선임되면서 대표이사직을 사임했다. 이에 따라 포스코는 3인 대표이사 체제에서 이구택 회장, 윤석만 사장 등 2명이 대표이사를 맡는 체제로 바뀌었다. 2009년 1월 15일 이구택 회장은 이사회에서 사임을 표명하였다. 포스코 측은 \"이 회장은 글로벌 기업으로의 성장기반을 구축한 것을 자신의 사명을 다했다고 스스로 판단하고 후진에게 길을 열어주기 위해 용퇴를 결정했다\"고 말했다. 김 전 회장 이후 유상부 회장과 이구택 회장은 모두 포스코 출신이다. 그러나 두 명 모두 연임에 성공했지만 정권이 바뀌면서 임기를 못 채우고 물러나는 기록을 만들었다. 2009년 1월 29일 최고경영자(CEO) 추천위원회가 열렸다. 당시 회의석상에서 윤석만 포스코 사장은 외압이 있음을 폭로했다고 알려져 있다.\nCEO 추천위 회의에 앞서 사외이사들은 이구택 회장을 비롯한 포스코의 주요 임원들을 개별적으로 불러 \"어떤 사람이 차기 CEO로 적합하냐\"는 질문을 던졌다. 이에 대해 임원들은 특정인을 거론하지 않은 채 \"이러이러한 자질을 갖춘 사람이 돼야 한다\"는 취지의 답변을 내놓았다.",
+        "lang": "ko",
+        "wiki_title": "포스코",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — POSCO",
+        "url": "https://en.wikipedia.org/wiki/POSCO",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-19",
+        "text": "POSCO (formerly Pohang Iron and Steel Company) is a South Korean steel manufacturer headquartered in Pohang, South Korea. It had an output of 42,000,000 metric tons (41,000,000 long tons; 46,000,000 short tons) of crude steel in 2015, making it the world's Seventh-largest steelmaker by this measure. In 2010, it was the world's largest steel manufacturing company by market value. Also, in 2024, it was named as the world's 233rd-largest corporation by the Fortune Global 500.\nPOSCO currently operates two integrated steel mills in South Korea, in Pohang and Gwangyang. POSCO previously operated a joint venture with U.S. Steel, USS-POSCO Industries, in Pittsburg, California, United States, but U.S. Steel acquired full ownership of the facility in February 2020.\n\nHistory\n\n1968–1971\nIn the 1960s, the South Korean government invested in constructing a steel plant for self-sufficiency. The Korean government created Pohang Iron and Steel Company, Ltd (POSCO) in 1968 and appointed as president of the mill a competent retired army general and friend of President Park Chung Hee, Park Tae-joon, a man with a track record of having turned around the government-owned Korea Tungsten Company. Construction of the Pohang plant began on April 1, 1970, and was dedicated on July 3, 1973, with an initial annual capacity of 1.03 million metric tons.\nConstruction of the initial plant was funded by Japan through the Third South Korea-Japan Ministerial Meeting in 1969. Financing included US$119 million in government grants and loans, US$54 million in credit from the Export-Import Bank of Japan, and technical assistance from corporations such as Nippon Steel. This cooperation followed the normalization of relations with Japan in 1965.\n\n1972–1992\nIn 1972, POSCO began selling plate products. It focused on the domestic market, aiming to supply quality iron and steel to \"related\" domestic companies below export prices.\nBeginning in 1973, South Korea's government used its National Investment Fund and the Korea Development Bank to invest large amounts of money into what Park Chung-hee's government viewed as the six strategic industries: steel, non-ferrous metals, shipbuilding, industrial machinery, electronics, and petrochemicals. This strategy helped develop companies POSCO and reduced input costs for production in downstream industries as well.\nBy the late 1980s, POSCO had grown into the \"fifth biggest steel company in the noncommunist world,\" producing millions of tons worth trillions of won. In 1988, the second-phase mill was completed in Gwangyang. POSCO was rated the world's most productive steel manufacturer during that time.\n\nPohang University of Science and Technology (POSTECH)\nPOSCO CEO Park Tae-joon was quoted as saying, \"You can import coal and machines, but you cannot import talent\". Park realized the need for Korea to educate their youth in science and technology to ensure Korea's position in the high technology arena. Park founded the Pohang University of Science and Technology (POSTECH) in 1986 as Korea's first science and technology research-oriented university with the mission to educate young Koreans who can contribute to national prosperity through the advancement in science and technology. In 2012 and 2013, the Times Higher Education ranked POSTECH 1st in their \"100 Under 50 Young Universities\" rankings.\n\n1992–1997\nChanges in managerial systems and organizational structure accelerated in 1993 when POSCO's president and founder, Park Tae-Joon, who had wielded absolute managerial authority for more than 25 years, resigned.\nWith the change in leadership—from Park Tae-Joon to Ryu-Sang Bu, POSCO increased decentralization and diversification. POSCO's management emphasized greater flexibility, autonomy, and consensual decision-making processes. The chairman also moved to devolve more autonomy to the profit centers and changing from a strictly hierarchical organizational structure to one based on teams.\nIn July 1994, POSCO created two subsidiary companies, POSTEEL and POSTRADE. POSTEEL is the domestic sales and service arm of the company, while POSTRADE handles international trading of POSCO products. Both subsidiaries commenced full operation in September 1994, with all international POSCO affiliates transferred to POSTRADE by the end of that year. The landmark Posteel Tower on Tehran Street, in Seoul's Gangnam district (not to be confused with the POSCO Center, also on Tehran Street) was completed in 2003.\n\n1997–2000\nIn 1997, Seoul announced that it was going to transform POSCO into a private company in line with the government's new policy of privatizing state-owned enterprises. The government planned to retain a majority share of the stock; initial reports in the South Korean press in 1998 indicated that the sale of public shares was going slower than anticipated. However, the administration led by Kim Young Sam changed the initial policy direction of privatization of POSCO and decided not to sell government-owned stock to keep it as a government investment enterprise.\nBut, the Kim Dae Jung administration following the Kim Young Sam administration listed privatization of public enterprise as a high priority policy in economic policy agenda to implement mainly because of outbreak of the economic crisis. The new administration decided to privatize POSCO and by 1998, the South Korean government had reduced its ownership of shares in POSCO to less than 20%, and more than 58% of the shares in POSCO were in the hands of foreign investors. In 2000, full privatization of POSCO was completed.\n\n2001–present\nAs part of the privatization process, new Chairman Lee Ku-Taek began efforts to introduce a professional management and governance system of global standards for POSCO. Under the new governance system, management  made accountability to shareholders a priority. POSCO also introduced a new performance-based evaluation and compensation system. Throughout most of its privatization drive, POSCO increased its revenue and business profit. Thanks to robust demand at home and in China, POSCO recorded the largest profits in the global steel industry in 2004. Net earnings from POSCO's array of steel products – used in everything from screws to skyscrapers – shot up 80% to $1.66 billion in 2004 from the previous year.\nOn June 30, 2006, POSCO completed the construction of its sixth continuous galvanizing line (CGL) at its Gwangyang mill in the South Jeolla Province.",
+        "lang": "en",
+        "wiki_title": "POSCO",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Speaker of the National Assembly Woo Won-shik visits POSCO Gwangyang Steel Mill (20240808) - 3.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_3.jpg/1920px-Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_(20240808)_-_3.jpg",
+        "width": 5568,
+        "height": 3712,
+        "license": "KOGL Type 1",
+        "artist": "대한민국 국회",
+        "caption": "2024년 8월 8일, 우원식 국회의장, 포스코 광양제철소 방문",
+        "id": "P1"
+      },
+      {
+        "file": "File:Speaker of the National Assembly Woo Won-shik visits POSCO Gwangyang Steel Mill (20240808) - 1.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_1.jpg/1920px-Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_(20240808)_-_1.jpg",
+        "width": 5423,
+        "height": 3615,
+        "license": "KOGL Type 1",
+        "artist": "대한민국 국회",
+        "caption": "2024년 8월 8일, 우원식 국회의장, 포스코 광양제철소 방문",
+        "id": "P2"
+      },
+      {
+        "file": "File:Speaker of the National Assembly Woo Won-shik visits POSCO Gwangyang Steel Mill (20240808) - 2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_2.jpg/1920px-Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_(20240808)_-_2.jpg",
+        "width": 5292,
+        "height": 3528,
+        "license": "KOGL Type 1",
+        "artist": "대한민국 국회",
+        "caption": "2024년 8월 8일, 우원식 국회의장, 포스코 광양제철소 방문",
+        "id": "P3"
+      },
+      {
+        "file": "File:Speaker of the National Assembly Woo Won-shik visits POSCO Gwangyang Steel Mill (20240808) - 4.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_4.jpg/1920px-Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_%2820240808%29_-_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Speaker_of_the_National_Assembly_Woo_Won-shik_visits_POSCO_Gwangyang_Steel_Mill_(20240808)_-_4.jpg",
+        "width": 5568,
+        "height": 3712,
+        "license": "KOGL Type 1",
+        "artist": "대한민국 국회",
+        "caption": "2024년 8월 8일, 우원식 국회의장, 포스코 광양제철소 방문",
+        "id": "P4"
+      }
+    ],
+    "evidence": 0.867,
+    "ok": true,
+    "built_at": "2026-11-19T16:01:23Z"
+  }
+}
