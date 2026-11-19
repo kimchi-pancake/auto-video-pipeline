@@ -67,7 +67,7 @@ def evaluate(c: Dict, pack: Dict, recent_hooks: List[str], recent_types: List[st
     comp["title_len"] = 1.0 if 12 <= len(title) <= 28 else (0.5 if 8 <= len(title) <= 32 else 0.0)
     comp["specific"] = 1.0 if (re.search(r"\d", fl + title) or any(norm(w) in norm(src_text) for w in re.findall(r"[가-힣A-Za-z]{2,}", title)[:3])) else 0.4
     comp["no_hype"] = 0.0 if HYPE.search(fl + title + c.get("screen_text", "")) else 1.0
-    comp["stakes"] = 1.0 if re.search(r"(왜|누가|얼마|잃|손해|이득|사라|못 |비밀|숨|진짜 이유|반전|\?)", fl + title) else 0.3
+    comp["stakes"] = 1.0 if re.search(r"(왜|누가|얼마|잃|손해|이득|사라|못 |비밀|숨|진짜 이유|반전|\?|거부|불가능|반대|아무도|모두가|없다고|포기|오히려|뒤집|비웃|무시|외면|꼴찌|\d+위)", fl + title) else 0.3
     comp["no_greeting"] = 0.0 if re.match(r"^(안녕|오늘은|여러분|지금부터)", fl.strip()) else 1.0
     sim = max((similarity(fl, h) for h in recent_hooks), default=0.0)
     comp["novel"] = 1.0 - sim
