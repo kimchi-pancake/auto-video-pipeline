@@ -155,5 +155,5 @@ def test_publish_slot_never_immediate():
 def test_channel_profiles_separate():
     p = default_profiles()
     assert p["dogae"].kind != p["ujjjam"].kind
-    assert p["dogae"].voice != p["ujjjam"].voice
+    assert p["dogae"].voice == p["ujjjam"].voice  # 2026-11-19 사용자가 현수 목소리로 통일
     assert set(p["dogae"].categories).isdisjoint(p["ujjjam"].categories)

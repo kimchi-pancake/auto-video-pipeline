@@ -15,8 +15,8 @@ from v2.research import (norm, numbers_for_prompt, pack_text_for_prompt, photos_
                          ungrounded_numbers, verify_claims)
 from v2.sources import worldbank
 
-CHARS_PER_SEC = 6.4          # Edge-TTS 한국어 +12~14% 기준 대략치
-MIN_CHARS, MAX_CHARS = 90, 520
+CHARS_PER_SEC = 5.4          # Edge-TTS 한국어 +12~14% 기준 대략치
+MIN_CHARS, MAX_CHARS = 80, 420
 VISUAL_TYPES = ("photo", "chart", "stat", "compare", "steps", "text")
 
 _FILLER = re.compile(
@@ -28,7 +28,7 @@ _CJK = re.compile("[぀-ヿ㐀-䶿一-鿿]")  # 한자·가나는 TTS/자막에�
 _HEDGE = re.compile(r"(해석|분석|전망|가능성|수 있|것으로 (보|여)|라는 (시각|평가|지적)|볼 수|보입니다|추정)")
 
 PROMPT_RULES = """[핵심 규칙]
-1. 길이는 소재에 맞게 네가 정한다: target_seconds(15~60)를 먼저 정하고, 나레이션 전체 글자 수(공백 포함)를 약 target_seconds×6.4자에 맞춰라(예: 35초 ≈ 220자, 60초 ≈ 380자). 장면당 25~60자.
+1. 길이는 소재에 맞게 네가 정한다: target_seconds(15~60)를 먼저 정하고, 나레이션 전체 글자 수(공백 포함)를 약 target_seconds×5.4자에 맞춰라(예: 35초 ≈ 190자, 60초 ≈ 325자). 장면당 25~60자.
    정보가 적으면 짧게 끝내라. 늘리려고 같은 말을 반복하지 마라.
 2. 첫 장면 나레이션은 [선택한 훅]의 first_line으로 시작한다(문장을 자연스럽게 다듬는 것은 가능).
 3. 모든 장면은 앞 장면에 없던 새 정보(수치·이름·원인·결과·비교)를 담는다. 이미 말한 것을 다시 설명하지 마라.

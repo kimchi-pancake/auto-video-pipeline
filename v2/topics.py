@@ -92,7 +92,21 @@ def category_prior(channel: str, category: str, insights: dict) -> tuple[float, 
     return (rel * n + 0.5 * k) / (n + k), n
 
 
-WEIGHTS = {"interest": 0.22, "fit": 0.22, "novelty": 0.20, "evidence": 0.16, "performance": 0.12, "explore": 0.08}
+WEIGHTS = {"interest": 0.20, "fit": 0.20, "novelty": 0.18, "evidence": 0.14, "performance": 0.10, "explore": 0.06, "stimulus": 0.12}
+
+# 시선을 끄는 정도(손익·위기·반전·비밀). 허위·낚시가 아니라 "소재 자체가 가진 긴장"을 점수화한다.
+STIM_WORDS = ["파산", "붕괴", "폭락", "위기", "몰락", "전쟁", "제재", "거품", "빚", "부도", "동결", "초인플레", "공황", "실패",
+              "비밀", "독점", "패권", "봉쇄", "폭등", "쇼크", "파동", "좌초", "대란", "압도", "유일", "최초", "불가능", "세계 1위"]
+
+# 소재마다 붙이는 '각도' — 손익·위기·반전을 정면으로 묻는 질문형. 본문이 실제로 답해야 한다(낚시 금지).
+ANGLES_ECON = [
+    "누가 이득을 보고 누가 손해를 봤나", "공식 설명이 말하지 않는 것", "그때 국민이 실제로 잃은 것",
+    "왜 같은 실수가 반복되나", "숫자로 보면 얼마나 심각했나", "어떤 조건이면 다시 벌어질 수 있나(조건부로)",
+]
+ANGLES_DOGAE = [
+    "불가능하다던 일을 어떻게 해냈나", "외국이 따라 하지 못하는 이유", "실패에서 뒤집힌 반전",
+    "숫자로 보면 얼마나 압도적인가", "알고 보면 한국이 처음인 것", "돈으로 환산하면 얼마나 큰 일인가",
+]
 
 
 def score(candidate: dict, ctx: dict) -> dict:
@@ -115,6 +129,8 @@ def score(candidate: dict, ctx: dict) -> dict:
     cat_counts = ctx["category_counts"]
     total = max(sum(cat_counts.values()), 1)
     c = ctx["explore_c"]
+    t = candidate["title"]
+    comps["stimulus"] = min(1.0, 0.35 + 0.3 * sum(1 for w in STIM_WORDS if w in t))
     comps["explore"] = min(1.0, c * math.sqrt(math.log(total + 1) / (cat_counts.get(candidate.get("category", ""), 0) + 1)))
     total_score = sum(WEIGHTS[k] * comps[k] for k in WEIGHTS)
     # 최근 소재와 거의 같으면 사실상 탈락
@@ -122,7 +138,7 @@ def score(candidate: dict, ctx: dict) -> dict:
         total_score *= 0.3
     return {"score": round(total_score, 4), "components": {k: round(v, 3) for k, v in comps.items()},
             "explain": f"관심 {comps['interest']:.2f} · 적합 {comps['fit']:.2f} · 신선도 {comps['novelty']:.2f} · "
-                       f"근거 {comps['evidence']:.2f} · 성과prior {perf:.2f}(n={n}) · 탐색 {comps['explore']:.2f}"}
+                       f"근거 {comps['evidence']:.2f} · 성과prior {perf:.2f}(n={n}) · 탐색 {comps['explore']:.2f} · 자극 {comps['stimulus']:.2f}"}
 
 
 def _triage_prompt(profile: ChannelProfile, items: List[dict]) -> str:
@@ -146,7 +162,8 @@ def discover(profile: ChannelProfile, recent_titles: List[str], rng: Optional[ra
     cands: List[dict] = []
     for title, cat in seeds:
         title = title.rstrip("?")
-        cands.append({"title": title, "wiki_title": title, "category": cat, "source": "seed", "angle": ""})
+        angle = rng.choice(ANGLES_ECON if profile.kind == "world_econ" else ANGLES_DOGAE)
+        cands.append({"title": title, "wiki_title": title, "category": cat, "source": "seed", "angle": angle})
 
     # 트렌드 신호 (실패해도 계속)
     signals: List[dict] = []

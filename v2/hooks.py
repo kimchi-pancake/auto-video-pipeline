@@ -48,6 +48,7 @@ def prompt(topic: Dict, pack: Dict, profile: ChannelProfile, recent_hooks: List[
 - title: 영상 제목(12~28자). 본문이 실제로 약속을 지킬 수 있는 말만 쓴다. 낚시 금지.
 - promise: 시청자가 끝까지 보면 얻는 정보 한 줄.
 - evidence_quote: 이 훅이 말하는 사실이 들어 있는 [근거 자료]의 원문 문장 일부(그대로 복사, 10자 이상).
+- 훅은 시청자의 손익·위기감·호기심을 정면으로 건드려라(예: 누가 얼마를 잃었나, 왜 아무도 못 막았나, 겉으로는 성공인데 실제로는?). 단 본문이 실제로 답할 수 있는 것만 — 허위·과장·공포 조장·특정인 비방·낚시는 금지.
 - 훅은 소재의 핵심 매력(원리·역사·성과·반전)에서 뽑아라. 정치·남북관계·논란·사건사고·소송 같은 곁가지를 중심 훅으로 삼지 마라.
 - '충격', '역대급', '전 세계가 놀란', '소름' 같은 과장어는 쓰지 마라.
 - 최근 훅과 비슷한 문장 구조·유형을 피해라:
@@ -66,11 +67,12 @@ def evaluate(c: Dict, pack: Dict, recent_hooks: List[str], recent_types: List[st
     comp["title_len"] = 1.0 if 12 <= len(title) <= 28 else (0.5 if 8 <= len(title) <= 32 else 0.0)
     comp["specific"] = 1.0 if (re.search(r"\d", fl + title) or any(norm(w) in norm(src_text) for w in re.findall(r"[가-힣A-Za-z]{2,}", title)[:3])) else 0.4
     comp["no_hype"] = 0.0 if HYPE.search(fl + title + c.get("screen_text", "")) else 1.0
+    comp["stakes"] = 1.0 if re.search(r"(왜|누가|얼마|잃|손해|이득|사라|못 |비밀|숨|진짜 이유|반전|\?)", fl + title) else 0.3
     comp["no_greeting"] = 0.0 if re.match(r"^(안녕|오늘은|여러분|지금부터)", fl.strip()) else 1.0
     sim = max((similarity(fl, h) for h in recent_hooks), default=0.0)
     comp["novel"] = 1.0 - sim
     comp["type_variety"] = 0.3 if c.get("type") in recent_types[:3] else 1.0
-    w = {"grounded": 0.28, "first_line_len": 0.08, "title_len": 0.06, "specific": 0.16, "no_hype": 0.14, "no_greeting": 0.08, "novel": 0.12, "type_variety": 0.08}
+    w = {"grounded": 0.26, "first_line_len": 0.06, "title_len": 0.06, "specific": 0.12, "no_hype": 0.12, "no_greeting": 0.08, "novel": 0.10, "type_variety": 0.08, "stakes": 0.12}
     total = sum(w[k] * comp[k] for k in w)
     if comp["grounded"] == 0.0:
         total *= 0.5  # 근거 없는 훅은 크게 감점

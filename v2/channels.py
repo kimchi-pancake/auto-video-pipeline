@@ -93,14 +93,14 @@ def default_profiles() -> Dict[str, ChannelProfile]:
     return {
         "dogae": ChannelProfile(
             key="dogae", name="도개", kind="kukbong",
-            voice="ko-KR-HyunsuMultilingualNeural", voice_rate="+14%", voice_pitch="+0Hz",
+            voice="ko-KR-HyunsuMultilingualNeural", voice_rate="+0%", voice_pitch="+0Hz",
             categories=DOGAE_CATEGORIES, persona=_DOGAE_PERSONA, tone_rules=_DOGAE_TONE,
             bgm_choices=["piano.mp3", "ambient_piano.mp3", "simple.mp3"],
             accent_color="#FFE500", palette_bg="#0E1420",
         ),
         "ujjjam": ChannelProfile(
             key="ujjjam", name="웃짬", kind="world_econ",
-            voice="ko-KR-InJoonNeural", voice_rate="+12%", voice_pitch="-3Hz",
+            voice="ko-KR-HyunsuMultilingualNeural", voice_rate="+0%", voice_pitch="+0Hz",
             categories=UJJJAM_CATEGORIES, persona=_UJJJAM_PERSONA, tone_rules=_UJJJAM_TONE,
             bgm_choices=["ambient_piano.mp3", "piano.mp3", "simple.mp3"],
             accent_color="#FF6B3D", palette_bg="#0B0F17",
