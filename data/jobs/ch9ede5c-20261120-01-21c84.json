@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261120-01-21c84",
   "channel": "웃짬",
-  "status": "RETRY_WAIT",
+  "status": "NEEDS_REVIEW",
   "created_at": "2026-11-19T16:02:38Z",
   "topic": {
     "title": "제1차 석유 파동",
@@ -70,6 +70,36 @@
       "status": "RETRY_WAIT",
       "at": "2026-11-19T16:04:58Z",
       "note": "render 실패(bug) 1/4"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-20T08:40:30Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-20T08:40:30Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-20T08:41:13Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-20T08:41:18Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-20T08:42:06Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-20T08:43:02Z",
+      "note": "비공개 업로드 완료 — 사람 승인 대기(publish_mode=review)"
     }
   ],
   "attempts": {
@@ -641,19 +671,95 @@
       }
     }
   ],
-  "files": {},
-  "qc": null,
+  "files": {
+    "video": "/tmp/v2_work/ch9ede5c-20261120-01-21c84/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/ch9ede5c-20261120-01-21c84/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/ch9ede5c-20261120-01-21c84/out/subtitles.ass",
+    "bgm": "piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "8개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 1장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.38"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "43.0s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "43.0s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 28/편차 21; 밝기 31/편차 29"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 35/편차 27"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -18.0dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 17개, 마지막 42.5s / 영상 43.0s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
+    "video_id": "cpAaCKLX5U8",
     "scheduled_at": null,
-    "privacy": null
+    "privacy": "private"
   },
   "experiment": {
     "id": "웃짬-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-19T16:04:58Z",
+  "updated_at": "2026-11-20T08:43:02Z",
   "pack": {
     "topic": {
       "title": "제1차 석유 파동",
