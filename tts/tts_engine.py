@@ -209,7 +209,7 @@ class TTSEngine:
                     req.request_id, attempt, self._retry_count, e,
                 )
                 if attempt < self._retry_count:
-                    await asyncio.sleep(self._retry_delay)
+                    await asyncio.sleep(self._retry_delay * attempt)
 
         logger.error("[TTS] %s permanently failed: %s", req.request_id, last_error)
         return TTSResult(

@@ -82,6 +82,8 @@ def render(job: Dict, profile: ChannelProfile, work: Path, assets: List[Dict]) -
     voices["나레이터"] = {"voice": profile.voice, "rate": profile.voice_rate, "pitch": profile.voice_pitch, "volume": "+0%"}
     tts_cfg["voices"] = voices
     tts_cfg["default_voice"] = profile.voice
+    # CI(데이터센터 IP)에서는 Edge-TTS가 동시 요청을 거절("No audio was received")하므로 천천히·여러 번
+    tts_cfg.update({"max_workers": 2, "retry_count": 6, "retry_delay": 3})
     scene_audios = TTSBuilder(tts_cfg, work / "tts").build(story)
     ff = FFmpegWrapper(ffmpeg=cfg.get("video.ffmpeg_path", "ffmpeg"), ffprobe=cfg.get("video.ffprobe_path", "ffprobe"))
     _fix_durations(ff, scene_audios)
