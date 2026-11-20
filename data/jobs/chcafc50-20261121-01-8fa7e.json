@@ -1,0 +1,657 @@
+{
+  "id": "chcafc50-20261121-01-8fa7e",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-20T16:01:45Z",
+  "topic": {
+    "title": "방탄소년단",
+    "wiki_title": "방탄소년단",
+    "category": "대중문화",
+    "source": "seed",
+    "angle": "불가능하다던 일을 어떻게 해냈나",
+    "score": 0.668,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.367
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.37 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.724,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.367
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.37 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-20T16:01:45Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-20T16:01:45Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-20T16:02:08Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-20T16:02:28Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "problem_solution",
+      "first_line": "멤버 7명 전원이 입대해 1년 6개월 공백인데도 복귀곡이 바로 1위였죠",
+      "screen_text": "군백기 후 1위",
+      "title": "18개월 완전체 공백 깨고 1위한 이유",
+      "promise": "군 복무로 인한 강제 휴지기를 팬덤 결속력과 콘텐츠 아카이브로 돌파한 메커니즘",
+      "evidence_quote": "On June 14, 2022, the group announced a scheduled pause in group activities to enable the members to complete their 18 months of mandatory South Korean military service... Their first group album in almost four years, Arirang (2026), spawned their seventh US number-one single",
+      "eval": {
+        "score": 0.94,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 0.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "problem_solution",
+        "first_line": "멤버 7명 전원이 입대해 1년 6개월 공백인데도 복귀곡이 바로 1위였죠",
+        "screen_text": "군백기 후 1위",
+        "title": "18개월 완전체 공백 깨고 1위한 이유",
+        "promise": "군 복무로 인한 강제 휴지기를 팬덤 결속력과 콘텐츠 아카이브로 돌파한 메커니즘",
+        "evidence_quote": "On June 14, 2022, the group announced a scheduled pause in group activities to enable the members to complete their 18 months of mandatory South Korean military service... Their first group album in almost four years, Arirang (2026), spawned their seventh US number-one single",
+        "eval": {
+          "score": 0.94,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "대형 기획사 없이 '빅히트' 단독으로 빌보드 200 1위를 처음 차지했습니다",
+        "screen_text": "대형사 없이 1위",
+        "title": "3대 기획사 없이 빌보드 정복한 비결",
+        "promise": "메이저 레이블 없이 글로벌 차트 정상에 오른 구조적 이유",
+        "evidence_quote": "BTS's representation by BigHit, rather than one of the three agencies that dominated K-pop at the time, allowed the individual members leeway to express their individuality",
+        "eval": {
+          "score": 0.9359,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.96,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "비틀스 이후 54년 만에 2년 내 미국 앨범 4장 연속 1위 기록을 깼습니다",
+        "screen_text": "비틀스 기록 경신",
+        "title": "비틀스도 못한 2년 4연속 1위 비결",
+        "promise": "비틀스 이후 최단기간 빌보드 200 4회 1위 달성한 앨범 전략 분석",
+        "evidence_quote": "BTS became the fastest group since the Beatles to chart four US number-one albums in less than two years",
+        "eval": {
+          "score": 0.9357,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.96,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "영어 가사 없는 'Dynamite'가 빌보드 핫100 1위한 최초 한국 그룹입니다",
+        "screen_text": "한국어 아닌 영어곡",
+        "title": "한국어 없이 핫100 1위한 전략적 선택",
+        "promise": "언어 장벽을 넘기 위해 '전곡 영어'를 택한 계산된 이유와 결과",
+        "evidence_quote": "first all-South Korean act to reach number one on both the Billboard Hot 100 ... with their Grammy-nominated single \"Dynamite\"",
+        "eval": {
+          "score": 0.882,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "연습생 때 하루 15시간 연습하며 '개인 서사'를 팀 서사로 엮는 법을 배웠죠",
+        "screen_text": "15시간 연습의 비밀",
+        "title": "하루 15시간 연습이 만든 '개인→팀' 서사",
+        "promise": "기획사가 의도적으로 설계한 '개인 자율성 보장' 시스템이 팀 폭발력의 원천이 된 과정",
+        "evidence_quote": "The band members lived together, practicing up to 15 hours a day... Bang chose to vary from the usual, highly regimented idol groups and create one where the members would be individuals rather than an ensemble and free to express themselves",
+        "eval": {
+          "score": 0.856,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "데뷔곡 'No More Dream'은 당시 K팝에서 금기였던 부모님 기대를 정면 비판했죠",
+        "screen_text": "금기 깬 데뷔곡",
+        "title": "데뷔곡이 '부모님 기대'를 비판했다고?",
+        "promise": "10대 불안을 직설로 노래해 K팝 문법을 바꾼 데뷔 무대의 충격적 내용",
+        "evidence_quote": "spotlighting young people's anxiety in the face of lofty parental expectations, sent shock waves through the K-pop ranks",
+        "eval": {
+          "score": 0.812,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 0.4,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "군백기 1년 6개월, 복귀곡 1위의 비결",
+    "target_seconds": 20,
+    "category": "대중문화",
+    "bgm_mood": "bright",
+    "scenes": [
+      {
+        "narration": "멤버 7명 전원이 입대해 1년 6개월 공백인데도 복귀곡이 바로 1위였죠.",
+        "visual": {
+          "type": "photo",
+          "id": "P3"
+        },
+        "claims": [
+          {
+            "text": "멤버 7명 전원 18개월 의무 복무 완료",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "enable the members to complete their 18 months of mandatory South Korean military service, which they all completed by June 2025."
+          }
+        ]
+      },
+      {
+        "narration": "2022년 6월 활동 중단을 발표하고 진부터 순차 입대해 2025년 6월 전원 전역했습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "군백기 타임라인",
+          "items": [
+            "2022년 6월 활동 중단 발표",
+            "멤버 순차 입대",
+            "2025년 6월 전원 전역"
+          ]
+        },
+        "claims": [
+          {
+            "text": "2022년 6월 그룹 활동 중단 발표",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "On June 14, 2022, the group announced a scheduled pause in group activities"
+          },
+          {
+            "text": "2025년 6월 전원 전역 완료",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "completed by June 2025"
+          }
+        ]
+      },
+      {
+        "narration": "공백기에도 '봄날'이 2026년 현재까지 주요 음원 차트 최장 진입 중입니다.",
+        "visual": {
+          "type": "stat",
+          "big": "최장 진입",
+          "small": "주요 음원 차트 기록 중"
+        },
+        "claims": [
+          {
+            "text": "봄날 2026년 현재 주요 음원 차트 최장 진입",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "타이틀곡 〈봄날〉은 2026년 현재까지 대한민국 주요 음원 차트에 최장기간 진입 중이다."
+          }
+        ]
+      },
+      {
+        "narration": "아카이브 콘텐츠와 팬덤 결속력이 공백을 메운 메커니즘이 작동했습니다.",
+        "visual": {
+          "type": "text",
+          "headline": "아카이브와 팬덤의 힘",
+          "sub": "공백 돌파 메커니즘"
+        },
+        "claims": [
+          {
+            "text": "아카이브 콘텐츠와 팬덤 결속력으로 공백 돌파",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "SNS를 통한 팬들과의 소통이 활발하여 2019년과 2020년 전 세계에서 가장 많은 리트윗을 기록한 연예인이자 트위터 최다 활동 음악 그룹으로 기네스 세계 기록에 오르기도 했다.",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "멤버 7명 전원 18개월 의무 복무 완료",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — BTS",
+        "source_url": "https://en.wikipedia.org/wiki/BTS",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-20",
+        "quote": "enable the members to complete their 18 months of mandatory South Korean military service, which they all completed by June 2025.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "2022년 6월 그룹 활동 중단 발표",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — BTS",
+        "source_url": "https://en.wikipedia.org/wiki/BTS",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-20",
+        "quote": "On June 14, 2022, the group announced a scheduled pause in group activities",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 1,
+        "text": "2025년 6월 전원 전역 완료",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — BTS",
+        "source_url": "https://en.wikipedia.org/wiki/BTS",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-20",
+        "quote": "completed by June 2025",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "봄날 2026년 현재 주요 음원 차트 최장 진입",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 방탄소년단",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-20",
+        "quote": "타이틀곡 〈봄날〉은 2026년 현재까지 대한민국 주요 음원 차트에 최장기간 진입 중이다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "아카이브 콘텐츠와 팬덤 결속력으로 공백 돌파",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 방탄소년단",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-20",
+        "quote": "SNS를 통한 팬들과의 소통이 활발하여 2019년과 2020년 전 세계에서 가장 많은 리트윗을 기록한 연예인이자 트위터 최다 활동 음악 그룹으로 기네스 세계 기록에 오르기도 했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 172,
+      "est_seconds": 31.9,
+      "scenes": 4,
+      "avg_new_tokens_per_scene": 10.0,
+      "max_scene_similarity": 0.07,
+      "visual_mix": {
+        "stat": 1,
+        "photo": 1,
+        "steps": 1,
+        "text": 1
+      },
+      "target_seconds_declared": 20
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "멤버 7명 전원 18개월 의무 복무 완료",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — BTS",
+      "source_url": "https://en.wikipedia.org/wiki/BTS",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-20",
+      "quote": "enable the members to complete their 18 months of mandatory South Korean military service, which they all completed by June 2025.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "2022년 6월 그룹 활동 중단 발표",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — BTS",
+      "source_url": "https://en.wikipedia.org/wiki/BTS",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-20",
+      "quote": "On June 14, 2022, the group announced a scheduled pause in group activities",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 1,
+      "text": "2025년 6월 전원 전역 완료",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — BTS",
+      "source_url": "https://en.wikipedia.org/wiki/BTS",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-20",
+      "quote": "completed by June 2025",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "봄날 2026년 현재 주요 음원 차트 최장 진입",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 방탄소년단",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-20",
+      "quote": "타이틀곡 〈봄날〉은 2026년 현재까지 대한민국 주요 음원 차트에 최장기간 진입 중이다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "아카이브 콘텐츠와 팬덤 결속력으로 공백 돌파",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 방탄소년단",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-20",
+      "quote": "SNS를 통한 팬들과의 소통이 활발하여 2019년과 2020년 전 세계에서 가장 많은 리트윗을 기록한 연예인이자 트위터 최다 활동 음악 그룹으로 기네스 세계 기록에 오르기도 했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-20T16:02:28Z",
+  "pack": {
+    "topic": {
+      "title": "방탄소년단",
+      "wiki_title": "방탄소년단",
+      "category": "대중문화",
+      "source": "seed",
+      "angle": "불가능하다던 일을 어떻게 해냈나",
+      "score": 0.668,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.367
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.37 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.724,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.367
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.37 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 방탄소년단",
+        "url": "https://ko.wikipedia.org/wiki/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8",
+        "published": "2026-11-20",
+        "fetched_at": "2026-11-20",
+        "text": "방탄소년단(BTS)은 2013년 6월 13일에 데뷔한 빅히트 뮤직 소속 대한민국의 7인조 보이 그룹이다. 팬 클럽의 이름은, 아미이다.\n\n특징\n\n의미\n방탄복이 탄알을 막아내는 것처럼, 10대~20대가 받는 억압과 편견을 막아내고 자신들의 음악적 가치를 당당히 지켜내겠다는 의미를 담고 있다. 방탄소년단을 지칭하는 'BTS'는 본래 이름인 'BangTan Sonyeundan' 혹은 'Bulletproof Boys'의 준말이다. 2017년 빅히트 뮤직은 방탄소년단의 공식 로고를 교체하면서 과거와 미래를 아우르는 개념으로 의미를 확장시키고, 'Beyond The Scene'의 준말로 의미를 추가하였다. 이는 매 순간마다 청춘의 장면들을 뛰어넘는다는 의미를 가지고 있다.\n\n역사\n2013년 방탄소년단은 《2 COOL 4 SKOOL》을 발매하며 데뷔하였고, 그 해 신인상을 수상하였다. 이후 2015년에 《화양연화 pt.1》을 발매해 첫 음악방송 1위를 수상하였고, 2016년에 《WINGS》를 발매해 첫 대상을 수상하였다. 2017년에는 《YOU NEVER WALK ALONE》을 발매해 타이틀곡 〈봄날〉은 2026년 현재까지 대한민국 주요 음원 차트에 최장기간 진입 중이다. 2018년에는 《LOVE YOURSELF 轉 'Tear'》를 발매해 빌보드 200 중에서 1위를 기록하였고, 방탄소년단은 최초로 빌보드 200 1위를 차지한 대한민국의 음악 그룹이 되었다. 이어서 《LOVE YOURSELF 結 'Answer'》를 발매해 빌보드 200 1위를 기록하였다. 2019년에는 《MAP OF THE SOUL : PERSONA》를 발매해 빌보드 200 1위를 기록하였다. 그 해 방탄소년단은 한국 음악 시상식의 대상 부문을 모두 휩쓸었으며, 한국대중음악상에서도 올해의 음악인을 2년 연속 수상하면서 음악성과 상업적 성과를 모두 인정받은 음악 그룹이 되었다. 2020년에는 《MAP OF THE SOUL : 7》를 발매해 대한민국 역대 음반 초동 1위라는 기록을 세우며 빌보드 200 1위를 기록하였고, 역대 대한민국에서 가장 많이 판매된 음반이 되었다. 이후 〈Dynamite〉를 발매해 빌보드 핫 100 3주 1위를 기록하였고, 방탄소년단은 빌보드 핫 100 1위를 차지한 최초이자 유일한 대한민국의 음악 그룹이 되었다. 이어서 〈Savage Love (Laxed – Siren Beat)〉 리믹스를 발매해 빌보드 핫 100 1위를 기록하였다. 또한, 〈BE〉를 발매해 빌보드 200 1위를 기록하였고, 타이틀 곡 〈Life Goes On〉은 빌보드 핫 100 1위를 기록했다. 2021년에는 〈Butter〉를 발매해 빌보드 핫 100 9주 1위를 기록하였다. 이어서 〈Permission to Dance〉를 발매하였고, 빌보드 핫 100 1위를 기록하였다.\n\n경력\n현재까지 방탄소년단은 전 세계에서 3,000만 장 가량의 음반을 판매하였고, 대한민국 역대 최다 음반 판매량을 기록한 음악 그룹이다. 방탄소년단은 32개의 엠넷 아시안 뮤직 어워드, 29개의 멜론 뮤직 어워드, 24개의 골든 디스크, 19개의 기네스 세계 기록과 가온 차트 뮤직 어워드, 14개의 하이원 서울가요대상, 10개의 MTV 유럽 뮤직 어워드, 6개의 아메리칸 뮤직 어워드와 MTV 비디오 뮤직 어워드, 9개의 빌보드 뮤직 어워드, 4개의 한국대중음악상, 2개의 대한민국 대중문화예술상 등을 수상하였으며, 대한민국 정부 화관문화훈장 최연소 수여자이다. 또한, 그래미 어워드 후보에 오른 최초이자 유일한 대한민국의 음악 그룹이다.\n\n주요 활동\n방탄소년단은 SNS를 통한 팬들과의 소통이 활발하여 2019년과 2020년 전 세계에서 가장 많은 리트윗을 기록한 연예인이자 트위터 최다 활동 음악 그룹으로 기네스 세계 기록에 오르기도 했다. 또한 2017년 라인프렌즈와 협업하며 직접 창작한 캐릭터 《BT21》을 선보였고, 현재 다양한 캐릭터 상품을 출시하고 있다. 방탄소년단은 그룹명의 의미에 맞게 사회 활동 및 자선 활동에 활발히 참여하고 있으며, 유니세프와 함께 LOVE MYSELF 캠페인을 진행하면서 소속사 빅히트 뮤직과 함께 5억 원을 기부하였다. 또한 유엔 총회에서 두 차례 연설했고, 이를 계기로 타임지 표지를 장식하기도 했다. 방탄소년단의 팬덤은 아미(영어: ARMY)이며 '청춘을 위한 사랑스러운 대표자'라는 의미와 방탄복과 군대처럼 방탄소년단도 팬클럽과 항상 함께라는 의미를 가지고 있다.\n\n활동\n\n데뷔 이전\n빅히트 엔터테인먼트의 대표이자 프로듀서인 방시혁은 2010년 9월 2일, 힙합 그룹 방탄소년단의 새 멤버를 모집하는 전국 오디션을 개최한다고 밝혔다. 이 오디션은 포털사이트 다음과 함께 ‘힛잇(HIT IT)’이라는 타이틀로 진행되었다. 이미 방탄소년단의 멤버로 발탁된 김남준에 대해 방시혁은 “언더 힙합신에서도 실력을 인정받은 고등학생 래퍼로 랩 메이킹에 탁월하며 프로 못지 않은 실력을 지니고 있다”고 소개했다. 연습생 시절에는 임정희와 2AM 등의 회사 선배 가수들의 앨범에 참여하기도 했고, 빅히트와 쏘스뮤직의 합작 걸 그룹이었던 글램의 백댄서로 활동하기도 했다. 방시혁의 진두지휘 아래 리더 RM을 중심으로 랩, 보컬, 춤에 능한  진, 슈가, 제이홉, 지민, 뷔, 정국 총 7명의 최종 멤버가 발탁되었고, 3년간의 연습시간을 보내며 힙합 아이돌 그룹으로 데뷔 준비를 마쳤다.\n\n2013년\n\n방탄소년단은 데뷔를 앞둔 2013년 5월 20일, 직접 운영해 온 블로그를 전격 중단하고 공식 홈페이지를 오픈했다. 2013년 5월 27일, 방탄소년단의 데뷔 트레일러를 공개하며 본격적인 데뷔를 알렸다. 2013년 1월, 방탄소년단은 《학교의 눈물》이라는 믹스테이프를 발매하였다.\n6월 12일, 데뷔 싱글 앨범 《2 COOL 4 SKOOL》를 발매와 동시에 서울 청담동 일지아트홀에서 열린 방탄소년단 데뷔 쇼케이스를 개최했다. 이 쇼케이스는 온라인 음원사이트 멜론을 통해 최초로 공개되었다. 그 후 6월 13일 엠넷 《엠카운트다운》를 통해 공식적으로 데뷔했다. 9월 11일 첫 번째 미니 앨범 《O!RUL8,2?》를 발매했다. 2013년 9월 3일부터 10월 22일까지 SBS MTV를 통해 방송 된 첫 리얼리티 프로그램 《신인왕 방탄소년단 - 채널방탄》에 고정 출연했다. 가상의 방송국을 설정해, 멤버들이 직접 다양한 포맷의 TV 프로그램에 도전하는 포맷으로 방영되었다. 방탄소년단은 11월 14일 올림픽체조경기장에서 열린 멜론 뮤직 어워드에서 데뷔 싱글 앨범 《2 COOL 4 SKOOL》과 첫 번째 미니 앨범 《O!RUL8,2?》으로 신인상을 첫 수상했다.\n\n2014년\n\n2014년 1월 16일 경희대학교 평화의 전당에서 열린 골든디스크 시상식 음반 부문 시상식에서 음반 신인상을 수상했으며, 1월 23일 잠실실내체육관에서 열린 제25회 하이원 서울가요대상에서 신인상과 2월 12일 올림픽공원 체조경기장에서 열린 제3회 가온차트 뮤직 어워드에서 올해의 신인상 그룹을 수상했다. 2014년 2월 12일 방탄소년단은 두 번째 미니 앨범 《Skool Luv Affair》를 발매해 처음으로 음악 방송 1위 후보까지 오르고 현재까지(2017년 기준) 15만 장 넘게 팔렸다. 2014년 3월 29일 서울 올림픽공원 올림픽홀에서 1기 팬클럽 창단식 《2014 BTS: 1st Fan Meeting MUSTER》을 열며 공식 팬클럽인 ‘A.R.M.Y’(아미)가 결성되었다. 그 후 5월 14일 첫 번째 리패키지 앨범 《SKOOL LUV AFFAIR SPECIAL ADDITION》을 발매했다. 6월 4일 일본 데뷔 싱글 《No More Dream (Japanese Ver.)》를 발매하며 일본 데뷔를 했고, 오리콘 싱글 주간 차트 8위에 올랐다. 이어 7월 16일 발매한 일본 두 번째 싱글 《Boy In Luv (Japanese Ver.)》를 발매해 오리콘 싱글 주간 차트 4위에 올랐다. 2014년 7월부터는 미국 LA 올 로케이션으로 촬영 되어 강제 힙합 유학을 당한 방탄소년단의 성장기를 담은 엠넷의 리얼리티 프로그램 《방탄소년단의 아메리칸 허슬 라이프》에 고정 출연했다. 2014년 8월 20일 방탄소년단은 첫 번째 정규 앨범 《DARK&WILD》를 발매했고 현재까지(2017년 기준) 16만 장 넘게 팔렸다. 10월 17일부터 19일까지 총 3일간 예스24라이브홀(구 악스 홀)에서 데뷔 1년 4개월여만에 첫 단독 콘서트 ‘BTS 2014 LIVE TRILOGY : EPISODE Ⅱ. THE RED BULLET'을 개최해 성공리에 마무리 지었다. 당초 2회 공연 예정이었던 첫 단독 콘서트는 1회를 추가해 사흘간 진행되었다. 방탄소년단은 서울 공연을 시작으로 일본, 필리핀, 싱가포르, 태국 등으로 아시아 투어를 진행, 글로벌 팬들과의 만남을 가졌다. 방탄소년단은 이후 10월 말부터 정규 앨범 《DARK&WILD》의 수록곡인 \"호르몬 전쟁\"으로 후속곡 활동을 했다. 2014년 11월 19일, 일본 세 번째 싱글 《Danger (Japanese Ver.)》를 발매해 역시 오리콘 싱글 주간 차트 5위에 올라 모든 싱글이 10위권에 진입했고, 12월 24일에는 일본 첫 번째 정규 앨범 《WAKE UP》을 발매해 오리콘 앨범 주간 차트 3위에 올랐다.\n\n2015년\n\n2015년 1월 15일 방탄소년단은 중국 북경 완스다 중신에서 열린 골든디스크 시상식 음반 부문 시상식에서 미니 앨범 《Skool Luv Affair》과 첫 번째 정규 앨범 《DARK&WILD》으로 첫 본상을 수상했으며, 1월 22일 올림픽공원 체조경기장에서 열린 제26회 하이원 서울가요대상에서 첫 본상과 1월 28일 제4회 가온차트 뮤직 어워드에서 올해의 발견 월드루키상을 수상했다. 방탄소년단은 2015년 3월 28일과 29일 양일간 서울 올림픽공원 올림픽홀에서 두 번째 단독 콘서트 ‘2015 BTS LIVE TRILOGY: EPISODE I. BTS BEGINS’를 개최했다. 방탄소년단은 지난 2014년 10월 개최한 첫 단독 콘서트 ‘BTS 2014 LIVE TRILOGY: EPISODE Ⅱ. THE RED BULLET’를 시작으로 팀의 탄생과 성장기를 주제로 하는 아이돌 최초 3부작(BTS LIVE TRILOGY) 공연을 진행했고, 이번 두 번째 콘서트는 EPISODE I에 해당하는 공연이다. ‘방탄소년단의 시작’(BTS BEGINS)을 주제로 10대 소년들이 힙합 아래 하나로 모여 방탄소년단으로서 거듭나는 과정을 보여주었다. 방탄소년단은 4월 29일 세 번째 미니 앨범 《화양연화 pt.1》를 발매하며 전환점을 마련했다. 이 앨범은 방탄소년단 전 멤버가 작사, 작곡에 참여했으며, 방탄소년단의 청춘 3부작의 시작점으로 청춘이 느끼는 고민과 고뇌, 갈등, 고통 등을 담아냈다. 타이틀 곡 \"I NEED U\"는 청춘의 사랑에 대한 노래로, 끝나가는 사랑을 붙잡으려는 마음이 담겨있다. 방탄소년단은 데뷔 이래 처음으로 각종 음악 방송 및 차트에서 1위에 오르며 음악 방송 5관왕을 따냈고, 현재까지 30만 장(2017년 기준)을 판매했다. 이후 방탄소년단은 일본, 미국 등으로 활동 영역을 넓혔다. 6월 1일, 일본 네 번째 싱글 〈FOR YOU〉를 발매해 오리콘 싱글 주간 차트 1위에 오른다. 방탄소년단은 2015년 11월 27일부터 29일까지 사흘간 서울 올림픽공원 SK올림픽핸드볼경기장에서 열린 세 번째 단독 콘서트 ‘2015 BTS LIVE «화양연화 on stage»를 성황리에 개최했다. 또한 방탄소년단은 12월 8일과 9일 일본 요코하마 아레나, 12월 26일부터 28일까지 고베 월드 기념홀에서 총 5회에 걸쳐 개최하는 투어 콘서트 ‘2015 BTS LIVE «화양연화 on stage» ~Japan Edition~’를 전석 매진 시켰다. 하지만 소속사 빅히트 엔터테인먼트 관계자는 12월 27일 공식 트위터에 “27일과 28일 고베 월드기념홀에서 개최할 예정이었던 '2015 방탄소년단 라이브 화양연화 온 스테이지 재팬 에디션' 공연을 취소하게 됐다. 공연 전 슈가와 뷔가 어지럼증을 호소해 리허설을 중단하고 현지 병원으로 신속히 이동하여 전문 의료진의 진료를 받았다. CT 촬영 결과 큰 이상이 발견되진 않았으나 공연을 하다가 격렬한 움직임으로 인한 어지럼증일 수 있다는 진단과 함께 추후 상태를 지켜봐야 한다는 소견을 받았다”라고 밝히며 이어 “두 멤버는 소중한 시간을 내어 공연장을 찾아주시는 팬들을 만나기 위해 무대에 오르고 싶다는 강력한 의지를 표했으나 의료진의 권고에 따라 현재 휴식을 취하고 있으며 다행히 빠른 호전 상태를 보이고 있다. 그러나 멤버 전원이 참석하지 않는 공연을 진행하여 부족한 모습을 보여드릴 수 없다고 판단하여 오늘 공연을 포함, 고베 콘서트의 일정을 모두 중단키로 결정했다. 멤버들의 건강 이상으로 공연이 취소됐다”고 설명했다. 또한 공연 취소에 대해 공식적으로 사과하며, 슈가와 뷔는 귀국 후 대한민국에서 정밀검사를 받을 예정으로 취소된 공연의 티켓은 전액 환불 조치된다고 입장을 전했다.\n방탄소년단은 2015년 10월 15일 유럽 최대 음악 시상식인 MTV EMA 2015(유럽 뮤직 어워드)에서 가장 활발히 활동한 아티스트를 뽑는 World Wide Act(월드 와이드 액트) 부문의 한국 대표로 선정됐다.",
+        "lang": "ko",
+        "wiki_title": "방탄소년단",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — BTS",
+        "url": "https://en.wikipedia.org/wiki/BTS",
+        "published": "2026-11-20",
+        "fetched_at": "2026-11-20",
+        "text": "BTS (Korean: 방탄소년단; RR: Bangtan sonyeondan; lit. 'Bulletproof Boy Scouts'), also known as the Bangtan Boys, is a South Korean boy band formed in 2010. The band consists of Jin, Suga, J-Hope, RM, Jimin, V, and Jung Kook, who co-write or co-produce much of their material. Originally a hip hop group, they expanded their musical style to incorporate a wide range of genres, while their lyrics have focused on subjects including mental health, the troubles of school-age youth and coming of age, loss, the journey towards self-love, individualism and the consequences of fame and recognition. Their discography and adjacent work has also referenced literature, philosophy and psychology, and includes an alternate universe storyline.\nBTS debuted in 2013 under Big Hit Entertainment with the single album 2 Cool 4 Skool. BTS released their first Korean and Japanese-language studio albums, Dark & Wild and Wake Up respectively, in 2014. The group's second Korean studio album, Wings (2016), was their first to sell one million copies in South Korea. By 2017, BTS had crossed into the global music market and led the Korean Wave into the United States, becoming the first Korean ensemble to receive a Gold certification from the Recording Industry Association of America (RIAA) for their single \"Mic Drop\", as well as the first act from South Korea to top the Billboard 200 with their studio album Love Yourself: Tear (2018). In 2020, BTS became the fastest group since the Beatles to chart four US number-one albums in less than two years, with Love Yourself: Answer (2018) becoming the first Korean album certified Platinum by the RIAA; in the same year, they also became the first all-South Korean act to reach number one on both the Billboard Hot 100 and Billboard Global 200 with their Grammy-nominated single \"Dynamite\". Follow-up releases \"Savage Love\", \"Life Goes On\", \"Butter\", \"Permission to Dance\", and \"My Universe\" made them the fastest act to earn six US number-one singles since the Beatles in 1966.\nOn June 14, 2022, the group announced a scheduled pause in group activities to enable the members to complete their 18 months of mandatory South Korean military service, which they all completed by June 2025. Their first group album in almost four years, Arirang (2026), spawned their seventh US number-one single, \"Swim\".\nAs of 2023, BTS is the best-selling musical act in South Korean history according to the Circle Chart, having sold in excess of 40 million albums. Their studio album Map of the Soul: 7 (2020) is the fourth best-selling album of all time in South Korea, as well as the first in the country to surpass both four and five million registered sales. They are the first non-English-speaking and Asian act to sell out concerts at Wembley Stadium and the Rose Bowl (Love Yourself World Tour, 2019), and were named the International Federation of the Phonographic Industry's (IFPI) Global Recording Artist of the Year for both 2020 and 2021. The group's accolades include multiple American Music Awards, Billboard Music Awards, Golden Disc Awards, and nominations for five Grammy Awards. Outside of music, they have addressed three sessions of the United Nations General Assembly and partnered with UNICEF in 2017 to establish the Love Myself anti-violence campaign. Featured on Time's international cover as \"Next Generation Leaders\" and dubbed the \"Princes of Pop\", BTS has also appeared on Time's lists of the 25 most influential people on the internet (2017–2019) and the 100 most influential people in the world (2019), and in 2018 became the youngest recipients of the South Korean Order of Cultural Merit for their contributions in spreading the Korean culture and language.\n\nName\nBTS stands for the Korean phrase Bangtan Sonyeondan (Korean: 방탄소년단), which translates literally to 'Bulletproof Boy Scouts'. According to J-Hope, the name signifies the group's desire \"to block out stereotypes, criticisms, and expectations that aim on adolescents like bullets\". In Japan, they are known as Bōdan Shōnendan (防弾少年団). In July 2017, BTS announced that their name would also stand for \"Beyond the Scene\" as part of their new brand identity. This extended the meaning of their name to encompass the idea of growth \"from a boy to an adult who opens the doors that are facing forward\".\n\nHistory\n\n2010–2014: Formation and early years\n\nBTS was formed in 2010, after Big Hit Entertainment CEO Bang Si-hyuk wanted to form a hip hop group around RM (Kim Nam-joon), an underground rapper well known on the music scene in Seoul. At the time, physical album sales were on the decline and digital revenues were not yet high enough to compensate. Seeing a need for diversified income streams, Bang decided to form an idol group instead, because of the potential for live concert performances and passionate support from fans of such groups. Many trainees refused to become part of an idol group, but J-Hope, RM, and Suga remained. Bang chose to vary from the usual, highly regimented idol groups and create one where the members would be individuals rather than an ensemble and free to express themselves. Auditions were held in 2010 with plans to launch the following year. The band members lived together, practicing up to 15 hours a day, and first performed before a small crowd of industry insiders in 2013.\n\nBTS's representation by BigHit, rather than one of the three agencies that dominated K-pop at the time, allowed the individual members leeway to express their individuality and have input into the music. On June 12, 2013, BTS released their debut single album 2 Cool 4 Skool, along with the lead single \"No More Dream\", neither of which sold particularly well at the time. On June 13, 2013, BTS made their stage debut on M Countdown with the single, \"No More Dream\". Nevertheless, according to Kathy Sprinkel in her book on BTS, that single was \"spotlighting young people's anxiety in the face of lofty parental expectations, sent shock waves through the K-pop ranks. Here was a musical act that wasn't pulling any punches. More specifically, they had a point of view, and they weren't afraid to take on topics that are considered taboo in South Korean society and elsewhere.\" The album reached the top five on South Korea's Gaon Music Chart. In 2 Cool 4 Skool, BTS employed an old-school hip-hop sound from the 1990s. The album's release was followed by appearances on Korean music shows, which caught the attention of reviewers and viewers.\n",
+        "lang": "en",
+        "wiki_title": "BTS",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:방탄소년단 월드투어 콘서트서 ‘美 젊은 층 마음 사로잡는다’ (43593313235).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8_%EC%9B%94%EB%93%9C%ED%88%AC%EC%96%B4_%EC%BD%98%EC%84%9C%ED%8A%B8%EC%84%9C_%E2%80%98%E7%BE%8E_%EC%A0%8A%EC%9D%80_%EC%B8%B5_%EB%A7%88%EC%9D%8C_%EC%82%AC%EB%A1%9C%EC%9E%A1%EB%8A%94%EB%8B%A4%E2%80%99_%2843593313235%29.jpg/1920px-%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8_%EC%9B%94%EB%93%9C%ED%88%AC%EC%96%B4_%EC%BD%98%EC%84%9C%ED%8A%B8%EC%84%9C_%E2%80%98%E7%BE%8E_%EC%A0%8A%EC%9D%80_%EC%B8%B5_%EB%A7%88%EC%9D%8C_%EC%82%AC%EB%A1%9C%EC%9E%A1%EB%8A%94%EB%8B%A4%E2%80%99_%2843593313235%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8_%EC%9B%94%EB%93%9C%ED%88%AC%EC%96%B4_%EC%BD%98%EC%84%9C%ED%8A%B8%EC%84%9C_%E2%80%98%E7%BE%8E_%EC%A0%8A%EC%9D%80_%EC%B8%B5_%EB%A7%88%EC%9D%8C_%EC%82%AC%EB%A1%9C%EC%9E%A1%EB%8A%94%EB%8B%A4%E2%80%99_%2843593313235%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8_%EC%9B%94%EB%93%9C%ED%88%AC%EC%96%B4_%EC%BD%98%EC%84%9C%ED%8A%B8%EC%84%9C_%E2%80%98%E7%BE%8E_%EC%A0%8A%EC%9D%80_%EC%B8%B5_%EB%A7%88%EC%9D%8C_%EC%82%AC%EB%A1%9C%EC%9E%A1%EB%8A%94%EB%8B%A4%E2%80%99_(43593313235).jpg",
+        "width": 2000,
+        "height": 1333,
+        "license": "CC BY 2.0",
+        "artist": "LG전자 This file comes from LG Electronics's official Flickr. This tag does not indicate the copyright status of the attac",
+        "caption": "Fans at the BTS world tour concert 'Love Yourself' in Los Angeles ■ Marketing campaign in conjunction with BTS' second world tour in the United States ■ Operati",
+        "id": "P1"
+      },
+      {
+        "file": "File:BTS performing at KCON 2014, 10 August 2014 04.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/BTS_performing_at_KCON_2014%2C_10_August_2014_04.jpg/1920px-BTS_performing_at_KCON_2014%2C_10_August_2014_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/BTS_performing_at_KCON_2014%2C_10_August_2014_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_performing_at_KCON_2014,_10_August_2014_04.jpg",
+        "width": 5472,
+        "height": 3648,
+        "license": "CC BY 2.0",
+        "artist": "mduangdara",
+        "caption": "BTS performing at KCON 2014, 10 August 2014",
+        "id": "P2"
+      },
+      {
+        "file": "File:BTS in concert at Wembley Stadium, 2 June 2019 01.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/BTS_in_concert_at_Wembley_Stadium%2C_2_June_2019_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/BTS_in_concert_at_Wembley_Stadium%2C_2_June_2019_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_in_concert_at_Wembley_Stadium,_2_June_2019_01.jpg",
+        "width": 1920,
+        "height": 1080,
+        "license": "CC BY 3.0",
+        "artist": "NenehTrainer",
+        "caption": "BTS in concert at Wembley Stadium, 2 June 2019",
+        "id": "P3"
+      },
+      {
+        "file": "File:BTS win Artist of the Year at Mnet Asian Music Awards, 2 December 2016 03.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/BTS_win_Artist_of_the_Year_at_Mnet_Asian_Music_Awards%2C_2_December_2016_03.png/1920px-BTS_win_Artist_of_the_Year_at_Mnet_Asian_Music_Awards%2C_2_December_2016_03.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/BTS_win_Artist_of_the_Year_at_Mnet_Asian_Music_Awards%2C_2_December_2016_03.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_win_Artist_of_the_Year_at_Mnet_Asian_Music_Awards,_2_December_2016_03.png",
+        "width": 2043,
+        "height": 1688,
+        "license": "CC BY 4.0",
+        "artist": "Divine Treasure",
+        "caption": "BTS win Artist of the Year at Mnet Asian Music Awards, 2 December 2016",
+        "id": "P4"
+      },
+      {
+        "file": "File:BTS at Yeouido Hangang Park, 4 June 2016 02.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/BTS_at_Yeouido_Hangang_Park%2C_4_June_2016_02.jpg/1920px-BTS_at_Yeouido_Hangang_Park%2C_4_June_2016_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/BTS_at_Yeouido_Hangang_Park%2C_4_June_2016_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_at_Yeouido_Hangang_Park,_4_June_2016_02.jpg",
+        "width": 3518,
+        "height": 1289,
+        "license": "CC BY 4.0",
+        "artist": "Komastar.dev",
+        "caption": "BTS at Yeouido Hangang Park, 4 June 2016",
+        "id": "P5"
+      },
+      {
+        "file": "File:BTS at American Music Awards November 21, 2021.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/BTS_at_American_Music_Awards_November_21%2C_2021.jpg/1920px-BTS_at_American_Music_Awards_November_21%2C_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/BTS_at_American_Music_Awards_November_21%2C_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_at_American_Music_Awards_November_21,_2021.jpg",
+        "width": 2400,
+        "height": 1348,
+        "license": "CC BY 3.0",
+        "artist": "Carolin von Petzholdt",
+        "caption": "BTS performing \"Butter\" at the American Music Awards in 2021.",
+        "id": "P6"
+      },
+      {
+        "file": "File:BTS at the White House on May 31, 2022.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/BTS_at_the_White_House_on_May_31%2C_2022.jpg/1920px-BTS_at_the_White_House_on_May_31%2C_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/BTS_at_the_White_House_on_May_31%2C_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_at_the_White_House_on_May_31,_2022.jpg",
+        "width": 3000,
+        "height": 2000,
+        "license": "Public domain",
+        "artist": "The White House",
+        "caption": "BTS at the White House.",
+        "id": "P7"
+      },
+      {
+        "file": "File:BTS at the White House on May 31, 2022 04.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/BTS_at_the_White_House_on_May_31%2C_2022_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/BTS_at_the_White_House_on_May_31%2C_2022_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:BTS_at_the_White_House_on_May_31,_2022_04.jpg",
+        "width": 1286,
+        "height": 826,
+        "license": "Public domain",
+        "artist": "The White House",
+        "caption": "BTS at the White House on May 31, 2022",
+        "id": "P8"
+      },
+      {
+        "file": "File:Low-end EF3 damage to a home in Virginia Beach, Virginia.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Low-end_EF3_damage_to_a_home_in_Virginia_Beach%2C_Virginia.jpg/1920px-Low-end_EF3_damage_to_a_home_in_Virginia_Beach%2C_Virginia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Low-end_EF3_damage_to_a_home_in_Virginia_Beach%2C_Virginia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Low-end_EF3_damage_to_a_home_in_Virginia_Beach,_Virginia.jpg",
+        "width": 4032,
+        "height": 3024,
+        "license": "Public domain",
+        "artist": "National Weather Service",
+        "caption": "A house destroyed, in Virginia Beach, Virginia, by an intense EF3 tornado on April 30, 2023. The National Weather Service rated the damage to this house EF3 on ",
+        "id": "P9"
+      },
+      {
+        "file": "File:170529 BTS at a press conference for the BBMAs 3.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/170529_BTS_at_a_press_conference_for_the_BBMAs_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/170529_BTS_at_a_press_conference_for_the_BBMAs_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:170529_BTS_at_a_press_conference_for_the_BBMAs_3.jpg",
+        "width": 1920,
+        "height": 984,
+        "license": "CC BY 3.0",
+        "artist": "TenAsia",
+        "caption": "BTS at a press conference for the Billboard Music Awards on May 29, 2017",
+        "id": "P10"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-20T16:01:45Z"
+  }
+}

@@ -1,0 +1,710 @@
+{
+  "id": "ch9ede5c-20261121-01-3ff8e",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-20T16:02:50Z",
+  "topic": {
+    "title": "짐바브웨의 초인플레이션",
+    "wiki_title": "짐바브웨의 초인플레이션",
+    "category": "물가금리",
+    "source": "seed",
+    "angle": "왜 같은 실수가 반복되나",
+    "score": 0.7086,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.65,
+      "explore": 0.444
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.65",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7646,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.444
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.65"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-20T16:02:50Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-20T16:02:50Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-20T16:04:36Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-20T16:07:22Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "surprising_fact",
+      "first_line": "식민지 시절 1인당 전쟁 기여도 1위, 독립 후 초인플레라니",
+      "screen_text": "기여도 1위→초인플레",
+      "title": "영국 위해 가장 싸운 식민지가 망가진 이유",
+      "promise": "자원 부국 짐바브웨가 화폐를 포기하기까지 구조적 원인을 보여드립니다",
+      "evidence_quote": "대영제국에서 영국 본국을 포함해 가장 많은 1인당 기여도를 기록하였다",
+      "eval": {
+        "score": 0.97,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 0.5,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "surprising_fact",
+        "first_line": "식민지 시절 1인당 전쟁 기여도 1위, 독립 후 초인플레라니",
+        "screen_text": "기여도 1위→초인플레",
+        "title": "영국 위해 가장 싸운 식민지가 망가진 이유",
+        "promise": "자원 부국 짐바브웨가 화폐를 포기하기까지 구조적 원인을 보여드립니다",
+        "evidence_quote": "대영제국에서 영국 본국을 포함해 가장 많은 1인당 기여도를 기록하였다",
+        "eval": {
+          "score": 0.97,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "다이아몬드·금·백금 다 있는데 화폐가 휴지조각이 됐습니다",
+        "screen_text": "자원 부국인데 화폐 붕괴",
+        "title": "광물 수출국 짐바브웨, 왜 자국 화폐를 버렸나",
+        "promise": "수출로 달러를 벌어들이는데도 환율을 방어 못 한 제도적 함정을 설명합니다",
+        "evidence_quote": "황금, 상아, 구리 등을 옷감과 유리로 물물교환하는 형태의 교역을 진행하였다",
+        "eval": {
+          "score": 0.9042,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.9,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "토지 70%를 5% 백인이 독점하던 구조, 개혁 후 수확량 반토막",
+        "screen_text": "토지 독점→수확 반토막",
+        "title": "토지 개혁이 식량 위기와 초인플레를 부른 메커니즘",
+        "promise": "누가 토지를 얻고 누가 생산 능력을 잃었는지 손익 구조를 보여드립니다",
+        "evidence_quote": "흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다",
+        "eval": {
+          "score": 0.8838,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "1980년 독립 때 1달러=짐바브웨달러, 나중엔 100조 장이 나왔습니다",
+        "screen_text": "1달러→100조 장 차이",
+        "title": "독립 초 1:1 환율, 어떻게 100조 배 차이 났나",
+        "promise": "환율 폭등의 수치 이면에 있는 재정 지배 구조 변화를 짚어드립니다",
+        "evidence_quote": "1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다",
+        "eval": {
+          "score": 0.8154,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.89,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "2009년 자국 화폐 포기, 미국 달러·남아공 랜드로 버텼습니다",
+        "screen_text": "자국 화폐 포기한 국가",
+        "title": "화폐 주권 포기하고 달러 쓰는 나라가 된 과정",
+        "promise": "초인플레가 화폐 제도 자체를 무너뜨린 결정적 순간을 정리해드립니다",
+        "evidence_quote": "2008년 이후 경제가 급속히 성장했지만, 짐바브웨 달러 이외의 통화 사용이 허용된 이후",
+        "eval": {
+          "score": 0.3225,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "연간 인플레 796억 %라니, 가격이 하루 만에 두 배 뛰었습니다",
+        "screen_text": "연 796억% 인플레 실체",
+        "title": "하루 두 배 오르는 물가, 화폐가 화폐 구실 못 한 날들",
+        "promise": "숫자 뒤에 숨은 재정 적자·통화 발행·외환 부족의 연쇄 고리를 풀어드립니다",
+        "evidence_quote": "1997년부터 2008년까지 경제가 지속적으로 쇠퇴했고(후기에는 초인플레이션)",
+        "eval": {
+          "score": 0.3097,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 0.5,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "짐바브웨, 기여도 1위에서 초인플레까지",
+    "target_seconds": 35,
+    "category": "물가금리",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "식민지 시절 1인당 전쟁 기여도 1위, 독립 후 초인플레라니",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "남로디지아가 대영제국 내 1인당 전쟁 기여도 1위를 기록했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "남로디지아는 1차와 2차 세계 대전 기간 모두를 포함하여 대영제국에서 영국 본국을 포함해 가장 많은 1인당 기여도를 기록하였다"
+          }
+        ]
+      },
+      {
+        "narration": "1930년 토지분배법으로 흑인 토지 소유가 제한되고 백인 소수에게 국토 대부분이 집중됐습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "1930년",
+          "small": "토지분배법 제정"
+        },
+        "claims": [
+          {
+            "text": "1930년 제정된 토지 분배법이 흑인의 토지 소유권을 제한했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다"
+          }
+        ]
+      },
+      {
+        "narration": "독립 후 1990년대 경제 침체와 토지 개혁 혼란, 재정 적자 보전을 위한 화폐 발행이 겹쳤습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "초인플레 경로",
+          "items": [
+            "경제 침체",
+            "토지 개혁 혼란",
+            "과도한 화폐 발행"
+          ]
+        },
+        "claims": [
+          {
+            "text": "짐바브웨는 1990년대 이후 경제 침체를 겪었습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다"
+          },
+          {
+            "text": "경제 침체와 토지 개혁 혼란, 재정 적자 보전을 위한 화폐 발행이 초인플레이션 원인으로 분석됩니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "결국 자국 화폐를 포기하고 달러 등 타국 통화 허용 뒤 성장세가 돌아왔습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "통화 정책 변화와 경제",
+          "a": {
+            "label": "자국 화폐 고집",
+            "value": 2008
+          },
+          "b": {
+            "label": "타국 통화 허용",
+            "value": 2009
+          },
+          "unit": "년"
+        },
+        "claims": [
+          {
+            "text": "짐바브웨 달러 외 타국 통화 사용이 허용된 이후 경제가 급성장했습니다.",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "From 1997 to 2008, the economy experienced consistent decline (and in the latter years, hyperinflation), though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted"
+          },
+          {
+            "text": "자국 통화 신뢰 상실 시 대안 통화 허용이 안정화 계기가 될 수 있다는 분석이 있습니다.",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "구조적 불평등과 제도 실패가 자원 부국의 화폐를 무너뜨린 셈입니다.",
+        "visual": {
+          "type": "text",
+          "headline": "구조적 원인: 불평등·제도 실패",
+          "sub": "자국 화폐 신뢰 상실이 핵심"
+        },
+        "claims": [
+          {
+            "text": "식민지 시기 형성된 구조적 불평등과 독립 후 제도 실패가 화폐 붕괴의 근본 원인으로 해석됩니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "남로디지아가 대영제국 내 1인당 전쟁 기여도 1위를 기록했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 짐바브웨",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+        "published": "2026-11-08",
+        "checked_at": "2026-11-20",
+        "quote": "남로디지아는 1차와 2차 세계 대전 기간 모두를 포함하여 대영제국에서 영국 본국을 포함해 가장 많은 1인당 기여도를 기록하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "1930년 제정된 토지 분배법이 흑인의 토지 소유권을 제한했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 짐바브웨",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+        "published": "2026-11-08",
+        "checked_at": "2026-11-20",
+        "quote": "1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "짐바브웨는 1990년대 이후 경제 침체를 겪었습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 짐바브웨",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+        "published": "2026-11-08",
+        "checked_at": "2026-11-20",
+        "quote": "짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "경제 침체와 토지 개혁 혼란, 재정 적자 보전을 위한 화폐 발행이 초인플레이션 원인으로 분석됩니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 짐바브웨",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+        "published": "2026-11-08",
+        "checked_at": "2026-11-20",
+        "quote": "짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "짐바브웨 달러 외 타국 통화 사용이 허용된 이후 경제가 급성장했습니다.",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — Zimbabwe",
+        "source_url": "https://en.wikipedia.org/wiki/Zimbabwe",
+        "published": "2026-11-19",
+        "checked_at": "2026-11-20",
+        "quote": "From 1997 to 2008, the economy experienced consistent decline (and in the latter years, hyperinflation), though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 3,
+        "text": "자국 통화 신뢰 상실 시 대안 통화 허용이 안정화 계기가 될 수 있다는 분석이 있습니다.",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — Zimbabwe",
+        "source_url": "https://en.wikipedia.org/wiki/Zimbabwe",
+        "published": "2026-11-19",
+        "checked_at": "2026-11-20",
+        "quote": "though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 4,
+        "text": "식민지 시기 형성된 구조적 불평등과 독립 후 제도 실패가 화폐 붕괴의 근본 원인으로 해석됩니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 짐바브웨",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+        "published": "2026-11-08",
+        "checked_at": "2026-11-20",
+        "quote": "1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 220,
+      "est_seconds": 40.7,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 10.6,
+      "max_scene_similarity": 0.08,
+      "visual_mix": {
+        "stat": 1,
+        "steps": 1,
+        "compare": 1,
+        "photo": 1,
+        "text": 1
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "남로디지아가 대영제국 내 1인당 전쟁 기여도 1위를 기록했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 짐바브웨",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+      "published": "2026-11-08",
+      "checked_at": "2026-11-20",
+      "quote": "남로디지아는 1차와 2차 세계 대전 기간 모두를 포함하여 대영제국에서 영국 본국을 포함해 가장 많은 1인당 기여도를 기록하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "1930년 제정된 토지 분배법이 흑인의 토지 소유권을 제한했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 짐바브웨",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+      "published": "2026-11-08",
+      "checked_at": "2026-11-20",
+      "quote": "1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "짐바브웨는 1990년대 이후 경제 침체를 겪었습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 짐바브웨",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+      "published": "2026-11-08",
+      "checked_at": "2026-11-20",
+      "quote": "짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "경제 침체와 토지 개혁 혼란, 재정 적자 보전을 위한 화폐 발행이 초인플레이션 원인으로 분석됩니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 짐바브웨",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+      "published": "2026-11-08",
+      "checked_at": "2026-11-20",
+      "quote": "짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "짐바브웨 달러 외 타국 통화 사용이 허용된 이후 경제가 급성장했습니다.",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — Zimbabwe",
+      "source_url": "https://en.wikipedia.org/wiki/Zimbabwe",
+      "published": "2026-11-19",
+      "checked_at": "2026-11-20",
+      "quote": "From 1997 to 2008, the economy experienced consistent decline (and in the latter years, hyperinflation), though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 3,
+      "text": "자국 통화 신뢰 상실 시 대안 통화 허용이 안정화 계기가 될 수 있다는 분석이 있습니다.",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — Zimbabwe",
+      "source_url": "https://en.wikipedia.org/wiki/Zimbabwe",
+      "published": "2026-11-19",
+      "checked_at": "2026-11-20",
+      "quote": "though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 4,
+      "text": "식민지 시기 형성된 구조적 불평등과 독립 후 제도 실패가 화폐 붕괴의 근본 원인으로 해석됩니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 짐바브웨",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+      "published": "2026-11-08",
+      "checked_at": "2026-11-20",
+      "quote": "1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-20T16:07:22Z",
+  "pack": {
+    "topic": {
+      "title": "짐바브웨의 초인플레이션",
+      "wiki_title": "짐바브웨의 초인플레이션",
+      "category": "물가금리",
+      "source": "seed",
+      "angle": "왜 같은 실수가 반복되나",
+      "score": 0.7086,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.444
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.65",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7646,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.65,
+          "explore": 0.444
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.65"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 짐바브웨",
+        "url": "https://ko.wikipedia.org/wiki/%EC%A7%90%EB%B0%94%EB%B8%8C%EC%9B%A8",
+        "published": "2026-11-08",
+        "fetched_at": "2026-11-20",
+        "text": "짐바브웨 공화국(영어: Republic of Zimbabwe, /zɪmˈbɑːbweɪ, -wi/) 또는 짐바브웨는 남아프리카의 내륙국으로, 잠베지강과 림포포강 사이에 위치하고 있으며, 남아프리카 공화국, 보츠와나, 잠비아, 그리고 모잠비크와 국경을 맞대고 있다. 짐바브웨의 수도이자 최대도시는 하라레이다. 짐바브웨에는 대략 1,400만 명이 살고 있으며, 영어, 쇼나어, 은데벨레어를 포함한 16개의 공용어가 쓰이고 있다.\n현재의 짐바브웨 지역은 11세기부터 이주와 교역이 오가는 주요 경유지의 역할을 하였으며, 로즈비 제국과 마트와카지 등 여러 조직화된 국가와 왕국들이 세워지기도 하였다. 1890년, 당시 세실 로즈이 이끌던 영국 남아프리카 회사가 군주국이 있었던 마쇼날랜드를 정복하고, 이어 1893년 제1차 마테벨레 전쟁에서 은데벨레 왕국을 이기며 마타벨렐란드를 정복하며 처음으로 현재 짐바브웨의 경계를 표시하였다. 1923년, 오랫동안 각각 나뉘어 통치되었던 마쇼날랜드와 마타벨렐란드 지역을 백인 식민주의자 세력 주도 하에 하나의 영국 자치령인 남로디지아로 통합하는 안에 대한 국민 투표를 실시했으나, 이는 흑인 원주민들을 제외한 소수의 백인 거주민들만 참여할 수 있었다. 1965년, 소수 백인들로 구성된 보수주의 정부는 로디지아로 일방적인 독립 선언을 하였다. 그 이후 로디지아는 국제적인 고립과 15년 동안 흑인 민족주의 세력과의 내전을 겪어야 했고, 이후 보편적 선거권을 명시한 평화 협정을 체결하였고 1980년 4월 짐바브웨의 공식 출범으로 이어졌다. 짐바브웨는 영연방을 가입했었으나, 2002년 당시 정부의 국제법 위반으로 회원자격을 박탈당하였으며, 2003년 12월 탈퇴하게 되었다. 짐바브웨는 현재 유엔, 남아프리카 개발 공동체, 아프리카 연합, 동남아프리카 공동시장의 회원국이다. 짐바브웨는 한때 크게 번성하였다고 해서 \"아프리카의 보석\"으로 불리었다.\n소수 백인 정권이 물러나고 소속 정당인 ZANU-PF가 선거에서 이겨, 1980년 카난 바나나는 짐바브웨의 대통령에 취임하고 로버트 무가베는 짐바브웨의 총리에 임명되었다. 바나나가 1980년부터 1987년까지 대통령을 하고 있다가 무가베가 바나나를 동성연애 혐의로 체포한 후 대통령 직을 박탈 시키고 본인이 대통령에 취임했으며 바나나를 그 혐의로 구속 수감 시켰다. 바나나는 탈옥 후 우간다로 도주했으며 이후 영국으로 망명한 다음 2003년에 런던에서 사망했다. 무가베는 1987년부터 2017년 사임할 때까지 짐바브웨의 대통령직을 수행하였다. 무가베의 독재 정권 아래, 국가 안보 조직이 짐바브웨를 관리하고 광범위한 인권 침해 행위가 자행되었다. 무가베는 냉전시대의 사회주의 혁명적 문구를 인용하며, 짐바브웨의 경제불안을 서구 자본주의 국가들의 탓으로 돌렸다. 데즈먼드 투투 대주교는 무가베를 \"만화에서 나올 듯한 전형적인 아프리카 독재자의 대명사\"라고 칭했지만, 당시의 아프리카 정치 지도자들은 무가베의 반제국주의 정체성으로 인해 그를 비난하기를 꺼렸다. 짐바브웨는 1990년대 이후 경제 침체를 겪으며 여러 차례의 경제 파탄과 초인플레이션 현상을 겪었다.\n2017년 11월 15일, 짐바브웨의 경제 침제와 함께 무가베 정권에 대한 시위가 1년 동안 지속되면서, 무가베는 짐바브웨 군부가 일으킨 쿠데타에 의해 가택 연금되었다. 2017년 11월 19일, ZANU-PF는 로버트 무가베를 당 대표에서 해임하고, 에머슨 음낭가과 전 부통령을 그 자리에 임명했다. 무가베 대통령은 2017년 11월 21일 탄핵 절차가 마무리되기 전 사표를 제출했다. 2018년 7월 30일 짐바브웨 총선이 시행되었고, 에머슨 음낭가과가 이끄는 ZANU-PF당이 집권 여당이 되었다. 짐바브웨의 제1야당인 MDC 연합을 이끌던 넬슨 차미사는 선거 결과에 이의를 제기하고 짐바브웨 헌법 재판소에 헌법소원을 제출했다. 법원은 음낭가과의 당선을 확정하며, 무가베에 이어 새로 선출된 대통령이 됐다.\n\n어원\n\"짐바브웨\"라는 이름은 그레이트 짐바브웨 시대 당시 쓰였던 쇼나어 지명으로, 짐바브웨 남동부에 위치한 고대 도시(현재는 짐바브웨의 보호구역으로 지정된)를 일컬었던 것에서 기원한다. 많은 출처에 따르면 \"짐바브웨\"는 드짐바-드자-마브웨에서 유래했다고 전해지는데, 이는 쇼나어 중 카랑가 방언에서 \"돌집들이 모여있는 곳\" (드짐바는 \"집\"인 임바의 복수형; 마브웨는\"돌\"인 브웨의 복수형)으로 번역된다. 카랑가 방언을 사용하는 쇼나족은 아직도 그레이트 짐바브웨 지역에서 거주하는데, 이는 현재 짐바브웨의 마스빙고주 지역에 해당한다. 한편 고고학자 피터 가레이크는 \"짐바브웨\"는 드짐바-훼의 축약된 형태라고 주장하였는데, 이는 쇼나어의 제즈루 방언으로 \"공경받는 집들\"을 의미하며, 보통 추장들의 집이나 무덤을 일컬었다고 전해진다.\n짐바브웨는 남로디지아 (1898), 로디지아 (1965), 그리고 짐바브웨 로디지아 (1979)로 알려져 있었다. \"짐바브웨\"가 처음으로 국가를 지칭하는데 쓰인 것은 1960년 흑인 민족주의자 마이클 마웨마가 주조한 주화이며, 1961년 짐바브웨 국민당이 공식적으로 처음 짐바브웨라는 국명을 사용하기 시작하였다. 반면 \"로디지아\"는 19세기 말 짐바브웨 지역을 영국의 식민지배를 받게 한 세실 로즈의 이름에서 따온 것으로, 아프리카 민족주의자들에게 그 기원과 함축된 의미가 부적절하다고 인식되었다.\n마이클 마웨마에 따르면, 흑인 민족주의자들은 1960년 로디지아의 새 국명을 정하기 위해 회의를 열었는데, 압도적인 지지를 받은 마웨마의 \"짐바브웨\" 이전에 \"마트쇼바나\"와 \"모노모타파\" 등의 이름이 제의되었다고 한다. 한편 마타벨렐란드의 민족주의자들은 불라와요 남쪽의 마토포 구릉에서 유래한 \"마토포스\"를 제의하였다.\n언제부터 짐바브웨가 국명으로 사용되었는지는 불분명하나, 마이클 마웨마가 1961년에 쓴 기록에 \"짐바브웨랜드\"가 등장하였고, 1962년부터는 \"짐바브웨\"가 흑인 민족주의 운동에서 널리 사용되기 시작하였다. 흑인 민족주의자 에디슨 즈보그고는 2001년 인터뷰에서 마웨마가 집회 도중 짐바브웨를 언급하였고, 그때부터 짐바브웨가 자연스레 널리 언급되었다고 회상하였다. 흑인 민족주의자 세력들은 1964년에서 1979년까지 이어진 제2차 짐바브웨 해방전쟁 당시 로디지아 정부에 대항하여 짐바브웨라는 국명을 계속하여 사용하였다. 전쟁 당시 주요한 단체는 짐바브웨 아프리카 민족 연맹 (ZANU, 1975년부터 로버트 무가베 지도)과 짐바브웨 아프리카 인민 연맹 (1960년대 초 설립부터 조슈아 은코모 지도) 등이 있다.\n\n역사\n\n1887년 이전\n\n고고학적 기록에 따르면, 오늘날 짐바브웨 지역에 인류가 정착한 시기는 최소 10만 년 전으로 거슬러 올라간다. 그 중에서 가장 먼저 정착한 집단은 화살촉과 동굴 벽화를 남긴 산족으로 알려져 있다. 약 2,000년 전 반투족의 대이동 시기에 반투어족 계통 언어를 사용하는 농경민 집단이 현재의 짐바브웨 지역에 정착했다.\n현재 쇼나어의 원어를 사용한 집단사회는 9세기에 림포포 강 중턱 지역에 처음으로 출현하였으나, 이후 짐바브웨의 고원지대로 이주하였다. 짐바브웨 고원지대는 이후 10세기에 쇼나족 국가들의 중심지가 되었다. 10세기 초에 인도양 연안지역에 아랍 상인들과의 교역이 발달하게 되면서, 11세기에 마붕구브웨 왕국이 발전하는데도 기여하였다. 마붕구브웨 왕국은 13세기에서 15세기까지 현재의 짐바브웨 지역을 장악한 여러 쇼나족 문명들의 선구국가 역할을 하였고, 현재 그레이트 짐바브웨, 마스빙고, 그리고 여러 소도시에 소재한 유적에서 그 흔적을 찾아볼 수 있다. 마붕구브웨 왕국의 주요 유적에서는 그만의 독특한 건석 건축양식을 발견할 수 있다.\n포르투갈에서 온 유럽인 탐험가들이 짐바브웨에 도착하였을 당시, 마붕구브웨 왕국은 짐바브웨 지역에서 가장 먼저 무역국가로 발전하고 있는 국가들 중 하나였다. 짐바브웨의 무역국가들은 황금, 상아, 구리 등을 옷감과 유리로 물물교환하는 형태의 교역을 진행하였다.\n1300년에서 1600년 사이 짐바브웨 왕국이 마붕구브웨 왕국을 능가하게 되었다. 짐바브웨 왕국은 마붕구브웨 왕국이 세워놓은 석조 문명을 정제하고 확장하여 현재의 그레이트 짐바브웨 유적을 남겼다. 이후 1450년에서 1760년 사이에 무타파 제국이 짐바브웨 지역을 장악하였다. 무타파 제국은 현재의 짐바브웨를 포함하여 모잠비크 중부 지역까지 영향력을 행사하였다. 무타파 제국은 므웨네 무타파, 모노모타파, 그리고 \"문후무타파\" 등의 명칭으로도 불리었는데, 아랍인과 포트투갈인들에게 제국 내의 전략적 무역로로 잘 알려져 있었다. 포르투갈인들은 이 무역로를 독차지하기 위해 여러차례 전쟁을 일으켰고, 이는 17세기 초 무타파 제국을 몰락하게 하는데 크게 작용하였다.\n\n짐바브웨 지역 내에 유럽인의 영향력에 대응하여 새로운 쇼나족 국가가 출현하였는데, 바로 로즈비 제국 (1684-1834)이다. 로즈비 제국은 수세기 동안 군사적, 정치적 그리고 종교적 발전을 이루어내면서, 짐바브웨 고원에서 무력으로 포르투갈인들을 축출하게 되었다. 로즈비 제국은 짐바브웨 왕국과 마붕구브웨의 석조 문명을 그대로 계승하는 동시에, 머스킷을 무장체계에 새롭게 도입하고 침략에 대비해 전문 군인들을 모집하였다.\n1821년, 줄루족 출신의 장군 음질리카지 쿠말로가 줄루 왕국의 국왕 샤카에 봉기를 일으켜 자신만의 족벌, 은데벨레를 세운다. 은데벨레인들은 북쪽의 트란스발으로 진격하였으나, 진격 과정에서 지역이 크게 파괴되면서 이후 초토화되기까지 하였다. 1836년 보어인들이 트란스발 지역에 유입되기 시작하자, 은데벨레인들은 츠와나인들과 그리콰족들의 지원을 받아 더 북쪽으로 이주하였다. 1838년 은데벨레인들이 로즈비 제국을 포함한 여러 쇼나족 국가들을 정복하면서, 로즈비 제국은 은데벨레의 종속국으로 전락하게 되었다.\n1840년, 음질리카지와 은데벨레인들은 남아프리카 지역을 잃게 되면서 현재의 짐바브웨 마타벨렐란드 지역에 영구적으로 정착하게 되면서, 불라와요를 수도로 건설하였다. 음질리카지는 은데벨레의 군사 조직을 연대 부락으로 정비하면서 이후 보어인의 침략에 대비하였다. 음질리카지는 1868년에 격렬한 권력 투쟁 도중 사망하였고, 그의 아들인 로벤굴라가 왕위를 계승하였다.\n\n식민지 시대와 로디지아 (1888-1964)\n\n1880년대부터 세실 로즈의 영국 남아프리카 회사와 함께 유럽 개척민들이 지역에 진출하기 시작하였다. 1888년 로즈는 당시 은데벨레 국왕 로벤굴라에게서 광산 채굴권을 허가받았고, 이후 이 채굴권을 토대로 당시 영국 정부에게 마타벨렐란드와 마쇼날랜드 지배에 대한 칙허장을 요구하였다.\n로즈는 1890년 영국 남아프리카 경찰 (British South Africa Police, BSAP)과 파이오니어 칼럼 (Pioneer Column, 유럽인들로 구성)을 마테벨렐란드와 마쇼날랜드에 파견, 솔즈버리 요새 (현재의 하라레)를 건설함으로써 영국 남아프리카 회사의 지배가 시작되었다. 이후 1893년과 1894년, 맥심 기관총이 새롭게 도입되면서, BSAP가 은데벨레와의 제1차 마테벨레 전쟁에서 우위를 점할 수 있었다. 로즈는 이후 림포포강과 탕가니카호 사이를 가로지르는 \"잠베시아\" 지역을 점유하기 위해 추가적인 협상을 진행하였다.\n이후 \"잠베시아\" 지역에 대한 권리가 여러 조약들을 통해 영국 남아프리카 회사에게 이양되면서, 곧바로 유럽인들의 대규모 정착이 장려되었고, 해당 지역의 노동력, 귀금속, 그리고 기타 광물류에 대한 영국의 통제가 지속되었다.\n1895년, 영국 남아프리카 회사는 식민지 건설에 크게 기여한 세실 로즈를 기려 \"로디지아\"라고 새롭게 지역을 명명하였다. 1898년 잠베지 남부 지역을 공식적으로 \"남로디지아\"라고 명명하였으며, 이는 이후 다시 \"짐바브웨\"로 국명을 변경하는 주요한 원인이 되었다. 한편, 잠베지 북부 지역은 별도의 관리를 받게 되며 북로디지아 (현재의 잠비아)로 명명되었다. 이후 트란스발 공화국에서 세실 로즈가 개입한 제임슨 습격 (1895년 12월 - 1896년 1월)이 발생하는 과정에서, 은데벨레인들이 종교 지도자 믈리모를 중심으로 백인 정권에 대항하였다. 제2차 마타벨레 전쟁은 1896년 영국 측이 믈리모를 암살하며 마테벨렐란드에서 마무리되었다. 한편 쇼나족 세력은 1897년까지 영국 남아프리카 회사 지배에 대항하며 몇차례의 봉기를 일으켰으나 모두 실패하였다.\n몇차례의 소요 사태가 발생한 이후, 로즈 정부는 은데벨레인과 쇼나족 세력을 완전히 진압하고 토지를 유럽인들을 중심으로 배분하였으며, 이를 위해 많은 토착민들을 원래 거주지에서 쫓아내었다.\n영국은 남로디지아를 1923년 9월 12일에 합병하였다. 1923년 10월 1일, 새로운 대영제국의 식민지로 선포된 남로디지아의 첫 헌법이 발효되었다.\n\n남로디지아는 새로운 헌법 아래 1922년 실시한 국민투표 결과에 따라 대영 제국의 자치령이 되었다. 20세기 초에 발생한 두번의 세계 대전에서 남로디지아는 인종과 관계없이 모든 국민들이 영국군에서 복무하였다. 남로디지아는 1차와 2차 세계 대전 기간 모두를 포함하여 대영제국에서 영국 본국을 포함해 가장 많은 1인당 기여도를 기록하였다.\n1930년 제정된 토지 분배법은 흑인의 토지 소유권을 남로디지아의 일정 지역으로 제한하였고 소수의 백인들에게만 국토 대부분의 토지에 대한 매매를 허가하였다.",
+        "lang": "ko",
+        "wiki_title": "짐바브웨",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Zimbabwe",
+        "url": "https://en.wikipedia.org/wiki/Zimbabwe",
+        "published": "2026-11-19",
+        "fetched_at": "2026-11-20",
+        "text": "Zimbabwe, officially the Republic of Zimbabwe, is a landlocked country in Southeast Africa, between the Zambezi and Limpopo River, bordered by South Africa to the south, Botswana to the southwest, Zambia to the north, and Mozambique to the east. The capital and largest city is Harare, and the second largest is Bulawayo.\nA country of roughly 17.3 million people per 2026 estimates, Zimbabwe's largest ethnic groups are the Northern Ndebele and Shona, who make up 95% of the total population, followed by the other smaller minorities. Zimbabwe has 16 official languages, with English, Shona, and Ndebele the most commonly employed. Zimbabwe is a member of the United Nations, the Southern African Development Community, the African Union, and the Common Market for Eastern and Southern Africa.\nThe region was long inhabited by the San, and was settled by Bantu peoples around 2,000 years ago. Beginning in the 11th century the Shona people constructed the city of Great Zimbabwe, which became one of the major African trade centres by the 13th century. From there, the Kingdom of Zimbabwe was established, followed by the Mutapa and Rozvi empires. The British Empire began to consolidate control of the area following the 1890 British Ultimatum against the Portuguese, who had claimed the area between Angola and Mozambique in the 1885 Pink Map. The British South Africa Company of Cecil Rhodes demarcated the Rhodesia region in 1890 when they conquered Mashonaland and later in 1893 Matabeleland after the First Matabele War. Company rule ended in 1923 with the establishment of Southern Rhodesia as a self-governing British colony. In 1965, the white minority government unilaterally declared independence as Rhodesia. The state endured international isolation and a 15-year guerrilla war with black rebel forces; this culminated in a peace agreement that established de jure sovereignty as Zimbabwe in April 1980.\nRobert Mugabe became Prime Minister of Zimbabwe in 1980; he was the President of Zimbabwe from 1987, after converting the country's initial parliamentary system into a presidential one (with the abolishment of direct presidential elections as of 2026 it is now an assembly independent system), until his resignation in 2017 following a coup. Under Mugabe's authoritarian regime, the state security apparatus dominated the country and was responsible for widespread human rights violations, which received worldwide condemnation. From 1997 to 2008, the economy experienced consistent decline (and in the latter years, hyperinflation), though it has since seen rapid growth after the use of currencies other than the Zimbabwean dollar was permitted. In 2017, in the wake of over a year of protests against his government as well as Zimbabwe's rapidly declining economy, a coup d'état resulted in Mugabe's resignation. Emmerson Mnangagwa has since served as Zimbabwe's president.\n\nEtymology\n\nThe name \"Zimbabwe\" stems from a Shona term for Great Zimbabwe, a medieval city (Masvingo) in the country's south-east. Two different theories address the origin of the word. Many sources hold that \"Zimbabwe\" derives from dzimba-dza-mabwe, translated from the Karanga dialect of Shona as \"houses of stones\" (dzimba = plural of imba, \"house\"; mabwe = plural of ibwe, \"stone\"). The Karanga-speaking Shona people live around Great Zimbabwe in the modern-day Masvingo province. Archaeologist Peter Garlake claims that \"Zimbabwe\" represents a contracted form of dzimba-hwe, which means \"venerated houses\" in the Zezuru dialect of Shona and usually references chiefs' houses or graves.\nZimbabwe was formerly known as Southern Rhodesia (1898), Rhodesia (1965), and Zimbabwe Rhodesia (1979). The first recorded use of \"Zimbabwe\" as a term of national reference dates from 1960 as a coinage by the black nationalist Michael Mawema, whose Zimbabwe National Party became the first to officially use the name in 1961. The term \"Rhodesia\"—derived from the surname of Cecil Rhodes, the primary instigator of the British colonisation of the territory—was perceived by African nationalists as inappropriate because of its colonial origin and connotations.\nAccording to Mawema, black nationalists held a meeting in 1960 to choose an alternative name for the country, proposing names such as \"Matshobana\" and \"Monomotapa\" before his suggestion, \"Zimbabwe\", prevailed. It was initially unclear how the chosen term was to be used—a letter written by Mawema in 1961 refers to \"Zimbabweland\"—but \"Zimbabwe\" was sufficiently established by 1962 to become the generally preferred term of the black nationalist movement.\nLike those of many African countries that gained independence during the Cold War, Zimbabwe is an ethnically neutral name. It is debatable to what extent Zimbabwe, being over 80% Shona and dominated by them in various ways, can be described as a nation state. The constitution acknowledges 16 languages, but only embraces two of them nationally, Shona and English. Shona is taught widely in schools, unlike Ndebele. Zimbabwe has never had a non-Shona head of the government.\n\nHistory\n\nPre-colonial era\n\nArchaeological records date archaic human settlement of present-day Zimbabwe to at least 500,000 years ago. Zimbabwe's earliest known inhabitants were most likely the San people, who left behind a legacy of arrowheads and cave paintings. Approximately 2,000 years ago, the first Bantu-speaking farmers arrived during the Bantu expansion.\nSocieties speaking proto-Shona languages first emerged in the middle Limpopo River valley in the 9th century before moving on to the Zimbabwean highlands. The Zimbabwean plateau became the centre of subsequent Shona states, beginning around the 10th century. Around the early 10th century, trade developed with Arab merchants on the Indian Ocean coast, helping to develop the Kingdom of Mapungubwe in the 13th century. This was the precursor to the Shona civilisations that dominated the region from the 13th century, evidenced by ruins at Great Zimbabwe, near Masvingo, and by other smaller sites. The main archaeological site used a unique dry stone architecture. The Kingdom of Mapungubwe was the first in a series of trading states which had developed in Zimbabwe by the time the first European explorers arrived from Portugal. These states traded gold, ivory, and copper for cloth and glass.\nBy 1300, the Kingdom of Zimbabwe eclipsed Mapungubwe. This Shona state further refined and expanded upon Mapungubwe's stone architecture.",
+        "lang": "en",
+        "wiki_title": "Zimbabwe",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Zimbabwean embassy in London.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Zimbabwean_embassy_in_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Zimbabwean_embassy_in_London.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Zimbabwean_embassy_in_London.jpg",
+        "width": 1502,
+        "height": 1610,
+        "license": "Public domain",
+        "artist": "Astrotrain at English Wikipedia",
+        "caption": "Zimbabwe House, Embassy of the Republic of Zimbabwe in London, United Kingdom. Located in the Strand (across from the Thistle Charing Cross)",
+        "id": "P1"
+      },
+      {
+        "file": "File:Southern Rhodesia (1909) (14804694073).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Southern_Rhodesia_%281909%29_%2814804694073%29.jpg/1920px-Southern_Rhodesia_%281909%29_%2814804694073%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Southern_Rhodesia_%281909%29_%2814804694073%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Southern_Rhodesia_(1909)_(14804694073).jpg",
+        "width": 3024,
+        "height": 2240,
+        "license": "Public domain",
+        "artist": "British South Africa Company and/or LE Taylor",
+        "caption": "First run of the Zambesia Mail and Passenger Company stage coach between Salisbury (now Harare) and Umtali (now Mutare), Southern Rhodesia (now Zimbabwe) ( [1])",
+        "id": "P2"
+      },
+      {
+        "file": "File:Hwange National Park, Zimbabwe (48594790636).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Hwange_National_Park%2C_Zimbabwe_%2848594790636%29.jpg/1920px-Hwange_National_Park%2C_Zimbabwe_%2848594790636%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Hwange_National_Park%2C_Zimbabwe_%2848594790636%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Hwange_National_Park,_Zimbabwe_(48594790636).jpg",
+        "width": 4608,
+        "height": 3456,
+        "license": "CC BY 2.0",
+        "artist": "Fabio Achilli from Milano, Italy",
+        "caption": "Hwange National Park, Zimbabwe",
+        "id": "P3"
+      },
+      {
+        "file": "File:Hwange National Park, Zimbabwe (48595113747).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Hwange_National_Park%2C_Zimbabwe_%2848595113747%29.jpg/1920px-Hwange_National_Park%2C_Zimbabwe_%2848595113747%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Hwange_National_Park%2C_Zimbabwe_%2848595113747%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Hwange_National_Park,_Zimbabwe_(48595113747).jpg",
+        "width": 4608,
+        "height": 3223,
+        "license": "CC BY 2.0",
+        "artist": "Fabio Achilli from Milano, Italy",
+        "caption": "Hwange National Park, Zimbabwe",
+        "id": "P4"
+      },
+      {
+        "file": "File:What did Zimbabwe export in 2018.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/What_did_Zimbabwe_export_in_2018.png/1920px-What_did_Zimbabwe_export_in_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/What_did_Zimbabwe_export_in_2018.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:What_did_Zimbabwe_export_in_2018.png",
+        "width": 5376,
+        "height": 2010,
+        "license": "Public domain",
+        "artist": "The Growth Lab at Harvard University",
+        "caption": "What did Zimbabwe export in 2018?",
+        "id": "P5"
+      },
+      {
+        "file": "File:CILT ZIMBABWE DELEGATION.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/CILT_ZIMBABWE_DELEGATION.jpg/1920px-CILT_ZIMBABWE_DELEGATION.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/CILT_ZIMBABWE_DELEGATION.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:CILT_ZIMBABWE_DELEGATION.jpg",
+        "width": 3800,
+        "height": 2487,
+        "license": "CC BY 4.0",
+        "artist": "Tino Munemo",
+        "caption": "CILT ZIMBABWE Chairman Dr. Tapiwa Mijakachi Centre, Administrator Annie Harvan 2nd from the right, CMILT Tinotenda E. Munemo 1st from the right and members on t",
+        "id": "P6"
+      },
+      {
+        "file": "File:Zambia, Zimbabwe and Malawi 1957.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Zambia%2C_Zimbabwe_and_Malawi_1957.jpg/1920px-Zambia%2C_Zimbabwe_and_Malawi_1957.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Zambia%2C_Zimbabwe_and_Malawi_1957.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Zambia,_Zimbabwe_and_Malawi_1957.jpg",
+        "width": 3485,
+        "height": 5162,
+        "license": "Public domain",
+        "artist": "Pergamon World Atlas",
+        "caption": "Old map of Zambia, Zimbabwe and Malawi from 1957",
+        "id": "P7"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-20T16:02:50Z"
+  }
+}
