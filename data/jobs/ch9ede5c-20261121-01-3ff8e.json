@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261121-01-3ff8e",
   "channel": "웃짬",
-  "status": "NEEDS_REVIEW",
+  "status": "SCHEDULED",
   "created_at": "2026-11-20T16:02:50Z",
   "topic": {
     "title": "짐바브웨의 초인플레이션",
@@ -85,6 +85,11 @@
       "status": "NEEDS_REVIEW",
       "at": "2026-11-20T16:11:40Z",
       "note": "비공개 업로드 완료 — 사람 승인 대기(publish_mode=review)"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-21T05:17:21Z",
+      "note": "승인 → 예약공개 11-24 20:00"
     }
   ],
   "attempts": {},
@@ -697,7 +702,7 @@
   },
   "youtube": {
     "video_id": "0TRFhDz0-7s",
-    "scheduled_at": null,
+    "scheduled_at": "2026-11-24T20:00:00+09:00",
     "privacy": "private"
   },
   "experiment": {
@@ -705,7 +710,7 @@
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-20T16:11:40Z",
+  "updated_at": "2026-11-21T05:17:21Z",
   "pack": {
     "topic": {
       "title": "짐바브웨의 초인플레이션",

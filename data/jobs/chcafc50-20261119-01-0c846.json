@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261119-01-0c846",
   "channel": "도개",
-  "status": "NEEDS_REVIEW",
+  "status": "SCHEDULED",
   "created_at": "2026-11-18T16:01:28Z",
   "topic": {
     "title": "측우기",
@@ -98,6 +98,11 @@
       "status": "NEEDS_REVIEW",
       "at": "2026-11-19T09:02:30Z",
       "note": "비공개 업로드 완료 — 사람 승인 대기(publish_mode=review)"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-21T05:16:41Z",
+      "note": "승인 → 예약공개 11-21 20:00"
     }
   ],
   "attempts": {
@@ -639,7 +644,7 @@
   },
   "youtube": {
     "video_id": "g0jy8lgkaHM",
-    "scheduled_at": null,
+    "scheduled_at": "2026-11-21T20:00:00+09:00",
     "privacy": "private"
   },
   "experiment": {
@@ -647,7 +652,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-19T09:02:30Z",
+  "updated_at": "2026-11-21T05:16:41Z",
   "pack": {
     "topic": {
       "title": "측우기",

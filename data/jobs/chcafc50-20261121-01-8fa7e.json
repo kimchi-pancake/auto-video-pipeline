@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261121-01-8fa7e",
   "channel": "도개",
-  "status": "NEEDS_REVIEW",
+  "status": "SCHEDULED",
   "created_at": "2026-11-20T16:01:45Z",
   "topic": {
     "title": "방탄소년단",
@@ -85,6 +85,11 @@
       "status": "NEEDS_REVIEW",
       "at": "2026-11-20T16:12:18Z",
       "note": "비공개 업로드 완료 — 사람 승인 대기(publish_mode=review)"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-21T05:17:13Z",
+      "note": "승인 → 예약공개 11-23 20:00"
     }
   ],
   "attempts": {},
@@ -602,7 +607,7 @@
   },
   "youtube": {
     "video_id": "lrmIzhNymag",
-    "scheduled_at": null,
+    "scheduled_at": "2026-11-23T20:00:00+09:00",
     "privacy": "private"
   },
   "experiment": {
@@ -610,7 +615,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-20T16:12:18Z",
+  "updated_at": "2026-11-21T05:17:13Z",
   "pack": {
     "topic": {
       "title": "방탄소년단",

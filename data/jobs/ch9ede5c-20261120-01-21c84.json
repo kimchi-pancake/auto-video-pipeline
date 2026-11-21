@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261120-01-21c84",
   "channel": "웃짬",
-  "status": "NEEDS_REVIEW",
+  "status": "SCHEDULED",
   "created_at": "2026-11-19T16:02:38Z",
   "topic": {
     "title": "제1차 석유 파동",
@@ -100,6 +100,11 @@
       "status": "NEEDS_REVIEW",
       "at": "2026-11-20T08:43:02Z",
       "note": "비공개 업로드 완료 — 사람 승인 대기(publish_mode=review)"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-21T05:17:04Z",
+      "note": "승인 → 예약공개 11-23 20:00"
     }
   ],
   "attempts": {
@@ -751,7 +756,7 @@
   },
   "youtube": {
     "video_id": "cpAaCKLX5U8",
-    "scheduled_at": null,
+    "scheduled_at": "2026-11-23T20:00:00+09:00",
     "privacy": "private"
   },
   "experiment": {
@@ -759,7 +764,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-20T08:43:02Z",
+  "updated_at": "2026-11-21T05:17:04Z",
   "pack": {
     "topic": {
       "title": "제1차 석유 파동",

@@ -49,6 +49,24 @@ def next_slot(now: Optional[datetime] = None) -> datetime:
     return slot
 
 
+def next_free_slot(store: JobStore, channel: str, now: Optional[datetime] = None) -> datetime:
+    """채널당 하루 1편 — 이미 예약된 날은 건너뛰고 비어 있는 다음 20:00 슬롯을 돌려준다."""
+    slot = next_slot(now)
+    taken = set()
+    for j in store.list():
+        if j.get("channel") != channel or j.get("status") not in ("SCHEDULED", "PUBLISHED"):
+            continue
+        sa = (j.get("youtube") or {}).get("scheduled_at")
+        if sa:
+            try:
+                taken.add(datetime.fromisoformat(sa).astimezone(KST).date())
+            except ValueError:
+                pass
+    while slot.date() in taken:
+        slot += timedelta(days=1)
+    return slot
+
+
 def find_existing(yt, title: str) -> Optional[str]:
     """채널 업로드 재생목록의 최근 영상 중 같은 제목이 있으면 video_id (응답 유실 후 재업로드 방지)."""
     try:
@@ -136,7 +154,7 @@ def upload_job(store: JobStore, job: Dict, profile: ChannelProfile) -> Dict:
             return store.fail(job, "upload", "service_transient", "처리 완료 대기 시간 초과")
 
         if cfg_v2["publish_mode"] == "scheduled":
-            slot = next_slot()
+            slot = next_free_slot(store, job["channel"])
             yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "publishAt": slot.astimezone(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
                                                                            "selfDeclaredMadeForKids": False}}).execute()
             job["youtube"]["scheduled_at"] = slot.isoformat()
@@ -162,7 +180,7 @@ def approve(store: JobStore, job_id: str, profile: ChannelProfile) -> Dict:
     if not vid:
         raise RuntimeError("업로드된 영상이 없습니다")
     yt = _service(profile.credentials_file)
-    slot = next_slot()
+    slot = next_free_slot(store, job["channel"])
     yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "publishAt": slot.astimezone(pytz.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z"),
                                                                    "selfDeclaredMadeForKids": False}}).execute()
     job["youtube"]["scheduled_at"] = slot.isoformat()
