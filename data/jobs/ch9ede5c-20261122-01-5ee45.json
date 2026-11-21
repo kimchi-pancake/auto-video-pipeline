@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261122-01-5ee45",
   "channel": "웃짬",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-21T16:03:33Z",
   "topic": {
     "title": "대공황",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-21T16:04:32Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-21T16:05:43Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-21T16:05:43Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-21T16:07:10Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-21T16:07:13Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-21T16:08:00Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-21T16:08:37Z",
+      "note": "예약공개 11-25 20:00"
     }
   ],
   "attempts": {},
@@ -547,20 +577,134 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Unemployed men queued outside a depression soup kitchen opened in Chicago by Al Capone, 02-1931 - NARA - 541927.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone,_02-1931_-_NARA_-_541927.jpg",
+          "license": "Public domain",
+          "artist": "Unknown authorUnknown author or not provided",
+          "caption": "The storefront sign reads \"Free Soup Coffee & Doughnuts for the Unemployed.\""
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/ch9ede5c-20261122-01-5ee45/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/ch9ede5c-20261122-01-5ee45/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/ch9ede5c-20261122-01-5ee45/out/subtitles.ass",
+    "bgm": "piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "7개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 1장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.13"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "24.6s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "24.6s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 27/편차 17; 밝기 29/편차 25"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 35/편차 29"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -18.3dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 10개, 마지막 24.1s / 영상 24.6s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "i1GcGC_ykgg",
+    "scheduled_at": "2026-11-25T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "웃짬-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-21T16:04:32Z",
+  "updated_at": "2026-11-21T16:08:37Z",
   "pack": {
     "topic": {
       "title": "대공황",
