@@ -1,0 +1,538 @@
+{
+  "id": "chcafc50-20261122-01-036a3",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-21T16:01:37Z",
+  "topic": {
+    "title": "SK하이닉스",
+    "wiki_title": "SK하이닉스",
+    "category": "첨단기술",
+    "source": "seed",
+    "angle": "알고 보면 한국이 처음인 것",
+    "score": 0.6707,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.412
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35",
+    "evidence": 0.8,
+    "rescored": {
+      "score": 0.6987,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.8,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.412
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.80 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-21T16:01:37Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-21T16:01:37Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-21T16:02:00Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-21T16:03:03Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "첫 자체 칩 개발, 수율이 안 나와 망했죠.",
+      "screen_text": "자체 개발의 실패",
+      "title": "현대전자, 첫 자체 DRAM 개발하다 포기한 사연",
+      "promise": "기술 자립을 선언하며 만든 첫 DRAM이 양산 직전 폐기된 기술적 이유를 설명합니다.",
+      "evidence_quote": "Hyundai's decision to produce SRAMs was later proven to be a mistake... Hyundai's DRAM chip, produced by importing Vitelic Corporation's design and technology, again failed in mass production due to a low yield rate.",
+      "eval": {
+        "score": 1.0,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "첫 자체 칩 개발, 수율이 안 나와 망했죠.",
+        "screen_text": "자체 개발의 실패",
+        "title": "현대전자, 첫 자체 DRAM 개발하다 포기한 사연",
+        "promise": "기술 자립을 선언하며 만든 첫 DRAM이 양산 직전 폐기된 기술적 이유를 설명합니다.",
+        "evidence_quote": "Hyundai's decision to produce SRAMs was later proven to be a mistake... Hyundai's DRAM chip, produced by importing Vitelic Corporation's design and technology, again failed in mass production due to a low yield rate.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "IMF 때 정부가 '합쳐라' 강요한 두 회사",
+        "screen_text": "강제 합병의 결말",
+        "title": "LG반도체 인수, 현대가 얻은 것과 잃은 것",
+        "promise": "정부 주도로 이루어진 LG반도체 인수가 현대전자에 남긴 빛과 그림자를 수치로 따져봅니다.",
+        "evidence_quote": "In 1998, Hyundai Electronics acquired LG Semicon for US$2.1 billion... the South Korean government initiated the restructuring of the nation's five major conglomerates... LG and Hyundai were pressured by the government to merge.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "현대건설이 반도체 회사를 세웠다고요?",
+        "screen_text": "건설사가 반도체?",
+        "title": "현대건설이 만든 반도체 회사, SK하이닉스",
+        "promise": "건설 명가 현대가 반도체에 뛰어든 이유와 첫 제품 SRAM의 실패담을 전합니다.",
+        "evidence_quote": "Hyundai Electronics was founded in 1983 by Chung Ju-yung, the founder of Hyundai Group.",
+        "eval": {
+          "score": 0.9411,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "삼성은 경험 있었고, 현대는 빚내서 배웠죠.",
+        "screen_text": "삼성 vs 현대 격차",
+        "title": "삼성전자 10년 앞서간 반도체, 현대의 추격전",
+        "promise": "삼성이 쌓은 10년 노하우 앞에서 현대가 OEM 생산으로 기술 격차를 좁힌 과정을 비교합니다.",
+        "evidence_quote": "Hyundai had to pay a very high entry price to set up an efficient production system and to stabilize the yield rate compared to its rival Samsung, who at least had prior experience in semiconductor manufacturing.",
+        "eval": {
+          "score": 0.916,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "세계 최초 HBM, AMD와 현대전자가 만들었죠.",
+        "screen_text": "HBM 탄생 비화",
+        "title": "AI 메모리 표준 HBM, 2013년 현대-SK가 최초 개발",
+        "promise": "엔비디아 GPU를 지배하는 HBM 기술이 2013년 AMD와 공동 개발로 시작됐음을 증명합니다.",
+        "evidence_quote": "2013년에 AMD와 공동으로 세계 최초의 초고속 메모리 제품인 HBM(High Bandwidth Memory) 개발에 성공했다.",
+        "eval": {
+          "score": 0.8534,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "이천 본사 땅, 원래 국도건설 것 맞습니다.",
+        "screen_text": "국도건설의 변신",
+        "title": "도로 놓던 국도건설이 SK하이닉스 모태된 과정",
+        "promise": "1949년 도로 공사하던 국도건설이 어떻게 반도체 기업 SK하이닉스의 뿌리가 됐는지 추적합니다.",
+        "evidence_quote": "1949년 10월 15일 : 국도건설로 설립... 1983년 : 현대그룹 국도건설 최종 인수... 1983년 2월 26일 : 사명을 국도건설에서 현대전자산업으로 변경",
+        "eval": {
+          "score": 0.8381,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 0.4,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "첫 칩 폐기, 수율의 벽",
+    "target_seconds": 35,
+    "category": "첨단기술",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "첫 자체 칩 개발, 수율이 안 나와 망했죠.",
+        "visual": {
+          "type": "stat",
+          "big": "1983년",
+          "small": "현대전자산업 출범"
+        },
+        "claims": [
+          {
+            "text": "현대그룹이 국도건설을 인수해 현대전자산업으로 사명을 변경했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1983년 : 현대그룹 국도건설 최종 인수 1983년 2월 26일 : 사명을 국도건설에서 현대전자산업으로 변경"
+          }
+        ]
+      },
+      {
+        "narration": "자체 에스알에이엠 개발에 매달렸지만 기술 난이도가 너무 높았습니다.",
+        "visual": {
+          "type": "text",
+          "headline": "에스알에이엠 자체 개발 난항",
+          "sub": "기술적 정교함으로 수율 저조"
+        },
+        "claims": [
+          {
+            "text": "SRAM의 기술적 정교함으로 만족스러운 수율을 달성하기 어려웠다.",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "The technological sophistication of SRAMs made it difficult for Hyundai to achieve a satisfactory yield rate."
+          }
+        ]
+      },
+      {
+        "narration": "급히 디알에이엠으로 돌려 비텔릭 설계를 수입했으나 양산 직전 수율 불량으로 폐기됐습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "첫 디알에이엠 좌절 과정",
+          "items": [
+            "자체 개발 포기",
+            "비텔릭 설계 도입",
+            "양산 직전 폐기"
+          ]
+        },
+        "claims": [
+          {
+            "text": "비텔릭 코퍼레이션의 설계와 기술을 수입해 DRAM을 생산하려 했으나 낮은 수율로 양산에 실패했다.",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "Hyundai's DRAM chip, produced by importing Vitelic Corporation's design and technology, again failed in mass production due to a low yield rate."
+          }
+        ]
+      },
+      {
+        "narration": "이 실패가 나중에 오이엠 위탁 생산과 엘지반도체 인수로 이어지는 전환점이 됐습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "1999년",
+          "small": "엘지반도체 인수 완료"
+        },
+        "claims": [
+          {
+            "text": "1999년 7월 LG반도체를 인수하며 메모리 사업 역량을 통합했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1999년 7월 : LG반도체(주) 인수"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "현대그룹이 국도건설을 인수해 현대전자산업으로 사명을 변경했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — SK하이닉스",
+        "source_url": "https://ko.wikipedia.org/wiki/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-21",
+        "quote": "1983년 : 현대그룹 국도건설 최종 인수 1983년 2월 26일 : 사명을 국도건설에서 현대전자산업으로 변경",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "SRAM의 기술적 정교함으로 만족스러운 수율을 달성하기 어려웠다.",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — SK Hynix",
+        "source_url": "https://en.wikipedia.org/wiki/SK_Hynix",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "The technological sophistication of SRAMs made it difficult for Hyundai to achieve a satisfactory yield rate.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "비텔릭 코퍼레이션의 설계와 기술을 수입해 DRAM을 생산하려 했으나 낮은 수율로 양산에 실패했다.",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — SK Hynix",
+        "source_url": "https://en.wikipedia.org/wiki/SK_Hynix",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "Hyundai's DRAM chip, produced by importing Vitelic Corporation's design and technology, again failed in mass production due to a low yield rate.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "1999년 7월 LG반도체를 인수하며 메모리 사업 역량을 통합했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — SK하이닉스",
+        "source_url": "https://ko.wikipedia.org/wiki/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-21",
+        "quote": "1999년 7월 : LG반도체(주) 인수",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 156,
+      "est_seconds": 28.9,
+      "scenes": 4,
+      "avg_new_tokens_per_scene": 8.5,
+      "max_scene_similarity": 0.1,
+      "visual_mix": {
+        "steps": 1,
+        "text": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "현대그룹이 국도건설을 인수해 현대전자산업으로 사명을 변경했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — SK하이닉스",
+      "source_url": "https://ko.wikipedia.org/wiki/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-21",
+      "quote": "1983년 : 현대그룹 국도건설 최종 인수 1983년 2월 26일 : 사명을 국도건설에서 현대전자산업으로 변경",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "SRAM의 기술적 정교함으로 만족스러운 수율을 달성하기 어려웠다.",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — SK Hynix",
+      "source_url": "https://en.wikipedia.org/wiki/SK_Hynix",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "The technological sophistication of SRAMs made it difficult for Hyundai to achieve a satisfactory yield rate.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "비텔릭 코퍼레이션의 설계와 기술을 수입해 DRAM을 생산하려 했으나 낮은 수율로 양산에 실패했다.",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — SK Hynix",
+      "source_url": "https://en.wikipedia.org/wiki/SK_Hynix",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "Hyundai's DRAM chip, produced by importing Vitelic Corporation's design and technology, again failed in mass production due to a low yield rate.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "1999년 7월 LG반도체를 인수하며 메모리 사업 역량을 통합했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — SK하이닉스",
+      "source_url": "https://ko.wikipedia.org/wiki/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-21",
+      "quote": "1999년 7월 : LG반도체(주) 인수",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-21T16:03:03Z",
+  "pack": {
+    "topic": {
+      "title": "SK하이닉스",
+      "wiki_title": "SK하이닉스",
+      "category": "첨단기술",
+      "source": "seed",
+      "angle": "알고 보면 한국이 처음인 것",
+      "score": 0.6707,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.412
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35",
+      "evidence": 0.8,
+      "rescored": {
+        "score": 0.6987,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.8,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.412
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.80 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — SK하이닉스",
+        "url": "https://ko.wikipedia.org/wiki/SK%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4",
+        "published": "2026-11-04",
+        "fetched_at": "2026-11-21",
+        "text": "SK하이닉스주식회사(영어: SK hynix)는 SK그룹의 계열사로 대한민국의 메모리 반도체 설계·제조하는 기업이다. DRAM과 낸드플래시를 제조하며 본사는 경기도 이천시 부발읍 경충대로 2091에 있다.\n2013년에 AMD와 공동으로 세계 최초의 초고속 메모리 제품인 HBM(High Bandwidth Memory) 개발에 성공했다.\n\n한국 사업장\n본사: 경기도 이천시 부발읍 경충대로 2091 (아미리 712-7)\n청주제1공장: 충청북도 청주시 흥덕구 대신로 215 (향정동)\n청주제2공장: 충청북도 청주시 흥덕구 2순환로 959 (향정동)\n청주제3공장: 충청북도 청주시 흥덕구 직지대로 337 (향정동)\n청주제4공장: 충청북도 청주시 흥덕구 에스케이로 120 (외북동)\n분당사무소: 경기도 성남시 분당구 성남대로343번길 9 (정자동)\n\n역사\n1949년 10월 15일 : 국도건설로 설립\n1979년 11월 : 금성반도체 (LG반도체) 설립\n1982년 : 3사와 함께 반도체 기업으로 전환해 효성과 현대등 2곳이나 몰망으로 거론하여 동남전기, 금호전자 그리고 국도건설 인수설이 제기되고있다.\n1983년 : 현대그룹 국도건설 최종 인수\n1983년 2월 26일 : 사명을 국도건설에서 현대전자산업으로 변경\n1989년 5월 : 금성일렉트론 (LG반도체) 설립\n1996년 12월 26일 : 기업공개 및 한국증권선물거래소 상장\n1999년 7월 : LG반도체(주) 인수\n2001년 3월 8일 : 사명을 현대전자산업에서 하이닉스반도체로 변경\n2001년 8월 : 현대그룹, 경영권 포기 각서 제출. 경영권 포기각서가 실패되고 현대그룹에서부터 반도체 전문 기업으로 분리됨.\n2002년 6월 : 최대주주 현대상선에서 외환은행으로 변경. 현대계열지분(9.28%) 정리. 이로써 현대그룹과의 관계가 완전히 끝남.\n2002년 11월 : 하이디스(주) 매각\n2005년 7월 : 채권금융기관 공동 관리 조기 종료\n2011년 11월 14일 : SK그룹이 하이닉스 인수, 하이닉스 주식 20.01%를 취득하는 매매계약을 체결\n2011년 12월 27일 : 대한민국 공정거래위원회, SK텔레콤의 하이닉스 인수를 승인\n2012년 2월 14일 : SK텔레콤, 하이닉스 최종 인수 완료\n2012년 3월 26일 : 사명을 하이닉스반도체에서 SK하이닉스로 변경\n2020년 10월 : 인텔 NAND 사업부문 인수\n2025년 : 48Gbps GDDR7 공개\n\n계열사\nSK키파운드리\nSK하이이엔지\nSK하이스텍\nSK하이닉스시스템아이씨\nSK HAPPY-MORE 행복모아\n\n사건 사고\n2013년 9월 4일 우시공장에서 화재가 발생하여 1명이 부상당하였다.\n2015년 5월 1일 아미리 공장에서 시험가동 중인 장비를 점검하던 하청업체 근로자 3명이 질소가스에 의해 질식사하였다.\n\n논란\n\n불법 임금삭감\nSK하이닉스의 사무직 취업규칙인 '연봉제 급여규칙'에 따르면 직원의 인사평가 결과에 따라 급여를 5단계로 차등하여 계약 연봉의 90%에서 110%까지 지급받도록 되어 있다. 그러나 2018년 'Self-Design' 제도를 도입하여, 인사권자가 직원 개인의 급여를 임의로 조정하여 지급할 수 있도록 하였다. 이 제도 하에서는 동일한 고과를 받더라도 부서 간, 개인 간 임금의 차등이 발생한다. 조직장이 한정된 예산을 자기 휘하 직원들에게 분배하는 제로섬이다. 이 임금 조정은 객관적인 근거나 기준 없이 100% 조직장의 주관적인 판단으로 이루어진다. 새로 도입된 임금제도 하에서 보장된 임금은 계약연봉의 60%에 불과하다. 실제로 평균 수준의 인사고과를 받았음에도 불구하고 계약연봉보다 10% 이상 삭감된 급여를 받는 사례가 보고되었다.\n회사 측의 이 같은 제도 도입은 취업규칙을 근로자에게 불리하게 변경하는 경우에는 근로자 과반수의 동의를 받도록 한 근로기준법 제94조 1항에 위배되는 명백한 위법 행위이다. 제도 시행 후 3년이 지난 2020년 하반기, SK하이닉스 기술사무직 노동조합은 경기지방노동위원회에 진정서를 제출하고 회사 측에 공문을 발송하여 입장 표명을 요구하였다. 이에 회사 측은 직원들의 동의를 거쳐 취업규칙을 변경하기 위한 목적으로 'Self-Design' 제도에 대한 설명회를 개최하고 직원들의 동의 절차를 진행하려 하였으나, 이 과정에서 불투명한 진행 방식과 강압적인 동의 강요 등으로 더 큰 논란이 빚었다.\nSK하이닉스의 사무직 취업규칙인 '연봉제 급여규칙'에 따르면 직원의 인사평가 결과에 따라 급여를 5단계로 차등하여 계약 연봉의 90%에서 110%까지 지급받도록 되어 있다. 그러나 2018년 'Self-Design' 제도를 도입하여, 인사권자가 직원 개인의 급여를 인사평가 결과에 따른 금액보다 임의로 삭감하여 지급할 수 있도록 하였다. 이는 취업규칙을 근로자에게 불리하게 변경하는 경우에는 근로자 과반수의 동의를 받도록 한 근로기준법 제94조 1항[6]에 위배되는 조치이다. 제도 시행 후 3년이 지난 2020년 하반기, SK하이닉스 기술사무직 노동조합은 경기지방노동위원회에 진정서를 제출하고 회사 측에 공문을 발송하여 입장 표명을 요구하였다. 이에 SK하이닉스는 'Self-Design' 제도에 대한 설명회를 개최하고 직원들의 동의 절차를 진행하려 하였으나, 이 과정에서 불투명한 진행 방식과 강압적인 동의 강요 등으로 논란이 되었다.\n\n취업규칙 변경 날치기 통과\n위 불법 임금삭감이 논란이 되자 SK하이닉스는 취업규칙 변경을 위한 설명회를 개최하고 직원들의 동의를 받기로 하였으나 이 과정에서 여러 가지 논란을 빚었다.\n\n취업규칙 변경을 위한 찬반 투표라는 점을 밝히지 않음 회사 측에서는 취업규칙 개정을 위한 찬반 투표를 시행한다는 점을 명확히 밝힐 필요가 있으나 이런 설명을 하지 않았으며, 'Commitment를 구하는 절차' 등의 모호한 문구로 포장하여 근로자들이 투표의 본질을 알 수 없도록 하였다. 일부 조직 리더들은 서명하는 것이 동의한다는 뜻이 아니며 설명회 영상을 시청하였다는 의미라고 설명하여 적극적인 은폐 시도를 하였다.\n취업규칙의 개정안을 제시하지 않은 상태에서 서명을 받음. 통상적으로 각종 조약, 규정 등을 변경할 때에는 변경 전과 후의 규칙을 대조하여 제시함으로써 어느 부분이 변경되었는지 파악하기 쉽게 제시하는 것이 관례이다. 하지만 이 서명 절차에서는 변경 전과 후의 내용이 빠진 채 서명을 받았다. 변경 전의 조항은 사내 시스템에서 조회할 수 있지만 대다수 직원들은 해당 조항을 어디서 찾아볼 수 있는지조차 알지 못했다. 변경 후의 조항을 제시하지 않은 상태에서 서명을 받았으므로 이러한 서명과 이에 따른 규정 변경은 당연히 효력이 없다. 심지어 추후 공개된 변경 후 조항에는 '본 내용의 변경은 Self-Design 시작 시점부터 유효'라는 문구가 삽입되었는데 이는 설명회에서 전혀 언급하지 않았던 내용이다. 그러므로 이러한 소급 적용도 당연히 효력이 없다.\n동의 절차에서 찬성/반대 중 선택이 불가능하고 '동의'를 의미하는 서명만 가능하도록 되어 있었다.\n비밀투표 원칙이 지켜지지 않아 근로자들이 자유롭게 자신의 의견을 표현할 기회를 박탈당했다. 인사권자가 근로자 개개인의 동의 여부를 실시간으로 파악하며 수시로 동의를 강요하였다.\n온라인으로 진행된 설명회 동영상을 시청하기 위해 캡처 방지 등의 각종 보안 프로그램을 설치하도록 하고, 설명회 자료를 배포하지 않는 등, 변경된 임금 규정에 대한 내용이 퍼지지 않도록 은폐하려는 정황이 있었다.\n설명회를 진행하고, 직원들이 내용을 충분히 이해하고 서로 논의할 시간을 가질 수 있도록 하는 것이 상식적이나, 회사 측은 설명회 진행 당일 서명을 완료할 것을 강요하였다.\n회사 측에서 설명회와 동의 절차의 본질을 은폐하기 위해 여러 가지 시도를 하였기 때문에 실제로 많은 직원들이 자신의 의사에 반하여 동의 서명을 하였다. 취업규칙 변경 투표라는 사실을 모른 채 단순히 '열심히 일하겠다'는 일종의 윤리서약인 줄 알고 서명한 직원도 있고 서명하고 싶지 않지만 인사권자의 강요에 의해 어쩔 수 없이 서명을 한 직원도 있다. 추후에 속은 것을 알게 된 많은 직원들이 진짜 의사를 표현하기 위해 서명에 대해 번복하고 싶다는 의사를 표현하였으나, HR 담당부서에서는 정당한 사유 없이 로 거부하였다.\n정당한 절차를 거치지 않고 도입된 절차를 사후에 정당화 하기 위하여 위와 같이 설명회와 동의 절차를 진행하였으나, 위에 언급한 여러 가지 절차상의 하자로 인하여, 이러한 동의 절차는 법적인 효력이 없다.\n회사 측의 불법적인 취업규칙 변경으로 임금 삭감 등의 불이익을 받은 근로자는 차후 그 손실 임금액을 회사 측에 청구할 수 있다. 물론, 재직 중에 회사를 상대로 소송을 하는 것은 매우 어려운 일이므로 퇴사 후에 단체로 소송을 제기할 수 있다. 현재 회사 측에서 진행한 동의 절차는 법적 효력을 갖기 위한 요건을 갖추지 못하였기 때문에, 차후에 적법한 절차를 갖추어 다시 동의 절차를 진행할 것으로 예상된다. 하지만 차후에 적법한 절차를 거쳐 취업규칙이 변경되더라도, 해당 취업규칙 변경에 동의하지 않은 근로자에게는 개정된 취업규칙과, 취업규칙 변경 이전에 맺은 근로계약서의 내용 중 더 유리한 내용이 우선 적용된다.\n\n같이 보기\nLG그룹\nSK그룹\n기아그룹\n현대그룹\n삼성전자\nDB하이텍\n마이크론 테크놀로지\n엘피다 메모리\n\n각주\n\n외부 링크\n\nSK하이닉스  - 공식 웹사이트\n공식 블로그(하이라이트) 보관됨 2016-09-19 - 웨이백 머신\nSK하이닉스의 비즈니스 데이터:",
+        "lang": "ko",
+        "wiki_title": "SK하이닉스",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — SK Hynix",
+        "url": "https://en.wikipedia.org/wiki/SK_Hynix",
+        "published": "2026-11-20",
+        "fetched_at": "2026-11-21",
+        "text": "SK Hynix Inc. (Korean: 에스케이하이닉스 주식회사), stylized SK hynix, is a South Korean semiconductor company that manufactures dynamic random-access memory (DRAM) chips and flash memory chips. SK Hynix is one of the world's largest semiconductor vendors, and, along with Samsung Electronics and Micron, one of the \"Big Three\" memory manufacturers.\nFounded in 1983 as Hyundai Electronics, SK Hynix was integrated into the SK Group in 2012 following a series of mergers, acquisitions, and restructuring efforts. After being incorporated into the SK Group, SK Hynix became a major affiliate alongside SK Innovation and SK Telecom.\nThe company's major customers include Nvidia, Microsoft, Apple, Asus, Dell, MSI, HP Inc., and Hewlett Packard Enterprise (formerly Hewlett-Packard). Other products that use Hynix memory include DVD players, cellular phones, set-top boxes, personal digital assistants, networking equipment, and hard disk drives.\n\nHistory\n\nBeginning\n\nHyundai Electronics\n\nHyundai Electronics was founded in 1983 by Chung Ju-yung, the founder of Hyundai Group. In the early 1980s, Chung recognized the growing importance of electronics in the automobile industry, one of Hyundai's primary business areas. He saw the potential for Hyundai to expand beyond its core operations in automobiles, shipbuilding, and heavy industries and wanted to establish a presence in the promising electronics industry. The company's primary focus was on semiconductor production and industrial electronics.\nHyundai had to pay a very high entry price to set up an efficient production system and to stabilize the yield rate compared to its rival Samsung, who at least had prior experience in semiconductor manufacturing. Hyundai's decision to produce SRAMs was later proven to be a mistake, as the technological sophistication of SRAMs made it difficult for Hyundai to achieve a satisfactory yield rate. In 1985, Hyundai altered its strategy for DRAM manufacturing by subcontracting from foreign firms and importing their chip designs, as it had lost time developing its own chips. Hyundai's DRAM chip, produced by importing Vitelic Corporation's design and technology, again failed in mass production due to a low yield rate.\nHyundai's approach to manufacturing memory chips as a foundry for foreign firms under OEM agreements was successful. The OEM agreements between General Instruments and Texas Instruments were helpful to Hyundai, which was facing technological and financial difficulties. By 1992, Hyundai had become the world's ninth DRAM manufacturer, and by 1995, it ranked among the world's top 20 semiconductor manufacturing companies. In 1996, Hyundai acquired Maxtor, a U.S.-based disk-drive manufacturer.\n\nLG Semicon\n\nGoldStar, which later became LG Electronics, entered the semiconductor business by acquiring a small company from Taihan Electric Wire in 1979.  The company was subsequently renamed GoldStar Semiconductor. LG Semicon was established as Goldstar Electron in 1983 by merging the semiconductor operations of Goldstar Electronics and Goldstar Semiconductors. In 1990, Goldstar Electron commenced operations at Cheongju Plant I, followed by the completion of Cheongju Plant II in 1994. The company underwent a name change to LG Semicon in 1995. LG Semicon operated from three sites, including Seoul, Cheongju, and Gumi.\n\nMerger\nDuring the 1997 Asian financial crisis, the South Korean government initiated the restructuring of the nation's five major conglomerates, including their semiconductor businesses. Among five chaebols, Samsung, LG, and Hyundai were engaged in the semiconductor business. Samsung was exempt from the restructuring due to its competitive position in the global market. However, LG and Hyundai were pressured by the government to merge, as both companies faced significant losses during the semiconductor recession of early 1996. In 1998, Hyundai Electronics acquired LG Semicon for US$2.1 billion, positioning itself in direct competition with Micron Technology. Subsequently, LG Semicon was rebranded as Hyundai Semiconductor and later merged with Hyundai Electronics.\n\nHynix\n\n \n\nAlthough the South Korean government aimed to merge the two companies to alleviate the supply glut in the global market, competition in the semiconductor industry had intensified. Hyundai faced near collapse during the chip industry's downturn in 2001, when global memory chip prices dropped by 80 percent, resulting in a 5 trillion won annual loss for the company. Creditor banks, many of them under government control at the time, intervened to provide assistance.\nIn 2001, Hyundai Electronics rebranded as Hynix Semiconductor, a portmanteau of \"high\" and \"electronics\". Alongside this change, Hynix began selling or spinning off business units to recover from a cash squeeze. Hynix separated several business units, including Hyundai Curitel, a mobile phone manufacturer; Hyundai SysComm, a CDMA mobile communication chip maker; Hyundai Autonet, a car navigation system producer; ImageQuest, a flat panel display company; and its TFT-LCD unit, among others. The divestiture was part of a bailout plan requested by the major creditor, Korea Development Bank, to provide fresh funds to the insolvent semiconductor maker.\nIn 2003, Hyundai Group affiliates, including Hyundai Merchant Marine, Hyundai Heavy Industries, Hyundai Elevator, and Chung Mong-hun, the chairman of Hyundai Asan, consented to forfeit their voting rights and sell their stakes in Hynix. Hynix was then formally spun-off from the Hyundai Group in August 2003.\n\nSK Hynix\n\nThe Hynix creditors, including Korea Exchange Bank, Woori Bank, Shinhan Bank and Korea Finance Corporation, attempted to sell their stakes in Hynix several times but failed. Korean companies such as Hyosung, Dongbu CNI, and former stakeholders, including Hyundai Heavy Industries and LG, were considered potential bidders but were either denied or withdrew from the bidding. In July 2011, SK Telecom, the nation's largest telecommunication company, and STX Group officially entered the bid. STX dropped its deal in September 2011, leaving SK Telecom as the sole bidder. In the end, SK acquired Hynix for US$3 billion in February 2012. As Hynix was incorporated into SK Group, its name was changed to SK Hynix.\nIn 2021, Hynix acquired Intel's NAND business for $9 billion, resulting in the establishment of Solidigm.\n",
+        "lang": "en",
+        "wiki_title": "SK Hynix",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:SK Hynix SOCAMM module Computex 2025.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/SK_Hynix_SOCAMM_module_Computex_2025.jpg/1920px-SK_Hynix_SOCAMM_module_Computex_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/SK_Hynix_SOCAMM_module_Computex_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:SK_Hynix_SOCAMM_module_Computex_2025.jpg",
+        "width": 5773,
+        "height": 3608,
+        "license": "CC BY 4.0",
+        "artist": "4300streetcar",
+        "caption": "An SK Hynix SOCAMM module on display at Computex 2025",
+        "id": "P1"
+      },
+      {
+        "file": "File:SK Hynix DDR5 form factors.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/SK_Hynix_DDR5_form_factors.jpg/1920px-SK_Hynix_DDR5_form_factors.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/SK_Hynix_DDR5_form_factors.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:SK_Hynix_DDR5_form_factors.jpg",
+        "width": 5815,
+        "height": 4652,
+        "license": "CC BY 4.0",
+        "artist": "4300streetcar",
+        "caption": "Various DDR5 memory form factors, as shown by SK Hynix at Computex 2025",
+        "id": "P2"
+      },
+      {
+        "file": "File:SK Hynix DDR5 Tall MRDIMM.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/SK_Hynix_DDR5_Tall_MRDIMM.jpg/1920px-SK_Hynix_DDR5_Tall_MRDIMM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/SK_Hynix_DDR5_Tall_MRDIMM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:SK_Hynix_DDR5_Tall_MRDIMM.jpg",
+        "width": 5196,
+        "height": 3897,
+        "license": "CC BY 4.0",
+        "artist": "4300streetcar",
+        "caption": "An SK Hynix DDR5 Tall MRDIMM on display at Computex 2025",
+        "id": "P3"
+      }
+    ],
+    "evidence": 0.8,
+    "ok": true,
+    "built_at": "2026-11-21T16:01:37Z"
+  }
+}

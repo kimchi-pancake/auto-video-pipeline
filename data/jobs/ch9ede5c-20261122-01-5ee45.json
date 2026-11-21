@@ -1,0 +1,673 @@
+{
+  "id": "ch9ede5c-20261122-01-5ee45",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-21T16:03:33Z",
+  "topic": {
+    "title": "대공황",
+    "wiki_title": "대공황",
+    "category": "금융위기",
+    "source": "seed",
+    "angle": "그때 국민이 실제로 잃은 것",
+    "score": 0.6982,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.65,
+      "explore": 0.27
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.27 · 자극 0.65",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7542,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.27
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.27 · 자극 0.65"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-21T16:03:33Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-21T16:03:33Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-21T16:04:14Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-21T16:04:32Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "who_wins",
+      "first_line": "국민 4명 중 1명이 일자리를 잃었습니다",
+      "screen_text": "실업률 25% 도달",
+      "title": "대공황 때 미국인 25%가 실직했다",
+      "promise": "은행 9천 개 파산과 농가 3분의 1 토지 상실, 누가 가장 큰 타격을 입었나",
+      "evidence_quote": "1933년까지 미국의 실업률은 25%로 치솟았고, 농민의 약 3분의 1이 땅을 잃었으며, 25,000개 은행 중 9,000개가 문을 닫았다",
+      "eval": {
+        "score": 0.9941,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.94,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "who_wins",
+        "first_line": "국민 4명 중 1명이 일자리를 잃었습니다",
+        "screen_text": "실업률 25% 도달",
+        "title": "대공황 때 미국인 25%가 실직했다",
+        "promise": "은행 9천 개 파산과 농가 3분의 1 토지 상실, 누가 가장 큰 타격을 입었나",
+        "evidence_quote": "1933년까지 미국의 실업률은 25%로 치솟았고, 농민의 약 3분의 1이 땅을 잃었으며, 25,000개 은행 중 9,000개가 문을 닫았다",
+        "eval": {
+          "score": 0.9941,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "미국 GDP가 30%나 증발했습니다",
+        "screen_text": "GDP -30% 실화?",
+        "title": "대공황 때 미국 경제 3분의 1이 사라졌다",
+        "promise": "단 3년 만에 국가 경제가 30% 줄어든 수치의 의미를 짚어드립니다",
+        "evidence_quote": "미국에서는 대공황으로 인해 GDP가 30% 감소했다",
+        "eval": {
+          "score": 0.924,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.8,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "은행 9천 개가 문을 닫을 때 연준은 지켜만 봤습니다",
+        "screen_text": "최종대부자 부재",
+        "title": "유동성 위기 때 중앙은행이 움직이지 않은 이유",
+        "promise": "1930년 뱅크런 연쇄 파산과 금본위제 족쇄가 만든 정책 마비의 구조를 봅니다",
+        "evidence_quote": "유동성 위기와 그에 따른 은행 파산 및 금융 시장의 전반적인 붕괴에 대한 적절한 대응 부족이 긴 대공황의 원인이라고 주장한다",
+        "eval": {
+          "score": 0.9079,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.92,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "금본위제 버린 나라는 빨리 회복했습니다",
+        "screen_text": "금본위제 vs 포기",
+        "title": "금본위제 고집한 프랑스 vs 일찍 떠난 영국",
+        "promise": "통화 주권이 경제 운명을 어떻게 갈랐는지 1930년대 데이터로 비교합니다",
+        "evidence_quote": "금본위제를 상대적으로 일찍 포기한 국가들은 비교적 온건한 경기 침체와 조기 회복을 경험했다. 반면, 금본위제를 유지한 국가들은 장기 침체를 경험했다",
+        "eval": {
+          "score": 0.9072,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "주식 폭락 1년 후에도 주가는 고점이었습니다",
+        "screen_text": "폭락 1년 뒤 회복?",
+        "title": "1930년 4월 다우지수가 폭락 전으로 돌아왔다",
+        "promise": "대폭락 직후 '회복'처럼 보였던 순간이 왜 더 큰 함정이었는지 설명합니다",
+        "evidence_quote": "주식 시장은 1930년 초에 상승하여 4월에는 다우 지수가 294(불황 이전 수준)로 돌아왔지만, 이후 몇 년간 꾸준히 하락하여 1932년에는 최저 41까지 떨어졌다",
+        "eval": {
+          "score": 0.8544,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "미국을 보호하려다 세계 무역을 절반으로 줄였습니다",
+        "screen_text": "보호무역의 역설",
+        "title": "스무트-홀리 관세법이 부른 무역 대붕괴",
+        "promise": "자국 산업 지키려던 법이 수출 3분의 1 토막내고 세계 무역 50% 증발시킨 과정",
+        "evidence_quote": "달러 기준으로 미국 수출은 다음 4년 동안 1929년 약 52억 달러에서 1933년 17억 달러로 감소했다",
+        "eval": {
+          "score": 0.8481,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.88,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "대공황: 25% 실업과 9천 은행 파산",
+    "target_seconds": 22,
+    "category": "금융위기",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "국민 4명 중 1명이 일자리를 잃었습니다",
+        "visual": {
+          "type": "stat",
+          "big": "실업률 25%",
+          "small": "미국 1933년 정점"
+        },
+        "claims": [
+          {
+            "text": "1933년 미국 실업률이 25%에 달했다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1933년까지 미국의 실업률은 25%로 치솟았고"
+          }
+        ]
+      },
+      {
+        "narration": "은행 9천 곳이 문을 닫고 예금이 증발했습니다",
+        "visual": {
+          "type": "compare",
+          "title": "미국 은행 파산 규모",
+          "a": {
+            "label": "전체 은행",
+            "value": 25000
+          },
+          "b": {
+            "label": "파산 은행",
+            "value": 9000
+          },
+          "unit": "개"
+        },
+        "claims": [
+          {
+            "text": "2만 5천 개 은행 중 9천 개가 파산했다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "25,000개 은행 중 9,000개가 문을 닫았다"
+          }
+        ]
+      },
+      {
+        "narration": "농가 3분의 1이 땅을 잃고 쫓겨났습니다",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "농민 약 3분의 1이 토지를 상실했다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "농민의 약 3분의 1이 땅을 잃었으며"
+          }
+        ]
+      },
+      {
+        "narration": "국제 무역 절반 증발과 관세 전쟁이 위기를 키웠습니다",
+        "visual": {
+          "type": "stat",
+          "big": "무역 50% 감소",
+          "small": "1929~1933년 사이"
+        },
+        "claims": [
+          {
+            "text": "국제 무역량이 50% 이상 감소했다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "국제 무역은 50% 이상 감소했고"
+          },
+          {
+            "text": "스무트-홀리 관세법이 보복 관세를 불러 무역 붕괴를 악화시켰다는 분석이 있습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "스무트-홀리 관세법이 실제로 의도했던 것과는 정반대의 효과를 가져왔다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "금본위제 고수국은 오래 고통받고, 조기 이탈국은 빨리 회복했습니다",
+        "visual": {
+          "type": "steps",
+          "title": "금본위제와 회복 속도",
+          "items": [
+            "금본위제 유지",
+            "디플레이션 강요",
+            "장기 침체"
+          ]
+        },
+        "claims": [
+          {
+            "text": "금본위제를 일찍 포기한 국가는 비교적 온건한 침체와 조기 회복을 경험했다는 분석이 있습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "금본위제를 상대적으로 일찍 포기한 국가들은 비교적 온건한 경기 침체와 조기 회복을 경험했다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          },
+          {
+            "text": "통화 정책 자율권 확보가 위기 대응의 분수령이었습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "중앙은행이 금리를 낮추고 최종 대부자 역할을 할 수 있도록 통화 정책의 자유를 얻었다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "1933년 미국 실업률이 25%에 달했다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "1933년까지 미국의 실업률은 25%로 치솟았고",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "2만 5천 개 은행 중 9천 개가 파산했다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "25,000개 은행 중 9,000개가 문을 닫았다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "농민 약 3분의 1이 토지를 상실했다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "농민의 약 3분의 1이 땅을 잃었으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "국제 무역량이 50% 이상 감소했다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "국제 무역은 50% 이상 감소했고",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "스무트-홀리 관세법이 보복 관세를 불러 무역 붕괴를 악화시켰다는 분석이 있습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "스무트-홀리 관세법이 실제로 의도했던 것과는 정반대의 효과를 가져왔다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 4,
+        "text": "금본위제를 일찍 포기한 국가는 비교적 온건한 침체와 조기 회복을 경험했다는 분석이 있습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "금본위제를 상대적으로 일찍 포기한 국가들은 비교적 온건한 경기 침체와 조기 회복을 경험했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 4,
+        "text": "통화 정책 자율권 확보가 위기 대응의 분수령이었습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 대공황",
+        "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "checked_at": "2026-11-21",
+        "quote": "중앙은행이 금리를 낮추고 최종 대부자 역할을 할 수 있도록 통화 정책의 자유를 얻었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 134,
+      "est_seconds": 24.8,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 7.2,
+      "max_scene_similarity": 0.08,
+      "visual_mix": {
+        "compare": 1,
+        "steps": 1,
+        "photo": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 22
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "1933년 미국 실업률이 25%에 달했다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "1933년까지 미국의 실업률은 25%로 치솟았고",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "2만 5천 개 은행 중 9천 개가 파산했다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "25,000개 은행 중 9,000개가 문을 닫았다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "농민 약 3분의 1이 토지를 상실했다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "농민의 약 3분의 1이 땅을 잃었으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "국제 무역량이 50% 이상 감소했다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "국제 무역은 50% 이상 감소했고",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "스무트-홀리 관세법이 보복 관세를 불러 무역 붕괴를 악화시켰다는 분석이 있습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "스무트-홀리 관세법이 실제로 의도했던 것과는 정반대의 효과를 가져왔다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 4,
+      "text": "금본위제를 일찍 포기한 국가는 비교적 온건한 침체와 조기 회복을 경험했다는 분석이 있습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "금본위제를 상대적으로 일찍 포기한 국가들은 비교적 온건한 경기 침체와 조기 회복을 경험했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 4,
+      "text": "통화 정책 자율권 확보가 위기 대응의 분수령이었습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 대공황",
+      "source_url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+      "published": "2026-11-20",
+      "checked_at": "2026-11-21",
+      "quote": "중앙은행이 금리를 낮추고 최종 대부자 역할을 할 수 있도록 통화 정책의 자유를 얻었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-21T16:04:32Z",
+  "pack": {
+    "topic": {
+      "title": "대공황",
+      "wiki_title": "대공황",
+      "category": "금융위기",
+      "source": "seed",
+      "angle": "그때 국민이 실제로 잃은 것",
+      "score": 0.6982,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.27
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.27 · 자극 0.65",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7542,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.65,
+          "explore": 0.27
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.27 · 자극 0.65"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 대공황",
+        "url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B3%B5%ED%99%A9",
+        "published": "2026-11-20",
+        "fetched_at": "2026-11-21",
+        "text": "대공황(大恐慌, Great Depression)은 1929년부터 1939년까지 이어진 심각한 전 세계적인 경제 불황이다. 이 기간 높은 실업률과 빈곤, 공업 생산 및 국제 무역의 급격한 감소, 전 세계적인 은행 및 기업 파산이 일어났다. 1929년 세계 최대 경제대국인 미국에서 시작된 이 공황이 경제적 전염으로 전 세계에 퍼졌으며, 종종 대공황의 시작으로 여겨지는 폭락 사태인 1929년 월스트리트 대폭락이 그 시발점이었다. 가장 많은 실업자를 기록한 국가에는 미국, 영국, 독일이 있다.\n대공황 이전에는 미국에 \"광란의 20년대\"로 알려진 산업 성장과 사회 발전의 시기가 있었다. 이 호황으로 발생한 수익의 상당 부분이 주식시장과 같은 투기에 투자되었으며, 이는 부의 불평등 심화에 기여했다. 은행은 최소한의 규제를 받았고, 이는 무분별한 대출과 광범위한 부채로 이어졌다. 1929년 들어 발생한 소비 감소는 제조업 생산량 감소와 실업 증가를 야기했다. 주가는 1929년 10월 폭락 때까지 계속 상승하다가 이후 1932년 7월까지 하락세가 이어졌고, 금융 시스템에 대한 신뢰도 내려갔다. 1933년까지 미국의 실업률은 25%로 치솟았고, 농민의 약 3분의 1이 땅을 잃었으며, 25,000개 은행 중 9,000개가 문을 닫았다. 허버트 후버 대통령은 경제에 대한 대대적인 개입을 꺼렸고, 1930년에는 대공황을 악화시킨 스무트-홀리 관세법에 서명했다. 1932년 대통령 선거에서 후버는 프랭클린 D. 루스벨트에게 패배했고, 루스벨트는 1933년부터 구제와 일자리 창출을 위해 일련의 확장적인 뉴딜 정책을 추진했다. 미국의 대출에 크게 의존했던 독일에서는 위기로 인해 실업률이 거의 30%까지 치솟고 정치적 극단주의가 부추겨져 1933년 아돌프 히틀러의 나치당이 집권하는 길을 닦았다.\n1929년부터 1932년까지 전 세계 국내총생산(GDP)은 약 15% 감소했으며, 미국에서는 대공황으로 인해 GDP가 30% 감소했다. 회복 속도는 전 세계적으로 매우 달랐다. 미국, 독일, 일본 등 일부 경제권은 1930년대 중반까지 회복하기 시작했지만, 프랑스 등 다른 국가에선 1930년대 후반까지 공황 이전의 성장률로 돌아오지 못했다. 대공황은 부유한 국가와 빈곤한 국가 모두에게 파괴적인 경제적 영향을 미쳤다. 모든 국가에서 개인 소득, 물가(디플레이션), 세수, 이익이 하락했다. 국제 무역은 50% 이상 감소했고, 일부 국가의 실업률은 33%까지 치솟았다. 전 세계 도시들, 특히 중공업에 의존하는 도시들은 큰 영향을 받았다. 많은 국가에서 건설이 거의 중단되었고, 농작물 가격이 최대 60% 하락하면서 농업 공동체와 농촌 지역이 고통받았다. 수요 폭락과 일자리 부족에 직면해 1차 산업에 의존하는 지역이 가장 큰 타격을 입었다. 1939년 제2차 세계 대전의 발발은 대공황을 종식시켰는데, 전쟁이 공장 생산을 자극하여 일자리를 제공하고, 젊은 실업자들을 대거 군대로 흡수하면서 여성에게도 일자리가 제공되었다.\n대공황의 정확한 원인이 무엇인지 논란이 많다. 예를 들어, 일부 역사학자는 비화폐적 경제 원인에 초점을 맞춘다. 이 중 일부는 월스트리트 폭락 자체를 주 원인으로 간주하지만, 다른 학계에선 폭락이 이미 1920년대 후반에 진행 중이었던 그 시대의 보다 일반적인 경제 동향의 단순한 증상이었다고 생각한다. 20세기 후반에 부각된 대조적인 견해는 통화 정책 실패에 더 큰 역할이 있었다고 강조한다. 이 저자에 따르면, 일반적인 경제 동향이 불황의 발생을 설명할 수 있지만 그 심각성과 지속 기간을 설명하기에는 부족하다고 지적한다. 그러므로 1929년 초기 경제 침체에 이은 유동성 위기와 그에 따른 은행 파산 및 금융 시장의 전반적인 붕괴에 대한 적절한 대응 부족이 긴 대공황의 원인이라고 주장한다.\n\n개요\n\n위기 시작 시점의 경제 상황\n1929년 월스트리트 대폭락 이후, 다우 존스 산업평균지수가 두 달 만에 381에서 198로 떨어졌을 때에도 낙관론은 얼마 동안 지속되었다. 주식 시장은 1930년 초에 상승하여 4월에는 다우 지수가 294(불황 이전 수준)로 돌아왔지만, 이후 몇 년간 꾸준히 하락하여 1932년에는 최저 41까지 떨어졌다.\n초기에는 정부와 기업이 1930년 상반기에 전년도 같은 기간보다 더 많이 지출했다. 반면 전년도 주식 시장에서 큰 손실을 본 많은 소비자는 지출을 10% 줄였다. 게다가 1930년대 중반부터 심각한 가뭄이 미국 농업 중심지를 황폐화시켰다.\n금리는 1930년 중반까지 낮은 수준으로 떨어졌지만, 디플레이션 전망과 계속되는 사람들의 대출 기피로 인해 소비 지출과 투자는 낮은 수준이 이어졌다. 1930년 5월까지 자동차 판매는 1928년 수준 이하로 떨어졌다. 전반적으로 물가는 하락하기 시작했지만 임금은 1930년에는 안정적으로 유지되었다. 그러다가 1931년에 디플레이션의 나선이 시작되었다. 농민들은 더 나쁜 전망에 빠졌다. 농작물 가격 하락과 대평원 가뭄이 농민의 경제적 전망을 위축시켰다. 대공황 절정기에는 연방의 지원에도 불구하고 대평원 지역 농가의 거의 10%가 주인이 바뀌었다.\n\n미국 이외의 지역\n처음에는 미국 경제의 침체가 무역, 자본 이동 및 글로벌 비즈니스 신뢰 하락으로 인해 다른 대부분의 국가에서도 경기 침체를 유발한 요인으로 작용했다. 이후 각국의 내부 약점이나 강점이 상황을 악화시키거나 개선시켰다. 예를 들어, 1920년대 후반기 내내 경기 침체를 겪었던 영국의 경제는 미국의 불황 충격에 보다 덜 영향을 받았다. 이와 대조적으로 독일 경제는 미국과 유사한 공업 생산량 감소를 보였다. 일부 경제사학자는 회복 속도와 경제 침체의 상대적 심각성 차이를 특정 국가가 자국 통화를 효과적으로 평가절하할 수 있었는지 여부에 기인한다고 분석한다. 이는 영국, 아르헨티나, 브라질 등 통화를 일찍 평가절하하고 상대적으로 빠르게 정상적인 성장세로 돌아온 국가와 프랑스나 벨기에처럼 금본위제를 고수한 국가 사이의 위기 진행 방식의 대조로 뒷받침된다.\n개별 국가들이 보호무역 정책을 통해 자국 경제를 지탱하려는 광적인 시도, 예를 들어 1930년 미국의 스무트-홀리 관세법 및 다른 국가들의 보복 관세는 세계 무역 붕괴를 악화시키고 대공황에 기여했다. 1933년까지 경제 침체는 세계 무역량을 4년 전 수준의 3분의 1로 떨어뜨렸다.\n\n경과\n\n기원\n대공황 발생의 정확한 원인은 논란의 여지가 있으며 전 세계적 현상과 국가적 현상 모두를 원인으로 집을 수 있지만, 그 직접적인 기원은 초기 위기가 전 세계로 확산된 미국 경제 맥락사에서 가장 편하게 살펴볼 수 있다.\n제1차 세계 대전 이후 미국의 광란의 20년대는 미국과 서유럽에 상당한 부를 가져다주었다. 처음에는 1929년이 좋은 경제 전망으로 시작되었다. 1929년 3월 25일의 작은 폭락에도 불구하고 시장은 9월까지 점진적으로 상승장으로 보였다. 하지만 9월 말에는 주가가 하락하기 시작했고 변동성이 심했다. 10월 중순부터 대규모 주식 매도가 시작되었다. 마침내 10월 24일 검은 목요일에 미국 주식 시장은 개장과 동시에 11% 폭락했다. 시장을 안정시키려는 시도는 실패했고, 10월 28일 검은 월요일에는 시장이 또 12% 폭락했다. 공포는 다음 날 검은 화요일에 절정에 달했으며, 시장은 또 다시 11% 하락했다. 수천 명의 투자자가 파산했고, 수십억 달러가 증발했으며, 많은 주식은 어떤 가격으로도 팔리지 않았다. 시장은 수요일에 12% 회복했지만, 그때까지 상당한 피해가 발생했다. 11월 14일부터 1930년 4월 17일까지 주가 회복기가 있었지만 전반적인 상황은 장기적인 침체로 빠져들었다. 1929년 9월부터 1932년 7월 8일까지 시장은 가치의 85%를 상실했다.\n\n폭락에도 불구하고 최악의 위기는 1929년 이후까지 전 세계로 파급되지 않았다. 위기는 1930년 12월에 다시 공황 수준에 이르렀는데, 사설 은행이었던 뱅크 오브 유나이티드 스테이츠(미국 정부와 관련이 없으며, 연방준비제도와 혼동하지 말 것)에 뱅크런이 발생했다. 모든 채권자에게 예금을 지급할 수 없었던 은행은 파산했다. 1930년 11월과 12월에 폐쇄된 608개의 미국 은행 중 뱅크 오브 유나이티드 스테이츠는 총 5억 5천만 달러의 예금 손실 중 3분의 1을 차지했으며, 이 은행의 폐쇄로 은행 파산은 임계점에 도달했다.\n\n스무트-홀리 관세법과 국제 무역의 붕괴\n\n위기 대응의 초기 조치로 미국 의회는 1930년 6월 17일 스무트-홀리 관세법을 통과시켰다. 이 법은 외국 수입품에 고관세를 부과하여 미국 경제를 외국 경쟁으로부터 보호하는 것을 표면적인 목표로 삼았다. 경제학자와 경제 사학자(특히 케인스학파, 통화주의자 및 오스트리아 학파 경제학자) 사이의 공통적인 견해는 스무트-홀리 관세법이 실제로 의도했던 것과는 정반대의 효과를 가져왔다는 것이다. 이 법은 국내 생산 회복 후 경제 회복을 방해하고 무역량을 저해함으로써 대공황을 악화시켰다. 하지만 이 법이 끼친 영향의 정확한 범위에 대해서는 여전히 이견이 있다.\n일반적인 견해로는 스무트-홀리 관세가 대공황의 주요 원인 중 하나로 꼽혔다. 1995년 미국 경제 사학자를 대상으로 한 설문조사에서 3분의 2가 스무트-홀리 관세법이 적어도 대공황을 악화시켰다는 데 동의했다. 미국 상원 웹사이트에 따르면, 스무트-홀리 관세법은 의회 역사상 가장 재앙적인 법 중 하나이다.\n많은 경제학자는 1930년 이후 국제 무역의 급격한 감소가 대공황을 악화시켰다고 주장했으며, 특히 대외 무역에 크게 의존하는 국가들에게 더욱 그러했다. 대부분의 역사학자와 경제학자는 이 법이 국제 무역을 심각하게 감소시키고 다른 국가들의 보복 관세를 유발하여 대공황을 악화시킨다고 비난한다. 대외 무역은 미국 전체 경제 활동에서 작은 부분을 차지했고 농업과 같은 몇몇 사업에 집중되었지만, 다른 많은 국가에서는 훨씬 더 큰 요인으로 작용했다. 1921~1925년 관세 부과 수입품에 대한 평균 종가 관세율은 25.9%였지만, 새로운 관세법에 따라 1931~1935년 동안 50%로 급등했다. 달러 기준으로 미국 수출은 다음 4년 동안 1929년 약 52억 달러에서 1933년 17억 달러로 감소했다. 따라서 수출의 물리적 양뿐만 아니라 가격도 약 1⁄3 정도 하락했다. 가장 큰 타격을 입은 물품은 밀, 면화, 담배, 목재와 같은 농산물이었다.\n전 세계 정부는 외국 상품에 대한 지출을 줄이기 위해 \"관세, 수입 쿼터, 환전 통제\"와 같은 다양한 무역 제한 조치를 취했다. 이러한 제한은 상당한 양의 양자 무역을 가진 국가들 사이에서 큰 긴장을 유발하여 대공황 기간 동안 주요 수출입 감소를 일으켰다. 모든 정부가 동일한 보호무역 조치를 시행한 것은 아니었다. 일부 국가는 관세를 급격히 인상하고 외환 거래에 대한 엄격한 제한을 시행한 반면, 다른 국가는 \"무역 및 외환 제한을 미미하게만\" 줄였다.\n\n\"금본위제를 유지하며 환율을 고정한 국가는 대외 무역을 제한할 가능성이 더 높았다.\" 이러한 국가는 \"국제수지를 강화하고 금 유출을 제한하기 위해 보호무역 정책에 의존했다.\" 또한 이러한 제한과 통제가 경제 침체를 막을 수 있기를 희망했다.\n금본위제를 포기한 국가는 통화 가치를 절하하여 국제수지를 강화할 수 있었다. 또한 중앙은행이 금리를 낮추고 최종 대부자 역할을 할 수 있도록 통화 정책의 자유를 얻었다. 이 국가는 대공황에 맞서 싸울 수 있는 최고의 정책 수단을 보유하고 있었으며 보호무역이 필요하지 않았다.\n\"한 국가의 경기 침체의 기간과 깊이, 그리고 회복의 시기와 활력은 금본위제를 얼마나 오래 유지했는지와 관련이 있다. 금본위제를 상대적으로 일찍 포기한 국가들은 비교적 온건한 경기 침체와 조기 회복을 경험했다. 반면, 금본위제를 유지한 국가들은 장기 침체를 경험했다.\"\n\n금본위제와 세계 대공황의 확산\n금본위제는 대공황의 주요 전파 과정으로 작동했다. 은행 파산과 통화 수축을 직접적으로 겪지 않은 국가조차도 디플레이션 정책을 수행한 국가의 금리 상승이 금리가 낮은 국가에서 금 유출로 이어졌기 때문에 디플레이션 정책을 따라갈 수밖에 없었다. 금본위제의 가격-금 흐름 메커니즘 하에서, 금을 잃고도 금본위제를 유지하려는 국가는 통화 공급을 줄이고 국내 물가를 하락시켜야 했다(디플레이션).\n\n금본위제\n\n일부 경제 연구에 따르면 금본위제의 경직성이 전 세계적으로 불황을 확산시켰을 뿐만 아니라 금 태환을 중단한 것(통화의 금 가치 절하)이 회복을 가능하게 하는 데 가장 큰 기여를 했다는 것을 보여주었다.\n모든 주요 통화는 대공황 기간 금본위제를 포기했다. 영국이 가장 먼저 금본위제를 포기했다. 파운드 스털링에 대한 투기적 공격과 금보유고 고갈에 직면한 잉글랜드 은행은 1931년 9월 파운드화 지폐의 금 태환을 중단하고 파운드화를 외환 시장에 연동했다. 일본과 스칸디나비아 국가들은 1931년에 뒤따라 금본위제를 포기했다. 이탈리아와 미국과 같은 다른 국가는 1932년이나 1933년까지 금본위제를 유지했으며 프랑스가 주도하고 폴란드, 벨기에, 스위스를 포함한 소위 \"금 블록\"의 몇몇 국가는 1935~36년까지 금본위제를 고수했다.\n이후 분석에 따르면 금본위제에서 조기 이탈한 국가가 경제 회복을 안정적으로 달성했음을 밝혀냈다.",
+        "lang": "ko",
+        "wiki_title": "대공황",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Great Depression",
+        "url": "https://en.wikipedia.org/wiki/Great_Depression",
+        "published": "2026-11-21",
+        "fetched_at": "2026-11-21",
+        "text": "The Great Depression was a severe global economic downturn from 1929 to 1939. The period was marked by high rates of unemployment and poverty, drastic reductions in industrial production and international trade, and widespread bank and business failures around the world. The economic contagion began in 1929 in the United States, the largest economy in the world, with the devastating Wall Street crash of 1929 often considered the beginning of the Depression. Among the countries with the most unemployed were the U.S., the United Kingdom, and Germany.\nThe Depression was preceded by a period of industrial growth and social development known as the \"Roaring Twenties\". Much of the profit generated by the boom was invested in speculation, such as in the stock market, contributing to growing wealth inequality. Banks were subject to minimal regulation, resulting in loose lending and widespread debt. By 1929, declining spending had led to reductions in manufacturing output and rising unemployment. Share values continued to rise until the October 1929 crash, after which the slide continued until July 1932, accompanied by a loss of confidence in the financial system. By 1933, the U.S. unemployment rate had risen to 25%, about one-third of farmers had lost their land, and 9,000 of its 25,000 banks had gone out of business. President Herbert Hoover was unwilling to intervene heavily in the economy, and in 1930 he signed the Smoot–Hawley Tariff Act, which inadvertently worsened the Depression. In the 1932 presidential election, Hoover was defeated by Franklin D. Roosevelt, who from 1933 pursued a set of expansive New Deal programs in order to provide relief and create jobs. In Germany, which depended heavily on U.S. loans, the crisis caused unemployment to rise to nearly 30% and fueled political extremism, paving the way for Adolf Hitler's Nazi Party to rise to power in 1933.\n\nBetween 1929 and 1932, worldwide gross domestic product (GDP) fell by an estimated 15%; in the U.S., the Depression resulted in a 30% contraction in GDP. Recovery varied greatly around the world. Some economies, such as the U.S., Germany, and Japan, started to recover by the mid-1930s; others, such as France, did not return to pre-shock growth rates until later in the decade. The Depression had devastating economic effects on both wealthy and poor countries: all experienced drops in personal income, prices (deflation), tax revenues, and profits. International trade fell by more than 50%, and unemployment in some countries rose as high as 33%. Cities around the world, especially those dependent on heavy industry, were heavily affected. Construction virtually halted in many countries, and farming communities and rural areas suffered as crop prices fell by up to 60%. Faced with plummeting demand and few job alternatives, areas dependent on primary sector industries suffered the most. The outbreak of World War II in 1939 ended the Depression, as it stimulated factory production, providing jobs for women as militaries absorbed large numbers of young, unemployed men.\nThe precise causes for the Great Depression are disputed. One set of historians, for example, focuses on non-monetary economic causes. Among these, some regard the Wall Street crash itself as the main cause; others consider that the crash was a mere symptom of more general economic trends of the time, which had already been underway in the late 1920s. A contrasting set of views, which rose to prominence in the later part of the 20th century, ascribes a more prominent role to failures of monetary policy. According to those authors, while general economic trends can explain the emergence of the downturn, they fail to account for its severity and longevity; they argue that these were caused by the lack of an adequate response to the crises of liquidity that followed the initial economic shock of 1929 and the subsequent bank failures accompanied by a general collapse of the financial markets.\n\nOverview\n\nThe economic picture at the beginning of the crisis\n\nAfter the Wall Street crash of 1929, when the Dow Jones Industrial Average dropped from 381 to 198 over the course of two months, optimism persisted for some time. The stock market rose in early 1930, with the Dow returning to 294 (pre-depression levels) in April 1930, before steadily declining for years, to a low of 41 in 1932.\nAt the beginning, governments and businesses spent more in the first half of 1930 than in the corresponding period of the previous year. On the other hand, consumers, many of whom suffered severe losses in the stock market the previous year, cut expenditures by 10%. In addition, beginning in the mid-1930s, a severe drought ravaged the agricultural heartland of the U.S.\nInterest rates dropped to low levels by mid-1930, but expected deflation and the continuing reluctance of people to borrow meant that consumer spending and investment remained low. By May 1930, automobile sales had declined to below the levels of 1928. Prices, in general, began to decline, although wages held steady in 1930. Then a deflationary spiral started in 1931. Farmers faced a worse outlook; declining crop prices and a Great Plains drought crippled their economic outlook. At its peak, the Great Depression saw nearly 10% of all Great Plains farms change hands despite federal assistance.\n\nBeyond the United States\nAt first, the decline in the U.S. economy was the factor that triggered economic downturns in most other countries due to a decline in trade, capital movement, and global business confidence. Then, internal weaknesses or strengths in each country made conditions worse or better. For example, the U.K. economy, which experienced an economic downturn throughout most of the late 1920s, was less severely impacted by the shock of the depression than the U.S. By contrast, the German economy saw a similar decline in industrial output as that observed in the U.S. Some economic historians attribute the differences in the rates of recovery and relative severity of the economic decline to whether particular countries had been able to effectively devaluate their currencies or not. This is supported by the contrast in how the crisis progressed in, e.g., Britain, Argentina, and Brazil, all of which devalued their currencies early and returned to normal patterns of growth faster than countries that stuck to the gold standard, such as France or Belgium.\n",
+        "lang": "en",
+        "wiki_title": "Great Depression",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Unemployed men queued outside a depression soup kitchen opened in Chicago by Al Capone, 02-1931 - NARA - 541927.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone%2C_02-1931_-_NARA_-_541927.jpg/1920px-Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone%2C_02-1931_-_NARA_-_541927.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone%2C_02-1931_-_NARA_-_541927.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Unemployed_men_queued_outside_a_depression_soup_kitchen_opened_in_Chicago_by_Al_Capone,_02-1931_-_NARA_-_541927.jpg",
+        "width": 2939,
+        "height": 2392,
+        "license": "Public domain",
+        "artist": "Unknown authorUnknown author or not provided",
+        "caption": "The storefront sign reads \"Free Soup Coffee & Doughnuts for the Unemployed.\"",
+        "id": "P1"
+      },
+      {
+        "file": "File:Money supply during the great depression era.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Money_supply_during_the_great_depression_era.png/1920px-Money_supply_during_the_great_depression_era.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Money_supply_during_the_great_depression_era.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Money_supply_during_the_great_depression_era.png",
+        "width": 3036,
+        "height": 1473,
+        "license": "CC0",
+        "artist": "Wikideas1 Wikideas1 (talk) (Uploads)",
+        "caption": "Money supply during the great depression era",
+        "id": "P2"
+      },
+      {
+        "file": "File:Money supply during the great depression era Ar.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Money_supply_during_the_great_depression_era_Ar.png/1920px-Money_supply_during_the_great_depression_era_Ar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Money_supply_during_the_great_depression_era_Ar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Money_supply_during_the_great_depression_era_Ar.png",
+        "width": 2842,
+        "height": 1478,
+        "license": "CC BY 4.0",
+        "artist": "File:Money supply during the great depression era.png Wikideas1 Derivative work : Nehaoua",
+        "caption": "المعروض النقدي خلال فترة الكساد الكبير",
+        "id": "P3"
+      },
+      {
+        "file": "File:Great Depression money supply contraction.webp",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Great_Depression_money_supply_contraction.webp/1920px-Great_Depression_money_supply_contraction.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Great_Depression_money_supply_contraction.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Great_Depression_money_supply_contraction.webp",
+        "width": 3985,
+        "height": 2126,
+        "license": "CC0",
+        "artist": "Wikideas1",
+        "caption": "Great Depression money supply contraction",
+        "id": "P4"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-21T16:03:33Z"
+  }
+}
