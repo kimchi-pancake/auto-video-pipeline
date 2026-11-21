@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261119-01-0c846",
   "channel": "도개",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-18T16:01:28Z",
   "topic": {
     "title": "측우기",
@@ -103,6 +103,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-21T05:16:41Z",
       "note": "승인 → 예약공개 11-21 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-21T19:18:33Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {
@@ -652,7 +657,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-21T05:16:41Z",
+  "updated_at": "2026-11-21T19:18:33Z",
   "pack": {
     "topic": {
       "title": "측우기",
