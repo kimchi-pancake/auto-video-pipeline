@@ -1,0 +1,318 @@
+{
+  "id": "ch9ede5c-20261123-02-b2a04",
+  "channel": "웃짬",
+  "status": "NEEDS_REVIEW",
+  "created_at": "2026-11-22T16:05:58Z",
+  "topic": {
+    "title": "파나마 운하",
+    "wiki_title": "파나마 운하",
+    "category": "공급망",
+    "source": "seed",
+    "angle": "숫자로 보면 얼마나 심각했나",
+    "score": 0.6753,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.488
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7313,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.488
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-22T16:05:58Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-22T16:05:58Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-22T16:06:22Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-22T16:07:50Z",
+      "note": "script: LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 4 화면 문구(title)에 한자/알파벳이 있음 — 한글로 써라: 우기 vs 건기 수위"
+    }
+  ],
+  "attempts": {
+    "script": 1
+  },
+  "error": {
+    "stage": "script",
+    "class": "content_quality",
+    "message": "LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 4 화면 문구(title)에 한자/알파벳이 있음 — 한글로 써라: 우기 vs 건기 수위",
+    "at": "2026-11-22T16:07:50Z"
+  },
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "problem_solution",
+      "first_line": "가뭄 오면 배가 못 다니는데, 호수 하나 더 팠습니다",
+      "screen_text": "알라후엘라 호 저수지",
+      "title": "물 부족 위기, 인공 호수로 버틴 100년 역사",
+      "promise": "운하가 물 없이도 돌아가게 만든 설계의 비밀을 알려드립니다",
+      "evidence_quote": "알라후엘라 호(미국 점령기에는 ‘매든 호’라고 했다)라는 인공 호수도 있는데, 운하의 저수지 역할을 한다.",
+      "eval": {
+        "score": 0.993,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.93,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "problem_solution",
+        "first_line": "가뭄 오면 배가 못 다니는데, 호수 하나 더 팠습니다",
+        "screen_text": "알라후엘라 호 저수지",
+        "title": "물 부족 위기, 인공 호수로 버틴 100년 역사",
+        "promise": "운하가 물 없이도 돌아가게 만든 설계의 비밀을 알려드립니다",
+        "evidence_quote": "알라후엘라 호(미국 점령기에는 ‘매든 호’라고 했다)라는 인공 호수도 있는데, 운하의 저수지 역할을 한다.",
+        "eval": {
+          "score": 0.993,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "프랑스는 2만 명 죽이고 포기했고, 미국은 완성했습니다",
+        "screen_text": "사망자 2만 7천 명",
+        "title": "같은 운하, 프랑스는 실패 미국은 성공한 이유",
+        "promise": "질병과 지질, 자본 차이가 결과를 어떻게 갈랐는지 확인하세요",
+        "evidence_quote": "프랑스와 미국에 의해 진행된 운하 공사가 완성되기까지 노동자 27,500명이 사망한 것으로 집계되었다.",
+        "eval": {
+          "score": 0.9927,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "통행료 수입 1위는 미국, 2위는 중국입니다",
+        "screen_text": "최다 이용국 1·2위",
+        "title": "파나마 운하, 누가 가장 많이 쓰고 돈 낼까",
+        "promise": "세계 무역 지도를 보면 운하 이익을 보는 나라가 보입니다",
+        "evidence_quote": "By 2012, more than 815,000 vessels had passed through the canal. In that year, the top five users of the canal were the United States, China, Chile, Japan, and South Korea.",
+        "eval": {
+          "score": 0.9391,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "뉴욕-샌프란시스코, 거리가 1만 3천 킬로나 차이납니다",
+        "screen_text": "거리 단축 13,000km",
+        "title": "파나마 운하, 지구 반 바퀴를 줄였다",
+        "promise": "운하 하나로 무역 항로가 얼마나 짧아지는지 숫자로 확인하세요",
+        "evidence_quote": "선박이 뉴욕에서 이 해협으로 샌프란시스코까지 항해하는데 거리가 9,500km 정도인데, 기존 방식대로 혼곶으로 우회하면 거리가 두 배가 넘는 22,500km에 달한다.",
+        "eval": {
+          "score": 0.9134,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "배 한 척 지나갈 때마다 수영장 80개 분량 물이 사라집니다",
+        "screen_text": "통과 1회 2억 리터",
+        "title": "운하 한 번 지날 때 물 2억 리터가 듭니다",
+        "promise": "물 부족이 운하 운명을 어떻게 가르는지 알 수 있습니다",
+        "evidence_quote": "An average of 200,000,000 litres (52 million US gallons) of fresh water is used in a single passing of a ship.",
+        "eval": {
+          "score": 0.9114,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "확장 공사 후 네오파나막스 선박이 하루 14척 지나갑니다",
+        "screen_text": "확장 후 처리량 증가",
+        "title": "2016년 확장, 진짜 돈 되는 큰 배가 몰렸다",
+        "promise": "확장 전후 통행료 수익과 물동량 변화를 숫자로 비교합니다",
+        "evidence_quote": "A third, wider lane of locks was constructed between September 2007 and May 2016. The expanded waterway began commercial operation on 26 June 2016. The new locks allow for the transit of larger, Neopanamax ships.",
+        "eval": {
+          "score": 0.8274,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": null,
+  "claims": [],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-22T16:07:50Z",
+  "pack": {
+    "topic": {
+      "title": "파나마 운하",
+      "wiki_title": "파나마 운하",
+      "category": "공급망",
+      "source": "seed",
+      "angle": "숫자로 보면 얼마나 심각했나",
+      "score": 0.6753,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.488
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7313,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.488
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 파나마 운하",
+        "url": "https://ko.wikipedia.org/wiki/%ED%8C%8C%EB%82%98%EB%A7%88_%EC%9A%B4%ED%95%98",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-22",
+        "text": "파나마 운하(영어: Panama Canal, 스페인어: Canal de Panamá)는 파나마 지협을 가로질러 태평양과 대서양을 잇는 길이 82km의 운하이다. 1914년 8월 15일 완공했으며, 1999년 운하 소유권이 미국 정부에서 파나마 정부로 이전되었다.\n파나마 국토는 누운 S자 모양으로 운하 북서쪽이 대서양, 남동쪽이 태평양이다. 정확하게는 태평양에서 대서양으로 갈 때는 북북서쪽으로, 대서양에서 태평양으로 갈 때는 남남동쪽으로 간다.\n건설자체가 세계적으로 거대한 난공사였으며, 운하 완성으로 과거 남아메리카 끝 드레이크 해협과 혼곶으로 가는, 남아메리카 해안을 빙 돌아서 가는 매우 긴 우회로를 대체하여 두 대양 사이 해상 무역에 큰 영향을 끼쳤다. 선박이 뉴욕에서 이 해협으로 샌프란시스코까지 항해하는데 거리가 9,500km 정도인데, 기존 방식대로 혼곶으로 우회하면 거리가 두 배가 넘는 22,500km에 달한다.\n파나마 운하는 지리적인 특성 때문에 해상운송 수요가 많다. 2006년에는 파나마 운하 확장 계획에 국민들이 압도적으로 지지했으며, 2016년 6월 26일에 확장공사를 완료했다.\n\n역사\n\n파나마 운하 스캔들\n\n파나마 운하 건설을 착안한 것은 16세기 초의 일이었으나, 처음으로 실행에 옮긴 것은 1880년 프랑스인들이었다. 수에즈 운하(1859~69) 건설에 성공한 레셉스가 민간회사를 설립하여 1881년부터 파나마 운하 건설을 시작했다. 그러나 말라리아와 황열병등 예상치 못했던 문제로 21,900명의 노동자가 죽었고 자금 고갈등으로 1889년 파산하고 운하 건설은 중단되었다. 파산전 모집한 복권부 사채를 입법화 할 때 유대인 금융자본가를 통하여 정부의 각료들과 국회 의원들이 매수되었다는 사실이 1892년 신문에 폭로되었다. 여론이 악화되며 장관들과 정치인들이 물러나고 프랑스 사회에 큰 파문이 일었다.\n\n운하 완공\n결국, 1900년대 초 미국이 재시도해서 1914년 8월 15일에 완성했다. 77 km 거리의 운하를 건설하면서 온갖 문제에 부딪혔는데, 말라리아와 황열병 같은 질병이 덮쳤고, 흙이 무너지기도 했다. 프랑스와 미국에 의해 진행된 운하 공사가 완성되기까지 노동자 27,500명이 사망한 것으로 집계되었다. 운하가 완성된 후 파나마 운하사업은 대성공을 거두었으며, 국제 해운 무역의 중요한 통로가 되었다. 파나마 운하는 작은 개인 요트에서 거대한 상업 선박 모두 수용할 수 있었다. 운하가 감당할 수 있는 최대 크기의 선박을 파나맥스 선박이라고 하는데, 파나맥스보다 더 큰 용량의 선박은 ‘포스트-파나맥스’ 혹은 ‘수퍼-파나맥스’라고 한다. 일반적으로 운송 선박이 운하를 지나는데 약 8~10시간 정도 걸린다. 2008 회계년도에 총 14,702척의 선박이 수로를 지났는데, 이를 합하면 총 309.6 PC/UMS 톤에 이른다고 한다. (파나마 운하/국제 기준 체계)\n\n과정\n\n파나마 운하는 인공 호수와 준설하거나 새로 만든 수로와 세 곳의 수문으로 이루어져 있다. 알라후엘라 호(미국 점령기에는 ‘매든 호’라고 했다)라는 인공 호수도 있는데, 운하의 저수지 역할을 한다. 배 한척이 태평양에서 대서양으로 갈 때 다음과 같은 과정을 거친다.\n\n태평양 쪽 파나마 만의 입구에서, 배는 아메리카의 다리를 지나 13.2km 거리로 미라플로레스 갑문까지 간다.\n미라플로레스 갑문은 접근벽이 있으며 두 단계로 나뉘는데, 1.7km 길이로, 중간 조류 기준으로 배가 16.5m 올라간다.\n인공 미라플로레스 호가 다음 단계이며, 길이는 1.7km. 깊이는 16.6m.\n한 단계로 된 페드로 미겔 갑문이 나오는데, 1.4km이며 배가 9.5m로 올라가는데, 운하 주요 수위에서 더 이상 올라가지 않는다.\n갈리아드 통로로 대륙분수령을 지나며 12.6km 나아간다. 수위는 26m이며 백년교를 지난다.\n가툰 호를 막으면서 물이 불어난 자연 수로 차그레스 강이 가툰 호에서 발원하여 서쪽으로 8.5km 나아간다.\n가툰 댐을 쌓아 만든 인공 호수 가툰 호로 선박이 24.2km 간다.\n3단계로 된 가툰 갑문 1.9 km를 지나서 배는 다시 해상 수위로 내려온다.\n3.2 km의 수로로 대서양쪽 갑문으로 접근한다.\n거대한 자연 항구인 리몬 만에서 몇몇 배들이 통과를 기다리며 정박하고 있으며, 외부 방파제까지 8.7 km 거리이다.\n이렇게 해서 운하의 총 길이는 80여 km가 된다.\n\n운하 갑문의 크기\n원래 가툰에 있는 갑문은 28.5m 폭으로 설계되었다. 1908년 미국 해군은 미국 해군 군함이 지나갈 수 있도록 갑문 폭이 최소 36m이 되어야 한다고 요청했다. 결국 타협이 이루어져 갑문은 크기는 폭 33.53m로 건설되었다. 각 갑문의 길이는 304.8m이며, 가장 높은 벽은 3m, 가장 낮은 벽은 15m 두께를 이룬다. 가툰에 있는 평행 갑문들 사이의 중앙벽은 두께가 18m나 되며, 높이는 24m가 넘는다. 갑문 출입구의 문은 강철로 만들어졌으며, 평균 2m 두께로 길이는 19.5m이고 높이는 20m이다. 파나맥스 선박 기준과 파나마 운하를 통과할 수 있는 선박 크기 제한은 발보아에 있는 아메리카의 다리와 더불어, 갑문의 크기(특히 페드로 미겔 갑문의 경우)로 결정되는 것이다.\n\n통행료\n\n파나마 운하의 통행료는 파나마 운하 당국에서 결정하며, 선박 종류, 크기, 선적물의 종류에 따라 결정된다.\n컨테이너선의 경우 요금은 1척당 20피트 컨테이너(Twenty-foot equivalent unit, TEU) 적재량으로 정한다. 1 TEU는 가로 20피트(6m), 세로 8피트(2m), 높이 8.5피트(3m)의 컨테이너 적재량을 뜻한다. 2009년 5월 1일부터 발효되는 통행료는 TEU당 미화 57.60 $이다. 파나맥스급 컨테이너선 한 척이 4,400 TEU를 싣는다. 여객선이나 화물이 없는 컨테이너선(밸러스트)의 경우 요금이 다르게 책정된다.\n30,000톤(PC/UMS) 이상의 흔히 '크루즈선'이라고 하는 여객선은 \"침대(berth)\" 개수를 기준으로 요금을 정한다. 즉 배의 침대로 수용할 수 있는 승객 수에 따라 돈을 받는 것이다. 사람이 없는 침대에는 80$, 사람이 쓰는 침대에는 100$씩 받는다. 2007년부터 이 요금 제도로 여객 선박의 통행료가 크게 늘었다. 30,000톤 이하 혹은 승객 1인당 33톤 이하의 여객선은 화물선과 동일하게 톤 단위로 요금을 책정한다.\n대부분의 다른 선박 종류는 100 평방피트 용적인 PC/UMS 순 등록 톤(net register ton) 기준으로 통행료가 책정된다. (상선의 톤수 계산은 매우 복잡하다) 2008 회계년도에 이 톤수 기준의 요금은 10,000톤까지는 톤당 미화 3.90$이며, 10,000톤이 넘어간 다음에는 3.19$를, 그 다음 10,000톤부터는 3.82$를 그 이상 넘어가면 3.76$를 내야한다. 컨테이너선의 경우 화물이 없어 빈 \"밸러스트\"일 경우 통행료를 감해준다.\n583 PC/UMS 순 등록 톤 이하의 승객이나 화물을 적재한 작은 선박, 혹은 735톤을 넘지 않는 비어이 선박, 또는 1,048톤 이하의 완전 적재 톤의 선박의 경우 전체 길이에 근거해서 최소 통행료로 책정되는데, 다음 표를 참조하면 된다.\n\n파나마 운하를 지나갈 때 가장 비싼 통행료를 낸 선박은 259m 길이의 디즈니 매직 크루즈 라이너로, 2008년 5월 16일의 일이었다. 이 배는 331,200$를 지불했다. 가장 적은 통행료는 미국 모험가 리처드 핼리버튼이 1928년 파나마 운하를 수영하여 지나갈 때 낸 돈 39센트였다. 평균 통행료는 약 54,000$이다.\n\n같이 보기\n파나마 운하 지대\n파나마 지협\n\n각주\n\n외부 링크\n 위키미디어 공용에 파나마 운하 관련 미디어 분류가 있습니다.\n〈파나마 운하〉. 《두산세계대백과사전》. (주)두산. \n라이브 웹캠 파나마 운하(Live webcams Panama canal)",
+        "lang": "ko",
+        "wiki_title": "파나마 운하",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Panama Canal",
+        "url": "https://en.wikipedia.org/wiki/Panama_Canal",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-22",
+        "text": "The Panama Canal (Spanish: Canal de Panamá) is an artificial 82-kilometer (51-mile) waterway in Panama that connects the Caribbean Sea in the Atlantic Ocean with the Pacific Ocean. It cuts across the narrowest point of the Isthmus of Panama and is a conduit for maritime trade between the Atlantic Ocean and the Pacific Ocean. Locks at each end lift ships up to Gatun Lake, an artificial fresh water lake 26 meters (85 ft) above sea level, created by damming the Chagres River and Lake Alajuela to reduce the amount of excavation work required for the canal. Locks then lower the ships at the other end. The original locks are 33.5 meters (110 ft) wide and allow the passage of Panamax ships. A third, wider lane of locks was constructed between September 2007 and May 2016. The expanded waterway began commercial operation on 26 June 2016. The new locks allow for the transit of larger, Neopanamax ships. An average of 200,000,000 litres (52 million US gallons) of fresh water is used in a single passing of a ship. The canal is threatened by low water levels during droughts.\nThe Panama Canal shortcut greatly reduces the time for ships to travel between the Atlantic and Pacific oceans, enabling them to avoid the lengthy, hazardous route around the southernmost tip of South America via the Drake Passage, the Strait of Magellan or the Beagle Channel. Its construction was one of the largest and most difficult engineering projects ever undertaken. Since its inauguration on 15 August 1914, the canal has succeeded in shortening maritime communication in time and distance, invigorating maritime and economic transportation by providing a short and relatively inexpensive transit route between the two oceans, decisively influencing global trade patterns, boosting economic growth in developed and developing countries, as well as providing the basic impetus for economic expansion in many remote regions of the world.\nColombia, France, and later the United States controlled the territory surrounding the canal during construction. France began work on the canal in 1881, but stopped in 1889 because of a lack of investors' confidence due to engineering problems and a high worker mortality rate. The US took over the project in 1904 and opened the canal in 1914. The US continued to control the canal and the surrounding Panama Canal Zone until the Torrijos–Carter Treaties provided for its handover to Panama in 1977. After a period of joint American–Panamanian control, the Panamanian government took control in 1999. It is now managed and operated by the Panamanian government-owned Panama Canal Authority. Annual traffic has risen from about 1,000 ships in 1914, when the canal opened, to 14,702 vessels in 2008, for a total of 333.7 million Panama Canal/Universal Measurement System (PC/UMS) tons. By 2012, more than 815,000 vessels had passed through the canal. In that year, the top five users of the canal were the United States, China, Chile, Japan, and South Korea. In 2017, it took ships an average of 11.38 hours to pass between the canal's two outer locks. The American Society of Civil Engineers has ranked the Panama Canal one of the Seven Wonders of the Modern World.\n\nHistory\n\nEarly proposals in Panama\nThe idea of the Panama Canal dates back to 1513, when the Spanish conquistador Vasco Núñez de Balboa (c.1475–1519) first crossed the Isthmus of Panama. He wrote in his journal the possibility of a canal but did not take action. European powers soon noticed the possibility of digging a water passage between the Atlantic and Pacific Oceans across this narrow land bridge between North and South America. The earliest proposal dates to 1534, when the Holy Roman Emperor Charles V ordered a survey for a route through the Americas in order to ease the voyage for ships traveling between Spain and Peru. In 1668, the English physician and philosopher Sir Thomas Browne specifically proposed the Isthmus of Panama as the most convenient place for such a canal.\nThe first attempt to make the isthmus part of a trade route was the ill-fated Darien scheme, launched by the Kingdom of Scotland (1698–1700), which was abandoned because of the inhospitable conditions.\nIn 1811, the German naturalist Alexander von Humboldt published an essay on the geography of the Spanish colonies in Central America (Essai politique sur le royaume de la Nouvelle Espagne; translated into English as: Political essay on the kingdom of New Spain containing researches relative to the geography of Mexico). In the essay, he considered five possible routes for a canal across Central America, including Panama, but concluded that the most promising location was across Nicaragua, traversing Lake Nicaragua. His recommendations influenced the British to attempt a canal across Nicaragua in 1843. Although this attempt in the end came to nothing, it resulted in the Clayton–Bulwer Treaty (1850) between the United Kingdom and the United States, in which the two nations bound each other to joint control of any canal built in Nicaragua or (by implication) anywhere in Central America.\n\n In 1846, the Mallarino–Bidlack Treaty, negotiated between the US and New Granada (the predecessor of Colombia), granted the United States transit rights and the right to intervene militarily in the isthmus. In 1848, the discovery of gold in California created a demand for a crossing of Panama as a practical route between the Atlantic and Pacific oceans. This demand was exploited by American businessman William Henry Aspinwall, who ran steamship legs from New York City to Panama, and from Panama to California, with an overland portage through Panama. This route was soon exploited by other businessmen, such as Cornelius Vanderbilt. Between 1850 and 1855, a syndicate founded by Aspinwall built a railroad (now the Panama Canal Railway) from Colón on the Caribbean Sea to Panama City. The project cost US$8,000,000 (six times the estimated cost) and the lives of between 6,000 and 12,000 construction workers who succumbed to Tropical diseases. The railroad soon became immensely profitable for its owners.\nIn 1870, US President Grant established an Interoceanic Canal Commission, which included Chief of Engineers Brigadier General Andrew A Humphreys as its members. It commissioned several naval officers, including Commander Thomas Oliver Selfridge Jr., to investigate the possible routes suggested by Humboldt for a canal across Central America.",
+        "lang": "en",
+        "wiki_title": "Panama Canal",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Museo del Canal Interoceánico de Panamá.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Museo_del_Canal_Interoce%C3%A1nico_de_Panam%C3%A1.jpg/1920px-Museo_del_Canal_Interoce%C3%A1nico_de_Panam%C3%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Museo_del_Canal_Interoce%C3%A1nico_de_Panam%C3%A1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Museo_del_Canal_Interoce%C3%A1nico_de_Panam%C3%A1.jpg",
+        "width": 3648,
+        "height": 2736,
+        "license": "CC BY 2.0",
+        "artist": "Y.Y.Y.G.",
+        "caption": "This is a picture of the panamanian cultural heritage monument with the ID",
+        "id": "P1"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-22T16:05:58Z"
+  }
+}

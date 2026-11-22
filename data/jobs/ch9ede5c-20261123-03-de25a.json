@@ -1,0 +1,696 @@
+{
+  "id": "ch9ede5c-20261123-03-de25a",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-22T16:07:53Z",
+  "topic": {
+    "title": "TSMC",
+    "wiki_title": "TSMC",
+    "category": "산업패권",
+    "source": "seed",
+    "angle": "누가 이득을 보고 누가 손해를 봤나",
+    "score": 0.6753,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.488
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7313,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.488
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-22T16:07:53Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-22T16:07:53Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-22T16:08:32Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-22T16:08:59Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "surprising_fact",
+      "first_line": "TSMC는 처음부터 민간 기업이 아니었습니다.",
+      "screen_text": "정부 프로젝트였다",
+      "title": "세계 1위 반도체 기업, 시작은 '국가 프로젝트'였다",
+      "promise": "대만 정부가 백지수표로 키운 기업이 어떻게 독점적 지위를 갖게 됐는지 알 수 있습니다.",
+      "evidence_quote": "TSMC는 처음부터 민간 기업이 아니었다. 대만 정부의 프로젝트였다.",
+      "eval": {
+        "score": 0.9533,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 0.5,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.83,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "surprising_fact",
+        "first_line": "TSMC는 처음부터 민간 기업이 아니었습니다.",
+        "screen_text": "정부 프로젝트였다",
+        "title": "세계 1위 반도체 기업, 시작은 '국가 프로젝트'였다",
+        "promise": "대만 정부가 백지수표로 키운 기업이 어떻게 독점적 지위를 갖게 됐는지 알 수 있습니다.",
+        "evidence_quote": "TSMC는 처음부터 민간 기업이 아니었다. 대만 정부의 프로젝트였다.",
+        "eval": {
+          "score": 0.9533,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.83,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "대만 GDP의 4분의 1이 이 회사 수출입니다.",
+        "screen_text": "GDP 25% = TSMC",
+        "title": "한 기업이 국가 경제 25%를 떠받치는 기묘한 구조",
+        "promise": "TSMC 한 곳이 대만 수출과 증시, 에너지까지 좌우하는 수치의 실체를 확인합니다.",
+        "evidence_quote": "Taiwan's exports of integrated circuits amounted to $184 billion in 2022, nearly 25 percent of Taiwan's GDP. TSMC constitutes about 30 percent of the Taiwan Stock Exchange's main index.",
+        "eval": {
+          "score": 0.9109,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "인텔과 텍사스인스트루먼트는 TSMC 제안을 거절했습니다.",
+        "screen_text": "거절당한 백지수표",
+        "title": "미국 반도체 거물들이 외면한 사업, 대만이 세계 1위 만든 이유",
+        "promise": "당대 최강 기업들이 위험하다며 손절한 파운드리 모델이 어떻게 승자독식 표준이 됐는지 봅니다.",
+        "evidence_quote": "Texas Instruments and Intel turned down Chang. Only Philips was willing to sign a joint venture contract...",
+        "eval": {
+          "score": 0.9032,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "애플, 엔비디아, AMD가 줄 서서 칩을 삽니다.",
+        "screen_text": "고객이 '을'이 된다",
+        "title": "파운드리 70% 독점, 갑이 된 TSMC와 을이 된 빅테크",
+        "promise": "TSMC가 가격 결정권을 쥐고 고객사들이 감수할 수밖에 없는 구조적 이유를 설명합니다.",
+        "evidence_quote": "It holds a commanding majority in the semiconductor foundry market, accounting for approximately 70% of the global market share. As the leading dedicated contract chipmaker, it serves as the main supplier for Nvidia, Apple, Broadcom, and Qualcomm.",
+        "eval": {
+          "score": 0.825,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "대만 전력 5%를 한 회사가 쓰는데, 2050년까지 100% 재생에너지로 돌리겠답니다.",
+        "screen_text": "전력 5% vs 탄소중립",
+        "title": "국가 전력 5% 쓰는 공장, 'RE100' 첫 달성 비결은?",
+        "promise": "에너지 다소비 공장이 전력난과 탄소규제 사이에서 살아남는 구체적 전략을 파악합니다.",
+        "evidence_quote": "TSMC는 대만 에너지 소비의 약 5%를 차지하며 이는 수도인 타이페이의 에너지 소비량을 초과한다. 2020년 TSMC는 RE100 이니셔티브에 서명한 세계 최초의 반도체 회사가 되어 2050년까지 100% 재생 가능 에너지를 사용하겠다고 약속했다.",
+        "eval": {
+          "score": 0.2793,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 0.0,
+            "title_len": 0.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "버핏은 41억 달러를 넣고 3개월 만에 86%를 팔았습니다.",
+        "screen_text": "버핏의 초고속 손절",
+        "title": "워런 버핏이 TSMC 지분 86%를 처분한 단 하나의 이유",
+        "promise": "가치투자 대가도 감당 못 한 지정학적 리스크의 무게를 수치로 확인합니다.",
+        "evidence_quote": "In Q3 2022... Berkshire Hathaway disclosed a purchase of 60 million shares... However, Berkshire sold 86.2% of its stake by the next quarter, citing geopolitical tensions.",
+        "eval": {
+          "score": 0.2665,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 0.5,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "티에스엠씨, 국가 프로젝트로 시작하다",
+    "target_seconds": 35,
+    "category": "산업패권",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "티에스엠씨는 처음부터 민간 기업이 아니었습니다. 대만 정부의 국가 프로젝트였습니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "TSMC는 처음부터 민간 기업이 아닌 대만 정부의 프로젝트로 시작됨",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "TSMC는 처음부터 민간 기업이 아니었다. 대만 정부의 프로젝트였다."
+          }
+        ]
+      },
+      {
+        "narration": "1986년 리궈딩 행정원 대표가 모리스 창에게 백지수표를 주며 칩 산업 건설을 맡겼습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "1986년",
+          "small": "백지수표로 사업 시작"
+        },
+        "claims": [
+          {
+            "text": "1986년 리궈딩이 모리스 창을 ITRI 원장으로 초청하며 백지수표 제공",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1986년 중화민국 행정원을 대표하는 리궈딩은 모리스 창을 산업 기술 연구소(ITRI)의 원장으로 초청하고 그에게 대만의 칩 산업을 건설하기 위한 백지 수표를 제공했다."
+          }
+        ]
+      },
+      {
+        "narration": "텍사스 인스트루먼트와 인텔이 거절했고 필립스만 5,800만 달러로 지분 27.5%를 인수했습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "초기 투자자 반응",
+          "a": {
+            "label": "TI·인텔",
+            "value": 0
+          },
+          "b": {
+            "label": "필립스",
+            "value": 27.5
+          },
+          "unit": "지분%"
+        },
+        "claims": [
+          {
+            "text": "TI와 인텔은 모리스 창의 제안을 거절함",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "텍사스 인스트루먼트와 인텔은 모리스 창을 거절했다."
+          },
+          {
+            "text": "필립스가 5,800만 달러로 지분 27.5% 인수 및 기술 이전 계약 체결",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "필립스만이 TSMC 지분 27.5%를 대가로 5,800만 달러를 투자하고 생산 기술을 이전하고 지적 재산을 라이선스하는 조건으로 대만과 합작 투자 계약을 체결할 의향이 있었다."
+          }
+        ]
+      },
+      {
+        "narration": "대만 정부가 창업 자본의 48%를 댔고, 부유한 가문들이 정부 요청으로 나머지를 충당했습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "정부 48%",
+          "small": "창업자본 절반 부담"
+        },
+        "claims": [
+          {
+            "text": "대만 정부가 국가개발기금을 통해 창업자본의 48% 제공",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며"
+          },
+          {
+            "text": "나머지 자본은 부유한 가문들이 정부 요청으로 조달",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "관대한 세금 혜택과 함께 대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며 나머지 자본은 전문 기업을 소유한 섬의 가장 부유한 여러 가문에서 조달했다.",
+            "quote_found_by": "code"
+          }
+        ]
+      },
+      {
+        "narration": "이 구조 덕분에 티에스엠씨는 세계 파운드리 점유율 60%, 고객사 530곳의 독점적 지위를 갖게 됐습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "현재 위상",
+          "a": {
+            "label": "세계 점유율",
+            "value": 60
+          },
+          "b": {
+            "label": "고객사 수",
+            "value": 530
+          },
+          "unit": "% / 곳"
+        },
+        "claims": [
+          {
+            "text": "세계 파운드리 점유율 60% 기록",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "TSMC는 세계 파운드리 점유율 60%로서"
+          },
+          {
+            "text": "530개 기업을 고객사로 확보",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "530개의 기업을 고객사로 두고 있으며"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "TSMC는 처음부터 민간 기업이 아닌 대만 정부의 프로젝트로 시작됨",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "TSMC는 처음부터 민간 기업이 아니었다. 대만 정부의 프로젝트였다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "1986년 리궈딩이 모리스 창을 ITRI 원장으로 초청하며 백지수표 제공",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "1986년 중화민국 행정원을 대표하는 리궈딩은 모리스 창을 산업 기술 연구소(ITRI)의 원장으로 초청하고 그에게 대만의 칩 산업을 건설하기 위한 백지 수표를 제공했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "TI와 인텔은 모리스 창의 제안을 거절함",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "텍사스 인스트루먼트와 인텔은 모리스 창을 거절했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "필립스가 5,800만 달러로 지분 27.5% 인수 및 기술 이전 계약 체결",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "필립스만이 TSMC 지분 27.5%를 대가로 5,800만 달러를 투자하고 생산 기술을 이전하고 지적 재산을 라이선스하는 조건으로 대만과 합작 투자 계약을 체결할 의향이 있었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "대만 정부가 국가개발기금을 통해 창업자본의 48% 제공",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 3,
+        "text": "나머지 자본은 부유한 가문들이 정부 요청으로 조달",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "관대한 세금 혜택과 함께 대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며 나머지 자본은 전문 기업을 소유한 섬의 가장 부유한 여러 가문에서 조달했다.",
+        "verified": true,
+        "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 4,
+        "text": "세계 파운드리 점유율 60% 기록",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "TSMC는 세계 파운드리 점유율 60%로서",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C8",
+        "scene": 4,
+        "text": "530개 기업을 고객사로 확보",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — TSMC",
+        "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "checked_at": "2026-11-22",
+        "quote": "530개의 기업을 고객사로 두고 있으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 261,
+      "est_seconds": 48.3,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 11.4,
+      "max_scene_similarity": 0.11,
+      "visual_mix": {
+        "stat": 2,
+        "photo": 1,
+        "compare": 2
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "TSMC는 처음부터 민간 기업이 아닌 대만 정부의 프로젝트로 시작됨",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "TSMC는 처음부터 민간 기업이 아니었다. 대만 정부의 프로젝트였다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "1986년 리궈딩이 모리스 창을 ITRI 원장으로 초청하며 백지수표 제공",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "1986년 중화민국 행정원을 대표하는 리궈딩은 모리스 창을 산업 기술 연구소(ITRI)의 원장으로 초청하고 그에게 대만의 칩 산업을 건설하기 위한 백지 수표를 제공했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "TI와 인텔은 모리스 창의 제안을 거절함",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "텍사스 인스트루먼트와 인텔은 모리스 창을 거절했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "필립스가 5,800만 달러로 지분 27.5% 인수 및 기술 이전 계약 체결",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "필립스만이 TSMC 지분 27.5%를 대가로 5,800만 달러를 투자하고 생산 기술을 이전하고 지적 재산을 라이선스하는 조건으로 대만과 합작 투자 계약을 체결할 의향이 있었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "대만 정부가 국가개발기금을 통해 창업자본의 48% 제공",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 3,
+      "text": "나머지 자본은 부유한 가문들이 정부 요청으로 조달",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "관대한 세금 혜택과 함께 대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며 나머지 자본은 전문 기업을 소유한 섬의 가장 부유한 여러 가문에서 조달했다.",
+      "verified": true,
+      "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 4,
+      "text": "세계 파운드리 점유율 60% 기록",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "TSMC는 세계 파운드리 점유율 60%로서",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C8",
+      "scene": 4,
+      "text": "530개 기업을 고객사로 확보",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — TSMC",
+      "source_url": "https://ko.wikipedia.org/wiki/TSMC",
+      "published": "2026-11-04",
+      "checked_at": "2026-11-22",
+      "quote": "530개의 기업을 고객사로 두고 있으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-22T16:08:59Z",
+  "pack": {
+    "topic": {
+      "title": "TSMC",
+      "wiki_title": "TSMC",
+      "category": "산업패권",
+      "source": "seed",
+      "angle": "누가 이득을 보고 누가 손해를 봤나",
+      "score": 0.6753,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.488
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7313,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.488
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — TSMC",
+        "url": "https://ko.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-04",
+        "fetched_at": "2026-11-22",
+        "text": "TSMC(영어: Taiwan Semiconductor Manufacturing Company, Limited, 중국어 정체자: 台灣積體電路製造股份有限公司, 병음: Táiwān Jītǐ Diànlù Zhìzào Gǔfèn Yǒuxiàn Gōngsī 타이완 지티 뎬루 즈짜오 구펀 유셴 궁쓰[*], 한자음: 대만적체전로제조주식유한공사)는 파운드리를 주 사업 영역으로 하는 대만의 반도체 제조 기업이다. 대만 증권거래소의 유일한 주가지수인 가권지수에서 40%를 차지하는 대만 제일의 기업이다.\nTSMC는 세계 파운드리 점유율 60%로서 530개의 기업을 고객사로 두고 있으며, 12,000개 이상의 반도체를 제조하고 있다. 한국의 SK하이닉스와는 긴밀한 제휴 관계에 있다. 2022년에는 760억 달러의 매출에 340억 달러의 순이익을 올렸으며 가장 정밀한 반도체 제조 공정을 개발하고 있다. 주요 고객으로는 애플, 퀄컴, 엔비디아, 미디어텍, AMD, 브로드컴, 마벨 테크놀로지 등이 있다.\n\n역사\n1986년 중화민국 행정원을 대표하는 리궈딩은 모리스 창을 산업 기술 연구소(ITRI)의 원장으로 초청하고 그에게 대만의 칩 산업을 건설하기 위한 백지 수표를 제공했다. 당시 대만 정부는 반도체 산업을 발전시키길 원했지만, 투자액이 많고 위험도가 높은 성격으로 인해 투자자를 찾기가 어려웠다. 텍사스 인스트루먼트와 인텔은 모리스 창을 거절했다. 필립스만이 TSMC 지분 27.5%를 대가로 5,800만 달러를 투자하고 생산 기술을 이전하고 지적 재산을 라이선스하는 조건으로 대만과 합작 투자 계약을 체결할 의향이 있었다. 관대한 세금 혜택과 함께 대만 정부는 국가 개발 기금인 행정원을 통해 TSMC에 창업 자본의 48%를 추가로 제공했으며 나머지 자본은 전문 기업을 소유한 섬의 가장 부유한 여러 가문에서 조달했다. 플라스틱, 직물, 화학제품에 사용된다. 이 부유한 대만인들은 정부로부터 투자를 직접 \"요청\"받았다. 모리스 창은 \"일반적으로 정부 장관 중 한 명이 대만의 사업가에게 전화를 걸어 투자를 요청하는 일이 있었습니다\"라고 설명했다. TSMC는 처음부터 민간 기업이 아니었다. 대만 정부의 프로젝트였다. 첫 번째 CEO는 제임스 E. 다이크스였으며 1년 만에 회사를 떠났고 모리스 창이 CEO가 되었다.\n그 이후로 회사는 수요 주기에 따라 계속 성장해 왔다. 2011년에 회사는 점점 커지는 경쟁을 막기 위해 연구 개발 비용을 약 39% 늘려 NT$500억으로 늘릴 계획이었다. 또한 회사는 강력한 시장 수요에 대응하기 위해 2011년에 생산능력을 30% 확장할 계획이었다. 2014년 5월 TSMC 이사회는 회사가 예상보다 높은 수요를 예측한 후 제조 역량을 늘리고 개선하기 위해 5억 6,800만 달러의 자본 배정을 승인했다. 2014년 8월 TSMC 이사회는 30억 5천만 달러의 추가 자본 배정을 승인했다.\n2011년에 TSMC는 애플의 아이패드 및 아이폰 기기용 A5 SoC 및 A6 SoC의 시험 생산을 시작한 것으로 알려졌다. 보고서에 따르면 애플은 2014년 5월 TSMC에서 A8 및 A8X SoC를 공급했다. 그런 다음 애플은 A9 SoC를 TSMC와 삼성(iPhone 6S 출시를 위한 물량 증가)과 함께 공급하고 A9X는 TSMC에서만 공급하여 두 가지 서로 다른 마이크로 아키텍처 크기의 칩을 공급하는 문제를 해결했다. 2014년 현재 애플은 TSMC의 가장 중요한 고객이었다.\n2014년 10월, ARM과 TSMC는 ARM 기반 10nm FinFET 프로세서 개발을 위한 새로운 다년 계약을 발표했다.\n2020년 TSMC는 RE100 이니셔티브에 서명한 세계 최초의 반도체 회사가 되어 2050년까지 100% 재생 가능 에너지를 사용하겠다고 약속했다. TSMC는 대만 에너지 소비의 약 5%를 차지하며 이는 수도인 대만의 에너지 소비량을 초과한다. 타이페이. 따라서 이번 계획은 국내에서 재생에너지로의 전환을 가속화할 것으로 예상됐다.\n2020년 TSMC는 연결 수익 455억 1천만 달러에 순이익 176억 달러를 기록했는데, 이는 2019년 순이익 111억 8천만 달러와 연결 수익 346억 3천만 달러보다 각각 57.5%, 31.4% 증가한 수치이다. 2021년 4월 시가총액은 5,500억 달러가 넘었다. 2020년 1분기 TSMC 매출은 100억 달러에 달했고 시가총액은 2,540억 달러였다. TSMC의 시가총액은 2010년 12월 NT$1조 9천억(미화 634억 달러)에 달했다. FT 글로벌 500 2013에서 세계 최고 가치 기업 목록에서 70위를 차지했으며, 자본금은 미화 867억 달러, 미화 1,100억 달러에 달했다. 2017년 3월, TSMC의 시가총액은 처음으로 반도체 거대 기업 인텔의 시가총액을 넘어 NT$5조 1,400억(US$1,684억)을 기록했으며, 인텔은 US$1,657억을 기록했다. 2020년 6월 27일, TSMC는 시가총액 4,100억 달러로 잠시 세계 10번째로 가치 있는 회사가 되었다.\n대만과 중국 간의 전쟁 위험이 증가함에 따라 TSMC와 투자자들은 그러한 사건의 결과를 완화할 수 있는 옵션을 모색해 왔다. 2020년대 초부터 TSMC는 대만 섬 이외의 지역으로 사업을 확장해 일본과 미국에 새로운 팹을 개설하고 독일로의 추가 확장 계획을 세웠다. 2020년 7월 TSMC는 9월 14일까지 중국 통신 장비 제조업체 화웨이와 그 자회사 하이실리콘에 대한 실리콘 웨이퍼 배송을 중단할 것이라고 확인했다.\n2020년 11월, 미국 애리조나주 피닉스의 관리들은 이 도시에 120억 달러 규모의 칩 공장을 건설하려는 TSMC의 계획을 승인했다. 미국에 공장을 설립하기로 한 결정은 트럼프 행정부가 미국 이외의 지역에서 생산되는 전 세계 전자 제품과 관련된 문제에 대해 경고한 이후에 이루어졌다. 뉴스 보도에 따르면 2021년에 해당 시설은 6개 공장을 통해 약 350억 달러의 투자로 3배로 늘어날 수 있다고 주장했다.\n2021년 6월, 코로나19 백신 부족을 둘러싼 공개 논란이 거의 1년 동안 이어졌고, 인구 2,350만 명 중 약 10%만이 예방 접종을 받았다. 대만은 TSMC와 폭스콘이 대만을 대신해 코로나19 백신 구매를 공동으로 협상하는 것을 허용하기로 합의했다. 2021년 7월 BioNTech의 중국 판매 대리점인 포순제약(Fosun Pharma)은 두 기술 제조업체가 독일에서 1천만 개의 BioNTech 코로나19 백신을 구매하기로 합의했다고 발표했다. TSMC와 폭스콘은 대만의 예방접종 프로그램에 기부하기 위해 각각 최대 1억 7,500만 달러에 500만 회분을 구매하기로 약속했다.\n2020~2023년 글로벌 반도체 부족으로 인해 대만의 경쟁업체인 유나이티드 마이크로일렉트로닉스(United Microelectronics)는 가격을 약 7~9% 인상했으며 TSMC의 보다 성숙한 프로세서의 가격은 약 20% 인상을 예정했다.\n2021년 11월, TSMC와 소니는 TSMC가 Japan Advanced Semiconductor Manufacturing(JASM)이라는 새로운 자회사를 일본 구마모토에 설립할 것이라고 발표했다. 새 자회사는 22나노미터 및 28나노미터 공정을 제조하게 된다. 초기 투자액은 약 70억 달러이며, 소니는 20% 미만의 지분에 약 5억 달러를 투자할 예정이다. 제조 공장 건설은 2022년에 시작될 예정이며, 생산은 2년 후인 2024년에 시작을 예정했다.\n2022년 2월 TSMC, Sony Semiconductor Solutions, 덴소는 자동차용 칩이 부족한 상황에서 덴소가 3억 5천만 달러를 투자하여 JASM의 지분 10% 이상을 확보할 것이라고 발표했다. TSMC는 또한 이전에 발표한 22/28나노미터 공정에 더해 12/16나노미터 FinFET 공정 기술로 JASM의 역량을 강화하고 월간 생산 능력을 12인치 웨이퍼 45,000장에서 55,000장으로 늘릴 예정이다. JASM의 구마모토 팹에 대한 총 자본 지출은 약 86억 달러로 추산된다. 일본 정부는 미국과 중국 간의 무역 마찰로 인해 공급망이 붕괴될 위험이 있으므로 JASM이 일본의 전자 장치 제조업체와 자동차 회사에 필수 칩을 공급하기를 원한다. 이 팹은 약 1,700개의 첨단 기술 전문 일자리를 직접적으로 창출할 것으로 예상된다.\n2022년 7월, TSMC는 회사가 2분기에 기록적인 이익을 기록했으며 순이익이 전년 대비 76.4% 증가했다고 발표했다. 회사는 소비자 시장에서 일부 약세를 보였지만 자동차 및 데이터 센터 부문에서 꾸준한 성장을 보였다. 자본 지출 중 일부는 2023년까지 추진될 것으로 예상된다.\n2022년 3분기에 버크셔 해서웨이는 TSMC의 주식 6천만 주 매입을 공개하여 41억 달러의 지분을 인수하여 기술 회사의 최대 보유 지분 중 하나가 되었다. 그러나 버크셔는 지정학적 긴장을 이유로 다음 분기까지 지분 86.2%를 매각했다.\n2024년 2월 TSMC 주가는 거래일 최고가 NT$709에 도달하고 NT$697(+8%)로 마감하는 등 사상 최고치를 기록했다. 이는 칩 디자이너 Nvidia의 가격 목표 증가에 영향을 받았다. TSMC는 현재 3나노미터 칩을 생산하고 있으며 2025년에는 2나노미터 양산을 시작할 계획이다.\nFTSE4Good 지수에 포함되어 있으며, 상위 10위 안에 드는 유일한 아시아 기업이다.\n2025년 TSMC의 매출액은 3조 8,090억 대만달러(약 177조 5천억원)로 전년 대비 31.6% 증가했으며 순이익은 1조7178억 대만달러(80조원)를 기록했다.\n\n생산설비\n전 공정이 가능한 한 라인의 6인치(150 밀리미터) 웨이퍼 팹 (팹 2)\n전 공정이 가능한 다섯 라인의 8인치(200 밀리미터) 웨이퍼 팹 (팹 3, 5, 6 ,7 8)\n생산중인 두 라인의 12인치(300 밀리미터) 웨이퍼 팹 (팹 12, 14)\nTSMC 차이나(중국 지사)\n미국 워싱턴주 캐머스에 위치한 TSMC이 완전히 소유하고 있는 자회사, 웨이퍼텍의 8인치(200 밀리미터) 팹\n2002년말부터 생산성 증대를 가져다줄 NXP 세미컨덕터와 공동으로 투자한 라인(SSMC)\n타이페이타임즈에 의하면 TSMC는 다른팹을 추가로 추건설할 계획이다.\n\n연간 소득\n\n같이 보기\n대만의 기업 목록\n무어의 법칙\n터널 효과\n반도체 제조\n초고밀도 집적 회로\n대만의 반도체 산업\n초고밀도 집적 회로(VLSI)\n\n각주\n\n참고 문헌\n5단계의 마이크로칩 더콜롬비안, 2007년 2월 12일.\n알테라는 추가로 3.75 억 달러를 웨이퍼텍에 투자함 보관됨 2007-11-30 - 웨이백 머신 일렉트로닉뉴스, 1998년 12월 7일.\n맥그래스, 딜런. 웨이퍼텍의 예상보다 빠른 발전 보관됨 2007-11-30 - 웨이백 머신 일렉트로닉뉴스 1998년 7월 13일.\n웨이퍼텍의 전력낭비에 대한 비판\n휘, 물과 에너지 교육의 기초 - 위치에너지 더콜롬비안, 2006년 11월 5일. 웨이퍼텍의 업무에 대한 논의.\n\n외부 링크\n 위키미디어 공용에 TSMC 관련 미디어 분류가 있습니다.\n(영어/중국어/일본어) TSMC  - 공식 웹사이트\n(영어) 웨이퍼텍\n(영어) TSMC 주식 차트",
+        "lang": "ko",
+        "wiki_title": "TSMC",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — TSMC",
+        "url": "https://en.wikipedia.org/wiki/TSMC",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-22",
+        "text": "Taiwan Semiconductor Manufacturing Company Limited (Chinese: 台灣積體電路製造股份有限公司; Taiwan Semiconductor or TSMC, stylised in all lowercase) is a Taiwanese multinational semiconductor contract manufacturing and design company. Headquartered in Hsinchu Science Park, it was the world's largest non-US company by market capitalisation as of June 30, 2026. It holds a commanding majority in the semiconductor foundry market, accounting for approximately 70% of the global market share. As the leading dedicated contract chipmaker, it serves as the main supplier for Nvidia, Apple, Broadcom, and Qualcomm. The company has grown rapidly due to the artificial intelligence (AI) boom and its importance in the creation of advanced chips needed for AI. Its role as a supply chain bottleneck raises concerns that a disruption could cause another worldwide chip shortage.\nAlthough the government of Taiwan is the largest individual shareholder, the majority of TSMC is owned by foreign investors. In 2026, the company was ranked 31st in the Forbes Global 2000. Taiwan's exports of integrated circuits amounted to $184 billion in 2022, nearly 25 percent of Taiwan's GDP. TSMC constitutes about 30 percent of the Taiwan Stock Exchange's main index.\nTSMC was established in 1987 as a joint venture between Taiwan’s government, the Industrial Technology Research Institute (ITRI), and private investors. Morris Chang founded the company to commercialise semiconductor research originally developed at ITRI, becoming the world’s first dedicated semiconductor foundry. When Chang retired in 2018, after 31 years of TSMC leadership, Mark Liu became chairman and C. C. Wei became Chief Executive. It has been listed on the Taiwan Stock Exchange since 1993; in 1997 it became the first Taiwanese company to be listed on the New York Stock Exchange. Since 1994, TSMC has had a compound annual growth rate (CAGR) of 17.4 percent in revenue and a CAGR of 16.1 percent in earnings.\nMost fabless semiconductor companies such as AMD, Apple, ARM, Broadcom, Marvell, MediaTek, Qualcomm, and Nvidia are customers of TSMC, as are emerging companies such as Allwinner Technology, HiSilicon, Spectra7, and UNISOC. Programmable logic device companies Xilinx and previously Altera also make or made use of TSMC's foundry services. Some integrated device manufacturers that have their own fabrication facilities, such as Intel, NXP, STMicroelectronics, and Texas Instruments, outsource some of their production to TSMC.\nTSMC has a global capacity of about thirteen million 300 mm-equivalent wafers per year as of 2020 and produces chips for customers with process nodes from 2 microns to 3 nanometres. TSMC was the first foundry to market 7-nanometre and 5-nanometre (used by the 2020 Apple A14 and M1 SoCs, the MediaTek Dimensity 8100, and AMD Ryzen 7000 series processors) production capabilities, and the first to commercialise ASML's extreme ultraviolet (EUV) lithography technology in high volume.\n\nHistory\nIn 1986, Li Kwoh-ting, representing the Executive Yuan, invited Morris Chang to serve as the president of the Industrial Technology Research Institute (ITRI) and offered him a blank cheque to build Taiwan's chip industry. At that time, the Taiwanese government wanted to develop its semiconductor industry, but its high investment and high risk nature made it difficult to find investors. Texas Instruments and Intel turned down Chang. Only Philips was willing to sign a joint venture contract with Taiwan to put up $58 million, transfer its production technology, and license intellectual property in exchange for a 27.6 percent stake in TSMC. Alongside generous tax benefits, the Taiwanese government, through the National Development Fund, Executive Yuan, provided another 48.3 percent of the startup capital for TSMC. 20% of the capital was raised from eight private companies (ranging from Formosa Plastics Group’s 5%, CAPCO’s 5% to Taiyuan Textile’s 1%) which were owned by some of the island's wealthiest families, who owned firms that specialised in plastics, textiles, and chemicals. These wealthy Taiwanese were directly \"asked\" by the government to invest. The rest of the 4.1% capital came from Taiwan's then ruling party’s investment arm: Kuomintang Central Investment Co.\nFrom the company's onset, TSMC operated primarily as a project of the Taiwanese state, as opposed to a completely private company. Its first CEO was James E. Dykes, who left after a year and Morris Chang became the CEO. Although Philips initially held a 27.5% stake in TSMC, its influence extended beyond financial investment. In addition to capital, Philips played a crucial role by transferring semiconductor manufacturing technology, intellectual property, and patents to TSMC, enabling the company to scale more rapidly. Philips also provided TSMC's first CEO, James E. Dykes, who had previously worked at Philips North America. This partnership represented an early example of the \"fab-light\" strategy, as Philips gradually reduced its in-house semiconductor manufacturing and relied more on external foundries like TSMC. Over the following decades, Philips steadily divested its stake in TSMC and shifted its primary focus to healthcare technology.\nSince then, the company has continued to grow, albeit subject to the cycles of demand. In 2011, the company planned to increase research and development expenditures by almost 39 percent to NT$50 billion to fend off growing competition. The company also planned to expand capacity by 30 percent in 2011 to meet strong market demand. In May 2014, TSMC's board of directors approved capital appropriations of US$568 million to increase and improve manufacturing capabilities after the company forecast higher than expected demand. In August 2014, TSMC's board of directors approved additional capital appropriations of US$3.05 billion.\nIn 2011, it was reported that TSMC had begun trial production of the A5 SoC and A6 SoCs for Apple's iPad and iPhone devices. According to reports in May 2014, Apple sourced its A8 and A8X SoCs from TSMC. Apple then sourced the A9 SoC with both TSMC and Samsung (to increase volume for iPhone 6S launch) and the A9X exclusively with TSMC, thus resolving the issue of sourcing a chip in two different microarchitecture sizes. As of 2014, Apple was TSMC's most important customer. In October 2014, ARM and TSMC announced a new multi-year agreement for the development of ARM-based 10 nm FinFET processors.\n",
+        "lang": "en",
+        "wiki_title": "TSMC",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:NVIDIA-GTX-1070-FoundersEdition-FL.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/NVIDIA-GTX-1070-FoundersEdition-FL.jpg/1920px-NVIDIA-GTX-1070-FoundersEdition-FL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/NVIDIA-GTX-1070-FoundersEdition-FL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:NVIDIA-GTX-1070-FoundersEdition-FL.jpg",
+        "width": 4700,
+        "height": 3500,
+        "license": "Public domain",
+        "artist": "Evan-Amos",
+        "caption": "The NVIDIA GTX 1070 video card for desktop computers. This is the NVIDIA-designed reference card for the 1070 series, known as the Founders Edition, that retail",
+        "id": "P1"
+      },
+      {
+        "file": "File:104年11月25日 「節能減碳之旅」－馬英九總統訪視「台積公司中科15廠」 (22685573224).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/104%E5%B9%B411%E6%9C%8825%E6%97%A5_%E3%80%8C%E7%AF%80%E8%83%BD%E6%B8%9B%E7%A2%B3%E4%B9%8B%E6%97%85%E3%80%8D%EF%BC%8D%E9%A6%AC%E8%8B%B1%E4%B9%9D%E7%B8%BD%E7%B5%B1%E8%A8%AA%E8%A6%96%E3%80%8C%E5%8F%B0%E7%A9%8D%E5%85%AC%E5%8F%B8%E4%B8%AD%E7%A7%9115%E5%BB%A0%E3%80%8D_%2822685573224%29.jpg/1920px-104%E5%B9%B411%E6%9C%8825%E6%97%A5_%E3%80%8C%E7%AF%80%E8%83%BD%E6%B8%9B%E7%A2%B3%E4%B9%8B%E6%97%85%E3%80%8D%EF%BC%8D%E9%A6%AC%E8%8B%B1%E4%B9%9D%E7%B8%BD%E7%B5%B1%E8%A8%AA%E8%A6%96%E3%80%8C%E5%8F%B0%E7%A9%8D%E5%85%AC%E5%8F%B8%E4%B8%AD%E7%A7%9115%E5%BB%A0%E3%80%8D_%2822685573224%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/104%E5%B9%B411%E6%9C%8825%E6%97%A5_%E3%80%8C%E7%AF%80%E8%83%BD%E6%B8%9B%E7%A2%B3%E4%B9%8B%E6%97%85%E3%80%8D%EF%BC%8D%E9%A6%AC%E8%8B%B1%E4%B9%9D%E7%B8%BD%E7%B5%B1%E8%A8%AA%E8%A6%96%E3%80%8C%E5%8F%B0%E7%A9%8D%E5%85%AC%E5%8F%B8%E4%B8%AD%E7%A7%9115%E5%BB%A0%E3%80%8D_%2822685573224%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:104%E5%B9%B411%E6%9C%8825%E6%97%A5_%E3%80%8C%E7%AF%80%E8%83%BD%E6%B8%9B%E7%A2%B3%E4%B9%8B%E6%97%85%E3%80%8D%EF%BC%8D%E9%A6%AC%E8%8B%B1%E4%B9%9D%E7%B8%BD%E7%B5%B1%E8%A8%AA%E8%A6%96%E3%80%8C%E5%8F%B0%E7%A9%8D%E5%85%AC%E5%8F%B8%E4%B8%AD%E7%A7%9115%E5%BB%A0%E3%80%8D_(22685573224).jpg",
+        "width": 3150,
+        "height": 2250,
+        "license": "CC BY 2.0",
+        "artist": "總統府",
+        "caption": "President Ma visits TSMC’s Taichung plant, code-named Fab 15, at Central Taiwan Science Park, Taichung City. (2015/11/25)",
+        "id": "P2"
+      },
+      {
+        "file": "File:TSMC Global R＆D Center at night.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/TSMC_Global_R%EF%BC%86D_Center_at_night.jpg/1920px-TSMC_Global_R%EF%BC%86D_Center_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/TSMC_Global_R%EF%BC%86D_Center_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:TSMC_Global_R%EF%BC%86D_Center_at_night.jpg",
+        "width": 7360,
+        "height": 4912,
+        "license": "CC BY 2.0",
+        "artist": "曾 成訓",
+        "caption": "​夜間的台積電全球研發中心",
+        "id": "P3"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-22T16:07:53Z"
+  }
+}

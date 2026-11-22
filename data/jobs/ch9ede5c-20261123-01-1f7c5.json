@@ -1,0 +1,426 @@
+{
+  "id": "ch9ede5c-20261123-01-1f7c5",
+  "channel": "웃짬",
+  "status": "NEEDS_REVIEW",
+  "created_at": "2026-11-22T16:04:07Z",
+  "topic": {
+    "title": "에버 기븐호의 수에즈 운하 좌초 사건",
+    "wiki_title": "에버 기븐호의 수에즈 운하 좌초 사건",
+    "category": "공급망",
+    "source": "seed",
+    "angle": "공식 설명이 말하지 않는 것",
+    "score": 0.7113,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.65,
+      "explore": 0.488
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.65",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7673,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.488
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.65"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-22T16:04:07Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-22T16:04:07Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-22T16:04:27Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-22T16:05:55Z",
+      "note": "script: LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 3 화면 문구(title)에 한자/알파벳이 있음 — 한글로 써라: 수로 폭 vs 선박 길이"
+    }
+  ],
+  "attempts": {
+    "script": 1
+  },
+  "error": {
+    "stage": "script",
+    "class": "content_quality",
+    "message": "LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 3 화면 문구(title)에 한자/알파벳이 있음 — 한글로 써라: 수로 폭 vs 선박 길이",
+    "at": "2026-11-22T16:05:55Z"
+  },
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "result_first",
+      "first_line": "배를 띄운 건 기술력이 아니라 '슈퍼문'이었습니다.",
+      "screen_text": "슈퍼문 만조의 힘",
+      "title": "14척 예인선도 못 움직인 배, 달이 띄웠다",
+      "promise": "최신 장비와 인력이 실패한 자리에 천문학적 조수 간만 차가 결정적 역할을 한 구조 과정을 확인합니다.",
+      "evidence_quote": "마침내 3월 29일 15시 5분, 슈퍼문에 맞춘 만조의 도움을 받아 배를 완전히 구조하는데 성공했다.",
+      "eval": {
+        "score": 0.9914,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.91,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "result_first",
+        "first_line": "배를 띄운 건 기술력이 아니라 '슈퍼문'이었습니다.",
+        "screen_text": "슈퍼문 만조의 힘",
+        "title": "14척 예인선도 못 움직인 배, 달이 띄웠다",
+        "promise": "최신 장비와 인력이 실패한 자리에 천문학적 조수 간만 차가 결정적 역할을 한 구조 과정을 확인합니다.",
+        "evidence_quote": "마침내 3월 29일 15시 5분, 슈퍼문에 맞춘 만조의 도움을 받아 배를 완전히 구조하는데 성공했다.",
+        "eval": {
+          "score": 0.9914,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "하루 13조 원어치 화물이 6일간 발이 묶였습니다.",
+        "screen_text": "하루 $96억 손실",
+        "title": "수에즈 마비 6일, 날아간 돈 9.6조 원?",
+        "promise": "단 6일간 세계 무역의 12%가 멈췄을 때 발생한 구체적 금액과 업종별 파급 효과를 정리해 드립니다.",
+        "evidence_quote": "slowing trade between Europe, Asia, and the Middle East, tying up goods worth an estimated US$9.6 billion per day.",
+        "eval": {
+          "score": 0.9372,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "이집트 도선사가 배를 몰고 있었는데 사고가 났습니다.",
+        "screen_text": "이집트 도선사 2명 탑승",
+        "title": "선장 대신 이집트 도선사가 키를 잡는 이유",
+        "promise": "수에즈 운하 통항의 강제 규정인 '이집트 도선사 승선' 제도가 사고 책임 소재를 어떻게 바꾸는지 설명합니다.",
+        "evidence_quote": "The government of Egypt requires ships traversing the canal to be boarded by an Egyptian \"Suez crew\"... There were two Egyptian SCA pilots on board at the time of the accident.",
+        "eval": {
+          "score": 0.9093,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "이집트가 10억 달러를 불렀지만 실제 받은 건 절반입니다.",
+        "screen_text": "배상금 5.4억불",
+        "title": "수에즈 운하 마비, 이집트의 청구서와 현실",
+        "promise": "사고 수습 비용과 배상 협상 과정에서 이집트가 감수한 손실과 타협의 내막을 확인합니다.",
+        "evidence_quote": "In July, a formal settlement of $540 million was reached between the ship owner, the insurers, and the Canal Authority.",
+        "eval": {
+          "score": 0.8813,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "운하가 막히니 조선소 주가가 올랐습니다.",
+        "screen_text": "해운비 폭등, 조선 호황",
+        "title": "수에즈 사고의 역설: 해운사는 울고 조선소는 웃었다",
+        "promise": "희망봉 우회로 인한 운임 폭등과 선박 수요 증가로 누가 이익을 보고 누가 손해를 봤는지 손익 지도를 보여드립니다.",
+        "evidence_quote": "해운 운임이 크게 증가할 수 밖에 없고 화물선 역시 추가로 필요할 수 밖에 없기 때문에 조선업은 오히려 주가가 상승하기도 하였다.",
+        "eval": {
+          "score": 0.8514,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "수에즈 운하를 막은 건 바람만이 아니었습니다.",
+        "screen_text": "은행 효과?",
+        "title": "에버기븐호, 바람 탓만 아니었던 이유",
+        "promise": "초대형 선박이 좁은 운하에서 왜 통제 불능이 되는지 물리적 원리를 알 수 있습니다.",
+        "evidence_quote": "the bank effect – which may cause the stern of a ship to swing toward the near bank when operating in constricted waterway – may have contributed to the grounding",
+        "eval": {
+          "score": 0.8506,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": null,
+  "claims": [],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-22T16:05:55Z",
+  "pack": {
+    "topic": {
+      "title": "에버 기븐호의 수에즈 운하 좌초 사건",
+      "wiki_title": "에버 기븐호의 수에즈 운하 좌초 사건",
+      "category": "공급망",
+      "source": "seed",
+      "angle": "공식 설명이 말하지 않는 것",
+      "score": 0.7113,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.488
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.65",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7673,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.65,
+          "explore": 0.488
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.49 · 자극 0.65"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 2021년 수에즈 운하 마비 사고",
+        "url": "https://ko.wikipedia.org/wiki/2021%EB%85%84_%EC%88%98%EC%97%90%EC%A6%88_%EC%9A%B4%ED%95%98_%EB%A7%88%EB%B9%84_%EC%82%AC%EA%B3%A0",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-22",
+        "text": "2021년 수에즈 운하 마비 사고는 이집트 시간(UTC+2)으로 2021년 3월 23일에 컨테이너선 에버 기븐(Ever Given)이 수에즈 운하에서 좌초되어 6일간 통행이 마비된 사건이다. 400 m 길이의 배가 시속 74 km의 모래폭풍을 맞고 넘어진 것이 좌초의 원인 중 하나로 지목되었다. 그러나 당국은 이것이 주된 원인이 아니며, 기술적인 문제나 사람의 실수가 가장 큰 원인일 수 있다고 밝혔다.\n좌초가 이 운하의 남단에서 발생한 까닭에 우회할 방법이 존재하지 않아, 최소 369척의 선박의 통행이 지연되었다. 3월 29일에는 배를 우측으로 80%정도 회전시키는데 성공한데 이어, 현지 시각으로 오후 3시 5분에는 완전히 배를 구조하는데 성공했다. 배는 예인선의 인도를 따라 조사를 위해 그레이트비터호로 이송되었다. 운하 당국은 손실 정도를 조사한 후 통행을 재개할 것이라고 밝혔으며, 현지 시각으로 오후 7시에 통행이 재개되었다. 에버 그린호가 부양한 뒤로도 운하 남북에 대기하고 있는 선박이 많아 정상화에는 상당한 시일이 걸렸다. 2021년 4월 4일 수에즈 운하 관리 당국은 사건 발생 11일 만에 운하 정상화를 선언하였다.\n\n배경\n\n에버 기븐은 이마바리 조선주식회사(일본어: 今治造船株式会社)에서 건조한 골든 급 화물선이다. 2018년 건조되었고 선주는 이마바리 조선주식회사의 자회사인 쇼에이 기선(일본어: 正栄汽船), 선적은 파나마에 두고 있다. 운영사는 타이완의 에버그린 마린(영어: Evergreen Marine, 중국어: 長榮海運 장롱 해운[*])이다. 세계에서 가장 큰 화물선 가운데 하나로 총 톤수 22만 4천 톤이다.\n1869년 개통된 수에즈 운하는 세계에서 가장 중요한 교통로 가운데 하나로 아프리카 대륙을 우회하지 않고 아시아와 유럽을 직접 연결하는 역할을 하고 있으며 세계 물동량의 12%를 담당하고 있다.  북쪽의 포트사이드에서 남쪽 수에즈의 수에즈항까지 193.30 km로 2020년 기준 통행 선박은 18,500 척 이상으로 하루 평균 51.5 척이다.\n수에즈 운하는 평균 수심 22 m 정도이고 폭은 200 미터 정도여서 대형 화물선이 지나기엔 위험 요소가 늘 있었다. 2016년 2월에도 산적화물선인 뉴카테리나호가 좌초하여 12일 동안 운항이 중단된 적이 있고 2017년에는 OOCL 저팬의 컨테이너선이 몇 시간 동안 수로를 막았으며 2004년에는 유조선 트로픽 브릴리언스 호가 좌초해 사흘간 운하 통행을 마비시켰다.\n\n사건\n\n사건 당시 에버기븐호는 말레이시아의 탄중 펠레파스에서 출발하여 네덜란드의 로테르담을 향하던 중이었다. 북쪽으로 향하는 배들 중 5번째로 운하를 통과하던 중이었고, 좌초 당시 15척의 선박이 뒤를 따르던 중이었다.\n이집트 시간(UTC+2)으로 2021년 3월 23일 오전 7시 40분에 에버기븐호는 모래 폭풍을 맞닥뜨리게 되었다. 시속 74 km의 강한 바람으로 인해 배는 키를 잡을 수 없게 되었고, 결국 선체가 항로를 이탈하게 되었다. 에버기븐호는 지중해 방향의 포트사이드에서 151 km 떨어진 지점에서, 그리고 수에즈만 방향의 수에즈항에서 10 km 떨어진 지점에서 시계방향으로 회전해 운하의 양측을 가로막게 된 것이다. 전원 인도인으로 구성된 선원중에는 부상자가 단 한명도 발생하지 않았다.\n이 사건으로 인해 200척이 넘는 선박이 길을 잃게 되었는데, 이중에는 5척의 컨테이너선, 41척의 산적화물선, 24척의 유조선이 포함되어 있다. 이로 인해 1690만 톤의 화물이 운송에 직접적인 지장을 받았다. 몇몇 선박은 근처의 묘박지나 다른 항구에 정박했지만 대부분은 그 장소에 남아있다.\n\n대응\n정부는 배 두 척을 보내 에버기븐호를 구조할 계획을 수립했다. 보스칼리스사와 협력하여 선박 구조를 시도하였는데, 배를 쉽게 움직이게 하기 위해 연료와 선박평형수, 그리고 컨테이너 몇 대가 제거되었고, 굴착기가 동원되어 배가 움직일 수 있는 공간을 확보하였다. 8대의 예인선도 문제를 해결하기 위해 분투중이다. 문제의 해결까지 며칠에서 몇주의 기간이 필요할 것이라는 전망도 나왔다.\n3월 25일에는 수에즈 운하 관리국(Suez Canal Authority, SCA)이 에버그린호가 구조될 때까지 수에즈 운하를 통한 이동을 금지했다. 이집트의 대통령 압둘팟타흐 시시의 항만 고문은 문제의 해결까지 2~3일 정도의 시간이 소요될 것이라는 전망을 내놓았다.\n3월 26일에는 준설이 87%정도 완료되었다고 밝혔다. 또한 당국은 문제를 해결하기 위해 미국 해군의 조력을 받아들이기로 결정했다.\n3월 27일에는 밀물이 들어올 때를 이용하여 14척의 예인선으로 배를 끌어내려는 계획을 세웠다. 에버그린의 선주인 쇼에이 기선은 배가 특별한 상해는 입지 않았다고 밝혔으며, 한 번 띄우면 정상적으로 다시 운용할 수 있을 것이라고 밝혔다. 아직 운하가 언제 다시 열릴지 기약은 없지만, 이집트 시각으로 저녁 7시에 배가 북쪽으로 30 미터정도 움직이는 등 약간의 진전이 이루어졌다. 그러나 에버 기븐호가 구조된다 하더라도 현재 지연된 선박들의 수가 많기 때문에 당분간 이전과 같은 정도의 통행은 어려울 것으로 예측된다. 이미 많은 배가 우회를 결정했지만, 27일을 기준으로 운하 양단과 운하 중간의 호수에 300대 이상의 배가 여전히 대기하고 있는 상황이다.\n3월 28일에는 밀물 때를 노려 배를 어느 정도 움직이는데 성공했다.\n마침내 3월 29일 15시 5분, 슈퍼문에 맞춘 만조의 도움을 받아 배를 완전히 구조하는데 성공했다. 22만 4천 톤의 에버 그린 호를 띄우기 위해 총 14척의 예인선이 동원되었다. 배는 조사를 위해 그레이트비터호로 예인되었다. SCA는 운하에 가해진 손상을 조사하는데 시간이 걸리기 때문에 운행 재개시각을 19시 정각으로 설정했는데, 조사 결과 별다른 이상이 발견되지 않아 예정대로 정상적인 통행을 시작하였다. 이로 인해 홍해에 약 200척, 지중해에 약 200척, 그레이트비터호에 대기중이던 배 약 50척이 순차적으로 운하를 통과한다. 통행을 기다리고 있는 배가 너무 많아 정상화 되기까지는 시간이 더 소요될 예정이다.\n2021년 4월 5일 수에즈 운하 관리 당국은 사건 발생 11일 만에 운하의 완전 정상화를 선언하였다. 한편 사건의 원인에 대한 조사와 그에 따른 배상 문제는 여전히 진행 중이다. 예상되는 배상금 규모는 10억 달러(약 11조 원) 규모이지만 선주와 운용사 가운데 어느 곳에 배상을 청구할 지는 정해지지 않았다.\n\n영향\n\n전 세계 물류의 약 10%가 수에즈 운하를 통과하는 까닭에, 전문가들은 이 사건으로 인해 유류, 일용품 등의 운송에 심각한 차질이 생길 것으로 내다보았다. 매 시간 4억 달러의 손해가 발생하고 있으며, 문제를 해결하기까지 추가로 매일 90억 달러 상당의 상품 운송이 지연될 것이라는 전망도 나왔다. 수에즈 운하를 주요 통로로 이용하고 있던 석유 운송이 차질을 빚자 국제 유가는 6 % 이상 상승하였다. 이 사건은 커피의 물류에도 큰 영향을 주었는데, 세계 최대의 커피 생산국인 베트남에서 유럽과 미국 동부로 보내는 커피의 대부분이 수에즈 운하를 통과하기 때문이다.\n유가 하락으로 주식을 매수하던 사람들이 매수를 그칠 것이라는 전망도 나온 한편, 며칠의 운송 지장은 시장에 그렇게 큰 영향은 주지 못할 것이라는 예측도 나왔다. 반면 반도체 산업은 물자 부족의 영향을 어느 정도 받을 것이며, 이런 물자 부족을 해소하기 위해 사건 해소 이후 필요한 운송을 미리 선주문할 것이라는 예측도 나왔다. 그러나 이 사건으로 발생한 며칠의 물류 지연이 도미노 효과를 일으켜 향후 몇 달간의 물류에도 영향을 줄 것이라는 전망이 나왔다.\n루마니아에서 선박을 통해 사우디아라비아로 수송하던 13만마리의 양들도 사료가 부족해 위기에 처했다. 이에 더해 유럽 집행위원회의 우려가 겹쳐져 루마니아 당국은 살아있는 생명체의 수송을 금지하기도 하였다.\n사태의 장기화가 예상되면서 해운사들은 희망봉을 거치는 우회 경로인 희망봉 항로가 차선책으로 선택되었다. 이에 따라 해운 운임이 크게 증가할 수 밖에 없고 화물선 역시 추가로 필요할 수 밖에 없기 때문에 조선업은 오히려 주가가 상승하기도 하였다. 수에즈 운하 사고 이후 세계적인 해운 운임이 하락하는 가운데 유럽 항로 운임만 급등하고 있다. 상하이 컨테이너 운임지수의 유럽 항로 운임은 3월 25일 20피트 길이 컨테이너 1개당 3천742달러로 전 주보다 77달러 올랐다. 해운이 감당하던 일부 물동량은 항공 운송으로 대체할 수 밖에 없는 상황이어서 항공 운임 역시 오를 것으로 예상되었다. 러시아는 이 사태를 이용해 아프리카를 돌아가는 대체 항로보다 짧은 북극 항해로를 홍보하였다.\n한편 이 사고 발생 이후 버거킹은 자사의 와퍼 햄버거 광고에 이 사건을 연상시키는 이미지를 사용했다가 논란을 일으켰고, 이집트에서는 불매운동까지 일어났다.\n\n같이 보기\n프랜시스 스콧 키 브리지 붕괴 사고\n\n각주",
+        "lang": "ko",
+        "wiki_title": "2021년 수에즈 운하 마비 사고",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — 2021 Suez Canal obstruction",
+        "url": "https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-22",
+        "text": "The Suez Canal was blocked for six days from 23 to 29 March 2021 by the Ever Given, a container ship that had run aground in the canal. The 400-metre-long (1,300 ft), 224,000-ton, 20,000 TEU vessel was buffeted by strong winds on the morning of 23 March, and ended up wedged across the waterway with its bow and stern stuck on opposite canal banks, blocking all traffic until it could be freed. Egyptian authorities said that \"technical or human errors\" may have also been involved. The obstruction occurred south of the two-channel section of the canal, so other ships could not pass. The Suez Canal Authority (SCA) hired Royal Boskalis through its subsidiary Smit International to manage marine salvage operations. The blockage of one of the world's busiest trade routes slowed trade between Europe, Asia, and the Middle East, tying up goods worth an estimated US$9.6 billion per day. By 28 March, at least 369 ships were queuing to pass through the canal.\nOn 29 March, Ever Given was partially re-floated and moved by about 80 percent in the correct direction, although the bow remained stuck until the ship was finally freed by fourteen Egyptian, Dutch, and Italian tugs at 15:05 EGY (13:05 UTC). As the ship was towed towards the Great Bitter Lake for technical inspection, the canal was checked for damage and found to be sound. The SCA allowed shipping to resume at 19:00 EGY (17:00 UTC). No injuries were reported during the incident.\nThe vessel was impounded by the Egyptian government on 13 April when its owner and insurers refused to pay the demanded billion-dollar compensation. In July, a formal settlement of $540 million was reached between the ship owner, the insurers, and the Canal Authority. The ship set sail again on 7 July 2021, stopping for inspections at Port Said before continuing to its original destination, port of Rotterdam. After the incident, the Egyptian government announced that they will widen the narrower parts of the canal.\n\nBackground\nThe Suez Canal, one of the world's most important trading routes, was opened in 1869. By 2021, about fifty ships per day travelled through the canal, representing about 12 percent of total global trade. For much of its length, the canal is not wide enough to allow two ships to pass each other; convoys must take turns transiting these segments of the waterway. An expansion project is underway.\n\nEver Given (IMO 9811000) was laid down on 25 December 2015, launched 9 May 2018, and completed 25 September 2018, replacing an earlier ship of the same name (IMO 8320901). At the time of the incident, she was registered in Panama, owned by the Japanese firm Shoei Kisen Kaisha, leased to the Taiwan-based container shipping company Evergreen Marine for operation, managed by Bernhard Schulte Shipmanagement, and crewed by Indian nationals. The owner Shoei Kisen Kaisha had protection and indemnity (third party) liability coverage for $3.1 billion with mutual UK P&I Club in the Japanese market. In addition, container ships of this size are typically insured for hull and machinery damage of $100 and $140 million.\nPrior to the incident, Ever Given had sailed through the canal 22 times. Bill Kavanagh has described sailing through the Suez Canal as \"a very complex and high risk operation\". Wind gusts will cause the stacked containers to \"act like a sail\" to blow the heavy ship off course, and its enormous momentum makes it difficult to recover.\nThe government of Egypt requires ships traversing the canal to be boarded by an Egyptian \"Suez crew\", including one or more official maritime pilots from Egypt's SCA who command the ship, taking over from the regular crew and the captain. There were two Egyptian SCA pilots on board at the time of the accident.\n\nIncident\n\nOn 23 March 2021, Ever Given was travelling from Tanjung Pelepas, Malaysia, to the Port of Rotterdam, Netherlands. As it traversed the Suez Canal, it was fifth in a northbound convoy through the single-lane stretch, with fifteen vessels behind it. At 07:40 EGY (05:40 UTC), the ship was caught in a sandstorm. Strong winds exceeding 40 kn (74 km/h; 46 mph) resulted in the \"loss of the ability to steer the ship\", causing the hull to deviate. The ship ran aground at the 151-kilometre (82 nmi) mark measured from Port Said on the Mediterranean Sea, 10 km (5.4 nmi) from Suez Port on the Gulf of Suez, near the village of Manshiyet Rugola. The ship turned sideways, unable to free itself, blocking the canal on both sides. The crew, consisting entirely of Indian nationals, was accounted for and no injuries were reported.\nAccording to an analysis of data from ship-tracking websites by Evert Lataire, head of Maritime Technology division at the University of Ghent, the bank effect – which may cause the stern of a ship to swing toward the near bank when operating in constricted waterway – may have contributed to the grounding, along with the lateral forces of west-to-east winds pushing sideways against the northbound ship. Since most of the focus of modern ship design is directed towards efficiency and stability at sea, the effects of hydrodynamics in shallow waters, especially in light of the rapidly growing size of ships in the past decade, remain somewhat obscure and in need of further study.\nOver 300 vessels at both ends of the canal were obstructed by Ever Given, including five other container ships of similar size. These included 41 bulk carriers and 24 crude oil tankers. The affected vessels represented roughly 16.9 million tonnes (37 billion pounds) of deadweight. Some docked at ports and anchorages in the area, while many remained in place. The Ever Given's sister ship, Ever Greet, was affected by the disruption, as were two Russian Navy vessels: Steregushchiy-class corvette Stoikiy and Altay-class oiler Kola. These two vessels, believed to have been the only military vessels affected by the blockage, were conducting naval exercises in the area at the time. Kola had been involved in a minor collision with bulk carrier Ark Royal earlier that day; the two were anchored roughly 11 km (5.9 nmi) away from each other for the duration of the incident.\n\nSalvage and refloating\nOn 25 March, the Suez Canal Authority (SCA) suspended navigation through the canal until Ever Given could be refloated. On the same day, Egyptian President Abdel Fattah el-Sisi's advisor on seaports stated that he expected the canal to be cleared in \"48–72 hours, maximum\".",
+        "lang": "en",
+        "wiki_title": "2021 Suez Canal obstruction",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Container Ship 'Ever Given' stuck in the Suez Canal, Egypt - March 24th, 2021 (51070311183).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal%2C_Egypt_-_March_24th%2C_2021_%2851070311183%29.jpg/1920px-Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal%2C_Egypt_-_March_24th%2C_2021_%2851070311183%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal%2C_Egypt_-_March_24th%2C_2021_%2851070311183%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal,_Egypt_-_March_24th,_2021_(51070311183).jpg",
+        "width": 3660,
+        "height": 1709,
+        "license": "CC BY 2.0",
+        "artist": "Contains modified Copernicus Sentinel data [2021], processed by Pierre Markuse",
+        "caption": "Container Ship 'Ever Given' stuck in the Suez Canal, Egypt - March 24th, 2021. Image is about 2.64 kilometers wide.",
+        "id": "P1"
+      },
+      {
+        "file": "File:Suez Canal traffic jam seen from space.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Suez_Canal_traffic_jam_seen_from_space.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Suez_Canal_traffic_jam_seen_from_space.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Suez_Canal_traffic_jam_seen_from_space.jpg",
+        "width": 1920,
+        "height": 1141,
+        "license": "Attribution",
+        "artist": "European Space Agency",
+        "caption": "The enormous Ever Given container ship, wedged in Egypt’s Suez Canal, is visible in new images captured by the Copernicus Sentinel-1 mission. The giant containe",
+        "id": "P2"
+      },
+      {
+        "file": "File:Container Ship 'Ever Given' stuck in the Suez Canal, Egypt - March 24th, 2021 cropped.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal%2C_Egypt_-_March_24th%2C_2021_cropped.jpg/1920px-Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal%2C_Egypt_-_March_24th%2C_2021_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal%2C_Egypt_-_March_24th%2C_2021_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Container_Ship_%27Ever_Given%27_stuck_in_the_Suez_Canal,_Egypt_-_March_24th,_2021_cropped.jpg",
+        "width": 2661,
+        "height": 1766,
+        "license": "CC BY 2.0",
+        "artist": "Contains modified Copernicus Sentinel data [2021], processed by Pierre Markuse",
+        "caption": "Container Ship 'Ever Given' stuck in the Suez Canal, Egypt - March 24th, 2021. Image is about 2.64 kilometers wide.",
+        "id": "P3"
+      },
+      {
+        "file": "File:Traffic Jam on the Suez Canal as seen by Landsat 8.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Traffic_Jam_on_the_Suez_Canal_as_seen_by_Landsat_8.jpg/1920px-Traffic_Jam_on_the_Suez_Canal_as_seen_by_Landsat_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Traffic_Jam_on_the_Suez_Canal_as_seen_by_Landsat_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Traffic_Jam_on_the_Suez_Canal_as_seen_by_Landsat_8.jpg",
+        "width": 2653,
+        "height": 3316,
+        "license": "Public domain",
+        "artist": "NASA Earth Observatory images by Lauren Dauphin and Joshua Stevens, using Landsat data from the U.S. Geological Survey",
+        "caption": "2021 Suez Canal obstruction as seen by the Landsat 8 satellite.",
+        "id": "P4"
+      },
+      {
+        "file": "File:Ever Given in Suez Canal viewed from ISS.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ever_Given_in_Suez_Canal_viewed_from_ISS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Ever_Given_in_Suez_Canal_viewed_from_ISS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Ever_Given_in_Suez_Canal_viewed_from_ISS.jpg",
+        "width": 1674,
+        "height": 1159,
+        "license": "Public domain",
+        "artist": "NASA JSC ISS image library",
+        "caption": "The container ship Ever Given stuck in the Suez Canal in Egypt, viewed from the International Space Station",
+        "id": "P5"
+      },
+      {
+        "file": "File:Sign about delivery bottlenecks due to March 2021 Suez Canal obstruction at German supermarket.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Sign_about_delivery_bottlenecks_due_to_March_2021_Suez_Canal_obstruction_at_German_supermarket.jpg/1920px-Sign_about_delivery_bottlenecks_due_to_March_2021_Suez_Canal_obstruction_at_German_supermarket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Sign_about_delivery_bottlenecks_due_to_March_2021_Suez_Canal_obstruction_at_German_supermarket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Sign_about_delivery_bottlenecks_due_to_March_2021_Suez_Canal_obstruction_at_German_supermarket.jpg",
+        "width": 3024,
+        "height": 4032,
+        "license": "CC0",
+        "artist": "Marsupium",
+        "caption": "Sign about delivery bottlenecks due to March 2021 Suez Canal obstruction at German supermarket reading: \"Lieber Kunde, leider kommt es aufgrund der Suezkanal Pr",
+        "id": "P6"
+      },
+      {
+        "file": "File:Ever Given in Suez Canal viewed from ISS (cropped) 3 to 2.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ever_Given_in_Suez_Canal_viewed_from_ISS_%28cropped%29_3_to_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ever_Given_in_Suez_Canal_viewed_from_ISS_%28cropped%29_3_to_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Ever_Given_in_Suez_Canal_viewed_from_ISS_(cropped)_3_to_2.jpg",
+        "width": 1674,
+        "height": 1116,
+        "license": "Public domain",
+        "artist": "NASA JSC ISS image library",
+        "caption": "The container ship Ever Given stuck in the Suez Canal in Egypt, viewed from the International Space Station",
+        "id": "P7"
+      },
+      {
+        "file": "File:Ships waiting to transit through the Suez Canal anchored off its southern entrance (new image).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Ships_waiting_to_transit_through_the_Suez_Canal_anchored_off_its_southern_entrance_%28new_image%29.jpg/1920px-Ships_waiting_to_transit_through_the_Suez_Canal_anchored_off_its_southern_entrance_%28new_image%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ships_waiting_to_transit_through_the_Suez_Canal_anchored_off_its_southern_entrance_%28new_image%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Ships_waiting_to_transit_through_the_Suez_Canal_anchored_off_its_southern_entrance_(new_image).jpg",
+        "width": 4000,
+        "height": 2540,
+        "license": "Attribution",
+        "artist": "European Union , Copernicus Sentinel-1 imagery",
+        "caption": "This image, obtained by combining two radar images acquired by the Copernicus Sentinel-1 satellites on 21 and 27 March 2021, shows ships anchored south of the e",
+        "id": "P8"
+      },
+      {
+        "file": "File:Ships waiting to cross the Suez Canal anchored south of Suez (new images), Egypt.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Ships_waiting_to_cross_the_Suez_Canal_anchored_south_of_Suez_%28new_images%29%2C_Egypt.jpg/1920px-Ships_waiting_to_cross_the_Suez_Canal_anchored_south_of_Suez_%28new_images%29%2C_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Ships_waiting_to_cross_the_Suez_Canal_anchored_south_of_Suez_%28new_images%29%2C_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Ships_waiting_to_cross_the_Suez_Canal_anchored_south_of_Suez_(new_images),_Egypt.jpg",
+        "width": 3999,
+        "height": 2540,
+        "license": "Attribution",
+        "artist": "European Union, Copernicus Sentinel-1 imagery",
+        "caption": "These images, acquired by the Copernicus Sentinel-1A and Sentinel-1B radar satellites on 24 and 25 March 2021, show more than 110 ships moored and waiting to tr",
+        "id": "P9"
+      },
+      {
+        "file": "File:Suez Canal Crisis (ASTER).jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Suez_Canal_Crisis_%28ASTER%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Suez_Canal_Crisis_%28ASTER%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Suez_Canal_Crisis_(ASTER).jpg",
+        "width": 1421,
+        "height": 1734,
+        "license": "Public domain",
+        "artist": "NASA/METI/AIST/Japan Space Systems, and U.S./Japan ASTER Science Team",
+        "caption": "Even after the mega-freighter Ever Given was freed from its grounding in the Suez Canal om March 29, 5 days later shipping traffic still had not recovered from ",
+        "id": "P10"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-22T16:04:07Z"
+  }
+}

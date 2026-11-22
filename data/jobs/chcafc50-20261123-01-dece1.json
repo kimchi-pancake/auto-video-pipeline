@@ -1,0 +1,572 @@
+{
+  "id": "chcafc50-20261123-01-dece1",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-22T16:02:50Z",
+  "topic": {
+    "title": "청계천",
+    "wiki_title": "청계천",
+    "category": "생활편의",
+    "source": "seed",
+    "angle": "실패에서 뒤집힌 반전",
+    "score": 0.6726,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.444
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.35",
+    "evidence": 0.8,
+    "rescored": {
+      "score": 0.7006,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.8,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.444
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.80 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-22T16:02:50Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-22T16:02:50Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-22T16:03:12Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-22T16:03:48Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "comparison",
+      "first_line": "하루 12만 톤 한강물 vs 자연 발원지 말라버린 현실",
+      "screen_text": "인공 하천의 역설",
+      "title": "청계천 물은 어디에서 올까?",
+      "promise": "백운동 계곡 물길 끊긴 뒤 잠실 취수장까지 파이프로 잇게 된 과정을 설명합니다",
+      "evidence_quote": "현재는 서울 이곳저곳에서 취수한 물을 중류의 청계광장에서 하루에 40,000 세제곱미터씩 인공적으로 방류하는 형태로 하천을 유지하고 있다.",
+      "eval": {
+        "score": 1.0,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "comparison",
+        "first_line": "하루 12만 톤 한강물 vs 자연 발원지 말라버린 현실",
+        "screen_text": "인공 하천의 역설",
+        "title": "청계천 물은 어디에서 올까?",
+        "promise": "백운동 계곡 물길 끊긴 뒤 잠실 취수장까지 파이프로 잇게 된 과정을 설명합니다",
+        "evidence_quote": "현재는 서울 이곳저곳에서 취수한 물을 중류의 청계광장에서 하루에 40,000 세제곱미터씩 인공적으로 방류하는 형태로 하천을 유지하고 있다.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "복원 후 땅값 30~50% 뛰고 상권 매출도 올랐습니다",
+        "screen_text": "수혜자와 피해자 계산서",
+        "title": "청계천 복원이 바꾼 동네 경제지도",
+        "promise": "부동산 상승률·사업체 수 증가·유동인구 변화 등 실제 수치로 득실을 따져봅니다",
+        "evidence_quote": "Indeed, the price of land within 50 meters of the stream has increased by 30-50%, double the rate of property increases in other areas of Seoul. From 2002 to 2003, Cheonggyecheon area also saw a 3.5% increase in the number of businesses, which was double the rate of business growth in downtown Seoul.",
+        "eval": {
+          "score": 0.9109,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "광통교 돌다리 밑에 전 왕비 묘비석이 깔렸습니다",
+        "screen_text": "정릉 석물로 쌓은 다리",
+        "title": "태종이 밟으라 만든 600년 된 다리",
+        "promise": "복개 공사 때 묻혔다가 복원 때 다시 드러난 광통교의 숨은 역사를 확인하세요",
+        "evidence_quote": "다시 축조했을 때 정릉의 석물로 만들었는데, 이성계가 자신의 왕위를 강씨의 소생인 이방석에게 넘겨 주려 하니 이에 화가 난 태종이 난을 일으켜 방석을 죽여 왕위에 올라 강씨의 묘를 옮기며 일부 돌들을 모두가 밟을 수 있게 옮겨 놓은 것이다.",
+        "eval": {
+          "score": 0.9104,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "이 하천 물 100%가 수돗물이라는 사실",
+        "screen_text": "하루 12만 톤 펌프질",
+        "title": "청계천 유지비 연 8억 원의 정체",
+        "promise": "한강물 퍼올리는 전기요금과 녹조 제거비까지 실제 유지비 내역을 공개합니다",
+        "evidence_quote": "물을 끌어올리는 데 쓰이는 전기요금이 한해 평균 8억 가량으로 상당하며 녹조 또한 지속적으로 발생하고 있어 2007년부터 2009년까지 8,000만원을 녹조제거를 위해 쓰였다.",
+        "eval": {
+          "score": 0.86,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "복원 후 물고기 25종, 새 36종이 돌아왔습니다",
+        "screen_text": "생물종 6.4배 증가",
+        "title": "콘크리트 걷어내니 살아난 도심 생태계",
+        "promise": "복원 전 98종에서 626종으로 늘어난 생물종 변화와 열섬완화 수치를 확인하세요",
+        "evidence_quote": "청계천에 서식하는 생물종이 복원 전(98종)의 6.4배에 이르는 626종(식물 308종, 어류 25종, 조류 36종)으로 증가하였는데, 특산종인 참갈겨니·참종개·얼룩동사리 등과 깝작도요·알락오리·도롱뇽 등의 서식이 확인되었다.",
+        "eval": {
+          "score": 0.8546,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "고가도로를 뺐더니 교통이 더 빨라졌습니다",
+        "screen_text": "브레스의 역설 현실로",
+        "title": "도로 없애니 차가 더 잘 간 이유",
+        "promise": "청계고가 철거 후 서울 도심 교통량이 줄어든 과학적 원리를 확인하세요",
+        "evidence_quote": "The project sped up traffic around the city when the motorway was removed. It has been cited as a real-life example of Braess's paradox.",
+        "eval": {
+          "score": 0.8541,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "하루 12만 톤 한강물, 끊긴 백운동 물길",
+    "target_seconds": 28,
+    "category": "생활편의",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "하루 12만 톤 한강물 대 자연 발원지 말라버린 현실",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "청계천이 하루 12만 톤 한강물로 유지된다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "하루에 40,000 세제곱미터씩 인공적으로 방류하는 형태로 하천을 유지하고 있다"
+          },
+          {
+            "text": "원래 발원지 백운동 계곡 물길이 끊겼다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다"
+          }
+        ]
+      },
+      {
+        "narration": "백운동 계곡 2.5킬로미터 복개로 자연 유입 차단",
+        "visual": {
+          "type": "stat",
+          "big": "2.50킬로미터",
+          "small": "복개로 잃은 상류 구간"
+        },
+        "claims": [
+          {
+            "text": "상류 2.5킬로미터 구간이 복개되어 자연 유입 차단",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다"
+          }
+        ]
+      },
+      {
+        "narration": "잠실 자양취수장서 한강물 끌어와 청계광장 방류",
+        "visual": {
+          "type": "steps",
+          "title": "인공 수로 연결 과정",
+          "items": [
+            "자양취수장 취수",
+            "파이프 이송",
+            "청계광장 방류"
+          ]
+        },
+        "claims": [
+          {
+            "text": "잠실 자양취수장에서 한강물을 취수해 청계광장으로 보낸다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "통수단면 위쪽을 흐르는 물은 잠실대교 부근의 자양취수장에서 취수한 한강물과 도심의 지하철역 부근의 지하수를 정수·소독 처리하여 조달하며"
+          }
+        ]
+      },
+      {
+        "narration": "2050년까지 백운동·삼청동 계곡물 다시 잇는다",
+        "visual": {
+          "type": "text",
+          "headline": "2050년 자연 복원 목표",
+          "sub": "백운동·삼청동 계곡수 유입 계획"
+        },
+        "claims": [
+          {
+            "text": "2050년까지 백운동·삼청동 계곡수를 청계천으로 유입 예정",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "백운동천이나 삼청동천의 계곡수 또한 이때까지 유입시키기로 정하였다. 최종적으로 2050년까지는 옥류동천과 남산동천을 청계천으로 잇기로 했다"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "청계천이 하루 12만 톤 한강물로 유지된다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 청계천",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+        "published": "2026-11-07",
+        "checked_at": "2026-11-22",
+        "quote": "하루에 40,000 세제곱미터씩 인공적으로 방류하는 형태로 하천을 유지하고 있다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 0,
+        "text": "원래 발원지 백운동 계곡 물길이 끊겼다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 청계천",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+        "published": "2026-11-07",
+        "checked_at": "2026-11-22",
+        "quote": "상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 1,
+        "text": "상류 2.5킬로미터 구간이 복개되어 자연 유입 차단",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 청계천",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+        "published": "2026-11-07",
+        "checked_at": "2026-11-22",
+        "quote": "상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "잠실 자양취수장에서 한강물을 취수해 청계광장으로 보낸다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 청계천",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+        "published": "2026-11-07",
+        "checked_at": "2026-11-22",
+        "quote": "통수단면 위쪽을 흐르는 물은 잠실대교 부근의 자양취수장에서 취수한 한강물과 도심의 지하철역 부근의 지하수를 정수·소독 처리하여 조달하며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "2050년까지 백운동·삼청동 계곡수를 청계천으로 유입 예정",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 청계천",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+        "published": "2026-11-07",
+        "checked_at": "2026-11-22",
+        "quote": "백운동천이나 삼청동천의 계곡수 또한 이때까지 유입시키기로 정하였다. 최종적으로 2050년까지는 옥류동천과 남산동천을 청계천으로 잇기로 했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 107,
+      "est_seconds": 19.8,
+      "scenes": 4,
+      "avg_new_tokens_per_scene": 7.2,
+      "max_scene_similarity": 0.11,
+      "visual_mix": {
+        "text": 1,
+        "stat": 1,
+        "photo": 1,
+        "steps": 1
+      },
+      "target_seconds_declared": 28
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "청계천이 하루 12만 톤 한강물로 유지된다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 청계천",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+      "published": "2026-11-07",
+      "checked_at": "2026-11-22",
+      "quote": "하루에 40,000 세제곱미터씩 인공적으로 방류하는 형태로 하천을 유지하고 있다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 0,
+      "text": "원래 발원지 백운동 계곡 물길이 끊겼다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 청계천",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+      "published": "2026-11-07",
+      "checked_at": "2026-11-22",
+      "quote": "상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 1,
+      "text": "상류 2.5킬로미터 구간이 복개되어 자연 유입 차단",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 청계천",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+      "published": "2026-11-07",
+      "checked_at": "2026-11-22",
+      "quote": "상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "잠실 자양취수장에서 한강물을 취수해 청계광장으로 보낸다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 청계천",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+      "published": "2026-11-07",
+      "checked_at": "2026-11-22",
+      "quote": "통수단면 위쪽을 흐르는 물은 잠실대교 부근의 자양취수장에서 취수한 한강물과 도심의 지하철역 부근의 지하수를 정수·소독 처리하여 조달하며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "2050년까지 백운동·삼청동 계곡수를 청계천으로 유입 예정",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 청계천",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+      "published": "2026-11-07",
+      "checked_at": "2026-11-22",
+      "quote": "백운동천이나 삼청동천의 계곡수 또한 이때까지 유입시키기로 정하였다. 최종적으로 2050년까지는 옥류동천과 남산동천을 청계천으로 잇기로 했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-22T16:03:48Z",
+  "pack": {
+    "topic": {
+      "title": "청계천",
+      "wiki_title": "청계천",
+      "category": "생활편의",
+      "source": "seed",
+      "angle": "실패에서 뒤집힌 반전",
+      "score": 0.6726,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.444
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.35",
+      "evidence": 0.8,
+      "rescored": {
+        "score": 0.7006,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.8,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.444
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.80 · 성과prior 0.50(n=0) · 탐색 0.44 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 청계천",
+        "url": "https://ko.wikipedia.org/wiki/%EC%B2%AD%EA%B3%84%EC%B2%9C",
+        "published": "2026-11-07",
+        "fetched_at": "2026-11-22",
+        "text": "청계천(淸溪川)은 대한민국 서울특별시 시내에 있는 지방하천으로, 한강 수계에 속하며 중랑천의 지류이다. 최장 발원지는 종로구 청운동에 위치한 ‘백운동 계곡’이며, 남으로 흐르다가 청계광장 부근의 지하에서 삼청동천을 합치며 몸집을 키운다. 이곳에서 방향을 동쪽으로 틀어 서울의 전통적인 도심지를 가로지르다가, 한양대학교 서울캠퍼스 옆에서 중랑천으로 흘러든다.\n발원지에서부터 잰 본류의 길이는 10.92 km, 유역 면적은 50.96 km2이나, 백운동 계곡 언저리를 제외한 상류 2.50 km 구간은 일제강점기 이래 전면 복개되어 타 용도로 전용되는 등 사실상 하천의 기능을 상실하였다. 현재는 서울 이곳저곳에서 취수한 물을 중류의 청계광장에서 하루에 40,000 세제곱미터씩 인공적으로 방류하는 형태로 하천을 유지하고 있다.\n발원지의 계곡은 서울특별시 기념물로 지정되었으며, 청계광장에서 중랑천 합수머리까지의 중·하류 8.12 km 구간은 서울시설공단의 관리 하에 공원으로 쓰인다.\n\n이름\n상류는 백운동(白雲洞)에서 시작된다. 중·하류에서는 조선조 내내 치수 사업이 전개되었으며 이로 인해 개천(開川)이라는 이름을 얻었다. ‘청계천’의 명칭은 대체로 일제강점기 이후의 기록에서 나타나며, 상류인 청풍계에서 유래하였다고도 한다.\n\n역사\n\n조선 시대\n본래 자연하천이었던 청계천은 조선 태종때부터 한양을 서울로 한 조선시대 내내 개거, 준설 등 치수 사업의 대상이었다. 태종은 1406년부터 자연상태에 있었던 하천의 바닥을 쳐내서 넓히고, 양안에 둑을 쌓았으나 큰비가 올 때마다 피해는 계속되었다. 1411년 12월 하천을 정비하기 위한 임시기구로 '개천도감(開渠都監)'를 설치하고, 이듬해 1월 15일부터 2월 15일까지 큰 공사를 실시하였다. 청계천의 양안을 돌로 쌓고, 광통교, 혜정교 등의 다리를 돌로 만들었다. '개천(開川)'이라는 말은 '내를 파내다'라는 의미로 자연상태의 하천을 정비하는 토목공사의 이름이었는데, 이 때의 개천 공사를 계기로 지금의 청계천을 가리키는 이름이 되었다. 세종은 청계천의 지천의 정비에 많은 노력을 기울여 종로의 시전행랑(市廛行廊) 뒤편에 도랑을 파서 물길을 하천 하류에 바로 연결시켰는데, 지천의 물이 한꺼번에 개천 상류로 몰려들어 넘쳐나는 것을 방지함으로써 도심의 홍수를 예방할 수 있었다. 세종은 1441년에 마전교 서쪽에 수표를 세워 수위를 측정할 수 있도록 하였다.\n세종 이후로 준설이 없어 토사가 지속적으로 쌓여 오간수문이 막힐 지경에 이르자, 영조는 1760년 2월 개천을 준설하면서 하천바닥에서 파낸 흙을 한 곳에 모아 가산을 쌓게 한다. 오간수문 안쪽에 있었던 것으로, 하나는 개천 북쪽에, 하나는 개천 남쪽에 있었다. 일제강점기 때 도시의 근대화에 따라 사라졌고, 현재는 오간수교 위에 표지석이 있다. 이때의 준설 과정을 《준천사실》으로 기록하였다. 개천의 물 흐름에 관심이 있었던 영조는 1773년 백운동천과 삼청동천이 합류하는 지점에서 오간수문 근처까지 석축을 쌓았다. 이를 통해 구불구불한 하천이던 개천을 영조가 호안공사를 통해 직선화시켰음을 알 수 있다.\n\n현대\n1950년대 중반의 청계천은 한국 전쟁 직후의 서울시에서도 가장 대표적인 슬럼지역이었다. 이 문제를 해결하기 위해 추진된 것이 청계천 복개사업이었다.\n청계천 복개사업은 일제강점기나 1955년에도 일부 이루어졌지만, 청계천이 본격적으로 복개된 것은 1958년부터였다. 1958년 5월부터 1961년 12월까지는 광교 ~ 청계6가(동대문 야구장 부근) 구간, 1965년부터 1967년까지는 청계6가 ~ 청계8가(신설동) 구간, 1970년부터 1977년까지는 청계 8가 ~ 신답철교 구간이 복개되었다. 그리고 이 복개된 청계천 위에 청계고가도로가 건설된다.\n\n복원\n\n청계천 복원 사업\n1990년대에 들어 청계천의 복개 구조물과 노후한 청계고가도로의 안전 문제가 지속적으로 대두되었다. 이에 이명박 당시 서울특별시장 후보는 청계천 복원을 공약하였고, 32대 시장으로 당선되었다. 2003년 7월 1일에 청계고가도로의 철거가 시작되었고, 광화문 동아일보사 앞부터 성동구 신답 철교에 이르는 약 5.84km의 구간을 복원하는 공사는 3,867억 3,900만원을 들여 2005년 9월 30일에 완료되었다. 복원된 청계천의 통수단면 위쪽을 흐르는 물은 잠실대교 부근의 자양취수장에서 취수한 한강물과 도심의 지하철역 부근의 지하수를 정수·소독 처리하여 조달하며, 통수단면 아래쪽을 흐르는 물은 도심의 오·폐수이다.\n청계천 장통교 옆 벽면에 1795년 정조가 어머니 혜경궁 홍씨의 회갑을 맞아 화성을 행차하는 것을 그린 반차도(班次圖)를 타일로 옮겨놓은 벽면 예술, 다산교와 영도교 사이에 복원해 놓은 복개 이전에 아낙네들이 빨래를 했던 '청계천 빨래터', 청계천 복원 사업에 맞추어 전 국민을 대상으로 황학교와 비우당교 사이에 만든 타일 벽인 '소망의 벽' 등이 시설물로 설치되었다. 또한 '존치교각'이라는 이름으로 옛 청계천 고가도로의 교각을 3개 남겨 놓았다. 청계천 입구의 청계광장에는 팝아티스트 클래스 올덴버그가 설계하여 KT가 서울시에 기증한 소라 모양의 스프링이라는 작품이 설치되었다.\n\n이후 복원 사업\n서울특별시는 2050년까지 장기 계획을 세워 청계천을 역사와 전통이 있게 복원하기로 결정하였다. 이 계획에 따르면, 2018년까지 청계천의 인공 보(湺)를 철거한다. 2030년까지는 수표교 등의 유적을 제자리에 옮겨놓으며, 중·하류 수질을 개선할 예정이다. 백운동천이나 삼청동천의 계곡수 또한 이때까지 유입시키기로 정하였다. 최종적으로 2050년까지는 옥류동천과 남산동천을 청계천으로 잇기로 했다.\n\n평가\n\n여러 기관에서 청계천 복원에 대해 설문조사를 실시했는데, 서울학연구소가 시민과 전문가들을 대상으로 실시한 설문조사에서는 1995년부터 2010년까지 서울 도심에서 시행된 주요 20개 사업 가운데 '청계천 복원'이 만족도와 기여도 평가에서 5점 만점에 4.02점을 받아 1위에 선정되었다. 서울시정개발연구원에서 시민을 대상으로 실시한 설문조사에서는 청계천 복원의 최대 성과로 생태환경의 회복을 꼽았으며 서울의 랜드마크를 묻는 질문에 청계천은 4위에 올랐다. 또한 서울시와 서울시정개발연구원이 청계천 주변지역 상인을 대상으로 실시한 설문조사에서는 청계천 복원 사업의 진행 상황에 대해 `잘 진행됐다'는 평가가 66.8%인 것으로 나타났으며 복원 사업의 향후 전망에 대해서도 `잘 진행될 것'이라는 전망이 77.6%에 달하는 것으로 조사되었다.\n긍정적 평가로는 청계천과 그 주변 환경의 개선을 든다. 복원된 청계천이 시민들의 도심속 휴식공간이 되었으며 여가공간으로 자리잡았다는 것이다. 우선 대기질 개선과 소음 감소가 확인되었으며, 열섬현상이 약화되었고, 음이온 발생량이 일반 도심지역의 발생량보다 높은 것으로 조사되었다. 또한 청계천에 서식하는 생물종이 복원 전(98종)의 6.4배에 이르는 626종(식물 308종, 어류 25종, 조류 36종)으로 증가하였는데, 특산종인 참갈겨니·참종개·얼룩동사리 등과 깝작도요·알락오리·도롱뇽 등의 서식이 확인되었다. 서울시정개발연구원은 복원의 경제효과가 최대 23조원에 이를 것으로 추정하였고 복원 이후 주변 개발이 이루어질 경우 31만개의 일자리가 창출될 것으로 예상했다. 국외로는 일본 나고야시가 공무원단을 파견하는 등 장기적인 교류를 통해 복원 사업의 노하우를 전수받았다. 미국에서는 하버드대가 청계천 복원사업을 내용으로 한 서적을 출간하고 이를 수업 교재로 채택하였으며 로스앤젤레스(LA)에서는 서울시 옛 청계천복원팀이 환경단체 회원과 LA시의원 등에게 하천 복구 노하우를 전수하였다.\n반면 부정적 평가도 많다. 경제학자 우석훈은 자신의 저서에서 복원된 청계천을 \"인공호수\"라며 호되게 비판하였다. 또한 기존에 흐르는 물의 양이 적어 취수장에서 전기를 이용해 한강물과 지하수를 끌어다 청계광장에서 흘려보내는데, 이때 물을 끌어올리는 데 쓰이는 전기요금이 한해 평균 8억 가량으로 상당하며 녹조 또한 지속적으로 발생하고 있어 2007년부터 2009년까지 8,000만원을 녹조제거를 위해 쓰였다. 이 외에도 인건비, 청소·경비용역비, 토목·조경시설 유지관리비 등에 2011년에만 80억여원이 소모되었다. 이는 2005년 37억에서 2010년 77억원에 이은 것으로 꾸준히 늘어나고 있다. 2011년 6월 조선일보의 설문 조사에서 최악의 건축물 3위에 뽑혔는데, \"청계천은 한국을 상징하는 공공 건축물인데 건축가도 없이 단기간에 불도저로 밀어붙이듯 만들었다\"는 이유에서였다. 또 이명박 전 서울시장이 자신의 임기 안에 청계천 복원 사업을 무리하게 끝마치기 위하여 유적 복원을 날림으로 진행했다는 평가도 있는데, 실제로 석축·효령교·하랑교·오간수문은 복원되지 않고 중랑구 하수종말처리장에 보관되고 있다. 또한 1773년에 쌓은 현 무교동 사거리에서 시작되며 청계천을 따라 17.1m의 폭을 두고 양쪽으로 길게 늘어서 있는 청계천 석축은 발굴 후 복원되지 못했다. 복원 당시 발견된 석축은 동아일보사 앞의 좌안석축이 교차로를 기준으로 서쪽 57m, 동쪽 36m 정도, 반대편 우안석축은 9m 정도로 모두 100여m나 된다. 수표교는 예산상의 문제라는 표면적 이유로 장충단공원에 남아 있고, 광통교는 원래와 다르게 복원되었다. 청계천 입구에 위치하는 소라탑 또한 일각에서 문제가 되고 있다. 이것은 스웨덴 출신의 미국 팝아티스트 클래스 올덴버그가 설계한 작품으로, KT가 34억의 비용을 들여 서울시에 기증한 작품이다. 높이 20m, 폭 6m, 무게 9t이다. 일부에서는 한국적인 미가 결여되어 있고, 주변에 어울리지도 않는다는 비판과 풍수지리학적으로도 좋지 못하다는 주장이 제기되고 있다.\n\n다리\n\n과거의 다리\n조선 시대의 청계천의 다리 목록이다. 백운동천의 신교부터 송기교까지의 다리는 해당 문서에 있다.\n\n태평로1가 64번지 부근 광화문우체국 남쪽에 있었으며, 서울지도에 표시만 되어 있고 이름은 적히지 않았다.\n모전교(毛廛橋): 지금의 모전교 자리에 있었다. 우전다리(隅廛―) 또는 모교(毛橋)라고도 불렸으며, 1412년 태종 12년 석교로 개축한 이후 신화방동구교(神和坊洞口橋), 신화방동입구교(神和坊洞入口橋)라고 하다가 영조 때가 되어서야 모전교라고 불리게 되었다. 모전〔隅廛〕 부근에 있었으므로 모전교라고 하였다. 모전은 각종 과일을 파는 가게를 말하는데, 큰 길 모퉁이에 설치하였기 때문에 붙여진 이름이었다. 현재 중구 서린동 무교동 사거리 지점이다.\n광통교(廣通橋): 지금의 광교 자리에 있었으며, 광통교는 육조거리-운종가-숭례문으로 이어지는 도성 안 중심통로였으며, 주변에 시전이 위치하고 있어 도성에서 가장 많은 사람들이 왕래하던 다리였다. 대광통교(大廣通橋), 북광통교(北廣通橋), 대광교(大廣橋), 광교(廣橋) 등으로도 불렸다. 태조 때에 흙으로 축조되었다가 폭우로 인하여 무너지자 1410년 (태종 10년) 8월에 돌로 다시 축조하였다. 다시 축조했을 때 정릉의 석물로 만들었는데, 이성계가 자신의 왕위를 강씨의 소생인 이방석에게 넘겨 주려 하니 이에 화가 난 태종이 난을 일으켜 방석을 죽여 왕위에 올라 강씨의 묘를 옮기며 일부 돌들을 모두가 밟을 수 있게 옮겨 놓은 것이다. 또한 그 돌들은 모두 거꾸로 놓았고, 석교로 만들어진 이 다리가 가장 역사가 오래된 다리이다. 정월 대보름에 다리밟기 놀이를 하던 곳으로 유명해, 그 때 한양에서는 광통교가 가장 붐비었다고 한다. 1958년 청계천 복개와 함께 도로 밑에 묻혔다. 현재 광교네거리 지하에 남아 있다.\n장통교(長通橋): 한화빌딩 북쪽, 종로12길 남쪽에 있었다. 장통방(長通坊)에 있었으므로 장통교라고 하였으며, 장창교(長倉橋), 장찻골다리, 장교(長橋)라고도 하였다. 이 다리 서쪽에서 창동천이 합류하여 삼각형 모양의 땅을 이뤘다. 청계천 본류와 남산에서 내려오는 물길이 만나는 지점에 있었다.\n광제교(廣濟橋): 장교동 20번지 부근에 있었으며, 동국여지비고에 위치가 기록되어 있다.\n수표교(水標橋): 1420년(세종 2)에 만들어졌다. 수표를 놓기 전에는 이곳에 마전(馬廛)이 있어서 마전교(馬廛橋 ; 지금의 종로5가 부근의 마전교와는 별개)라 불렀으나, 1441년(세종 23)에 다리 옆에 개천의 수위를 측정하기 위하여 수표석(水標石)을 세운 이후 수표교라고 하였다. 1959년 청계천 복개공사 때 장충단공원으로 옮겨 보존하고 있다. 광통교와 함께 가장 유명한 다리로 1420년(세종2)에 만들어졌다. 당시 이곳에 마전(馬廛)이 있어서 마전교라 불렀으나, 1441년(세종 23) 에 다리 옆에 개천의 수위를 측정 하기 위해서 수표석(水標石)을 세운 이후 수표교라고 하였다. 1959년 청계천 복개공사 때 장충단공 원으로 옮겨 보존하고 있다.\n하랑교(河浪橋): 입정동 6번지 북쪽, 장사동 208번지 남쪽에 있었으며, 이 부근에 하랑위(河浪尉)의 집이 있었기 때문에 이런 이름이 붙었다. 하랑위교(河浪尉橋), 하교(河橋), 화류교(樺榴橋), 화교(花橋) 등으로도 불렸다. 일제 강점기 때 다리의 양 끝을 콘크리트로 개축하였으나, 1958년 청계천 복개 때까지 돌다리로 남아 있었다.\n신교(新橋): 입정동 201·211번지 북쪽, 장사동 250번지 남쪽, 창덕궁과 남산의 조선신궁(옛 조선총독부)을 일직선으로 연결하는 길 위에 있었다.",
+        "lang": "ko",
+        "wiki_title": "청계천",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Cheonggyecheon",
+        "url": "https://en.wikipedia.org/wiki/Cheonggyecheon",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-22",
+        "text": "Cheonggyecheon (Korean: 청계천; Korean pronunciation: [t͡ɕʰʌŋ.ɡje.t͡ɕʰʌn]) is a 10.9-kilometre-long (6.8 mi) stream and public space in downtown Seoul, South Korea. A natural stream sourced from the Suseongdong Valley in Inwangsan, it was historically maintained as part of Seoul's early sewerage until the mid-20th century, when post-Korean War rapid economic development and deteriorating conditions prompted the filling of the stream with concrete and the construction of an elevated freeway, the Cheonggye Expressway, in its place. In 2003, the city government began an urban renewal project to remove the expressway and restore the stream, which was completed in 2005 at a cost of over ₩386 billion (approximately US$281 million).\nThe Cheonggyecheon restoration project initially attracted significant public criticism, but since its opening in 2005 it has become popular among residents and tourists.\n\nGeography\nCheonggyecheon is an 10.84 km (6.74 mi) stream flowing west to east through downtown Seoul, and then meeting Jungnangcheon, which connects to the Han River and empties into the Yellow Sea.\n\nHistory\n\nThe stream was named as Gaecheon (\"open stream\") after the first refurbishment project to construct a drainage system during the Joseon period. The work, which included dredging and bolstering the banks of the stream and building bridges, was carried out every 2–3 years during this period from the reign of Taejong, the third king of Joseon. King Yeongjo especially undertook the refurbishment work as a national project.\n\nGaecheon was renamed to Cheonggyecheon, its current name, when Korea was under Japanese rule. During this time, financial difficulties disrupted and prevented Japanese forces from covering up the stream despite several attempts to do so.\nBeginning in 1406, King Taejong expanded the natural stream by dredging its bed and constructing embankments along both sides. However, damage caused by heavy rainfall continued. In December 1411, the Joseon government established a temporary office called Gaecheondogam to oversee maintenance and improvement work on the stream.\nBy the mid-1950s, the Cheonggyecheon area had become one of the most representative slum districts in Seoul after the Korean War. To address this problem, the Cheonggyecheon covering project was promoted.\nAlthough parts of the stream had been covered during the Japanese colonial period and in 1955, large-scale covering of Cheonggyecheon began in 1958.\nAfter the Korean War, more people migrated into Seoul to make their living and settled down along the stream in shabby makeshift houses. The accompanying trash, sand, and waste, and deteriorating conditions resulted in an eyesore for the city. The stream was covered up with concrete over 20 years starting in 1958, and a 5.6 km-long (3.5 mi), 16 m-wide (52 ft) elevated highway was opened in stages between March 1969 and July 1976. The area became an example of successful industrialization and modernization of South Korea.\n\nRestoration\n\nIn July 2003, Mayor of Seoul Lee Myung-bak, initiated a project to remove the elevated highway and restore the stream. It was a major undertaking since the highway had to be removed and years of neglect and development had left the stream nearly dry. 120,000 tons of water were to be pumped in daily from the Han River, its tributaries, and groundwater from subway stations.\nTo address the consequent traffic problem, the Cheonggyecheon Restoration Project Headquarters established traffic flow measures in the downtown section affected by the restoration work and coordinated changes in the downtown traffic system based on the research of the Cheonggyecheon Restoration Research Corps. The restoration of two historic bridges, Gwangtonggyo and Supyogyo, was also a contentious issue, as several interest groups voiced opinions on how to restore historical and cultural sites and remains and whether to replace the bridges. The Cheonggyecheon restoration project preserved the unique identity of the natural environment and the historic resources in the CBD of Seoul, and to reinforce the surrounding business area with information technology, international affairs and digital industries.\n\nConsequences\n\nThe stream was opened to the public in September 2005 and was lauded as a major success in urban renewal and beautification. However, there was considerable opposition from the previous mayoral administration of Goh Kun, which feared gentrification of the adjacent areas that housed many shops and small businesses in the machine trades.\nIndeed, the price of land within 50 meters of the stream has increased by 30-50%, double the rate of property increases in other areas of Seoul.\nFrom 2002 to 2003, Cheonggyecheon area also saw a 3.5% increase in the number of businesses, which was double the rate of business growth in downtown Seoul. And its \nnumber of working people also increased by 0.8%, while that of downtown Seoul decreased by 2.6%.\nCreating an environment with clean water and natural habitats was the most significant achievement of the project. \nFrom 2003 (pre-restoration works) to the end of 2008, biodiversity increased by 639%; the number of plant species increased from 62 to 308, fish species from 4 to 25, bird species from 6 to 36, aquatic invertebrate species from 5 to 53, insect species from 15 to 192, mammals from 2 to 4, and amphibians from 4 to 8.\nThe stream helps to reduce the urban heat island effect:  along the stream, temperatures are 3.3° to 5.9 °C cooler than on a parallel road 4-7 blocks away.\nThe number of vehicles entering downtown Seoul has decreased by 2.3%, with an increasing number of users of buses (by 1.4%) and subways (by 4.3%: a daily average of 430,000 people) as a result of the demolition of the two heavily used roads.\nBetween 2003 and the end of 2008, use of buses increased by 15.1% and use of subway by 3.3% in Seoul.\nWith air pollution reduced by 35% from 74 to 48 micrograms per cubic meter, respiratory diseases among the residents of the area have been considerably reduced; before the restoration, they were more than twice as likely to suffer from respiratory disease as those in other parts of the city.\nThe project sped up traffic around the city when the motorway was removed. It has been cited as a real-life example of Braess's paradox.\n\nCost\nBudgeted at ₩349 billion, the final cost of the project was over ₩386 billion (approximately US$281 million).\n",
+        "lang": "en",
+        "wiki_title": "Cheonggyecheon",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:청계천 Cheonggyecheon, Seoul, South Korea.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/%EC%B2%AD%EA%B3%84%EC%B2%9C_Cheonggyecheon%2C_Seoul%2C_South_Korea.jpg/1920px-%EC%B2%AD%EA%B3%84%EC%B2%9C_Cheonggyecheon%2C_Seoul%2C_South_Korea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/%EC%B2%AD%EA%B3%84%EC%B2%9C_Cheonggyecheon%2C_Seoul%2C_South_Korea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EC%B2%AD%EA%B3%84%EC%B2%9C_Cheonggyecheon,_Seoul,_South_Korea.jpg",
+        "width": 3832,
+        "height": 2874,
+        "license": "CC BY 2.0",
+        "artist": "Sharon Hahn Darlin This photo was taken with iPhone 13 Pro",
+        "caption": "청계천 Cheonggyecheon, Seoul, South Korea",
+        "id": "P1"
+      },
+      {
+        "file": "File:20240413 청계천.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/20240413_%EC%B2%AD%EA%B3%84%EC%B2%9C.jpg/1920px-20240413_%EC%B2%AD%EA%B3%84%EC%B2%9C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/20240413_%EC%B2%AD%EA%B3%84%EC%B2%9C.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:20240413_%EC%B2%AD%EA%B3%84%EC%B2%9C.jpg",
+        "width": 3000,
+        "height": 4000,
+        "license": "CC0",
+        "artist": "Striker9498",
+        "caption": "2024년 4월 청계천",
+        "id": "P2"
+      },
+      {
+        "file": "File:Cheonggyecheon Stream in sunset.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Cheonggyecheon_Stream_in_sunset.jpg/1920px-Cheonggyecheon_Stream_in_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Cheonggyecheon_Stream_in_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Stream_in_sunset.jpg",
+        "width": 5920,
+        "height": 8880,
+        "license": "KOGL Type 1",
+        "artist": "Seoul Tourism Organization This photo was taken with Sony ILCE-7RM4A",
+        "caption": "노을이 질 무렵 세종대로 인근의 청계천과 청계광장",
+        "id": "P3"
+      }
+    ],
+    "evidence": 0.8,
+    "ok": true,
+    "built_at": "2026-11-22T16:02:50Z"
+  }
+}
