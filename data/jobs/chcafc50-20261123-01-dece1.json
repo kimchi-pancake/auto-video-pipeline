@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261123-01-dece1",
   "channel": "도개",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-22T16:02:50Z",
   "topic": {
     "title": "청계천",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-22T16:03:48Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-22T16:11:01Z",
+      "note": "장면 자료 4개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-22T16:11:01Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-22T16:11:26Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-22T16:11:29Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-22T16:12:05Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-22T16:12:42Z",
+      "note": "예약공개 11-25 20:00"
     }
   ],
   "attempts": {},
@@ -458,20 +488,128 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:청계천 Cheonggyecheon, Seoul, South Korea.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%EC%B2%AD%EA%B3%84%EC%B2%9C_Cheonggyecheon,_Seoul,_South_Korea.jpg",
+          "license": "CC BY 2.0",
+          "artist": "Sharon Hahn Darlin This photo was taken with iPhone 13 Pro",
+          "caption": "청계천 Cheonggyecheon, Seoul, South Korea"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/chcafc50-20261123-01-dece1/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/chcafc50-20261123-01-dece1/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/chcafc50-20261123-01-dece1/out/subtitles.ass",
+    "bgm": "piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "5개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 1장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.00"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "20.9s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "20.9s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 89/편차 48; 밝기 89/편차 48"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 36/편차 25"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -18.0dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 8개, 마지막 20.5s / 영상 20.9s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "geHoEwHoFiw",
+    "scheduled_at": "2026-11-25T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "도개-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-22T16:03:48Z",
+  "updated_at": "2026-11-22T16:12:42Z",
   "pack": {
     "topic": {
       "title": "청계천",

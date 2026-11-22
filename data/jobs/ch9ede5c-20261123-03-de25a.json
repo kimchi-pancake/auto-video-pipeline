@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261123-03-de25a",
   "channel": "웃짬",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-22T16:07:53Z",
   "topic": {
     "title": "TSMC",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-22T16:08:59Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-22T16:09:54Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-22T16:09:54Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-22T16:10:49Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-22T16:10:53Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-22T16:11:29Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-22T16:12:05Z",
+      "note": "예약공개 11-26 20:00"
     }
   ],
   "attempts": {},
@@ -582,20 +612,134 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:104年11月25日 「節能減碳之旅」－馬英九總統訪視「台積公司中科15廠」 (22685573224).jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:104%E5%B9%B411%E6%9C%8825%E6%97%A5_%E3%80%8C%E7%AF%80%E8%83%BD%E6%B8%9B%E7%A2%B3%E4%B9%8B%E6%97%85%E3%80%8D%EF%BC%8D%E9%A6%AC%E8%8B%B1%E4%B9%9D%E7%B8%BD%E7%B5%B1%E8%A8%AA%E8%A6%96%E3%80%8C%E5%8F%B0%E7%A9%8D%E5%85%AC%E5%8F%B8%E4%B8%AD%E7%A7%9115%E5%BB%A0%E3%80%8D_(22685573224).jpg",
+          "license": "CC BY 2.0",
+          "artist": "總統府",
+          "caption": "President Ma visits TSMC’s Taichung plant, code-named Fab 15, at Central Taiwan Science Park, Taichung City. (2015/11/25)"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/ch9ede5c-20261123-03-de25a/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/ch9ede5c-20261123-03-de25a/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/ch9ede5c-20261123-03-de25a/out/subtitles.ass",
+    "bgm": "ambient_piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "8개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 1장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.00"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "43.5s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "43.5s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 100/편차 55; 밝기 100/편차 55"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 36/편차 37"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -18.2dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 19개, 마지막 43.1s / 영상 43.5s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "gAWmL7Vlw9c",
+    "scheduled_at": "2026-11-26T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "웃짬-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-22T16:08:59Z",
+  "updated_at": "2026-11-22T16:12:05Z",
   "pack": {
     "topic": {
       "title": "TSMC",
