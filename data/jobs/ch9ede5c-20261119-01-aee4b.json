@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261119-01-aee4b",
   "channel": "웃짬",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-18T16:03:12Z",
   "topic": {
     "title": "브레턴우즈 체제",
@@ -88,6 +88,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-21T05:16:48Z",
       "note": "승인 → 예약공개 11-22 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-22T19:43:02Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {},
@@ -894,7 +899,7 @@
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-21T05:16:48Z",
+  "updated_at": "2026-11-22T19:43:02Z",
   "pack": {
     "topic": {
       "title": "브레턴우즈 체제",
