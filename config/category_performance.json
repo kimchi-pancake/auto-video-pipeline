@@ -1,13 +1,7 @@
 {
   "웃짬": {
-    "computed_at": "2026-11-16T01:42:57+00:00",
+    "computed_at": "2026-11-23T02:24:35+00:00",
     "long": [
-      {
-        "category": "고부갈등",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 28.660000000000004
-      },
       {
         "category": "부부갈등",
         "count": 1,
@@ -17,10 +11,22 @@
     ],
     "shorts": [
       {
-        "category": "장건강",
-        "count": 2,
-        "avg_views": 1.5,
-        "avg_retention": 17.795
+        "category": "물가금리",
+        "count": 1,
+        "avg_views": 12.0,
+        "avg_retention": 97.98
+      },
+      {
+        "category": "산업패권",
+        "count": 1,
+        "avg_views": 352.0,
+        "avg_retention": 67.03
+      },
+      {
+        "category": "국가부채",
+        "count": 1,
+        "avg_views": 15.0,
+        "avg_retention": 47.94
       },
       {
         "category": "위험식품",
@@ -35,21 +41,9 @@
         "avg_retention": 9.62
       },
       {
-        "category": "뼈건강",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 5.27
-      },
-      {
         "category": "부부갈등",
         "count": 1,
         "avg_views": 1.0,
-        "avg_retention": 0.0
-      },
-      {
-        "category": "직장생활",
-        "count": 4,
-        "avg_views": 1.25,
         "avg_retention": 0.0
       },
       {
@@ -59,7 +53,19 @@
         "avg_retention": 0.0
       },
       {
+        "category": "직장생활",
+        "count": 3,
+        "avg_views": 1.3333333333333333,
+        "avg_retention": 0.0
+      },
+      {
         "category": "이웃분쟁",
+        "count": 1,
+        "avg_views": 1.0,
+        "avg_retention": 0.0
+      },
+      {
+        "category": "국제기구",
         "count": 1,
         "avg_views": 1.0,
         "avg_retention": 0.0
@@ -67,25 +73,13 @@
     ]
   },
   "도개": {
-    "computed_at": "2026-11-16T01:42:58+00:00",
+    "computed_at": "2026-11-23T02:24:35+00:00",
     "long": [
       {
         "category": "부부갈등",
         "count": 1,
         "avg_views": 1.0,
         "avg_retention": 3.65
-      },
-      {
-        "category": "갑질사건",
-        "count": 1,
-        "avg_views": 1.0,
-        "avg_retention": 2.77
-      },
-      {
-        "category": "이웃분쟁",
-        "count": 3,
-        "avg_views": 1.6666666666666667,
-        "avg_retention": 0.12666666666666668
       },
       {
         "category": "손주문제",
@@ -96,13 +90,13 @@
       {
         "category": "수면건강",
         "count": 1,
-        "avg_views": 12.0,
+        "avg_views": 11.0,
         "avg_retention": 0.0
       },
       {
-        "category": "직장생활",
-        "count": 2,
-        "avg_views": 2.0,
+        "category": "이웃분쟁",
+        "count": 1,
+        "avg_views": 1.0,
         "avg_retention": 0.0
       },
       {
@@ -138,6 +132,12 @@
         "avg_retention": 100.54
       },
       {
+        "category": "제조산업",
+        "count": 1,
+        "avg_views": 302.0,
+        "avg_retention": 82.15
+      },
+      {
         "category": "의료복지",
         "count": 1,
         "avg_views": 15.0,
@@ -145,21 +145,27 @@
       },
       {
         "category": "갑질사건",
-        "count": 2,
-        "avg_views": 20.0,
-        "avg_retention": 55.15
+        "count": 1,
+        "avg_views": 34.0,
+        "avg_retention": 61.4
       },
       {
-        "category": "층간소음",
-        "count": 3,
-        "avg_views": 104.33333333333333,
-        "avg_retention": 53.26333333333333
+        "category": "우주과학",
+        "count": 1,
+        "avg_views": 35.0,
+        "avg_retention": 51.42
       },
       {
-        "category": "고부갈등",
+        "category": "역사유산",
         "count": 2,
-        "avg_views": 1.5,
-        "avg_retention": 46.18
+        "avg_views": 9.0,
+        "avg_retention": 40.995
+      },
+      {
+        "category": "복수사이다",
+        "count": 2,
+        "avg_views": 35.0,
+        "avg_retention": 36.195
       },
       {
         "category": "생활편의",
@@ -168,34 +174,28 @@
         "avg_retention": 36.12
       },
       {
-        "category": "복수사이다",
-        "count": 3,
-        "avg_views": 54.666666666666664,
-        "avg_retention": 35.62666666666667
-      },
-      {
-        "category": "반전인생",
-        "count": 2,
-        "avg_views": 70.5,
-        "avg_retention": 32.84
-      },
-      {
-        "category": "연애감정",
+        "category": "층간소음",
         "count": 1,
-        "avg_views": 39.0,
-        "avg_retention": 15.4
-      },
-      {
-        "category": "첨단기술",
-        "count": 1,
-        "avg_views": 14.0,
-        "avg_retention": 13.18
+        "avg_views": 51.0,
+        "avg_retention": 30.28
       },
       {
         "category": "이웃분쟁",
-        "count": 8,
-        "avg_views": 15.25,
-        "avg_retention": 10.508750000000001
+        "count": 4,
+        "avg_views": 14.0,
+        "avg_retention": 19.1025
+      },
+      {
+        "category": "반전인생",
+        "count": 1,
+        "avg_views": 126.0,
+        "avg_retention": 13.43
+      },
+      {
+        "category": "첨단기술",
+        "count": 2,
+        "avg_views": 7.5,
+        "avg_retention": 6.59
       },
       {
         "category": "부모자식갈등",
@@ -213,6 +213,24 @@
         "category": "수면건강",
         "count": 1,
         "avg_views": 3.0,
+        "avg_retention": 0.0
+      },
+      {
+        "category": "고부갈등",
+        "count": 1,
+        "avg_views": 1.0,
+        "avg_retention": 0.0
+      },
+      {
+        "category": "음식문화",
+        "count": 1,
+        "avg_views": 1.0,
+        "avg_retention": 0.0
+      },
+      {
+        "category": "스포츠",
+        "count": 1,
+        "avg_views": 1.0,
         "avg_retention": 0.0
       }
     ]
