@@ -219,12 +219,18 @@
   "engagedViews": 0,
   "estimatedMinutesWatched": 0,
   "subscribersGained": 0,
-  "views": 1
+  "views": 0
  },
  "2026-11-20": {
   "engagedViews": 0,
   "estimatedMinutesWatched": 0,
   "subscribersGained": 0,
   "views": 1
+ },
+ "2026-11-21": {
+  "engagedViews": 8,
+  "estimatedMinutesWatched": 6,
+  "subscribersGained": 0,
+  "views": 45
  }
 }

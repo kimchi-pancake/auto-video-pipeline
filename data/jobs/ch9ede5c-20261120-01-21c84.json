@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261120-01-21c84",
   "channel": "웃짬",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-19T16:02:38Z",
   "topic": {
     "title": "제1차 석유 파동",
@@ -105,6 +105,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-21T05:17:04Z",
       "note": "승인 → 예약공개 11-23 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-23T23:56:02Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {
@@ -764,7 +769,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-21T05:17:04Z",
+  "updated_at": "2026-11-23T23:56:02Z",
   "pack": {
     "topic": {
       "title": "제1차 석유 파동",

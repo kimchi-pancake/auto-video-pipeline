@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261121-01-8fa7e",
   "channel": "도개",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-20T16:01:45Z",
   "topic": {
     "title": "방탄소년단",
@@ -90,6 +90,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-21T05:17:13Z",
       "note": "승인 → 예약공개 11-23 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-23T23:56:01Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {},
@@ -615,7 +620,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-21T05:17:13Z",
+  "updated_at": "2026-11-23T23:56:01Z",
   "pack": {
     "topic": {
       "title": "방탄소년단",
