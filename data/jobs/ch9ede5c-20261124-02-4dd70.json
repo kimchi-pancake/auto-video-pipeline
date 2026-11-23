@@ -1,0 +1,657 @@
+{
+  "id": "ch9ede5c-20261124-02-4dd70",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-23T16:05:32Z",
+  "topic": {
+    "title": "스무트-홀리 관세법",
+    "wiki_title": "스무트-홀리 관세법",
+    "category": "무역제재",
+    "source": "seed",
+    "angle": "어떤 조건이면 다시 벌어질 수 있나(조건부로)",
+    "score": 0.6779,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.531
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7339,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.531
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-23T16:05:32Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-23T16:05:32Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-23T16:05:57Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-23T16:06:23Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "surprising_fact",
+      "first_line": "경제학자 1028명이 대통령에게 거부권 빌었습니다",
+      "screen_text": "전문가 만장일치 반대",
+      "title": "후버도 '악랄하다'던 법, 왜 끝내 서명했나",
+      "promise": "대통령과 경제학자, 재계까지 반대했는데 의회 권력과 당론이 법안을 강행한 구조적 이유를 설명합니다",
+      "evidence_quote": "1930년 5월, 미국 내 1,028명의 경제학자들이 대통령에게 법안에 거부권을 행사하도록 요청하는 탄원서에 서명했다.",
+      "eval": {
+        "score": 0.9322,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.88,
+          "type_variety": 0.3
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "surprising_fact",
+        "first_line": "경제학자 1028명이 대통령에게 거부권 빌었습니다",
+        "screen_text": "전문가 만장일치 반대",
+        "title": "후버도 '악랄하다'던 법, 왜 끝내 서명했나",
+        "promise": "대통령과 경제학자, 재계까지 반대했는데 의회 권력과 당론이 법안을 강행한 구조적 이유를 설명합니다",
+        "evidence_quote": "1930년 5월, 미국 내 1,028명의 경제학자들이 대통령에게 법안에 거부권을 행사하도록 요청하는 탄원서에 서명했다.",
+        "eval": {
+          "score": 0.9322,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.88,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "이 악순환 끊으려 '단순 과반수' 조항 만들었습니다",
+        "screen_text": "조약 아닌 법률로 협상",
+        "title": "스무트-홀리 뒤집은 1934년법, WTO까지 이어진 열쇠",
+        "promise": "의회 3분의 2 동의 벽을 대통령 양자협상 단순 과반수로 뚫어낸 제도적 해법과 현대 무역체제 기반이 된 배경을 짚어드립니다",
+        "evidence_quote": "이 법은 대통령이 양자 협상을 통해 관세 인하를 협상할 수 있도록 했으며, 이러한 관세 협정을 일반 법률로 취급하여 조약처럼 3분의 2의 찬성이 아닌 단순 과반수만 요구하도록 했다.",
+        "eval": {
+          "score": 0.9052,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "관세 올리자 수출이 61%나 증발했습니다",
+        "screen_text": "보호하려다 붕괴",
+        "title": "스무트-홀리법, 자국 산업 지키려다 수출 61% 폭락",
+        "promise": "미국이 관세로 자국 산업을 보호하려다 세계 무역 3분의 1 증발시킨 전말을 보여드립니다",
+        "evidence_quote": "미국 국내 총생산(GNP)은 1929년 1,031억 달러에서 1931년 758억 달러로 감소했고, 1933년 556억 달러로 바닥을 찍었다.",
+        "eval": {
+          "score": 0.8774,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "법 통과 전부터 23개국이 보복 예고했습니다",
+        "screen_text": "시행 전 23개국 경고",
+        "title": "관세 올리니 23개국 보복... 수출 31% 더 줄었다",
+        "promise": "법안 통과 1년 전부터 시작된 연쇄 보퇴가 미국 수출을 추가 31% 깎아내린 수치를 확인하세요",
+        "evidence_quote": "1929년 9월까지 후버 행정부는 23개 교역 상대국으로부터 항의 서한을 받았지만, 보복 조치 위협은 무시되었다.",
+        "eval": {
+          "score": 0.8774,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "농민 돕겠다던 법, 농민 수출 반토막 냈습니다",
+        "screen_text": "농민 표심 노린 입법",
+        "title": "농민 위해 올렸다는데... 농산물 수출 61% 폭락한 이유",
+        "promise": "농민 보호 명분으로 올린 관세가 정작 농민과 수출기업에게 어떤 손실을 안겼는지 무역수지 데이터로 따집니다",
+        "evidence_quote": "스무트와 홀리가 높은 관세로 번영을 약속했음에도 불구하고 노동자와 농민에게는 경제 불황이 심화되었다.",
+        "eval": {
+          "score": 0.8235,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "실업률 8% → 25%, 관세 탓만은 아니지만 기름 부었다",
+        "screen_text": "실업률 3배 폭증",
+        "title": "대공황 와중 관세 인상, 실업률 3배 뛰게 만든 결정타",
+        "promise": "이미 시작된 대공황에 관세가 기름 부은 과정과, 금본위제·은행위기와의 복합 원인을 구분해 드립니다",
+        "evidence_quote": "실업률은 스무트-홀리 법이 통과된 1930년에 8%였지만... 1931년에 16%, 1932~1933년에 25%로 급증했다.",
+        "eval": {
+          "score": 0.2968,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 0.5,
+            "title_len": 0.5,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "스무트-홀리 관세법: 전문가 반대에도 강행된 이유",
+    "target_seconds": 22,
+    "category": "무역제재",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "경제학자 1028명이 대통령에게 거부권을 빌었습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "1,028명",
+          "small": "경제학자 반대 탄원"
+        },
+        "claims": [
+          {
+            "text": "1930년 5월 미국 경제학자 1,028명이 후버 대통령에게 거부권 행사를 요청하는 탄원서에 서명했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1930년 5월, 미국 내 1,028명의 경제학자들이 대통령에게 법안에 거부권을 행사하도록 요청하는 탄원서에 서명했다."
+          }
+        ]
+      },
+      {
+        "narration": "포드와 모건 수장도 '경제적 어리석음'이라며 무릎 꿇고 만류했습니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "헨리 포드가 백악관에서 후버를 설득하려 했고, 토머스 라몬트는 거의 무릎을 꿇고 빌었다고 회고했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "자동차 회사 간부인 헨리 포드 또한 백악관에서 저녁 시간을 보내며 후버에게 법안에 거부권을 행사하도록 설득하려 했고... 토머스 W. 라몬트는 '멍청한 홀리-스무트 관세에 대해 허버트 후버에게 거부권을 행사해달라고 거의 무릎을 꿇고 빌었다'고 말했다."
+          }
+        ]
+      },
+      {
+        "narration": "후버도 '악랄하고 터무니없다'며 반대했으나 당론과 내각 압력에 서명했습니다.",
+        "visual": {
+          "type": "text",
+          "headline": "대통령의 굴복",
+          "sub": "당론·내각 압력에 서명"
+        },
+        "claims": [
+          {
+            "text": "후버는 법안을 '악랄하고, 터무니없으며, 불쾌하다'고 부르며 반대했으나 공화당과 내각의 압력에 굴복해 서명했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "후버는 경제학자와 함께 이 법안에 반대하면서... '악랄하고, 터무니없으며, 불쾌하다'고 불렀지만, 결국 자신의 정당(공화당), 내각(사임하겠다고 위협했던), 그리고 다른 재계 지도자들의 영향에 굴복하여 법안에 서명했다."
+          }
+        ]
+      },
+      {
+        "narration": "상원은 44대 42, 단 2표 차로 법안을 통과시켰습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "상원 표결",
+          "a": {
+            "label": "찬성",
+            "value": 44
+          },
+          "b": {
+            "label": "반대",
+            "value": 42
+          },
+          "unit": "표"
+        },
+        "claims": [
+          {
+            "text": "상원 법안은 찬성 44표, 반대 42표로 단 2표 차이로 통과되었다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "상원 법안은 찬성 44대 반대 42로 통과되었으며, 39명의 공화당원과 5명의 민주당원이 법안에 찬성했다."
+          }
+        ]
+      },
+      {
+        "narration": "결국 캐나다 등 주요국 보복으로 미 수출 31% 급감, 대공황을 심화시켰습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "31% 감소",
+          "small": "보복국 수출 타격"
+        },
+        "claims": [
+          {
+            "text": "보복 관세를 부과한 국가들에 대한 미국 수출이 31% 감소했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "보복한 국가에 대한 수출은 31% 감소했다."
+          },
+          {
+            "text": "전문가들은 이 법이 대공황을 심화시킨 정책적 실수로 널리 받아들이고 있다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "경제학자와 역사가는 이 법을 정책적 실수로 널리 받아들이고 있으며 현대 경제 논쟁에서 보호무역 정책의 경고적인 사례로 남아 있다.",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "1930년 5월 미국 경제학자 1,028명이 후버 대통령에게 거부권 행사를 요청하는 탄원서에 서명했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "1930년 5월, 미국 내 1,028명의 경제학자들이 대통령에게 법안에 거부권을 행사하도록 요청하는 탄원서에 서명했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "헨리 포드가 백악관에서 후버를 설득하려 했고, 토머스 라몬트는 거의 무릎을 꿇고 빌었다고 회고했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "자동차 회사 간부인 헨리 포드 또한 백악관에서 저녁 시간을 보내며 후버에게 법안에 거부권을 행사하도록 설득하려 했고... 토머스 W. 라몬트는 '멍청한 홀리-스무트 관세에 대해 허버트 후버에게 거부권을 행사해달라고 거의 무릎을 꿇고 빌었다'고 말했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "후버는 법안을 '악랄하고, 터무니없으며, 불쾌하다'고 부르며 반대했으나 공화당과 내각의 압력에 굴복해 서명했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "후버는 경제학자와 함께 이 법안에 반대하면서... '악랄하고, 터무니없으며, 불쾌하다'고 불렀지만, 결국 자신의 정당(공화당), 내각(사임하겠다고 위협했던), 그리고 다른 재계 지도자들의 영향에 굴복하여 법안에 서명했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "상원 법안은 찬성 44표, 반대 42표로 단 2표 차이로 통과되었다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "상원 법안은 찬성 44대 반대 42로 통과되었으며, 39명의 공화당원과 5명의 민주당원이 법안에 찬성했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "보복 관세를 부과한 국가들에 대한 미국 수출이 31% 감소했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "보복한 국가에 대한 수출은 31% 감소했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 4,
+        "text": "전문가들은 이 법이 대공황을 심화시킨 정책적 실수로 널리 받아들이고 있다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "경제학자와 역사가는 이 법을 정책적 실수로 널리 받아들이고 있으며 현대 경제 논쟁에서 보호무역 정책의 경고적인 사례로 남아 있다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 185,
+      "est_seconds": 34.3,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 7.8,
+      "max_scene_similarity": 0.1,
+      "visual_mix": {
+        "photo": 1,
+        "stat": 2,
+        "compare": 1,
+        "text": 1
+      },
+      "target_seconds_declared": 22
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "1930년 5월 미국 경제학자 1,028명이 후버 대통령에게 거부권 행사를 요청하는 탄원서에 서명했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "1930년 5월, 미국 내 1,028명의 경제학자들이 대통령에게 법안에 거부권을 행사하도록 요청하는 탄원서에 서명했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "헨리 포드가 백악관에서 후버를 설득하려 했고, 토머스 라몬트는 거의 무릎을 꿇고 빌었다고 회고했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "자동차 회사 간부인 헨리 포드 또한 백악관에서 저녁 시간을 보내며 후버에게 법안에 거부권을 행사하도록 설득하려 했고... 토머스 W. 라몬트는 '멍청한 홀리-스무트 관세에 대해 허버트 후버에게 거부권을 행사해달라고 거의 무릎을 꿇고 빌었다'고 말했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "후버는 법안을 '악랄하고, 터무니없으며, 불쾌하다'고 부르며 반대했으나 공화당과 내각의 압력에 굴복해 서명했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "후버는 경제학자와 함께 이 법안에 반대하면서... '악랄하고, 터무니없으며, 불쾌하다'고 불렀지만, 결국 자신의 정당(공화당), 내각(사임하겠다고 위협했던), 그리고 다른 재계 지도자들의 영향에 굴복하여 법안에 서명했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "상원 법안은 찬성 44표, 반대 42표로 단 2표 차이로 통과되었다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "상원 법안은 찬성 44대 반대 42로 통과되었으며, 39명의 공화당원과 5명의 민주당원이 법안에 찬성했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "보복 관세를 부과한 국가들에 대한 미국 수출이 31% 감소했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "보복한 국가에 대한 수출은 31% 감소했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 4,
+      "text": "전문가들은 이 법이 대공황을 심화시킨 정책적 실수로 널리 받아들이고 있다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 스무트-홀리 관세법",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "경제학자와 역사가는 이 법을 정책적 실수로 널리 받아들이고 있으며 현대 경제 논쟁에서 보호무역 정책의 경고적인 사례로 남아 있다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-23T16:06:23Z",
+  "pack": {
+    "topic": {
+      "title": "스무트-홀리 관세법",
+      "wiki_title": "스무트-홀리 관세법",
+      "category": "무역제재",
+      "source": "seed",
+      "angle": "어떤 조건이면 다시 벌어질 수 있나(조건부로)",
+      "score": 0.6779,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.531
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7339,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.531
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 스무트-홀리 관세법",
+        "url": "https://ko.wikipedia.org/wiki/%EC%8A%A4%EB%AC%B4%ED%8A%B8-%ED%99%80%EB%A6%AC_%EA%B4%80%EC%84%B8%EB%B2%95",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-23",
+        "text": "1930년 관세법(Tariff Act of 1930) 또는 스무트-홀리 관세법(Smoot–Hawley Tariff Act)은 보호무역 무역 조치로서, 미국에서 허버트 후버 대통령이 1930년 6월 17일에 제정한 법률이다. 법안의 의회 주요 지지자인 리드 스무트 상원의원과 윌리스 C. 홀리 하원의원의 이름을 따서 명명되었으며, 1929년 10월에 시작된 대공황의 초기 미국 산업을 외국 경쟁으로부터 보호하기 위해 20,000개 이상의 수입품에 대한 관세를 인상하는 내용을 담았다.\n후버는 많은 고위 경제학자들의 반대 조언이 있었음에도 자당과 재계 지도자의 압력에 굴복해 법안에 서명했다. 이 법은 미국 국내 고용과 제조업을 강화하기 위한 의도였지만, 관세는 오히려 대공황을 심화시켰다. 미국의 교역 상대국들이 자체적으로 보복 관세를 부과하여 미국의 수출과 세계 무역량이 급락했기 때문이다. 경제학자와 역사가는 이 법을 정책적 실수로 널리 받아들이고 있으며 현대 경제 논쟁에서 보호무역 정책의 경고적인 사례로 남아 있다. 이 법 이후에는 1934년의 상호 관세법과 같은 더 자유로운 무역 협정이 뒤따랐다.\n\n후원자 및 입법 과정\n\n1927년, 국제연맹은 제네바에서 세계경제회의를 개최했다. 최종 보고서는 \"관세를 폐지하고 그 반대 방향으로 나아갈 때가 되었다\"고 결론 내렸다. 제1차 세계 대전으로 인한 막대한 부채와 배상금은 금, 서비스 또는 상품을 통해서만 상환할 수 있었지만 그 규모로 이용 가능한 항목은 상품뿐이었다. 회의에 대표로 참석한 많은 정부가 그 반대되는 행동을 취했다. 1928년에 프랑스가 가장 먼저 새로운 관세법과 쿼터제를 통과시켰다.\n1920년대 후반까지 미국 경제는 대량생산에 결정적인 요인인 전기화로 생산성 면에서 비약적인 성장을 이뤘다. 그 외에 미국 정유 공장이 있었고, 말과 노새를 자동차로 대체하는 등 여러 성장요인을 갖췄다. 말과 노새에게 사료를 먹이기 위해 사용되었던 농지의 6분의 1에서 4분의 1이 해방되어 농산물이 추가로 남기 시작했다. 명목 임금과 실질 임금은 증가했지만, 생산성 증가 속도를 따라가지 못했다.\n스무트 상원의원은 수입품에 대한 관세를 인상하면 과잉 생산 문제가 완화될 것이라고 주장했지만, 시장의 현실은 미국이 무역 수지 흑자를 기록하고 있었다는 것이다. 공산품 수입이 증가하고 있었지만 공산품 수출은 훨씬 더 빠르게 증가하고 있었다. 식료품 수출은 감소하고 있었고 무역 수지가 적자였지만, 식료품 수입의 대략적인 가치는 공산품 수입 가치의 절반에 불과했다.\n\n1929년 후반, 세계 경제가 대공황의 초기에 접어들면서 미국의 주요 목표는 일자리와 농민을 외국 경쟁으로부터 보호하는 것으로 잡았다. 1929년, 스무트는 스무트-홀리 관세법의 기반이 된 또 다른 관세 인상을 주도했다. 회고록에서 스무트는 분명히 밝혔다. \"세계는 제1차 세계 대전에서 무자비하게 파괴된 생명과 재산, 그리고 광란의 20년대 이후 산업 혁명 동안 생산 능력에 구매력을 맞추지 못한 대가를 치르고 있다.\"\n스무트는 유타주 출신의 공화당원이자 미국 상원 금융위원회 위원장이었다. 오리건주 출신의 공화당원인 윌리스 C. 홀리는 미국 하원 세입세출위원회 위원장이었다. 1928년 미국 대통령 선거 기간 허버트 후버의 선거 공약 중 하나로 농산물 관세를 인상하여 어려움을 겪는 농민들을 돕겠다고 내세웠다. 후버가 당선되었고 공화당은 1928년 하원과 상원에서 상당한 다수당 지위를 유지했다.\n하원은 1929년 5월에 농산물 및 공산품 관세를 인상하는 버전의 법안을 통과시켰다. 하원 법안은 찬성 264 대 반대 147로 통과되었으며, 244명의 공화당원과 20명의 민주당원이 법안에 찬성했다. 상원은 1930년 3월까지 법안을 논의했으며, 많은 의원들이 각 주의 주요 산업에 따라 표를 교환했다. 상원 법안은 찬성 44대 반대 42로 통과되었으며, 39명의 공화당원과 5명의 민주당원이 법안에 찬성했다. 이후 회의위원회는 두 버전을 하나로 통합했는데, 주로 하원에서 통과된 더 높은 수준으로 관세를 인상함으로써 이루어졌다. 하원은 회의위원회 법안을 찬성 222대 반대 153으로 통과시켰으며, 208명의 공화당원과 14명의 민주당원의 지지를 받았다.\n\n반대론\n1930년 5월, 미국 내 1,028명의 경제학자들이 대통령에게 법안에 거부권을 행사하도록 요청하는 탄원서에 서명했다. 이 탄원서는 폴 더글러스, 어빙 피셔, 제임스 T. F. G. 우드, 프랭크 그레이엄, 어니스트 패터슨, 헨리 시거, 프랭크 토식, 클레어 윌콕스가 조직했다. 자동차 회사 간부인 헨리 포드 또한 백악관에서 저녁 시간을 보내며 후버에게 법안에 거부권을 행사하도록 설득하려 했고, 이를 \"경제적인 어리석음\"이라고 불렀다. J. P. 모건의 최고 경영자 토머스 W. 라몬트는 \"멍청한 홀리-스무트 관세에 대해 허버트 후버에게 거부권을 행사해달라고 거의 무릎을 꿇고 빌었다\"고 말했다.\n후버는 경제학자와 함께 이 법안에 반대하면서, 국제 협력에 대한 자신의 약속을 훼손할 것이라고 느껴 \"악랄하고, 터무니없으며, 불쾌하다\"고 불렀지만, 결국 자신의 정당(공화당), 내각(사임하겠다고 위협했던), 그리고 다른 재계 지도자들의 영향에 굴복하여 법안에 서명했다. 법안이 제정된 후, 보복으로 캐나다와 다른 국가들이 미국 상품에 대한 자체 관세를 인상했다. 프랭클린 D. 루스벨트는 1932년 대통령 선거 성공 캠페인에서 이 법에 반대했다.\n\n보복\n무역 감소의 대부분은 미국과 전 세계 GDP의 급락 때문이었다. 그 외에도 추가적인 감소가 있었다. 일부 국가는 항의했고 다른 국가는 무역 제한과 관세로 보복했다. 항의한 국가에 대한 미국 수출은 18% 감소했고, 보복한 국가에 대한 수출은 31% 감소했다. 다른 국가의 보복 위협은 1930년 6월 법안이 제정되기 훨씬 전부터 시작되었다. 하원이 1929년 5월에 법안을 통과시키자 불매 운동이 일어났고, 외국 정부들은 미국 상품에 대한 관세율을 인상하기 시작했지만, 미국 관세율은 상원이나 회의위원회에 의해 인상 또는 인하될 수 있었다.\n1929년 9월까지 후버 행정부는 23개 교역 상대국으로부터 항의 서한을 받았지만, 보복 조치 위협은 무시되었다. 1930년 5월, 미국의 가장 충실한 교역 상대국인 캐나다는 미국이 캐나다로 수출하는 약 30%를 차지하는 16개 품목에 새로운 관세를 부과하며 보복했다. 이후 캐나다는 1932년 대영제국 경제 회의를 통해 대영 제국과 더 긴밀한 경제적 관계를 맺었다. 프랑스와 영국은 항의하고 새로운 무역 파트너를 개발했다. 독일은 청산 제도를 통한 무역 시스템을 개발했다.\n스무트와 홀리가 높은 관세로 번영을 약속했음에도 불구하고 노동자와 농민에게는 경제 불황이 심화되었다. 결과적으로 홀리는 재지명에 실패했으며, 스무트는 1932년 선거에서 의석을 잃은 12명의 공화당 상원의원 중 한 명이었는데, 이는 1958년과 1980년과 같은 상원 역사상 가장 큰 폭의 변동이었다. 캐나다 외에 보복 관세를 제정한 국가로는 쿠바, 멕시코, 프랑스, 이탈리아, 스페인, 아르헨티나, 오스트레일리아, 뉴질랜드, 스위스가 있다.\n\n관세 수준\n\n미국 인구조사국의 두 권짜리 시리즈인 《The Historical Statistics of the United States, Colonial Times to 1970, Bicentennial Edition》에서는 관세율이 두 가지 형태로 나타나 있다. 1932년의 과세 대상 관세율 최고치는 59.1%로, 1830년의 61.7%에 이어 두 번째로 높았다.\n그러나 1933년 모든 수입품의 63%는 세금이 부과되지 않았으며, 이는 과세 대상 관세율이 반영하지 못하는 부분이다. 1929년의 자유 및 과세율은 13.5%였으며, 스무트-홀리 법 하에서 1933년에 19.8%로 최고점을 찍었는데, 이는 1821년부터 1900년까지 미국 평균 29.7%의 \"무관세 및 과세율\"보다 3분의 1 낮았다. 과세 대상 수입에 적용된 평균 관세율은 1929년 40.1%에서 1932년 59.1%(+19%)로 증가했다.\n\n시행 이후\n처음에는 관세 인상이 성공적인 것처럼 보였다. 역사가 로버트 소벨에 따르면 \"공장 임금 지불, 건설 계약, 산업 생산 모두가 급격히 증가했다.\" 그러나 약한 연결고리인 은행의 형태로 더 큰 경제 문제가 도사리고 있었다. 1931년 크레디탄슈탈트가 파산하면서 스무트-홀리 관세의 세계적 결함이 명백해졌다.\n미국 수입은 44억 달러(1929년)에서 15억 달러(1933년)로 66% 감소했으며, 수출은 54억 달러에서 21억 달러로 61% 감소했다. 미국 국내 총생산(GNP)은 1929년 1,031억 달러에서 1931년 758억 달러로 감소했고, 1933년 556억 달러로 바닥을 찍었다. 유럽으로부터의 수입은 1929년 최고치인 13억 달러에서 1932년 3억 9천만 달러로 감소했다. 미국의 유럽 수출은 1929년 23억 달러에서 1932년 7억 8천 4백만 달러로 감소했다. 전반적으로 세계 무역은 1929년에서 1934년 사이에 약 66% 감소했다.\n실업률은 스무트-홀리 법이 통과된 1930년에 8%였지만, 새 법은 이를 낮추는 데 실패했다. 실업률은 1931년에 16%, 1932~1933년에 25%로 급증했다. 이것이 반드시 관세 탓이라고 할 수 있는지에 대해서는 약간의 논란이 있다. 대공황은 스무트-홀리 법 이전부터 이미 진행 중이었으며, 주로 금융 불안정, 수요 감소, 부실한 은행 관행 때문이었다. 그러나 관세는 세계 무역을 축소하고, 농민들에게 피해를 입히며, 수출 의존 산업의 고용을 감소시키며 위기를 악화시켰다. 만약 이 법이 통과되지 않았더라면 대공황은 여전히 발생했겠지만, 아마도 그 심각성은 덜했을 것이다.\n제2차 세계 대전 동안 \"미국 경제가 전례 없는 속도로 확장\"되었을 때에야 실업률이 1930년대 수준 아래로 떨어졌다. 1929년 수입은 미국 GNP의 4.2%에 불과했고, 수출은 5.0%에 불과했다. 대공황의 원인에서 통화 공급의 중심적 역할을 강조한 밀턴 프리드먼과 같은 통화주의자는 스무트-홀리 법이 미국의 대공황의 사소한 원인일 뿐이라고 간주했다.\n\n관세 조치 종료\n민주당의 1932년 선거 캠페인 공약은 관세를 낮추는 것이었다. 선거에서 승리한 후 프랭클린 D. 루스벨트 대통령과 이제 민주당이 다수인 의회는 1934년 상호 관세법을 통과시켰다. 이 법은 대통령이 양자 협상을 통해 관세 인하를 협상할 수 있도록 했으며, 이러한 관세 협정을 일반 법률로 취급하여 조약처럼 3분의 2의 찬성이 아닌 단순 과반수만 요구하도록 했다. 이는 제2차 세계 대전 이후 발전된 무역 협상 틀의 핵심 구성 요소 중 하나였다.\n제2차 세계 대전 이후, 이러한 이해는 미래에 유사한 상황을 방지할 다자간 무역 협정 추진을 뒷받침했다. 1944년의 브레턴우즈 협정은 외환에 초점을 맞추고 관세를 직접 다루지는 않았지만, 참여국은 국제무역에 대한 유사한 틀을 원했다. 해리 S. 트루먼 대통령은 1945년 11월 제안된 국제 무역 기구 창설 협상을 시작함으로써 이 과정을 시작했다.\n결과적으로 관세 무역 일반 협정 협상은 더 빠르게 진행되어 1947년 10월에 협정이 체결되었다. 결국 미국은 국제 무역 기구 협정에 서명하지 않았다. 호혜주의에 다자간 \"최혜국\" 요소를 추가한 관세 무역 일반 협정은 이후 반세기 동안 관세의 점진적인 인하를 위한 틀 역할을 했다.\n제2차 세계 대전 후 스무트-홀리 관세의 변화는 미국의 관세 수준을 일방적으로 인하하는 일반적인 경향을 반영한 반면, 교역 상대국들은 높은 수준을 유지했다. 1951년 미국 관세 동맹 연구는 43개국의 자유 및 과세 대상 관세율을 비교했다. 그 결과 미국(5.1%)보다 관세 수준이 낮은 국가는 7개국에 불과했으며, 영국(25.6%)을 포함하여 11개국은 스무트-홀리 최고치인 19.8%보다 높은 자유 및 과세 대상 관세율을 가지고 있었다. 43개국 평균은 14.4%로, 1929년 미국 수준보다 0.9% 높았으며, 이는 미국이 자체 수준을 인하함에 따라 수준을 낮추는 데 호혜적으로 대응한 국가가 거의 없음을 보여준다.\n\n후속 정치 대화\n1993년, 북미자유무역협정 통과를 앞둔 논의에서 당시 부통령이었던 앨 고어는 래리 킹 쇼에서 로스 페로가 토론 중 제기한 북미자유무역협정 반대에 대해 스무트-홀리 관세를 언급했다. 그는 페로에게 법 통과 후 악수하는 스무트와 홀리의 액자 사진을 선물했다.\n2009년 4월, 당시 하원의원이었던 미셸 바크먼은 연설 중 스무트-홀리 관세를 \"후트-스말리 법\"이라고 잘못 언급하고, 법안 서명을 프랭클린 D. 루스벨트가 했다고 말하며 그를 대공황의 원인으로 비난하여 뉴스를 만들었다. 이 법은 2010년의 해외금융계좌신고법과 비교되기도 했는데, 자유와 번영 센터의 앤드류 퀸란은 해외금융계좌신고법을 \"스무트-홀리 이후 의회에서 나온 최악의 경제 아이디어\"라고 불렀다.\n\n트럼프 2기 행정부에서\n\n2024년 선거 운동 중 도널드 트럼프는 이와 유사한 관세 제도를 도입하겠다고 공약했다.\n2024년 11월에 발간된 세계 경제 연간 예측 보충판('2025년 연말')에서 디 이코노미스트는 (관세법 제정 이후) \"...세계 무역이 3분의 2 감소했다. 이는 미국과 전 세계의 성장에 너무나 큰 재앙이었기 때문에 이후 입법자들은 이 문제를 건드리지 않았다.",
+        "lang": "ko",
+        "wiki_title": "스무트-홀리 관세법",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Smoot–Hawley Tariff Act",
+        "url": "https://en.wikipedia.org/wiki/Smoot%E2%80%93Hawley_Tariff_Act",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-23",
+        "text": "The Tariff Act of 1930, also known as the Smoot–Hawley Tariff Act, was a protectionist trade measure signed into law in the United States by President Herbert Hoover on June 17, 1930. Named after its chief congressional sponsors, Senator Reed Smoot and Representative Willis C. Hawley, the act raised tariffs on over 20,000 imported goods in an effort to shield American industries from foreign competition during the onset of the Great Depression, which had started in October 1929.\nHoover signed the bill against the advice of many senior economists, yielding to pressure from his party and business leaders. Intended to bolster domestic employment and manufacturing, the tariffs instead deepened the Depression because the U.S.'s trading partners retaliated with tariffs of their own, leading to U.S. exports and global trade plummeting. Economists and historians widely regard the act as a policy misstep, and it remains a cautionary example of protectionist policy in modern economic debates. It was followed by more liberal trade agreements, such as the Reciprocal Trade Agreements Act of 1934.\n\nSponsors and legislative history\n\nIn 1927, the League of Nations held a World Economic Conference in Geneva. Their final report concluded that \"the time has come to put an end to tariffs, and to move in the opposite direction\". Vast debts and reparations from World War I could be repaid only through gold, services, or goods, but the only items available on that scale were goods. Many of the governments represented by the delegates to the conference did the opposite. In 1928, France was the first, enacting a new tariff law and quota system.\nBy the late 1920s, the U.S. economy had made exceptional gains in productivity because of electrification, which was a critical factor in mass production. Further factors in economic growth were US oil refineries, replacing horses and mules with motor vehicles. One-sixth to one-quarter of farmland that had been devoted to feeding horses and mules was freed up, contributing to a surplus in farm produce. Nominal and real wages increased, but did not keep up with the productivity gains.\nSenator Smoot contended that raising the tariff on imports would alleviate the overproduction problem, but the market reality was that the United States had been running a trade account surplus. Although manufactured goods imports were rising, manufactured exports were rising even faster. Food exports had been falling and were in a trade account deficit, but the approximate values of food imports only amounted to half the value of manufactured imports.\n\nIn late 1929, as the global economy entered the first stages of the Great Depression, the main policy goal of the United States federal government was to protect its jobs and farmers from foreign competition. In 1929, Smoot championed another tariff increase within the United States, which became the Smoot–Hawley Tariff Bill. In his memoirs, Smoot made it abundantly clear: \"The world is paying for its ruthless destruction of life and property in the World War and for its failure to adjust purchasing power to productive capacity during the Industrial Revolution of the decade following the war.\"\nSmoot was a Republican from Utah and chairman of the Senate Finance Committee. Willis C. Hawley, a Republican from Oregon, was chairman of the House Committee on Ways and Means. During the 1928 United States presidential election, one of Herbert Hoover's campaign promises was to help beleaguered farmers by increasing tariffs on agricultural products. Hoover won, and Republicans maintained comfortable majorities in the House and the Senate in 1928.\nThe House passed a version of the act in May 1929, increasing tariffs on agricultural and industrial goods. The House bill passed on a vote of 264 to 147, with 244 Republicans and 20 Democrats voting in favor of the bill. The Senate debated its bill until March 1930, with many members trading votes based on industries in their states. The Senate bill passed on a vote of 44 to 42, with 39 Republicans and 5 Democrats voting in favor of the bill. The conference committee then unified the two versions, largely by raising tariffs to the higher levels passed by the House. The House passed the conference bill on a vote of 222 to 153, with the support of 208 Republicans and 14 Democrats.\n\nOpponents\nIn May 1930, a petition was signed by 1,028 economists in the United States asking President Hoover to veto the legislation (the petition was ultimately signed by over 1,250 economists). The petition was organized by Paul Douglas, Irving Fisher, James T. F. G. Wood, Frank Graham, Ernest Patterson, Henry Seager, Frank Taussig, and Clair Wilcox. Automobile executive Henry Ford also spent an evening at the White House trying to convince Hoover to veto the bill, calling it \"an economic stupidity\". J. P. Morgan's Chief Executive Thomas W. Lamont said he \"almost went down on [his] knees to beg Herbert Hoover to veto the asinine Hawley–Smoot tariff\".\nWhile Hoover joined the economists in opposing the bill, calling it \"vicious, extortionate, and obnoxious\" because he felt it would undermine the commitment he had pledged to international cooperation, he eventually signed the bill after he yielded to influence from his own political party (Republican), his Cabinet (who had threatened to resign), and other business leaders. After the bill became law, in retaliation, Canada and other countries raised their own tariffs on U.S. goods. Franklin D. Roosevelt spoke against the act during his successful campaign for president in 1932.\n\nRetaliation\nMost of the decline in trade was due to a plunge in gross domestic product (GDP) in the U.S. and worldwide. Beyond that was an additional decline. Some countries protested and others also retaliated with trade restrictions and tariffs. American exports to the protesters fell by 18%, and exports to those which retaliated fell by 31%. Threats of retaliation by other countries began long before the bill was enacted into law in June 1930. As the House of Representatives passed it in May 1929, boycotts broke out, and foreign governments moved to increase rates against American products, although US rates could be increased or decreased by the Senate or by the conference committee.\nBy September 1929, Hoover's administration had received protest notes from 23 trading partners, but the threats of retaliatory actions were ignored.",
+        "lang": "en",
+        "wiki_title": "Smoot–Hawley Tariff Act",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Smoot and Hawley standing together, April 11, 1929.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Smoot_and_Hawley_standing_together%2C_April_11%2C_1929.jpg/1920px-Smoot_and_Hawley_standing_together%2C_April_11%2C_1929.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Smoot_and_Hawley_standing_together%2C_April_11%2C_1929.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Smoot_and_Hawley_standing_together,_April_11,_1929.jpg",
+        "width": 3546,
+        "height": 3662,
+        "license": "Public domain",
+        "artist": "National Photo Company",
+        "caption": "Willis C. Hawley (left) and Reed Smoot meeting shortly after the signing of the Smoot-Hawley Tariff Act.",
+        "id": "P1"
+      },
+      {
+        "file": "File:The White House - 54427036291.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/The_White_House_-_54427036291.jpg/1920px-The_White_House_-_54427036291.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/The_White_House_-_54427036291.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:The_White_House_-_54427036291.jpg",
+        "width": 3000,
+        "height": 2000,
+        "license": "Public domain",
+        "artist": "The White House",
+        "caption": "President Donald Trump signs an Executive Order on the Administration’s tariff plans at a “Make America Wealthy Again” event, Wednesday, April 2, 2025, in the W",
+        "id": "P2"
+      },
+      {
+        "file": "File:Public Law 87-95- An Act to Amend the Tariff Act of 1930 to Provide for the Free Entry of Electron Microscopes and Certain Other Apparatus Imported By, or On Behalf of, Certain Inst - DPLA - 23450a98ba8a7ce9edc92579d845200e (page 1).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Public_Law_87-95-_An_Act_to_Amend_the_Tariff_Act_of_1930_to_Provide_for_the_Free_Entry_of_Electron_Microscopes_and_Certain_Other_Apparatus_Imported_By%2C_or_On_Behalf_of%2C_Certain_Inst_-_DPLA_-_23450a98ba8a7ce9edc92579d845200e_%28page_1%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Public_Law_87-95-_An_Act_to_Amend_the_Tariff_Act_of_1930_to_Provide_for_the_Free_Entry_of_Electron_Microscopes_and_Certain_Other_Apparatus_Imported_By%2C_or_On_Behalf_of%2C_Certain_Inst_-_DPLA_-_23450a98ba8a7ce9edc92579d845200e_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Public_Law_87-95-_An_Act_to_Amend_the_Tariff_Act_of_1930_to_Provide_for_the_Free_Entry_of_Electron_Microscopes_and_Certain_Other_Apparatus_Imported_By,_or_On_Behalf_of,_Certain_Inst_-_DPLA_-_23450a98ba8a7ce9edc92579d845200e_(page_1).jpg",
+        "width": 4822,
+        "height": 7019,
+        "license": "Public domain",
+        "artist": "National Archives and Records Administration. Office of the Federal Register. 4/1/1985",
+        "caption": "Public Law 87-95- An Act to Amend the Tariff Act of 1930 to Provide for the Free Entry of Electron Microscopes and Certain Other Apparatus Imported By, or On Be",
+        "id": "P3"
+      },
+      {
+        "file": "File:Public Law 87-95- An Act to Amend the Tariff Act of 1930 to Provide for the Free Entry of Electron Microscopes and Certain Other Apparatus Imported By, or On Behalf of, Certain Inst - DPLA - 23450a98ba8a7ce9edc92579d845200e (page 2).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Public_Law_87-95-_An_Act_to_Amend_the_Tariff_Act_of_1930_to_Provide_for_the_Free_Entry_of_Electron_Microscopes_and_Certain_Other_Apparatus_Imported_By%2C_or_On_Behalf_of%2C_Certain_Inst_-_DPLA_-_23450a98ba8a7ce9edc92579d845200e_%28page_2%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Public_Law_87-95-_An_Act_to_Amend_the_Tariff_Act_of_1930_to_Provide_for_the_Free_Entry_of_Electron_Microscopes_and_Certain_Other_Apparatus_Imported_By%2C_or_On_Behalf_of%2C_Certain_Inst_-_DPLA_-_23450a98ba8a7ce9edc92579d845200e_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Public_Law_87-95-_An_Act_to_Amend_the_Tariff_Act_of_1930_to_Provide_for_the_Free_Entry_of_Electron_Microscopes_and_Certain_Other_Apparatus_Imported_By,_or_On_Behalf_of,_Certain_Inst_-_DPLA_-_23450a98ba8a7ce9edc92579d845200e_(page_2).jpg",
+        "width": 4822,
+        "height": 7019,
+        "license": "Public domain",
+        "artist": "National Archives and Records Administration. Office of the Federal Register. 4/1/1985",
+        "caption": "Public Law 87-95- An Act to Amend the Tariff Act of 1930 to Provide for the Free Entry of Electron Microscopes and Certain Other Apparatus Imported By, or On Be",
+        "id": "P4"
+      },
+      {
+        "file": "File:Public Law 87-132- An Act to Amend Paragraph 1798 (c) (2) of the Tariff Act of 1930 to Reduce Temporarily the Exemption from Duty Enjoyed by Returning Residents, and for Other Purpo - DPLA - 9e73dcc9c45b141f9adf4b0bfb85dd6a (page 1).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_Law_87-132-_An_Act_to_Amend_Paragraph_1798_%28c%29_%282%29_of_the_Tariff_Act_of_1930_to_Reduce_Temporarily_the_Exemption_from_Duty_Enjoyed_by_Returning_Residents%2C_and_for_Other_Purpo_-_DPLA_-_9e73dcc9c45b141f9adf4b0bfb85dd6a_%28page_1%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Public_Law_87-132-_An_Act_to_Amend_Paragraph_1798_%28c%29_%282%29_of_the_Tariff_Act_of_1930_to_Reduce_Temporarily_the_Exemption_from_Duty_Enjoyed_by_Returning_Residents%2C_and_for_Other_Purpo_-_DPLA_-_9e73dcc9c45b141f9adf4b0bfb85dd6a_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Public_Law_87-132-_An_Act_to_Amend_Paragraph_1798_(c)_(2)_of_the_Tariff_Act_of_1930_to_Reduce_Temporarily_the_Exemption_from_Duty_Enjoyed_by_Returning_Residents,_and_for_Other_Purpo_-_DPLA_-_9e73dcc9c45b141f9adf4b0bfb85dd6a_(page_1).jpg",
+        "width": 4654,
+        "height": 6911,
+        "license": "Public domain",
+        "artist": "National Archives and Records Administration. Office of the Federal Register. 4/1/1985",
+        "caption": "Public Law 87-132- An Act to Amend Paragraph 1798 (c) (2) of the Tariff Act of 1930 to Reduce Temporarily the Exemption from Duty Enjoyed by Returning Residents",
+        "id": "P5"
+      },
+      {
+        "file": "File:Public Law 87-132- An Act to Amend Paragraph 1798 (c) (2) of the Tariff Act of 1930 to Reduce Temporarily the Exemption from Duty Enjoyed by Returning Residents, and for Other Purpo - DPLA - 9e73dcc9c45b141f9adf4b0bfb85dd6a (page 2).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Public_Law_87-132-_An_Act_to_Amend_Paragraph_1798_%28c%29_%282%29_of_the_Tariff_Act_of_1930_to_Reduce_Temporarily_the_Exemption_from_Duty_Enjoyed_by_Returning_Residents%2C_and_for_Other_Purpo_-_DPLA_-_9e73dcc9c45b141f9adf4b0bfb85dd6a_%28page_2%29.jpg/1920px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Public_Law_87-132-_An_Act_to_Amend_Paragraph_1798_%28c%29_%282%29_of_the_Tariff_Act_of_1930_to_Reduce_Temporarily_the_Exemption_from_Duty_Enjoyed_by_Returning_Residents%2C_and_for_Other_Purpo_-_DPLA_-_9e73dcc9c45b141f9adf4b0bfb85dd6a_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Public_Law_87-132-_An_Act_to_Amend_Paragraph_1798_(c)_(2)_of_the_Tariff_Act_of_1930_to_Reduce_Temporarily_the_Exemption_from_Duty_Enjoyed_by_Returning_Residents,_and_for_Other_Purpo_-_DPLA_-_9e73dcc9c45b141f9adf4b0bfb85dd6a_(page_2).jpg",
+        "width": 4654,
+        "height": 6911,
+        "license": "Public domain",
+        "artist": "National Archives and Records Administration. Office of the Federal Register. 4/1/1985",
+        "caption": "Public Law 87-132- An Act to Amend Paragraph 1798 (c) (2) of the Tariff Act of 1930 to Reduce Temporarily the Exemption from Duty Enjoyed by Returning Residents",
+        "id": "P6"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-23T16:05:32Z"
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "id": "ch9ede5c-20261124-01-90789",
+  "channel": "웃짬",
+  "status": "NEEDS_REVIEW",
+  "created_at": "2026-11-23T16:03:43Z",
+  "topic": {
+    "title": "지니 계수",
+    "wiki_title": "지니 계수",
+    "category": "빈부격차",
+    "source": "seed",
+    "angle": "어떤 조건이면 다시 벌어질 수 있나(조건부로)",
+    "score": 0.6779,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.531
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7339,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.531
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-23T16:03:43Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-23T16:03:43Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-23T16:04:03Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-23T16:05:29Z",
+      "note": "script: LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 2 나레이션에 알파벳이 있음(한글로 풀어 쓸 것): 로렌츠 곡선 아래 면적 B가 0에 가까워지며 공식 G=A/(A+B)는 1"
+    }
+  ],
+  "attempts": {
+    "script": 1
+  },
+  "error": {
+    "stage": "script",
+    "class": "content_quality",
+    "message": "LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 2 나레이션에 알파벳이 있음(한글로 풀어 쓸 것): 로렌츠 곡선 아래 면적 B가 0에 가까워지며 공식 G=A/(A+B)는 1",
+    "at": "2026-11-23T16:05:29Z"
+  },
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "who_wins",
+      "first_line": "상위 1%가 독식하면 지니계수는 0.99가 됩니다",
+      "screen_text": "독식의 수학",
+      "title": "한 명이 다 가지면 수치는 어떻게 변하나",
+      "promise": "극단적 불평등 시 누가 얼마나 가져가는지 수식으로 정확히 보여드립니다",
+      "evidence_quote": "the most unequal society (with N individuals) where a single person receives 100% of the total income and the remaining N − 1 people receive none (G = 1 − 1/N)",
+      "eval": {
+        "score": 0.9132,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 0.3,
+          "no_greeting": 1.0,
+          "novel": 0.97,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "who_wins",
+        "first_line": "상위 1%가 독식하면 지니계수는 0.99가 됩니다",
+        "screen_text": "독식의 수학",
+        "title": "한 명이 다 가지면 수치는 어떻게 변하나",
+        "promise": "극단적 불평등 시 누가 얼마나 가져가는지 수식으로 정확히 보여드립니다",
+        "evidence_quote": "the most unequal society (with N individuals) where a single person receives 100% of the total income and the remaining N − 1 people receive none (G = 1 − 1/N)",
+        "eval": {
+          "score": 0.9132,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "로렌츠 곡선이 교차하면 비교불가, 그래서 나온 게 지니계수입니다",
+        "screen_text": "교차의 딜레마",
+        "title": "곡선 교차 문제를 한 수치로 푼 1912년 아이디어",
+        "promise": "로렌츠 곡선의 치명적 단점을 보완한 지니계수의 탄생 원리를 1분 만에 이해하실 수 있습니다",
+        "evidence_quote": "서로 다른 로렌츠 곡선들이 교차하는 경우 비교하기가 곤란하다는 로렌츠 곡선의 단점을 보완할 수 있다",
+        "eval": {
+          "score": 0.8836,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "슬로바키아 0.238 vs 멕시코 0.49, 같은 OECD인데 2배 차이",
+        "screen_text": "격차 2배",
+        "title": "OECD 최저·최고 국가, 무엇이 갈랐나",
+        "promise": "세금·복지·노동시장 중 어떤 요인이 격차 2배를 만들었는지 비교 분석해 드립니다",
+        "evidence_quote": "considering the effect of taxes and transfer payments, the income Gini coefficient ranged between 0.24 and 0.49, with Slovakia being the lowest and Mexico the highest",
+        "eval": {
+          "score": 0.856,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "고령화만 돼도 소득 격차는 저절로 커집니다",
+        "screen_text": "인구구조의 함정",
+        "title": "일 안 해도 격차 커지는 인구구조의 역설",
+        "promise": "실제 소득 분배가 그대로인데도 지니계수가 오르는 인구학적 이유를 알게 됩니다",
+        "evidence_quote": "Countries with an aging population or those with an increased birth rate experience an increasing pre-tax Gini coefficient even if real income distribution for working adults remains constant",
+        "eval": {
+          "score": 0.8409,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 0.4,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "전 세계 소득 지니계수가 0.68이라는 건 무엇을 뜻할까요",
+        "screen_text": "지구촌 격차 0.68",
+        "title": "지구 전체를 한 나라로 보면 생기는 일",
+        "promise": "국가 간 격차를 합치면 단일 국가보다 불평등이 2배 심해지는 구조적 이유를 설명합니다",
+        "evidence_quote": "Various sources have estimated the Gini coefficient of the global income in 2005 to be between 0.61 and 0.68",
+        "eval": {
+          "score": 0.8277,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "지니계수 0.47인 나라가 세금 한 번에 0.23이 됩니다",
+        "screen_text": "세금의 마법",
+        "title": "남아공 불평등, 세금으로 40% 줄인 비결",
+        "promise": "같은 나라인데 세전·세후 지니계수가 왜 0.47이나 차이 나는지 알게 됩니다",
+        "evidence_quote": "this figure drops to 0.52 after social assistance is taken into account and drops again to 0.47 after taxation",
+        "eval": {
+          "score": 0.8274,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": null,
+  "claims": [],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-23T16:05:29Z",
+  "pack": {
+    "topic": {
+      "title": "지니 계수",
+      "wiki_title": "지니 계수",
+      "category": "빈부격차",
+      "source": "seed",
+      "angle": "어떤 조건이면 다시 벌어질 수 있나(조건부로)",
+      "score": 0.6779,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.531
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7339,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.531
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.53 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 지니 계수",
+        "url": "https://ko.wikipedia.org/wiki/%EC%A7%80%EB%8B%88_%EA%B3%84%EC%88%98",
+        "published": "2026-11-14",
+        "fetched_at": "2026-11-23",
+        "text": "지니 계수( - 係數, 영어: Gini coefficient, 이탈리아어: coefficiente di Gini)는 경제적 불평등(소득 불균형)을 계수화한 것이다. 오늘날 널리 사용되는, 불평등의 정도를 나타내는 통계학적 지수로, 이탈리아의 통계학자인 코라도 지니(Corrado Gini)가 1912년 발표한 논문 \"Variabilità e mutabilità\"에 처음 소개되었다. 서로 다른 로렌츠 곡선들이 교차하는 경우 비교하기가 곤란하다는 로렌츠 곡선의 단점을 보완할 수 있다. 지니 계수는 소득 분배의 불평등함 외에도, 부의 편중이나 에너지 소비에 있어서의 불평등함에도 응용된다.\n\n원리\n인구의 누적비율과 소득의 누적 점유율 사이의 상관관계를 나타내는 로렌츠 곡선은 소득분배가 완전히 평등하다면 기울기가 1인 대각선의 형태가 될 것이다. 이는 바꾸어 말하면 현실의 소득분포가 완전 평등에서 멀어질수록 로렌츠 곡선은 대각선에서 멀어진 곡선의 형태를 띨 것이라는 것을 의미한다. 이제 대각선과 로렌츠 곡선 사이의 면적을 A, 로렌츠 곡선 하방의 면적을 B라고 하면, 지니계수는 A/(A+B)라는 공식을 통해 구할 수 있다. 따라서 완전 평등하다면 0(A의 값이 0이므로), 완전 불평등한 상태라면 1이 될 것(B의 값이 0이므로)이다. 이를 통해서 서로 다른 사회들 간의 불평등의 정도를 비교할 수도 있다.\n\n유의해야 할 점과 한계\n지니 계수는 소득의 불평등함을 나타내는 지표의 하나가 되고 있지만, 몇 가지 유의 사항이 있다.\n\n같은 지니 계수여도 로렌츠 곡선이 현저하게 차이가 나면 실제 느끼는 불평등함은 다를 수 있다.\n세금이나 사회 복지 등에 의해 재분배 기능이 강한 나라의 경우, 초기 소득(세전 급여)에서의 지니 계수와, 소득 재분배 후의 지니 계수가 다르다.\n전 계층의 소득분배 상태를 하나의 수치로 나타내므로 특정 소득계층의 소득분포 상태를 알 수 없다.\n\n세계 나라별 지니계수 분포 현황\n\n지니계수의 공식\n\nA영역 = 로렌츠 곡선과 완전균형 대각선과의 사이 = 불평등 면적\nB영역 = 삼각형 전체면적 - A영역\n지니계수 G=AA+B\n소득 완전평등 = 0 , G=00+B\n로렌츠곡선이 완전균형 대각선에 수렴하여 일치될 때 A영역은 B영역에 의해 없어진다고 볼 수 있다.\n소득 완전불평등 = 1 , G=AA+0\n로렌츠곡선이 수직선에 수렴하여 일치될 때 B영역은 A영역에 의해 없어진다고 볼 수 있다.\n\n같이 보기\n\n로렌츠 곡선\n십분위분배율\n사회복지지출\n\n각주\n\n외부 링크\n(영어) UNDP 2007-2008 보고서 (53쪽 참고)\n(영어) CIA의 지니 계수 통계 보관됨 2007-06-13 - 웨이백 머신\n(e-나라지표,소득 분배(Gini계수) )http://www.index.go.kr/potal/main/EachDtlPageDetail.do?idx_cd=1407",
+        "lang": "ko",
+        "wiki_title": "지니 계수",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Gini coefficient",
+        "url": "https://en.wikipedia.org/wiki/Gini_coefficient",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-23",
+        "text": "In economics, the Gini coefficient ( JEE-nee), also known as the Gini index or Gini ratio, is a measure of statistical dispersion intended to represent the income inequality, the wealth inequality, or the consumption inequality within a nation or a social group. It was developed by Italian statistician and sociologist Corrado Gini.\nThe Gini coefficient measures the inequality among the values of a frequency distribution, such as income levels. A Gini coefficient of 0 reflects perfect equality, where all income or wealth values are the same. In contrast, a Gini coefficient of 1 (or 100%) reflects maximal inequality among values, where a single individual has all of the income while all others have none.\nCorrado Gini proposed the Gini coefficient as a measure of inequality of income or wealth. For OECD countries in the late 20th century, considering the effect of taxes and transfer payments, the income Gini coefficient ranged between 0.24 and 0.49, with Slovakia being the lowest and Mexico the highest. African countries had the highest pre-tax Gini coefficients in 2008–2009, with South Africa having the world's highest, estimated to be 0.63 to 0.7. However, this figure drops to 0.52 after social assistance is taken into account and drops again to 0.47 after taxation. Slovakia has the lowest Gini coefficient, with a Gini coefficient of 0.238. Various sources have estimated the Gini coefficient of the global income in 2005 to be between 0.61 and 0.68.\nThere are multiple issues in interpreting a Gini coefficient, as the same value may result from many different distribution curves. The demographic structure should be taken into account to mitigate this. Countries with an aging population or those with an increased birth rate experience an increasing pre-tax Gini coefficient even if real income distribution for working adults remains constant. Over a dozen variants of the Gini coefficient exist, devised by various scholars.\n\nHistory\nThe Italian statistician Corrado Gini developed the Gini coefficient and published it in his 1912 paper Variabilità e mutabilità (English: variability and mutability). Building on the work of economist Max Lorenz, Gini proposed using the difference between the hypothetical straight line depicting perfect equality and the actual line depicting people's incomes as a measure of inequality. In this paper, he introduced the concept of simple mean difference as a measure of variability.\nHe then applied the simple mean difference of observed variables to income and wealth inequality in his work On the measurement of concentration and variability of characters in 1914. Here, he presented the concentration ratio, which further developed into today's Gini coefficient. Secondly, Gini observed that improving methods introduced by Lorenz, Chatelain, or Séailles could also achieve his proposed ratio.\nIn 1915, Gaetano Pietra introduced a geometrical interpretation between Gini's proposed ratio and between the observed area of concentration and maximum concentration. This altered version of the Gini coefficient became the most commonly used inequality index in upcoming years.\nAccording to data from the OECD, the Gini coefficient was first officially used country-wide in Canada in the 1970s. Canadian index of income inequality ranged from 0.303 to 0.284 from 1976 to the end of the 1980s. The OECD has published more data on countries since the start of the 21st century. The Central European countries of Slovenia, Czechia, and Slovakia have had the lowest inequality index of all OECD countries ever since the 2000s. Scandinavian countries also frequently appeared at the top of the equality list in recent decades.\n\nDefinition\n\nThe Gini coefficient is an index for the degree of inequality in the distribution of income/wealth, used to estimate how far a country's wealth or income distribution deviates from an equal distribution.\nThe Gini coefficient is usually defined mathematically based on the Lorenz curve, which plots the proportion of the total income of the population (y-axis) that is cumulatively earned by the bottom x of the population (see diagram). The line at 45 degrees thus represents perfect equality of incomes. The Gini coefficient can then be thought of as the ratio of the area that lies between the line of equality and the Lorenz curve (marked A in the diagram) over the total area under the line of equality (marked A and B in the diagram); i.e., G = A/(A + B). If there are no negative incomes, it is also equal to 2A and 1 − 2B due to the fact that A + B = 0.5.\nAssuming non-negative income or wealth for all, the Gini coefficient's theoretical range is from 0 (total equality) to 1 (absolute inequality). This measure is often rendered as a percentage, spanning 0 to 100. However, if negative values are factored in, as in cases of debt, the Gini index could exceed 1. Typically, we presuppose a positive mean or total, precluding a Gini coefficient below zero.\nAn alternative approach is to define the Gini coefficient as half of the relative mean absolute difference, which is equivalent to the definition based on the Lorenz curve. The mean absolute difference is the average absolute difference of all pairs of items of the population, and the relative mean absolute difference is the mean absolute difference divided by the average, x¯, to normalize for scale. If xi is the wealth or income of person i, and there are n persons, then the Gini coefficient G is given by:\n\nG=∑i=1n∑j=1n|xi−xj|2n2x¯=∑i=1n∑j=1n|xi−xj|2n∑i=1nxi\nWhen the income (or wealth) distribution is given as a continuous probability density function p(x), the Gini coefficient is again half of the relative mean absolute difference:\n\nG=12μ∫−∞∞∫−∞∞p(x)p(y)|x−y|dxdy\nwhere μ=∫−∞∞xp(x)dx is the mean of the distribution, and the lower limits of integration may be replaced by zero when all incomes are positive.\n\nCalculation\n\nWhile the income distribution of any particular country will not correspond perfectly to the theoretical models, these models can provide a qualitative explanation of the income distribution in a nation given the Gini coefficient.\n\nExample: Two levels of income\nThe extreme cases are represented by the most equal possible society in which every person receives the same income (G = 0), and the most unequal society (with N individuals) where a single person receives 100% of the total income and the remaining N − 1 people receive none (G = 1 − 1/N).\n",
+        "lang": "en",
+        "wiki_title": "Gini coefficient",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:World Map Gini coefficient 2004.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/World_Map_Gini_coefficient_2004.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/World_Map_Gini_coefficient_2004.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:World_Map_Gini_coefficient_2004.png",
+        "width": 1357,
+        "height": 628,
+        "license": "Public domain",
+        "artist": "Groobie at German Wikipedia",
+        "caption": "Es wurden lediglich die Farben des Bildes \"de:Bild:World_Map_Gini_coefficient.png\" an die in der Tabelle \"Liste der Länder nach Einkommensverteilung\" angegebene",
+        "id": "P1"
+      },
+      {
+        "file": "File:World Map Gini coefficient with legend 2.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/World_Map_Gini_coefficient_with_legend_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/World_Map_Gini_coefficient_with_legend_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:World_Map_Gini_coefficient_with_legend_2.png",
+        "width": 1272,
+        "height": 864,
+        "license": "Public domain",
+        "artist": "Original uploader was HDDTZUZDSQ at fr.wikipedia",
+        "caption": "duvanGini coefficient, from en:Image:World Map Gini coefficient with legend 2.png",
+        "id": "P2"
+      },
+      {
+        "file": "File:Spatial representation of Lorenz Asymmetry Coefficient and Gini Coefficient values at the neighborhood level for the large Dhar Tichitt site of Dakhlet el Atrouss I, southeastern Mauritania.webp",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Spatial_representation_of_Lorenz_Asymmetry_Coefficient_and_Gini_Coefficient_values_at_the_neighborhood_level_for_the_large_Dhar_Tichitt_site_of_Dakhlet_el_Atrouss_I%2C_southeastern_Mauritania.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Spatial_representation_of_Lorenz_Asymmetry_Coefficient_and_Gini_Coefficient_values_at_the_neighborhood_level_for_the_large_Dhar_Tichitt_site_of_Dakhlet_el_Atrouss_I%2C_southeastern_Mauritania.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Spatial_representation_of_Lorenz_Asymmetry_Coefficient_and_Gini_Coefficient_values_at_the_neighborhood_level_for_the_large_Dhar_Tichitt_site_of_Dakhlet_el_Atrouss_I,_southeastern_Mauritania.webp",
+        "width": 1865,
+        "height": 898,
+        "license": "CC BY 4.0",
+        "artist": "Gonzalo J. Linares-Matás",
+        "caption": "Spatial representation of Lorenz Asymmetry Coefficient and Gini Coefficient values at the neighborhood level for the large Dhar Tichitt site of Dakhlet el Atrou",
+        "id": "P3"
+      },
+      {
+        "file": "File:Spanish Provinces by Gini Coefficient, 2021.png",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Spanish_Provinces_by_Gini_Coefficient%2C_2021.png/1920px-Spanish_Provinces_by_Gini_Coefficient%2C_2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Spanish_Provinces_by_Gini_Coefficient%2C_2021.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Spanish_Provinces_by_Gini_Coefficient,_2021.png",
+        "width": 2560,
+        "height": 1764,
+        "license": "CC0",
+        "artist": "Spencerlorin",
+        "caption": "Map of Spanish provinces by Gini coefficient, 2021 (INE)",
+        "id": "P4"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-23T16:03:43Z"
+  }
+}

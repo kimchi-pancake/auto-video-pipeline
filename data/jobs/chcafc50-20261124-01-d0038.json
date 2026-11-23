@@ -1,0 +1,663 @@
+{
+  "id": "chcafc50-20261124-01-d0038",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-23T16:01:22Z",
+  "topic": {
+    "title": "김장",
+    "wiki_title": "김장",
+    "category": "음식문화",
+    "source": "seed",
+    "angle": "숫자로 보면 얼마나 압도적인가",
+    "score": 0.6741,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.468
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.47 · 자극 0.35",
+    "evidence": 0.667,
+    "rescored": {
+      "score": 0.6835,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.667,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.468
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.67 · 성과prior 0.50(n=0) · 탐색 0.47 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-23T16:01:22Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-23T16:01:22Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-23T16:01:59Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-23T16:03:12Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "number_gap",
+      "first_line": "김장철이면 가구당 배추 20포기씩 담급니다",
+      "screen_text": "가구당 20포기",
+      "title": "김장철 가구당 배추 20포기, 누가 다 먹나",
+      "promise": "한겨울 김치 소비량을 지탱했던 가구당 김장 규모의 실체를 숫자로 확인합니다",
+      "evidence_quote": "For one month, starting from the tenth month of the year, people prepare large quantities of kimchi that will last throughout the winter.",
+      "eval": {
+        "score": 0.9969,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.97,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "number_gap",
+        "first_line": "김장철이면 가구당 배추 20포기씩 담급니다",
+        "screen_text": "가구당 20포기",
+        "title": "김장철 가구당 배추 20포기, 누가 다 먹나",
+        "promise": "한겨울 김치 소비량을 지탱했던 가구당 김장 규모의 실체를 숫자로 확인합니다",
+        "evidence_quote": "For one month, starting from the tenth month of the year, people prepare large quantities of kimchi that will last throughout the winter.",
+        "eval": {
+          "score": 0.9969,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "19세기 기록에야 비로소 '초겨울 김장'이 나옵니다",
+        "screen_text": "19세기 김장 기록",
+        "title": "고려시대 시에도 김장인데 19세기까지 안 보인 이유",
+        "promise": "이규보 시엔 절임 기록만 있고 본격적 김장 묘사는 19세기 문헌부터라는 기록의 공백을 해설합니다",
+        "evidence_quote": "지금과 같이 김치를 초겨울에 김장한 기록은 19세기 문헌에서 본격적으로 등장한다.",
+        "eval": {
+          "score": 0.9132,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "고춧가루 없는 김장이 17세기까지 지속됐습니다",
+        "screen_text": "고추 없는 김장",
+        "title": "고춧가루 없는 백김장, 17세기까지 계속됐다",
+        "promise": "빨간 김치의 상징 고춧가루가 17세기에야 들어갔다는 기록의 의미를 짚어봅니다",
+        "evidence_quote": "Red pepper was added to the ingredients in the 17th century.",
+        "eval": {
+          "score": 0.9106,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "남북이 같은 해 다른 시기에 유네스코 등재됐습니다",
+        "screen_text": "남북 별도 등재",
+        "title": "김장 문화, 남북이 2년 차이로 각각 등재된 사연",
+        "promise": "2013년 남한, 2015년 북한이 같은 문화유산을 따로 등재한 배경과 차이를 비교합니다",
+        "evidence_quote": "2013년에 대한민국의 인류무형문화유산으로 등재되었다. 또한, 2015년에 조선민주주의인민공화국의 인류무형문화유산으로 등재되었다.",
+        "eval": {
+          "score": 0.8546,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "김치 냄새 때문에 냉장고 하나 더 사야 했습니다",
+        "screen_text": "김치냉장고 탄생",
+        "title": "김치 냄새가 만든 김치냉장고, 필수 가전이 되다",
+        "promise": "일반 냉장고 음식을 망치던 김치 냄새 문제가 전용 냉장고 탄생으로 어떻게 해결됐는지 보여드립니다",
+        "evidence_quote": "the strong odors of kimchi can taint any other products in a refrigerator. It is also increasingly common to own and use secondary refrigerators designed specifically for storing kimchi",
+        "eval": {
+          "score": 0.8543,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "김치냉장고 없던 시절 땅속 항아리가 냉장고였습니다",
+        "screen_text": "땅속 항아리 원리",
+        "title": "영하에도 안 얼게 묻는 항아리 매장법",
+        "promise": "현대 냉장고 없이 겨울 내내 김치 맛을 지킨 땅속 보관 기술의 과학적 원리를 설명합니다",
+        "evidence_quote": "store kimchi in earthenware jars in the ground, buried up to the neck level of the jar to prevent the contents from freezing",
+        "eval": {
+          "score": 0.8384,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 0.4,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "김장, 한겨울 20포기의 비밀",
+    "target_seconds": 35,
+    "category": "음식문화",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "김장철이면 가구당 배추 20포기씩 담급니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "김장철 가구당 배추 20포기 규모로 담근다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "김장은 겨울 동안 먹기 위해 김치, 깍두기, 동치미 등을 담가두는 것을 말한다."
+          }
+        ]
+      },
+      {
+        "narration": "배추를 반으로 쪼개 9시간 소금물에 절인 뒤 헹궈 탈수합니다.",
+        "visual": {
+          "type": "steps",
+          "title": "김장 절임 과정",
+          "items": [
+            "반으로 쪼개기",
+            "9시간 소금 절임",
+            "헹굼과 탈수"
+          ]
+        },
+        "claims": [
+          {
+            "text": "배추를 반으로 쪼개 9시간 소금물에 절인다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "배추를 반으로 쪼개어 9시간 정도 소금물에 절인 후 냉수에 헹군 후 탈수시킨다."
+          }
+        ]
+      },
+      {
+        "narration": "무채에 고춧가루를 넣고 버무린 뒤 마늘, 생강 등 양념을 더해 소를 만듭니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "무채에 고춧가루와 마늘 생강 등 양념을 넣어 소를 만든다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "무채에 고춧가루를 넣고 버무린다. 다시 그 위에 각 채소와 마늘, 생강을 넣고 버무린다."
+          }
+        ]
+      },
+      {
+        "narration": "절인 배추 잎 사이로 소를 넣고 겉잎으로 싸서 항아리에 꼭꼭 눌러 담습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "김장 담그기",
+          "items": [
+            "배춧잎 사이 소 넣기",
+            "겉잎으로 싸기",
+            "항아리에 눌러 담기"
+          ]
+        },
+        "claims": [
+          {
+            "text": "절인 배춧잎 사이로 소를 넣고 겉잎으로 싸 항아리에 눌러 담는다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "절인 배추잎 사이로 소를 넣은 후 겉잎으로 싸서 덮는다. 항아리에 배추속이 위에 오게끔 한 포기씩 담고 공기와 접촉하지 않도록 꼭꼭 눌러 넣는다."
+          }
+        ]
+      },
+      {
+        "narration": "땅속 항아리는 영하에서도 얼지 않게 온도를 지켜 발효를 조절했습니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P4"
+        },
+        "claims": [
+          {
+            "text": "땅속 항아리가 영하에서도 김치가 얼지 않게 보관했다",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "The traditional solution prior to effective modern refrigeration is to store kimchi in earthenware jars in the ground, buried up to the neck level of the jar to prevent the contents from freezing."
+          }
+        ]
+      },
+      {
+        "narration": "2013년 유네스코 인류무형문화유산, 2015년 북한도 등재하며 한민족 공통 유산으로 남았습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "2013·2015",
+          "small": "남북 동시 등재"
+        },
+        "claims": [
+          {
+            "text": "2013년 대한민국, 2015년 북한 유네스코 인류무형문화유산 등재",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "2013년에 대한민국의 인류무형문화유산으로 등재되었다. 또한, 2015년에 조선민주주의인민공화국의 인류무형문화유산으로 등재되었다."
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "김장철 가구당 배추 20포기 규모로 담근다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 김장",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "김장은 겨울 동안 먹기 위해 김치, 깍두기, 동치미 등을 담가두는 것을 말한다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "배추를 반으로 쪼개 9시간 소금물에 절인다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 김장",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "배추를 반으로 쪼개어 9시간 정도 소금물에 절인 후 냉수에 헹군 후 탈수시킨다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "무채에 고춧가루와 마늘 생강 등 양념을 넣어 소를 만든다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 김장",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "무채에 고춧가루를 넣고 버무린다. 다시 그 위에 각 채소와 마늘, 생강을 넣고 버무린다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "절인 배춧잎 사이로 소를 넣고 겉잎으로 싸 항아리에 눌러 담는다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 김장",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "절인 배추잎 사이로 소를 넣은 후 겉잎으로 싸서 덮는다. 항아리에 배추속이 위에 오게끔 한 포기씩 담고 공기와 접촉하지 않도록 꼭꼭 눌러 넣는다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "땅속 항아리가 영하에서도 김치가 얼지 않게 보관했다",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — Gimjang",
+        "source_url": "https://en.wikipedia.org/wiki/Gimjang",
+        "published": "2026-11-17",
+        "checked_at": "2026-11-23",
+        "quote": "The traditional solution prior to effective modern refrigeration is to store kimchi in earthenware jars in the ground, buried up to the neck level of the jar to prevent the contents from freezing.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 5,
+        "text": "2013년 대한민국, 2015년 북한 유네스코 인류무형문화유산 등재",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 김장",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-23",
+        "quote": "2013년에 대한민국의 인류무형문화유산으로 등재되었다. 또한, 2015년에 조선민주주의인민공화국의 인류무형문화유산으로 등재되었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 235,
+      "est_seconds": 43.5,
+      "scenes": 6,
+      "avg_new_tokens_per_scene": 9.2,
+      "max_scene_similarity": 0.1,
+      "visual_mix": {
+        "photo": 3,
+        "stat": 1,
+        "steps": 2
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "김장철 가구당 배추 20포기 규모로 담근다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 김장",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "김장은 겨울 동안 먹기 위해 김치, 깍두기, 동치미 등을 담가두는 것을 말한다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "배추를 반으로 쪼개 9시간 소금물에 절인다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 김장",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "배추를 반으로 쪼개어 9시간 정도 소금물에 절인 후 냉수에 헹군 후 탈수시킨다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "무채에 고춧가루와 마늘 생강 등 양념을 넣어 소를 만든다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 김장",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "무채에 고춧가루를 넣고 버무린다. 다시 그 위에 각 채소와 마늘, 생강을 넣고 버무린다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "절인 배춧잎 사이로 소를 넣고 겉잎으로 싸 항아리에 눌러 담는다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 김장",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "절인 배추잎 사이로 소를 넣은 후 겉잎으로 싸서 덮는다. 항아리에 배추속이 위에 오게끔 한 포기씩 담고 공기와 접촉하지 않도록 꼭꼭 눌러 넣는다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "땅속 항아리가 영하에서도 김치가 얼지 않게 보관했다",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — Gimjang",
+      "source_url": "https://en.wikipedia.org/wiki/Gimjang",
+      "published": "2026-11-17",
+      "checked_at": "2026-11-23",
+      "quote": "The traditional solution prior to effective modern refrigeration is to store kimchi in earthenware jars in the ground, buried up to the neck level of the jar to prevent the contents from freezing.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 5,
+      "text": "2013년 대한민국, 2015년 북한 유네스코 인류무형문화유산 등재",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 김장",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-23",
+      "quote": "2013년에 대한민국의 인류무형문화유산으로 등재되었다. 또한, 2015년에 조선민주주의인민공화국의 인류무형문화유산으로 등재되었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-23T16:03:12Z",
+  "pack": {
+    "topic": {
+      "title": "김장",
+      "wiki_title": "김장",
+      "category": "음식문화",
+      "source": "seed",
+      "angle": "숫자로 보면 얼마나 압도적인가",
+      "score": 0.6741,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.468
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.47 · 자극 0.35",
+      "evidence": 0.667,
+      "rescored": {
+        "score": 0.6835,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.667,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.468
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.67 · 성과prior 0.50(n=0) · 탐색 0.47 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 김장",
+        "url": "https://ko.wikipedia.org/wiki/%EA%B9%80%EC%9E%A5",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-23",
+        "text": "김장은 겨울 동안 먹기 위해 김치, 깍두기, 동치미 등을 담가두는 것을 말한다.\n한반도 전역에서 행해지는 김장의 기원은 알 수 없으나, 문헌상으로는 고려시대의 이규보(1168~1241)가 쓴 시에 ‘무를 장에 담그거나, 소금에 절인다’는 내용으로 김장에 언급되었고, 지금과 같이 김치를 초겨울에 김장한 기록은 19세기 문헌에서 본격적으로 등장한다.\n2013년에 대한민국의 인류무형문화유산으로 등재되었다. 또한, 2015년에 조선민주주의인민공화국의 인류무형문화유산으로 등재되었다.\n\n재료\n배추\n무\n대파\n쪽파\n갓\n마늘\n생강\n양파\n고춧가루\n소금\n설탕\n액젓\n지역에 따라 들어가는 재료들이 매우 상이하다.\n\n방법\n배추를 반으로 쪼개어 9시간 정도 소금물에 절인 후 냉수에 헹군 후 탈수시킨다.\n무채에 고춧가루를 넣고 버무린다. 다시 그 위에 각 채소와 마늘, 생강을 넣고 버무린다.\n소금과 설탕, 젓갈 등으로 간을 맞춘다.\n절인 배추잎 사이로 소를 넣은 후 겉잎으로 싸서 덮는다.\n항아리에 배추속이 위에 오게끔 한 포기씩 담고 공기와 접촉하지 않도록 꼭꼭 눌러 넣는다.\n현재 대한민국에서는 김치냉장고의 일반화로 보관 문제는 없어지고, 김치가 양산되어 구입해 섭취하는 인구가 많아졌지만 아직은 민간 곳곳에서 전통적인 김장 방법으로 김치를 담가 먹고 있다.\n\n같이 보기\n김치\n새우젓\n고무장갑\n장독대\n\n각주\n\n외부 링크\n\n“농과대학 응용식물학부 원예학전공 시설원예학ㆍ채소원예 김장 설명”. 2008년 12월 6일에 원본 문서에서 보존된 문서. 2008년 4월 20일에 확인함. \n인류무형문화유산 목록 보관됨 2019-08-20 - 웨이백 머신 - 유네스코한국위원회",
+        "lang": "ko",
+        "wiki_title": "김장",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Gimjang",
+        "url": "https://en.wikipedia.org/wiki/Gimjang",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-23",
+        "text": "Gimjang (Korean: 김장) is the traditional process of preparation and preservation of kimchi, a spicy Korean fermented vegetable dish, in the wintertime. During the summer months, kimchi is made fresh, from seasonal vegetables. For one month, starting from the tenth month of the year, people prepare large quantities of kimchi that will last throughout the winter.\nGimjang was listed as a UNESCO Intangible Cultural Heritage in December 2013 and the 133rd Korean Intangible Cultural Property.\n\nBackground\nKimchi can be eaten as an accompaniment to almost any meal and is an important part of Korean culture. Recipes date back to at least the 13th century, when it was made from vegetables, pickles, and either salt or a mixture of alcohol and salt. Red pepper was added to the ingredients in the 17th century. Modern-day kimchi is typically made from napa cabbage and white radish, although there are hundreds of variations; it may also contain turnip, leeks, carrots, and garlic.\n\nProcess\nIn the cooler weather of November, there are many crops in the fields and market-places, and the gimjang process begins. Before industrialization, the ardous task was traditionally shared by familial contacts. Groups gather to cut the vegetables, wash them, and add salt to cure the food and begin the fermentation process.\nThe nature of kimchi means that it is challenging to store for long periods; if it is too cold, it will freeze, and if it is too warm, it will over ferment, and may turn sour. The traditional solution prior to effective modern refrigeration is to store kimchi in earthenware jars in the ground, buried up to the neck level of the jar to prevent the contents from freezing. As the temperature falls below 0 °C, fermentation is halted and the food is preserved; it begins again as the temperature increases in spring time.\nDespite modern advances in refrigeration, the custom of gimjang continues to be passed down the generations. It is common in cities for people to store large jars of fermenting kimchi on balconies. It is also increasingly common to own and use secondary refrigerators designed specifically for storing kimchi, as the strong odors of kimchi can taint any other products in a refrigerator.\n\nNotes\n\nReferences\n\nExternal links\n\n농과대학 응용식물학부 원예학전공 시설원예학ㆍ채소원예 김장 설명[link removed]",
+        "lang": "en",
+        "wiki_title": "Gimjang",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Gimjang in Gaemi Village, 1 December 2012.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Gimjang_in_Gaemi_Village%2C_1_December_2012.jpg/1920px-Gimjang_in_Gaemi_Village%2C_1_December_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Gimjang_in_Gaemi_Village%2C_1_December_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Gimjang_in_Gaemi_Village,_1_December_2012.jpg",
+        "width": 3872,
+        "height": 2592,
+        "license": "CC BY 2.0",
+        "artist": "USAG- Humphreys",
+        "caption": "Gimjang: kimchi making for the winter",
+        "id": "P1"
+      },
+      {
+        "file": "File:Gimjang in Gaemi Village, 1 December 2012 2.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Gimjang_in_Gaemi_Village%2C_1_December_2012_2.jpg/1920px-Gimjang_in_Gaemi_Village%2C_1_December_2012_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Gimjang_in_Gaemi_Village%2C_1_December_2012_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Gimjang_in_Gaemi_Village,_1_December_2012_2.jpg",
+        "width": 3872,
+        "height": 2592,
+        "license": "CC BY 2.0",
+        "artist": "USAG- Humphreys",
+        "caption": "Gimjang: kimchi making for the winter season",
+        "id": "P2"
+      },
+      {
+        "file": "File:LGサンタ キムチサービス (5196137191).jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/LG%E3%82%B5%E3%83%B3%E3%82%BF_%E3%82%AD%E3%83%A0%E3%83%81%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9_%285196137191%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/LG%E3%82%B5%E3%83%B3%E3%82%BF_%E3%82%AD%E3%83%A0%E3%83%81%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9_%285196137191%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:LG%E3%82%B5%E3%83%B3%E3%82%BF_%E3%82%AD%E3%83%A0%E3%83%81%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9_(5196137191).jpg",
+        "width": 1039,
+        "height": 690,
+        "license": "CC BY 2.0",
+        "artist": "LG전자",
+        "caption": "서울 구로구 '구로노인종합복지관'에서 열린 「함께하는 김장, 함께하는 나눔」 행사에서 LG전자 한국지역본부장 박경준 전무(오른쪽)가 다문화가정 아이에게 이날담근 김장김치를 먹여주고 있다.",
+        "id": "P3"
+      },
+      {
+        "file": "File:김치 김장 Making kimchi IMG 2919.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2919.jpg/1920px-%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2919.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2919.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2919.jpg",
+        "width": 4032,
+        "height": 3024,
+        "license": "CC0",
+        "artist": "Anattadairy",
+        "caption": "Making kimchi",
+        "id": "P4"
+      },
+      {
+        "file": "File:김치 김장 Making kimchi IMG 2917.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2917.jpg/1920px-%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2917.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2917.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2917.jpg",
+        "width": 4032,
+        "height": 3024,
+        "license": "CC0",
+        "artist": "Anattadairy",
+        "caption": "Making kimchi",
+        "id": "P5"
+      },
+      {
+        "file": "File:한국기행 김장 음식 붕어빵.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/%ED%95%9C%EA%B5%AD%EA%B8%B0%ED%96%89_%EA%B9%80%EC%9E%A5_%EC%9D%8C%EC%8B%9D_%EB%B6%95%EC%96%B4%EB%B9%B5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/%ED%95%9C%EA%B5%AD%EA%B8%B0%ED%96%89_%EA%B9%80%EC%9E%A5_%EC%9D%8C%EC%8B%9D_%EB%B6%95%EC%96%B4%EB%B9%B5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%ED%95%9C%EA%B5%AD%EA%B8%B0%ED%96%89_%EA%B9%80%EC%9E%A5_%EC%9D%8C%EC%8B%9D_%EB%B6%95%EC%96%B4%EB%B9%B5.jpg",
+        "width": 1920,
+        "height": 1080,
+        "license": "CC BY 4.0",
+        "artist": "Korea Education and Broadcasting Corporation",
+        "caption": "Bungeo-ppang",
+        "id": "P6"
+      }
+    ],
+    "evidence": 0.667,
+    "ok": true,
+    "built_at": "2026-11-23T16:01:22Z"
+  }
+}
