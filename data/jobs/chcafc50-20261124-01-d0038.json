@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261124-01-d0038",
   "channel": "도개",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-23T16:01:22Z",
   "topic": {
     "title": "김장",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-23T16:03:12Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-23T16:10:49Z",
+      "note": "장면 자료 6개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-23T16:10:49Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-23T16:12:23Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-23T16:12:29Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-23T16:12:55Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-23T16:13:46Z",
+      "note": "예약공개 11-26 20:00"
     }
   ],
   "attempts": {},
@@ -513,20 +543,154 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Gimjang in Gaemi Village, 1 December 2012.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Gimjang_in_Gaemi_Village,_1_December_2012.jpg",
+          "license": "CC BY 2.0",
+          "artist": "USAG- Humphreys",
+          "caption": "Gimjang: kimchi making for the winter"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Gimjang in Gaemi Village, 1 December 2012 2.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Gimjang_in_Gaemi_Village,_1_December_2012_2.jpg",
+          "license": "CC BY 2.0",
+          "artist": "USAG- Humphreys",
+          "caption": "Gimjang: kimchi making for the winter season"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:김치 김장 Making kimchi IMG 2919.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%EA%B9%80%EC%B9%98_%EA%B9%80%EC%9E%A5_Making_kimchi_IMG_2919.jpg",
+          "license": "CC0",
+          "artist": "Anattadairy",
+          "caption": "Making kimchi"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/chcafc50-20261124-01-d0038/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/chcafc50-20261124-01-d0038/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/chcafc50-20261124-01-d0038/out/subtitles.ass",
+    "bgm": "piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "6개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 3장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.08"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "39.2s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "39.2s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 75/편차 39; 밝기 75/편차 39"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 39/편차 33"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -17.7dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 19개, 마지막 38.7s / 영상 39.2s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "RvCrL8cnKEU",
+    "scheduled_at": "2026-11-26T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "도개-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-23T16:03:12Z",
+  "updated_at": "2026-11-23T16:13:46Z",
   "pack": {
     "topic": {
       "title": "김장",
