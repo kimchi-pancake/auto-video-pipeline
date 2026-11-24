@@ -1,0 +1,826 @@
+{
+  "id": "ch9ede5c-20261125-01-d5841",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-24T16:09:19Z",
+  "topic": {
+    "title": "경제 제재",
+    "wiki_title": "경제 제재",
+    "category": "무역제재",
+    "source": "seed",
+    "angle": "공식 설명이 말하지 않는 것",
+    "score": 0.7054,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.65,
+      "explore": 0.39
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.39 · 자극 0.65",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7614,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.39
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.39 · 자극 0.65"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-24T16:09:19Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-24T16:09:19Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-24T16:09:44Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-24T16:11:43Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "제재 성공률 34%? 재검토하니 4%였습니다",
+      "screen_text": "실제 성공률 4%",
+      "title": "학자들도 속은 제재 '성공 신화'의 진실",
+      "promise": "휴프바우어 연구의 40건 성공 사례 중 진짜는 5건뿐이었던 이유",
+      "evidence_quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며, 성공률은 4%로 감소했다.",
+      "eval": {
+        "score": 0.9927,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.93,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "제재 성공률 34%? 재검토하니 4%였습니다",
+        "screen_text": "실제 성공률 4%",
+        "title": "학자들도 속은 제재 '성공 신화'의 진실",
+        "promise": "휴프바우어 연구의 40건 성공 사례 중 진짜는 5건뿐이었던 이유",
+        "evidence_quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며, 성공률은 4%로 감소했다.",
+        "eval": {
+          "score": 0.9927,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "제재하는 나라도 시장 잃고, 제재받는 나라는 우회로 찾는다",
+        "screen_text": "쌍방 손실 구조",
+        "title": "러시아 제재로 비자·마스터카드도 손해 본 이유",
+        "promise": "제재 부과국 기업이 경쟁국에 시장 뺏기고, 대상국은 제3국 경유로 버티는 무역 이동의 메커니즘",
+        "evidence_quote": "수출 제한이 부과되거나 제재가 부과국 기업이 대상국과 거래하는 것을 금지하면, 부과국은 경쟁국에 시장과 투자 기회를 잃을 수 있다.",
+        "eval": {
+          "score": 0.97,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "말과 전쟁 사이 '다른 할 일 없어서' 제재한다, 진짜인가요?",
+        "screen_text": "외교관의 고백",
+        "title": "제레미 그린스톡이 밝힌 제재의 진짜 존재 이유",
+        "promise": "효과 의심받는데도 70년 넘게 제재가 사라지지 않는 정치·제도적 이유 한 줄로 정리",
+        "evidence_quote": "제재가 효과적이라는 것이 알려져서 인기 있는 것이 아니라, \"정부에 압력을 가하고 싶을 때 말과 군사 행동 사이에 다른 할 일이 없기 때문\"이라고 말한다.",
+        "eval": {
+          "score": 0.9679,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "이란 제재로 부자가 더 큰 손해 봤다, 빈곤층은?",
+        "screen_text": "부유층 손실 더 큼",
+        "title": "스마트 제재라는데, 왜 일반인 카드까지 막혔나",
+        "promise": "표적 제재가 엘리트만 겨냥한다면서 일반 시민 신용카드를 멈추게 한 구조적 결함",
+        "evidence_quote": "경제 제재가 이란의 모든 소득 계층에 걸쳐 복지 손실을 초래하며, 부유층이 빈곤층보다 더 큰 손실을 입는다는 것을 보여준다.",
+        "eval": {
+          "score": 0.944,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "나폴레옹이 영국을 막으려다 유럽 경제를 망쳤습니다",
+        "screen_text": "대륙봉쇄령의 역설",
+        "title": "나폴레옹 제재, 영국 대신 유럽을 쳤다",
+        "promise": "역사상 가장 유명한 제재가 왜 자해골이 됐는지 60초에 정리해 드립니다",
+        "evidence_quote": "프랑스 제국은 이 통상 금지를 완전히 시행할 수 없었으며, 이는 영국뿐만 아니라 관련된 유럽 국가들에게도 해로웠다(혹은 더 해로웠다).",
+        "eval": {
+          "score": 0.8525,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "UN 제재는 GDP 5% 깎는데, 미국 단독 제재는 0.5%뿐",
+        "screen_text": "효과 차이 10배",
+        "title": "누가 제재하냐에 따라 경제 충격이 10배 갈린다",
+        "promise": "같은 제재라도 다자·단독, 포괄·표적에 따라 파괴력이 어떻게 다른지 수치로 보여드립니다",
+        "evidence_quote": "포괄적인 유엔 통상 금지의 경우 연평균 5% 이상 감소했고... 일방적인 미국 제재는 GDP 성장에 상당히 작은 영향을 미쳐 연평균 0.5~0.9% 감소시켰다.",
+        "eval": {
+          "score": 0.845,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 0.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "제재 성공률 4%의 진실",
+    "target_seconds": 35,
+    "category": "무역제재",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "제재 성공률 34%? 재검토하니 4%였습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "34% → 4%",
+          "small": "휴프바우어 연구 재검토"
+        },
+        "claims": [
+          {
+            "text": "휴프바우어 연구진은 연구 사례 중 34%가 성공적이었다고 보고했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "휴프바우어 외 연구진은 연구된 사례 중 34%가 성공적이었다는 것을 발견했다"
+          },
+          {
+            "text": "페이프 재검토에서 보고된 40건 성공 중 실제 효과는 5건뿐이었다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며, 성공률은 4%로 감소했다"
+          }
+        ]
+      },
+      {
+        "narration": "로버트 페이프 교수가 40건 성공 사례를 뜯어보니 실제 효과를 본 건 5건뿐이었습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "성공 사례 재검토",
+          "a": {
+            "label": "보고된 성공",
+            "value": 40
+          },
+          "b": {
+            "label": "실제 효과",
+            "value": 5
+          },
+          "unit": "건"
+        },
+        "claims": [
+          {
+            "text": "페이프 검토 결과 보고된 40건 성공 중 실제 효과는 5건에 불과했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며"
+          },
+          {
+            "text": "이에 따라 성공률은 34%에서 4%로 대폭 낮아졌다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "성공률은 4%로 감소했다"
+          }
+        ]
+      },
+      {
+        "narration": "정권 교체가 목표인 제재가 39%나 되지만 제재만으로 정권이 바뀌었는지 입증하기 어렵습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "제재 효과 측정의 난점",
+          "items": [
+            "제재 부과",
+            "경제적 압박",
+            "정권 변화?",
+            "내부 요인 혼재"
+          ]
+        },
+        "claims": [
+          {
+            "text": "정권 교체는 제재의 가장 빈번한 목표로 부과 사례의 39% 이상을 차지한다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "정권 교체가 경제 제재의 가장 빈번한 외교 정책 목표이며, 부과 사례의 39% 이상을 차지한다고 주장한다"
+          },
+          {
+            "text": "제재 때문인지 내부 불안정 때문인지 구분하기 어렵다는 분석이 있다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "다시 말해, 정권이나 국가가 변화하는 이유(즉, 제재 때문인지 내재적 불안정 때문인지)를 결정하기 어렵고, 주어진 행동의 완전한 정치적 효과를 측정하는 것은 두 배로 어렵다.",
+            "reclassified": "단정형 해석 → 사실로 검증",
+            "quote_found_by": "code"
+          }
+        ]
+      },
+      {
+        "narration": "유엔 제재는 대상국 성장률을 연 2.3~3.5% 깎지만 미국 단독 제재는 0.5~0.9%에 그칩니다.",
+        "visual": {
+          "type": "chart",
+          "indicator": "gdp_growth",
+          "countries": [
+            "RUS",
+            "IRN",
+            "VEN"
+          ],
+          "from": 1990,
+          "to": 2022
+        },
+        "claims": [
+          {
+            "text": "유엔 제재는 목표국 GDP 성장을 연평균 2.3~3.5% 감소시켰다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "유엔 경제 제재는 목표 국가의 GDP 성장을 연평균 2.3~3.5% 감소시키는 통계적으로 유의미한 영향을 미쳤으며"
+          },
+          {
+            "text": "일방적 미국 제재는 연평균 0.5~0.9% 감소에 그쳤다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "일방적인 미국 제재는 GDP 성장에 상당히 작은 영향을 미쳐 연평균 0.5~0.9% 감소시켰으며"
+          }
+        ]
+      },
+      {
+        "narration": "스마트 제재도 목표 달성률 22%에 불과해 여전히 한계가 뚜렷합니다.",
+        "visual": {
+          "type": "stat",
+          "big": "22%",
+          "small": "표적 제재 목표 달성률"
+        },
+        "claims": [
+          {
+            "text": "2016년 표적 제재 컨소시엄 조사에서 스마트 제재 목표 달성률은 22%였다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "표적 제재가 정책 목표를 달성하는 경우가 22%에 불과하다는 것을 발견했다"
+          },
+          {
+            "text": "스마트 제재도 민간인 피해나 의도치 않은 결과를 완전히 피하지 못했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "스마트 제재 역시 민간인 피해나 의도치 않은 결과를 완전히 피하는 데 성공하지 못했다"
+          }
+        ]
+      },
+      {
+        "narration": "제재는 말과 전쟁 사이 유일한 수단이지만 실제 효과는 4%에 그칩니다.",
+        "visual": {
+          "type": "text",
+          "headline": "구조적 한계 확인",
+          "sub": "제재 선택 시 효과 검증 필요"
+        },
+        "claims": [
+          {
+            "text": "그린스톡은 제재가 효과적이라서가 아니라 말과 군사 행동 사이 대안이 없어서 쓰인다고 말했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "제재가 효과적이라는 것이 알려져서 인기 있는 것이 아니라, 정부에 압력을 가하고 싶을 때 말과 군사 행동 사이에 다른 할 일이 없기 때문"
+          },
+          {
+            "text": "제재 성공률은 재검토 결과 4%로 확인돼 구조적 한계가 크다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "성공률은 4%로 감소했다. 어느 경우든, 목표와 관련하여 제재의 실제 성공을 측정하는 어려움과 예상치 못한 미묘한 차이는 점점 더 분명해지고 있으며 여전히 논쟁 중이다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "휴프바우어 연구진은 연구 사례 중 34%가 성공적이었다고 보고했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "휴프바우어 외 연구진은 연구된 사례 중 34%가 성공적이었다는 것을 발견했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 0,
+        "text": "페이프 재검토에서 보고된 40건 성공 중 실제 효과는 5건뿐이었다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며, 성공률은 4%로 감소했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 1,
+        "text": "페이프 검토 결과 보고된 40건 성공 중 실제 효과는 5건에 불과했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 1,
+        "text": "이에 따라 성공률은 34%에서 4%로 대폭 낮아졌다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "성공률은 4%로 감소했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 2,
+        "text": "정권 교체는 제재의 가장 빈번한 목표로 부과 사례의 39% 이상을 차지한다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "정권 교체가 경제 제재의 가장 빈번한 외교 정책 목표이며, 부과 사례의 39% 이상을 차지한다고 주장한다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 2,
+        "text": "제재 때문인지 내부 불안정 때문인지 구분하기 어렵다는 분석이 있다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "다시 말해, 정권이나 국가가 변화하는 이유(즉, 제재 때문인지 내재적 불안정 때문인지)를 결정하기 어렵고, 주어진 행동의 완전한 정치적 효과를 측정하는 것은 두 배로 어렵다.",
+        "verified": true,
+        "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 3,
+        "text": "유엔 제재는 목표국 GDP 성장을 연평균 2.3~3.5% 감소시켰다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "유엔 경제 제재는 목표 국가의 GDP 성장을 연평균 2.3~3.5% 감소시키는 통계적으로 유의미한 영향을 미쳤으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C8",
+        "scene": 3,
+        "text": "일방적 미국 제재는 연평균 0.5~0.9% 감소에 그쳤다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "일방적인 미국 제재는 GDP 성장에 상당히 작은 영향을 미쳐 연평균 0.5~0.9% 감소시켰으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C9",
+        "scene": 4,
+        "text": "2016년 표적 제재 컨소시엄 조사에서 스마트 제재 목표 달성률은 22%였다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "표적 제재가 정책 목표를 달성하는 경우가 22%에 불과하다는 것을 발견했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C10",
+        "scene": 4,
+        "text": "스마트 제재도 민간인 피해나 의도치 않은 결과를 완전히 피하지 못했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "스마트 제재 역시 민간인 피해나 의도치 않은 결과를 완전히 피하는 데 성공하지 못했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C11",
+        "scene": 5,
+        "text": "그린스톡은 제재가 효과적이라서가 아니라 말과 군사 행동 사이 대안이 없어서 쓰인다고 말했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "제재가 효과적이라는 것이 알려져서 인기 있는 것이 아니라, 정부에 압력을 가하고 싶을 때 말과 군사 행동 사이에 다른 할 일이 없기 때문",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C12",
+        "scene": 5,
+        "text": "제재 성공률은 재검토 결과 4%로 확인돼 구조적 한계가 크다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 경제 제재",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "checked_at": "2026-11-24",
+        "quote": "성공률은 4%로 감소했다. 어느 경우든, 목표와 관련하여 제재의 실제 성공을 측정하는 어려움과 예상치 못한 미묘한 차이는 점점 더 분명해지고 있으며 여전히 논쟁 중이다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 257,
+      "est_seconds": 47.6,
+      "scenes": 6,
+      "avg_new_tokens_per_scene": 10.0,
+      "max_scene_similarity": 0.15,
+      "visual_mix": {
+        "compare": 1,
+        "stat": 2,
+        "chart": 1,
+        "text": 1,
+        "steps": 1
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "휴프바우어 연구진은 연구 사례 중 34%가 성공적이었다고 보고했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "휴프바우어 외 연구진은 연구된 사례 중 34%가 성공적이었다는 것을 발견했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 0,
+      "text": "페이프 재검토에서 보고된 40건 성공 중 실제 효과는 5건뿐이었다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며, 성공률은 4%로 감소했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 1,
+      "text": "페이프 검토 결과 보고된 40건 성공 중 실제 효과는 5건에 불과했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 1,
+      "text": "이에 따라 성공률은 34%에서 4%로 대폭 낮아졌다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "성공률은 4%로 감소했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 2,
+      "text": "정권 교체는 제재의 가장 빈번한 목표로 부과 사례의 39% 이상을 차지한다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "정권 교체가 경제 제재의 가장 빈번한 외교 정책 목표이며, 부과 사례의 39% 이상을 차지한다고 주장한다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 2,
+      "text": "제재 때문인지 내부 불안정 때문인지 구분하기 어렵다는 분석이 있다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "다시 말해, 정권이나 국가가 변화하는 이유(즉, 제재 때문인지 내재적 불안정 때문인지)를 결정하기 어렵고, 주어진 행동의 완전한 정치적 효과를 측정하는 것은 두 배로 어렵다.",
+      "verified": true,
+      "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 3,
+      "text": "유엔 제재는 목표국 GDP 성장을 연평균 2.3~3.5% 감소시켰다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "유엔 경제 제재는 목표 국가의 GDP 성장을 연평균 2.3~3.5% 감소시키는 통계적으로 유의미한 영향을 미쳤으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C8",
+      "scene": 3,
+      "text": "일방적 미국 제재는 연평균 0.5~0.9% 감소에 그쳤다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "일방적인 미국 제재는 GDP 성장에 상당히 작은 영향을 미쳐 연평균 0.5~0.9% 감소시켰으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C9",
+      "scene": 4,
+      "text": "2016년 표적 제재 컨소시엄 조사에서 스마트 제재 목표 달성률은 22%였다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "표적 제재가 정책 목표를 달성하는 경우가 22%에 불과하다는 것을 발견했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C10",
+      "scene": 4,
+      "text": "스마트 제재도 민간인 피해나 의도치 않은 결과를 완전히 피하지 못했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "스마트 제재 역시 민간인 피해나 의도치 않은 결과를 완전히 피하는 데 성공하지 못했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C11",
+      "scene": 5,
+      "text": "그린스톡은 제재가 효과적이라서가 아니라 말과 군사 행동 사이 대안이 없어서 쓰인다고 말했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "제재가 효과적이라는 것이 알려져서 인기 있는 것이 아니라, 정부에 압력을 가하고 싶을 때 말과 군사 행동 사이에 다른 할 일이 없기 때문",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C12",
+      "scene": 5,
+      "text": "제재 성공률은 재검토 결과 4%로 확인돼 구조적 한계가 크다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 경제 제재",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+      "published": "2026-11-12",
+      "checked_at": "2026-11-24",
+      "quote": "성공률은 4%로 감소했다. 어느 경우든, 목표와 관련하여 제재의 실제 성공을 측정하는 어려움과 예상치 못한 미묘한 차이는 점점 더 분명해지고 있으며 여전히 논쟁 중이다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-24T16:11:43Z",
+  "pack": {
+    "topic": {
+      "title": "경제 제재",
+      "wiki_title": "경제 제재",
+      "category": "무역제재",
+      "source": "seed",
+      "angle": "공식 설명이 말하지 않는 것",
+      "score": 0.7054,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.65,
+        "explore": 0.39
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.39 · 자극 0.65",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7614,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.65,
+          "explore": 0.39
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.39 · 자극 0.65"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 경제 제재",
+        "url": "https://ko.wikipedia.org/wiki/%EA%B2%BD%EC%A0%9C_%EC%A0%9C%EC%9E%AC",
+        "published": "2026-11-12",
+        "fetched_at": "2026-11-24",
+        "text": "경제 제재(經濟制裁, 영어: economic sanctions) 또는 통상 금지(엠바고, embargoes)는 국가나 기관이 다른 국가, 단체 또는 개인에게 부과하는 상업적 및 금융적 불이익을 의미한다. 경제 제재는 경제적 교류를 방해하여 행위자의 행동 변화를 유도하는 강압의 한 형태이다. 제재는 (행위자의 행동을 바꾸려는) 강제 또는 (행위자가 특정 행동을 중단하게 하려는) 억지 의도를 가질 수 있다.\n제재는 국가 전체를 대상으로 하거나, 개인이나 단체를 더 좁게 특정할 수 있으며, 후자의 제재 형태는 때때로 \"스마트 제재\"라고 불린다. 주요 경제 제재 형태로는 무역장벽, 자산 동결, 여행금지, 무기 금수 조치, 금융 거래 제한 등이 있다.\n의도한 목표를 달성하는 제재의 효과는 논쟁의 여지가 있다. 학자들은 또한 제재의 정책적 외부 효과를 고려했다. 국가 전체에 대한 제재의 인도주의적 결과는 논쟁의 대상이 되어왔다. 결과적으로, 1990년대 중반부터 유엔 안전 보장 이사회 (UNSC)의 제재는 이전 수십 년간의 국가 전체에 대한 제재와 달리 개인 및 단체를 대상으로 하는 경향을 보였다.\n\n제재의 역사\n통상 금지의 가장 포괄적인 시도 중 하나는 1803년부터 1815년까지의 나폴레옹 전쟁 중에 발생했다. 영국 경제를 마비시키려는 목표로, 나폴레옹 1세 황제는 1806년에 유럽 국가들이 영국과 무역하는 것을 금지하는 대륙봉쇄령을 공포했다. 실제로 프랑스 제국은 이 통상 금지를 완전히 시행할 수 없었으며, 이는 영국뿐만 아니라 관련된 유럽 국가들에게도 해로웠다(혹은 더 해로웠다). 1899년과 1907년 헤이그 협약 시대에 이르러 외교관들과 법학자들은 국제법을 시행하기 위해 조율된 경제적 압력을 사용하는 것에 대해 정기적으로 논의했다. 이러한 아이디어는 제1차 세계 대전에 앞서 라틴 아메리카와 중국의 국제법학자들에 의한 개혁 제안에도 포함되었다.\n\n제1차 세계 대전과 전간기\n제1차 세계 대전 동안 봉쇄 형태의 제재가 두드러졌다. 제1차 세계 대전이 끝난 후, 국제연맹과 같은 국제기구를 통한 제재 시행에 대한 논의가 두드러졌다. 지도자들은 제재를 전쟁에 대한 실행 가능한 대안으로 보았다.\n국제연맹 규약은 다섯 가지 경우에 제재 사용을 허용했다.\n\n국제연맹 규약 제10조 위반 시\n전쟁 또는 전쟁 위협 시 (제11조)\n국제연맹 회원이 중재 판정금을 지불하지 않을 때 (제12조)\n국제연맹 회원이 분쟁을 국제연맹 이사회 또는 총회에 제출하지 않고 전쟁에 돌입할 때 (제12-15조)\n비회원국이 국제연맹 회원국에 대해 전쟁에 돌입할 때 (제17조)\n1935년 아비시니아 위기로 인해 규약 제16조에 따라 무솔리니의 이탈리아에 대한 국제연맹 제재가 가해졌다. 그러나 석유 공급은 중단되지 않았고, 수에즈 운하도 이탈리아에 폐쇄되지 않아 정복은 계속되었다. 제재는 1936년에 해제되었고 이탈리아는 1937년에 국제연맹을 탈퇴했다.\n1941년 일본의 진주만 공격에 앞서, 미국은 일본의 동아시아 정복 야욕을 억제하기 위해 일본에 대한 심각한 무역 제한을 부과했다.\n\n제2차 세계 대전 이후\n제2차 세계 대전 이후, 1945년에 국제연맹은 더 광범위한 유엔(UN)으로 대체되었다. 냉전 기간 동안 제재의 사용은 점차 증가했다. 냉전 종식 이후 경제 제재가 크게 증가했다.\n글로벌 제재 데이터베이스에 따르면, 1950년부터 2022년까지 1,325건의 제재가 있었다.\n\n제재의 정치\n경제 제재는 많은 정부에 의해 외교 정책 도구로 사용된다. 경제 제재는 일반적으로 큰 나라가 작은 나라에 대해 부과하는데, 그 이유는 주로 두 가지이다. 후자가 전자 국가의 안보에 위협으로 인식되거나, 그 나라가 시민들을 불공평하게 대우하기 때문이다. 이들은 무역과 관련된 특정 정책 목표를 달성하거나 인도주의적 위반에 대해 강압적 조치로 사용될 수 있다. 경제 제재는 원하는 결과를 얻기 위해 전쟁 대신 사용되는 대안 무기이다.\n글로벌 제재 데이터베이스는 제재의 아홉 가지 목표를 분류한다: \"정책 변경, 정권 불안정화, 영토 분쟁 해결, 테러리즘 퇴치, 전쟁 방지, 전쟁 종식, 인권 회복 및 증진, 민주주의 회복 및 증진, 기타 목표.\"\n\n경제 제재의 효과\n모건, 시로풀로스, 요토는 경제 제재가 광범위한 무역 금지에서 표적화된 금융 및 개인 제한으로 어떻게 발전했는지 분석한다. 그들은 제재가 점점 더 빈번해지지만 효과는 일관적이지 않다는 것을 발견한다. 경제적 비용은 민간인에게 크게 전가되고, 무역 패턴은 중립국으로 이동하며, 집행 복잡성은 증가한다. 저자들은 제재가 정치적으로 매력적이지만 경제적으로는 무딘 수단으로 남아 있으며, 그 성공은 조정, 신뢰할 수 있는 목표, 그리고 인도주의적 피해를 최소화하는 데 달려 있다고 결론짓는다.\n아티아는 제재가 비용이 많이 드는 강압적 수단이라기보다는 상징적 또는 정치적 장치로 더 많이 작용한다고 본다.\n노이엔키르히와 노이마이어의 연구에 따르면, 유엔 경제 제재는 목표 국가의 GDP 성장을 연평균 2.3~3.5% 감소시키는 통계적으로 유의미한 영향을 미 미쳤으며, 포괄적인 유엔 통상 금지의 경우 연평균 5% 이상 감소했고, 부정적인 효과는 일반적으로 10년간 지속되었다. 대조적으로, 일방적인 미국 제재는 GDP 성장에 상당히 작은 영향을 미쳐 연평균 0.5~0.9% 감소시켰으며, 평균 지속 기간은 7년이었다.\n오리오이(Oryoie, A. R.)는 경제 제재가 이란의 모든 소득 계층에 걸쳐 복지 손실을 초래하며, 부유층이 빈곤층보다 더 큰 손실을 입는다는 것을 보여준다.\n상대방에 대한 제재 부과는 부과국의 경제에도 어느 정도 영향을 미친다. 수입 제한이 공포되면 부과국 소비자의 상품 선택이 제한될 수 있다. 수출 제한이 부과되거나 제재가 부과국 기업이 대상국과 거래하는 것을 금지하면, 부과국은 경쟁국에 시장과 투자 기회를 잃을 수 있다.\n휴프바우어, 쇼트, 엘리엇(2008)은 정권 교체가 경제 제재의 가장 빈번한 외교 정책 목표이며, 부과 사례의 39% 이상을 차지한다고 주장한다. 휴프바우어 외 연구진은 연구된 사례 중 34%가 성공적이었다는 것을 발견했다. 그러나 로버트 A. 페이프가 그들의 연구를 검토했을 때, 보고된 40건의 성공 중 실제 효과를 본 것은 단 5건에 불과하다는 것을 발견했으며, 성공률은 4%로 감소했다. 어느 경우든, 목표와 관련하여 제재의 실제 성공을 측정하는 어려움과 예상치 못한 미묘한 차이는 점점 더 분명해지고 있으며 여전히 논쟁 중이다. 다시 말해, 정권이나 국가가 변화하는 이유(즉, 제재 때문인지 내재적 불안정 때문인지)를 결정하기 어렵고, 주어진 행동의 완전한 정치적 효과를 측정하는 것은 두 배로 어렵다.\n제재가 미미하게만 효과가 있을 수 있는데도 여전히 부과되는 이유에 대해 영국 외교관 제레미 그린스톡은 제재가 효과적이라는 것이 알려져서 인기 있는 것이 아니라, \"정부에 압력을 가하고 싶을 때 말과 군사 행동 사이에 다른 할 일이 없기 때문\"이라고 말한다. 벨기에 법학자 마르크 보쉬위트와 같은 제재 비판론자들은 비민주적 정권에서 이것이 정치적 결과에 얼마나 영향을 미 미치는지에 대해서는 논쟁의 여지가 있다고 주장한다. 왜냐하면 정의상 그러한 정권은 대중의 의지에 강하게 반응하지 않기 때문이다.\n제재의 효과와 정부 내 거부권 행사자의 규모 사이에 강한 연관성이 발견되었다. 거부권 행사자는 현상 유지의 변화에 동의가 필요한 개인 또는 집단 행위자를 나타낸다. 예를 들어, 연립 정부 내 정당이나 대통령 권력에 대한 입법부의 견제 등이 있다. 국가에 제재가 부과되면 경제 정책을 조정하여 제재를 완화하려고 시도할 수 있다. 거부권 행사자의 규모는 정부가 현상 유지 정책을 변경하려고 할 때 직면하게 될 제약의 수를 결정하며, 거부권 행사자의 규모가 클수록 새로운 정책에 대한 지지를 찾기가 더 어려워져 제재가 더 효과적이다.\n프란체스코 기우멜리는 \"많은 관찰자들이 가장 설득력 있고(그리고 효과적이라고) 여길 가능성이 있는 제재 목록... 즉, '중앙은행 자산 및 국부 펀드'에 대한 유엔 제재\"는 \"적용된 모든 유형의 조치 중에서 가장 드물게 사용되는 것\"이라고 썼다. 기우멜리는 또한 \"요청의 본질만큼 제약적 측면이 중요하지 않은\" 국제 테러리스트에 대한 제재와 \"분쟁 후 시나리오\"와 관련된 제재를 구분하며, 후자는 \"유연한 요구와 상황이 변하면 적응할 수 있는 잠재력\"을 포함해야 한다고 말한다.\n경제 제재는 국내 및 국제적인 목표를 달성하는 데 사용될 수 있다.\n원조 중단은 일반적으로 경제 제재의 한 유형으로 간주된다. 이전에 언급된 휴프바우어, 쇼트, 엘리엇, 오에그의 연구가 대표적인 예이다. 클라스 메르텐스는 \"원조 중단이 경제 제재 채택보다 더 효과적이다. 왜냐하면 (1) 원조 중단은 채택국에 경제적으로 이득이 되는 반면, 제재는 비용이 많이 들고, (2) 원조 중단은 대상 정부의 예산에 직접적인 영향을 미치며, (3) 시장 세력은 제재를 약화시키지만 원조 중단은 그렇지 않고, (4) 원조 중단은 부정적인 행동 반응을 유발할 가능성이 적기 때문이다. [...] 연구 결과는 경제 제재가 이전에 생각했던 것보다 덜 효과적이며, 대규모 공여국이 경제적 강압을 통해 정치적 목표를 달성할 가능성이 더 높다는 것을 시사한다.\"\n\n비판\n제재는 한 국가의 경제에 부정적인 영향을 미치고 일반 시민에게 부수적인 피해를 줄 수 있기 때문에 인도주의적 관점에서 비판받아 왔다. 펙센은 제재가 목표 국가의 인권을 저하시킬 수 있다고 시사한다. 일부 정책 분석가들은 무역 제한을 부과하는 것이 정부 엘리트가 아닌 일반 사람들을 해칠 뿐이라고 믿으며, 다른 이들은 이러한 관행을 공성전과 같다고 비유했다. 유엔 안전 보장 이사회 (UNSC)는 1990년대 중반 이후 포괄적인 제재 부과를 일반적으로 자제해 왔는데, 이는 대 이라크 제재의 효과와 민간인 피해에 대한 논란 때문이기도 하다.\n제재는 의도치 않은 결과를 초래할 수 있다.\n\n스마트 제재\n제재로 인해 발생하는 인도주의적 문제를 해결하기 위한 가장 인기 있는 제안 중 하나는 \"스마트 제재\" 개념이며, 표적 제재라고도 불리는 이 개념에 대해 많은 연구가 이루어졌다. \"스마트 제재\"라는 용어는 자산 동결, 여행 금지, 무기 금수 조치와 같은 조치를 의미하며, 무고한 민간인과 주변 국가에 광범위한 부수적 피해를 입히지 않으면서 정치 지도자와 엘리트와 같은 책임 당사자를 대상으로 하는 것을 목표로 한다.\n이 개념에 대한 열의가 있었음에도 불구하고, 2016년 현재 표적 제재 컨소시엄(TSC)은 표적 제재가 정책 목표를 달성하는 경우가 22%에 불과하다는 것을 발견했다.\n스마트 제재 역시 민간인 피해나 의도치 않은 결과를 완전히 피하는 데 성공하지 못했다. 예를 들어, 무기 금수 조치는 공격받는 자들의 자기 방어 노력을 방해할 수 있고, 항공 금지 조치는 한 국가의 운송 부문과 그와 관련된 민간인 일자리에 영향을 미칠 수 있으며, 개인을 대상으로 하는 금융 제재는 적법절차 문제를 야기한다. 스마트 제재의 실제 사례 중 하나는 2014년 크림반도 합병 이후 미국이 러시아에 부과한 제재에서 볼 수 있는데, 이는 러시아의 금융 부문에 압력을 가하는 것을 목표로 했다. 이 제재로 인해 미국 신용카드 회사인 비자와 마스터카드는 제재 대상 러시아 은행의 모든 거래를 중단하여 일반 러시아 소비자들의 신용카드가 사실상 취소되는 결과를 초래했다.\n\n기업에 대한 시사점\n특히 재정적 손실과 관련하여 기업이 의도한 수출 또는 수입 목적지에 적용되는 금수 조치를 인지하는 것이 중요하다. 무역을 위해 제품을 적절히 준비하는 것, 때로는 금수 조치 확인이라고 불리는 것은 수입업자와 수출업자 모두에게 어렵고 시간이 많이 걸리는 과정이다.\n사업체가 원치 않는 벌금, 조세, 또는 기타 징벌적 조치를 받지 않도록 하기 위해 취해야 할 많은 단계가 있다. 금수 조치 확인의 일반적인 예로는 금수 조치 목록 참조, 거래 취소, 그리고 무역 주체의 유효성 확인 등이 있다.\n이 과정은 특히 금수 조치가 변하는 국가의 경우 매우 복잡해질 수 있다. 더 나은 도구가 나오기 전에는 많은 기업이 스프레드시트와 수동 프로세스에 의존하여 규정 준수 문제를 추적했다. 오늘날에는 제재 및 기타 무역 관련 복잡한 문제를 자동으로 처리하는 소프트웨어 기반 솔루션이 있다.\n\n사례\n\n미국 제재\n\n1807년 미국 통상금지법\n\n미국의 1807년 통상금지법은 토머스 제퍼슨 대통령의 두 번째 임기 동안 미국 의회가 통과시킨 일련의 법률(1806-1808)을 포함한다. 영국과 프랑스는 제4차 대프랑스 동맹에 참여하고 있었고; 미국은 중립을 유지하며 양측과 모두 교역하기를 원했지만, 양국은 미국이 상대방과 교역하는 것을 반대했다. 미국 정책은 새로운 법률을 사용하여 전쟁을 피하고 프랑스와 영국 모두에게 미국 권리를 존중하도록 강요하는 것을 목표로 했다. 통상 금지는 목표를 달성하지 못했으며, 제퍼슨은 1809년 3월에 이 법안을 폐지했다.\n\n쿠바에 대한 미국 금수조치\n\n쿠바에 대한 미국의 통상 금지는 1958년 3월 14일, 쿠바 혁명 중 피델 카스트로에 의한 독재자 풀헨시오 바티스타 정권 전복 과정에서 시작되었다. 처음에는 무기 판매에만 적용되었으나, 이후 다른 수입품으로 확대되어 결국 1962년 2월 7일 거의 모든 무역으로 확장되었다.",
+        "lang": "ko",
+        "wiki_title": "경제 제재",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Economic sanctions",
+        "url": "https://en.wikipedia.org/wiki/Economic_sanctions",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-24",
+        "text": "Economic sanctions or embargoes are commercial and financial penalties applied by states or institutions against states, groups, or individuals. Economic sanctions are a form of coercion that attempts to get an actor to change its behavior through disruption in economic exchange. Sanctions can be intended to compel (an attempt to change an actor's behavior) or deter (an attempt to stop an actor from certain actions), but are generally directed towards inhibiting an actor from accomplishing an undesirable task.\nSanctions can target an entire country or they can be more narrowly targeted at individuals or groups; this latter form of sanctions are sometimes called \"smart sanctions\". Prominent forms of economic sanctions include trade barriers, asset freezes, travel bans, arms embargoes, and restrictions on financial transactions.\nThe efficacy of sanctions in achieving intended goals is a subject of debate. Scholars have also considered the policy externalities of sanctions. The humanitarian consequences of country-wide sanctions have been a subject of controversy. As a consequence, since the mid-1990s, United Nations Security Council (UNSC) sanctions have tended to target individuals and entities, in contrast to the country-wide sanctions of earlier decades.\nThe US in particular has utilized secondary sanctions in recent years, which threaten to sanction countries for trading with a sanctioned country or government. \n\nHistory of sanctions\nOne of the most comprehensive attempts at an embargo occurred during the Napoleonic Wars of 1803–1815. Aiming to cripple the United Kingdom economically, Emperor Napoleon I of France in 1806 promulgated the Continental System – which forbade European nations from trading with the UK. In practice the French Empire could not completely enforce the embargo, which proved as harmful (if not more so) to the continental nations involved as to the British. By the time of the Hague Conventions of 1899 and 1907, diplomats and legal scholars regularly discussed using coordinated economic pressure to enforce international law. This idea was also included in reform proposals by Latin American and Chinese international lawyers in the years leading up to World War I.\n\nWorld War I and the Interwar period\nSanctions in the form of blockades were prominent during World War I. Debates about implementing sanctions through international organizations, such as the League of Nations, became prominent after the end of World War I. Leaders saw sanctions as a viable alternative to war.\nThe League Covenant permitted the use of sanctions in five cases:\n\nWhen Article 10 of the League Covenant is violated\nIn case of war or threat of war (Article 11)\nWhen a League member does not pay an arbitration award (Article 12)\nWhen a League member goes to war without submitting the dispute to the League Council or League Assembly (Articles 12–15)\nWhen a non-member goes to war against a League member (Article 17)\nThe Abyssinia Crisis in 1935 resulted in League sanctions against Mussolini's Italy under Article 16 of the Covenant. Oil supplies, however, were not stopped, nor the Suez Canal closed to Italy, and the conquest proceeded. The sanctions were lifted in 1936 and Italy left the League in 1937.\nIn the lead-up to the Japanese attack on Pearl Harbor in 1941, the United States imposed severe trade restrictions on Japan to discourage further Japanese conquests in East Asia.\n\nFrom World War II onwards\nAfter World War II, the League was replaced by the more expansive United Nations (UN) in 1945. Throughout the Cold War, the use of sanctions increased gradually. After the end of the Cold War, there was a major increase in economic sanctions.\nAccording to the Global Sanctions Data Base, there have been 1,325 sanctions in the period 1950–2022.\n\nPolitics of sanctions\nEconomic sanctions are used as a tool of foreign policy by many governments. Economic sanctions are usually imposed by a larger country upon a smaller country for one of two reasons: either the latter is a perceived threat to the security of the former nation or that country treats its citizens unfairly. They can be used as a coercive measure for achieving particular policy goals related to trade or for humanitarian violations. Economic sanctions are used as an alternative weapon instead of going to war to achieve desired outcomes. Not all sanctions are imposed by larger countries on smaller ones: in the Threat and Imposition of Economic Sanctions (TIES) dataset, covering 1945 to 2005, about one-fifth of sanctions were imposed by senders whose combined GDP was smaller than that of the target. Such senders are more likely to face countersanctions, but this risk is substantially lower when the initial sanctions have the backing of an international organization.\nThe Global Sanctions Data Base categorizes nine objectives of sanctions: \"changing policy, destabilizing regimes, resolving territorial conflicts, fighting terrorism, preventing war, ending war, restoring and promoting human rights, restoring and promoting democracy, and other objectives.\"\n\nUnilateral coercive measures\nIn contrast to International sanctions, unilateral coercive measures are defined by the United Nations as \"economic measures taken by one State to compel a change in the policy of another State\" including \"trade sanctions in the form of embargoes and the interruption of financial and investment flows between sender and target countries\" and \"so-called 'smart' or 'targeted' sanctions such as asset freezing and travel bans.\" Unilateral coercive measures have faced increasing criticism from the United Nations, with 4 December 2025 being marked as the first International Day Against Unilateral Coercive Measures. Unilateral coercive measures often lead to over-compliance, with economic actors preferring not to trade with sanctioned countries even in ways that are not explicitly penalized by the sanctions. Unilateral coercive measures are typically imposed \"under the pretext of criminal responsibility\" but without due process, and frequently violate various aspects of international law, such as the immunity of state property, the immunity of state officials and diplomats, and the sovereign equality of states.\n\nEffectiveness of economic sanctions\nMorgan, Syropoulos, and Yotov analyze how economic sanctions have evolved from broad trade embargoes to targeted financial and individual restrictions. They find sanctions increasingly frequent but inconsistently effective.",
+        "lang": "en",
+        "wiki_title": "Economic sanctions",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:President received credentials from ambassadors of Ireland, Nigeria, Korea and Armenia. (51388385112).jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/President_received_credentials_from_ambassadors_of_Ireland%2C_Nigeria%2C_Korea_and_Armenia._%2851388385112%29.jpg/1920px-President_received_credentials_from_ambassadors_of_Ireland%2C_Nigeria%2C_Korea_and_Armenia._%2851388385112%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/President_received_credentials_from_ambassadors_of_Ireland%2C_Nigeria%2C_Korea_and_Armenia._%2851388385112%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:President_received_credentials_from_ambassadors_of_Ireland,_Nigeria,_Korea_and_Armenia._(51388385112).jpg",
+        "width": 3000,
+        "height": 2000,
+        "license": "Public domain",
+        "artist": "President Of Ukraine from Україна",
+        "caption": "President of Ukraine Volodymyr Zelenskyy received credentials from the ambassadors of Ireland, the Federal Republic of Nigeria, the Republic of Korea and the Re",
+        "id": "P1"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-24T16:09:19Z"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "id": "chcafc50-20261125-02-79896",
+  "channel": "도개",
+  "status": "NEEDS_REVIEW",
+  "created_at": "2026-11-24T16:04:38Z",
+  "topic": {
+    "title": "불닭볶음면",
+    "wiki_title": "불닭볶음면",
+    "category": "음식문화",
+    "source": "seed",
+    "angle": "불가능하다던 일을 어떻게 해냈나",
+    "score": 0.6667,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.345
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35",
+    "evidence": 0.653,
+    "rescored": {
+      "score": 0.6741,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.653,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.345
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.65 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-24T16:04:38Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-24T16:04:38Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-24T16:07:01Z",
+      "note": "hook: LLMValidationError: JSON 응답을 얻지 못했습니다: JSON을 찾지 못했습니다"
+    }
+  ],
+  "attempts": {
+    "hook": 1
+  },
+  "error": {
+    "stage": "hook",
+    "class": "content_quality",
+    "message": "LLMValidationError: JSON 응답을 얻지 못했습니다: JSON을 찾지 못했습니다",
+    "at": "2026-11-24T16:07:01Z"
+  },
+  "lease": null,
+  "retry_after": null,
+  "hook": null,
+  "script": null,
+  "claims": [],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-24T16:07:01Z",
+  "pack": {
+    "topic": {
+      "title": "불닭볶음면",
+      "wiki_title": "불닭볶음면",
+      "category": "음식문화",
+      "source": "seed",
+      "angle": "불가능하다던 일을 어떻게 해냈나",
+      "score": 0.6667,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.345
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35",
+      "evidence": 0.653,
+      "rescored": {
+        "score": 0.6741,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.653,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.345
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.65 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 불닭볶음면",
+        "url": "https://ko.wikipedia.org/wiki/%EB%B6%88%EB%8B%AD%EB%B3%B6%EC%9D%8C%EB%A9%B4",
+        "published": "2026-11-06",
+        "fetched_at": "2026-11-24",
+        "text": "불닭볶음면(영어: Hot Chicken Flavor Ramen)은 식료품 회사 삼양식품이 2012년 4월부터 시판 및 판매하고 있는 라면이다.\n\n역사\n\n봉지라면은 2012년 4월 13일에 처음 출시되었다. 컵라면의 경우, 큰 컵은 2012년 6월, 작은 컵은 2013년 11월에 출시되었다. 2014년 3월에 봉지, 용기면 합산 누적 판매 1억 개를 달성했다.\n2018년 상반기에는 불닭볶음면과 짜장라면을 섞어 먹는 소비자의 인기 레시피를 제품화 한 '짜장불닭볶음면'과 불닭볶음면 소스로 만든 '불닭 후랑크'를 출시했다. 그리고 불닭볶음면의 여러 가지 파생형인 치즈 불닭 볶음면, 까르보불닭볶음면, 불닭 쫄면, 미트볼 스파게티 불닭볶음면, 떡볶이 불닭볶음면 등 새로운 불닭볶음면이 시중에 판매되고 있다. 또한 불닭볶음면은 삼양식품의 매출을 뒷받침하는 대표적인 상품이며, 2016년 하반기부터 불닭볶음면의 수출이 증가하면서 삼양식품의 전체 매출액 중 불닭볶음면이 차지하는 비중이 가파르게 늘었다. 2017년에는 불닭볶음면이 삼양식품의 전체 수출액 중 85% 이상, 전체 매출액의 55%를 차지했다. \"불닭볶음면\"이 본격적으로 팔리기 시작한 2016년에는 삼양식품의 매출이 3593억원으로 23.5% 성장한데 이어, 2017년에는 4,500억원(추산치)의 매출을 올려 연속적으로 두 자릿수 성장률을 기록했다. 이로 인해 삼양식품은 '2017년도 제54회 무역의 날' 행사에서 '1억불 수출의 탑'을 받았다. 매운 정도를 나타내는 스코빌 지수가 4404SHU 정도로 매운 라면 순위(국내 기준) 6위이다.\n2024년 덴마크에서 일부 제품이 리콜되었다. 덴마크 수의식품청은 해당 제품의 캡사이신 수치가 너무 높아 소비자가 \"급성 중독\"의 위험이 있다고 밝혔다.\n\n제품군\n삼양라면측의 홈페이지를 참고. 제품별로 중량 · 칼로리가 각각 다르다.\n삼양불닭볶음면 x 산리오캐릭터즈\n\n갤러리\n\n같이 보기\n한국 요리\n불닭\n\n각주",
+        "lang": "ko",
+        "wiki_title": "불닭볶음면",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Buldak Ramen",
+        "url": "https://en.wikipedia.org/wiki/Buldak_Ramen",
+        "published": "2026-11-24",
+        "fetched_at": "2026-11-24",
+        "text": "Buldak Ramen (Korean: 불닭볶음면; RR: Buldak-bokkeummyeon; lit. 'fire chicken stir-fried noodles') is a South Korean brand of instant noodle, produced by Samyang Foods since April 2012. Inspired by buldak, a spicy chicken dish, it is Samyang's best-selling product, with 6.6 billion sales worldwide by September 2024. It is considered one of the spiciest instant noodles available in the South Korean market, with the original packet having 4,404 Scoville units.\n\nHistory\nBuldak Hot Chicken Flavor Ramen was first launched in April 2012. It was inspired by a spicy chicken stir-fry dish that Kim Jung-soo, a member of Samyang Foods' sales department, observed while eating lunch at a restaurant in 2010. Kim recalled that the dish had the customers \"sweating and fanning their tongues, assailed by both pleasure and pain\". When Samyang's food scientists created prototypes for the ramen, she repeatedly told them to make it spicier.\nThe popularity of the noodles worldwide surged when the \"Fire Noodle Challenge\" went viral on YouTube. The challenge was started by the YouTube channel \"Korean Englishman\" in 2014, in which the host Josh Carrott challenged his friends in the UK to see who could finish the noodles the fastest without drinking any water or beverage. The popularity of the video led to other YouTubers all around the world to do the same challenge and therefore cause a surge in the noodle's popularity.\nSome flavours of noodles were recalled in Denmark in 2024, with the Danish Veterinary and Food Administration stating that a single packet's capsaicin levels are so high that consumers risked \"acute poisoning\". Later, Danish authorities withdrew the recall against Samyang Buldak 2x Spicy Hot Chicken and Samyang Buldak Hot Chicken Stew, but maintained the prohibition on Buldak 3x Spicy Hot Chicken.\n\nForeign imitation products\nWith its rising popularity and recognition internationally, Chinese and Japanese food companies have begun to roll out products that mimic Buldak ramen to capitalize on this trend.\nIn 2021, Samyang, in cooperation with the Korea Food Industry Association (KFIA), filed an intellectual property lawsuit against Chinese companies that produce and distribute its imitated products. Later, in March 2023, a Chinese court ruled that Chinese companies had infringed on intellectual property rights by imitating trademarks and designs in a lawsuit filed by four South Korean companies, including Samyang, and ordered them to pay reparations.\nIn April 2023, Nissin Foods, a Japanese food company, sparked controversy in South Korea by launching a Korean-style stir-fried instant ramen with spicy sauce that mimics a packaging design similar to Samyang's Carbonara Buldak ramen. Regarding the controversy, Samyang said it plans to promote products that emphasize uniqueness and originality in the Japanese market in the future.\nImitation brands of Buldak Ramen are popular across the world, being sold in China, Southeast Asia, Russia, and North Africa. A brand called Bingoone is manufactured in China and sold in markets in Hong Kong, Indonesia, Egypt, and multiple African countries. Chinese manufacturers of imitation products sometimes put misleading logos indicating that the product is from Korea and Halal-certified on packaging. In 2025, the North Korean Rason Ryongseon Joint Venture Company released an imitation ramen product called Spicy Kimchi Bibim Guksu on the Chinese market. The newspaper Korea JoongAng Daily noted that the North Korean product was \"a near-perfect imitation\" of Buldak Ramen.\n\nSpinoffs\nSamyang has expanded the Buldak brand beyond instant noodles into other products like Buldak Hot Sauce, Buldak Potato Chips, Buldak Fried Rice, Buldak Tteokbokki, Buldak Dumplings and others.\nIn April 2026, Samyang debuted with a new line of Buldak Mac and Cheese in the United States, with distribution at Walmart.\n\nDescription\n\nBuldak ramen is considered one of the spiciest brands of instant noodles available in the Korean market, with the original packet having 4,404 Scoville units. It is a type of 'stir-fried' dry noodle: after boiling, the noodles are drained, and mixed with a spicy sauce and a topping. The product became famous due to the Fire Noodle Challenge, a viral social media challenge where people film themselves eating the sauce pack or bowl of noodles.\nBuldak Ramen is Samyang Foods' best-selling product. 4 billion cumulative sales were reached in August 2022, and the brand attained monthly sales of 6 to 7 billion won the following year (5.1 to 5.9 million United States dollars).  From the second half of 2016, as exports of this product increased, they became the company's best-seller. In 2017, the Buldak range accounted for more than 85% of Samyang Food's total exports and 55% of total sales. In 2016, when Buldak-bokkeummyeon began to be sold in earnest, Samyang Foods' sales grew 23.5% to 359.3 billion won, followed by a double-digit growth rate in 2017 with a sales of 450 billion won (estimated value). For this reason, Samyang Foods received the '100 Million Dollar Export Tower' at the \"54th Trade Day 2017\" event.\nThe mascot of the Hot Chicken Flavor Ramen series is a chicken named \"Hochi\" (호치). In 5 June 2026, Samyang announced the replacement of Hochi with a new mascot, \"Peppo\".\n\nTypes\nSince the release of the original in 2012 and subsequent success, Samyang has released varieties that differ in spice and often flavour from the original to keep up with demand.                                                                          \n\nBuldak product list (Samyang Foods)\nNote: The country columns (US, KR, AE, etc.) indicate which regional websites provide product information, not the countries where the product is sold.\n\nActive Products\n\nSee also\n\nBuldak\nInstant noodle\nKorean cuisine\nKim Jung-soo (businesswoman)\n\nReferences\n\nExternal links\nHot Chicken Flavor Ramen – Samyang Food",
+        "lang": "en",
+        "wiki_title": "Buldak Ramen",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Buldak Noodles.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Buldak_Noodles.jpg/1920px-Buldak_Noodles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Buldak_Noodles.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Buldak_Noodles.jpg",
+        "width": 2448,
+        "height": 3264,
+        "license": "CC BY 4.0",
+        "artist": "Jem2013",
+        "caption": "Buldak Noodles spicy Favor",
+        "id": "P1"
+      }
+    ],
+    "evidence": 0.653,
+    "ok": true,
+    "built_at": "2026-11-24T16:04:38Z"
+  }
+}

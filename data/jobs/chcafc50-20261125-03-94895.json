@@ -1,0 +1,577 @@
+{
+  "id": "chcafc50-20261125-03-94895",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-24T16:07:03Z",
+  "topic": {
+    "title": "인천국제공항",
+    "wiki_title": "인천국제공항",
+    "category": "생활편의",
+    "source": "seed",
+    "angle": "불가능하다던 일을 어떻게 해냈나",
+    "score": 0.6667,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.345
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35",
+    "evidence": 0.733,
+    "rescored": {
+      "score": 0.6853,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.733,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.345
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.73 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-24T16:07:03Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-24T16:07:03Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-24T16:08:30Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-24T16:08:58Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "김포공항은 24시간 못 여는데 여긴 가능합니다",
+      "screen_text": "심야에도 이착륙",
+      "title": "내륙공항 한계 넘어선 24시간 운영 비결",
+      "promise": "김포공항이 못 하던 심야 운항을 인천공항이 해내는 이유를 확인하세요",
+      "evidence_quote": "해상 공항이기 때문에 내륙 공항인 김포국제공항과는 달리 24시간 운항이 가능하다",
+      "eval": {
+        "score": 0.997,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.97,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "김포공항은 24시간 못 여는데 여긴 가능합니다",
+        "screen_text": "심야에도 이착륙",
+        "title": "내륙공항 한계 넘어선 24시간 운영 비결",
+        "promise": "김포공항이 못 하던 심야 운항을 인천공항이 해내는 이유를 확인하세요",
+        "evidence_quote": "해상 공항이기 때문에 내륙 공항인 김포국제공항과는 달리 24시간 운항이 가능하다",
+        "eval": {
+          "score": 0.997,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "이 공항, 원래 섬 두 개 사이 바다였습니다",
+        "screen_text": "바다 위 공항",
+        "title": "영종·용유 사이 바다 메워 만든 인천공항",
+        "promise": "섬 사이 갯벌을 20년간 메워 활주로 5개 만든 과정을 보여드립니다",
+        "evidence_quote": "영종도와 용유도 사이의 간석지를 간척하여 만든 해상 공항",
+        "eval": {
+          "score": 0.9099,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "아시아 경제위기 터져도 공사 6개월 당겼습니다",
+        "screen_text": "위기 속 6개월 단축",
+        "title": "IMF 위기와 베이징올림픽 사이 공기 단축 비결",
+        "promise": "경제위기 지연과 올림픽 대비 앞당기기가 동시에 벌어진 모순을 어떻게 풀었는지 확인하세요",
+        "evidence_quote": "완공 예정이었으나 2008년 하계 올림픽 때문에 승객이 늘어날 것을 대비하여 6개월을 앞당겨",
+        "eval": {
+          "score": 0.9074,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "터미널 간 900m, 지하 셔틀로 3분이면 갑니다",
+        "screen_text": "지하 셔틀 3분",
+        "title": "탑승동·제2터미널 잇는 무인 셔틀 시스템",
+        "promise": "여객터미널과 떨어진 탑승동·제2터미널을 무인 셔틀로 연결한 이동 원리를 공개합니다",
+        "evidence_quote": "여객터미널과 탑승동 사이의 지하에 셔틀트레인이 건설되었으며... 길이 1.5 km의 셔틀트레인이 연결되었는데",
+        "eval": {
+          "score": 0.3252,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "1984년엔 청주로 정해졌던 신공항 부지",
+        "screen_text": "청주→영종도 변경",
+        "title": "신공항 부지가 청주에서 영종도로 바뀐 이유",
+        "promise": "서울 접근성 문제로 4년 만에 부지가 뒤집힌 결정적 순간을 설명합니다",
+        "evidence_quote": "1984년 4월에 충청북도 청원군이 건설 예정지로 결정되었으나 서울과 멀리 떨어져 있다는 점이 문제가 되었다",
+        "eval": {
+          "score": 0.3,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "연간 2700만 명 목표로 시작해 1억 4000만 명 갑니다",
+        "screen_text": "5배 용량 확대",
+        "title": "5단계 걸쳐 5배로 키운 인천공항 확장사",
+        "promise": "개항 때 2700만 명에서 5단계 거쳐 1억 4200만 명까지 늘린 숫자 변화를 보여드립니다",
+        "evidence_quote": "1단계: 연간 2,700만명의 여객... 5단계: 연간 80만회의 운항회수, 1억 4,200만명의 승객",
+        "eval": {
+          "score": 0.2835,
+          "components": {
+            "grounded": 0.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "인천공항이 심야에도 뜨는 이유",
+    "target_seconds": 28,
+    "category": "생활편의",
+    "bgm_mood": "bright",
+    "scenes": [
+      {
+        "narration": "김포공항은 24시간 못 여는데 여긴 가능합니다",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "인천공항은 해상공항이라 24시간 운항이 가능하다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "해상 공항이기 때문에 내륙 공항인 김포국제공항과는 달리 24시간 운항이 가능하다"
+          }
+        ]
+      },
+      {
+        "narration": "내륙인 김포는 주택가 소음 탓에 밤 비행이 막힙니다",
+        "visual": {
+          "type": "compare",
+          "title": "운항 가능 시간",
+          "a": {
+            "label": "김포공항",
+            "value": 0
+          },
+          "b": {
+            "label": "인천공항",
+            "value": 24
+          },
+          "unit": "시간"
+        },
+        "claims": [
+          {
+            "text": "김포공항은 인구 밀집 지역 인근이라 24시간 운영에 한계가 있었다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "인근의 인구 밀집 주거 지역으로 인해 확장이 사실상 불가능하고 24시간 운영에 한계가 있기 때문에"
+          }
+        ]
+      },
+      {
+        "narration": "인천은 영종·용유도 사이 갯벌을 매립해 만든 바다 위 공항입니다",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "인천공항은 영종도와 용유도 사이의 간석지를 간척해 만든 해상공항이다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "영종도와 용유도 사이의 간석지를 간척하여 만든 해상 공항"
+          }
+        ]
+      },
+      {
+        "narration": "덕분에 심야에도 이착륙, 국제선 77%가 이곳을 씁니다",
+        "visual": {
+          "type": "stat",
+          "big": "77%",
+          "small": "한국 국제선 점유율"
+        },
+        "claims": [
+          {
+            "text": "대한민국 국제선의 약 77%가 인천공항을 통해 운항된다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "대한민국 국제선의 약 77%가 이곳을 통해 운항된다"
+          }
+        ]
+      },
+      {
+        "narration": "2001년 개항 이래 24시간 무중단, 물류·환승 허브가 됐습니다",
+        "visual": {
+          "type": "steps",
+          "title": "심야 운항의 효과",
+          "items": [
+            "24시간 개방",
+            "화물·환승 증가",
+            "동북아 허브"
+          ]
+        },
+        "claims": [
+          {
+            "text": "인천공항은 2001년 3월 29일 개항했다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "2001년 3월 29일 개항과 동시에"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "인천공항은 해상공항이라 24시간 운항이 가능하다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 인천국제공항",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-24",
+        "quote": "해상 공항이기 때문에 내륙 공항인 김포국제공항과는 달리 24시간 운항이 가능하다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "김포공항은 인구 밀집 지역 인근이라 24시간 운영에 한계가 있었다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 인천국제공항",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-24",
+        "quote": "인근의 인구 밀집 주거 지역으로 인해 확장이 사실상 불가능하고 24시간 운영에 한계가 있기 때문에",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "인천공항은 영종도와 용유도 사이의 간석지를 간척해 만든 해상공항이다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 인천국제공항",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-24",
+        "quote": "영종도와 용유도 사이의 간석지를 간척하여 만든 해상 공항",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "대한민국 국제선의 약 77%가 인천공항을 통해 운항된다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 인천국제공항",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-24",
+        "quote": "대한민국 국제선의 약 77%가 이곳을 통해 운항된다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "인천공항은 2001년 3월 29일 개항했다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 인천국제공항",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-24",
+        "quote": "2001년 3월 29일 개항과 동시에",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 154,
+      "est_seconds": 28.5,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 7.8,
+      "max_scene_similarity": 0.09,
+      "visual_mix": {
+        "steps": 1,
+        "photo": 2,
+        "compare": 1,
+        "stat": 1
+      },
+      "target_seconds_declared": 28
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "인천공항은 해상공항이라 24시간 운항이 가능하다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 인천국제공항",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-24",
+      "quote": "해상 공항이기 때문에 내륙 공항인 김포국제공항과는 달리 24시간 운항이 가능하다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "김포공항은 인구 밀집 지역 인근이라 24시간 운영에 한계가 있었다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 인천국제공항",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-24",
+      "quote": "인근의 인구 밀집 주거 지역으로 인해 확장이 사실상 불가능하고 24시간 운영에 한계가 있기 때문에",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "인천공항은 영종도와 용유도 사이의 간석지를 간척해 만든 해상공항이다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 인천국제공항",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-24",
+      "quote": "영종도와 용유도 사이의 간석지를 간척하여 만든 해상 공항",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "대한민국 국제선의 약 77%가 인천공항을 통해 운항된다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 인천국제공항",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-24",
+      "quote": "대한민국 국제선의 약 77%가 이곳을 통해 운항된다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "인천공항은 2001년 3월 29일 개항했다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 인천국제공항",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-24",
+      "quote": "2001년 3월 29일 개항과 동시에",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-24T16:08:58Z",
+  "pack": {
+    "topic": {
+      "title": "인천국제공항",
+      "wiki_title": "인천국제공항",
+      "category": "생활편의",
+      "source": "seed",
+      "angle": "불가능하다던 일을 어떻게 해냈나",
+      "score": 0.6667,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.345
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35",
+      "evidence": 0.733,
+      "rescored": {
+        "score": 0.6853,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.733,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.345
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.73 · 성과prior 0.50(n=0) · 탐색 0.35 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 인천국제공항",
+        "url": "https://ko.wikipedia.org/wiki/%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD",
+        "published": "2026-11-16",
+        "fetched_at": "2026-11-24",
+        "text": "인천국제공항(仁川國際空港, 영어: Incheon International Airport, IATA: ICN, ICAO: RKSI)은 인천광역시 영종구 운서동에 있는 국제공항으로 대한민국 최대 규모의 공항이며 대한민국 국제선의 약 77%가 이곳을 통해 운항된다. 이 공항은 국제선 전용 공항이기 때문에 이 공항의 국내선은 국제선 환승 전용이며 간혹 심야에 제주발 국내선의 커퓨 타임(야간운항통제 시간)에 따른 대체 착륙용으로 이용된다.\n인천국제공항은 2001년 3월 29일 개항과 동시에 서울특별시 강서구에 있는 김포국제공항의 당시 국제선 노선을 일괄 이관받았으며 영종도와 용유도 사이의 간석지를 간척하여 만든 해상 공항이기 때문에 내륙 공항인 김포국제공항과는 달리 24시간 운항이 가능하다.\n서울 도심에서 서쪽으로 60km 떨어져 있고, 1999년 2월 1일에 설립된 인천국제공항공사(IIAC)가 공항 운영을 담당하고 있다. 세계공항서비스평가(ASQ)에서 2005년부터 2016년까지 12년 연속 세계 공항 순위 1위를 기록했고 대한항공, 아시아나항공, 제주항공, 진에어, 이스타항공, 트리니티항공, 에어서울, 델타항공, 폴라에어 카고, 타이항공 등이 이 공항을 허브 공항으로 사용하고 있다.\n\n역사\n\n인천국제공항은 기존의 김포국제공항이 인근의 인구 밀집 주거 지역으로 인해 확장이 사실상 불가능하고 24시간 운영에 한계가 있기 때문에 비약적으로 증가하는 국제선 수요에 대응하기 위하여 1992년부터 영종도와 용유도 사이의 간석지를 매립해 조성된 부지에 2030년대까지 5단계로 나누어 건설되고 있다.\n김포국제공항의 국제선을 이관할 신공항의 건설은 1980년대 초부터 본격적으로 논의되기 시작하여 1984년 4월에 충청북도 청원군(現 청주국제공항)이 건설 예정지로 결정되었으나 서울과 멀리 떨어져 있다는 점이 문제가 되었다.\n결국 1988년 3월 정부는 기존 계획을 전면 백지화하고 경기도 서남부(현 시화 간척지)를 신공항 부지로 검토하다가 같은 해 12월에 배후 도시의 규모와 서울 및 김포국제공항과의 접근성 등을 고려해 옹진군 영종도의 해안을 매립하여 신 공항을 건설하는 것이 더 낫다는 평가를 내렸고 이후 1990년 6월 15일에 현재의 인천국제공항 건설 계획이 확정·발표되었다.\n현재 인천국제공항의 건설 계획은 2030년대까지 47km2의 부지에 5본의 활주로와 연간 대략 1억 4천만명의 여객을 처리하는 시설을 갖추는 것을 목표로 하고 있다.\n\n단계별 구분\n준비 단계: 인천국제공항은 1989년 3월부터 1992년 11월 10일까지 타당성 조사 및 기본 설계를 진행한 뒤, 1992년 11월 21일부터 1994년 10월 30일까지 영종도와 용유도 사이를 방조제로 물막이를 시행했다. 이후 여객터미널과 4개의 탑승동(Concourse), 5개의 활주로를 건설한다는 기본 설계에 따라 방조제 안의 갯벌을 구간을 나누어 20년 동안 순차적으로 성토했고 이러한 성토 작업은 제2여객터미널이 건설 중이던 2014년 말에 대부분 마무리되었다.\n1단계: 여객터미널, 2본의 활주로, 관제탑, 교통센터, 화물터미널을 비롯한 제반 시설들을 건설하여 연간 2,700만명의 여객과 170만톤의 화물을 처리하는 것을 목표로 하였다.\n1996년에 여객터미널 신축공사를 착공했고, 2000년 7월 2일까지 인천국제공항 1단계의 공항 주요 시설물을 준공하고, 같은 해 12월에 5조 6,000억원을 투입한 8년 4개월 간의 공사가 마무리되었다. 이후 여러 차례 종합 시운전을 시행하고 여객과 수하물 및 항공기를 동원해 가상훈련을 실시·점검한 후 2001년 3월 29일에 개항하였다. 개항과 함께 김포국제공항의 국제선 업무가 이관되었다.\n2단계: 길이 4,000m의 활주로 1본과 화물터미널을 추가하고 여객터미널의 북쪽에 탑승동을 설치하여 연간 41만회의 항공편과 4,400만 명의 여객, 450만톤의 화물을 처리하는 것을 목표로 하였다.\n원래는 2008년 12월 완공 예정이었으나 2008년 하계 올림픽 때문에 승객이 늘어날 것을 대비하여 6개월을 앞당겨 6월 20일에 완공하였다. 여객터미널과 탑승동 사이의 지하에 셔틀트레인이 건설되었으며 2001년에 착공한 인천국제공항철도가 2007년 3월 23일에 1단계를 개통한 뒤(인천국제공항 - 김포공항) 기존의 영종대교 이외에 영종도와 송도신도시를 연결하는 세계에서 7번째로 긴 다리인 인천대교가 2009년 10월 19일에 완공되었다.\n3단계 : 탑승동의 북쪽에 제2여객터미널을 건설하고, 계류장과 화물터미널을 확장하여 연간 7,200만명의 여객과 580만톤의 화물 처리를 목표로 하였다. 본래 이 계획은 탑승동 B, C, D 및 제4활주로를 2023년까지 순차적으로 건설해 연간 9,000만명의 여객을 처리하는 것을 목표로 정했으나 2009년에 제2여객터미널을 건설하는 것으로 수정되었다.\n변경된 계획은 2011년에 시작해 2015년에 완공될 예정으로 발표되었으나, 급증한 건설비 조달 문제와 민영화 논란, 동남권 신공항 논란 등이 겹치면서 2년이 늦춰져 2013년 9월 26일에 제2여객터미널을 착공하여 2017년 9월 30일에 완공하였고 2018년 1월 18일에 개장하였다. 현재 제2여객터미널은 스카이팀의 주요 항공사인 대한항공과 델타항공, 그리고 에어프랑스와 KLM 등이 전용으로 사용중이다. 특히 대한항공과 델타항공 사이의 조인트벤처 협력을 바탕으로 동북아시아의 핵심적인 환승 거점 역할을 수행하고 있다. 그 사이 늘어날 여객수요에 대응하기 위해 기존 여객터미널(T1)은 1,000만명을 추가 처리할 수 있게 하였고, 제1여객터미널에서 제2여객터미널까지 인천국제공항철도를 연장하였다.\n4단계: 2018년부터 2024년까지 제2여객터미널을 확장해 연간 5,200만명까지 여객 처리 능력을 확충함으로써 연간 총 1억600만명의 승객을 처리하는 것을 목표로 하였다. 2021년 6월 17일에 길이 3,750m의 제4활주로를 개장하였고, 제2여객터미널 확장은 2024년 12월 3일에 최종 완료하였다. 이후에는 2033년까지 제1여객터미널의 종합 리모델링을 진행해 여객처리 능력을 600만명 추가한 6,000만명으로 확충할 계획이다.\n5단계: 2030년대에 길이 3,400m의 활주로 1본(제5활주로)과 제3여객터미널을 개장하여 총 47.428km2의 부지에 여객터미널 3동, 탑승동 1동, 5본의 활주로, 여객 계류장 300여개, 화물 계류장 90여개를 갖추어 연간 80만회의 운항회수, 1억 4,200만명의 승객과 1,000만톤의 화물 처리를 목표로 한다.\n\n구성\n\n제1여객터미널\n2001년 3월 개항과 함께 운영되고 있는 터미널로, 1~50번까지 총 44개의 탑승구가 있다.\n체크인 카운터가 270개, 여권심사대 120개, 보안검색대 28개, 출발여객 처리용량은 시간당 6,400명이다. 그리고 우측에는 내항기편이 운행하는 국내선 청사가 있다.\n2008년 6월 20일에 탑승동이 개장하면서 외국 항공사들이 이동하였고, 2026년 현재 티웨이항공 등 대한민국 국적 항공사들이 탑승구를 이용하고 있다\n2018년 1월에 제2여객터미널의 개장으로 인한 탑승수속 창구가 조정·재배치 되었고, 대표적으로, 대한항공이 제2여객터미널로 이동하였다.\n\n탑승동\n탑승동(Concourse)은 여객터미널의 여객 처리 능력을 늘리기 위하여 설치한 제1여객터미널의 부속 시설로 2008년 6월에 제1여객터미널에서 북쪽으로 900m 떨어진 곳에 건설되었으며 101~132번까지 총 30개의 탑승구가 설치되어 있다.\n외국계 항공사는 탑승동이 설치되면서 모두 탑승동으로 옮겼는데 제2여객터미널이 개장된 후에는 외항사 중 일부도 제1여객터미널을 사용하고 있으며 1992년 설계 당시 인천국제공항은 미국의 하츠필드 잭슨 애틀랜타 국제공항을 모범으로 삼아 여객터미널과 4개의 탑승동을 건설하는 것으로 설계되었고 이러한 기본 설계에 따라 애초에는 '탑승동 A'라고 불렸으나 2009년 탑승동 B·C·D 계획을 취소하고 제2여객터미널을 건설하기로 하면서 '탑승동'으로 명칭이 변경되었다.\n탑승동의 승객은 제1여객터미널의 27번과 28번 탑승구 사이에서 셔틀트레인을 타고 이동하며 또한 탑승동과 제2여객터미널 사이에도 길이 1.5 km의 셔틀트레인이 연결되었는데 이 구간은 제1여객터미널(탑승동 포함)과 제2여객터미널 사이의 환승객을 위하여 운행한다.\n셔틀트레인은 탑승동의 승객과 제1여객터미널(탑승동 포함) ~ 제2여객터미널 간의 환승객만 이용할 수 있으며 한번 셔틀트레인을 타고 이동한 승객은 반대 방향으로 되돌아갈 수 없다.\n\n교통센터(인천공항T1 버스터미널)\n\n제1여객터미널과 장기주차장 사이의 부지에 자리잡은 교통센터(Transportation)는 주차장 및 철도 시설 등 다양한 교통시설을 겸하고 있으며 서울역 및 김포국제공항을 잇는 인천국제공항철도의 인천공항1터미널역이 위치하며 지상 1층 ~ 지하 2층에 승용차 및 단기 주차장 부지가 조성되어 있다.\n횡단보도와 지하 및 지상 연결통로를 통하여 여객터미널을 왕래할 수 있지만 역과 터미널이 다소 떨어져 있어 공항공사에서는 노약자 및 많은 짐을 소지한 사람을 위하여 역과 터미널을 빠르게 이어주는 카트 서비스를 가동 중이며 지상 2층에는 인천공항 자기부상철도의 승강장이 위치해 있다.\n2013년 2월 기준 9시부터 18시까지 무료로 운행하고 있으며 또한 여행자 및 상주직원의 편의를 위하여 음식점, 편의점, 은행, 여행사 등의 편의시설이 갖추어져 있지만 공식 운영되고 있는 인천공항주차대행을 이용하지 않고 사설 주차대행을 이용할 경우 피해보상이 제대로 이루어지지 않을 수 있으니 주의할 필요가 있다.\n한편 완공 당시인 2000년대 초반에는 현대적인 건축디자인 및 탁 트인 공간배치 등의 여러 이점으로 인하여 클릭비의 '카우보이' 등 다수의 뮤직비디오 촬영 장소로 활용되었다.\n\n제2여객터미널\n\n인천국제공항의 3단계 계획에 따라 제1터미널에서 북쪽으로 약 2.4 km 떨어진 곳에 35만 m²의 규모로 건설되었는데 2013년 9월 26일에 착공하여 2017년 9월 30일에 완공된 뒤 2018년 1월 18일 정식 개장하였다.\n\n제2교통센터(인천공항T2 버스터미널)\n\n제2여객터미널과 제2합동청사 사이의 부지에 자리잡은 제2교통센터(Transportation Center2)는 주차장 및 철도 시설 및 버스터미널 등 다양한 교통시설을 겸하고 있으며 서울역 및 인천공항1터미널역을 잇는 인천국제공항철도의 인천공항2터미널역이 위치하며 지상 1층 ~ 지하 2층에 렌터카 및 단기 주차장 부지가 조성되어 있다.\n\n운항 노선\n2025년 12월 말 기준으로 운항 노선은 101개 항공사를 통해서 53개국 183개 도시와 연결되고 있다.\n\n제1여객터미널\n제주항공, 트리니티항공과 같은 일부 국적기 저비용 항공사, 스타얼라이언스 소속 항공사, 원월드 소속 항공사 및 비동맹 항공사가 운항하며, 1~50번 게이트에 해당되지만 일부 국적기 저비용 항공사도 상황에 따라 1터미널을 이용할 수 있다.\n\n탑승동\n이스타항공, 에어로케이항공과 같은 국적기 저비용 항공사와 2터미널에 취항하지 않는 스카이팀 소속 외항사, 그 외 저비용 외항사가 운항하며, 101~132번 게이트에 해당한다. 제1여객터미널에서 셔틀트레인으로 이동한다.\n\n제2여객터미널\n제2여객터미널은 스카이팀 전용 터미널이다. 개항때는 대한항공, 델타 항공, 에어 프랑스, KLM 등 4개 항공사들이 운항하다가, 2018년 10월 28일에 가루다 인도네시아 항공, 샤먼 항공, 아에로멕시코, 중화항공 등 총 9개 항공사, 2023년 7월 1일 진에어, 그리고 2025년 7월 29일 에어부산이 추가로 배치되었으며, 9월 9일 에어서울이, 2026년 1월 14일 아시아나항공도 모두 제2여객터미널로 이전되었다. 2터미널은 208~291번 게이트에 해당하며, 제1여객터미널(탑승동 포함)과의 환승객은 셔틀트레인으로 이동한다.\n\n화물 노선\n\n이용객 추이\n\n개항 다음해인 2002년 이용객 수는 2,000만명이 조금 넘었고, 2007년에 연간 이용객이 3,000만명을 돌파하였다. 그러나, 2008년 세계 금융 위기와 2009년 신종플루 사태로 인해 이용객 수가 줄었다가 2010년에 3,000만 명대를 회복하였고, 2019년에 7,000만명을 넘어섰다.\n2020년부터 2022년까지 코로나19 범유행으로 인해 이용객 수가 2,000만명 미만으로 크게 줄었다가 2024년에 2019년 수준으로 회복되었다.\n2026년에 공표된 ACI 자료에 따르면 인천국제공항의 2025년 여객처리 실적은 국제선 기준으로 세계 3위(7,355만 4,000명)이고, 화물처리 실적은 세계 7위(295만 4,000 톤)이다.\n\n항공사별 운송량\n2018년 기준\n\n연계 교통\n\n제1여객터미널\n\n버스 정류장\n\n도로 교통\n출발층(출국) : 여객터미널 3층 (외부에서 여객터미널로 도착하는 버스는 3층으로 도착, 외부로 나가는 버스는 1층에서 출발), 제2여객터미널 무료순환셔틀버스(약 10분간격)\n도착층(입국) : 여객터미널 1층\n도착게이트 : A, B, C, D, E, F 6개 운영 (3층 A체크인 카운터 기준으로 왼쪽 → 오른쪽)-2018년 하반기 인천공항 리모델링으로 6개→4개로 게이트 정리\n버스승차장 & 매표소 : 2, 4, 9, 13번 출구 / 지방행 정류장 교통안내카운터에서 승차권 구입가능\n주차장\n",
+        "lang": "ko",
+        "wiki_title": "인천국제공항",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Incheon International Airport",
+        "url": "https://en.wikipedia.org/wiki/Incheon_International_Airport",
+        "published": "2026-11-23",
+        "fetched_at": "2026-11-24",
+        "text": "Incheon International Airport (Korean: 인천국제공항, romanized: Incheon gukjegonghang; IATA: ICN, ICAO: RKSI) is the main international airport serving Seoul, the capital of South Korea. It is one of the largest and busiest airports in the world.\nThis airport opened for business on 29 March 2001, to replace the older Gimpo International Airport, which now serves mostly domestic destinations and shuttle flights to several East Asian metropolitan areas, particularly Shanghai–Hongqiao, Taipei–Songshan and Tokyo–Haneda.\nIncheon International Airport is located west of Incheon's city center, on an artificially created piece of land between Yeongjong and Yongyu Islands. A shallow sea originally separated the two islands. That area between the two islands was reclaimed for the construction project, effectively connecting the once-separate Yeongjong and Yongyu islands. The reclaimed area and the two islands are all part of Yeongjong-gu, an administrative district of Incheon. The airport has 111 boarding gates altogether, with 44 in Terminal 1, 30 in Concourse A (connected to Terminal 1), and 37 in Terminal 2.\nThis airport was constructed to share the demand for air transport in the 21st century and to serve as a hub airport in Northeast Asia.\n\nHistory\n\nInternational air traffic to South Korea increased after the 1988 Summer Olympics. In the 1990s, it became apparent that Gimpo International Airport could not cope with the increased air traffic. The government decided to build a new international airport to reduce the load on Gimpo International Airport.\nIncheon International Airport Corporation was established in 1991 to operate Incheon International Airport. Park Nam-choon (President and CEO)\nIn November 1992, the construction of the Incheon airport began on reclaimed land between Yeongjong Island and Youngyu Island. It took eight years to finish, with an additional six months for testing. Completion was initially scheduled for 1997 but delayed due to the Asian economic crisis. The airport was officially opened on 21 March 2001.\nOn 15 November 2006, an Airbus A380 landed at the airport as part of the first leg of its certification trip. Tests on the runways, taxiways, and ramps showed that the airport is fully capable of handling the A380.\nTo further upgrade service, Incheon and a major Korean logistics firm Hanjin Group (parent company of Korean Air) agreed on 10 January 2008, to build Yeongjong Medical Centre, which was completed in 2012. This hospital serves nearby residents and some 30,000 medical tourists who come to Korea annually.\n\nOperations\nThe airport opened for business in early 2001 to replace the older Gimpo International Airport, which now serves mostly domestic destinations plus shuttle flights to Beijing–Capital, Kaohsiung, Nagoya–Centrair, Osaka–Kansai, Shanghai–Hongqiao, Taipei–Songshan and Tokyo–Haneda although flights to Beijing, Kaohsiung, Nagoya and Osaka also operate from Incheon Airport.\nLocated 48 km (30 mi) west of Seoul, the capital and the largest city of South Korea, Incheon International Airport is the main hub for Korean Air, Asiana Airlines, Jeju Air, and Polar Air Cargo. The airport is a hub for international civilian air transportation and cargo traffic in East Asia. In 2024, the Incheon International Airport was the sixth-busiest airport in the world and third in Asia by cargo traffic, and 13th in the world and seventh in Asia by passenger traffic. \n\nConstruction phases\n\nThe airport was originally planned to be built in three phases, incrementally increasing airport capacity as the demand grew. This was changed, however, to four phases after the airport was opened.\n\nPhase 1\nIn Phase 1, the airport had a capacity of 30 million passengers annually, and a cargo capacity of 2,700,000 tonnes annually. In this phase, a passenger terminal with a floor space of 496,000 square metres (5,338,900 sq ft), two parallel runways, a control tower, an administrative building, a transportation centre (the Integrated Transportation Centre, designed by Terry Farrell and Partners and Samoo Architects & Engineers), an integrated operations centre, three cargo terminals, international business centre, and a government office building were constructed.\n\nPhase 2\nPhase 2 construction began in 2002 and was originally expected to be completed in December 2008. However, in an attempt to have the airport ready for the 2008 Beijing Olympics, which took place in August 2008, the schedule was modified, and Phase 2 construction was completed on 20 June 2008. During this construction phase, a third parallel 4,000-metre-long (13,123 ft 4 in) runway and a 13-hectare (32.1-acre) cargo terminal area was added. A 16.5-hectare (40.8-acre) concourse connected to the main passenger building via two parallel 870-metre-long (2,854 ft 4 in) underground passageways were added, with a Mitsubishi Crystal Mover shuttle train APM shuttling passengers between the concourse and the main terminal.\n\nPhase 3\nThe South Korean government invested ₩4 trillion until 2017 to expand Incheon International Airport. The second passenger terminal was constructed in the northern field of the airport, and its existing cargo terminal and other infrastructure were expanded. The terminals are connected by the underground \"Starline\" train. Also, a Landside Connecting system (Bus shuttle) is used for airport employees and departing passengers who don't come to the right terminal. After completion, Incheon International Airport can handle 62 million passengers and 5,800,000 tonnes (5,708,398 long tons; 6,393,406 short tons) of cargo a year, up from the previous capacity of 44 million passengers and 4,500,000 tonnes (4,428,929 long tons; 4,960,401 short tons). Construction began in 2011 and was completed in 2017. The terminal opened on 18 January 2018. Incheon's expansion also includes adding more aprons to park planes and extending a railway line to the city center of Seoul, about 70 kilometres (43 mi) away from the airport. The airport also signed an agreement to build a resort called \"Inspire\" which includes 6-star hotels, theme parks, and a casino.\n\nPhase 4\nBetween 2017 and 2024, a fourth construction phase at the airport was taking place. There was an expansion of Terminal 2, the building of a fourth runway, and additional apron and car parking facilities. Following completion of the works, it is expected that the hourly flight capacity of the airport will increase from 90 to 107.",
+        "lang": "en",
+        "wiki_title": "Incheon International Airport",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Passage of the Incheon Airport - panoramio.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Passage_of_the_Incheon_Airport_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Passage_of_the_Incheon_Airport_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Passage_of_the_Incheon_Airport_-_panoramio.jpg",
+        "width": 1800,
+        "height": 1200,
+        "license": "CC BY 3.0",
+        "artist": "ccfarmer",
+        "caption": "passage of the Incheon Airport",
+        "id": "P1"
+      },
+      {
+        "file": "File:이종원 Lee Jong-won - Incheon Airport Departure on March 2, 2024.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/%EC%9D%B4%EC%A2%85%EC%9B%90_Lee_Jong-won_-_Incheon_Airport_Departure_on_March_2%2C_2024.jpg/1920px-%EC%9D%B4%EC%A2%85%EC%9B%90_Lee_Jong-won_-_Incheon_Airport_Departure_on_March_2%2C_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/%EC%9D%B4%EC%A2%85%EC%9B%90_Lee_Jong-won_-_Incheon_Airport_Departure_on_March_2%2C_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B4%EC%A2%85%EC%9B%90_Lee_Jong-won_-_Incheon_Airport_Departure_on_March_2,_2024.jpg",
+        "width": 3704,
+        "height": 2444,
+        "license": "CC BY 3.0",
+        "artist": "K-POPIT 케이팝잇",
+        "caption": "Lee Jong-won - Incheon Airport Departure on March 2, 2024",
+        "id": "P2"
+      }
+    ],
+    "evidence": 0.733,
+    "ok": true,
+    "built_at": "2026-11-24T16:07:03Z"
+  }
+}

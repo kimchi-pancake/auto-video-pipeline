@@ -75,6 +75,14 @@
   "ch9ede5c-20261124-02-4dd70": {
    "exp_id": "웃짬-length_bucket-20261118",
    "arm": "short"
+  },
+  "chcafc50-20261125-03-94895": {
+   "exp_id": "도개-length_bucket-20261118",
+   "arm": "short"
+  },
+  "ch9ede5c-20261125-01-d5841": {
+   "exp_id": "웃짬-length_bucket-20261118",
+   "arm": "medium"
   }
  },
  "history": []
