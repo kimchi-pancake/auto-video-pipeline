@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261125-03-94895",
   "channel": "도개",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-24T16:07:03Z",
   "topic": {
     "title": "인천국제공항",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-24T16:08:58Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-24T16:13:52Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-24T16:13:52Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-24T16:14:34Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-24T16:14:37Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-24T16:15:15Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-24T16:16:09Z",
+      "note": "예약공개 11-27 20:00"
     }
   ],
   "attempts": {},
@@ -475,20 +505,141 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:Passage of the Incheon Airport - panoramio.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:Passage_of_the_Incheon_Airport_-_panoramio.jpg",
+          "license": "CC BY 3.0",
+          "artist": "ccfarmer",
+          "caption": "passage of the Incheon Airport"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:이종원 Lee Jong-won - Incheon Airport Departure on March 2, 2024.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%EC%9D%B4%EC%A2%85%EC%9B%90_Lee_Jong-won_-_Incheon_Airport_Departure_on_March_2,_2024.jpg",
+          "license": "CC BY 3.0",
+          "artist": "K-POPIT 케이팝잇",
+          "caption": "Lee Jong-won - Incheon Airport Departure on March 2, 2024"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/chcafc50-20261125-03-94895/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/chcafc50-20261125-03-94895/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/chcafc50-20261125-03-94895/out/subtitles.ass",
+    "bgm": "simple.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "5개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 2장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.13"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "27.6s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "27.6s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 31/편차 33; 밝기 31/편차 34"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 42/편차 28"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -18.0dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 11개, 마지막 27.2s / 영상 27.6s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "mpmHE47ewdg",
+    "scheduled_at": "2026-11-27T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "도개-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-24T16:08:58Z",
+  "updated_at": "2026-11-24T16:16:09Z",
   "pack": {
     "topic": {
       "title": "인천국제공항",

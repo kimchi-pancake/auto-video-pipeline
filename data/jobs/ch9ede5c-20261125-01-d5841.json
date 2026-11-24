@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261125-01-d5841",
   "channel": "웃짬",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-24T16:09:19Z",
   "topic": {
     "title": "경제 제재",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-24T16:11:43Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-24T16:12:40Z",
+      "note": "장면 자료 6개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-24T16:12:40Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-24T16:13:42Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-24T16:13:45Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-24T16:14:37Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-24T16:15:15Z",
+      "note": "예약공개 11-28 20:00"
     }
   ],
   "attempts": {},
@@ -736,20 +766,138 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "chart",
+        "source": {
+          "title": "World Bank Open Data — 경제성장률 (NY.GDP.MKTP.KD.ZG)",
+          "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG",
+          "fetched_at": "2026-11-24"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/ch9ede5c-20261125-01-d5841/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/ch9ede5c-20261125-01-d5841/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/ch9ede5c-20261125-01-d5841/out/subtitles.ass",
+    "bgm": "ambient_piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "12개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 0장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.09"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "46.2s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "46.2s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 27/편차 19; 밝기 29/편차 26"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 29/편차 28"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -17.9dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 19개, 마지막 45.8s / 영상 46.2s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "Zi4mu4NvAOE",
+    "scheduled_at": "2026-11-28T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "웃짬-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-24T16:11:43Z",
+  "updated_at": "2026-11-24T16:15:15Z",
   "pack": {
     "topic": {
       "title": "경제 제재",
