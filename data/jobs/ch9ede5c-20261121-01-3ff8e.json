@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261121-01-3ff8e",
   "channel": "웃짬",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-20T16:02:50Z",
   "topic": {
     "title": "짐바브웨의 초인플레이션",
@@ -90,6 +90,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-21T05:17:21Z",
       "note": "승인 → 예약공개 11-24 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-24T22:29:00Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {},
@@ -710,7 +715,7 @@
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-21T05:17:21Z",
+  "updated_at": "2026-11-24T22:29:00Z",
   "pack": {
     "topic": {
       "title": "짐바브웨의 초인플레이션",

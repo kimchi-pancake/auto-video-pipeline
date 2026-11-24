@@ -1,16 +1,110 @@
 {
  "도개": {
-  "n_videos": 0,
+  "n_videos": 1,
   "base_age_h": 72,
-  "generated_at": "2026-11-24T09:57:09Z",
+  "generated_at": "2026-11-24T22:29:00Z",
   "confidence": "표본 부족",
-  "note": "72시간 경과 스냅샷이 있는 영상이 아직 없음"
+  "median_views": 863,
+  "categories": {
+   "역사유산": {
+    "n": 1,
+    "median_views": 863,
+    "relative": 1.0,
+    "median_avg_view_pct": 36.9,
+    "confidence": "표본 부족"
+   }
+  },
+  "hook_types": {
+   "surprising_fact": {
+    "n": 1,
+    "median_views": 863,
+    "relative": 1.0,
+    "median_avg_view_pct": 36.9,
+    "confidence": "표본 부족"
+   }
+  },
+  "lengths": {
+   "26~40초": {
+    "n": 1,
+    "median_views": 863,
+    "relative": 1.0,
+    "median_avg_view_pct": 36.9,
+    "confidence": "표본 부족"
+   }
+  },
+  "publish_hours": {
+   "20": {
+    "n": 1,
+    "median_views": 863,
+    "relative": 1.0,
+    "median_avg_view_pct": 36.9,
+    "confidence": "표본 부족"
+   }
+  },
+  "topic_sources": {
+   "seed": {
+    "n": 1,
+    "median_views": 863,
+    "relative": 1.0,
+    "median_avg_view_pct": 36.9,
+    "confidence": "표본 부족"
+   }
+  },
+  "chart_share_corr": null,
+  "winners": []
  },
  "웃짬": {
-  "n_videos": 0,
+  "n_videos": 1,
   "base_age_h": 72,
-  "generated_at": "2026-11-24T09:57:09Z",
+  "generated_at": "2026-11-24T22:29:00Z",
   "confidence": "표본 부족",
-  "note": "72시간 경과 스냅샷이 있는 영상이 아직 없음"
+  "median_views": 1240,
+  "categories": {
+   "금융위기": {
+    "n": 1,
+    "median_views": 1240,
+    "relative": 1.0,
+    "median_avg_view_pct": 72.2,
+    "confidence": "표본 부족"
+   }
+  },
+  "hook_types": {
+   "result_first": {
+    "n": 1,
+    "median_views": 1240,
+    "relative": 1.0,
+    "median_avg_view_pct": 72.2,
+    "confidence": "표본 부족"
+   }
+  },
+  "lengths": {
+   "≤25초": {
+    "n": 1,
+    "median_views": 1240,
+    "relative": 1.0,
+    "median_avg_view_pct": 72.2,
+    "confidence": "표본 부족"
+   }
+  },
+  "publish_hours": {
+   "20": {
+    "n": 1,
+    "median_views": 1240,
+    "relative": 1.0,
+    "median_avg_view_pct": 72.2,
+    "confidence": "표본 부족"
+   }
+  },
+  "topic_sources": {
+   "seed": {
+    "n": 1,
+    "median_views": 1240,
+    "relative": 1.0,
+    "median_avg_view_pct": 72.2,
+    "confidence": "표본 부족"
+   }
+  },
+  "chart_share_corr": null,
+  "winners": []
  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261122-01-036a3",
   "channel": "도개",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-21T16:01:37Z",
   "topic": {
     "title": "SK하이닉스",
@@ -85,6 +85,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-21T16:09:13Z",
       "note": "예약공개 11-24 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-24T22:28:59Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {},
@@ -568,7 +573,7 @@
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-21T16:09:13Z",
+  "updated_at": "2026-11-24T22:28:59Z",
   "pack": {
     "topic": {
       "title": "SK하이닉스",
