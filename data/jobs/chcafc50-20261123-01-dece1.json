@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261123-01-dece1",
   "channel": "도개",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-22T16:02:50Z",
   "topic": {
     "title": "청계천",
@@ -85,6 +85,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-22T16:12:42Z",
       "note": "예약공개 11-25 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-25T21:44:50Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {},
@@ -609,7 +614,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-22T16:12:42Z",
+  "updated_at": "2026-11-25T21:44:50Z",
   "pack": {
     "topic": {
       "title": "청계천",
