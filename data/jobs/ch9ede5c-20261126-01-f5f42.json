@@ -1,0 +1,712 @@
+{
+  "id": "ch9ede5c-20261126-01-f5f42",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-25T16:05:05Z",
+  "topic": {
+    "title": "2008년 세계 금융 위기",
+    "wiki_title": "2008년 세계 금융 위기",
+    "category": "금융위기",
+    "source": "seed",
+    "angle": "공식 설명이 말하지 않는 것",
+    "score": 0.6771,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 0.833,
+      "evidence": 0.6,
+      "performance": 0.583,
+      "stimulus": 0.65,
+      "explore": 0.28
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 0.83 · 근거 0.60 · 성과prior 0.58(n=1) · 탐색 0.28 · 자극 0.65",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7331,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 0.833,
+        "evidence": 1.0,
+        "performance": 0.583,
+        "stimulus": 0.65,
+        "explore": 0.28
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 0.83 · 근거 1.00 · 성과prior 0.58(n=1) · 탐색 0.28 · 자극 0.65"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-25T16:05:05Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-25T16:05:05Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-25T16:06:22Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-25T16:06:53Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "problem_solution",
+      "first_line": "당시 영국은 '법과 질서 붕괴' 직전까지 갔었습니다",
+      "screen_text": "영국 붕괴 직전",
+      "title": "구제금융 안 하면 무슨 일 생기나",
+      "promise": "은행을 살리지 않았을 때 닥칠 연쇄 파산을 시나리오로 보여드립니다",
+      "evidence_quote": "영국의 재무장관이었던 앨리스터 달링은 2018년 스코틀랜드 왕립은행이 구제 금융을 받던 날 영국이 '법과 질서의 붕괴'에 직면하기 직전까지 갔었다고 밝혔습니다",
+      "eval": {
+        "score": 0.9072,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 0.3,
+          "no_greeting": 1.0,
+          "novel": 0.91,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "problem_solution",
+        "first_line": "당시 영국은 '법과 질서 붕괴' 직전까지 갔었습니다",
+        "screen_text": "영국 붕괴 직전",
+        "title": "구제금융 안 하면 무슨 일 생기나",
+        "promise": "은행을 살리지 않았을 때 닥칠 연쇄 파산을 시나리오로 보여드립니다",
+        "evidence_quote": "영국의 재무장관이었던 앨리스터 달링은 2018년 스코틀랜드 왕립은행이 구제 금융을 받던 날 영국이 '법과 질서의 붕괴'에 직면하기 직전까지 갔었다고 밝혔습니다",
+        "eval": {
+          "score": 0.9072,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "미국 가계 자산 1경 5천조 원이 1년 반 만에 증발했습니다",
+        "screen_text": "1경 5천조 증발",
+        "title": "11조 달러, 어디서 사라졌나",
+        "promise": "위기 때 자산이 어떻게 녹아내렸는지 숫자로 보여드립니다",
+        "evidence_quote": "미국 가계 자산은 2007년 2분기 정점인 61.4조 달러에서 2009년 1분기 말 50.4조 달러로 11조 달러 감소했습니다",
+        "eval": {
+          "score": 0.9067,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "은행가 47명이 감옥 갔는데 미국인은 단 1명뿐이었습니다",
+        "screen_text": "미국 처벌 1명",
+        "title": "누가 책임지고 누가 면죄받았나",
+        "promise": "처벌 결과가 국가별로 왜 갈렸는지 구조적으로 짚어드립니다",
+        "evidence_quote": "그 중 절반 이상이 위기가 가장 심각했고 3대 은행이 모두 붕괴했던 아이슬란드 출신이었다. 미국에서는 단 한 명의 은행가만이 위기 때문에 징역형을 살았습니다",
+        "eval": {
+          "score": 0.8997,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.86,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "다우지수 53% 폭락할 때 최상위 부자 77%도 자산이 줄었습니다",
+        "screen_text": "부자 77% 손실",
+        "title": "폭락장에서 부자와 서민의 차이",
+        "promise": "같은 위기에서 자산 구성이 승패를 어떻게 갈랐는지 비교합니다",
+        "evidence_quote": "다우 존스 산업평균지수는 2007년 10월에서 2009년 3월 사이에 53% 하락했으며... 최상위 부유층의 77%가 총자산 감소를 겪은 반면, 피라미드 하층부의 50%만이 자산 감소를 겪은 것으로 나타났습니다",
+        "eval": {
+          "score": 0.8785,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "중앙은행이 3개월 만에 3,500조 원을 찍어내 시장에 쏟아부었습니다",
+        "screen_text": "3개월 3,500조",
+        "title": "역사상 최대 돈풀기, 그 후폭풍",
+        "promise": "최종 대부자가 '유일한 대부자'가 된 순간을 수치로 확인합니다",
+        "evidence_quote": "2008년 4분기 동안 이들 중앙은행은 은행으로부터 2.5조 달러(2024년 가치로 약 3.57조 달러) 규모의 국채와 부실 민간 자산을 매입했습니다",
+        "eval": {
+          "score": 0.8773,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "가장 가난한 가정 절반은 위기 때 자산 손실을 0원 겪었습니다",
+        "screen_text": "빈곤층 손실 0%",
+        "title": "돈 없던 사람이 살아남은 이유",
+        "promise": "자산 분포가 위기 충격을 어떻게 갈랐는지 설명합니다",
+        "evidence_quote": "미국의 가장 가난한 가정 중 절반은 위기 동안 자산 감소를 전혀 겪지 않았는데, 이는 이들이 일반적으로 가치가 변동할 수 있는 금융 투자 자산을 보유하지 않았기 때문입니다",
+        "eval": {
+          "score": 0.8219,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.92,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "영국 붕괴 직전, 은행을 버리면 생기는 일",
+    "target_seconds": 22,
+    "category": "금융위기",
+    "bgm_mood": "tense",
+    "scenes": [
+      {
+        "narration": "당시 영국은 법과 질서 붕괴 직전까지 갔었습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "법과 질서 붕괴",
+          "small": "영국 재무장관 증언"
+        },
+        "claims": [
+          {
+            "text": "2008년 영국 재무장관 달링은 RBS 구제금융 당일 영국이 '법과 질서의 붕괴' 직전까지 갔었다고 밝혔습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "위기 당시 영국의 재무장관이었던 앨리스터 달링은 2018년 스코틀랜드 왕립은행이 구제 금융을 받던 날 영국이 \"법과 질서의 붕괴\"에 직면하기 직전까지 갔었다고 밝혔다."
+          }
+        ]
+      },
+      {
+        "narration": "은행이 멈추면 현금인출기가 먹통이 되고 월급이 끊깁니다.",
+        "visual": {
+          "type": "steps",
+          "title": "은행 파산 시 연쇄 반응",
+          "items": [
+            "예금 인출 불가",
+            "결제망 마비",
+            "급여 지급 중단",
+            "생필품 구매 불가"
+          ]
+        },
+        "claims": [
+          {
+            "text": "은행 시스템 마비 시 현금 인출, 결제, 급여 지급 등 실물 경제 필수 기능이 동시에 정지됩니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "고객의 예금 인출을 가능하게 할 충분한 자금을 은행에 제공하기 위해",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "2008년 9월 리먼 파산 후 세계 중앙은행은 2.5조 달러를 긴급 투입했습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "2.5조 달러",
+          "small": "중앙은행 긴급 자산 매입"
+        },
+        "claims": [
+          {
+            "text": "2008년 4분기 주요국 중앙은행은 은행으로부터 2.5조 달러 규모의 국채와 부실 자산을 매입했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "2008년 4분기 동안 이들 중앙은행은 은행으로부터 2.5조 달러(2024년 가치로 약 3.57조 달러) 규모의 국채와 부실 민간 자산을 매입했다."
+          }
+        ]
+      },
+      {
+        "narration": "미국 가계 자산은 11조 달러 증발했고 실업률은 11%까지 치솟았습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "위기 전후 미국 경제",
+          "a": {
+            "label": "가계 자산",
+            "value": 61.4
+          },
+          "b": {
+            "label": "가계 자산",
+            "value": 50.4
+          },
+          "unit": "조 달러"
+        },
+        "claims": [
+          {
+            "text": "미국 가계 자산은 2007년 2분기 61.4조 달러에서 2009년 1분기 50.4조 달러로 11조 달러 감소했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "미국 가계 자산은 2007년 2분기 정점인 61.4조 달러에서 2009년 1분기 말 50.4조 달러로 11조 달러 감소했으며"
+          },
+          {
+            "text": "실업률은 2009년 10월 11.0%로 1983년 이후 최고치를 기록했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "미국의 실업률은 2009년 10월 11.0%로 정점을 찍었는데, 이는 1983년 이후 가장 높은 수치"
+          }
+        ]
+      },
+      {
+        "narration": "은행을 살리지 않았을 때 닥치는 연쇄 파산, 그 비용이 구제금융보다 컸습니다.",
+        "visual": {
+          "type": "text",
+          "headline": "시스템 붕괴 비용 > 구제 비용",
+          "sub": "구조적 선택의 결과"
+        },
+        "claims": [
+          {
+            "text": "금융 시스템 붕괴 시 발생하는 실물 경제 피해와 사회적 비용이 금융기관 구제 비용을 상회한다는 분석이 있습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "글로벌 금융 시스템의 경제적 붕괴를 막기 위해 통화 정책과 재정 정책을 동원했다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "2008년 영국 재무장관 달링은 RBS 구제금융 당일 영국이 '법과 질서의 붕괴' 직전까지 갔었다고 밝혔습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "checked_at": "2026-11-25",
+        "quote": "위기 당시 영국의 재무장관이었던 앨리스터 달링은 2018년 스코틀랜드 왕립은행이 구제 금융을 받던 날 영국이 \"법과 질서의 붕괴\"에 직면하기 직전까지 갔었다고 밝혔다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "은행 시스템 마비 시 현금 인출, 결제, 급여 지급 등 실물 경제 필수 기능이 동시에 정지됩니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "checked_at": "2026-11-25",
+        "quote": "고객의 예금 인출을 가능하게 할 충분한 자금을 은행에 제공하기 위해",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "2008년 4분기 주요국 중앙은행은 은행으로부터 2.5조 달러 규모의 국채와 부실 자산을 매입했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "checked_at": "2026-11-25",
+        "quote": "2008년 4분기 동안 이들 중앙은행은 은행으로부터 2.5조 달러(2024년 가치로 약 3.57조 달러) 규모의 국채와 부실 민간 자산을 매입했다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "미국 가계 자산은 2007년 2분기 61.4조 달러에서 2009년 1분기 50.4조 달러로 11조 달러 감소했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "checked_at": "2026-11-25",
+        "quote": "미국 가계 자산은 2007년 2분기 정점인 61.4조 달러에서 2009년 1분기 말 50.4조 달러로 11조 달러 감소했으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 3,
+        "text": "실업률은 2009년 10월 11.0%로 1983년 이후 최고치를 기록했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "checked_at": "2026-11-25",
+        "quote": "미국의 실업률은 2009년 10월 11.0%로 정점을 찍었는데, 이는 1983년 이후 가장 높은 수치",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 4,
+        "text": "금융 시스템 붕괴 시 발생하는 실물 경제 피해와 사회적 비용이 금융기관 구제 비용을 상회한다는 분석이 있습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "checked_at": "2026-11-25",
+        "quote": "글로벌 금융 시스템의 경제적 붕괴를 막기 위해 통화 정책과 재정 정책을 동원했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 186,
+      "est_seconds": 34.4,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 8.6,
+      "max_scene_similarity": 0.09,
+      "visual_mix": {
+        "steps": 1,
+        "compare": 1,
+        "text": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 22
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "2008년 영국 재무장관 달링은 RBS 구제금융 당일 영국이 '법과 질서의 붕괴' 직전까지 갔었다고 밝혔습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+      "published": "2026-11-13",
+      "checked_at": "2026-11-25",
+      "quote": "위기 당시 영국의 재무장관이었던 앨리스터 달링은 2018년 스코틀랜드 왕립은행이 구제 금융을 받던 날 영국이 \"법과 질서의 붕괴\"에 직면하기 직전까지 갔었다고 밝혔다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "은행 시스템 마비 시 현금 인출, 결제, 급여 지급 등 실물 경제 필수 기능이 동시에 정지됩니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+      "published": "2026-11-13",
+      "checked_at": "2026-11-25",
+      "quote": "고객의 예금 인출을 가능하게 할 충분한 자금을 은행에 제공하기 위해",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "2008년 4분기 주요국 중앙은행은 은행으로부터 2.5조 달러 규모의 국채와 부실 자산을 매입했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+      "published": "2026-11-13",
+      "checked_at": "2026-11-25",
+      "quote": "2008년 4분기 동안 이들 중앙은행은 은행으로부터 2.5조 달러(2024년 가치로 약 3.57조 달러) 규모의 국채와 부실 민간 자산을 매입했다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "미국 가계 자산은 2007년 2분기 61.4조 달러에서 2009년 1분기 50.4조 달러로 11조 달러 감소했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+      "published": "2026-11-13",
+      "checked_at": "2026-11-25",
+      "quote": "미국 가계 자산은 2007년 2분기 정점인 61.4조 달러에서 2009년 1분기 말 50.4조 달러로 11조 달러 감소했으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 3,
+      "text": "실업률은 2009년 10월 11.0%로 1983년 이후 최고치를 기록했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+      "published": "2026-11-13",
+      "checked_at": "2026-11-25",
+      "quote": "미국의 실업률은 2009년 10월 11.0%로 정점을 찍었는데, 이는 1983년 이후 가장 높은 수치",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 4,
+      "text": "금융 시스템 붕괴 시 발생하는 실물 경제 피해와 사회적 비용이 금융기관 구제 비용을 상회한다는 분석이 있습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+      "published": "2026-11-13",
+      "checked_at": "2026-11-25",
+      "quote": "글로벌 금융 시스템의 경제적 붕괴를 막기 위해 통화 정책과 재정 정책을 동원했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-25T16:06:53Z",
+  "pack": {
+    "topic": {
+      "title": "2008년 세계 금융 위기",
+      "wiki_title": "2008년 세계 금융 위기",
+      "category": "금융위기",
+      "source": "seed",
+      "angle": "공식 설명이 말하지 않는 것",
+      "score": 0.6771,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 0.833,
+        "evidence": 0.6,
+        "performance": 0.583,
+        "stimulus": 0.65,
+        "explore": 0.28
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 0.83 · 근거 0.60 · 성과prior 0.58(n=1) · 탐색 0.28 · 자극 0.65",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7331,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 0.833,
+          "evidence": 1.0,
+          "performance": 0.583,
+          "stimulus": 0.65,
+          "explore": 0.28
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 0.83 · 근거 1.00 · 성과prior 0.58(n=1) · 탐색 0.28 · 자극 0.65"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 세계 금융 위기 (2007~2008년)",
+        "url": "https://ko.wikipedia.org/wiki/%EC%84%B8%EA%B3%84_%EA%B8%88%EC%9C%B5_%EC%9C%84%EA%B8%B0_(2007~2008%EB%85%84)",
+        "published": "2026-11-13",
+        "fetched_at": "2026-11-25",
+        "text": "2008년 세계 금융 위기(2008年世界金融危機) 또는 세계 금융 위기(GFC), 2008년 공황은 미국을 중심으로 발생한 전 세계적인 대규모 금융위기이다. 그 원인으로는 주택 소유자와 금융기관 모두의 자산 가치에 대한 과도한 투기가 있으며 이는 2000년대 미국 주택 버블로 이어졌다. 이 투기세는 서브프라임 모기지에 대한 약탈적 대출과 규제의 미비로 인해 더욱 악화되었다. 주택 가격이 상승하던 시기에 이루어진 자산 기반 재융자는 소비 증가를 부추겼으나, 주택 가격이 하락하자 이는 더 이상 지속될 수 없었다. 금융 위기의 발발은 2007년 초에 시작된 서브프라임 모기지 사태로, 미국 부동산과 연결된 주택저당증권(MBS) 및 이와 연계된 방대한 파생상품(파생금융상품)망의 가치가 폭락하면서 시작되었다. 이로 인해 발생한 유동성 위기는 2007년 중반까지 글로벌 금융 기관으로 확산되었고, 2008년 9월 리먼 브라더스의 파산으로 정점에 달했다. 이는 여러 국가에서 주가 대폭락과 뱅크런을 촉발했다. 이 위기는 2007년 중반 시작된 글로벌 경기 침체인 대침체와 2007년~2009년 미국 약세장을 악화시켰다. 또한 2008년~2011년 아이슬란드 금융 위기와 유럽 국가 부채 위기의 원인이 되기도 했다.\n1990년대 미국 의회는 금융 규제 완화를 통해 저렴한 주택 공급을 확대하려는 법안을 통과시켰으며, 1999년에는 1933년 은행법(글래스-스티걸법)의 일부가 글램-리치-블라일리법으로 폐지되었다. 이 개정으로 금융 기관은 상업은행 및 보험업과 같은 저위험 업무와 투자은행 업무 및 자기자본거래와 같은 고위험 업무를 동시에 할 수 있게 되었다. 연방준비제도(Fed)가 2000년부터 2003년까지 페더럴 펀드 금리를 낮추자, 금융기관은 주로 인종적 소수자에 속하는 저소득층 주택 구매자를 대상으로 고위험 대출을 점점 더 늘려 나갔다. 이러한 상황을 금융 규제 당국은 방치했다. 2004년부터 2006년까지 금리가 상승함에 따라 모기지 비용이 올랐고 주택 수요는 감소했다. 2007년 초 들어선 점점 더 많은 미국 서브프라임 모기지 보유자가 대출금을 체납하기 시작하면서 각 대출 기관이 파산했고, 4월 뉴 센추리 파이낸셜의 파산으로 이어졌다. 수요와 가격이 계속 하락하면서 경제적 전염은 2007년 8월 들어 글로벌 신용 시장으로 확산되었고, 각국 중앙은행은 유동성 공급을 시작했다. 2008년 3월, 미국에서 다섯 번째로 큰 투자은행이었던 베어스턴스는 연준의 자금 지원을 바탕으로 JP모건 체이스에 \"헐값 매각\"되었다.\n위기가 심화되자 전 세계 정부는 금융기관에 대한 대규모 구제 금융을 실시하고, 글로벌 금융 시스템의 경제적 붕괴를 막기 위해 통화 정책과 재정 정책을 동원했다. 2008년 7월 들어 미국 주택 시장의 절반을 소유하거나 보증하던 패니 메이와 프레디 맥은 붕괴 직전에 몰렸고, 2008년 주택 및 경제 회복법을 통해 미국 연방 정부는 9월 7일 이들을 인수했다. 9월 15일 리먼 브라더스(미국 4위 투자은행)가 미국 역사상 최대 규모의 파산 보호를 신청했고, 다음 날 연준은 아메리칸 인터내셔널 그룹(AIG, 미국 최대 보험사)에 구제 금융을 실시했으며, 9월 25일에는 워싱턴 뮤추얼이 미국 역사상 최대 규모의 은행 파산으로 인수되었다. 10월 3일, 의회는 2008년 긴급경제안정법을 통과시켜 미국 재무부가 7,000억 달러 규모의 부실자산 구제 프로그램(TARP)을 통해 부실 자산과 은행 주식을 매입할 수 있도록 승인했다. 연준은 국채와 주택저당증권(MBS) 같은 기타 자산을 매입하는 양적 완화 프로그램을 시작했고, 2009년 2월 새로 당선된 버락 오바마 미국 대통령이 서명한 2009년 미국 경기 회복 및 재투자법에는 기존 일자리를 보존하고 새로운 일자리를 창출하기 위한 다양한 조치가 포함되었다. 이러한 구상이 다른 국가의 조치와 결합되어 2009년 중반 무렵 대침체의 최악의 상황은 종료되었다.\n미국에서 위기가 미친 영향에 대한 평가는 다양하지만, 약 870만 개의 일자리가 사라졌으며 실업률은 2007년 5%에서 2009년 10월 10%까지 치솟았다. 빈곤층 비율은 2007년 12.5%에서 2010년 15.1%로 상승했다. 다우 존스 산업평균지수는 2007년 10월에서 2009년 3월 사이에 53% 하락했으며, 일부 추정치에 따르면 네 가구 중 한 가구가 순자산의 75% 이상을 잃었다. 2010년에는 금융 규제를 전면 개편하는 도드-프랭크 월스트리트 개혁 및 소비자 보호법이 통과되었다. 이 법은 많은 공화당 인사의 반대를 받았으며, 2018년 경제 성장, 규제 완화 및 소비자 보호법으로 약화되었다. 또한 전 세계적으로 바젤 III 자본 및 유동성 표준이 채택되었다.\n\n배경\n\n세계 금융 위기는 2007년 중반에 시작된 세계적 경기후퇴인 대침체를 악화시켰다. 또한 2009년 말 그리스 국가 부채 위기의 시작과 함께 발생한 유럽 국가 부채 위기, 아이슬란드의 3대 주요 은행이 모두 파산하며 경제 규모 대비 역사상 어떤 국가보다도 큰 경제적 붕괴를 겪었던 2008년~2011년 아이슬란드 금융 위기가 뒤이어 발생했다. 2008년 위기는 세계가 경험한 5대 최악의 금융 위기 중 하나였으며, 세계 경제에 2조 달러 이상의 손실을 초래했다. GDP 대비 미국 주택 모기지 부채는 1990년대 평균 46%에서 2008년 73%로 증가하여 10.5조 달러(2024년 가치로 약 15조 달러)에 달했다. 주택 가격 상승에 따른 자산 기반 재융자의 증가는 주택 가격이 하락하자 더 이상 유지 불가능할 정도로 소비 증가를 부채질했다. 많은 금융기관이 주택저당증권과 같이 주택 모기지에 기반한 가치를 지닌 투자 자산이나, 파산에 대비해 보험 역할을 하는 신용 파생상품을 보유하고 있었으나 이들의 가치는 급격히 하락했다. 국제 통화 기금은 2007년 1월부터 2009년 9월까지 미국과 유럽의 대형 은행이 부실 자산과 부실 대출로 인해 1조 달러 이상의 손실을 입은 것으로 추정했다.\n은행의 지불능력에 대한 투자자 신뢰 부족과 가용한 신용 감소는 2008년 말과 2009년 초 주식 및 일상재 가격의 폭락으로 이어졌다. 이 위기는 급속히 전 세계적인 경제 충격으로 번졌고, 여러 건의 은행 파산으로 이어졌다. 이 기간 신용이 경색되고 국제 무역이 감소함에 따라 전 세계 경제가 둔화되었다. 주택 시장이 타격을 입고 실업률이 급등하면서 퇴거와 압류가 잇따랐다. 여러 기업이 파산했다. 미국 가계 자산은 2007년 2분기 정점인 61.4조 달러에서 2009년 1분기 말 50.4조 달러로 11조 달러 감소했으며, 이는 소비 감소와 기업 투자 감소로 이어졌다. 2008년 4분기 미국의 실질 GDP 전기 대비 하락률은 8.4%였다. 미국의 실업률은 2009년 10월 11.0%로 정점을 찍었는데, 이는 1983년 이후 가장 높은 수치이자 위기 이전 수준의 약 두 배였다. 주당 평균 노동 시간은 33시간으로 감소하여 미국 정부가 관련 데이터를 수집하기 시작한 1964년 이후 최저치를 기록했다.\n경제 위기는 미국에서 시작되었으나 전 세계로 확산되었다. 미국의 소비는 2000년에서 2007년 사이 세계 소비 성장의 3분의 1 이상을 차지했으며, 나머지 국가는 자국 산업의 수요를 미국 소비자에게 의존하고 있었다. 부실 유동화 증권은 전 세계 기업 및 기관 투자자가 보유하고 있었다. 신용파산스왑과 같은 파생상품 또한 대형 금융기관 간의 연계성을 높였다. 동결된 신용 시장에서 재융자가 불가능해진 채무를 갚기 위해 자산을 매각함에 따라 발생한 금융기관의 디레버리징은 지불능력 위기를 더욱 가속화했고 국제 무역의 감소를 야기했다. 개발도상국의 경우 무역, 일상재 가격, 투자 및 이주 노동자의 송금 감소 등의 영향으로 성장률이 급격히 하락했다(예: 아르메니아). 정치 체제가 취약한 국가는 서구 국가의 투자자가 위기로 인해 자금을 회수할 것을 우려했다.\n대침체에 대한 각국의 재정 정책 대응의 일환으로, 연방준비제도, 유럽 중앙은행, 잉글랜드 은행을 포함한 정부와 중앙은행은 소비와 대출 능력 하락을 상쇄하고 추가 붕괴를 방지하며, 대출을 장려하고 핵심적인 기업어음 시장의 신뢰를 회복하며, 디플레이션 소용돌이의 위험을 피하고 고객의 예금 인출을 가능하게 할 충분한 자금을 은행에 제공하기 위해 확장적인 재정 정책과 통화 정책을 포함하여 당시로서는 전례 없는 수조 달러 규모의 구제 금융과 경기 부양책을 제공했다. 사실상 중앙은행은 경제의 상당 부분에 대해 \"최종 대부자\"에서 \"유일한 대부자\"로 변모했다. 어떤 경우에는 연준이 \"최종 구매자\"로 간주되기도 했다. 2008년 4분기 동안 이들 중앙은행은 은행으로부터 2.5조 달러(2024년 가치로 약 3.57조 달러) 규모의 국채와 부실 민간 자산을 매입했다. 이는 신용 시장에 대한 최대 규모의 유동성 주입이자 세계 역사상 최대 규모의 통화 정책 조치였다. 2008년 영국 은행 구조조정 패키지에서 시작된 모델에 따라 유럽 국가와 미국 정부는 자국 은행이 발행한 채무를 보증하고 국가 은행 시스템의 자본을 확충하여, 최종적으로 주요 은행의 신규 발행 우선주 1.5조 달러를 매입했다. 연방준비제도는 유동성 함정에 대처하기 위한 방법으로 당시로서는 상당한 양의 신규 통화를 창출했다.\n구제 금융은 수조 달러의 대출, 자산 매입, 보증, 직접 지출의 형태로 이루어졌다. AIG 보너스 지급 논란의 사례와 같이 구제 금융을 둘러싸고 상당한 논란이 수반되었으며, 이는 금융 위기 시기에 서로 상충하는 정책 이익 사이의 균형을 맞추는 데 도움이 되는 다양한 \"의사 결정 프레임워크\"의 개발로 이어졌다. 위기 당시 영국의 재무장관이었던 앨리스터 달링은 2018년 스코틀랜드 왕립은행이 구제 금융을 받던 날 영국이 \"법과 질서의 붕괴\"에 직면하기 직전까지 갔었다고 밝혔다. 일부 은행은 국내 대출을 늘리는 대신 신흥 시장 투자나 외환 투자와 같은 더 수익성 높은 분야에 경기 부양 자금 중 일부를 사용하기도 했다.\n2010년 7월 미국에서는 \"미국의 금융 안정을 도모\"하기 위해 도드-프랭크 월스트리트 개혁 및 소비자 보호법이 제정되었다. 바젤 III 자본 및 유동성 표준이 전 세계적으로 채택되었다. 2008년 금융 위기 이후 미국의 소비자 규제 기관은 위기를 초래한 반경쟁적 관행을 억제하기 위해 신용카드 판매자와 주택 모기지 판매자를 더욱 면밀히 감독한다.\n미국 의회는 위기의 원인에 대해 2011년 1월에 발표된 금융위기 조사 위원회 보고서와, 2011년 4월에 발표된 미국 상원 국토안보 상설 조사 소위원회의 \"월가와 금융 위기: 금융 붕괴의 분석\" 보고서, 최소 두 건의 주요 보고서를 작성했다.\n결과적으로 위기의 책임으로 총 47명의 은행가가 징역형을 살았으며, 그 중 절반 이상이 위기가 가장 심각했고 3대 은행이 모두 붕괴했던 아이슬란드 출신이었다. 2012년 4월, 아이슬란드의 게이르 호르데는 이 위기로 유죄 판결을 받으며 정치인 중 유일하게 징역을 살았다. 미국에서는 단 한 명의 은행가만이 위기 때문에 징역형을 살았는데, 크레디트 스위스의 은행가였던 카림 세라겔딘이 10억 달러의 손실을 숨기기 위해 채권 가격을 조작한 혐의로 30개월의 징역형을 선고받고 2,460만 달러의 보상금을 반납했다. 영국에서는 위기로 인해 유죄 판결을 받은 사람이 없었다. SEC 대 골드만삭스 사건에서, 골드만삭스는 부채담보부증권(CDO) 마케팅 자료에 불완전한 정보가 포함되었음을 인정하며 5억 5천만 달러의 민사 벌금을 지불했으며, 금융 위기를 예상하고 고객에게 부실 투자 상품을 판매한 혐의인 증권 사기 고발에 대해 합의했다.\n창조적 파괴에 투입할 자원이 부족해지면서, 이전 연도의 기하급수적인 증가세와 대조적으로 특허 출원 건수는 위기 시기 정체되었다.\n\n전형적인 미국 가정은 형편이 좋지 않았고, 피라미드 꼭대기 바로 아래의 \"부유하지만 최상위 부자는 아닌\" 가정도 마찬가지였다. 그러나 미국의 가장 가난한 가정 중 절반은 위기 동안 자산 감소를 전혀 겪지 않았는데, 이는 이들이 일반적으로 가치가 변동할 수 있는 금융 투자 자산을 보유하지 않았기 때문이다. 연방준비제도가 2007년부터 2009년까지 4,000가구를 조사한 결과, 전체 미국인의 63%가 해당 기간 동안 총자산이 감소했고 최상위 부유층의 77%가 총자산 감소를 겪은 반면, 피라미드 하층부의 50%만이 자산 감소를 겪은 것으로 나타났다.\n\n전개 및 연표\n\n다음은 정부 대응 및 이후의 경제 회복을 포함한 금융 위기 주요 사건을 나타낸 연표이다.\n\n2007년 이전\n\n2005년 5월 19일: 펀드 매니저 마이클 버리가 도이체 방크를 상대로 6,000만 달러 가치의 서브프라임 모기지 채권에 대한 신용파산스왑(CDS)을 체결했다. 이는 최초의 CDS 거래였다. 버리는 모기지의 낮은 \"티저 금리\"가 만료되는 시점부터 2년 이내에 이들이 변동성이 커질 것으로 예측했다.\n2006년: 수 년 평균 이상의 가격 상승이 이어진 미국 내 주택 가격이 정점에 달했고 모기지 대출 연체율이 상승했다. 이는 미국의 주택 거품 붕괴의 첫 징후였다. 점차 느슨해진 인수 기준으로 인해 2006년 전체 모기지의 3분의 1이 서브프라임 또는 서류 미비 대출이었으며, 이런 종류의 대출이 그해 주택 구매의 17%를 차지했다.\n",
+        "lang": "ko",
+        "wiki_title": "세계 금융 위기 (2007~2008년)",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — 2008 financial crisis",
+        "url": "https://en.wikipedia.org/wiki/2008_financial_crisis",
+        "published": "2026-11-25",
+        "fetched_at": "2026-11-25",
+        "text": "The 2008 financial crisis was a major worldwide financial crisis which started in the United States. The first phase was the subprime mortgage crisis, which began in early 2007 as mortgage-backed securities (MBS) tied to U.S. real estate, and a vast web of derivatives linked to those MBS, collapsed in value. A liquidity crisis spread to global institutions by mid-2007 and climaxed with the bankruptcy of Lehman Brothers in September 2008, which triggered a stock market crash and bank runs in several countries. The crisis exacerbated the Great Recession, a global recession that began in late 2007, and contributed to major crises in Iceland and the eurozone.\nDuring the 1990s, the U.S. Congress passed legislation intended to expand affordable housing through looser financing laws, and in 1999 parts of the 1933 Banking Act (Glass–Steagall Act) were repealed, enabling institutions to mix low-risk operations, such as commercial banking and insurance, with higher-risk operations such as investment banking and proprietary trading. As the Federal Reserve (Fed) lowered the federal funds rate from 2000 to 2003, institutions increasingly targeted low-income homebuyers, largely belonging to racial minority groups, with high-risk subprime loans; this development went unattended by regulators. As interest rates rose from 2004 to 2006, monthly payments on these largely adjustable-rate mortgages spiked, leading to a wave of defaults, foreclosures, and bankruptcies among subprime lenders in early 2007. As housing demand and prices continued to fall, the financial contagion spread to global credit markets by August 2007. In March 2008, Bear Stearns, one of the largest U.S. investment banks, was sold to JPMorgan Chase in a \"fire sale\" backed by Fed financing.\nIn response to the crisis, governments around the world deployed massive bailouts of financial institutions and used monetary and fiscal policy to prevent a collapse of the global financial system. On September 7, 2008, Fannie Mae and Freddie Mac, two government-sponsored enterprises which owned or guaranteed half of the U.S. housing market, were seized by the federal government. On September 15, Lehman Brothers filed for the largest bankruptcy in the country's history, which was followed that month by a Fed bailout of American International Group and the seizure of Washington Mutual in the largest bank failure in U.S. history. On October 3, Congress passed the Emergency Economic Stabilization Act, authorizing the Treasury Department to purchase toxic assets and bank stocks through the $700 billion Troubled Asset Relief Program (TARP). The Fed began a program of quantitative easing by buying treasury bonds and other assets, and the American Recovery and Reinvestment Act, signed in February 2009 by President Barack Obama, included various measures which, combined with actions taken in other countries, ended the worst of the Great Recession by mid-2009.\nAssessments of the crisis's impact in the U.S. vary, but suggest that some 8.7 million jobs were lost, causing unemployment to rise from 5% in 2007 to a high of 10% in October 2009. The percentage of citizens living in poverty rose from 12.5% in 2007 to 15.1% in 2010. The Dow Jones Industrial Average fell by 53% between October 2007 and March 2009, and some estimates suggest that one in four households lost 75% or more of their net worth. In 2010, the Dodd–Frank Wall Street Reform and Consumer Protection Act was passed, overhauling financial regulations. It was opposed by many Republicans, and it was weakened by the Economic Growth, Regulatory Relief, and Consumer Protection Act in 2018. The Basel III capital and liquidity standards were also adopted by countries around the world.\n\nBackground\n\nThe crisis worsened the Great Recession, a global recession that began in mid-2007. It was also followed by the euro area crisis, which began with the start of the Greek government-debt crisis in late 2009, and the 2008–2011 Icelandic financial crisis, which involved the bank failure of all three of the major banks in Iceland and, relative to the size of its economy, was the largest economic collapse suffered by any country in history. It was among the five worst financial crises the world had experienced and led to a loss of more than $2 trillion from the global economy. U.S. home mortgage debt relative to GDP increased from an average of 46% during the 1990s to 73% during 2008, reaching $10.5 (~$15.4 trillion in 2025) trillion. The increase in cash out refinancings, as home values rose, fueled an increase in consumption that could no longer be sustained when home prices declined. Many financial institutions owned investments whose value was based on home mortgages such as mortgage-backed securities, or credit derivatives used to insure them against failure, which declined in value significantly. The International Monetary Fund estimated that large U.S. and European banks lost more than $1 trillion on toxic assets and from bad loans from January 2007 to September 2009.\nLack of investor confidence in bank solvency and declines in credit availability led to plummeting stock and commodity prices in late 2008 and early 2009. The crisis rapidly spread into a global economic shock, resulting in several bank failures. Economies worldwide slowed during this period since credit tightened and international trade declined. Housing markets suffered and unemployment soared, resulting in evictions and foreclosures. Several businesses failed. From its peak in the second quarter of 2007 at $61.4 trillion, household wealth in the United States fell $11 trillion, to $50.4 trillion by the end of the first quarter of 2009, resulting in a decline in consumption, then a decline in business investment. In the fourth quarter of 2008, the quarter-over-quarter decline in real GDP in the U.S. was 8.4%. The U.S. unemployment rate peaked at 11.0% in October 2009, the highest rate since 1983 and roughly twice the pre-crisis rate. The average hours per work week declined to 33, the lowest level since the government began collecting the data in 1964.\nThe economic crisis started in the U.S. but spread to the rest of the world. U.S. consumption accounted for more than a third of the growth in global consumption between 2000 and 2007 and the rest of the world depended on the U.S. consumer as a source of demand. Toxic securities were owned by corporate and institutional investors globally.",
+        "lang": "en",
+        "wiki_title": "2008 financial crisis",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:U.S. Recovery from Great Recession - Govt Contribution to Pct Chg in Real GDP - v1.png",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/U.S._Recovery_from_Great_Recession_-_Govt_Contribution_to_Pct_Chg_in_Real_GDP_-_v1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/U.S._Recovery_from_Great_Recession_-_Govt_Contribution_to_Pct_Chg_in_Real_GDP_-_v1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:U.S._Recovery_from_Great_Recession_-_Govt_Contribution_to_Pct_Chg_in_Real_GDP_-_v1.png",
+        "width": 1399,
+        "height": 764,
+        "license": "Public domain",
+        "artist": "Farcaster",
+        "caption": "U.S. federal government spending was held relatively level around $3.5 trillion from 2009-2014, which created a headwind to recovery, reducing real GDP growth b",
+        "id": "P1"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 26.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_26.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_26.jpg",
+        "width": 2010,
+        "height": 2860,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Mohamed Medfai avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis, l",
+        "id": "P2"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 31.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_31.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_31.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_31.jpg",
+        "width": 2250,
+        "height": 3001,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Dominique Guidi avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis, ",
+        "id": "P3"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 32.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_32.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_32.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_32.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_32.jpg",
+        "width": 2592,
+        "height": 3455,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Jérémy Blayac avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis, le",
+        "id": "P4"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 33.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_33.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_33.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_33.jpg",
+        "width": 2592,
+        "height": 3455,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Un entraîneur du GFC Ajaccio avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bolla",
+        "id": "P5"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 48.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_48.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_48.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_48.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_48.jpg",
+        "width": 2028,
+        "height": 2704,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Julien Anziani avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis, l",
+        "id": "P6"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 53.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_53.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_53.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_53.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_53.jpg",
+        "width": 2173,
+        "height": 2898,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "David Oberhauser avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis,",
+        "id": "P7"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 62.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_62.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_62.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_62.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_62.jpg",
+        "width": 3299,
+        "height": 2474,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Ousseynou Ba avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis, le ",
+        "id": "P8"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 63.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_63.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_63.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_63.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_63.jpg",
+        "width": 2592,
+        "height": 3456,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Fodé Camara avant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au Stade Bollaert-Delelis, le 2",
+        "id": "P9"
+      },
+      {
+        "file": "File:RC Lens - GFC Ajaccio (22-10-2018) 73.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_73.jpg/1920px-RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_73.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/RC_Lens_-_GFC_Ajaccio_%2822-10-2018%29_73.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:RC_Lens_-_GFC_Ajaccio_(22-10-2018)_73.jpg",
+        "width": 4608,
+        "height": 3456,
+        "license": "CC0",
+        "artist": "Supporterhéninois",
+        "caption": "Banderoles en hommage à Éric Sikora pendant le match RC Lens / GFC Ajaccio, comptant pour la onzième journée du championnat de France de Ligue 2 2018-2019 au St",
+        "id": "P10"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-25T16:05:05Z"
+  }
+}

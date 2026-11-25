@@ -1,0 +1,640 @@
+{
+  "id": "chcafc50-20261126-01-05bf3",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-25T16:01:59Z",
+  "topic": {
+    "title": "고려청자",
+    "wiki_title": "고려청자",
+    "category": "역사유산",
+    "source": "seed",
+    "angle": "숫자로 보면 얼마나 압도적인가",
+    "score": 0.6769,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.583,
+      "stimulus": 0.35,
+      "explore": 0.376
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.58(n=1) · 탐색 0.38 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7329,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.583,
+        "stimulus": 0.35,
+        "explore": 0.376
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.58(n=1) · 탐색 0.38 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-25T16:01:59Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-25T16:01:59Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-25T16:02:43Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-25T16:04:32Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "comparison",
+      "first_line": "초기 가마 벽돌가마→전성기 흙가마, 왜 바꿨을까요?",
+      "screen_text": "전축요 vs 토축요",
+      "title": "가마 재료가 바꾼 고려청자 100년 품질 차이",
+      "promise": "벽돌가마(전축요)에서 흙가마(토축요)로 바뀐 11세기 전환점이 청자 품질을 어떻게 끌어올렸는지 보여드립니다.",
+      "evidence_quote": "10세기에 속하는 유품으로는 순화 3년(992년)명 고배, 순화 4년(993년)명 항아리 등이 있다. 11세기 고려의 국력 증대와 중앙집권체제가 확립되면서 청자 소성 가마는 전남 강진에 집중되어 관요적 성격을 강화해 갔다. 토축요가 10세기에 사용되었던 전축요를 대체한다.",
+      "eval": {
+        "score": 1.0,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "comparison",
+        "first_line": "초기 가마 벽돌가마→전성기 흙가마, 왜 바꿨을까요?",
+        "screen_text": "전축요 vs 토축요",
+        "title": "가마 재료가 바꾼 고려청자 100년 품질 차이",
+        "promise": "벽돌가마(전축요)에서 흙가마(토축요)로 바뀐 11세기 전환점이 청자 품질을 어떻게 끌어올렸는지 보여드립니다.",
+        "evidence_quote": "10세기에 속하는 유품으로는 순화 3년(992년)명 고배, 순화 4년(993년)명 항아리 등이 있다. 11세기 고려의 국력 증대와 중앙집권체제가 확립되면서 청자 소성 가마는 전남 강진에 집중되어 관요적 성격을 강화해 갔다. 토축요가 10세기에 사용되었던 전축요를 대체한다.",
+        "eval": {
+          "score": 1.0,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "고려청자 '비색'이란 단어가 원래 중국어였다고요?",
+        "screen_text": "비색의 원래 뜻",
+        "title": "고려가 바꾼 '비색(秘色→翡色)'의 비밀",
+        "promise": "중국 송나라가 숨긴 '비색'을 고려가 '비취색'으로 재정의한 순간을 알려드립니다.",
+        "evidence_quote": "중국 오월(吳越, 907년~)의 청자인 월주요(越州窯) 제작 기술을 도입하며 10세기 초경 고려에서도 청자가 만들어지기 시작했다. 오월 이후 송나라의 청자는 중국에서 '비색(秘色)'이라 불렸는데, 고려에서는 12세기 전반에 분청색 도기를 생산할 수 있게 되자 분청색을 '비색(翡色)'이라 부르기 시작했다.",
+        "eval": {
+          "score": 0.9975,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "왜청자 색이 12세기엔 '옥색'인데 13세기엔 '황록색'일까요?",
+        "screen_text": "비색→황록색 변화",
+        "title": "고려청자 유약 색이 100년 만에 변한 결정적 이유",
+        "promise": "전성기 얇고 투명한 유약이 쇠퇴기 두껍고 황록색 유약으로 바뀐 제작 현장의 변화를 추적합니다.",
+        "evidence_quote": "제2기와는 달리 전반적으로 유색(釉色)이 엷고 얕아진 것이 특색인데 이는 상감청자의 발명에 따라 표면의 장식효과에 관심을 두고 배면(背面)을 등한히 여긴 때문이라 할 수 있다. 청자의 표면이 황록색조를 띠거나 비색(翡色)을 잃으면서 상감의 무늬도 산만하고 조잡해지며",
+        "eval": {
+          "score": 0.9678,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "전성기 100년, 쇠퇴기 100년… 그런데 쇠퇴가 더 길다?",
+        "screen_text": "300년 중 150년 쇠퇴",
+        "title": "고려청자 300년사, 숫자로 보는 흥망성쇠",
+        "promise": "발생·전성·쇠퇴 3기 300년 중 실제 쇠퇴기가 150년에 달한 몽골 침입 전후의 타임라인을 정리해 드립니다.",
+        "evidence_quote": "고려청자(高麗靑磁)는 고려 문종(文宗)시대 전 후에 송(宋)의 화남 절강성 월주요(華南浙江省越州窯)의 영향을 받고 일어난 것으로서 그 변천은 청자의 발생에서 쇠퇴까지 각 기간을 3기, 300년으로 구분하는 것이 가장 타당한 방법으로 알려지고 있다. 고려청자가 쇠퇴하는 제3기(1250년-1350년)로서 그 기간은 1세기로 보나 몽골이 침입한 14세기 후반부터 시작한다면 실제로는 1세기 반이나 된다.",
+        "eval": {
+          "score": 0.914,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "상감 무늬 새길 때 '역상감'이란 기술도 썼습니다",
+        "screen_text": "박지문·역상감 기법",
+        "title": "무늬 파서 채우는 정상감만 있는 게 아닙니다",
+        "promise": "배경을 파고 무늬를 남기는 '박지문(剝地紋)' 역상감법이 어떻게 작동하는지 도면처럼 설명해 드립니다.",
+        "evidence_quote": "필요한 무늬는 청자색으로 그냥 두고 배경만 깎아 백토로 메워 무늬를 노출시키는 박지문(剝地紋)이라고 불리는 역상감법도 있다.",
+        "eval": {
+          "score": 0.9104,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "상감청자, 고려 발명인데 힌트는 나전칠기에서 얻었죠",
+        "screen_text": "나전칠기→상감청자",
+        "title": "나전칠기 기법이 청자 상감으로 바뀐 이유",
+        "promise": "금속·자개 박던 나전칠기 기법이 흙 그릇 상감기법으로 옮겨간 구체적 과정을 설명합니다.",
+        "evidence_quote": "이러한 방법은 나전칠기(螺鈿漆器)에서 힌트를 얻은 듯하며 동제용기의 입사법도 같은 시기에 유행한 것으로 추측된다.",
+        "eval": {
+          "score": 0.858,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.98,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "고려청자, 흙가마가 바꾼 품질의 비밀",
+    "target_seconds": 35,
+    "category": "역사유산",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "초기 가마 벽돌가마에서 전성기 흙가마로, 왜 바꿨을까요?",
+        "visual": {
+          "type": "photo",
+          "id": "P1"
+        },
+        "claims": [
+          {
+            "text": "고려청자는 10세기 초 오월 월주요 기술을 도입해 시작되었습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "중국 오월(吳越, 907년~)의 청자인 월주요(越州窯) 제작 기술을 도입하며 10세기 초경 고려에서도 청자가 만들어지기 시작했다"
+          }
+        ]
+      },
+      {
+        "narration": "10세기 후반까지 경기도 시흥, 황해도 배천 등에서 벽돌가마인 전축요로 구웠습니다.",
+        "visual": {
+          "type": "text",
+          "headline": "전축요 시대(10세기)",
+          "sub": "시흥·배천 중심, 벽돌가마 사용"
+        },
+        "claims": [
+          {
+            "text": "10세기 후반 시흥과 배천 등지에서 벽돌가마인 전축요로 청자를 생산했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "10세기 후반에는 경기도 시흥시, 황해남도 배천군 등지에서도 청자를 생산하기 시작했다. 이것들은 벽돌을 주재료로 만든 전축요에 속한다"
+          }
+        ]
+      },
+      {
+        "narration": "11세기 국력 증대와 함께 강진·부안으로 가마가 집중되고 흙가마 토축요로 바뀌었습니다.",
+        "visual": {
+          "type": "compare",
+          "title": "가마 전환과 생산지 변화",
+          "a": {
+            "label": "10세기 전축요",
+            "value": 10
+          },
+          "b": {
+            "label": "11세기 토축요",
+            "value": 11
+          },
+          "unit": "세기"
+        },
+        "claims": [
+          {
+            "text": "11세기 고려의 국력 증대와 중앙집권체제 확립으로 청자 가마가 강진·부안에 집중되고 토축요가 전축요를 대체했습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "11세기 고려의 국력 증대와 중앙집권체제가 확립되면서 청자 소성 가마는 전남 강진에 집중되어 관요적 성격을 강화해 갔다. 토축요가 10세기에 사용되었던 전축요를 대체한다"
+          }
+        ]
+      },
+      {
+        "narration": "흙가마는 열 보존과 온도 제어가 뛰어나 12세기 비색청자와 상감청자 탄생의 기반이 됐습니다.",
+        "visual": {
+          "type": "steps",
+          "title": "토축요 전환의 효과",
+          "items": [
+            "열 보존 향상",
+            "안정적 고온 소성",
+            "비색·상감 구현"
+          ]
+        },
+        "claims": [
+          {
+            "text": "토축요로의 전환이 12세기 전반 비색청자와 상감청자 등 최성기 품질 달성의 기술적 기반이 되었습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "고려청자의 최성기인 제2기 1150년~1250년이며 서긍의 《고려도경》의 기록으로 미루어 상감청자의 발생은 대체로 의종대(毅宗代 1147-1170년)일 것으로 추측된다",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "벽돌가마에서 흙가마로의 11세기 전환이 300년 고려청자사에서 품질 도약의 결정적 열쇠였습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "300년",
+          "small": "고려청자 변천 3기 구분"
+        },
+        "claims": [
+          {
+            "text": "고려청자는 발생부터 쇠퇴까지 3기, 약 300년으로 구분되며 11세기 가마 전환이 중기 최성기의 토대가 되었습니다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "그 변천은 청자의 발생에서 쇠퇴까지 각 기간을 3기, 300년으로 구분하는 것이 가장 타당한 방법으로 알려지고 있다"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "고려청자는 10세기 초 오월 월주요 기술을 도입해 시작되었습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 고려청자",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-25",
+        "quote": "중국 오월(吳越, 907년~)의 청자인 월주요(越州窯) 제작 기술을 도입하며 10세기 초경 고려에서도 청자가 만들어지기 시작했다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "10세기 후반 시흥과 배천 등지에서 벽돌가마인 전축요로 청자를 생산했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 고려청자",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-25",
+        "quote": "10세기 후반에는 경기도 시흥시, 황해남도 배천군 등지에서도 청자를 생산하기 시작했다. 이것들은 벽돌을 주재료로 만든 전축요에 속한다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "11세기 고려의 국력 증대와 중앙집권체제 확립으로 청자 가마가 강진·부안에 집중되고 토축요가 전축요를 대체했습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 고려청자",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-25",
+        "quote": "11세기 고려의 국력 증대와 중앙집권체제가 확립되면서 청자 소성 가마는 전남 강진에 집중되어 관요적 성격을 강화해 갔다. 토축요가 10세기에 사용되었던 전축요를 대체한다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "토축요로의 전환이 12세기 전반 비색청자와 상감청자 등 최성기 품질 달성의 기술적 기반이 되었습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 고려청자",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-25",
+        "quote": "고려청자의 최성기인 제2기 1150년~1250년이며 서긍의 《고려도경》의 기록으로 미루어 상감청자의 발생은 대체로 의종대(毅宗代 1147-1170년)일 것으로 추측된다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "고려청자는 발생부터 쇠퇴까지 3기, 약 300년으로 구분되며 11세기 가마 전환이 중기 최성기의 토대가 되었습니다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 고려청자",
+        "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-25",
+        "quote": "그 변천은 청자의 발생에서 쇠퇴까지 각 기간을 3기, 300년으로 구분하는 것이 가장 타당한 방법으로 알려지고 있다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 229,
+      "est_seconds": 42.4,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 10.4,
+      "max_scene_similarity": 0.12,
+      "visual_mix": {
+        "photo": 1,
+        "text": 1,
+        "compare": 1,
+        "steps": 1,
+        "stat": 1
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "고려청자는 10세기 초 오월 월주요 기술을 도입해 시작되었습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 고려청자",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-25",
+      "quote": "중국 오월(吳越, 907년~)의 청자인 월주요(越州窯) 제작 기술을 도입하며 10세기 초경 고려에서도 청자가 만들어지기 시작했다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "10세기 후반 시흥과 배천 등지에서 벽돌가마인 전축요로 청자를 생산했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 고려청자",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-25",
+      "quote": "10세기 후반에는 경기도 시흥시, 황해남도 배천군 등지에서도 청자를 생산하기 시작했다. 이것들은 벽돌을 주재료로 만든 전축요에 속한다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "11세기 고려의 국력 증대와 중앙집권체제 확립으로 청자 가마가 강진·부안에 집중되고 토축요가 전축요를 대체했습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 고려청자",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-25",
+      "quote": "11세기 고려의 국력 증대와 중앙집권체제가 확립되면서 청자 소성 가마는 전남 강진에 집중되어 관요적 성격을 강화해 갔다. 토축요가 10세기에 사용되었던 전축요를 대체한다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "토축요로의 전환이 12세기 전반 비색청자와 상감청자 등 최성기 품질 달성의 기술적 기반이 되었습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 고려청자",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-25",
+      "quote": "고려청자의 최성기인 제2기 1150년~1250년이며 서긍의 《고려도경》의 기록으로 미루어 상감청자의 발생은 대체로 의종대(毅宗代 1147-1170년)일 것으로 추측된다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "고려청자는 발생부터 쇠퇴까지 3기, 약 300년으로 구분되며 11세기 가마 전환이 중기 최성기의 토대가 되었습니다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 고려청자",
+      "source_url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-25",
+      "quote": "그 변천은 청자의 발생에서 쇠퇴까지 각 기간을 3기, 300년으로 구분하는 것이 가장 타당한 방법으로 알려지고 있다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-25T16:04:32Z",
+  "pack": {
+    "topic": {
+      "title": "고려청자",
+      "wiki_title": "고려청자",
+      "category": "역사유산",
+      "source": "seed",
+      "angle": "숫자로 보면 얼마나 압도적인가",
+      "score": 0.6769,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.583,
+        "stimulus": 0.35,
+        "explore": 0.376
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.58(n=1) · 탐색 0.38 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7329,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.583,
+          "stimulus": 0.35,
+          "explore": 0.376
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.58(n=1) · 탐색 0.38 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 고려청자",
+        "url": "https://ko.wikipedia.org/wiki/%EA%B3%A0%EB%A0%A4%EC%B2%AD%EC%9E%90",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-25",
+        "text": "고려청자(高麗靑磁)는 고려 문종(文宗)시대 전 후에 송(宋)의 화남 절강성 월주요(華南浙江省越州窯)의 영향을 받고 일어난 것으로서 그 변천은 청자의 발생에서 쇠퇴까지 각 기간을 3기, 300년으로 구분하는 것이 가장 타당한 방법으로 알려지고 있다. 그리고 이러한 시대 구분과 해당 기간 중의 청자의 특색과는 밀접한 연관을 갖게 된다. 초기의 청자는 매우 소박한 데서 출발하여 점차 기술이 숙련됨에 따라 예종(睿宗)·인종(仁宗) 때에 이르러 이른바 옥색청자시대(翡色靑磁時代)를 이루며 고려청자의 진면목을 보이는 상감청자를 낳는데 이는 순전히 고려인의 창의력에 의한 것이다. 이러한 상감청자가 다시 동철기(銅鐵器)에 접목(接木)되어 은동상감기(銀銅象嵌器)를 낳고 고려 말기에 이르러 청자는 실질적으로 쇠퇴하여 속화(俗化)되고 말았다.\n\n고려청자\n중국 오월(吳越, 907년~)의 청자인 월주요(越州窯) 제작 기술을 도입하며 10세기 초경 고려에서도 청자가 만들어지기 시작했다. 오월 이후 송나라의 청자는 중국에서 '비색(秘色)'이라 불렸는데, 고려에서는 12세기 전반에 분청색 도기를 생산할 수 있게 되자 분청색을 '비색(翡色)'이라 부르기 시작했다.\n10세기 후반에는 경기도 시흥시, 황해남도 배천군 등지에서도 청자를 생산하기 시작했다. 이것들은 벽돌을 주재료로 만든 전축요에 속한다. 10세기에 속하는 유품으로는 순화 3년(992년)명 고배, 순화 4년(993년)명 항아리 등이 있다.\n11세기 고려의 국력 증대와 중앙집권체제가 확립되면서 청자 소성 가마는 전남 강진에 집중되어 관요적 성격을 강화해 갔다. 주요 제작지는 전라남도 강진군, 전라북도 부안군 등이다. 토축요가 10세기에 사용되었던 전축요를 대체한다.\n고려청자의 최성기인 제2기 1150년~1250년이며 서긍의 《고려도경》의 기록으로 미루어 상감청자의 발생은 대체로 의종대(毅宗代 1147-1170년)일 것으로 추측된다. 상감기법이란 자기를 완전히 건조시키기에 앞서 무늬를 음각하거나 새김판으로 찍고 그 자국에 백토(白土) 혹은 적토(赤土)를 메워 일단 초벌구이(豫磻)한 후 청자유를 발라 굽는 것인데 백토는 순백, 적토는 흑색으로 발색하여 무늬가 나타난다. 이러한 방법은 나전칠기(螺鈿漆器)에서 힌트를 얻은 듯하며 동제용기의 입사법도 같은 시기에 유행한 것으로 추측된다. 상감청자에 나타나는 무늬로는 '운학(雲鶴)·양류(楊柳)·보상화(寶相花)·국화(菊花)·당초(唐草)·석류' 등 다양한데 특히 운학문과 국화문이 가장 많이 쓰였고 국화문은 조선시대 초기까지 쓰이고 있다.\n제2기의 상감청자의 특색은 상감무늬를 전면적으로 쓸 경우에는 배경으로서의 여백을 남길 여유를 보일 만큼 충분한 공간이 설정되고 있는 점과, 무늬가 단일무늬의 기계적인 반복에 그치는 것이 아니고 성격이 다른 몇 가지 무늬를 통일적으로 배열하여 화폭(畵幅)과 같은 효과를 내고 있는 점이다. 이 시기에는 상감청자 외에 무문청자(無文靑磁)나 잡유기(雜釉器)도 만들어지고 있으며 제1기와는 달리 전반적으로 유색(釉色)이 엷고 얕아진 것이 특색인데 이는 상감청자의 발명에 따라 표면의 장식효과에 관심을 두고 배면(背面)을 등한히 여긴 때문이라 할 수 있다.\n제2기의 상감청자로 연대가 확실한 작품은 명종 지릉(明宗 智陵, 1202년)에서 나온 청자상감석류문완·청자상감국화문혈이 있고 문씨묘(文氏墓, 1159년沒)에서 나온 청자상감 국화문혈·청자상감보상화문완 등이 있다. 한편 회화적인 성격이 뚜렷한 상감청자로는 청자상감죽문병(靑磁象嵌竹紋甁梨大所藏)과 청자상감모란문병이 있고 역시 형태나 시문이 뚜렷한 청자상감운학무늬매병 등을 들 수 있다.\n\n쇠퇴기의 청자\n고려청자가 쇠퇴하는 제3기(1250년-1350년)로서 그 기간은 1세기로 보나 몽골이 침입한 14세기 후반부터 시작한다면 실제로는 1세기 반이나 된다. 이른바 국가의 말기적인 증상이 미술에도 반영되어 청자기의 퇴조를 보이는데 중국 자체도 원(元)의 지배를 받게 되면서 전통적인 청자가 소멸되며 그러한 변화는 고려청자에도 미친다. 청자의 표면이 황록색조를 띠거나 비색(翡色)을 잃으면서 상감의 무늬도 산만하고 조잡해지며 같은 무늬를 반복 사용하는 등 무의미한 도안으로 바뀐다. 기형은 매병(梅甁)이 줄어드는 대신 접시류가 늘고 대접은 안이 깊어지고 측면이 평평한 광구대(廣口臺), 바닥이 좁아진 변형된 매병 등이 만들어진다. 그리고 진사(辰砂)·화청자(畵靑磁) 같은 특수한 상감청자가 만들어지는 외에 철채자기(鐵彩磁器)가 등장하기도 한다. 무늬는 시대가 내려갈수록 간화(簡化)되고 조야(粗野)해지면서 조선시대 초기의 분청사기 및 철화백자와 연결된다.\n\n종류\n청자의 종류는 대체로 세 가지로 나뉜다.\n\n순청자(純靑磁) － 청자 일색의 무문·양각·음각·상형·투각문 등의 청자로서 상감이나 화문청자는 제외된다.\n상감청자(象嵌靑磁) － 그릇이 마르기 전 무늬를 선각(線刻)하고 백토나 흑토로 메워 초벌구이 한 다음 유약을 바르고 구운 것인데 간혹 진사(辰砂＝酸化銅)를 섞어서 밝은 홍색을 내게 한 것도 있다. 또 흑토상감(黑土象嵌)의 배경 위에 넓은 화판(花瓣)의 백토상감(白土象嵌)을 한 모란·보상화문을 두어 흑백의 윤곽을 인상적으로 부각시킨 것도 있고 필요한 무늬는 청자색으로 그냥 두고 배경만 깎아 백토로 메워 무늬를 노출시키는 박지문(剝地紋)이라고 불리는 역상감법도 있다.\n화청자(畵靑磁)－무늬를 그리고 유약을 발라 굽는 유리화(釉裏畵) 유표면 즉 광택 위에 무늬를 집어넣는 유표화(釉表畵)의 두 가지로 구분된다. 백토나 흑토 또는 철사(鐵砂)·진사로 태토 위에 무늬를 그리고 그 위에 유약을 바르는 유리화가 태반을 이루며 이것은 중국의 도기요(宋:修武窯, 元:磁州窯) 등에서 받은 영향으로 믿어진다. 또 백토나 흑토로 그렸을 경우 그 채료(彩料)를 붓에 듬뿍 묻혀 무늬가 두드러지게 한 것은 퇴화문(堆花紋)이라고 한다. 때로는 태토 전면에 자토를 발라 배경을 흑일색으로 하고 그 위에 무늬를 백토로 그리고 청자유를 씌운 철채자기(鐵彩磁器)가 말기에 와서 생산되었는데 이것은 고식(古式)의 흑백역상감을 화문으로 나타내려는 의도에서 나온 듯하다. 유표화에 있어서는 금니(金泥)로 그릇 표면에 화문을 그리는 것인데 이는 실용이라기보다 사치를 목적으로 한 특수기로 쓰여졌고 수량도 적다.\n\n갤러리\n\n같이 보기\n\n고려\n고려불화\n울트라마린 (색)\n한국 백자",
+        "lang": "ko",
+        "wiki_title": "고려청자",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Goryeo ware",
+        "url": "https://en.wikipedia.org/wiki/Goryeo_ware",
+        "published": "2026-11-17",
+        "fetched_at": "2026-11-25",
+        "text": "Goryeo ware (Korean: 고려도자기) refers to all types of Korean pottery and porcelain produced during the Goryeo dynasty, from 918 to 1392, but most often refers to celadon (greenware).\nCeladon techniques were first introduced from China; Goryeo potters established a native style by the 12th century. One of these native styles is characterized by the sanggam technique, a way of inlaying that was unique to Goryeo celadon. The color of the celadon, called bisaek for 'green', was also highly admired. The industry arose and declined as the Goryeo dynasty developed. Many wares were produced at the Gangjin Kiln Sites in southwestern Korea.\nAn artist of the post-war era who specialised in Goryeo ware was Living National Treasure Yu Geun-Hyeong. His work was documented in the short film Koryo Celadon in 1979. Many celadon pieces from Goryeo are listed as National Treasures of South Korea.\n\nGoryeo celadon\n\nHistory\n\nEarly celadon\nPottery and celadon was introduced into the Korean peninsula in the Three Kingdom age. Demand for higher quality porcelain increased as the Goryeo dynasty emerged. Along with the development of tea culture and Buddhism, wares based on traditional and southern China (Song dynasty) porcelain began production in Goryeo.\nMost of the pottery made in this era are the kinds that are called haemurigup celadon and green celadon (low-grade).\n\n11th century\nAs the celadon techniques of the Song dynasty reached its pinnacle, much effort was made inside Goryeo to reproduce the turquoise coloring of Chinese porcelain. Kilns were made throughout the kingdom, leading to a variety of celadon being made. High grade celadon was made in order of the capital, and low grade celadon was made by the requests of temples, offices and local families of provinces.\nThough Chinese influences still existed, Goryeo-styled shapes and decorations emerged in some porcelains. These are characterized by the utilization of light curves and a serene, elegant feel. Decoration techniques such as relief carving, intaglio carving, iron oxide glaze, openwork became in use. The sanggam inlaying also started at this age.\n\n12th century\n\nThe 12th century is considered as a zenith of Goryeo celadon, especially in its special color and harmony. The pure celadon made in this age had thin glaze coating that exquisitely reflected the jade color, called bisaek. They also had a great level of structural balance and elegance. There are records describing celadon of this age as world best.\nJinsa \"underglaze red\", a technique using copper oxide pigment to create copper-red designs, was developed in Korea during the 12th century, and later inspired the \"underglaze red\" ceramics of the Yuan dynasty.\n\nPost-12th century\nMaturation of the aristocrat society due to events such as the coup of military officers led to an increasing favor for extravagantly decorated porcelain. Inlaying techniques reached their height and opened a second zenith of Goryeo celadon. Other types of porcelain developed as whitening, iron oxide glaze, and copper oxide glaze came in use. With the decrease of Chinese influence, Goryeo celadon acquired a more native shape in unique patterns and decorative shapes. Thin, transparent glaze used to show the inlaid designs led to development of a crackling cooling pattern, called bingyeol (craquelure).\n\n13th century\nAfter the Mongolian invasion in 1220, social and economic confusion had caused the general quality of Goryeo celadon to decline. The influence of the Yuan dynasty is seen throughout the porcelain produced in this time. Though the celadon industry remained, the overall density of expressions and smoothness decreased and the color and harmony were also diminished. This decrease in its beauty continues as the Goryeo dynasty recedes.\n\n14th century\nIn the late 14th century, the Kilns of Gangjin and Buanyo were attacked by Japanese pirates and closed. Inland kilns replaced them, putting an end to the age of celadon. Though new characteristic shapes and designs appeared, they were utilitarian instead of elegant and restrained, as Goryeo celadon in its zenith was. One of these new types of porcelain was called buncheong.\n\n20th century\nIn the late 19th century, the Japanese, who occupied Korea at the time, began to be unearth Goryeo era celadon wares from the Royal Tombs of the Goryeo Dynasty near Kaesong in today's North Korea. These became the most sought-after item in the Korean art market. The Japanese resident-general of Korea, Ito Hirobumi, who previously served as Japan's first prime minister, collected over 1000 works which were sold by antique dealers in Seoul. Japanese industrialist Tomita Gisaku is credited with rediscovering how to make Goryeo-style wares at his factory named Sanwa Goryeo Celadon. It was established in 1908 in the town of Nampo in South P'yong'an Province, today's North Korea. In 1912, Umii Benzo established a competing factory named Kanyo K̄oraiyaki located in today's Jangchung-dong district of Seoul. Umii's firm opened a branch to sell celadons in Tokyo and both firms began supplying wares to Japanese tourists visiting Korea. Korean ceramist Yu Geun-Hyeong (1894–1993), who worked in Umii's factory early in his career, is credited with experimenting with techniques, kiln design, clays, and glazes to more accurately reproduce Goryeo era wares. Owing to his work, Yu was designated a Living National Treasure of South Korea. North Korean potter U chi-son is also credited as leading the way to recreated Goryeo celadon pottery.\nEven after World War II, when Japanese control of Korea ended, most 20th-century Goryeo wares were still shipped to Japan for sale in department stores like Mitsukoshi. In the late 1970s, Korean ceramist Shin Sang-ho (b. 1947) is credited with modernizing production of celadons when he brought back a gas-fired kiln from Japan.\n\nCharacteristics\n\nInlay technique\nFor the inlay technique, several patterns are engraved on the surface of metal, clay, wood, etc. This traditional decoration technique started to be applied in porcelain in the Goryeo dynasty. Purple (black) and white clay were used to show the patterns.\nA pattern is engraved on the vessel's body with a knife and the carved-away areas are filled with purple or white clay. When the clay dries the excess is removed, leaving it only in the carved areas, leaving a white or purple pattern. The entire vessel is coated in a colorless glaze.",
+        "lang": "en",
+        "wiki_title": "Goryeo ware",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:청자 어룡 모양 주전자.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/%EC%B2%AD%EC%9E%90_%EC%96%B4%EB%A3%A1_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%A0%84%EC%9E%90.jpg/1920px-%EC%B2%AD%EC%9E%90_%EC%96%B4%EB%A3%A1_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%A0%84%EC%9E%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/%EC%B2%AD%EC%9E%90_%EC%96%B4%EB%A3%A1_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%A0%84%EC%9E%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EC%B2%AD%EC%9E%90_%EC%96%B4%EB%A3%A1_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%A0%84%EC%9E%90.jpg",
+        "width": 2000,
+        "height": 2400,
+        "license": "KOGL Type 1",
+        "artist": "National Museum of Korea",
+        "caption": "kettle, made of celadon. Made in 12th century. National Treasures of South Korea No.61",
+        "id": "P1"
+      },
+      {
+        "file": "File:청자 거북이 모양 주자.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/%EC%B2%AD%EC%9E%90_%EA%B1%B0%EB%B6%81%EC%9D%B4_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%9E%90.jpg/1920px-%EC%B2%AD%EC%9E%90_%EA%B1%B0%EB%B6%81%EC%9D%B4_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%9E%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/%EC%B2%AD%EC%9E%90_%EA%B1%B0%EB%B6%81%EC%9D%B4_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%9E%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EC%B2%AD%EC%9E%90_%EA%B1%B0%EB%B6%81%EC%9D%B4_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%9E%90.jpg",
+        "width": 3000,
+        "height": 2000,
+        "license": "KOGL Type 1",
+        "artist": "National Museum of Korea",
+        "caption": "Goryeo Celadon, kettle designed like turtle.",
+        "id": "P2"
+      },
+      {
+        "file": "File:Goryeo Celadon BNC.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Goryeo_Celadon_BNC.jpg/1920px-Goryeo_Celadon_BNC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Goryeo_Celadon_BNC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Goryeo_Celadon_BNC.jpg",
+        "width": 2184,
+        "height": 3373,
+        "license": "CC0",
+        "artist": "Anfecaro",
+        "caption": "A Goryeo Celadon flower base donated by the South Korean Government to the Ministry of Culture of Colombia. It is exposed at the National Library of Colombia.",
+        "id": "P3"
+      },
+      {
+        "file": "File:Goryeo Dynasty celadon 121.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Goryeo_Dynasty_celadon_121.jpg/1920px-Goryeo_Dynasty_celadon_121.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Goryeo_Dynasty_celadon_121.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Goryeo_Dynasty_celadon_121.jpg",
+        "width": 4080,
+        "height": 3072,
+        "license": "CC0",
+        "artist": "Suohros",
+        "caption": "The Best under Heaven, the Celadons of Korea",
+        "id": "P4"
+      },
+      {
+        "file": "File:Goryeo Dynasty celadon 11.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Goryeo_Dynasty_celadon_11.jpg/1920px-Goryeo_Dynasty_celadon_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Goryeo_Dynasty_celadon_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Goryeo_Dynasty_celadon_11.jpg",
+        "width": 3072,
+        "height": 4080,
+        "license": "CC0",
+        "artist": "Suohros",
+        "caption": "The Best under Heaven, the Celadons of Korea",
+        "id": "P5"
+      },
+      {
+        "file": "File:Goryeo Dynasty celadon.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Goryeo_Dynasty_celadon.jpg/1920px-Goryeo_Dynasty_celadon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Goryeo_Dynasty_celadon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Goryeo_Dynasty_celadon.jpg",
+        "width": 4080,
+        "height": 3072,
+        "license": "CC0",
+        "artist": "Suohros",
+        "caption": "The Best under Heaven, the Celadons of Korea",
+        "id": "P6"
+      },
+      {
+        "file": "File:Goryeo Dynasty celadon 1234.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Goryeo_Dynasty_celadon_1234.jpg/1920px-Goryeo_Dynasty_celadon_1234.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Goryeo_Dynasty_celadon_1234.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Goryeo_Dynasty_celadon_1234.jpg",
+        "width": 4080,
+        "height": 3072,
+        "license": "CC0",
+        "artist": "Suohros",
+        "caption": "The Best under Heaven, the Celadons of Korea",
+        "id": "P7"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-25T16:01:59Z"
+  }
+}
