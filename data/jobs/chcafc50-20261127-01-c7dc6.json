@@ -1,0 +1,330 @@
+{
+  "id": "chcafc50-20261127-01-c7dc6",
+  "channel": "도개",
+  "status": "NEEDS_REVIEW",
+  "created_at": "2026-11-26T16:03:39Z",
+  "topic": {
+    "title": "한복",
+    "wiki_title": "한복",
+    "category": "역사유산",
+    "source": "seed",
+    "angle": "실패에서 뒤집힌 반전",
+    "score": 0.6876,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.728,
+      "stimulus": 0.35,
+      "explore": 0.313
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35",
+    "evidence": 0.733,
+    "rescored": {
+      "score": 0.7062,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.733,
+        "performance": 0.728,
+        "stimulus": 0.35,
+        "explore": 0.313
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.73 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-26T16:03:39Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-26T16:03:39Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-26T16:04:20Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "NEEDS_REVIEW",
+      "at": "2026-11-26T16:06:57Z",
+      "note": "script: LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 4 나레이션에 한자/일본어 문자가 있음(한글로 풀어 쓸 것): 1900년부터 신문들이 한자 한(韓)을 넣어 한국의복, 한국예복이라 쓰기"
+    }
+  ],
+  "attempts": {
+    "script": 1
+  },
+  "error": {
+    "stage": "script",
+    "class": "content_quality",
+    "message": "LLMValidationError: JSON 응답을 얻지 못했습니다: 장면 4 나레이션에 한자/일본어 문자가 있음(한글로 풀어 쓸 것): 1900년부터 신문들이 한자 한(韓)을 넣어 한국의복, 한국예복이라 쓰기",
+    "at": "2026-11-26T16:06:57Z"
+  },
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "surprising_fact",
+      "first_line": "한복이라는 이름은 1881년에 처음 쓰였습니다",
+      "screen_text": "한복 이름의 탄생",
+      "title": "한복, 140년 된 이름의 비밀",
+      "promise": "우리가 '전통'이라 부르던 옷 이름이 언제, 왜, 누구에 의해 만들어졌는지 알 수 있습니다.",
+      "evidence_quote": "The first known use of the term is in an 1881 document from the late Joseon period entitled Chŏngch'iilgi (《정치일기》). There, hanbok is used to distinguish Korean clothing from Japanese and Western-style clothing.",
+      "eval": {
+        "score": 0.9946,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.95,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "surprising_fact",
+        "first_line": "한복이라는 이름은 1881년에 처음 쓰였습니다",
+        "screen_text": "한복 이름의 탄생",
+        "title": "한복, 140년 된 이름의 비밀",
+        "promise": "우리가 '전통'이라 부르던 옷 이름이 언제, 왜, 누구에 의해 만들어졌는지 알 수 있습니다.",
+        "evidence_quote": "The first known use of the term is in an 1881 document from the late Joseon period entitled Chŏngch'iilgi (《정치일기》). There, hanbok is used to distinguish Korean clothing from Japanese and Western-style clothing.",
+        "eval": {
+          "score": 0.9946,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "여자 저고리, 19세기 후반에 가장 짧아졌다가 다시 길어졌습니다",
+        "screen_text": "저고리 길이의 롤러코스터",
+        "title": "치솟던 저고리 길이, 왜 다시 내려왔나",
+        "promise": "조선시대 내내 짧아지기만 하던 여자 저고리가 개량운동 시기에 갑자기 길어진 구체적인 계기와 과정을 알 수 있습니다.",
+        "evidence_quote": "여성의 경우 조선시대동안 급격하게 짧아져 19세기후반에 그 길이가 가장 짧아진다. 그러나 개량운동으로 근현대의 저고리는 좀 더 길어져 허리선 조금 윗선까지 올라온다.",
+        "eval": {
+          "score": 0.9655,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "한복엔 주머니가 없어서 조끼를 들여왔습니다",
+        "screen_text": "주머니 없는 한복의 대안",
+        "title": "마고자·조끼, 한복에 주머니를 만들다",
+        "promise": "전통 한복에 주머니가 없던 구조적 한계를 19세기 말 조끼와 마고자 도입으로 어떻게 해결했는지 보여드립니다.",
+        "evidence_quote": "조끼는 서양 복식에서 들어온 것으로 한복에 주머니가 없어 소지품을 보관하는 것이 어려웠던 점을 보완하였다.",
+        "eval": {
+          "score": 0.9103,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "일제가 흰옷 입지 말라 했는데 백성들은 끝까지 입었습니다",
+        "screen_text": "금령에도 흰옷 고수",
+        "title": "일제의 색깔 금지령, 왜 실패했나",
+        "promise": "조선총독부가 흰옷을 금지하고 염색옷을 강요했음에도 백성들이 끝까지 흰옷을 지킨 이유를 알게 됩니다.",
+        "evidence_quote": "However, during the Joseon dynasty (1392–1897) and the Japanese occupation of Korea (1910–1945), there was also an attempt to ban white clothes and to encourage non-bleached dyed clothes, which ultimately failed.",
+        "eval": {
+          "score": 0.909,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "한복 바지, 앞뒤 중심선이 사선이라 움직일 때 안 당깁니다",
+        "screen_text": "바지 패턴의 비밀",
+        "title": "양장 바지와 다른 한복 바지의 공학",
+        "promise": "좌식 생활에 최적화된 한복 바지만의 독특한 재단 원리(사선 중심선)와 그 효과를 설명해 드립니다.",
+        "evidence_quote": "한복 바지와 서구식 바지가 다른 점은 구성은 대칭하지만 앞뒤 중심이 사선이어서 움직일 때 편하고 또 한편으로는 착용자의 위엄과 사회적 지위를 나타낸다는 데 있다.",
+        "eval": {
+          "score": 0.8832,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.97,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "사리는 앞으로 묶는데 한복 치마는 뒤로 여밉니다",
+        "screen_text": "치마 여밈의 차이",
+        "title": "아시아 치마들, 한복만 다른 이유",
+        "promise": "인도·동남아 전통 치마와 한복 치마의 결정적 구조 차이와 그 이유가 무엇인지 비교해 드립니다.",
+        "evidence_quote": "한복의 치마는 그 착장법이 뒤여밈으로 다른 아시아 국가들의 의상과 약간 다른 특징이 있다. 인도의 전통 의상인 사리는 치마를 두른 후 앞으로 묶으며 싱가포르, 인도네시아, 말레이시아의 전통 복식인 케바야, 캄보디아의 삼포트 등은 허리 앞에서 묶어 앞에 혁띠를 착용하거나 앞으로 여미는 특징이 있다.",
+        "eval": {
+          "score": 0.8544,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": null,
+  "claims": [],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-26T16:06:57Z",
+  "pack": {
+    "topic": {
+      "title": "한복",
+      "wiki_title": "한복",
+      "category": "역사유산",
+      "source": "seed",
+      "angle": "실패에서 뒤집힌 반전",
+      "score": 0.6876,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.728,
+        "stimulus": 0.35,
+        "explore": 0.313
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35",
+      "evidence": 0.733,
+      "rescored": {
+        "score": 0.7062,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.733,
+          "performance": 0.728,
+          "stimulus": 0.35,
+          "explore": 0.313
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.73 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 한복",
+        "url": "https://ko.wikipedia.org/wiki/%ED%95%9C%EB%B3%B5",
+        "published": "2026-11-13",
+        "fetched_at": "2026-11-26",
+        "text": "한복(한국 한자: 韓服, 문화어: 조선옷)은 고대시대부터 전해 내려오는 한민족의 고유한 의복이다. 이는 삼국시대의 옛 서기와 고북벽화에서도 볼 수 있다. 대다수의 평민들은 계량복 혹은 반바지 등을 입었으며 한복의 기본 구성인 치마와 저고리, 바지 등은 변치 않고 오랜 세월 동안 기본 골격을 유지하고 있다. 호복으로서 한복에 나타나는 몇 가지 특징이 있다. 기본적으로 활동성을 중시하며 딱 붙는 옷이 아니다. 또한 천 자체를 보면 직선형이지만 몸에 입을 경우 곡선이 살아나게 도와주는 미적 특징도 나타나는데 이는 주머니가 있는 구조이기 때문이기도 하다.\n현대의 한복은 보통, 조선시대에 입었던 한복과 유사성이 크며 명절이나 격식을 갖추는 자리에서 입는 경우가 많다. 개량한복은 생활의 편리함을 강조하고 있어 20세기 동안 그 외형이 여러 변화를 겪었다. 한복도 의복이므로 기성복처럼 아주 빠르지는 않지만, 시대의 흐름과 대중의 요구에 따라 색과 소재, 특징 등을 새롭게 접목하며 이러한 시도는 여러 한복디자이너들에 의해 현재에도 시도되고 있다.\n\n한복의 구성\n일반적으로 옷에는 속옷부터 바지와 치마 등을 포함하는 아래옷, 윗도리나 남방을 가리키는 윗옷 등 그 쓰임새와 입는 때에 따라 구분지어져 있다. 한복에도 두루마기, 포, 바지, 마고자 등 착용 시 가장 기본부터 입는 옷부터 맨 위에 걸치는 두루마기에 이르기까지 다양한 종류가 존재하며, 이들 중 가장 기본적인 요소를 구성하는 한복에 대해 다룬다.\n\n저고리\n\n저고리는 한복을 구성하는 가장 기본적인 윗옷으로써 남녀 모두가 입는 옷이며, 신분의 위아래와 유행에 가장 민감하였다. 팔과 상체를 덮는 저고리는 그 부위에 따라 길, 깃, 동정, 고름, 소매 등으로 구성된다. 깃은 앞몸판에서 뒷몸판까지 연결되어 보통 깃은 목둘레를 장식하며 섶은 저고리의 좌우에 각각 달려 몸을 여미는 역할을 한다. 옷고름은 의복을 리본 형태로 묶어 정돈하는 목적이지만 후대에 갈수록 저고리의 길이는 짧아지고 옷고름은 점차 길어지면서 장식적인 역할을 하였다. 또한 동정은 의복의 관리면에서 세탁하기에 편리한 방법으로 이용된 기능적인 역할을 하는 부위로 저고리의 단정함을 결정하는 역할도 한다.\n그 종류는 두 가지가 있다. 그 재봉 방법이나 소재에 따라 홑·겹·솜·누비 저고리로 구분되며 각 부분에 다른 색의 천을 쓴 데에 따라 민저고리, 반회장저고리, 삼회장저고리로 나뉜다.\n여자 한복의 경우 저고리에 끝동이 있어 자수를 놓기도 한다. 남성의 저고리가 상대적으로 거의 변화가 없었다면 여성의 경우 조선시대동안 급격하게 짧아져 19세기후반에 그 길이가 가장 짧아진다. 그러나 개량운동으로 근현대의 저고리는 좀 더 길어져 허리선 조금 윗선까지 올라온다. 이에 따라 고름도 좀 더 길어지고 넓어지게 된다. 이에 반해 남자의 저고리는 등 전체를 덮을 정도로 길고 고름도 긴편이었다.\n\n치마\n\n치마는 한자로 裳(상) 혹은 裙(군)으로 쓰며 한복에서는 아래옷을 가리키되, 여자한복에 한정된다. 저고리의 경우 성별에 관계 없이 입었지만 치마는 여성만에 한정됐다는 사실이 다르다. 고구려 벽화와 경주 벽화분을 대조해볼 때 고구려 여성은 치마를 먼저 입고 그 위에 저고리를 입었으며 치마 주변(허리춤)에 띠를 두른 것으로 파악된다. 그러나 치마를 입고 저고리를 입는 것은 고려시대전까지는 관습처럼 굳어지지 않았던 것으로 파악되고 있다. 고구려 시대에는 서구형처럼 황금비례를 추구했으며 통일신라 시대에는 긴 치마를 저고리 위에 입어 당나라의 형태와 아주 유사한 형태를 띠었다.\n속치마는 치마와 비슷한 용도로 20세기 초, 즉 개화기부터 입기 시작하여 조끼허리에 달아 명주나 삼팔ㆍ옥양목ㆍ인조 등을 사용하였다. 겉치마와 다르게 조끼허리를 쓴 것은 이화학당의 미국인 교장 윌터의 지도에 따른 것이라 전해진다. 20세기 중반에 이르자 겉치마는 소매가 없는 웃옷을 겸해 위로 가슴을 덮게 되었으며 저고리를 걸쳐 입게 되었다.\n한복의 치마는 그 착장법이 뒤여밈으로 다른 아시아 국가들의 의상과 약간 다른 특징이 있다. 인도의 전통 의상인 사리는 치마를 두른 후 앞으로 묶으며 싱가포르, 인도네시아, 말레이시아의 전통 복식인 케바야, 캄보디아의 삼포트 등은 허리 앞에서 묶어 앞에 혁띠를 착용하거나 앞으로 여미는 특징이 있다.\n\n바지\n\n바지는 한복에서 아래옷을 가리킨다. 꼭 여성이 입어서는 안 된다는 법은 없으나 대개 옷한복을 지칭하며 사실 한복이 아니더라도 청바지 등의 일반적인 옷차림을 가리킨다. 한복의 바지는 6세기까지 신분의 차이 없이 그냥 바지부리를 여맸으나 7세기부터는 여매는것 대신 선으로 두르는 형태가 생겨난다. 조선왕조실록에서는 겹고, 단고 혹은 단순히 고로 표기하고 있다. 겹고라는 의미는 겹바지임을 가리킨다.\n바지는 복색, 재봉방법, 자수 등에 따라 홑바지, 가죽바지, 명주바지, 무명바지 등으로 이름을 구분한다. 한복 바지와 서구식 바지가 다른 점은 구성은 대칭하지만 앞뒤 중심이 사선이어서 움직일 때 편하고 또 한편으로는 착용자의 위엄과 사회적 지위를 나타낸다는 데 있다. 따라서 치수가 분명히 정해져 움직임에 제한이 있게 되는 양장 바지와 달리 여유로운 한복 바지를 입으면 움직임에 상대적인 불편함을 덜 느끼게 되어 좌식 생활에 편했다.\n바지라는 용어는 \"把持\"(파지)라고 정인지가 기록한 것이 최초이며 왕과 왕비의 바지는 특별히 '봉디'(봉지)라고 별도로 부르는 이름이 있었다.\n\n포\n\n포는 도포를 의미하는 말로서 외투의 일종이며 방한복으로서의 역할을 함과 동시에 예를 갖추는 자리에서는 꼭 입는다. 두루마기도 사실상 포의 일종이다. 포는 중국과 일본의 의복과 한국의 의복을 구분하는 기준이 되기도 한다. 여성의 의복을 보았을 때 한복은 저고리-치마를 기본형으로 하고 포를 걸치지만 중국과 일본의 옷은 원피스에 해당하므로 그 형상이 다르다고 볼 수 있다. 여자 한복에 저고리가 있다면 남자 한복에는 외의인 포가 있었으며 이는 삼국시대 이후로 고려와 조선에 이르기까지 한복을 아우르는 전통이었다. 남자 한복의 선을 나타내기도 했다.\n조선 시대의 남자 복식은 후대에 두루마기가 포를 대체했으므로 상당히 많은 비중을 차지했으며 임진왜란을 기준으로 하여 보았을 때 조선전후기의 특징을 구분하는 척도가 되기도 한다.\n\n조끼와 마고자\n\n안에 덧대어 입는 저고리인 덧저고리와 흡사한 개념을 통칭하여 쓰는 말인 조끼는 흔히 서양 복식에서 베스트(vest-조끼)라고 말하는 것과 동일하다. 조끼와 마고자가 다른 복식과 약간 다른 점이 있다면 조선 왕조 말엽에 유입되었다는 데 있다.\n조끼는 서양 복식에서 들어온 것으로 한복에 주머니가 없어 소지품을 보관하는 것이 어려웠던 점을 보완하였다. 1897년 이후 조선 사회에는 서구 문물이 도입되기 시작한다. 전통 한복 문화는 한·양복 혼용으로 넘어가는 변화를 겪게 되어 실용성이 두드러지는 쪽으로 변화하는데 이 시기를 거치면서 양복에서 차용한 조끼가 등장한다.\n조끼와 달리 마고자는 만주 지방의 옷으로 원래 이름은 마괘 혹은 마괘자였고 흥선대원군이 1887년 만주에서 돌아오면서 들려왔다는 이야기가 가장 널리 알려진 이야기이다. 그는 마고자로 추운 기후를 견딘 것으로 알려졌으며 보온효과에 더해 입기가 쉬워 백성들에게도 금방 퍼지게 되었다. 남녀 모두 입는 겉옷으로 남자들은 여름이 아니면 반드시 입는다. 처음부터 성별 구분 없이 입지는 않았으며 남자만 입던 것이 후에는 상관 없이 남녀노소 입게 변하였고 앞에 섶이 생겨났다. 형태상으로는 저고리보다 길이가 조금 더 길고 목 부분은 많이 파여 있어 깃과 동정을 따로 붙이지 않는다.\n입는 순서로 보면 저고리 위에 조끼를 입고 그 위에 마고자를 입은 뒤 외출 시에는 두루마기를 둘렀다.\n\n역사\n\n한복의 시초는 삼국시대 한반도사람들의 복식에서 그 뿌리를 찾을 수 있다. 21세기에 이르기까지 기본적인 한복의 골격인 저고리, 바지, 치마라는 기본구조는 그대로 이어지되 길이나 폭, 형태 등이 시대의 흐름에 따라 조금씩 변화하였다. 폭에 관해서는 넓은 바지, 좁은바지, 발목에 주름잡혀 좁은발목형태의 바지, 넓게 펼쳐진 밑단의 바지 등 폭과 길이가 다채로웠으며 허리 정도의 길이에 오는 저고리는 삼국시대까지만 해도 남녀 구분 없이 입었다.\n\n삼국시대옷차림\n고구려 복식은 양성 모두 저고리가 엉덩이까지 내려왔으며 아래는 바지를 입어 귀부인일수록 바지의 폭이 넓어지는 특징이 있었다. 다만 남자는 저고리와 바지를 입었고 여자는 저고리에 바지나 치마를, 혹은 저고리와 치마를 겸해서 입었다. 일반적으로 중국의 복식과 많이 다르지는 않으나 고구려의 경우에는 좌임, 우임, 합임(양쪽 어느 곳으로 모으지 않고 가운데로 모아 입은 형태) 등 세 종류가 공존하여 나타났고 상투나 자연스럽게 풀어헤친 머리 형태에는 분명한 차이가 있었다. 명주와 무명, 삼베를 이용하여 미적 측면도 추구한 점은 유목 민족과 구분지을 수 있다. 또한 고구려인은 항상 전투복과 같은 옷을 입고 다녀 비상 사태에 대비했다는 기록이 있다. 이는 고구려 사람들이 옷의 활동성을 중시했기 때문으로 복식이 뒷받침되었기에 전쟁에서도 능할 수 있었다. 고구려에서는 양잠이 발달했으며 옷감의 색 또한 다양해 흰색, 검은색, 노란색, 보라색 등이 쓰였다.\n백제의 복식은 다른 예술 분야와 마찬가지로 그 아름다움이 두드러졌으며 고구려에 비해서는 여성적이다. 고이왕 27년(260년)에 정해진 관복의 제도에서는 관복의 색감에 대한 정의가 내려질 정도로 의복이 발달되어 있었다. 복식은 고구려와 흡사했으며 공식적이거나 그 중요성이 높을 경우 여인들은 머리 장식을 했다. 남자의 경우 고구려와 비슷하게 포를 넓게 하여 항시 입었던 것은 동일했다. 때문에 관모에도 신하들의 직급에 따라 장식 자체가 구분되었으며 임금은 금제, 좌평~나솔까지는 은제를 부착하도록 했다.\n신라는 고구려와 백제에 비해 늦게 발전한 만큼 훗날 두 나라와 당나라의 문물을 급속도로 받아들이면서 복식에 대한 개념도 성장했다. 신라 때 전해진 당나라의 복식을 통해 남자 귀족들은 먼저 당나라의 복식을 입게 되었다는 기록이 있으며 신라가 당의 복식을 들여온 것은 진덕여왕 2년(648)을 전후한 시기로서 당의 문물을 적극적으로 받아들인 한 증거가 된다.\n신라도 이중적인 복식 제도를 취한 점이 비슷하여 고위층, 귀족들은 당나라의 복식문화를 수용하여 당나라의 옷 형태가 융화되는 한편, 백성들은 기존에 입던 저고리바지, 저고리치마의 형태를 입었다. 더군다나 백제와 고구려의 영향에서 동떨어져 있지 않았던 신라는 독자적인 복식을 겸용하여 발달해 나갔다.\n삼국시대는 문헌과 자료가 많이 부족하여 고증이나 복원에 어려움이 있는 경우가 상당히 많다. 이에 따라 집으로가야의 경우에도 그 복식을 고증하는 일이 상당히 버거운 일이었다. 고령군은 대가야인의 복식이 목부분이 둥근 곡선 깃 저고리를 입는 점에서 신라와 다르다는 사실과 함께 가야제 철제도구에서 나타나는 무늬들을 세부 문양으로 채택했다고 밝혔다.\n삼국시대에 귀족 여성들은 아주 긴 형태의 치마와 엉덩이까지 내려오는 저고리를 입어 허리에 혁띠를 착용했으며 남성의 경우 펑퍼짐한 형태의 바지를 입고 좁고 남방과 비슷한 형태의 좁은 저고리가 허리 부근까지 오도록 입어 혁띠를 착용했다. 이 때 저고리는 단을 접어 입는 것이 특징이었다.\n\n남북국시대\n백제와 고구려 일부를 병합한 신라에서는 고구려와 백제 유민에 대한 포용 정책과 함께 당나라와의 교류가 융성하면서 복식 또한 매우 발달했다. 특별히 골품제에 바탕을 둔 신라 사회와 마찬가지로 신분에 따라 문양이나 착용 여부가 정해졌다. 귀족 부인들에게 당나라식 복식이 허용된 것은 신라가 통일을 이루기 조금 전인 문무왕 4년(664년)부터이며 삼국시대와 달리 어깨끈이 있는 치마를 저고리 위에 입은 형상이 경주시 용강동에서 발견된 바 있다. 관복제도가 정식으로 당나라에서 들어온 시기임과 동시에 여자 한복에 대해서도 당나라식 특성이 많이 반영되었다는 기록이 있고 귀족 여성들 사이에서 인기를 끌었다. 하지만 당나라식 복식의 영향을 받았다는 것은 문헌에만 기록되어 있으며 지금의 중국 복식과는 많은 차이를 보이고 있고 당나라때의 복식의 기록이 소수의 벽화에만 남겨져 있어서 실제로 신라의 복식이 당나라의 복식의 영향을 받았는지는 알 수 없다.\n한편, 고구려를 계승한 발해는 초기에는 포 형태의 전통 관복을 입는 등 고구려의 복식제도를 계승하는 모습을 보였다. 3대 문왕 이후에는 당나라와 교류하기 시작하면서 귀족층에서는 당나라의 관복제도를 따르는 모습을 보였고, 일반 백성들은 고구려의 복식과 주변 소수 민족(말갈, 거란 등)들의 복식도 어느정도 혼용했을 것으로 추정하고 있다.\n\n고려\n고려왕조는 광종 때에 이르러 대대적인 왕권 강화가 이뤄진다. 광종 즉위 당시 고려는 출신에 따라 의복도 달라 색이나 특징조차 구분된 것이 없는 상태였다. 이에 따라 광종은 과거제 시행 2년 뒤, 보라색, 붉은색, 연두색, 자주색 네 종의 소매 색깔을 규정했다.\n다른 나라의 의복이 한복에 미친 영향은 오래 지속되지 못하거나 피상적이었지만 몽골의 경우만이 이례적으로 큰 영향을 미쳐 한복에 시각적인 변화를 실증적으로 일으켰다. 고려가 13세기 원나라간섭기때 부마국이 되자 몽골 공주가 고려 왕실로 오게 되었고 몽골 의복이 고려 궁중 복식에도 일부 반영되어 넓은 고름이 쓰이면서 허리춤에 혁띠를 묶는 것을 대신하였다.",
+        "lang": "ko",
+        "wiki_title": "한복",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Hanbok",
+        "url": "https://en.wikipedia.org/wiki/Hanbok",
+        "published": "2026-11-24",
+        "fetched_at": "2026-11-26",
+        "text": "The hanbok (Korean: 한복; Hanja: 韓服; lit. 'Korean dress') is the traditional clothing of the Korean people. \nThe term hanbok literally means Korean clothing in South Korea and internationally, where it is the standard term for the attire. North Koreans refer to the clothes as chosŏnot (조선옷; lit. 'Korean clothes'). The attire is also worn by the Korean diaspora. Koryo-saram—ethnic Koreans living in the lands of the former Soviet Union—also retained a hanbok tradition.\nThe hanbok is fundamentally composed of a jeogori (top), baji (trousers), chima (skirt), and the po (coat). While this core arrangement has remained consistent for a long time, its length, width, and shape have gradually changed over time. \n\nKoreans have worn hanbok since antiquity. The earliest visual depictions of hanbok can be traced back to the Three Kingdoms of Korea period (57 BCE to 668 CE) with roots in the ancestors of the Koreanic peoples of what is now northern Korea and Manchuria. The clothes are also depicted on tomb murals from the Goguryeo period (4th to 6th century CE), with the basic structure of the hanbok established by at least this time. The ancient hanbok, like modern hanbok, consisted of a jeogori, baji, chima, and po. \nSome interpretations suggest that certain elements of the hanbok, such as specific colors or patterns, were influenced by traditional folk beliefs or shamanism. For thousands of years, many Koreans have preferred white hanbok, a color considered pure and symbolizing light and the sun. In some periods, commoners (seomin) were forbidden from wearing certain colorful hanbok regularly. However, during the Joseon dynasty (1392–1897) and the Japanese occupation of Korea (1910–1945), there was also an attempt to ban white clothes and to encourage non-bleached dyed clothes, which ultimately failed.\nModern hanbok are typically patterned after the hanbok worn in the Joseon period, especially those worn by the nobility and royalty. \nThere is some regional variation in hanbok design between South Korea and North Korea, which arose from their relative isolation in the late 20th century. Communities of ethnic Koreans abroad, including those in China, also maintain their own hanbok traditions, all of which are rooted in the shared cultural heritage of Korea. Since the 1990s, increased cultural exchange has led to these different styles converging once again.\nNowadays, contemporary Koreans wear hanbok for formal or semi-formal occasions and for events such as weddings, festivals, celebrations, and ceremonies. In 1996, the South Korean Ministry of Culture, Sports and Tourism established Hanbok Day to encourage South Korean citizens to wear the hanbok.\n\nEtymology\nThe term hanbok came into use relatively recently, beginning in the 1800s. It is connected with the historical context in which it appeared. \nThe term emerged in the late Joseon period, when the Empire of Japan and other western countries competed to place Korea under their own sphere of influence. The first known use of the term is in an 1881 document from the late Joseon period entitled Chŏngch'iilgi (《정치일기》). There, hanbok is used to distinguish Korean clothing from Japanese and Western-style clothing. Hanbok was again used in an 1895 document to distinguish between Korean and Japanese clothing. These two usages predate the Korean Empire's popularization of the use of the hanja character Han (Hanja: 韓) to describe the Korean people.\nBeginning in 1900, Korean newspapers used the hanja character Han in words that described Korean clothing, such as Han'gugŭibok (한국의복), Han'gugyebok (한국예복), and Taehannyŏbok (대한녀복). Hanbok was used in a 1905 newspaper article to describe the clothing of one of the righteous armies. Other words with similar meanings, such as uri-ot (우리옷) and chosŏn-ot (조선옷), were concurrently used.\nSince the division of Korea, South Korea has preferred the term hanbok while North Korea has preferred the term Chosŏn-ot. This reflects the general trend of South Korea's preference for the term Han and North Korea's for Chosŏn.\n\nComponents and design\n\nFor women, traditional hanbok consists of the jeogori (top) and the chima (skirt). The ensemble is often known as chima jeogori. For men, hanbok consist of jeogori and loose-fitting baji (trousers).\nThere are also a variety of vests, jackets and coats on top of this ensemble. For women, there are Jangsam, Dansam, Wonsam, and more. For men, some examples are durumagi, dopo, Danryeong-ui, Joong-chimak, Sochang-ui, Daechang-ui, etc.\n\nJeogori\n\nThe jeogori (저고리) is the basic upper garment of the hanbok, worn by both men and women. It covers the arms and upper part of the wearer's body.\nThere are various styles and types of jeogori varying in fabric, sewing technique, and shape. The basic form of a jeogori consists of gil, git, dongjeong, goreum and sleeves. Gil (길) is the large section of the garment on both front and back sides, and git (깃) is a band of fabric that trims the collar. Dongjeong (동정) is a removable white collar placed over the end of the git and is generally squared off. The goreum (고름) are fabric-strings that tie the jeogori. Women's jeogori may have kkeutdong (끝동), a different colored cuff placed at the end of the sleeves. Contemporary jeogori are presently designed with various lengths.\n\nGoreum\nGoreum (고름) refers to the strings that fasten clothes together.\nTraditionally, there are many types of goreum. Fabric goreum was potentially used since Old Chosŏn. They were originally practical but often decorative. Silla had regulations against types of Dae (belts) and decorative goreum for each Golpoom. Southern parts of Korea, including Silla, had a colorful goreum on the front of the neck, which influenced Yayoi culture. Parts of Goguryeo style had a fabric goreum loop around the waist with a decorative ribbon to the side like a belt. Generally, thin and short ones were used on the inside and more decorative, colourful ones were used on the outside. Since the early form of the jeogori was usually wrapped across the front, the outside goreum was placed on the side of the wearer, below the underarm. Starting in Joseon dynasty, the goreum slowly moved to the front of the jeogori. In the 20th century, the goreum became the commonly known long and wide decorative ribbons on the front of the jeogori and was coined the Ot-goreum.\n\nDanchu\nDanchu (buttons) can also be used as an alternative to goreum.\nThere are many types of danchu.",
+        "lang": "en",
+        "wiki_title": "Hanbok",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Korea-Hanbok-Dongdaemun.market.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Korea-Hanbok-Dongdaemun.market.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Korea-Hanbok-Dongdaemun.market.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Korea-Hanbok-Dongdaemun.market.jpg",
+        "width": 1600,
+        "height": 1200,
+        "license": "CC BY 2.0",
+        "artist": "by etrepum",
+        "caption": "At a Hanbok store in Dongdaemun market, Seoul, South Korea",
+        "id": "P1"
+      },
+      {
+        "file": "File:2008 Yongsan Fall Festival-01.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/2008_Yongsan_Fall_Festival-01.jpg/1920px-2008_Yongsan_Fall_Festival-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/2008_Yongsan_Fall_Festival-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:2008_Yongsan_Fall_Festival-01.jpg",
+        "width": 2592,
+        "height": 3872,
+        "license": "Public domain",
+        "artist": "David McNally, USAG-Yongsan",
+        "caption": "A Korean traditional female dancer smiles during the 2008 Yongsan Fall Festival Parade Oct. 11 on Yongsan Garrison, Seoul, Republic of Korea.",
+        "id": "P2"
+      }
+    ],
+    "evidence": 0.733,
+    "ok": true,
+    "built_at": "2026-11-26T16:03:39Z"
+  }
+}

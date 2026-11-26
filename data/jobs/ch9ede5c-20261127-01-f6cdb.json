@@ -1,0 +1,724 @@
+{
+  "id": "ch9ede5c-20261127-01-f6cdb",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-26T16:09:11Z",
+  "topic": {
+    "title": "플라자 합의",
+    "wiki_title": "플라자 합의",
+    "category": "환율달러",
+    "source": "seed",
+    "angle": "공식 설명이 말하지 않는 것",
+    "score": 0.676,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.558,
+      "stimulus": 0.35,
+      "explore": 0.402
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.56(n=1) · 탐색 0.40 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.732,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.558,
+        "stimulus": 0.35,
+        "explore": 0.402
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.56(n=1) · 탐색 0.40 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-26T16:09:11Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-26T16:09:11Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-26T16:09:39Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-26T16:11:27Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "who_wins",
+      "first_line": "미일 무역적자는 안 줄었는데 한국만 3저 호황을 누렸습니다",
+      "screen_text": "한국만 웃은 이유",
+      "title": "플라자 합의의 숨은 수혜자, 한국",
+      "promise": "일본 엔고로 한국 수출이 반사이익을 본 구조적 이유를 확인합니다.",
+      "evidence_quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데 일본과 수출 경쟁품목이 많은 상황에서 엔화의 가치가 상승하여 상대적으로 한국제품 가격이 싸졌기 때문이다",
+      "eval": {
+        "score": 0.9589,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 0.5,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.89,
+          "type_variety": 1.0
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "who_wins",
+        "first_line": "미일 무역적자는 안 줄었는데 한국만 3저 호황을 누렸습니다",
+        "screen_text": "한국만 웃은 이유",
+        "title": "플라자 합의의 숨은 수혜자, 한국",
+        "promise": "일본 엔고로 한국 수출이 반사이익을 본 구조적 이유를 확인합니다.",
+        "evidence_quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데 일본과 수출 경쟁품목이 많은 상황에서 엔화의 가치가 상승하여 상대적으로 한국제품 가격이 싸졌기 때문이다",
+        "eval": {
+          "score": 0.9589,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.89,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "달러가 50%나 올랐는데도 미국 정부는 5년간 방치했습니다",
+        "screen_text": "50% 절상, 5년 방치",
+        "title": "강달러 50% 폭등, 왜 5년을 기다렸나",
+        "promise": "레이건 1기 행정부가 강달러를 '자신감'이라며 개입을 거부한 내막을 설명합니다.",
+        "evidence_quote": "1980년부터 1985년까지 달러는 당시 다음 네 번째로 큰 경제 규모를 가진 국가들의 통화인 일본 엔, 독일 마르크, 프랑스 프랑, 영국 파운드에 비해 약 50% 절상되었다",
+        "eval": {
+          "score": 0.9578,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.88,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "같은 엔고인데 일본은 버블, 독일은 멀쩡했습니다",
+        "screen_text": "日 버블 vs 獨 안정",
+        "title": "엔고와 마르크고, 왜 운명이 갈렸나",
+        "promise": "통화 절상이 일본에만 버블을 낳은 구조적 차이를 비교 분석합니다.",
+        "evidence_quote": "독일 마르크의 가치 상승은 독일에서 경제 버블이나 불황으로 이어지지 않았다",
+        "eval": {
+          "score": 0.9201,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 0.4,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.92,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "보호무역 법안이 의회를 통과하기 직전, 백악관이 움직였습니다",
+        "screen_text": "관세 폭탄 막은 합의",
+        "title": "플라자 합의, 사실상 '관세 회피용'이었다",
+        "promise": "의회의 보호무역 법안 통과를 막기 위한 정치적 선택이었음을 밝힙니다.",
+        "evidence_quote": "이들의 캠페인은 미국 의회가 보호무역주의 법안 통과를 고려하기 시작할 정도로 충분한 추진력을 얻었다. 이러한 무역 제한에 대한 부정적인 전망은 백악관이 플라자 합의로 이어진 협상을 시작하도록 촉진했다",
+        "eval": {
+          "score": 0.8787,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "contrary_result",
+        "first_line": "달러를 내렸는데 무역적자가 2년이나 더 커졌습니다",
+        "screen_text": "달러↓ 적자↑ 역설",
+        "title": "플라자 합의, 처음엔 적자만 키웠다",
+        "promise": "왜 달러 약세가 즉각 효과를 내지 못했는지, J커브 효과의 실체를 설명합니다.",
+        "evidence_quote": "합의 후 첫 2년 동안은 수입품 가격 상승이 단기적으로 수입 물량 감소와 수출 물량 증가를 상회했기 때문에 미국 무역 적자가 오히려 악화되었다",
+        "eval": {
+          "score": 0.8492,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.89,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "달러를 내린 건 시장이 아니라 '입으로 한 경고' 때문이었습니다",
+        "screen_text": "개입보다 무서운 말",
+        "title": "플라자 합의, 실제 개입보다 '메시지'가 움직였다",
+        "promise": "조지프 개그넌이 분석한 '암묵적 위협'의 작동 원리를 알려드립니다.",
+        "evidence_quote": "플라자 합의의 결과가 실제 정책보다는 정책 의도에 대해 금융 시장에 전달된 메시지와 추가적인 달러 매도에 대한 암묵적 위협 때문이었다고 설명한다",
+        "eval": {
+          "score": 0.81,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.8,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "플라자 합의, 한국만 웃은 이유",
+    "target_seconds": 35,
+    "category": "환율달러",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "미일 무역적자는 안 줄었는데 한국만 3저 호황을 누렸습니다",
+        "visual": {
+          "type": "stat",
+          "big": "1985년 9월 22일",
+          "small": "플라자 합의 체결일"
+        },
+        "claims": [
+          {
+            "text": "플라자 합의는 1985년 9월 22일 뉴욕 플라자 호텔에서 체결되었습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1985년 9월 22일 뉴욕의 플라자 호텔에서 프랑스, 서독, 일본, 영국, 미국 사이에 체결된 공동 합의"
+          }
+        ]
+      },
+      {
+        "narration": "달러 대비 엔화 가치가 급격히 오르자 일본 제품 가격 경쟁력이 떨어졌습니다",
+        "visual": {
+          "type": "chart",
+          "indicator": "exchange_rate",
+          "countries": [
+            "JPN",
+            "KOR"
+          ],
+          "from": 1985,
+          "to": 1989
+        },
+        "claims": [
+          {
+            "text": "1980년부터 1985년까지 달러는 엔화 등 주요 통화 대비 약 50% 절상되었습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1980년부터 1985년까지 달러는 당시 다음 네 번째로 큰 경제 규모를 가진 국가들의 통화인 일본 엔, 독일 마르크, 프랑스 프랑, 영국 파운드에 비해 약 50% 절상되었다"
+          },
+          {
+            "text": "엔고로 일본 수출품 가격이 상대적으로 비싸졌습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "엔화 가치 상승은 일본 경제에 경기 침체 압력을 가중시켰을 수도 있으며",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "한국은 일본과 수출 품목이 겹쳐 반사이익을 얻었습니다",
+        "visual": {
+          "type": "steps",
+          "title": "한국 수출 반사이익 구조",
+          "items": [
+            "엔고 발생",
+            "일제 가격 상승",
+            "한국 제품 상대적 저가",
+            "수출 증가"
+          ]
+        },
+        "claims": [
+          {
+            "text": "플라자 합의로 1986년부터 1989년까지 대한민국은 경상수지 흑자를 보았습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데"
+          },
+          {
+            "text": "일본과 수출 경쟁품목이 많은 상황에서 엔화 가치 상승으로 한국 제품이 상대적으로 싸졌습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "일본과 수출 경쟁품목이 많은 상황에서 엔화의 가치가 상승하여 상대적으로 한국제품 가격이 싸졌기 때문이다"
+          }
+        ]
+      },
+      {
+        "narration": "저유가 저금리에 1988년 서울 올림픽 투자까지 겹쳐 3저 호황이 왔습니다",
+        "visual": {
+          "type": "text",
+          "headline": "3저 호황 구성 요인",
+          "sub": "저유가 저금리 저환율 올림픽 투자"
+        },
+        "claims": [
+          {
+            "text": "시기적으로 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "시기적으로도 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸고"
+          },
+          {
+            "text": "이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 합니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 한다"
+          }
+        ]
+      },
+      {
+        "narration": "미일 무역적자는 줄지 않았지만 한국은 구조적 수혜를 입었습니다",
+        "visual": {
+          "type": "compare",
+          "title": "플라자 합의 효과 비교",
+          "a": {
+            "label": "미일 무역적자",
+            "value": 0
+          },
+          "b": {
+            "label": "한국 경상수지",
+            "value": 1
+          },
+          "unit": "효과"
+        },
+        "claims": [
+          {
+            "text": "플라자 합의는 미일 무역적자를 줄이는 데는 크게 실패했습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "플라자 합의는 미-일 무역 적자를 줄이는 데는 실패했지만"
+          },
+          {
+            "text": "한국은 엔고라는 외부 조건 변화로 수출 경쟁력을 얻어 3저 호황을 누렸습니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "플라자 합의는 1985년 9월 22일 뉴욕 플라자 호텔에서 체결되었습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "1985년 9월 22일 뉴욕의 플라자 호텔에서 프랑스, 서독, 일본, 영국, 미국 사이에 체결된 공동 합의",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "1980년부터 1985년까지 달러는 엔화 등 주요 통화 대비 약 50% 절상되었습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "1980년부터 1985년까지 달러는 당시 다음 네 번째로 큰 경제 규모를 가진 국가들의 통화인 일본 엔, 독일 마르크, 프랑스 프랑, 영국 파운드에 비해 약 50% 절상되었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 1,
+        "text": "엔고로 일본 수출품 가격이 상대적으로 비싸졌습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "엔화 가치 상승은 일본 경제에 경기 침체 압력을 가중시켰을 수도 있으며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "플라자 합의로 1986년부터 1989년까지 대한민국은 경상수지 흑자를 보았습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 2,
+        "text": "일본과 수출 경쟁품목이 많은 상황에서 엔화 가치 상승으로 한국 제품이 상대적으로 싸졌습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "일본과 수출 경쟁품목이 많은 상황에서 엔화의 가치가 상승하여 상대적으로 한국제품 가격이 싸졌기 때문이다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 3,
+        "text": "시기적으로 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "시기적으로도 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸고",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 3,
+        "text": "이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 합니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 한다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C8",
+        "scene": 4,
+        "text": "플라자 합의는 미일 무역적자를 줄이는 데는 크게 실패했습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "플라자 합의는 미-일 무역 적자를 줄이는 데는 실패했지만",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C9",
+        "scene": 4,
+        "text": "한국은 엔고라는 외부 조건 변화로 수출 경쟁력을 얻어 3저 호황을 누렸습니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 플라자 합의",
+        "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "checked_at": "2026-11-26",
+        "quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 177,
+      "est_seconds": 32.8,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 8.6,
+      "max_scene_similarity": 0.22,
+      "visual_mix": {
+        "stat": 1,
+        "steps": 1,
+        "text": 1,
+        "compare": 1,
+        "chart": 1
+      },
+      "target_seconds_declared": 35
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "플라자 합의는 1985년 9월 22일 뉴욕 플라자 호텔에서 체결되었습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "1985년 9월 22일 뉴욕의 플라자 호텔에서 프랑스, 서독, 일본, 영국, 미국 사이에 체결된 공동 합의",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "1980년부터 1985년까지 달러는 엔화 등 주요 통화 대비 약 50% 절상되었습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "1980년부터 1985년까지 달러는 당시 다음 네 번째로 큰 경제 규모를 가진 국가들의 통화인 일본 엔, 독일 마르크, 프랑스 프랑, 영국 파운드에 비해 약 50% 절상되었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 1,
+      "text": "엔고로 일본 수출품 가격이 상대적으로 비싸졌습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "엔화 가치 상승은 일본 경제에 경기 침체 압력을 가중시켰을 수도 있으며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "플라자 합의로 1986년부터 1989년까지 대한민국은 경상수지 흑자를 보았습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 2,
+      "text": "일본과 수출 경쟁품목이 많은 상황에서 엔화 가치 상승으로 한국 제품이 상대적으로 싸졌습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "일본과 수출 경쟁품목이 많은 상황에서 엔화의 가치가 상승하여 상대적으로 한국제품 가격이 싸졌기 때문이다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 3,
+      "text": "시기적으로 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "시기적으로도 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸고",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 3,
+      "text": "이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 합니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 한다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C8",
+      "scene": 4,
+      "text": "플라자 합의는 미일 무역적자를 줄이는 데는 크게 실패했습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "플라자 합의는 미-일 무역 적자를 줄이는 데는 실패했지만",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C9",
+      "scene": 4,
+      "text": "한국은 엔고라는 외부 조건 변화로 수출 경쟁력을 얻어 3저 호황을 누렸습니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 플라자 합의",
+      "source_url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+      "published": "2026-11-16",
+      "checked_at": "2026-11-26",
+      "quote": "플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-26T16:11:27Z",
+  "pack": {
+    "topic": {
+      "title": "플라자 합의",
+      "wiki_title": "플라자 합의",
+      "category": "환율달러",
+      "source": "seed",
+      "angle": "공식 설명이 말하지 않는 것",
+      "score": 0.676,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.558,
+        "stimulus": 0.35,
+        "explore": 0.402
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.56(n=1) · 탐색 0.40 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.732,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.558,
+          "stimulus": 0.35,
+          "explore": 0.402
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.56(n=1) · 탐색 0.40 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 플라자 합의",
+        "url": "https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9E%90_%ED%95%A9%EC%9D%98",
+        "published": "2026-11-16",
+        "fetched_at": "2026-11-26",
+        "text": "플라자 합의( - 合意, 영어: Plaza Accord, 일본어: プラザ合意)는 1985년 9월 22일 뉴욕의 플라자 호텔에서 프랑스, 서독, 일본, 영국, 미국 사이에 체결된 공동 합의로 외환시장에 개입하여 미국 달러화의 가치를 프랑스 프랑, 독일 마르크, 일본 엔, 영국 파운드 스털링에 대해 절하하는 것을 목표로 하였다. 미국 달러는 이 합의 시점부터 1987년 루브르 합의(Louvre Accord)로 대체될 때까지 상당한 폭으로 절하되었다.일부 평론가들은 플라자 합의가 1980년대 후반 일본의 버블 경제에 기여했다고 믿는다.\n\n배경\n폴 볼커 연방준비제도 의장의 긴축 통화 정책과 로널드 레이건 대통령의 1981년에서 1984년까지의 1기 임기 동안의 확장적 재정 정책은 장기 금리를 상승시키고 자본 유입을 촉진하여 달러 가치를 상승(절상)시켰다. 프랑스 정부는 달러 가치를 낮추기 위한 통화 개입에 강력히 찬성했으나 도널드 리건 재무장관이나 베릴 스프링클 통화 담당 차관보 같은 미국 행정부 관리들은 강달러를 미국 경제에 대한 신뢰의 표시로 간주하고 무엇보다 자유 시장의 개념을 지지하며 그러한 계획에 반대했다. 1982년 G7 베르사유 정상회의에서 미국은 다른 회원국들의 요청에 따라 외환시장 개입의 효과에 대한 연구에 동의했으며 그 결과 1983년 G7 윌리엄스버그 정상회의에서 위르겐센 보고서(Jurgensen Report)가 발표되었으나 이는 다른 정상들이 기대했던 만큼 개입을 지지하지는 않았다. 달러 절상이 계속되고 무역 적자가 더욱 커짐에 따라 레이건 2기 행정부는 통화 개입을 다른 시각으로 보기 시작했다. 1985년 1월, 제임스 베이커가 신임 재무장관이 되었고 베이커의 보좌관이었던 리처드 다먼이 재무부 부장관이 되었다. 데이비이드 멀포드(David Mulford)는 국제 담당 차관보로 합류했다.\n1980년부터 1985년까지 달러는 당시 다음 네 번째로 큰 경제 규모를 가진 국가들의 통화인 일본 엔, 독일 마르크, 프랑스 프랑, 영국 파운드에 비해 약 50% 절상되었다. 1985년 3월, G7 정상회의 직전에 달러는 영국 파운드 대비 사상 최고치를 기록했으며, 이 가치는 30년 이상 깨지지 않았다. 이는 미국 산업에 상당한 어려움을 야기했으나, 처음에는 이들의 로비 활동이 정부에 의해 대체로 무시되었다. 금융 부문은 달러 강세로 이익을 얻을 수 있었고, 달러 절하는 인플레이션 억제에 대한 레이건 행정부의 계획과 상충될 수 있었기 때문이다. 이에 제조업체, 서비스 제공업체, 농부들의 광범위한 연합은 외국 경쟁으로부터의 보호를 요구하는 점차 대중의 관심을 끄는 캠페인을 전개하며 대응했다. 주요 참여자로는 곡물 수출업자, 미국 자동차 산업, 캐터필러(C와 같은 미국의 중공업 제조업체, 그리고 IBM 및 모토로라를 포함한 하이테크 기업들이 있었다. 1985년경, 이들의 캠페인은 미국 의회가 보호무역주의 법안 통과를 고려하기 시작할 정도로 충분한 추진력을 얻었다. 이러한 무역 제한에 대한 부정적인 전망은 백악관이 플라자 합의로 이어진 협상을 시작하도록 촉진했다.\n이러한 (달러) 평가 절하는 GDP의 3.5%에 달했던 미국의 경상수지 적자를 줄이고 1980년대 초에 시작된 심각한 경기 침체로부터 미국 경제가 회복하는 것을 돕기 위해 정당화되었다. 폴 볼커 휘하의 미국 연방준비제도(Federal Reserve System)는 금리를 인상하여 1970년대의 스태그플레이션 위기를 멈추었다. 인상된 금리는 국내 통화 정책을 충분히 통제하고 인플레이션을 막았다. 1970년대 중반까지 닉슨 대통령은 여러 OPEC 국가들이 석유 거래를 오직 미국 달러(USD)로만 하도록 설득하는 데 성공했으며 그 대가로 미국은 그들에게 역내 군사적 지원을 제공하기로 했다. 달러에 대한 국제적 수요의 이러한 갑작스러운 유입은 1970년대에 미국 달러가 필요로 했던 활력을 제공했다. 그러나 강달러는 양날의 검으로 국내 소비자, 기업, 그리고 미국 정부에 더 많은 지출력을 부여하는 한편 달러 가치가 재균형될 때까지 미국의 수출을 저해하는 트리핀 딜레마를 유발했다. 미국의 자동차 산업은 회복할 수 없었다.\n\n플라자 호텔 회담\n1985년 1월 17일 제임스 베이커(James Baker)가 참석한 G5 회의에서 달러 가치 절하를 위한 소규모 통화 개입에 합의했고 이후 실행되었다. 이 몇 달 동안 미국의 개입은 미미했지만 독일 당국은 2월과 3월에 외환시장에서 달러를 매도하기 위해 대규모로 개입했다. 4월 OECD 회의에서 미국은 국제 통화 개혁을 주제로 주요 산업국 간 회의 개최에 잠재적 관심이 있음을 밝혔고 7월과 8월에 G5 대리인 회의를 통해 플라자 회담 준비가 시작되었다. 1985년 9월 22일 미국, 프랑스, 독일, 일본, 영국의 재무장관과 중앙은행 총재들은 뉴욕 플라자 호텔에서 만나 \"달러 이외 통화의 추가적인 질서 있는 절상(appreciate)이 바람직하다\"는 공동 성명에 합의했으며, \"도움이 될 때에는 이를 장려하기 위해 더욱 긴밀하게 협력할 준비가 되어 있다\"고 밝혔다. 그 다음 주 월요일, 이 회담이 공개되자 달러 가치는 다른 통화 대비 4% 하락했다.\n\n영향\n\n무역 적자\n합의 후 첫 2년 동안은 수입품 가격 상승이 단기적으로 수입 물량 감소와 수출 물량 증가를 상회했기 때문에 미국 무역 적자가 오히려 악화되었다. 그러나 결국 수입이 감소하고 수출이 충분히 증가하여 물량 효과가 평가 효과를 상회하게 되면서 적자는 마침내 감소하기 시작했다.\n(달러) 평가 절하는 무역 상대국들이 미국 수출품을 더 저렴하게 구매할 수 있도록 만들었고 이는 결국 다른 국가들이 미국산 상품과 서비스를 더 많이 구매하게 되었음을 의미하는 것으로 알려져 있다. 플라자 합의는 미-일 무역 적자를 줄이는 데는 실패했지만, 미국 수출품의 경쟁력을 높여 다른 국가들과의 미국 적자를 줄이는 데는 성공했다. 그 결과, 미국 의회는 합의 이전에 요구되었던 보호무역주의적 무역 장벽을 제정하는 것을 보류했다.\n\n객관적 실패\n조지프 E. 개그넌(Joseph E. Gagnon)은 플라자 합의의 결과가 실제 정책보다는 정책 의도에 대해 금융 시장에 전달된 메시지와 추가적인 달러 매도에 대한 암묵적 위협 때문이었다고 설명한다. 1987년 달러 가치 하락을 중단하기로 결정한 루브르 합의(Louvre Accord) 이후에는 그 반대 방향으로 개입이 훨씬 더 두드러졌다.\n플라자 합의는 서유럽 국가들과의 미국 무역 적자를 줄이는 데는 성공했지만, 일본과의 무역 적자를 완화하려는 주요 목표는 달성하는 데 크게 실패했다. 이러한 적자는 통화 정책에 둔감한 구조적 조건, 특히 무역 조건 때문이었다. 미국 제조업 제품은 수출 시장에서 더 경쟁력을 갖게 되었지만 일본의 수입에 대한 구조적 제약 때문에 일본 내수 시장에서는 여전히 성공하기 어려웠다. 1987년에는 미국 달러의 지속적인 하락을 막기 위해 루브르 합의가 체결되었다.\n루브르 합의 이후에도 1992년부터 1995년까지의 클린턴 1기 행정부 때와 같이 달러 환율에 대한 몇 차례의 개입이 있었으나, 그 이후 G7 국가들 사이에서는 통화 개입이 거의 없었다. 2000년에는 유럽 중앙은행이 지나치게 절하된 유로화를 지지했다. 일본은행은 2011년 도호쿠 대지진과 쓰나미 이후 엔화의 급격한 절상을 완화하기 위해 미국 등의 협조를 받아 2011년에 마지막으로 개입했다. 2013년, G7 회원국들은 통화 개입을 자제하기로 합의했다. 그 이후 미국 행정부는 (통화 부양책과는 구별되는) 환율 조작에 대한 보다 강력한 국제 정책을 요구해 왔다.\n플라자 합의의 서명은 일본이 국제 통화 시스템 관리의 실질적인 주역으로 부상했음을 반영한다는 점에서 중요했다. 그러나 엔화 가치 상승은 일본 경제에 경기 침체 압력을 가중시켰을 수도 있으며 이에 일본 정부는 대규모 확장적 통화 정책 및 재정 정책으로 대응했다. 이 부양책은 다른 정책들과 결합하여 1980년대 후반 일본의 버블 경제를 초래했다. 이 때문에 일부 평론가들은 플라자 합의를 버블의 원인으로 지목하는데 버블 붕괴는 일본에서 현재까지도 심각하게 느껴지는 장기간의 디플레이션과 저성장 시기인 '잃어버린 10년'을 초래했다. 재프리 프랭클(Jeffrey Frankel)은 이러한 시점에 대해 동의하지 않으며, 엔화 절상 시기였던 1985~86년과 1990년대 불황 사이에 환율이 더 이상 엔화 가치를 밀어 올리지 않던 1987~89년의 버블 시기가 있었다는 점을 지적한다. 또한 독일 마르크의 가치 상승은 독일에서 경제 버블이나 불황으로 이어지지 않았다. 경제학자 리처드 워너(Richard Werner)는 플라자 합의와 일본의 재무성의 공정할인율 인하 정책 같은 외부적 압력만으로는 버블을 초래한 일본은행의 조치를 설명하기에 불충분하다고 말한다.\n\n여담\n플라자 합의로 1986년도부터 1989년도에 이르기까지 대한민국은 경상수지 흑자를 보는 등의 이익을 보았는데 일본과 수출 경쟁품목이 많은 상황에서 엔화의 가치가 상승하여 상대적으로 한국제품 가격이 싸졌기 때문이다. 시기적으로도 유가하락, 금리인하, 1988 서울 올림픽으로 인한 투자확대 등이 동시에 맞물렸고, 이때의 호황을 저유가, 저금리, 저환율이 맞물렸다고 해서 3저 호황이라고 한다.\n\n같이 보기\n통화전쟁\n국제 통화 및 경제 회의\n1936년 삼국 협정\n닷지 라인\n엔고불황\n\n각주\n\n외부 링크\nAnnouncement the Ministers of Finance and Central Bank Governors of France, Germany, Japan, the United Kingdom, and the United States (Plaza Accord)\nU.S. Treasury - Exchange Stabilization Fund, Intervention Operations 1985-90 at the Wayback Machine (archived 2010-11-12)\nPlaza Agreement, ANZ Financial Dictionary from Language of Money by Edna Carew at the Wayback Machine (archived 2009-02-23)\nReverse Plaza Accord",
+        "lang": "ko",
+        "wiki_title": "플라자 합의",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Plaza Accord",
+        "url": "https://en.wikipedia.org/wiki/Plaza_Accord",
+        "published": "2026-11-22",
+        "fetched_at": "2026-11-26",
+        "text": "The Plaza Accord was a joint agreement signed on September 22, 1985, at the Plaza Hotel in New York City, between France, West Germany, Japan, the United Kingdom, and the United States, to depreciate the U.S. dollar in relation to the French franc, the German Deutsche Mark, the Japanese yen and the British pound sterling by intervening in currency markets. The U.S. dollar depreciated significantly from the time of the agreement until it was replaced by the Louvre Accord in 1987. Some commentators believe the Plaza Accord contributed to the Japanese asset price bubble of the late 1980s.\n\nBackground\nThe tight monetary policy of the Federal Reserve's Chairman Paul Volcker and the expansionary fiscal policy of President Ronald Reagan's first term in 1981–84 pushed up long-term interest rates and attracted capital inflow, appreciating the dollar. The French government was strongly in favor of currency intervention to reduce it, but US administration officials, such as Treasury Secretary Donald Regan and Under Secretary for Monetary Affairs, Beryl Sprinkel, opposed such plans, considering the strong dollar a vote of confidence in the US economy and supporting the concept of free market above all else. At the 1982 G7 Versailles Summit, the US agreed to a request by the other members to a study of the effectiveness of foreign currency intervention, which resulted in the Jurgensen Report at the 1983 G7 Williamsburg Summit, but it was not as supportive of intervention as the other leaders had hoped. As the dollar's appreciation kept rising and the trade deficit grew even more, the second Reagan administration viewed currency intervention in a different light. In January 1985, James Baker became the new Treasury Secretary, and Baker's aide Richard Darman became Deputy Secretary of the Treasury. David Mulford joined as the new Assistant Secretary for International Affairs.\nFrom 1980 to 1985, the dollar had appreciated by about 50% against the Japanese yen, Deutsche Mark, French franc, and British pound, the currencies of the next four biggest economies at the time.\nIn March 1985, just before the G7, the dollar reached its highest valuation ever against the British pound, a valuation which would remain untopped for over 30 years. This caused considerable difficulties for the American industry, but at first, their lobbying was largely ignored by the government. The financial sector was able to profit from the rising dollar, and a depreciation would have run counter to the Reagan administration's plans for bringing down inflation. A broad alliance of manufacturers, service providers, and farmers responded by running an increasingly high-profile campaign asking for protection against foreign competition. Major players included grain exporters, the U.S. automotive industry, heavy American manufacturers like Caterpillar Inc., as well as high-tech companies including IBM and Motorola. By 1985, their campaign had acquired sufficient traction for Congress to begin considering passing protectionist laws. The negative prospect of trade restrictions spurred the White House to begin the negotiations that led to the Plaza Accord.\nThe devaluation was justified to reduce the U.S. current account deficit, which had reached 3.5% of the GDP, and to help the U.S. economy to emerge from a serious recession that began in the early 1980s. The U.S. Federal Reserve System under Paul Volcker had halted the stagflation crisis of the 1970s by raising interest rates. The increased interest rate sufficiently controlled domestic monetary policy and staved off inflation. By the mid-1970s, Nixon successfully convinced several OPEC countries to trade oil only in USD, and the US would, in return, give them regional military support. This sudden infusion of international demand for dollars gave the USD the infusion it needed in the 1970s. However, a strong dollar is a double edged sword, inducing the Triffin dilemma which, on the one hand, gave more spending power to domestic consumers, companies, and to the US government, and on the other hand, hampered US exports until the value of the dollar re-equilibrated. The U.S. automobile industry was unable to recover.\n\nMeeting at the Plaza Hotel\nAt the 17 January 1985 G5 meeting attended by James Baker, a small amount of currency intervention to depreciate the dollar was agreed upon and subsequently took place. US intervention was small in those months, but the German authorities intervened heavily to sell dollars in foreign exchange markets in February and March. In April at an OECD meeting, the US announced its potential interest in a meeting between the major industrial countries on the subject of international monetary reform, and preparations for the Plaza meeting began, with preparatory meetings by G5 deputies in July and August. On 22 September 1985, the finance ministers and central bank governors of the United States, France, Germany, Japan and Great Britain met at the Plaza Hotel in New York City and agreed on the announcement that \"some further orderly appreciation of the non-dollar currencies is desirable\" and they \"stand ready to cooperate more closely to encourage this when to do so would be helpful\". The following Monday, when the meeting was made public, the dollar fell 4 percent in comparison to the other currencies.\n\nEffects\n\nTrade deficit\nFor the first two years after the Accord, the US trade deficit worsened, as rising prices of imports outweighed the decline in import quantity and rise in export quantity in the short run. However, the deficit eventually began to fall, as imports had fallen and exports had risen sufficiently for quantity effects to outweigh the valuation effect. \nThe devaluation made U.S. exports cheaper to purchase for its trading partners, which in turn allegedly meant that other countries would buy more American-made goods and services. The Plaza Accord failed to help reduce the U.S.–Japan trade deficit, but it did reduce the U.S. deficit with other countries by making U.S. exports more competitive. As a consequence, the US Congress refrained from enacting the protectionist trade barriers which had been called for before the Accord.\n\nSuccesses and failures\nJoseph E. Gagnon describes the Accord's result being more due to the message that was sent to the financial markets about policy intentions and the implied threat of further dollar sales than actual policies.",
+        "lang": "en",
+        "wiki_title": "Plaza Accord",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:US Dollar Index DXY.webp",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/US_Dollar_Index_DXY.webp/1920px-US_Dollar_Index_DXY.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/US_Dollar_Index_DXY.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:US_Dollar_Index_DXY.webp",
+        "width": 5566,
+        "height": 2114,
+        "license": "CC0",
+        "artist": "Wikideas1",
+        "caption": "US Dollar Index DXY",
+        "id": "P1"
+      },
+      {
+        "file": "File:1985 Events montage 16-grid version.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/1985_Events_montage_16-grid_version.jpg/1920px-1985_Events_montage_16-grid_version.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/1985_Events_montage_16-grid_version.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:1985_Events_montage_16-grid_version.jpg",
+        "width": 4096,
+        "height": 3708,
+        "license": "CC BY 4.0",
+        "artist": "From a variety of images credited above.",
+        "caption": "16 major events of 1985. From top to bottom, left to right: Japan Air Lines Flight 123 1985 Rome and Vienna airport attacks Air India Flight 182 Heysel Stadium ",
+        "id": "P2"
+      }
+    ],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-26T16:09:11Z"
+  }
+}

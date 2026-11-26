@@ -1,0 +1,622 @@
+{
+  "id": "chcafc50-20261127-02-d1525",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-26T16:07:00Z",
+  "topic": {
+    "title": "성덕대왕신종",
+    "wiki_title": "성덕대왕신종",
+    "category": "역사유산",
+    "source": "seed",
+    "angle": "실패에서 뒤집힌 반전",
+    "score": 0.6876,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.728,
+      "stimulus": 0.35,
+      "explore": 0.313
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35",
+    "evidence": 0.733,
+    "rescored": {
+      "score": 0.7062,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.733,
+        "performance": 0.728,
+        "stimulus": 0.35,
+        "explore": 0.313
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.73 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-26T16:07:00Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-26T16:07:00Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-26T16:07:37Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-26T16:08:59Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "소리 울림관, 세계 어디에도 없는 구조입니다",
+      "screen_text": "한국 종에만 있는 음통",
+      "title": "세계 유일 '음통'이 만든 비트의 비밀",
+      "promise": "한국 동종에만 있는 음통이 고주파를 흡수해 독특한 비트음을 만드는 원리를 확인합니다.",
+      "evidence_quote": "종의 맨 위에는 소리의 울림을 도와주는 음통(音筒)이 있는데, 이것은 우리나라 동종에서만 찾아볼 수 있는 독특한 구조이다.",
+      "eval": {
+        "score": 0.9308,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.87,
+          "type_variety": 0.3
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "소리 울림관, 세계 어디에도 없는 구조입니다",
+        "screen_text": "한국 종에만 있는 음통",
+        "title": "세계 유일 '음통'이 만든 비트의 비밀",
+        "promise": "한국 동종에만 있는 음통이 고주파를 흡수해 독특한 비트음을 만드는 원리를 확인합니다.",
+        "evidence_quote": "종의 맨 위에는 소리의 울림을 도와주는 음통(音筒)이 있는데, 이것은 우리나라 동종에서만 찾아볼 수 있는 독특한 구조이다.",
+        "eval": {
+          "score": 0.9308,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.87,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "종 입구가 꽃 모양으로 굴곡진 이유",
+        "screen_text": "마름모꼴 입구의 음향 설계",
+        "title": "꽃모양 입구와 마름모 바닥, 소리의 공학",
+        "promise": "종 입구 굴곡과 마름모꼴 바닥이 소리 울림을 증폭시키는 음향적 원리를 설명합니다.",
+        "evidence_quote": "종 입구 부분이 꽃모양으로 굴곡진 특이한 형태를 하고 있어 이 종의 특징이 되고있다. The bottom of the bell is in a rhombic shape, designed to augment the sound reverberation.",
+        "eval": {
+          "score": 0.916,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "벼락 맞고 두 개 해 뜨던 해에 종을 만들었습니다",
+        "screen_text": "재앙 속 30년 주조의 비밀",
+        "title": "천재지변 10년, 종은 어떻게 완성됐나",
+        "promise": "가뭄·벼락·혜성·두 개 해 등 재난 기록 속에서 주조를 밀어붙인 이유를 설명합니다.",
+        "evidence_quote": "경덕왕 17년(758년) 7월에 천둥과 번개가 쳤고, 사찰 16곳에 벼락이 떨어졌다. 경덕왕 19년(760년) 4월에 두 개의 해가 나타났다.",
+        "eval": {
+          "score": 0.9103,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "18.9톤 종을 1300년 버틴 기둥이 있습니다",
+        "screen_text": "현대 합금도 못 버틴 무게",
+        "title": "현대 합금도 휘는 무게, 고대 기둥은 버텼다",
+        "promise": "같은 지름 현대 합금 기둥도 휘는 18.9톤을 1300년간 지탱시킨 비결을 확인합니다.",
+        "evidence_quote": "Even a column of the same diameter, made of a modern alloy, might bend under the weight of the bell, yet the bell still hangs on an ancient column",
+        "eval": {
+          "score": 0.9079,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.92,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "성덕대왕은 이 종을 본 적이 없습니다",
+        "screen_text": "아버지 위해, 30년 뒤에 완성",
+        "title": "30년 늦게 울린 아버지 위한 종",
+        "promise": "경덕왕이 못 다한 주조를 손자 혜공왕이 771년에 마친 사연을 확인합니다.",
+        "evidence_quote": "경덕왕이 아버지인 성덕왕의 공덕을 널리 알리기 위해 종을 만들려 했으나 뜻을 이루지 못하고, 그 뒤를 이어 혜공왕이 771년에 완성하여",
+        "eval": {
+          "score": 0.8535,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "뼈 성분 인산이 검출되지 않았습니다",
+        "screen_text": "전설 vs 성분 분석 결과",
+        "title": "아이 넣었다는 전설, 성분 분석이 부정한 이유",
+        "promise": "1998년 성분 분석에서 인산이 검출되지 않아 에밀레 전설이 허구임이 밝혀진 과정을 설명합니다.",
+        "evidence_quote": "according to 1998 composition analysis by the Research Institute of Industrial Science & Technology, phosphorus, the main component of bones, was not detected, debunking the legend.",
+        "eval": {
+          "score": 0.8535,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "한국 종에만 있는 음통, 그 비밀",
+    "target_seconds": 20,
+    "category": "역사유산",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "소리 울림관, 세계 어디에도 없는 구조입니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "한국 종에만 있는 음통 구조",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "종의 맨 위에는 소리의 울림을 도와주는 음통(音筒)이 있는데, 이것은 우리나라 동종에서만 찾아볼 수 있는 독특한 구조이다."
+          }
+        ]
+      },
+      {
+        "narration": "이 음통이 고주파를 흡수해 독특한 비트음을 만듭니다.",
+        "visual": {
+          "type": "text",
+          "headline": "고주파 흡수",
+          "sub": "비트음 생성 원리"
+        },
+        "claims": [
+          {
+            "text": "음통이 고주파 흡수해 비트음 생성",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "the sound tube absorbs high frequency waves, contributing to a distinctive beat"
+          }
+        ]
+      },
+      {
+        "narration": "높이 3.66미터, 무게 18.9톤, 771년 완성되었습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "18.9톤",
+          "small": "771년 완성, 높이 3.66미터"
+        },
+        "claims": [
+          {
+            "text": "높이 3.66m, 입지름 2.27m",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "높이 3.66m, 입지름 2.27m, 두께 11∼25cm이며"
+          },
+          {
+            "text": "무게 18.9톤, 1997년 실측",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "무게는 1997년 국립경주박물관에서 정밀측정한 결과 18.9톤으로 확인되었다"
+          },
+          {
+            "text": "혜공왕 7년(771년) 완성",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "혜공왕이 771년에 완성하여 성덕대왕신종이라고 불렀다"
+          }
+        ]
+      },
+      {
+        "narration": "천 년 넘게 울림을 지탱하는 주조 기술의 정수입니다.",
+        "visual": {
+          "type": "photo",
+          "id": "P2"
+        },
+        "claims": [
+          {
+            "text": "1000여 자 명문과 정교한 조각",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "몸통에 남아있는 1,000여자의 명문은 문장뿐 아니라 새긴 수법도 뛰어나"
+          },
+          {
+            "text": "통일신라 예술의 전성기 대표작",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "통일신라 예술이 각 분야에 걸쳐 전성기를 이룰 때 만들어진 종으로 화려한 문양과 조각수법은 시대를 대표할 만하다"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "한국 종에만 있는 음통 구조",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 성덕대왕신종",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-26",
+        "quote": "종의 맨 위에는 소리의 울림을 도와주는 음통(音筒)이 있는데, 이것은 우리나라 동종에서만 찾아볼 수 있는 독특한 구조이다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "음통이 고주파 흡수해 비트음 생성",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — Bell of King Seongdeok",
+        "source_url": "https://en.wikipedia.org/wiki/Bell_of_King_Seongdeok",
+        "published": "2026-11-26",
+        "checked_at": "2026-11-26",
+        "quote": "the sound tube absorbs high frequency waves, contributing to a distinctive beat",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "높이 3.66m, 입지름 2.27m",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 성덕대왕신종",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-26",
+        "quote": "높이 3.66m, 입지름 2.27m, 두께 11∼25cm이며",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 2,
+        "text": "무게 18.9톤, 1997년 실측",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 성덕대왕신종",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-26",
+        "quote": "무게는 1997년 국립경주박물관에서 정밀측정한 결과 18.9톤으로 확인되었다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 2,
+        "text": "혜공왕 7년(771년) 완성",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 성덕대왕신종",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-26",
+        "quote": "혜공왕이 771년에 완성하여 성덕대왕신종이라고 불렀다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 3,
+        "text": "1000여 자 명문과 정교한 조각",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 성덕대왕신종",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-26",
+        "quote": "몸통에 남아있는 1,000여자의 명문은 문장뿐 아니라 새긴 수법도 뛰어나",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C7",
+        "scene": 3,
+        "text": "통일신라 예술의 전성기 대표작",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 성덕대왕신종",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-26",
+        "quote": "통일신라 예술이 각 분야에 걸쳐 전성기를 이룰 때 만들어진 종으로 화려한 문양과 조각수법은 시대를 대표할 만하다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 117,
+      "est_seconds": 21.7,
+      "scenes": 4,
+      "avg_new_tokens_per_scene": 6.8,
+      "max_scene_similarity": 0.11,
+      "visual_mix": {
+        "stat": 1,
+        "photo": 2,
+        "text": 1
+      },
+      "target_seconds_declared": 20
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "한국 종에만 있는 음통 구조",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 성덕대왕신종",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-26",
+      "quote": "종의 맨 위에는 소리의 울림을 도와주는 음통(音筒)이 있는데, 이것은 우리나라 동종에서만 찾아볼 수 있는 독특한 구조이다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "음통이 고주파 흡수해 비트음 생성",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — Bell of King Seongdeok",
+      "source_url": "https://en.wikipedia.org/wiki/Bell_of_King_Seongdeok",
+      "published": "2026-11-26",
+      "checked_at": "2026-11-26",
+      "quote": "the sound tube absorbs high frequency waves, contributing to a distinctive beat",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "높이 3.66m, 입지름 2.27m",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 성덕대왕신종",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-26",
+      "quote": "높이 3.66m, 입지름 2.27m, 두께 11∼25cm이며",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 2,
+      "text": "무게 18.9톤, 1997년 실측",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 성덕대왕신종",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-26",
+      "quote": "무게는 1997년 국립경주박물관에서 정밀측정한 결과 18.9톤으로 확인되었다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 2,
+      "text": "혜공왕 7년(771년) 완성",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 성덕대왕신종",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-26",
+      "quote": "혜공왕이 771년에 완성하여 성덕대왕신종이라고 불렀다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 3,
+      "text": "1000여 자 명문과 정교한 조각",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 성덕대왕신종",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-26",
+      "quote": "몸통에 남아있는 1,000여자의 명문은 문장뿐 아니라 새긴 수법도 뛰어나",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C7",
+      "scene": 3,
+      "text": "통일신라 예술의 전성기 대표작",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 성덕대왕신종",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-26",
+      "quote": "통일신라 예술이 각 분야에 걸쳐 전성기를 이룰 때 만들어진 종으로 화려한 문양과 조각수법은 시대를 대표할 만하다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-26T16:08:59Z",
+  "pack": {
+    "topic": {
+      "title": "성덕대왕신종",
+      "wiki_title": "성덕대왕신종",
+      "category": "역사유산",
+      "source": "seed",
+      "angle": "실패에서 뒤집힌 반전",
+      "score": 0.6876,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.728,
+        "stimulus": 0.35,
+        "explore": 0.313
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35",
+      "evidence": 0.733,
+      "rescored": {
+        "score": 0.7062,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.733,
+          "performance": 0.728,
+          "stimulus": 0.35,
+          "explore": 0.313
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.73 · 성과prior 0.73(n=1) · 탐색 0.31 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 성덕대왕신종",
+        "url": "https://ko.wikipedia.org/wiki/%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95%EC%8B%A0%EC%A2%85",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-26",
+        "text": "성덕대왕신종(聖德大王神鍾)은 대한민국 경상북도 경주시에 있는 범종이다. 신라 시대에 만들어졌으며 설화에 따라 에밀레종으로 부르거나 봉덕사(奉德寺)에 걸려 있던 종이라 하여 봉덕사종이라 부르기도 한다. 1962년 12월 20일 대한민국의 국보 제29호로 지정되었다.\n\n개요\n높이 3.66m, 입지름 2.27m, 두께 11∼25cm이며, 무게는 1997년 국립경주박물관에서 정밀측정한 결과 18.9톤으로 확인되었다.\n신라 경덕왕이 아버지인 성덕왕의 공덕을 널리 알리기 위해 종을 만들려 했으나 뜻을 이루지 못하고, 그 뒤를 이어 혜공왕이 771년에 완성하여 성덕대왕신종이라고 불렀다. 이 종은 처음에 봉덕사에 달았다고 해서 봉덕사 종이라고도 하며, 아기를 시주하여 넣었다는 전설로 아기의 울음소리를 본따 에밀레종이라고도 한다.\n종의 맨 위에는 소리의 울림을 도와주는 음통(音筒)이 있는데, 이것은 우리나라 동종에서만 찾아볼 수 있는 독특한 구조이다. 종을 매다는 고리 역할을 하는 용뉴(龍鈕)는 용머리 모양으로 조각되어 있다. 종 몸체에는 상하에 넓은 띠를 둘러 그 안에 꽃무늬를 새겨 넣었고, 종의 어깨 밑으로는 4곳에 연꽃 모양으로 돌출된 9개의 연꽃봉우리를 사각형의 연곽(蓮廓)이 둘러싸고 있다. 유곽(乳廓) 아래로 2쌍의 비천상(飛天像)이 있고, 그 사이에는 종을 치는 부분인 당좌(撞座)가 연꽃 모양으로 마련되어 있으며, 몸체 앞·뒷면 두 곳에는 종에 대한 내력이 새겨져 있다. 특히 종 입구 부분이 꽃모양으로 굴곡진 특이한 형태를 하고 있어 이 종의 특징이 되고있다.\n통일신라 예술이 각 분야에 걸쳐 전성기를 이룰 때 만들어진 종으로 화려한 문양과 조각수법은 시대를 대표할 만하다. 또한, 몸통에 남아있는 1,000여자의 명문은 문장뿐 아니라 새긴 수법도 뛰어나, 1천 3백여년이 지난 지금까지도 손상되지 않고 전해오고 있다.\n\n역사\n\n봉덕사\n《삼국유사》에는 봉덕사의 창건에 대해 신라 성덕왕(聖德王)이 태종 무열왕의 명복을 빌기 위한 원찰로써 지었으며, 이곳에서 인왕도량(仁王道場)을 이레 동안 베풀고 대대적인 사면을 거행하였다는 것, 성덕왕의 아들로 즉위한 효성왕(孝成王)이 즉위 이듬해인 당 개원(開元) 26년 무인(738년)에 부왕의 명복을 빌기 위하여 창건한 것이라는 두 가지 설을 기록하고 있다. 이 기록에 대해서는 성덕왕 때에 처음 창건을 시작해서 효성왕 때에 완성하였다는 해석, 사찰 건립 자체는 성덕왕이 했으며 효성왕 때에 대대적인 중창이 있었다는 해석이 제기되고 있다. 신라 조정은 봉덕사성전(奉德寺成典)을 두어 봉덕사를 관리했다.\n이후 황복사터에서 '(奉)德太宗寺(令)'으로 판독되는 명문이 포함된 비편(일명 '황복사 제2비')이 발견되어 봉덕사를 봉덕태종사(奉德太宗寺)라고도 하였으며 봉덕사가 태종 무열왕을 위해 지어졌던 사찰이라는 《삼국유사》의 언급에 힘이 실리게 되었다. 애장왕대(800~808)에 건립된 고선사서당화상비(高仙寺誓幢和尙碑)에 '有奉德寺大德法師', 문성왕 17년(855년)에 조성된 창림사무구정탑지(昌林寺無垢淨塔誌)에 '僧 前奉德寺 上座 淸玄'이라는 명문을 통해 후대, 적어도 애장왕 3년(802) 이후에는 '봉덕태종사'를 '봉덕사'로 부르게 되었음을 확인할 수 있으며, 이는 처음에 태종 무열왕과 성덕왕 두 국왕을 위해 지었던 사찰이 후대로 오면서 성덕왕만을 위한 사찰로 그 성격이 변화한 것이 원인이 되었다고 해석되고 있다.\n봉덕사의 성격 변화에 대해서는 효성왕 때의 중창이 계기가 되었다는 설과 효성왕보다 후대의 일이라는 견해가 있다. 전덕재는 삼국사기 직관지에 봉덕사성전의 금하신(衿荷臣)이 경덕왕 때에 검교사(檢校使)로 잠시 변경되었다가 혜공왕 때에 복구되었던 것을 애장왕 때에 다시 경(卿)으로 고쳤는데 이는 다른 봉성사나 감은사, 봉은사 등의 성전이 애장왕 때에 령(令)으로 개칭된 것과 구별된다는 점, 봉덕사의 상당(上堂)도 경덕왕 때에 부(검교)사(副使)로 잠시 변경되었다가 혜공왕 때에 복구되었던 것을 애장왕이 다시 경(卿)으로 고쳤다는 점 등을 들어 '(奉)德太宗寺(令)' 명문이 포함된 황복사 제2비는 애장왕 3년 이전에 건립되었다고 봄이 자연스러우며, 성덕대왕신종의 주조를 전후해 그러한 봉덕사의 성격 변화가 시작되었다고 하였다(후술).\n봉덕사는 신라의 수도였던 경주시 북천(北川, 알천) 부근에 있었으며, 고려 이후 조선 초기까지 존속했다. 그 위치에 대해 동천(東川) 즉 북천 강가에 있었다고 하고, 《동경통지》나 《동경잡기》는 경주부 북쪽에 있었다고 언급하고 있다. 대체로 경주 북천과 멀지 않은 위치에 있었던 것임을 짐작할 수 있다. 성동동에 위치한 전랑지(殿廊址) 서쪽 북천 강가(경주세무서 북쪽)에 위치한 성동동 1사지(경주 성동동 188-42번지 소재)가 봉덕사 내지 봉덕사와 관련이 깊은 유구로 여겨지고 있다.\n\n범종 주조\n《삼국유사》에는 742년부터 경덕왕이 아버지인 성덕왕을 위해 봉덕사동을 주조하려 했으나 뜻을 이루지 못하고, 손자 혜공왕이 771년에 완성했다고 언급하고 있다. 《삼국유사》 권제3 탑상제4 황룡사종·분황사약사·봉덕사종 조에서는 경덕왕 때에 이루어졌던 불사(佛事) 즉 황룡사 대종(경덕왕 13년(754년) 주조)과 분황사의 약사여래상(경덕왕 14년(755년) 주조) 그리고 봉덕사종(성덕대왕신종)의 주조를 차례로 언급하였다. 《삼국사기》에는 경덕왕 13년(754년) 5월에 성덕왕비(聖德王碑)를 세웠다고 하였으며, 성덕왕비 건립 뒤에 봉덕사종의 주조가 시작되었던 것으로 보인다.\n종의 표면에는 명문이 새겨져 있으며, 이 명문을 작성한 것은 신라 조산대부(朝散大夫) 전태자사의랑(前太子司議郞) 한림랑(翰林郞) 김필해(金弼奚, 《삼국유사》에는 김필월金弼粤이라고 표기되어 있다)라고 되어 있다. 명문에는 경덕왕이 조상(즉 부모)을 생각하는 정이 점점 슬퍼지고, 이에 그 명복을 비는 간절한 마음에서 큰 종을 주조하려고 하였으나 뜻을 이루지 못하고 세상을 떠났다고 되어 있다.\n봉덕사종의 주조는 봉덕사를 관장하는 봉덕사성전이 주관하였던 것으로 보이는데, 성덕대왕신종에 언급된 봉덕사성전 관련 인사들은 모두 경덕왕 후기인 경덕왕 19년(760년) 이후에 중용된 사람들이었다는 점, 그리고 이 시기를 전후해 신라가 안팎으로 겪고 있었던 내우외환의 상황이 지적되고 있다. 우선 봉덕사성전의 최고 책임자였던 검교봉덕사성전사인 김옹(金邕)과 김양상(金良相), 검교봉덕사성전부사 집사시랑(執事侍郞) 김체신(金體信) 등이 대표적이다. 김옹은 경덕왕 19년(760) 4월에 염상(廉相)의 뒤를 이어 시중(侍中)에 임명되어 동왕 22년(763) 8월까지 재직했고, 김양상은 경덕왕이 사망하기 직전인 동왕 23년(764년) 정월에 아찬으로서 시중에 임명되었다.\n《삼국사기》의 기록을 보면 경덕왕 13년(754) 8월에 가뭄이 들고 누리 피해가 창궐하였으며, 그 이듬해에 곡식이 부족해 백성들이 굶주렸다. 기상이변도 잇따랐는데(전근대에 기상이변은 천인상관설이라고 하여 인간 세상의 정치가 어지러운 것이 원인이며 하늘이 이를 경고하는 것으로 여겨져 사회 불안을 야기하는 한 원인이 되었다),\n\n경덕왕 17년(758년) 7월에 천둥과 번개가 쳤고, 사찰 16곳에 벼락이 떨어졌다.\n경덕왕 18년(759년) 3월에 혜성(彗星)이 나타났다.\n경덕왕 19년(760년) 4월에 두 개의 해가 나타났다.\n경덕왕 20년(761년) 정월 초하루에 무지개가 해를 뚫었다.\n경덕왕 22년(763년) 7월에 서울에 큰바람이 불어 기왓장이 날아가고 나무가 뽑혔으며, 8월에 복숭아꽃과 오얏꽃이 다시 피었다.\n경덕왕 23년(764년) 3월에 혜성과 용이 나타났다.\n경덕왕 16년(757년) 2월에 김사인이 근년(近年)에 빈발하는 재앙과 이상한 일들에 대한 시정의 득실을 극론하였으며, 이 해에 신라는 신문왕 이래의 월봉(月俸)을 혁파하고 녹읍을 부활시켰으며, 지명과 관직명을 중국식으로 개정하는 사업을 벌였다.\n무엇보다 755년에 당에서 벌어진 안사의 난(安史-亂, 755~763)은 당과 인접한 신라와 발해는 물론 일본에까지 그 여파가 미쳤다. 안록산이 반란을 일으킬 당시 거점이 유주(幽州)의 범양(范陽)으로 당에서 발해와 신라로 이르는 길목이라는 점에서 안사의 난이 신라와 발해에 가져온 위협은 막대하였다. 764년 7월에 일본에 파견된 신라의 사신 대나마(大奈麻) 김재백(金才伯)은 일본측 관리 고소벤(右小弁) 종5위하 기노 아손 우시카이(紀朝臣牛養)로부터 “근래에 당신의 나라에서 투화해 온 백성들이 '본국에서 병사를 징발해 경비하고 있는데, 이는 혹시라도 일본국이 죄를 물으러 올까 싶어서다'라고 하던데 그 일이 거짓인가, 진실인가”라는 물음에 \"당의 사정이 난리로 어지럽고 이로 인해 해적이 빈번하게 출몰하고 있어서 병사를 징발하여 변방을 경비하고 있는 것으로, 이것은 국가의 대비책일 뿐\"이라고 대답하였다.\n이미 750년대 후반 신라와 외교적으로 갈등 관계에 있었던 일본이 안사의 난으로 혼란에 빠진 당이 신라를 구원해 주지 못할 것이라고 판단하여 신라 정토 계획(新羅征討計劃)을 추진하였다. 《속일본기》 덴표호지(天平寶字) 7년 즉 경덕왕 22년(763년) 2월에 급찬 김체신이 211명의 사신을 인솔하고 일본에 사신으로 왔으며 이러한 일본의 신라 정토 계획은 안사의 난이 진압되기 1년 전인 762년에 중단되었지만, 750년대 후반에서 760년대 초반에 걸쳐 대내적인 불안감과 대외적인 위기감이 고조되던 상황에서 경덕왕은 부왕인 성덕왕을 현창하기 위한 적극 추진하였고, 성덕왕의 명복을 빌기 위하여 봉덕사에 큰 범종을 주조하는 일을 전개함으로써 군신과 군민(臣民) 사이의 화합과 단결을 이끌어내고, 이것을 바탕으로 대내외적인 위기를 극복하려고 의도하였던 것으로 보인다. 이에 따라 성덕왕의 명복을 비는 원찰로서의 봉덕사의 기능이 한층 더 강화되었음을 쉬이 유추할 수 있다. 혜공왕 7년(771년) 12월에 성덕대왕신종 제작이 완료되어 봉덕사에 봉납되면서 봉덕사는 성덕왕의 명복을 비는 원찰로서의 위상을 한층 더 확고하게 정립하게 되었음이 분명하며, 아울러 이 무렵을 전후한 시기에 봉덕태종사를 봉덕사로 개명하였을 가능성이 높다고 판단된다.\n봉덕사는 소실된 뒤에 다시 재건되지 못했다. 봉덕사의 소실에 대해서 《신증동국여지승람》이나 《동경잡기》, 《동경통지》 등의 기록은 모두 봉덕사 가까이 위치한 하천인 북천이 범람하면서 수몰, 유실되었다고 전하고 있다. 봉덕사의 유실을 야기한 북천의 범람 시점과 원인에 대해 전덕재는 《세종실록》 세종 6년 갑진(1424년) 5월에 화폐 주조를 목적으로 전국에서 구리를 거두어 들이도록 명령하면서 각 도내의 폐찰된 절들의 구리도 활용하게 할 때 세종이 따로 \"경상도 경주 봉덕사의 대종(大鍾)과 유후사(留後司) 연복사(演福寺)의 대종은 헐지 말게 하라\"라는 전지를 내린 점과, 단종(端宗) 2년(1454년)에 완성된 《세종실록》 지리지 경상도 경주부조에 \"봉덕사는 지금은 없어졌다. 대종이 있었다\"(今亡有大鍾)라고 한 기록을 들어 세종 6년(1424년)과 단종 2년(1454년) 사이에 봉덕사가 사라졌으며, 봉덕사를 소실케 한 북천의 범람은 세종 19년(1437년) 7월 3일에 경주를 비롯한 경상도내 20개 고을에 있었던 폭우가 원인이었다고 지목하였다.\n조선 세조 때의 승려이자 시인이었던 김시습(金時習)은 봉덕사가 수몰되어 소실된 뒤에 거의 노천에 버려져 있다시피 했던 성덕대왕신종의 모습을 고대 중국 주나라의 돌북에 빗대어 묘사한 시를 남기기도 했다.\n\n봉덕사가 사라진 뒤\n《신증동국여지승람》(新增東國輿地勝覽, 1530년 완성)에는 봉덕사종 즉 성덕대왕신종이 영묘사(靈妙寺)로 옮겨진 것이 명(明) 천순(天順) 4년 경진 즉 조선 세조 5년(1460년)의 일이라고 적고 있다. 당시 경주부윤(慶州府尹)이었던 김담(金淡)이 성덕대왕신종을 영묘사로 옮겼으며, 이후 다시 부윤 예춘년(芮椿年)이 부임하고 있던 연산군 12년(1506년) 정월에서 이듬해 중종 2년(1507년) 12월 사이의 시점에 경주읍성 남문(징례문) 바깥의 봉황대(鳳凰臺) 아래에 종각을 짓고 옮겨서 성문의 개폐 및 군사 동원 신호에 사용하였다고 한다. 조선 중기의 문인 김수흥(金壽興, 1626~1690)은 경자년(1660년) 6월 경주를 방문하고 남긴 남정록(南征錄)에서 봉황대 곁에 종각이 있고 그것이 봉덕사의 옛 물건이며 부윤 예춘년이 이곳으로 옮겨온 것이라는 언급을 남기고 있다.\n1915년 8월 경주고적보존회에 의해 구(舊) 경주박물관으로 옮겨졌다. 1975년 5월 국립경주박물관이 신축됨에 따라 현재의 위치로 옮겨졌다.<성덕대왕신종에관한역사>\n\n타종과 보존\n1992년 제야에 서른세 번 종을 친 뒤 한동안 타종을 중단하였다가, 1996년 학술조사를 위해 시험으로 다시 타종을 하였다. 그 뒤 2001년 10월 9일, 2002년 10월 3일, 2003년 10월 3일에 타종 행사를 열었으나, 2004년 12월 안전 보존을 위해 더 이상 타종을 중단했다\n\n에밀레 종 전설\n에밀레 종 전설은 불교와 관련된 설화들을 전하는 삼국유사에서도 기록되지 않았고, 천년이 넘는 기간 동안 민가에서만 떠돌던 전설이었으나, 구한말 선교사들에 의해서 처음 기록되기 시작한다. 1895년에 주한미국공사 앨런, 1901년에 고종의 밀사였던 헐버트 역시 에밀레 종 전설을 전하고 있다.",
+        "lang": "ko",
+        "wiki_title": "성덕대왕신종",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Bell of King Seongdeok",
+        "url": "https://en.wikipedia.org/wiki/Bell_of_King_Seongdeok",
+        "published": "2026-11-26",
+        "fetched_at": "2026-11-26",
+        "text": "The Sacred Bell of Great King Seongdeok (Korean: 성덕대왕신종; Hanja: 聖德大王神鍾) is the largest extant bronze bell in Korea. It is also known as the Emille Bell (에밀레종), after a legend about its casting, and as the Bell of Bongdeoksa, where it was first housed. The bell was also previously housed at Gyeongjueupseong.\nThe bell was commissioned by King Gyeongdeok to honor his father, King Seongdeok. However, King Gyeongdeok never lived to see the casting of the bell, as he died in AD 765. The bell was finally cast in AD 771, during the reign of Gyeongdeok's son, King Hyegong.\nNow housed in the Gyeongju National Museum, the bell was designated as the 29th national treasure of Korea on December 12, 1962. It measures 3.75 meters (12.3 ft) high, 2.27 meters (7.4 ft) in diameter at the lip, and 12 to 25 centimeters (4.7 to 9.8 in) in wall thickness. The Gyeongju National Museum weighed it in 1997, and found that its weight was 18.9 tons.\n\nArtistic characteristics\nThe bell is considered a masterpiece of Unified Silla art. It is unique among Korean bronze bells because of the presence of delicate designs and the title text, written in an elegant literary language. The whole structure, including its decorative elements, produces a wide range of sound frequencies; the sound tube absorbs high frequency waves, contributing to a distinctive beat.\nThe hook of the bell is in the shape of a dragon's head. There are many relief patterns on the bell, including flower patterns along the rim and shoulder. There are also reliefs of lotus flowers, grass, and a pair of two apsaras (heavenly maidens). The striking point of the bell (dangjwa) is also in the shape of a lotus and sits between two of the apsara reliefs. The bottom of the bell is in a rhombic shape, designed to augment the sound reverberation. \nThe inscriptions on the bell (the title text), over a thousand Hanja, are a fine example of Korean calligraphy and carving. They provide detailed information about the bell and why it was cast.\nThe column the bell hangs on is quite firm. Even a column of the same diameter, made of a modern alloy, might bend under the weight of the bell, yet the bell still hangs on an ancient column that has lasted for several centuries.\n\nLegend\nThe monks of Bongdeoksa went around to receive donations to make a bell to honor King Seongdeok. When the chief monk visited a house and asked for a donation, a woman came out and said that she was so poor that she had nothing but her child to give. The monk returned to the temple and had a dream that night which told him he needed the child to complete the bell. The next day, the monk asked the woman to give him the child and put the child in the molten iron. When the completed bell was rung, it sounded like \"emille\", the sound of a child desperately calling for his/her mother. This is how the bell came to be called Emille Bell. The story emphasizes the need for great human sacrifice to create a sacred bell. It is also seen as an expression of the resentment of the people caused by the large-scale bell-making project.\nWhether the legend is true is disputed. The legend is not recorded in official history books. One of the oldest records about the legend is believed to be Homer Hulbert's 1906 book The Passing of Korea, which states that the bell is in Seoul instead of Gyeongju. Also, according to 1998 composition analysis by the Research Institute of Industrial Science & Technology, phosphorus, the main component of bones, was not detected, debunking the legend. On the other hand, child's bones were found in a well made in Unified Silla, suggesting that human sacrifice may have existed in Silla.\n\nIn modern media\nThe sound of the bell was featured on \"No. 29\", the sixth track on BTS's album Arirang.\n\nSee also\nKorean Bell of Friendship: Bell in the United States modeled after the Bell of King Seongdeok\nBell of Yongjusa\n\nReferences\n\nFurther reading\nAllen, H. N. (1895). \"Places of interest in Seoul\" (PDF). The Korean Repository. II (5): 182–187 – via Old books about Korea online.\nCable, E. M. (1925). \"Old Korean Bells\" (PDF). Transactions of the Korea Branch of the Royal Asiatic Society. XVI: 1–45 – via Old books about Korea online.\nCoulson, Constance J. D. (1910). \"The Sights of Seoul\". Korea. Peeps at Many Lands. London: Adam & Charles Black. pp. 56–60 – via Internet Archive.\nElias, Frank (1911). \"Korea: Places, Bells, and Dogs\". The Far East: China, Korea, Japan. Peeps at Many Lands. London: A. & C. Black. pp. 98–103 – via Internet Archive.\nHulbert, Homer B. (1901). \"The Spirit of the Bell, A Korean legend\" (PDF). The Korean Review. I (1) – via Old books about Korea online.\nHulbert, Homer B. (1906). The passing of Korea. New York: Doubleday, Page & company. p. 327 – via Internet Archive.\n\nExternal links\n Media related to Bell of King Seongdeok at Wikimedia Commons\nCultural Heritage Administration",
+        "lang": "en",
+        "wiki_title": "Bell of King Seongdeok",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:경주 박물관으로 옮겨지고 있는 성덕대왕 신종.jpg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%EA%B2%BD%EC%A3%BC_%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9C%BC%EB%A1%9C_%EC%98%AE%EA%B2%A8%EC%A7%80%EA%B3%A0_%EC%9E%88%EB%8A%94_%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95_%EC%8B%A0%EC%A2%85.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/%EA%B2%BD%EC%A3%BC_%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9C%BC%EB%A1%9C_%EC%98%AE%EA%B2%A8%EC%A7%80%EA%B3%A0_%EC%9E%88%EB%8A%94_%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95_%EC%8B%A0%EC%A2%85.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:%EA%B2%BD%EC%A3%BC_%EB%B0%95%EB%AC%BC%EA%B4%80%EC%9C%BC%EB%A1%9C_%EC%98%AE%EA%B2%A8%EC%A7%80%EA%B3%A0_%EC%9E%88%EB%8A%94_%EC%84%B1%EB%8D%95%EB%8C%80%EC%99%95_%EC%8B%A0%EC%A2%85.jpg",
+        "width": 940,
+        "height": 622,
+        "license": "Public domain",
+        "artist": "Unknown authorUnknown author",
+        "caption": "742년부터 신라 경덕왕이 아버지인 성덕왕의 공덕을 널리 알리기 위해 만들려 했으나 뜻을 이루지 못하고, 손자 혜공왕이 771년에 완성했다. 봉덕사에 달았다가 조선시대인 1460년 수해로 봉덕사가 없어지자 영묘사(靈妙寺)로 옮겼으며, 다시 봉황대(鳳凰臺) 아래에 종각을 짓고 보존하다가 ",
+        "id": "P1"
+      },
+      {
+        "file": "File:Bell of King Seongdeok.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bell_of_King_Seongdeok.jpg/1920px-Bell_of_King_Seongdeok.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bell_of_King_Seongdeok.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Bell_of_King_Seongdeok.jpg",
+        "width": 3732,
+        "height": 2488,
+        "license": "CC0",
+        "artist": "Bernard Gagnon",
+        "caption": "Bell of King Seongdeok at Gyeongju National Museum, South Korea",
+        "id": "P2"
+      }
+    ],
+    "evidence": 0.733,
+    "ok": true,
+    "built_at": "2026-11-26T16:07:00Z"
+  }
+}
