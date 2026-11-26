@@ -1,7 +1,7 @@
 {
   "id": "chcafc50-20261126-01-05bf3",
   "channel": "도개",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-25T16:01:59Z",
   "topic": {
     "title": "고려청자",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-25T16:04:32Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-26T09:03:03Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-26T09:03:03Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-26T09:03:55Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-26T09:03:59Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-26T09:04:35Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-26T09:05:12Z",
+      "note": "예약공개 11-28 20:00"
     }
   ],
   "attempts": {},
@@ -478,20 +508,134 @@
       "note": "출처 본문에서 인용 확인"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "image",
+      "meta": {
+        "type": "photo",
+        "photo": {
+          "file": "File:청자 어룡 모양 주전자.jpg",
+          "page": "https://commons.wikimedia.org/wiki/File:%EC%B2%AD%EC%9E%90_%EC%96%B4%EB%A3%A1_%EB%AA%A8%EC%96%91_%EC%A3%BC%EC%A0%84%EC%9E%90.jpg",
+          "license": "KOGL Type 1",
+          "artist": "National Museum of Korea",
+          "caption": "kettle, made of celadon. Made in 12th century. National Treasures of South Korea No.61"
+        }
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "compare"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/chcafc50-20261126-01-05bf3/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/chcafc50-20261126-01-05bf3/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/chcafc50-20261126-01-05bf3/out/subtitles.ass",
+    "bgm": "piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "5개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 1장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.20"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "38.4s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "38.4s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 155/편차 63; 밝기 155/편차 63"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 42/편차 39"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -17.8dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 16개, 마지막 37.9s / 영상 38.4s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "NKEm5F_aI4M",
+    "scheduled_at": "2026-11-28T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "도개-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "medium"
   },
-  "updated_at": "2026-11-25T16:04:32Z",
+  "updated_at": "2026-11-26T09:05:12Z",
   "pack": {
     "topic": {
       "title": "고려청자",
