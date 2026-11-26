@@ -234,15 +234,21 @@
   "views": 1147
  },
  "2026-11-22": {
-  "engagedViews": 447,
+  "engagedViews": 445,
   "estimatedMinutesWatched": 170,
   "subscribersGained": 0,
-  "views": 961
+  "views": 959
  },
  "2026-11-23": {
   "engagedViews": 41,
   "estimatedMinutesWatched": 11,
   "subscribersGained": 0,
   "views": 160
+ },
+ "2026-11-24": {
+  "engagedViews": 31,
+  "estimatedMinutesWatched": 11,
+  "subscribersGained": 0,
+  "views": 83
  }
 }
