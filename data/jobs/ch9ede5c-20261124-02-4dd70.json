@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261124-02-4dd70",
   "channel": "웃짬",
-  "status": "SCHEDULED",
+  "status": "PUBLISHED",
   "created_at": "2026-11-23T16:05:32Z",
   "topic": {
     "title": "스무트-홀리 관세법",
@@ -85,6 +85,11 @@
       "status": "SCHEDULED",
       "at": "2026-11-23T16:12:55Z",
       "note": "예약공개 11-27 20:00"
+    },
+    {
+      "status": "PUBLISHED",
+      "at": "2026-11-27T21:19:59Z",
+      "note": "공개 확인"
     }
   ],
   "attempts": {},
@@ -664,7 +669,7 @@
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-23T16:12:55Z",
+  "updated_at": "2026-11-27T21:19:59Z",
   "pack": {
     "topic": {
       "title": "스무트-홀리 관세법",

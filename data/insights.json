@@ -1,30 +1,37 @@
 {
  "도개": {
-  "n_videos": 3,
+  "n_videos": 4,
   "base_age_h": 72,
-  "generated_at": "2026-11-27T08:38:25Z",
-  "confidence": "표본 부족",
-  "median_views": 298,
+  "generated_at": "2026-11-27T21:20:00Z",
+  "confidence": "참고 수준",
+  "median_views": 547.5,
   "categories": {
    "역사유산": {
     "n": 1,
     "median_views": 863,
-    "relative": 2.9,
+    "relative": 1.58,
     "median_avg_view_pct": 36.9,
     "confidence": "표본 부족"
    },
    "제조산업": {
     "n": 1,
     "median_views": 61,
-    "relative": 0.2,
+    "relative": 0.11,
     "median_avg_view_pct": 127.5,
     "confidence": "표본 부족"
    },
    "대중문화": {
     "n": 1,
     "median_views": 298,
-    "relative": 1.0,
+    "relative": 0.54,
     "median_avg_view_pct": 89.9,
+    "confidence": "표본 부족"
+   },
+   "첨단기술": {
+    "n": 1,
+    "median_views": 797,
+    "relative": 1.46,
+    "median_avg_view_pct": 57.3,
     "confidence": "표본 부족"
    }
   },
@@ -32,88 +39,102 @@
    "surprising_fact": {
     "n": 1,
     "median_views": 863,
-    "relative": 2.9,
+    "relative": 1.58,
     "median_avg_view_pct": 36.9,
     "confidence": "표본 부족"
    },
    "number_gap": {
     "n": 1,
     "median_views": 61,
-    "relative": 0.2,
+    "relative": 0.11,
     "median_avg_view_pct": 127.5,
     "confidence": "표본 부족"
    },
    "problem_solution": {
     "n": 1,
     "median_views": 298,
-    "relative": 1.0,
+    "relative": 0.54,
     "median_avg_view_pct": 89.9,
+    "confidence": "표본 부족"
+   },
+   "contrary_result": {
+    "n": 1,
+    "median_views": 797,
+    "relative": 1.46,
+    "median_avg_view_pct": 57.3,
     "confidence": "표본 부족"
    }
   },
   "lengths": {
    "26~40초": {
-    "n": 2,
-    "median_views": 580.5,
-    "relative": 1.95,
-    "median_avg_view_pct": 63.4,
+    "n": 3,
+    "median_views": 797,
+    "relative": 1.46,
+    "median_avg_view_pct": 57.3,
     "confidence": "표본 부족"
    },
    ">40초": {
     "n": 1,
     "median_views": 61,
-    "relative": 0.2,
+    "relative": 0.11,
     "median_avg_view_pct": 127.5,
     "confidence": "표본 부족"
    }
   },
   "publish_hours": {
    "20": {
-    "n": 3,
-    "median_views": 298,
+    "n": 4,
+    "median_views": 547.5,
     "relative": 1.0,
-    "median_avg_view_pct": 89.9,
-    "confidence": "표본 부족"
+    "median_avg_view_pct": 73.6,
+    "confidence": "참고 수준"
    }
   },
   "topic_sources": {
    "seed": {
-    "n": 3,
-    "median_views": 298,
+    "n": 4,
+    "median_views": 547.5,
     "relative": 1.0,
-    "median_avg_view_pct": 89.9,
-    "confidence": "표본 부족"
+    "median_avg_view_pct": 73.6,
+    "confidence": "참고 수준"
    }
   },
   "chart_share_corr": null,
   "winners": []
  },
  "웃짬": {
-  "n_videos": 3,
+  "n_videos": 4,
   "base_age_h": 72,
-  "generated_at": "2026-11-27T08:38:25Z",
-  "confidence": "표본 부족",
-  "median_views": 924,
+  "generated_at": "2026-11-27T21:20:00Z",
+  "confidence": "참고 수준",
+  "median_views": 533.5,
   "categories": {
    "금융위기": {
     "n": 1,
     "median_views": 1240,
-    "relative": 1.34,
+    "relative": 2.32,
     "median_avg_view_pct": 72.2,
     "confidence": "표본 부족"
    },
    "환율달러": {
     "n": 1,
     "median_views": 924,
-    "relative": 1.0,
+    "relative": 1.73,
     "median_avg_view_pct": 53.9,
     "confidence": "표본 부족"
    },
    "에너지자원": {
     "n": 1,
     "median_views": 106,
-    "relative": 0.11,
+    "relative": 0.2,
     "median_avg_view_pct": 37.9,
+    "confidence": "표본 부족"
+   },
+   "물가금리": {
+    "n": 1,
+    "median_views": 143,
+    "relative": 0.27,
+    "median_avg_view_pct": 52.5,
     "confidence": "표본 부족"
    }
   },
@@ -121,22 +142,29 @@
    "result_first": {
     "n": 1,
     "median_views": 1240,
-    "relative": 1.34,
+    "relative": 2.32,
     "median_avg_view_pct": 72.2,
     "confidence": "표본 부족"
    },
    "contrary_result": {
     "n": 1,
     "median_views": 924,
-    "relative": 1.0,
+    "relative": 1.73,
     "median_avg_view_pct": 53.9,
     "confidence": "표본 부족"
    },
    "number_gap": {
     "n": 1,
     "median_views": 106,
-    "relative": 0.11,
+    "relative": 0.2,
     "median_avg_view_pct": 37.9,
+    "confidence": "표본 부족"
+   },
+   "surprising_fact": {
+    "n": 1,
+    "median_views": 143,
+    "relative": 0.27,
+    "median_avg_view_pct": 52.5,
     "confidence": "표본 부족"
    }
   },
@@ -144,41 +172,41 @@
    "≤25초": {
     "n": 1,
     "median_views": 1240,
-    "relative": 1.34,
+    "relative": 2.32,
     "median_avg_view_pct": 72.2,
     "confidence": "표본 부족"
    },
    "26~40초": {
     "n": 1,
     "median_views": 924,
-    "relative": 1.0,
+    "relative": 1.73,
     "median_avg_view_pct": 53.9,
     "confidence": "표본 부족"
    },
    ">40초": {
-    "n": 1,
-    "median_views": 106,
-    "relative": 0.11,
-    "median_avg_view_pct": 37.9,
+    "n": 2,
+    "median_views": 124.5,
+    "relative": 0.23,
+    "median_avg_view_pct": 45.2,
     "confidence": "표본 부족"
    }
   },
   "publish_hours": {
    "20": {
-    "n": 3,
-    "median_views": 924,
+    "n": 4,
+    "median_views": 533.5,
     "relative": 1.0,
-    "median_avg_view_pct": 53.9,
-    "confidence": "표본 부족"
+    "median_avg_view_pct": 53.2,
+    "confidence": "참고 수준"
    }
   },
   "topic_sources": {
    "seed": {
-    "n": 3,
-    "median_views": 924,
+    "n": 4,
+    "median_views": 533.5,
     "relative": 1.0,
-    "median_avg_view_pct": 53.9,
-    "confidence": "표본 부족"
+    "median_avg_view_pct": 53.2,
+    "confidence": "참고 수준"
    }
   },
   "chart_share_corr": null,
