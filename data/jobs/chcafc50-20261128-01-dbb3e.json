@@ -1,0 +1,653 @@
+{
+  "id": "chcafc50-20261128-01-dbb3e",
+  "channel": "도개",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-27T16:02:23Z",
+  "topic": {
+    "title": "첨성대",
+    "wiki_title": "첨성대",
+    "category": "역사유산",
+    "source": "seed",
+    "angle": "불가능하다던 일을 어떻게 해냈나",
+    "score": 0.701,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.9,
+      "stimulus": 0.35,
+      "explore": 0.251
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.90(n=1) · 탐색 0.25 · 자극 0.35",
+    "evidence": 0.933,
+    "rescored": {
+      "score": 0.7477,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.933,
+        "performance": 0.9,
+        "stimulus": 0.35,
+        "explore": 0.251
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.93 · 성과prior 0.90(n=1) · 탐색 0.25 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-27T16:02:23Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-27T16:02:23Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-27T16:03:32Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-27T16:08:49Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "내부가 흙으로 차 있어도 관측이 가능했습니다",
+      "screen_text": "흙 채운 12층의 이유",
+      "title": "첨성대 내부 흙 12단의 숨은 기능",
+      "promise": "관측대에 흙을 채운 이유가 구조 보강이자 기준점이었다는 사실을 전합니다",
+      "evidence_quote": "내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.",
+      "eval": {
+        "score": 0.9383,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 0.94,
+          "type_variety": 0.3
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "내부가 흙으로 차 있어도 관측이 가능했습니다",
+        "screen_text": "흙 채운 12층의 이유",
+        "title": "첨성대 내부 흙 12단의 숨은 기능",
+        "promise": "관측대에 흙을 채운 이유가 구조 보강이자 기준점이었다는 사실을 전합니다",
+        "evidence_quote": "내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.",
+        "eval": {
+          "score": 0.9383,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "number_gap",
+        "first_line": "1300년 버틴 탑이 고작 7cm 기울었습니다",
+        "screen_text": "기울기 7.2cm",
+        "title": "첨성대 7cm 기울기의 진실",
+        "promise": "지진과 전쟁에도 무너지지 않은 구조적 안정성의 비결을 밝힙니다",
+        "evidence_quote": "북쪽으로 7.2센티미터, 동쪽으로 2.4센티미터 정도 기울어진 것으로 알려져 있다.",
+        "eval": {
+          "score": 0.9104,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "problem_solution",
+        "first_line": "사다리 없이 9m 꼭대기 어떻게 올랐을까요",
+        "screen_text": "내부 사다리의 정체",
+        "title": "첨성대 출입문과 내부 이동의 해법",
+        "promise": "13~15층 문과 내부 장대석이 사람과 기구를 올리는 통로였음을 입증합니다",
+        "evidence_quote": "이 문에 사다리를 걸쳐 사람이 오르내렸다. 내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.",
+        "eval": {
+          "score": 0.9103,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "창문 하나로 춘분 추분을 정확히 알았습니다",
+        "screen_text": "태양빛으로 절기 측정",
+        "title": "첨성대 창문의 정밀한 천문 설계",
+        "promise": "남향 창문이 분점과 지점을 측정하는 과학적 원리를 설명합니다",
+        "evidence_quote": "춘·추분(春·秋分)에 태양이 남중(南中)할 때 이 창문을 통하여 태양광선이 바로 대(臺) 안의 밑바닥까지 완전히 비출 수 있는 위치에 열려 있다.",
+        "eval": {
+          "score": 0.9101,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.94,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "첨성대 돌 개수가 1년 날짜와 똑같습니다",
+        "screen_text": "365개 돌의 비밀",
+        "title": "첨성대 365개 돌, 1년을 쌓다",
+        "promise": "돌 하나하나가 하루를 의미하는 설계 원리를 알려드립니다",
+        "evidence_quote": "The cylindrical body of the tower is built out of 365 pieces of cut granite, symbolizing the number of days in a year.",
+        "eval": {
+          "score": 0.8509,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.91,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "세계 최고 천문대가 목조 아닌 석조입니다",
+        "screen_text": "석조라 살아남았다",
+        "title": "첨성대, 아시아 최고(最古) 석조 천문대",
+        "promise": "목조가 주류였던 시대, 화강암 362개로 영구 관측대를 지낸 이유를 비교합니다",
+        "evidence_quote": "아시아 및 전세계에서 현존하는 가장 오래된 천문대로 간주되고 있다.",
+        "eval": {
+          "score": 0.8467,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.87,
+            "type_variety": 0.3
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "첨성대, 왜 흙을 채웠을까",
+    "target_seconds": 30,
+    "category": "역사유산",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "내부가 흙으로 차 있어도 관측이 가능했습니다",
+        "visual": {
+          "type": "photo",
+          "id": "P3"
+        },
+        "claims": [
+          {
+            "text": "첨성대는 천문대로 사용된 신라 석조 건축물입니다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "첨성대는 대한민국 경상북도 경주시 반월성 동북쪽에 위치한 신라 중기 선덕여왕 재위시 지어진 석조 건축물로, 아시아 및 전세계에서 현존하는 가장 오래된 천문대로 간주되고 있다."
+          }
+        ]
+      },
+      {
+        "narration": "전체 27단 중 아래 12단은 흙이 채워져 있습니다",
+        "visual": {
+          "type": "stat",
+          "big": "12단",
+          "small": "내부 12단까지 흙이 채워져 있음"
+        },
+        "claims": [
+          {
+            "text": "첨성대 내부는 12단까지 흙으로 채워져 있다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.",
+            "quote_found_by": "code"
+          }
+        ]
+      },
+      {
+        "narration": "흙층 위와 아래에 장대석이 받쳐 전체 무게를 분산했습니다",
+        "visual": {
+          "type": "steps",
+          "title": "흙 채움의 구조적 역할",
+          "items": [
+            "장대석 받침",
+            "흙 채움 12단",
+            "무게 분산"
+          ]
+        },
+        "claims": [
+          {
+            "text": "내부 19단과 20단, 25단과 26단이 장대석을 이루고 있다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다"
+          }
+        ]
+      },
+      {
+        "narration": "정남향 창문은 춘분과 추분에 태양빛을 바닥까지 정확히 비춥니다",
+        "visual": {
+          "type": "photo",
+          "id": "P4"
+        },
+        "claims": [
+          {
+            "text": "정남향 창문을 통해 춘분과 추분에 태양광선이 바닥까지 도달한다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "정남(正南)으로 열린 창문은 사람이 사다리를 걸쳐 놓고 오르내리는 데도 쓰였지만, 춘·추분(春·秋分)에 태양이 남중(南中)할 때 이 창문을 통하여 태양광선이 바로 대(臺) 안의 밑바닥까지 완전히 비출 수 있는 위치에 열려 있다.",
+            "quote_found_by": "code"
+          }
+        ]
+      },
+      {
+        "narration": "흙은 관측 기준을 단단히 고정하는 동시에 계절을 측정하는 기준점이 되었습니다",
+        "visual": {
+          "type": "text",
+          "headline": "흙 채운 12층의 이유",
+          "sub": "구조 보강이자 관측 기준점"
+        },
+        "claims": [
+          {
+            "text": "첨성대는 절기를 정확히 측정하기 위한 측경대로 설립되었다는 견해가 있다",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "이와 같이 절기의 정확한 측정에 의하여 역법(曆法)을 바로 잡기 위한 측경(測景)을 목적으로 설립된 규표(圭表), 즉 측경대로서 일구를 측정하는 천문대일 뿐 아니라, 신라 천문 관측의 중심지로서, 신라 천문 관측에서 자오선과 동서남북 4방위의 표준으로 사용되었을 수 있다고 여겨진다.",
+            "reclassified": "단정형 해석 → 사실로 검증",
+            "quote_found_by": "code"
+          }
+        ]
+      },
+      {
+        "narration": "1300년 가까이 기울지 않고 서 있는 이유는 이렇게 빈틈없이 채운 내부에 있습니다",
+        "visual": {
+          "type": "stat",
+          "big": "1300년",
+          "small": "원형이 1300년 가까이 유지됨"
+        },
+        "claims": [
+          {
+            "text": "첨성대의 원래 모습과 모양이 1300년 이상 변하지 않았다",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "Cheomseongdae's original appearance and shape has remained unchanged for over 1300 years"
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "첨성대는 천문대로 사용된 신라 석조 건축물입니다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 첨성대",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-27",
+        "quote": "첨성대는 대한민국 경상북도 경주시 반월성 동북쪽에 위치한 신라 중기 선덕여왕 재위시 지어진 석조 건축물로, 아시아 및 전세계에서 현존하는 가장 오래된 천문대로 간주되고 있다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "첨성대 내부는 12단까지 흙으로 채워져 있다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 첨성대",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-27",
+        "quote": "내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.",
+        "verified": true,
+        "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "내부 19단과 20단, 25단과 26단이 장대석을 이루고 있다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 첨성대",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-27",
+        "quote": "내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "정남향 창문을 통해 춘분과 추분에 태양광선이 바닥까지 도달한다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 첨성대",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-27",
+        "quote": "정남(正南)으로 열린 창문은 사람이 사다리를 걸쳐 놓고 오르내리는 데도 쓰였지만, 춘·추분(春·秋分)에 태양이 남중(南中)할 때 이 창문을 통하여 태양광선이 바로 대(臺) 안의 밑바닥까지 완전히 비출 수 있는 위치에 열려 있다.",
+        "verified": true,
+        "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "첨성대는 절기를 정확히 측정하기 위한 측경대로 설립되었다는 견해가 있다",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 첨성대",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+        "published": "2026-11-03",
+        "checked_at": "2026-11-27",
+        "quote": "이와 같이 절기의 정확한 측정에 의하여 역법(曆法)을 바로 잡기 위한 측경(測景)을 목적으로 설립된 규표(圭表), 즉 측경대로서 일구를 측정하는 천문대일 뿐 아니라, 신라 천문 관측의 중심지로서, 신라 천문 관측에서 자오선과 동서남북 4방위의 표준으로 사용되었을 수 있다고 여겨진다.",
+        "verified": true,
+        "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+      },
+      {
+        "id": "C6",
+        "scene": 5,
+        "text": "첨성대의 원래 모습과 모양이 1300년 이상 변하지 않았다",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — Cheomseongdae",
+        "source_url": "https://en.wikipedia.org/wiki/Cheomseongdae",
+        "published": "2026-11-27",
+        "checked_at": "2026-11-27",
+        "quote": "Cheomseongdae's original appearance and shape has remained unchanged for over 1300 years",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      }
+    ],
+    "eval": {
+      "chars": 205,
+      "est_seconds": 38.0,
+      "scenes": 6,
+      "avg_new_tokens_per_scene": 8.3,
+      "max_scene_similarity": 0.1,
+      "visual_mix": {
+        "photo": 2,
+        "text": 1,
+        "steps": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 30
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "첨성대는 천문대로 사용된 신라 석조 건축물입니다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 첨성대",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-27",
+      "quote": "첨성대는 대한민국 경상북도 경주시 반월성 동북쪽에 위치한 신라 중기 선덕여왕 재위시 지어진 석조 건축물로, 아시아 및 전세계에서 현존하는 가장 오래된 천문대로 간주되고 있다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "첨성대 내부는 12단까지 흙으로 채워져 있다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 첨성대",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-27",
+      "quote": "내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.",
+      "verified": true,
+      "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "내부 19단과 20단, 25단과 26단이 장대석을 이루고 있다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 첨성대",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-27",
+      "quote": "내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "정남향 창문을 통해 춘분과 추분에 태양광선이 바닥까지 도달한다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 첨성대",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-27",
+      "quote": "정남(正南)으로 열린 창문은 사람이 사다리를 걸쳐 놓고 오르내리는 데도 쓰였지만, 춘·추분(春·秋分)에 태양이 남중(南中)할 때 이 창문을 통하여 태양광선이 바로 대(臺) 안의 밑바닥까지 완전히 비출 수 있는 위치에 열려 있다.",
+      "verified": true,
+      "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "첨성대는 절기를 정확히 측정하기 위한 측경대로 설립되었다는 견해가 있다",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 첨성대",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+      "published": "2026-11-03",
+      "checked_at": "2026-11-27",
+      "quote": "이와 같이 절기의 정확한 측정에 의하여 역법(曆法)을 바로 잡기 위한 측경(測景)을 목적으로 설립된 규표(圭表), 즉 측경대로서 일구를 측정하는 천문대일 뿐 아니라, 신라 천문 관측의 중심지로서, 신라 천문 관측에서 자오선과 동서남북 4방위의 표준으로 사용되었을 수 있다고 여겨진다.",
+      "verified": true,
+      "note": "출처 본문에서 코드가 근거 문장을 찾아 확인"
+    },
+    {
+      "id": "C6",
+      "scene": 5,
+      "text": "첨성대의 원래 모습과 모양이 1300년 이상 변하지 않았다",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — Cheomseongdae",
+      "source_url": "https://en.wikipedia.org/wiki/Cheomseongdae",
+      "published": "2026-11-27",
+      "checked_at": "2026-11-27",
+      "quote": "Cheomseongdae's original appearance and shape has remained unchanged for over 1300 years",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "도개-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "medium"
+  },
+  "updated_at": "2026-11-27T16:08:49Z",
+  "pack": {
+    "topic": {
+      "title": "첨성대",
+      "wiki_title": "첨성대",
+      "category": "역사유산",
+      "source": "seed",
+      "angle": "불가능하다던 일을 어떻게 해냈나",
+      "score": 0.701,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.9,
+        "stimulus": 0.35,
+        "explore": 0.251
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.90(n=1) · 탐색 0.25 · 자극 0.35",
+      "evidence": 0.933,
+      "rescored": {
+        "score": 0.7477,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 0.933,
+          "performance": 0.9,
+          "stimulus": 0.35,
+          "explore": 0.251
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.93 · 성과prior 0.90(n=1) · 탐색 0.25 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 첨성대",
+        "url": "https://ko.wikipedia.org/wiki/%EC%B2%A8%EC%84%B1%EB%8C%80",
+        "published": "2026-11-03",
+        "fetched_at": "2026-11-27",
+        "text": "첨성대(瞻星臺)는 대한민국 경상북도 경주시 반월성 동북쪽에 위치한 신라 중기 선덕여왕 재위시 지어진 석조 건축물로, 아시아 및 전세계에서 현존하는 가장 오래된 천문대로 간주되고 있다. 1962년 12월 20일 국보 제31호로 지정되었다.\n\n구조 및 위치\n첨성대는 신라의 왕궁이 있었던 월성 북쪽에 위치하고 있다. 362개의 화강암 벽돌을 사용하여 원통형으로 축조하였다. 높이는 9.4미터, 밑면 지름 6.09m, 지대석 한 변 길이는 5.35m이다. 돌로 27층을 쌓았으며, 꼭대기에는 다시 우물 정(井) 모양의 2층의 천장돌이 있다. 13층에서 15층에 이르기까지 정남향의 네모난 문이 있고, 이 문의 아래로 12층이 있고 위로 13층이 있으므로 첨성대 위아래의 중간에 문이 위치한다. 이 문에 사다리를 걸쳐 사람이 오르내렸다. 내부에는 12단까지 흙이 채워져 있고 내부에 19단과 20단, 25단과 26단이 장대석을 이루고 있다.\n\n보존상태\n2005년 언론 등의 보도에 따르면 북쪽으로 7.2센티미터, 동쪽으로 2.4센티미터 정도 기울어진 것으로 알려져 있다. 전문가에 따르면 원인은 북동쪽 지반이 무르고 수분이 많은 탓으로 보고 있으며, 지역 주민들은 한국 전쟁 이후 기울어짐이 심해졌으며 당시 북쪽의 도로를 지나던 탱크 등에 의해 지반이 약화되었다고 보고 있다. 문화재청은 이에 대해 우려할 수준은 아니며, 국내외 연구진에 의한 연구 결과 또한 구조적으로 안정적인 상태라고 밝히고 있다.\n2016년 9월 경주에 발생한 지진의 여파로 석축이 지진 발생 전에 비해 약 1.2 cm 정도 벌어졌지만 균열은 없었다고 한다.\n\n용도\n첨성대는 《삼국유사》의 기록에 따라 전통적으로 별을 관찰하는 천문대의 기능을 했으리라 여겨져왔다. 1960년대 이전에는 별 이견이 없이 1904년 세키노 타다시와 와다 유지, 1917년 루퍼스(Rufus,W.C.)에 의해 세계에서 가장 오래된 천문대로 주목을 받았다. 이러한 견해에 따르면 그 위에 목조 구조물이 세워져 혼천의(渾天儀)가 설치되었으리라는 생각과, 개방식 ‘돔’으로서의 관측대라는 견해도 있다. 실제로 첨성대는 창문을 제외하면 어느 방향에서나 같은 모양이며, 계절과 태양의 위치에 관계없이 일구(日晷)를 측정하여 시간을 헤아릴 수 있으므로 4가지 계절과 24절기를 확실히 정할 수 있다. 정남(正南)으로 열린 창문은 사람이 사다리를 걸쳐 놓고 오르내리는 데도 쓰였지만, 춘·추분(春·秋分)에 태양이 남중(南中)할 때 이 창문을 통하여 태양광선이 바로 대(臺) 안의 밑바닥까지 완전히 비출 수 있는 위치에 열려 있다. 그러므로 동·하지(冬·夏至)에는 창문 아래 부분에서 광선이 완전히 사라지게 되므로 분점(分點)과 지점(至點) 측정의 보조역할도 할 수 있다. 이와 같이 절기의 정확한 측정에 의하여 역법(曆法)을 바로 잡기 위한 측경(測景)을 목적으로 설립된 규표(圭表), 즉 측경대로서 일구를 측정하는 천문대일 뿐 아니라, 신라 천문 관측의 중심지로서, 신라 천문 관측에서 자오선과 동서남북 4방위의 표준으로 사용되었을 수 있다고 여겨진다.\n\n건립 시점\n첨성대에 관한 최초 기록인 《삼국유사》는 첨성대의 건립시점을 선덕여왕대(632~647)로 밝히고 있고, 《삼국유사》 이후의 사서에서도 이에 반하는 기록이 보이지 않으므로 선덕여왕대(632~647년)에 첨성대가 건립된 것만큼은 확실해 보인다. 그러나 《세종실록지리지》은 당 태종 7년(633년)에, 《증보문헌비고》은 선덕여왕이 사망한 해인 재위 16년(647년)에 건립되었다. 그리고 다른 책에도 기술하는 등 구체적인 년도에 대해서는 여러 기록이 전해진다.\n\n천문 관측 이외의 용도\n첨성대는 그 구조가 상징하는 바 하늘에 대한 천원지방설(天圓地方說)에 의거하여 축조되었으리라고 해석되고 있으며, 27단으로 이루어진 것은 선덕여왕이 27대 왕임을 상징한다는 해석도 있다. 천상(天象)의 이변(異變)이 있을 때 외에는 이러한 목적을 위한 상설 천문대로 생각하기는 어렵다는 견해도 있다. 첨성대라 명명한 것은 첨성대가 세워진 이후 신라의 천체 관측 기록이 기하급수적으로 늘었기 때문이다.\n\n그러나 1964년에는 해시계의 규표일 가설이 제시된 후 일종의 제단이었다는 가설, 정치적 조영물이라는 가설, 다른 세계로 이동하기 위한 우물이라는 가설 등 여러 가설이 끊임없이 제기되었다. 첨성대 건설 이후 기록된 유성의 떨어진 위치들이 모두 첨성대를 둘러싸고 있다는 것, 첨성대가 완성된 후 신라의 천문관측 기록의 수가 이전보다 10배 이상 증가했을 뿐 아니라 질적으로 정밀해졌다는 점 등을 근거로 천문대의 기능을 했으리라는 주장도 계속 이어진다.\n이러한 제언들로 인해 현대에는 현대적 천문대로서의 기능을 했을 것이라기보다도, 점성술 및 제의까지도 행해진 고대인들의 천문대로서의 기능을 복합적으로 수행했으리라 여겨진다. 이 경우《삼국유사》에 기록된 점성대가 첨성대를 가리키는 것으로 본다.\n\n연구\n한국천문연구원의 김봉규 박사는 기록을 토대로 첨성대가 신라의 천문대라는 것을 입증하였다.\n첨성대는 내부에 혼천의를 넣어서 관측했다는 주장이 강하지만 창문을 빼면 어느 방향으로 보던 똑같은 모양이라서 위에 있는 장치로 직접 보았다는 주장도 있다.\n\n첨성대를 중심으로 경주의 대릉원 내 고분과 미추왕릉, 중요 유적들은 하늘의 별자리가 그대로 지상에 내려와 앉은 것처럼 모양새가 일치한다는 주장도 있었다. 첨성대에서 창문으로는 반월성의 궁궐 전각이 바로 보인다.\n\n사진\n\n같이 보기\n경주 월성\n개성 첨성대\n\n주해\n\n각주\n\n참고 자료\n첨성대 - 국가유산청 국가유산포털\n\n외부 링크\n\n문화재청의 정보\n경북여행 길라잡이 - 개장시간, 입장요금 정보 포함",
+        "lang": "ko",
+        "wiki_title": "첨성대",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Cheomseongdae",
+        "url": "https://en.wikipedia.org/wiki/Cheomseongdae",
+        "published": "2026-11-27",
+        "fetched_at": "2026-11-27",
+        "text": "Cheomseongdae (Korean: 첨성대; Hanja: 瞻星臺; lit. 'star-gazing tower') is an astronomical observatory in Gyeongju, South Korea. Cheomseongdae is the oldest surviving astronomical observatory in Asia, and possibly even the world. It was constructed during the Silla period, during the reign of Queen Seondeok (r. 632–647 AD). Cheomseongdae was designated as the country's 31st national treasure on December 20, 1962. It is part of Gyeongju Historic Areas, a UNESCO World Heritage Site.\n\nStructure\nCheomseongdae stands 9.17 meters high and consists of three parts: a stylobate, or base upon which a column is constructed, a curved cylindrical body, and a square top. A square opening is located on the south side of the structure, between the 13th and 15th tiers of stones. It is believed to have served as an entrance accessible by an external ladder, while another ladder inside the tower may have provided access to the top for astronomical observations. When viewed from above, Cheomseongdae resembles the Korean Hanja character 井 (정; jeong; 'well').\nThe square stylobate base is 5.7 meters wide and built from a single layer of 12 rectangular stones. The interior is filled with gravel and soil up to the 12th tier of stones, while the upper section is hollow.\nThe cylindrical body of the tower is built out of 365 pieces of cut granite, symbolizing the number of days in a year. However, various historical documents have reported different numbers of stones. Song (1983) cites a 1962 survey of the site by Gyeongju National Museum director Hong Sa-jun, who found 366 blocks. This discrepancy in stone count may be attributed to some researchers including or omitting a stone slab inside the top of the tower and not visible from the outside. The stones are fashioned as annular sectors, meaning each stone takes the shape of a curved or bent rectangle.\nAt the top, there are two tiers of Jeongja-seok (井字石), and it is presumed that an observation device was placed on it. The cylindrical body consists of 27 tiers of stone blocks. At the top, eight elongated rectangular stones are arranged in two tiers to form a square frame resembling the rim of a well.\nIts construction style parallels that used at the Bunhwangsa in Gyeongju.\n\nSymbolism\nThe number and placement of the stones in Cheomseongdae have been theorized to represent various historical and astronomical figures.\nThe central hole or window separates the body into 12 layers of stones both above and below, symbolizing the 12 months in a year and the 24 solar terms. Additionally, the 12 stones which comprise the stylobate may also reference the 12 months.\n\nPreservation\nCheomseongdae's original appearance and shape has remained unchanged for over 1300 years; however the structure now tilts slightly to the north-east. In 2007, a system was installed to measure the state of Cheomseongdae every hour. Of particular concern are cracks and structural displacements, and movements of the foundation stones. Cheomseongdae is additionally susceptible to wear due to aging and weathering, particularly from air pollution and structural imbalance caused by ground subsidence. The exterior of the structure is regularly washed down to remove moss.\nThe National Research Institute of Cultural Heritage in Korea has conducted inspections on the structure regularly since 1981. Cheomseongdae is owned by the South Korean government and managed by the Gyeongju municipal government.[1]\n\nPopular culture\nCheomseongdae is mentioned in the popular Korean drama Queen Seondeok. In the 2009 drama, Cheomseongdae was constructed when Queen Seondeok was still a princess; this was her first decree as a princess. Cheomseongdae was meant to share the knowledge of astronomy with everyone, rather than letting one person (Lady Misil) abuse the knowledge of it. By doing so, she also abdicated her divine rights. Because this was uncommon at the time and unsupported by many conservatives, at the opening of Cheomseongdae, barely any nobles showed up.\n\nReferences\n\nFurther reading\nJeon, Sang-woon.  (1998). A history of science in Korea.  Seoul:Jimoondang.  ISBN 89-88095-11-1\nNha, Il-seong. Silla's Cheomseongdae. (2001) Korea Journal 41(4), 269-281 (2001)\nSong, Sang-Yong. A brief history of the study of the Ch'ŏmsŏng-dae in Kyongju; Korea Journal 23(8), 16-21 (1983)\n\nExternal links\n\nUNESCO Portal to the Heritage of Astronomy - Cheomseongdae\nAsian Historical Architecture: Cheomseongdae\nTravel in Korea Cheomsongdae information page",
+        "lang": "en",
+        "wiki_title": "Cheomseongdae",
+        "id": "S2"
+      }
+    ],
+    "photos": [
+      {
+        "file": "File:Korea-Gyeongju-Cheomseongdae-02.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Korea-Gyeongju-Cheomseongdae-02.jpg/1920px-Korea-Gyeongju-Cheomseongdae-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Korea-Gyeongju-Cheomseongdae-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Korea-Gyeongju-Cheomseongdae-02.jpg",
+        "width": 2736,
+        "height": 3648,
+        "license": "CC BY 2.0",
+        "artist": "Matt and Nayoung Wilson from Atlanta and surrounding, US",
+        "caption": "Cheomseongdae is an astronomical observatory in Gyeongju, South Korea. It is the oldest surviving astronomical observatory in Asia. It was constructed in the 7t",
+        "id": "P1"
+      },
+      {
+        "file": "File:Cheomseongdae 첨성대.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Cheomseongdae_%EC%B2%A8%EC%84%B1%EB%8C%80.jpg/1920px-Cheomseongdae_%EC%B2%A8%EC%84%B1%EB%8C%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Cheomseongdae_%EC%B2%A8%EC%84%B1%EB%8C%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Cheomseongdae_%EC%B2%A8%EC%84%B1%EB%8C%80.jpg",
+        "width": 3260,
+        "height": 5000,
+        "license": "CC BY 4.0",
+        "artist": "Photographer: Mosbatho",
+        "caption": "The Cheomseongdae star-gazing tower in Gyeongju, South Korea.",
+        "id": "P2"
+      },
+      {
+        "file": "File:Cheomseongdae astronomical observatory.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Cheomseongdae_astronomical_observatory.jpg/1920px-Cheomseongdae_astronomical_observatory.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Cheomseongdae_astronomical_observatory.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Cheomseongdae_astronomical_observatory.jpg",
+        "width": 2369,
+        "height": 2686,
+        "license": "CC0",
+        "artist": "Dudva",
+        "caption": "Cheomseongdae is an astronomical observatory in Gyeongju, South Korea.",
+        "id": "P3"
+      },
+      {
+        "file": "File:Cheomseongdae Observatory 02.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Cheomseongdae_Observatory_02.jpg/1920px-Cheomseongdae_Observatory_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Cheomseongdae_Observatory_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Cheomseongdae_Observatory_02.jpg",
+        "width": 3266,
+        "height": 4608,
+        "license": "CC0",
+        "artist": "Bernard Gagnon",
+        "caption": "Cheomseongdae Observatory, Gyeongju, South Korea",
+        "id": "P4"
+      },
+      {
+        "file": "File:Cheomseongdae Observatory 01.jpg",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Cheomseongdae_Observatory_01.jpg/1920px-Cheomseongdae_Observatory_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "orig_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Cheomseongdae_Observatory_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "page": "https://commons.wikimedia.org/wiki/File:Cheomseongdae_Observatory_01.jpg",
+        "width": 3399,
+        "height": 4759,
+        "license": "CC0",
+        "artist": "Bernard Gagnon",
+        "caption": "Cheomseongdae Observatory, Gyeongju, South Korea",
+        "id": "P5"
+      }
+    ],
+    "evidence": 0.933,
+    "ok": true,
+    "built_at": "2026-11-27T16:02:23Z"
+  }
+}

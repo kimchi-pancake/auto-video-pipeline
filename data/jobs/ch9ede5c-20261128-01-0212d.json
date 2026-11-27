@@ -1,0 +1,546 @@
+{
+  "id": "ch9ede5c-20261128-01-0212d",
+  "channel": "웃짬",
+  "status": "SCRIPT_READY",
+  "created_at": "2026-11-27T16:08:58Z",
+  "topic": {
+    "title": "양적 완화",
+    "wiki_title": "양적 완화",
+    "category": "물가금리",
+    "source": "seed",
+    "angle": "그때 국민이 실제로 잃은 것",
+    "score": 0.6704,
+    "components": {
+      "interest": 0.45,
+      "fit": 1.0,
+      "novelty": 1.0,
+      "evidence": 0.6,
+      "performance": 0.5,
+      "stimulus": 0.35,
+      "explore": 0.407
+    },
+    "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35",
+    "evidence": 1.0,
+    "rescored": {
+      "score": 0.7264,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 1.0,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.407
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35"
+    }
+  },
+  "history": [
+    {
+      "status": "NEW",
+      "at": "2026-11-27T16:08:58Z",
+      "note": "created"
+    },
+    {
+      "status": "RESEARCHING",
+      "at": "2026-11-27T16:08:58Z",
+      "note": "소재 선정·자료 수집"
+    },
+    {
+      "status": "VERIFIED",
+      "at": "2026-11-27T16:09:05Z",
+      "note": "훅 확정"
+    },
+    {
+      "status": "SCRIPT_READY",
+      "at": "2026-11-27T16:09:12Z",
+      "note": "대본·주장 검증 완료"
+    }
+  ],
+  "attempts": {},
+  "error": null,
+  "lease": null,
+  "retry_after": null,
+  "hook": {
+    "chosen": {
+      "type": "contrary_result",
+      "first_line": "경기 부양책이 부자만 더 부자로 만들었다면?",
+      "screen_text": "부양책과 자산 불평등",
+      "title": "양적 완화가 자산 가격을 올리는 이유",
+      "promise": "양적 완화가 금융 자산 가격을 높여 경제적 불평등을 심화할 수 있는 이유를 설명합니다.",
+      "evidence_quote": "QE has also been criticized for raising financial asset prices, and thereby contributing to economic inequality.",
+      "eval": {
+        "score": 0.944,
+        "components": {
+          "grounded": 1.0,
+          "first_line_len": 1.0,
+          "title_len": 1.0,
+          "specific": 1.0,
+          "no_hype": 1.0,
+          "stakes": 1.0,
+          "no_greeting": 1.0,
+          "novel": 1.0,
+          "type_variety": 0.3
+        }
+      }
+    },
+    "candidates": [
+      {
+        "type": "contrary_result",
+        "first_line": "경기 부양책이 부자만 더 부자로 만들었다면?",
+        "screen_text": "부양책과 자산 불평등",
+        "title": "양적 완화가 자산 가격을 올리는 이유",
+        "promise": "양적 완화가 금융 자산 가격을 높여 경제적 불평등을 심화할 수 있는 이유를 설명합니다.",
+        "evidence_quote": "QE has also been criticized for raising financial asset prices, and thereby contributing to economic inequality.",
+        "eval": {
+          "score": 0.944,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 1.0,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 1.0,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "who_wins",
+        "first_line": "저금리가 지속되면 수출 기업은 이득이고, 신성장국은 피해를 봅니다.",
+        "screen_text": "누가 얻고 누가 잃는가",
+        "title": "양적 완화의 승자와 패자",
+        "promise": "양적 완화로 인해 수출 기업과 다른 나라, 신성장국에 어떤 영향을 미치는지 설명합니다.",
+        "evidence_quote": "저금리가 계속될 경우 자국에는 원하는 효과가 나더라도 다른 나라에는 자산 거품을 초래할 수도 있다. 그리고 신성장국들이 엄청난 피해를 본다.",
+        "eval": {
+          "score": 0.9075,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 1.0,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 0.3
+          }
+        }
+      },
+      {
+        "type": "hidden_tech",
+        "first_line": "양적 완화는 금리를 내릴 수 없을 때 쓰는 마지막 수단입니다.",
+        "screen_text": "마지막 수단, 양적 완화",
+        "title": "양적 완화가 쓰이는 조건",
+        "promise": "금리가 제로에 가까워 통화 정책이 효과를 잃을 때 중앙은행이 양적 완화를 선택하는 이유를 설명합니다.",
+        "evidence_quote": "금리중시 통화정책을 시행하는 중앙은행이 정책금리가 0%에 근접하거나, 혹은 다른 이유로 시장경제의 흐름을 정책금리로 제어할 수 없는 이른바 유동성 저하 상황 하에서 유동성을 충분히 공급함으로써 중앙은행의 통화 거래량을 확대하는 정책이다.",
+        "eval": {
+          "score": 0.8807,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.95,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "surprising_fact",
+        "first_line": "중앙은행이 돈을 찍어내 채권을 사면, 자산 가격이 오릅니다.",
+        "screen_text": "돈 찍어내 채권 매입",
+        "title": "양적 완화가 자산 가격을 올리는 원리",
+        "promise": "중앙은행이 채권을 사들여 금리를 내리고 자산 가격을 높이는 과정을 설명합니다.",
+        "evidence_quote": "중앙은행은 채권이나 다른 자산을 사들임으로써, 이율을 더 낮추지 않고도 돈의 흐름을 늘리게 된다.",
+        "eval": {
+          "score": 0.8789,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "comparison",
+        "first_line": "일본은 2001년, 미국은 2008년 같은 정책을 썼습니다.",
+        "screen_text": "일본과 미국의 양적 완화",
+        "title": "일본과 미국의 양적 완화 비교",
+        "promise": "일본과 미국이 각각 어떤 시기에 양적 완화를 시행했는지 비교 설명합니다.",
+        "evidence_quote": "Quantitative easing is a novel form of monetary policy that began in Japan and came into wide application in the US following the 2008 financial crisis.",
+        "eval": {
+          "score": 0.8785,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      },
+      {
+        "type": "result_first",
+        "first_line": "미국은 2008년 말 기준금리를 0~0.25%로 내렸습니다.",
+        "screen_text": "미국 기준금리 제로화",
+        "title": "미국 양적 완화 시작 배경",
+        "promise": "2008년 금융 위기 이후 미국이 기준금리를 낮추고 양적 완화를 시작한 이유를 설명합니다.",
+        "evidence_quote": "2008년 12월 16일 : 선언문을 통해 연방기금금리를 종전 1.00%에서 0~0.25%로 낮추고, 국채와 모기지채권을 대규모로 매입해 통화공급량 자체를 늘리는 '양적완화'로의 전환을 공식 선언한다.",
+        "eval": {
+          "score": 0.8785,
+          "components": {
+            "grounded": 1.0,
+            "first_line_len": 0.5,
+            "title_len": 1.0,
+            "specific": 1.0,
+            "no_hype": 1.0,
+            "stakes": 0.3,
+            "no_greeting": 1.0,
+            "novel": 0.93,
+            "type_variety": 1.0
+          }
+        }
+      }
+    ]
+  },
+  "script": {
+    "title": "양적완화와 자산 가격의 상관관계",
+    "target_seconds": 28,
+    "category": "물가금리",
+    "bgm_mood": "calm",
+    "scenes": [
+      {
+        "narration": "경기 부양책이 부자만 더 부자로 만들었다면?",
+        "visual": {
+          "type": "stat",
+          "big": "1조 7,000억 달러",
+          "small": "미국 1차 양적완화 투입 규모"
+        },
+        "claims": [
+          {
+            "text": "미국 연방준비제도가 2008년 1차 양적완화에서 총 1조 7,000억 달러를 투입했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "1차 양적완화는 2010년 1분기에 끝났으며 총 1조 7,000억 달러가 투입되었다."
+          }
+        ]
+      },
+      {
+        "narration": "중앙은행이 국채와 주택담보부증권을 사들이면 금융 자산 가격이 오릅니다.",
+        "visual": {
+          "type": "steps",
+          "title": "양적완화의 메커니즘",
+          "items": [
+            "중앙은행 자산 매입",
+            "자산 가격 상승",
+            "금융 자산 보유자 이익"
+          ]
+        },
+        "claims": [
+          {
+            "text": "중앙은행이 채권 등을 사들여 시중에 돈을 푼다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "중앙은행은 채권이나 다른 자산을 사들임으로써, 이율을 더 낮추지 않고도 돈의 흐름을 늘리게 된다."
+          }
+        ]
+      },
+      {
+        "narration": "자산 가격이 오르면 주식을 많이 가진 계층이 더 큰 이익을 봅니다.",
+        "visual": {
+          "type": "text",
+          "headline": "자산 불평등 확대",
+          "sub": "금융 자산 보유 여부에 따른 결과 차이"
+        },
+        "claims": [
+          {
+            "text": "자산 가격 상승이 경제적 불평등을 심화할 수 있다는 분석이 있습니다.",
+            "kind": "fact",
+            "source": "S2",
+            "quote": "QE has also been criticized for raising financial asset prices, and thereby contributing to economic inequality.",
+            "reclassified": "단정형 해석 → 사실로 검증"
+          }
+        ]
+      },
+      {
+        "narration": "자산이 적은 계층은 물가 상승 부담만 떠안을 수 있습니다.",
+        "visual": {
+          "type": "stat",
+          "big": "2008년 9월",
+          "small": "리먼 브라더스 사태 이후 양적완화 시작"
+        },
+        "claims": [
+          {
+            "text": "글로벌 금융위기 이후 주요국 중앙은행이 양적완화를 실시했다.",
+            "kind": "fact",
+            "source": "S1",
+            "quote": "2008년 9월 리먼 브라더스 사태 이후 글로벌 금융불안이 실물부분으로 빠르게 확산되면서 경기침체가 심화되자 주요국 중앙은행은 정책금리를 대폭 인하하였다."
+          }
+        ]
+      },
+      {
+        "narration": "양적완화가 부를 재분배할지, 효과를 줄일지는 정책 규모와 출구 전략에 따라 달라질 수 있습니다.",
+        "visual": {
+          "type": "text",
+          "headline": "정책 설계가 결과 결정",
+          "sub": "규모와 종료 시점이 변수"
+        },
+        "claims": [
+          {
+            "text": "정책 규모와 출구 전략에 따라 결과가 달라질 수 있습니다.",
+            "kind": "forecast",
+            "source": "S1",
+            "quote": "만일 양적 완화의 필요량 예측이 과잉될 경우, 자국 통화 가치 약세와 지나친 인플레이션이 초래될 수 있다."
+          }
+        ]
+      }
+    ],
+    "claims_verified": [
+      {
+        "id": "C1",
+        "scene": 0,
+        "text": "미국 연방준비제도가 2008년 1차 양적완화에서 총 1조 7,000억 달러를 투입했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 양적 완화",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+        "published": "2026-09-13",
+        "checked_at": "2026-11-27",
+        "quote": "1차 양적완화는 2010년 1분기에 끝났으며 총 1조 7,000억 달러가 투입되었다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C2",
+        "scene": 1,
+        "text": "중앙은행이 채권 등을 사들여 시중에 돈을 푼다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 양적 완화",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+        "published": "2026-09-13",
+        "checked_at": "2026-11-27",
+        "quote": "중앙은행은 채권이나 다른 자산을 사들임으로써, 이율을 더 낮추지 않고도 돈의 흐름을 늘리게 된다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C3",
+        "scene": 2,
+        "text": "자산 가격 상승이 경제적 불평등을 심화할 수 있다는 분석이 있습니다.",
+        "kind": "fact",
+        "source_id": "S2",
+        "source_title": "Wikipedia(English) — Quantitative easing",
+        "source_url": "https://en.wikipedia.org/wiki/Quantitative_easing",
+        "published": "2026-11-25",
+        "checked_at": "2026-11-27",
+        "quote": "QE has also been criticized for raising financial asset prices, and thereby contributing to economic inequality.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C4",
+        "scene": 3,
+        "text": "글로벌 금융위기 이후 주요국 중앙은행이 양적완화를 실시했다.",
+        "kind": "fact",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 양적 완화",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+        "published": "2026-09-13",
+        "checked_at": "2026-11-27",
+        "quote": "2008년 9월 리먼 브라더스 사태 이후 글로벌 금융불안이 실물부분으로 빠르게 확산되면서 경기침체가 심화되자 주요국 중앙은행은 정책금리를 대폭 인하하였다.",
+        "verified": true,
+        "note": "출처 본문에서 인용 확인"
+      },
+      {
+        "id": "C5",
+        "scene": 4,
+        "text": "정책 규모와 출구 전략에 따라 결과가 달라질 수 있습니다.",
+        "kind": "forecast",
+        "source_id": "S1",
+        "source_title": "위키백과(한국어) — 양적 완화",
+        "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+        "published": "2026-09-13",
+        "checked_at": "2026-11-27",
+        "quote": "만일 양적 완화의 필요량 예측이 과잉될 경우, 자국 통화 가치 약세와 지나친 인플레이션이 초래될 수 있다.",
+        "verified": true,
+        "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
+      }
+    ],
+    "eval": {
+      "chars": 185,
+      "est_seconds": 34.3,
+      "scenes": 5,
+      "avg_new_tokens_per_scene": 8.4,
+      "max_scene_similarity": 0.14,
+      "visual_mix": {
+        "text": 2,
+        "steps": 1,
+        "stat": 2
+      },
+      "target_seconds_declared": 28
+    }
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "scene": 0,
+      "text": "미국 연방준비제도가 2008년 1차 양적완화에서 총 1조 7,000억 달러를 투입했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 양적 완화",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+      "published": "2026-09-13",
+      "checked_at": "2026-11-27",
+      "quote": "1차 양적완화는 2010년 1분기에 끝났으며 총 1조 7,000억 달러가 투입되었다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C2",
+      "scene": 1,
+      "text": "중앙은행이 채권 등을 사들여 시중에 돈을 푼다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 양적 완화",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+      "published": "2026-09-13",
+      "checked_at": "2026-11-27",
+      "quote": "중앙은행은 채권이나 다른 자산을 사들임으로써, 이율을 더 낮추지 않고도 돈의 흐름을 늘리게 된다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C3",
+      "scene": 2,
+      "text": "자산 가격 상승이 경제적 불평등을 심화할 수 있다는 분석이 있습니다.",
+      "kind": "fact",
+      "source_id": "S2",
+      "source_title": "Wikipedia(English) — Quantitative easing",
+      "source_url": "https://en.wikipedia.org/wiki/Quantitative_easing",
+      "published": "2026-11-25",
+      "checked_at": "2026-11-27",
+      "quote": "QE has also been criticized for raising financial asset prices, and thereby contributing to economic inequality.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C4",
+      "scene": 3,
+      "text": "글로벌 금융위기 이후 주요국 중앙은행이 양적완화를 실시했다.",
+      "kind": "fact",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 양적 완화",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+      "published": "2026-09-13",
+      "checked_at": "2026-11-27",
+      "quote": "2008년 9월 리먼 브라더스 사태 이후 글로벌 금융불안이 실물부분으로 빠르게 확산되면서 경기침체가 심화되자 주요국 중앙은행은 정책금리를 대폭 인하하였다.",
+      "verified": true,
+      "note": "출처 본문에서 인용 확인"
+    },
+    {
+      "id": "C5",
+      "scene": 4,
+      "text": "정책 규모와 출구 전략에 따라 결과가 달라질 수 있습니다.",
+      "kind": "forecast",
+      "source_id": "S1",
+      "source_title": "위키백과(한국어) — 양적 완화",
+      "source_url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+      "published": "2026-09-13",
+      "checked_at": "2026-11-27",
+      "quote": "만일 양적 완화의 필요량 예측이 과잉될 경우, 자국 통화 가치 약세와 지나친 인플레이션이 초래될 수 있다.",
+      "verified": true,
+      "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
+    }
+  ],
+  "assets": null,
+  "files": {},
+  "qc": null,
+  "youtube": {
+    "video_id": null,
+    "scheduled_at": null,
+    "privacy": null
+  },
+  "experiment": {
+    "id": "웃짬-length_bucket-20261118",
+    "variable": "length_bucket",
+    "arm": "short"
+  },
+  "updated_at": "2026-11-27T16:09:12Z",
+  "pack": {
+    "topic": {
+      "title": "양적 완화",
+      "wiki_title": "양적 완화",
+      "category": "물가금리",
+      "source": "seed",
+      "angle": "그때 국민이 실제로 잃은 것",
+      "score": 0.6704,
+      "components": {
+        "interest": 0.45,
+        "fit": 1.0,
+        "novelty": 1.0,
+        "evidence": 0.6,
+        "performance": 0.5,
+        "stimulus": 0.35,
+        "explore": 0.407
+      },
+      "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 0.60 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35",
+      "evidence": 1.0,
+      "rescored": {
+        "score": 0.7264,
+        "components": {
+          "interest": 0.45,
+          "fit": 1.0,
+          "novelty": 1.0,
+          "evidence": 1.0,
+          "performance": 0.5,
+          "stimulus": 0.35,
+          "explore": 0.407
+        },
+        "explain": "관심 0.45 · 적합 1.00 · 신선도 1.00 · 근거 1.00 · 성과prior 0.50(n=0) · 탐색 0.41 · 자극 0.35"
+      }
+    },
+    "sources": [
+      {
+        "title": "위키백과(한국어) — 양적 완화",
+        "url": "https://ko.wikipedia.org/wiki/%EC%96%91%EC%A0%81_%EC%99%84%ED%99%94",
+        "published": "2026-09-13",
+        "fetched_at": "2026-11-27",
+        "text": "양적 완화(量的緩和, 영어: quantitative easing, QE)는 ‘중앙은행의 정책으로 금리 인하를 통한 경기부양 효과가 한계에 봉착했을 때 중앙은행이 국채 매입 등을 통해 유동성을 시중에 직접 푸는 정책’을 뜻한다. 금리중시 통화정책을 시행하는 중앙은행이 정책금리가 0%에 근접하거나, 혹은 다른 이유로 시장경제의 흐름을 정책금리로 제어할 수 없는 이른바 유동성 저하 상황 하에서 유동성을 충분히 공급함으로써 중앙은행의 통화 거래량을 확대하는 정책이다. 중앙은행은 채권이나 다른 자산을 사들임으로써, 이율을 더 낮추지 않고도 돈의 흐름을 늘리게 된다.\n\n위험\n만일 양적 완화의 필요량 예측이 과잉될 경우, 자국 통화 가치 약세와 지나친 인플레이션이 초래될 수 있다. 또, 저금리가 계속될 경우 자국에는 원하는 효과가 나더라도 다른 나라에는 자산 거품을 초래할 수도 있다. 그리고 신성장국들이 엄청난 피해를 본다.\n\n미국 중앙은행의 양적 완화 정책 사례\n2008년 9월 리먼 브라더스 사태 이후 글로벌 금융불안이 실물부분으로 빠르게 확산되면서 경기침체가 심화되자 주요국 중앙은행은 정책금리를 대폭 인하하였으나 효과를 보지 못하였다. 이러한 상황을 타개하기 위해 미국, 영국 중앙은행은 비전통적 통화정책 수단인 양적 완화 정책을 실시하게 된다. 미국 연방준비이사회는 리먼 브러더스 사태 이후 정책금리 수준 달성에 필요한 규모 이상으로 유동성을 공급함으로써 사실상 양적 완화 정책을 시작하였으며 2008년 12월에는 정책금리를 제로 수준으로 낮추면서 대차대조표상의 자산 부채 규모를 확대하는 정책을 상당기간 지속할 것임을 천명하였다.\n\n1차 양적완화\n2008년 11월 25일 : Fed는 1,000억 달러 규모의 정부보증모기지채권(GSE direct obligations)과 5,000억 달러 규모의 모기지유동화증권(MBS)을 매입하고 TALF라는 새로운 대출프로그램에 2,000억 달러를 투입한다고 발표한다.\n2008년 12월 16일 : 선언문을 통해 연방기금금리를 종전 1.00%에서 0~0.25%로 낮추고, 국채와 모기지채권을 대규모로 매입해 통화공급량 자체를 늘리는 '양적완화'로의 전환을 공식 선언한다.\n2009년 1월 28일 : Fed는 장기채 매입을 통한 양적완화 정책을 본격추진하겠다고 발표.\n2009년 3월 18일 : FOMC는 앞으로 6개월 동안 3,000억 달러 규모의 장기국채를 직접 매입하겠다고 발표.\n1차 양적완화는 2010년 1분기에 끝났으며 총 1조 7,000억 달러가 투입되었다.\n\n2차 양적완화\n2010년 11월 3일 : FOMC회의에서 6개월간 6,000억 달러 규모의 추가양적완화(QE2)를 시행한다고 발표.\n2차 양적완화는 2011년 6월 30일 종료됐다.\n\n3차 양적완화\n2012년 9월 13일 : FOMC는 매달 400억 달러규모의 주택담보부증권(MBS)을 사들이기로 결정. 아울러 2014년 말로 예정된 초저금리 기조도 2015년 중반까지 6개월 연장.\n\n3차 양적완화 시즌2(3.5차 양적완화)\n2012년 12월 13일 FOMC는 매달 450억 달러규모의 미국 국채를 추가로 사들여 매달 채권매입 규모를 850억달러로 확대키로 결정\n\n일본 중앙은행의 양적 완화 정책 사례\n장기적인 경기침체를 타개하고자 일본 중앙은행 또한 채권매입을 통하여 통화량을 증가 시켰다.\n\n2001~2006년 양적완화\n잃어버린 10년 또는 헤이세이 불황이라고 불리는 장기 경기 침체를 타개하자, 2001년부터 2006년까지 40조엔의 채권을 일본중앙은행이 매입하였다. 골디락스라고 불리는 세계적인 호경기가 지속되자 2006년 채권매입을 중지했다.\n양적완화가 무슨 뜻? 경남도민일보</ref>\n\n2010~2013년 양적완화\n2010년~2011년 101조엔 채권을 매입했고, 2012년 매입규모확대, 2013년 80조엔의 자산매입을 계획하였다.\n\n무제한 양적완화(아베노믹스)\n2013년 자민당의 아베 신조 총리가 집권하자 중앙은행의 매입한도 없는 무제한 채권매입을 통하여 무제한 양적완화를 시작하기로 결정했다. 수출분야에서 일본의 엔고 현상을 타개하여 수출 경쟁력을 제고하고, 인플레이션 목표 2% 달성을 통해 내수를 부양한다는 취지에서 아베노믹스의 일환이었다. 양적완화를 반대하는 쪽에서는 \"아베노미스테이크\"라고도 했다.\n\n각주\n\n같이 보기\n테이퍼링(tapering)\n유동성함정",
+        "lang": "ko",
+        "wiki_title": "양적 완화",
+        "id": "S1"
+      },
+      {
+        "title": "Wikipedia(English) — Quantitative easing",
+        "url": "https://en.wikipedia.org/wiki/Quantitative_easing",
+        "published": "2026-11-25",
+        "fetched_at": "2026-11-27",
+        "text": "Quantitative easing (QE) is a monetary policy action where a central bank purchases predetermined amounts of government bonds, company shares, or other financial assets (liquidity) in order to artificially stimulate economic activity. Quantitative easing is a novel form of monetary policy that began in Japan and came into wide application in the US following the 2008 financial crisis. It attempts to mitigate economic recessions when inflation is very low or negative. Quantitative tightening does the opposite, where for monetary policy reasons, a central bank sells off some portion of its holdings of government bonds or other financial assets.\nSimilar to conventional open-market operations used to implement monetary policy, a central bank implements quantitative easing by buying financial assets from commercial banks and other financial institutions, thus raising the prices of those financial assets and lowering their yield, while simultaneously increasing the money supply. However, in contrast to conventional monetary policy, quantitative easing usually involves the purchase of riskier or longer-term assets (rather than short-term government bonds) of predetermined amounts at a large scale, over a pre-determined period of time.\nCentral banks usually resort to quantitative easing when interest rates approach zero, such as in 2008 and 2020 for the US and in 1999 for Japan. Very low interest rates induce a liquidity trap, a situation where people prefer to hold cash or very liquid assets, given the low returns on other financial assets. This makes it difficult for interest rates to go below zero; monetary authorities may then use quantitative easing to stimulate the economy rather than trying to lower the interest rate. Quantitative easing can help bring the economy out of a recession and help ensure that inflation does not fall below the central bank's inflation target.\nThe term quantitative easing was coined by economist Richard Werner in 1995. Since then, it has faced a range of criticisms. Economists argue that it can inflate asset bubbles, potentially worsening a recession rather than alleviating it. Others highlight QE's mixed side effects and risks: it may overshoot its goal by countering deflation too aggressively and fueling long-term inflation, or fail to stimulate growth if banks remain reluctant to lend and borrowers hesitant to borrow. QE has also been criticized for raising financial asset prices, and thereby contributing to economic inequality. Major central banks around the world, including the US, UK, EU, and Japan, have implemented quantitative easing following the 2008 global financial crisis and again in response to the COVID-19 pandemic.\n\nProcess and benefits\n\nStandard central bank monetary policies are usually enacted by buying or selling government bonds on the open market to reach a desired target for the interbank interest rate. However, if a recession or depression continues even when a central bank has lowered interest rates targets to nearly zero, the central bank can no longer lower interest rates — a situation known as the liquidity trap. The central bank may then attempt to stimulate the economy by implementing quantitative easing, that is, by buying financial assets without reference to interest rates. This policy is sometimes described as a last resort to stimulate the economy.\nA central bank enacts quantitative easing by purchasing, regardless of interest rates, a predetermined quantity of bonds or other financial assets on financial markets from private financial institutions. This action increases the excess reserves that banks hold. The goal of this policy is to ease financial conditions, increase market liquidity, and encourage private bank lending.\nQuantitative easing affects the economy through several channels: \n\nCredit channel\nBy providing liquidity in the banking sector, QE makes it easier and cheaper for banks to extend loans to companies and households, thus stimulating credit growth. Additionally, if the central bank also purchases financial instruments that are riskier than government bonds (such as corporate bonds), it can also increase the price and lower the interest yield of these riskier assets.\nPortfolio rebalancing\nBy enacting QE, the central bank withdraws an important part of the safe assets from the market onto its own balance sheet, which may result in private investors turning to other financial securities. Because of the relative lack of government bonds, investors are forced to \"rebalance their portfolios\" into other assets. Additionally, if the central bank also purchases financial instruments that are riskier than government bonds, it can also lower the interest yield of those assets (as those assets are more scarce in the market, and thus their prices go up correspondingly).\nExchange rate\nBecause it increases the money supply and lowers the yield of financial assets, QE tends to depreciate a country's exchange rates relative to other currencies, through the interest rate mechanism. Lower interest rates lead to a capital outflow from a country, thereby reducing foreign demand for a country's money, leading to a weaker currency. This increases demand for exports, and directly benefits exporters and export industries in the country.\nFiscal effect\nBy lowering yields on sovereign bonds, QE makes it cheaper for governments to borrow on financial markets, which may empower the government to provide fiscal stimulus to the economy. Quantitative easing can be viewed as a debt refinancing operation of the \"consolidated government\" (the government including the central bank), whereby the consolidated government, via the central bank, retires government debt securities and refinances them into central bank reserves.:\n\nProposed fiscal-monetary extensions\nImputed Tax Quantitative Easing (ITQE) is a 2026 theoretical proposal that treats the fiscal and imputed-income effects of large-scale asset purchases as objects a central bank should internalize when it designs quantitative easing, rather than as incidental side effects.\nThe framework maps standard QE transmission channels—portfolio rebalancing, signaling, preferred-habitat demand, fiscal space, risk-taking, and balance-sheet easing—onto System of National Accounts 2008 concepts of imputed income and imputed rental services, especially owner-occupied housing. The central bank is modeled as adding an imputed-tax adjustment term to its large-scale asset purchase rule.",
+        "lang": "en",
+        "wiki_title": "Quantitative easing",
+        "id": "S2"
+      }
+    ],
+    "photos": [],
+    "evidence": 1.0,
+    "ok": true,
+    "built_at": "2026-11-27T16:08:58Z"
+  }
+}
