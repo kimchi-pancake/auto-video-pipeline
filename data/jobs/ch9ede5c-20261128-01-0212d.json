@@ -1,7 +1,7 @@
 {
   "id": "ch9ede5c-20261128-01-0212d",
   "channel": "웃짬",
-  "status": "SCRIPT_READY",
+  "status": "SCHEDULED",
   "created_at": "2026-11-27T16:08:58Z",
   "topic": {
     "title": "양적 완화",
@@ -55,6 +55,36 @@
       "status": "SCRIPT_READY",
       "at": "2026-11-27T16:09:12Z",
       "note": "대본·주장 검증 완료"
+    },
+    {
+      "status": "ASSETS_READY",
+      "at": "2026-11-27T16:10:31Z",
+      "note": "장면 자료 5개 확보"
+    },
+    {
+      "status": "RENDERING",
+      "at": "2026-11-27T16:10:31Z",
+      "note": "합성 시작"
+    },
+    {
+      "status": "QUALITY_CHECK",
+      "at": "2026-11-27T16:12:19Z",
+      "note": "합성 완료"
+    },
+    {
+      "status": "READY_TO_UPLOAD",
+      "at": "2026-11-27T16:12:22Z",
+      "note": "품질 검사 통과"
+    },
+    {
+      "status": "UPLOADING",
+      "at": "2026-11-27T16:14:35Z",
+      "note": "업로드 시작"
+    },
+    {
+      "status": "SCHEDULED",
+      "at": "2026-11-27T16:15:11Z",
+      "note": "예약공개 12-01 20:00"
     }
   ],
   "attempts": {},
@@ -469,20 +499,127 @@
       "note": "해석/전망 — 사실 주장 아님(본문에서 단정 표현 금지)"
     }
   ],
-  "assets": null,
-  "files": {},
-  "qc": null,
+  "assets": [
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "steps"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "stat"
+      }
+    },
+    {
+      "kind": "anim",
+      "meta": {
+        "type": "text"
+      }
+    }
+  ],
+  "files": {
+    "video": "/tmp/v2_work/ch9ede5c-20261128-01-0212d/out/video.mp4",
+    "thumbnail": "/tmp/v2_work/ch9ede5c-20261128-01-0212d/out/thumbnail_shorts.jpg",
+    "ass": "/tmp/v2_work/ch9ede5c-20261128-01-0212d/out/subtitles.ass",
+    "bgm": "ambient_piano.mp3",
+    "voice": "ko-KR-HyunsuMultilingualNeural"
+  },
+  "qc": {
+    "passed": true,
+    "failed": [],
+    "checks": [
+      {
+        "name": "claims_verified",
+        "ok": true,
+        "detail": "5개 중 미검증 0개"
+      },
+      {
+        "name": "photo_licenses",
+        "ok": true,
+        "detail": "사진 0장, 라이선스 기록 누락 0장"
+      },
+      {
+        "name": "not_duplicate",
+        "ok": true,
+        "detail": "최근 제목과 최대 유사도 0.23"
+      },
+      {
+        "name": "visual_fallbacks",
+        "ok": true,
+        "detail": "대체된 장면 0개"
+      },
+      {
+        "name": "playable",
+        "ok": true,
+        "detail": "29.6s"
+      },
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1080x1920"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "29.6s (허용 8~75초)"
+      },
+      {
+        "name": "audio_stream",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "first_frame",
+        "ok": true,
+        "detail": "밝기 27/편차 20; 밝기 29/편차 26"
+      },
+      {
+        "name": "last_frame",
+        "ok": true,
+        "detail": "밝기 29/편차 28"
+      },
+      {
+        "name": "no_long_silence",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "audible",
+        "ok": true,
+        "detail": "평균 -17.9dB"
+      },
+      {
+        "name": "subtitle_sync",
+        "ok": true,
+        "detail": "자막 13개, 마지막 29.1s / 영상 29.6s"
+      }
+    ]
+  },
   "youtube": {
-    "video_id": null,
-    "scheduled_at": null,
-    "privacy": null
+    "video_id": "uPMHnHPs3bY",
+    "scheduled_at": "2026-12-01T20:00:00+09:00",
+    "privacy": "private"
   },
   "experiment": {
     "id": "웃짬-length_bucket-20261118",
     "variable": "length_bucket",
     "arm": "short"
   },
-  "updated_at": "2026-11-27T16:09:12Z",
+  "updated_at": "2026-11-27T16:15:11Z",
   "pack": {
     "topic": {
       "title": "양적 완화",
